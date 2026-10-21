@@ -1,0 +1,2 @@
+/* Presentation-only scope label for the existing queueing progress summary. */
+(()=>{'use strict';function label(){const hub=document.querySelector('.rp-hub');if(!hub)return;const title=hub.querySelector('h2');if(title)title.textContent='继续排队论 · P104–135';const bar=hub.querySelector('progress');if(bar)bar.setAttribute('aria-label','排队论32页阅读进度');}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',label);else label();})();

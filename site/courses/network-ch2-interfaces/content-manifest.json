@@ -1,0 +1,24 @@
+{
+  "courseId": "network-ch2",
+  "chapterId": "network-ch2",
+  "sourceId": "network-ch2-s21",
+  "title": "物理层 · 物理接口专题",
+  "totalPages": 8,
+  "pages": [
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "sourcePageCount": 34,
+  "sha256": "0a291ba1072a8f0cd8046183a82520bb550468331869d60e65089530fe168569",
+  "contentStatus": "independent-approved",
+  "uiStatus": "representative-ui-approved",
+  "runtimeCourseId": "network-ch2-interfaces",
+  "startPage": 27,
+  "topicId": "physical-interfaces"
+}

@@ -1,0 +1,11 @@
+.ask-dot-button{min-height:44px;min-width:44px;border:1px solid #b7ccc4;border-radius:6px;background:#f7faf5;color:#176b6f;font:inherit;font-size:13px;padding:8px 12px;cursor:pointer}
+.top .course-links{align-items:center}.ask-dot-launch{background:transparent;border-color:transparent;padding:6px 9px;white-space:nowrap;color:#486a67}.ask-dot-launch:hover{background:#edf3ef;border-color:#c5d5cc}
+svg.formula[data-ask-formula]{cursor:help}[data-ask-math-control]:focus-visible{outline:2px solid #ac8133;outline-offset:3px}
+.ask-dot-dialog{width:min(640px,calc(100vw - 24px));max-height:calc(100dvh - 28px);padding:0;border:1px solid #c7d6ce;border-radius:12px;background:#fffef9;color:#183e43;overflow:auto;box-shadow:0 12px 60px #173d4333}
+.ask-dot-dialog::backdrop{background:#173d4370}.ask-dot-inner{padding:24px}.ask-dot-top{display:flex;justify-content:space-between;align-items:center;gap:14px}.ask-dot-top h2{font:700 22px/1.4 system-ui;margin:0}.ask-dot-close{font-size:20px}.ask-dot-location{font:13px/1.6 system-ui;color:#61766e}
+.ask-dot-dialog label{display:block;margin:16px 0 6px;font-weight:650}.ask-dot-dialog textarea{box-sizing:border-box;display:block;width:100%;min-height:95px;resize:vertical;border:1px solid #b7ccc4;border-radius:6px;padding:10px;font:16px/1.65 system-ui;background:white;color:#183e43}
+.ask-dot-intents{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.ask-dot-intents button{background:white}
+.ask-dot-context{background:#f0f5ef;padding:12px;border-radius:6px;line-height:1.75;overflow:auto;max-height:190px}.ask-dot-context svg{max-width:none}.ask-dot-context .math{overflow-x:auto}.ask-dot-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.ask-dot-actions .primary{background:#176b6f;color:white}.ask-dot-feedback{white-space:pre-line;font-size:14px;line-height:1.7;margin:12px 0;color:#315d51}.ask-dot-copy-preview{margin-top:14px;font-size:13px}.ask-dot-copy-preview textarea{font:14px/1.65 ui-monospace,monospace;min-height:150px}.ask-dot-note{font-size:12px;color:#687c71}
+@media(max-width:520px){.ask-dot-inner{padding:17px}.ask-dot-actions>button{width:100%}.ask-dot-top h2{font-size:20px}}
+
+.ask-dot-context h1,.ask-dot-context h2,.ask-dot-context h3{font-size:18px;line-height:1.55;margin:0 0 8px}.ask-dot-context p{margin:0 0 8px}

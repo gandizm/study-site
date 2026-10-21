@@ -1,0 +1,24 @@
+{
+  "courseId": "network-review",
+  "chapterId": "network-review",
+  "sourceId": "network-review-main",
+  "title": "计算机网络 · 总复习",
+  "totalPages": 11,
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "sourcePageCount": 11,
+  "sha256": "5b897f16b99d2a57c270e4228f7012ec3e38569a3f32973881af6eafebf8973e",
+  "contentStatus": "independent-approved",
+  "uiStatus": "representative-ui-approved"
+}

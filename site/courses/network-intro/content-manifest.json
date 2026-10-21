@@ -1,0 +1,24 @@
+{
+  "courseId": "network-intro",
+  "chapterId": "network-intro",
+  "sourceId": "network-intro-main",
+  "title": "计算机网络 · 课程导学",
+  "totalPages": 11,
+  "pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "sourcePageCount": 11,
+  "sha256": "f0a8bd5b99ab1cb9a83bc5f81a46132d1096753902dd3e9a70dde5fa85f0a0bd",
+  "contentStatus": "independent-approved",
+  "uiStatus": "representative-ui-approved"
+}
