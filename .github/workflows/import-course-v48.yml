@@ -1,0 +1,348 @@
+# Bound public v48 bundle: gandizm/study-site, main, course-v48-pages-20261021.
+# This workflow makes a real Git commit/push, then deploys that commit to Pages.
+# The earlier unbound drafts remain unchanged; the exact ZIP SHA is fixed below.
+# This publishes static files; it does NOT provide Google login or private assets.
+# Bind only a separately reviewed PUBLIC course bundle, excluding personal notes,
+# progress exports, credentials and the private Drive/backend implementation.
+# Prerequisites: GitHub Pages source = GitHub Actions; github-pages environment
+# protection configured for the intended repository/branch. No manual user Git commands.
+# Official workflow: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+name: Import reviewed public course files into Git and deploy Pages
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  TARGET_REPOSITORY: gandizm/study-site
+  TARGET_BRANCH: main
+  RELEASE_TAG: course-v48-pages-20261021
+  RELEASE_ZIP_NAME: study-site-v48-public-20261021.zip
+  RELEASE_ZIP_SHA256: f3c177d3c2f807c9da6bcd9770b445d680ba96460a91610c3fc3a2005d9be2ad
+
+jobs:
+  import_site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    outputs:
+      import_commit: ${{ steps.commit.outputs.commit_sha }}
+    steps:
+      - name: Reject unbound draft before checkout or download
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY_GUARD'
+          import os, re
+          names = ('TARGET_REPOSITORY', 'TARGET_BRANCH', 'RELEASE_TAG',
+                   'RELEASE_ZIP_NAME', 'RELEASE_ZIP_SHA256')
+          if any(not os.environ[k] or 'PENDING' in os.environ[k].upper() for k in names):
+              raise SystemExit('DRAFT: all repository/release bindings must be fixed; no checkout/download')
+          if os.environ['GITHUB_REPOSITORY'] != os.environ['TARGET_REPOSITORY']:
+              raise SystemExit('This workflow is bound to a different repository')
+          branch = os.environ['TARGET_BRANCH']
+          if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', branch):
+              raise SystemExit('Expected one fixed simple branch name')
+          if os.environ['GITHUB_REF'] != 'refs/heads/' + branch:
+              raise SystemExit('Run only from the fixed branch, not a tag or another branch')
+          if not re.fullmatch(r'[0-9a-f]{64}', os.environ['RELEASE_ZIP_SHA256']):
+              raise SystemExit('Expected ZIP SHA256 is not fixed')
+          PY_GUARD
+      - name: Check out the exact workflow starting commit
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+      - name: Download exact release asset, verify and safely unpack
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          import re
+          import stat
+          import subprocess
+          import tempfile
+          import zipfile
+          from pathlib import Path
+          from urllib.parse import quote
+
+          FILE_LIMIT = 100 * 1024 * 1024
+          LIMIT = 1_000_000_000  # Conservative decimal 1 GB published-site ceiling.
+
+          def require(ok, message):
+              if not ok:
+                  raise SystemExit(message)
+
+          def unpack(archive, destination):
+              # Never use extractall or restore ZIP permissions/link metadata.
+              with zipfile.ZipFile(archive) as z:
+                  entries = {}
+                  declared = 0
+                  for item in z.infolist():
+                      name = item.orig_filename
+                      require(name == item.filename and name and
+                              not any(ord(c) < 32 or ord(c) == 127 for c in name),
+                              'Invalid ZIP entry name')
+                      require(not name.startswith('/') and '\\' not in name and ':' not in name,
+                              'Absolute, Windows or ambiguous ZIP path')
+                      parts = name.rstrip('/').split('/')
+                      require(all(p not in ('', '.', '..') for p in parts), 'Unsafe ZIP path')
+                      lower = [p.casefold() for p in parts]
+                      require('.git' not in lower and not any(
+                          lower[i:i + 2] == ['.github', 'workflows'] for i in range(len(lower))),
+                          'Git metadata or workflow content is forbidden in the course ZIP')
+                      require(item.file_size <= FILE_LIMIT, 'Git file exceeds 100 MiB')
+                      key = '/'.join(parts)
+                      require(key not in entries, 'Duplicate ZIP path')
+                      kind = stat.S_IFMT(item.external_attr >> 16)
+                      allowed = (0, stat.S_IFDIR) if item.is_dir() else (0, stat.S_IFREG)
+                      require(kind in allowed, 'ZIP link or special file rejected')
+                      require(not item.flag_bits & 1, 'Encrypted ZIP rejected')
+                      require(not item.is_dir() or item.file_size == 0, 'Directory has data')
+                      declared += item.file_size
+                      require(declared <= LIMIT, 'Expanded ZIP exceeds 1 GB')
+                      entries[key] = item
+                  require('index.html' in entries and not entries['index.html'].is_dir(),
+                          'Clean ZIP must contain index.html at its root')
+                  for key in entries:
+                      parent = Path(key).parent
+                      while parent != Path('.'):
+                          prior = entries.get(parent.as_posix())
+                          require(prior is None or prior.is_dir(), 'ZIP file/directory collision')
+                          parent = parent.parent
+                  destination.mkdir()  # Refuse any pre-existing output tree.
+                  actual = 0
+                  files = 0
+                  for key, item in entries.items():
+                      target = destination.joinpath(*key.split('/'))
+                      if item.is_dir():
+                          target.mkdir(parents=True, exist_ok=True)
+                          continue
+                      target.parent.mkdir(parents=True, exist_ok=True)
+                      written = 0
+                      with z.open(item) as source, target.open('xb') as output:
+                          while chunk := source.read(1024 * 1024):
+                              written += len(chunk)
+                              actual += len(chunk)
+                              require(actual <= LIMIT and written <= item.file_size,
+                                      'Actual expanded bytes exceed declared size or 1 GB')
+                              output.write(chunk)
+                      require(written == item.file_size, 'ZIP entry length mismatch')
+                      files += 1
+                  require(actual == declared, 'ZIP aggregate length mismatch')
+                  return files, actual
+
+          def main():
+              tag = os.environ['RELEASE_TAG']
+              name = os.environ['RELEASE_ZIP_NAME']
+              expected = os.environ['RELEASE_ZIP_SHA256']
+              require(all(v and 'PENDING' not in v.upper() for v in (tag, name, expected)),
+                      'DRAFT: release tag, ZIP filename and SHA256 are still PENDING; nothing downloaded')
+              require(re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*\.zip', name),
+                      'ZIP filename must be one literal basename ending in .zip')
+              require(re.fullmatch(r'[0-9a-f]{64}', expected), 'Expected SHA256 is not fixed')
+              repo = os.environ['GITHUB_REPOSITORY']
+              require(re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo), 'Invalid repository')
+              result = subprocess.run(
+                  ['gh', 'api', '--hostname', 'github.com',
+                   f'repos/{repo}/releases/tags/{quote(tag, safe="")}'],
+                  check=True, capture_output=True, text=True)
+              release = json.loads(result.stdout)
+              require(release.get('tag_name') == tag and release.get('draft') is False,
+                      'Release tag mismatch or unpublished draft')
+              assets = [a for a in release['assets'] if a['name'].lower().endswith('.zip')]
+              require(len(assets) == 1 and assets[0]['name'] == name,
+                      'Release must contain exactly one ZIP with the fixed filename')
+              asset = assets[0]
+              require(type(asset.get('id')) is int and asset['id'] > 0 and
+                      asset.get('state') == 'uploaded' and
+                      type(asset.get('size')) is int and 0 < asset['size'] < 2**31,
+                      'Invalid or incomplete release asset')
+              work = Path(tempfile.mkdtemp(prefix='reviewed-pages-', dir=os.environ['RUNNER_TEMP']))
+              archive = work / 'source.zip'
+              with archive.open('xb') as output:
+                  subprocess.run(
+                      ['gh', 'api', '--hostname', 'github.com',
+                       f'repos/{repo}/releases/assets/{asset["id"]}',
+                       '-H', 'Accept: application/octet-stream'],
+                      stdout=output, check=True)
+              require(archive.stat().st_size == asset['size'], 'Downloaded ZIP size mismatch')
+              with archive.open('rb') as source:
+                  digest = hashlib.file_digest(source, 'sha256').hexdigest()
+              require(digest == expected, 'Downloaded ZIP SHA256 mismatch; not extracted')
+              site = work / 'site'
+              files, size = unpack(archive, site)
+              with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as out:
+                  out.write(f'PAGES_SITE_DIR={site}\n')
+              print(json.dumps({'repository': repo, 'tag': tag, 'asset_id': asset['id'],
+                                'zip_name': name, 'zip_sha256': digest,
+                                'files': files, 'expanded_bytes': size}))
+
+          if __name__ == '__main__':
+              main()
+          PY
+      - name: Commit only site files and push without force
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY_GIT'
+          import hashlib, json, os, shutil, subprocess
+          from pathlib import Path
+
+          def require(ok, message):
+              if not ok:
+                  raise SystemExit(message)
+
+          def main():
+              root = Path(os.environ['GITHUB_WORKSPACE'])
+              source = Path(os.environ['PAGES_SITE_DIR'])
+              target = root / 'site'
+              branch = os.environ['TARGET_BRANCH']
+              base = os.environ['GITHUB_SHA']
+              ref = 'refs/heads/' + branch
+
+              def git(*args):
+                  return subprocess.check_output(['git', *args], cwd=root)
+
+              def remote_head():
+                  rows = git('ls-remote', '--exit-code', 'origin', ref).decode().splitlines()
+                  require(len(rows) == 1 and rows[0].split()[1] == ref, 'Remote ref is not unique')
+                  return rows[0].split()[0]
+
+              require(git('rev-parse', 'HEAD').decode().strip() == base, 'Checkout changed')
+              require(not git('status', '--porcelain'), 'Checkout is not clean')
+              require(not os.path.lexists(target), 'Initial import only: existing site/ is not overwritten')
+              require(remote_head() == base, 'Remote branch changed; no import or automatic retry')
+              shutil.copytree(source, target)
+              git('-c', 'core.autocrlf=false', 'add', '--force', '--', 'site')
+              expected = {}
+              for p in sorted(target.rglob('*')):
+                  require(not p.is_symlink(), 'Unexpected link in materialized site')
+                  if p.is_file():
+                      h = hashlib.sha1()
+                      h.update(b'blob ' + str(p.stat().st_size).encode() + b'\0')
+                      with p.open('rb') as stream:
+                          while chunk := stream.read(1024 * 1024):
+                              h.update(chunk)
+                      expected[p.relative_to(root).as_posix()] = h.hexdigest()
+              indexed = {}
+              for row in git('ls-files', '--stage', '-z', '--', 'site').split(b'\0'):
+                  if not row:
+                      continue
+                  meta, path = row.split(b'\t', 1)
+                  mode, sha, stage = meta.decode().split()
+                  require(mode == '100644' and stage == '0', 'Unexpected Git mode or index conflict')
+                  indexed[path.decode('utf-8')] = sha
+              require(indexed == expected and expected, 'Git index does not preserve exact reviewed file bytes')
+              changed = {p.decode('utf-8') for p in git('diff', '--cached', '--name-only', '-z').split(b'\0') if p}
+              require(changed == set(expected), 'Changes escaped site/ or files are missing')
+              message = ('Import reviewed public course bundle\n\nRelease: ' + os.environ['RELEASE_TAG'] +
+                         '\nZIP SHA256: ' + os.environ['RELEASE_ZIP_SHA256'])
+              git('-c', 'user.name=github-actions[bot]',
+                  '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com',
+                  '-c', 'core.hooksPath=/dev/null', 'commit', '-m', message)
+              commit = git('rev-parse', 'HEAD').decode().strip()
+              require(remote_head() == base, 'Remote branch changed after local commit; not pushed')
+              # No force or auto-retry. A concurrent non-fast-forward update fails.
+              print(json.dumps({'starting_commit': base, 'import_commit': commit,
+                                'files': len(expected), 'target_ref': ref}), flush=True)
+              git('push', 'origin', commit + ':' + ref)
+              require(remote_head() == commit,
+                      'Push outcome/head changed: inspect the real remote; do not auto-retry or deploy')
+              with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+                  out.write('commit_sha=' + commit + '\n')
+              print('Git import push confirmed: ' + commit, flush=True)
+
+          if __name__ == '__main__':
+              main()
+          PY_GIT
+  # Re-running a failed artifact/deploy job does not repeat the successful import.
+  package_site:
+    needs: import_site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Check out only the confirmed imported commit
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.import_site.outputs.import_commit }}
+          fetch-depth: 1
+      - name: Verify checked-out site bytes against the imported Git tree
+        env:
+          IMPORTED_COMMIT: ${{ needs.import_site.outputs.import_commit }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY_VERIFY'
+          import hashlib, os, subprocess
+          from pathlib import Path
+          root = Path(os.environ['GITHUB_WORKSPACE'])
+          commit = os.environ['IMPORTED_COMMIT']
+          def git(*args):
+              return subprocess.check_output(['git', *args], cwd=root)
+          def require(ok, message):
+              if not ok:
+                  raise SystemExit(message)
+          require(git('rev-parse', 'HEAD').decode().strip() == commit, 'Artifact checkout SHA mismatch')
+          expected = {}
+          for row in git('ls-tree', '-r', '-z', commit, '--', 'site').split(b'\0'):
+              if not row:
+                  continue
+              meta, path = row.split(b'\t', 1)
+              mode, kind, sha = meta.decode().split()
+              require(mode == '100644' and kind == 'blob', 'Non-regular object in imported site tree')
+              expected[path.decode('utf-8')] = sha
+          site = root / 'site'
+          require(site.is_dir() and not site.is_symlink(), 'Missing or linked site directory')
+          actual = {}
+          for p in site.rglob('*'):
+              require(not p.is_symlink(), 'Link in artifact checkout')
+              if p.is_file():
+                  require(not p.stat().st_mode & 0o111, 'Executable mode differs from imported site tree')
+                  h = hashlib.sha1()
+                  h.update(b'blob ' + str(p.stat().st_size).encode() + b'\0')
+                  with p.open('rb') as stream:
+                      while chunk := stream.read(1024 * 1024):
+                          h.update(chunk)
+                  actual[p.relative_to(root).as_posix()] = h.hexdigest()
+              else:
+                  require(p.is_dir(), 'Special file in artifact checkout')
+          require(actual == expected and expected, 'Checkout conversion or file mismatch; artifact not uploaded')
+          PY_VERIFY
+      # GITHUB_TOKEN pushes do not trigger another workflow or Pages build.
+      # Publish explicitly in this same successful run.
+      - name: Upload committed static site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/
+          include-hidden-files: true
+          retention-days: 1
+
+  deploy:
+    needs: package_site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy verified artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
