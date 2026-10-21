@@ -1,0 +1,52 @@
+# Publish only the reviewed static site tree. Never imports an archive or writes Git.
+name: Deploy static study site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Verify public static entry points
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f site/index.html
+          test -f site/courses.html
+          test -f site/.nojekyll
+          test -z "$(find site -type l -print -quit)"
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the checked-out commit
+        id: deployment
+        uses: actions/deploy-pages@v4

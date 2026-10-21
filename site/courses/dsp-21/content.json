@@ -1,0 +1,750 @@
+{
+  "section": "2.1 · 离散时间序列的傅里叶变换（DTFT）",
+  "pages": [
+    {
+      "page": 1,
+      "title": "这一章研究什么，先学哪两个概念？",
+      "html": "<section data-source=\"PPT物理第1页；教学导览\" class=\"explanation\"><h2>先建立章节地图</h2><p>本课是“数字信号处理”，原课件属于上海大学通信与信息工程学院张倩武的第二章“信号的傅里叶变换与分析”。现在先学2.1和2.2，不把六节混成一种变换。</p><ol><li>2.1 DTFT：一般离散时间序列怎样用连续的数字频率描述。</li><li>2.2 周期序列：怎样用有限个离散频率系数重建无限周期序列，以及这些系数与冲激形式DTFT的关系。</li><li>2.3以后才讲有限长DFT、频域采样、FFT与应用。</li></ol></section><section data-source=\"PPT物理第1页；教学导览\" class=\"note\"><p>本页是PPT课程总览。教材第3版印刷37页的章首目录可对照，但授课单位与教师署名来自PPT，不来自教材。</p></section><div class=\"takeaway\">时间离散，不等于频率一定离散。先把DTFT、DFS与DFT分清。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "课程封面",
+        "printedPages": [],
+        "pdfPages": [],
+        "verified": false,
+        "note": "课程信息来自PPT物理第1–2页；不是教材命题。"
+      },
+      "sourcePptPage": 1
+    },
+    {
+      "page": 2,
+      "title": "2.1的终点：从序列走到频谱，再走回来",
+      "html": "<section data-source=\"PPT物理第2页；教学导览\" class=\"explanation\"><h2>本节要学会的四件事</h2><p>DTFT的全名是离散时间傅里叶变换。时间指标 \\(n\\) 是整数；数字角频率 \\(\\omega\\) 是连续变量，通常以 rad/sample 为单位。</p><ol><li>给出 \\(x(n)\\)，能写出并计算 \\(X(e^{j\\omega})\\)。</li><li>给出一周期频谱，能用IDTFT恢复 \\(x(n)\\)。</li><li>能判断公式的适用条件，不把收敛条件、通用性质和某个例题答案混为一谈。</li><li>遇到时移、调制、卷积、对称性问题，能选择性质而不是盲算求和。</li></ol></section><section data-source=\"PPT物理第2页；教学导览\" class=\"note\"><p>这是对本节学习目标的教学整理，不是原PPT上的新定理。正式公式从第5页开始。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "节标题页",
+        "printedPages": [],
+        "pdfPages": [],
+        "verified": false,
+        "note": "本页是PPT标题与教学导览；定义对应教材2.1.1。"
+      },
+      "sourcePptPage": 2
+    },
+    {
+      "page": 3,
+      "title": "不要按公式出现顺序死记，按问题学习",
+      "html": "<section data-source=\"PPT物理第3页；教材第3版印刷第37、38、39、40、41、42、43、44、45、46、47、48、49、50、51页\" class=\"explanation\"><h2>教材路线与PPT页序的关系</h2><ol><li><strong>定义与条件：</strong>先看PPT4–7、12页，弄清变换对象、存在性、正逆变换、频谱周期性。</li><li><strong>基本函数与计算：</strong>再看PPT8–10页，用矩形序列、指数序列和分段频谱练习。</li><li><strong>通用运算规则：</strong>看PPT13–22页，每条性质都要辨认“时域操作”与“频域结果”。</li><li><strong>对称结构：</strong>看PPT23–31页，分别学习实虚分解、共轭对称分解、因果条件。</li><li><strong>完整解题：</strong>最后看PPT34–35页，并用32–33页速查。</li></ol></section><div class=\"takeaway\">定义回答“是什么”；性质回答“怎样变”；例题回答“这道题怎么用”。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.1–2.1.2 学习路线",
+        "printedPages": [
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "pdfPages": [
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 3
+    },
+    {
+      "page": 4,
+      "title": "为什么已有Z变换，还需要DTFT？",
+      "html": "<section data-source=\"PPT物理第4页；教材第3版印刷第37、38页\" class=\"explanation\"><h2>两种频域，两个变量</h2><p>Z变换用复数变量 \\(z=re^{j\\omega}\\)，将序列映射到复平面。DTFT只考察单位圆 \\(r=1\\) 上的频率行为。不要把“实频率变量”理解成“变换结果一定为实数”： \\(X(e^{j\\omega})\\) 一般是复数。</p></section><div class=\"key-equation\">\\[X(z)=\\sum_{n=-\\infty}^{\\infty}x(n)z^{-n},\\qquad z=re^{j\\omega}.\\]</div><section data-source=\"PPT物理第4页；教材第3版印刷第37、38页\" class=\"explanation\"><h2>它们的用途如何分工</h2><p>DTFT直接描述每个数字频率的幅度与相位；Z变换的收敛域、极点、零点便于分析系统。若单位圆属于Z变换的收敛域，代入 \\(z=e^{j\\omega}\\) 就能得到通常意义下的DTFT。</p><p>教材将DTFT写成 \\(X(e^{j\\omega})=|X(e^{j\\omega})|e^{j\\varphi(\\omega)}\\)：模是幅度谱，辐角是相位谱。频谱为零处相位没有定义。</p></section><section data-source=\"PPT物理第4页；教材第3版印刷第37、38页\" class=\"note\"><p>原PPT此页的公式与文字在转换预览中重叠。旁边重排的是同一个双边Z变换定义，不把版式重叠当成数学关系。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.1 DTFT的概念",
+        "printedPages": [
+          37,
+          38
+        ],
+        "pdfPages": [
+          54,
+          55
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 4
+    },
+    {
+      "page": 5,
+      "title": "DTFT的定义，以及“存在”的真正条件",
+      "html": "<section data-source=\"PPT物理第5页；教材第3版印刷第37、38页\" class=\"explanation\"><h2>定义，不是例题</h2><p>给定双边序列 \\(x(n)\\)，其DTFT由下面的求和定义。 \\(j^2=-1\\)， \\(n\\in\\mathbb Z\\)， \\(\\omega\\in\\mathbb R\\)。求和包含全部时间样本，而不是只求某一段。</p></section><div class=\"key-equation\">\\[X(e^{j\\omega})=\\sum_{n=-\\infty}^{\\infty}x(n)e^{-j\\omega n}.\\]</div><section data-source=\"PPT物理第5页；教材第3版印刷第37、38页\" class=\"explanation\"><h2>条件：绝对可和是充分条件</h2><p>如果 \\(\\sum_n|x(n)|&lt;\\infty\\)，那么对任意 \\(\\omega\\)，有 \\(|X(e^{j\\omega})|\\leq\\sum_n|x(n)|&lt;\\infty\\)。这保证通常意义下的DTFT存在，并给出连续、周期的频谱。</p></section><section data-source=\"PPT物理第5页；教材第3版印刷第37、38页\" class=\"note\"><p><strong>课件勘误：</strong>PPT说“充分必要条件”，教材第3版印刷38页式(2.1.2)明确写的是<strong>充分条件</strong>。不能反推“不绝对可和就没有任何形式的DTFT”。有限能量序列可在均方意义下处理；周期序列则需要2.2节的广义函数/冲激表达。</p></section><details data-source=\"PPT物理第5页；教材第3版印刷第37、38页\" class=\"deep-section\"><summary>用三种序列区分三种情况</summary><ul><li>\\(x(n)=0.5^nu(n)\\)：绝对可和，可直接求和。</li><li>\\(x(n)=R_N(n)\\)：有限长，绝对可和，可直接求有限和。</li><li>\\(x(n)=1\\)：不绝对可和，不能将普通级数硬加成有限函数；其广义DTFT是周期冲激列，留到2.2。</li></ul></details><div class=\"takeaway\">写DTFT之前，先问：这里使用普通收敛、均方意义，还是冲激形式？</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.1；式(2.1.1)–(2.1.2)",
+        "printedPages": [
+          37,
+          38
+        ],
+        "pdfPages": [
+          54,
+          55
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 5
+    },
+    {
+      "page": 6,
+      "title": "什么情况下可令z=e^{jω}？",
+      "html": "<section data-source=\"PPT物理第6页；教材第3版印刷第37、38、41页\" class=\"explanation\"><h2>把收敛域检查放在代入之前</h2><p>单位圆是 \\(|z|=1\\)。教材的“单位圆上的Z变换”包含前提：<strong>Z变换的收敛域必须包含单位圆</strong>。不能只有有理表达式、不管收敛域就代入。</p></section><div class=\"key-equation\">\\[X(e^{j\\omega})=X(z)\\big|_{z=e^{j\\omega}},\\quad |z|=1\\ \\text{位于收敛域内}.\\]</div><section data-source=\"PPT物理第6页；教材第3版印刷第37、38、41页\" class=\"explanation\"><h2>同一个代数式，仍要问是哪条序列</h2><p>右边序列 \\(a^nu(n)\\) 的Z变换为 \\(1/(1-az^{-1})\\)，收敛域 \\(|z|&gt;|a|\\)。其普通DTFT需要 \\(|a|&lt;1\\)。</p><p>左边序列 \\(-a^nu(-n-1)\\) 的Z变换也有同样代数形式，但收敛域 \\(|z|&lt;|a|\\)，需要 \\(|a|&gt;1\\) 才包含单位圆。教材例2.1.3就是要强调条件，而不是让你记两条相同答案。</p></section><details data-source=\"PPT物理第6页；教材第3版印刷第37、38、41页\" class=\"deep-section\"><summary>计算示例与检验</summary><p>取 \\(a=1/2\\)， \\(x(n)=2^{-n}u(n)\\)。于是 \\(X(e^{j\\omega})=1/(1-0.5e^{-j\\omega})\\)。在 \\(\\omega=0\\) 处 \\(X=2\\)，正好等于时域总和 \\(\\sum_{n=0}^{\\infty}2^{-n}=2\\)。若取右边序列 \\(2^nu(n)\\)，该几何级数不收敛，不能只把 \\(a=2\\) 代进上式后说DTFT已存在。</p></details>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.1；例2.1.1、例2.1.3",
+        "printedPages": [
+          37,
+          38,
+          41
+        ],
+        "pdfPages": [
+          54,
+          55,
+          58
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 6
+    },
+    {
+      "page": 7,
+      "title": "IDTFT为什么只积分一个周期？",
+      "html": "<section data-source=\"PPT物理第7页；教材第3版印刷第38、39、40页\" class=\"explanation\"><h2>结论：由一周期频谱恢复所有样本</h2><p>数字频谱以 \\(2\\pi\\) 为周期。选任意长度为 \\(2\\pi\\) 的完整区间都可以，通常取 \\([-\\pi,\\pi]\\)。这里的积分变量是 \\(\\omega\\)，输出样本指标 \\(n\\) 仍为整数。</p></section><div class=\"key-equation\">\\[x(n)=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X(e^{j\\omega})e^{j\\omega n}\\,d\\omega.\\]</div><details data-source=\"PPT物理第7页；教材第3版印刷第38、39、40页\" class=\"deep-section\"><summary>推导：先乘复指数，再利用正交性</summary><p>先将DTFT定义两端乘 \\(e^{j\\omega m}\\)，在一周期积分。在绝对可和等保证交换求和、积分的条件下，</p>\\[\\int_{-\\pi}^{\\pi}X(e^{j\\omega})e^{j\\omega m}d\\omega=\\sum_nx(n)\\int_{-\\pi}^{\\pi}e^{j\\omega(m-n)}d\\omega.\\]<p>整数指数满足</p>\\[\\int_{-\\pi}^{\\pi}e^{j\\omega(m-n)}d\\omega=\\begin{cases}2\\pi,&m=n,\\\\0,&m\\ne n.\\end{cases}\\]<p>右边只剩 \\(2\\pi x(m)\\)，再除以 \\(2\\pi\\)。这里也可用 \\(\\delta(m-n)\\) 写正交关系，它是<strong>离散单位样值</strong>，不是频率轴上的连续Dirac冲激。</p></details><div class=\"takeaway\">负号用于正变换，正号用于反变换；反变换还要有 \\(1/(2\\pi)\\)。</div><section class=\"note\"><p>原页预览中部分积分下限的负号不够清楚。本伴读按教材和“完整一个2π周期”写为从−π到π；请不要把模糊负号误读成上下限相同。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.1 第2部分；式(2.1.3)",
+        "printedPages": [
+          38,
+          39,
+          40
+        ],
+        "pdfPages": [
+          55,
+          56,
+          57
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 7
+    },
+    {
+      "page": 8,
+      "title": "矩形序列的DTFT：这是一道例题，不是新的定义",
+      "html": "<section data-source=\"PPT物理第8页；教材第3版印刷第40页\" class=\"explanation\"><h2>已知与所求</h2><p><strong>已知：</strong>\\(x(n)=R_N(n)\\)，即 \\(0\\leq n\\leq N-1\\) 时为1，其他位置为0； \\(N\\geq1\\) 为整数。<strong>求：</strong>它的DTFT，并分析幅度与相位。矩形从0开始，不能悄悄换成以0为中心的矩形。</p></section><section data-source=\"PPT物理第8页；教材第3版印刷第40页\" class=\"explanation\"><h2>步骤1：从定义改成有限和</h2>\\[X(e^{j\\omega})=\\sum_{n=0}^{N-1}e^{-j\\omega n}=\\frac{1-e^{-jN\\omega}}{1-e^{-j\\omega}}\\quad(\\omega\\ne2\\pi k).\\]</section><section data-source=\"PPT物理第8页；教材第3版印刷第40页\" class=\"explanation\"><h2>步骤2：将首尾指数提出一半，得到相位因子</h2>\\[X(e^{j\\omega})=e^{-j\\omega(N-1)/2}\\frac{\\sin(N\\omega/2)}{\\sin(\\omega/2)}.\\]<p>这是等比数列公式加欧拉公式的结果，仅针对这个 \\(R_N\\)。一般序列必须回到定义或其他性质。</p></section><section data-source=\"PPT物理第8页；教材第3版印刷第40页\" class=\"explanation\"><h2>步骤3：补上例外频率并检验</h2><p>在 \\(\\omega=2\\pi k\\) 处分式是可去的 \\(0/0\\)，应由原有限和得到 \\(X=N\\)，不能写成无穷大。代 \\(\\omega=0\\) 检验：N个1的总和应为N。</p></section><section data-source=\"PPT物理第8页；教材第3版印刷第40页\" class=\"note\"><p>来源区分：完整推导对应PPT物理8页；教材第3版印刷40页表2.1.1列出同一矩形序列变换对。这里的推导是对表项的展开。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.1 表2.1.1：矩形序列",
+        "printedPages": [
+          40
+        ],
+        "pdfPages": [
+          57
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 8
+    },
+    {
+      "page": 9,
+      "title": "N=4时，怎样正确读幅度谱和相位谱？",
+      "html": "<section data-source=\"PPT物理第9页；教材第3版印刷第40、47、48页\" class=\"explanation\"><h2>先写精确结果，再看图</h2>\\[X(e^{j\\omega})=1+e^{-j\\omega}+e^{-j2\\omega}+e^{-j3\\omega}=e^{-j3\\omega/2}\\frac{\\sin2\\omega}{\\sin(\\omega/2)}.\\]<p>幅度是 \\(\\left|\\sin(2\\omega)/\\sin(\\omega/2)\\right|\\)，不是带正负号的正弦比。两个图都以 \\(2\\pi\\) 为周期。</p></section><section data-source=\"PPT物理第9页；教材第3版印刷第40、47、48页\" class=\"explanation\"><h2>图上应认出的四个事实</h2><ol><li>\\(X(0)=4\\)：直流处等于样本总和。</li><li>一周期内的零点为 \\(\\omega=\\pi/2,\\pi,3\\pi/2\\)；在0及 \\(2\\pi\\) 处不是零点。</li><li>相位包含 \\(-3\\omega/2\\)，但实数正弦比变负时还需补 \\(\\pi\\)（模 \\(2\\pi\\)）。不能把整条相位永远画成一条直线。</li><li>谱零点处相位未定义；主值相位的跳变不等于信号突然变化。</li></ol></section><details data-source=\"PPT物理第9页；教材第3版印刷第40、47、48页\" class=\"deep-section\"><summary>不用相位图也能检验</summary><p>因为 \\(R_4\\) 是实序列， \\(X(e^{-j\\omega})=X^*(e^{j\\omega})\\)，幅度应为偶函数。 \\(\\omega=\\pi\\) 时直接相加 \\(1-1+1-1=0\\)，与零点位置一致。</p></details><section data-source=\"PPT物理第9页；教材第3版印刷第40、47、48页\" class=\"note\"><p>PPT物理9页是N=4的具体图；教材印刷40页表项给通式。图上的单个N值不是所有序列的性质。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "表2.1.1；2.1.2 对称性",
+        "printedPages": [
+          40,
+          47,
+          48
+        ],
+        "pdfPages": [
+          57,
+          64,
+          65
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 9
+    },
+    {
+      "page": 10,
+      "title": "正变换与反变换各完整算一次",
+      "html": "<section data-source=\"PPT物理第10页；教材第3版印刷第38、39、40页\" class=\"explanation\"><h2>例A：指数序列的正变换</h2><p><strong>已知：</strong>\\(x(n)=0.5^nu(n)\\)。<strong>求：</strong>\\(X(e^{j\\omega})\\)。这是教材例2.1.1。</p><ol><li>先验条件：\\(\\sum|x(n)|=2\\)，绝对可和。</li><li>代定义：\\(\\sum_{n=0}^{\\infty}(0.5e^{-j\\omega})^n\\)。</li><li>用无限等比和，得 \\(X=1/(1-0.5e^{-j\\omega})\\)。</li><li>核验：\\(X(0)=2\\)， \\(X(\\pi)=2/3\\)。幅度为 \\(1/\\sqrt{1.25-\\cos\\omega}\\)。</li></ol></section><section data-source=\"PPT物理第10页；教材第3版印刷第38、39、40页\" class=\"note\"><p>教材配套MATLAB用前8个样本近似绘图。无限序列的闭式与截断8点的有限和不是严格同一个对象；演示图不能取代收敛与截断误差说明。</p></section><section data-source=\"PPT物理第10页；教材第3版印刷第38、39、40页\" class=\"explanation\"><h2>例B：90°移相器的反变换</h2><p><strong>已知：</strong>一周期内 \\(H(e^{j\\omega})=-j\\)（\\(0&lt;\\omega&lt;\\pi\\)）， \\(H=j\\)（\\(-\\pi&lt;\\omega&lt;0\\)）。<strong>求：</strong>单位脉冲响应 \\(h(n)\\)。这是教材例2.1.2。</p>\\[h(n)=\\frac1{2\\pi}\\left(\\int_{-\\pi}^{0}je^{j\\omega n}d\\omega-\\int_0^{\\pi}je^{j\\omega n}d\\omega\\right).\\]<p>当 \\(n\\ne0\\)，积分得到 \\([1-(-1)^n]/(\\pi n)\\)；当 \\(n=0\\)，两段直接相抵，得0。因此</p>\\[h(n)=\\begin{cases}2/(\\pi n),&n\\text{为奇数},\\\\0,&n\\text{为偶数（含0）}.\\end{cases}\\]<p><strong>核验：</strong>\\(H\\)纯虚且为奇函数，对应 \\(h\\) 实且为奇序列；它有负时刻样本，所以不是因果系统。</p></section><div class=\"takeaway\">正变换对时间求和；反变换对一周期频率积分；分段频谱要分段积分。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.1 例2.1.1、例2.1.2",
+        "printedPages": [
+          38,
+          39,
+          40
+        ],
+        "pdfPages": [
+          55,
+          56,
+          57
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 10
+    },
+    {
+      "page": 11,
+      "title": "性质不是一串答案，而是一张操作字典",
+      "html": "<section data-source=\"PPT物理第11页；教材第3版印刷第41、42、43、44、47、50页\" class=\"explanation\"><h2>做题时先辨认时域发生了什么</h2><ul><li>序列相加：线性。</li><li>延迟或提前：时移，频域乘相位因子。</li><li>乘复指数：频移，频谱横向平移。</li><li>翻转时间：频谱也翻转。</li><li>卷积：频域相乘；逐点相乘：频域做带 \\(1/(2\\pi)\\) 的周期卷积。</li><li>乘 \\(n\\)：频域求导；求能量：Parseval。</li><li>实、虚、偶、奇：对称关系可减少计算。</li></ul></section><section data-source=\"PPT物理第11页；教材第3版印刷第41、42、43、44、47、50页\" class=\"explanation\"><h2>使用规则</h2><p>先明确原变换对 \\(x(n)\\leftrightarrow X(e^{j\\omega})\\)，再对照操作。下面的性质都不是“所有序列的一个固定频谱”，而是两个变换对之间的关系。无穷求和与积分交换需有相应收敛保证。</p></section><div class=\"takeaway\">遇到一道题，先圈出操作，再选性质，最后做一个特值或对称性检验。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质总览",
+        "printedPages": [
+          41,
+          42,
+          43,
+          44,
+          47,
+          50
+        ],
+        "pdfPages": [
+          58,
+          59,
+          60,
+          61,
+          64,
+          67
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 11
+    },
+    {
+      "page": 12,
+      "title": "为什么DTFT总是以2π为周期？",
+      "html": "<section data-source=\"PPT物理第12页；教材第3版印刷第44页\" class=\"explanation\"><h2>证明只需要“n为整数”</h2>\\[\\begin{aligned}X(e^{j(\\omega+2\\pi M)})&=\\sum_n x(n)e^{-j(\\omega+2\\pi M)n}\\\\&=\\sum_nx(n)e^{-j\\omega n}\\underbrace{e^{-j2\\pi Mn}}_{1}=X(e^{j\\omega}),\\end{aligned}\\quad M\\in\\mathbb Z.\\]<p>频率相差 \\(2\\pi M\\) 的离散复指数在每个整数采样点完全相同，因此产生相同的频率描述。</p></section><section data-source=\"PPT物理第12页；教材第3版印刷第44页\" class=\"explanation\"><h2>周期性对读图有什么用</h2><p>一个长度为 \\(2\\pi\\) 的频率区间已包含全部独立信息。\\(\\omega=0\\) 与 \\(2\\pi\\) 相同；\\(\\omega=\\pi\\) 与 \\(-\\pi\\) 相同。若原连续信号以采样率 \\(f_s\\) 采样，才另有 \\(\\omega=2\\pi f/f_s\\)。没有 \\(f_s\\)，不要把rad/sample直接读成Hz。</p><p>这里说的是<strong>频谱对频率的周期性</strong>，不意味着 \\(x(n)\\) 在时间上一定周期。 \\(0.5^nu(n)\\) 不是周期序列，但其DTFT仍以 \\(2\\pi\\) 为周期。</p></section><section data-source=\"PPT物理第12页；教材第3版印刷第44页\" class=\"note\"><p>“2π是一个周期”不保证它总是最小正周期；常数谱等特殊频谱可能具有更小周期或任意周期。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质8；式(2.1.12)",
+        "printedPages": [
+          44
+        ],
+        "pdfPages": [
+          61
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 12
+    },
+    {
+      "page": 13,
+      "title": "线性：常数可以提出，叠加可以拆开",
+      "html": "<section data-source=\"PPT物理第13页；教材第3版印刷第41页\" class=\"explanation\"><h2>通用公式与条件</h2><p>若 \\(x_1(n)\\leftrightarrow X_1(e^{j\\omega})\\)、 \\(x_2(n)\\leftrightarrow X_2(e^{j\\omega})\\)，且两边变换在所使用的意义下存在， \\(a,b\\) 是不随 \\(n\\) 改变的常数，则</p></section><div class=\"key-equation\">\\[a x_1(n)+b x_2(n)\\longleftrightarrow aX_1(e^{j\\omega})+bX_2(e^{j\\omega}).\\]</div><details data-source=\"PPT物理第13页；教材第3版印刷第41页\" class=\"deep-section\"><summary>为什么成立</summary><p>将 \\(a x_1(n)+b x_2(n)\\) 代入定义，将求和分开并提出常数即可。不需要一个新的积分技巧。</p></details><section data-source=\"PPT物理第13页；教材第3版印刷第41页\" class=\"explanation\"><h2>补充函数示例：与通用公式分开</h2><p><strong>已知：</strong>\\(y(n)=2\\delta(n)-\\delta(n-1)\\)。<strong>求：</strong>\\(Y\\)。由于 \\(\\delta(n)\\leftrightarrow1\\)，\\(\\delta(n-1)\\leftrightarrow e^{-j\\omega}\\)，得到 \\(Y=2-e^{-j\\omega}\\)。核验 \\(\\omega=0\\)：时域总和为1，频谱也为1。</p></section><section data-source=\"PPT物理第13页；教材第3版印刷第41页\" class=\"note\"><p>如果系数是 \\(a(n)\\)，就不是这里的常数线性组合。时变加权通常应视为时域相乘，使用频域周期卷积。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质1；式(2.1.4)",
+        "printedPages": [
+          41
+        ],
+        "pdfPages": [
+          58
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 13
+    },
+    {
+      "page": 14,
+      "title": "时移与频移：两个“移”不能混用",
+      "html": "<section data-source=\"PPT物理第14页；教材第3版印刷第41、42页\" class=\"explanation\"><h2>时移：序列延迟，频域乘相位</h2>\\[x(n-n_0)\\longleftrightarrow e^{-j\\omega n_0}X(e^{j\\omega}),\\qquad n_0\\in\\mathbb Z.\\]<p>\\(n_0&gt;0\\) 表示延迟。幅度谱不变，因为相位因子的模为1。换元 \\(m=n-n_0\\) 后，把 \\(e^{-j\\omega n_0}\\) 提到求和外即可证明。</p></section><section data-source=\"PPT物理第14页；教材第3版印刷第41、42页\" class=\"explanation\"><h2>频移：乘固定频率复指数，频谱横移</h2>\\[e^{j\\omega_0n}x(n)\\longleftrightarrow X(e^{j(\\omega-\\omega_0)}).\\]<p>\\(\\omega_0\\) 是固定的调制频率， \\(n\\) 才是变化的时间指标。直接合并 \\(e^{j\\omega_0n}e^{-j\\omega n}=e^{-j(\\omega-\\omega_0)n}\\) 即可证明。</p></section><section data-source=\"PPT物理第14页；教材第3版印刷第41、42页\" class=\"note\"><p><strong>课件勘误：</strong>PPT物理14页频移式左侧写成 \\(e^{j\\omega n_0}x(n)\\)，与右侧不一致。教材印刷42页式(2.1.6)正确为 \\(e^{j\\omega_0 n}x(n)\\)。</p></section><section data-source=\"PPT物理第14页；教材第3版印刷第41、42页\" class=\"explanation\"><h2>补充示例与检查</h2><p>若 \\(x(n)=\\delta(n)\\)，延迟两点得 \\(\\delta(n-2)\\leftrightarrow e^{-j2\\omega}\\)。若用 \\((-1)^n=e^{j\\pi n}\\) 乘一般序列，频谱移动 \\(\\pi\\)：\\(X(e^{j(\\omega-\\pi)})\\)。</p><p>对余弦调制，应先拆成两个复指数：</p>\\[x(n)\\cos(\\omega_0n)\\longleftrightarrow\\tfrac12[X(e^{j(\\omega-\\omega_0)})+X(e^{j(\\omega+\\omega_0)})].\\]</section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质2；式(2.1.5)–(2.1.6)",
+        "printedPages": [
+          41,
+          42
+        ],
+        "pdfPages": [
+          58,
+          59
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 14
+    },
+    {
+      "page": 15,
+      "title": "时间翻转：改变量的符号，不是随意取共轭",
+      "html": "<section data-source=\"PPT物理第15页；教材第3版印刷第42、50页\" class=\"explanation\"><h2>通用公式</h2>\\[x(-n)\\longleftrightarrow X(e^{-j\\omega}).\\]<p>令 \\(m=-n\\)，双边整数和的取值范围不变，指数变成 \\(e^{j\\omega m}\\)，所以是“频率翻转”。</p></section><section data-source=\"PPT物理第15页；教材第3版印刷第42、50页\" class=\"explanation\"><h2>必须区分的三件事</h2><ul><li>时间翻转：\\(x(-n)\\leftrightarrow X(e^{-j\\omega})\\)。</li><li>取共轭：\\(x^*(n)\\leftrightarrow X^*(e^{-j\\omega})\\)。</li><li>翻转再共轭：\\(x^*(-n)\\leftrightarrow X^*(e^{j\\omega})\\)。</li></ul><p>只有当 \\(x(n)\\) 为实序列时，才可进一步用 \\(X(e^{-j\\omega})=X^*(e^{j\\omega})\\) 说幅度保持原形、相位变号（模 \\(2\\pi\\)）。对任意复序列，一般结论只是幅度和相位都在频率轴上翻转。</p></section><section data-source=\"PPT物理第15页；教材第3版印刷第42、50页\" class=\"explanation\"><h2>补充自检小例</h2><p>\\(\\delta(n-2)\\leftrightarrow e^{-j2\\omega}\\)。翻转后为 \\(\\delta(n+2)\\)，其DTFT为 \\(e^{j2\\omega}\\)，与将原谱的 \\(\\omega\\) 换成 \\(-\\omega\\) 一致。</p></section><section data-source=\"PPT物理第15页；教材第3版印刷第42、50页\" class=\"note\"><p>教材印刷42页紧接翻转式的幅度/相位描述需结合实序列条件理解；这里将通用公式与实序列推论明确分开。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质3；式(2.1.7)及表2.1.2",
+        "printedPages": [
+          42,
+          50
+        ],
+        "pdfPages": [
+          59,
+          67
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 15
+    },
+    {
+      "page": 16,
+      "title": "频域微分：为什么时域多一个n？",
+      "html": "<section data-source=\"PPT物理第16页；教材第3版印刷第43页\" class=\"explanation\"><h2>通用公式</h2>\\[nx(n)\\longleftrightarrow j\\frac{dX(e^{j\\omega})}{d\\omega}.\\]<p>一个便于使用的充分条件是 \\(\\sum_n |n x(n)|&lt;\\infty\\)，这样可以逐项求导。有限长序列自动满足这一条件。</p></section><details data-source=\"PPT物理第16页；教材第3版印刷第43页\" class=\"deep-section\"><summary>推导与符号核对</summary>\\[\\frac{dX}{d\\omega}=\\sum_nx(n)(-jn)e^{-j\\omega n}=-j\\,\\mathrm{DTFT}\\{nx(n)\\}.\\]<p>两端乘 \\(j\\)，得到前面的公式。别把 \\(j\\) 和 \\(-j\\) 记反。</p></details><section data-source=\"PPT物理第16页；教材第3版印刷第43页\" class=\"explanation\"><h2>补充示例：不重新做无限求和</h2><p><strong>已知：</strong>\\(x(n)=a^nu(n)\\)，\\(|a|&lt;1\\)。<strong>求：</strong>\\(na^nu(n)\\) 的DTFT。由 \\(X=1/(1-ae^{-j\\omega})\\)，求导可得</p>\\[\\mathrm{DTFT}\\{na^nu(n)\\}=\\frac{ae^{-j\\omega}}{(1-ae^{-j\\omega})^2}.\\]<p>在 \\(a=1/2,\\omega=0\\) 处结果为2，与 \\(\\sum_{n\\geq0}n2^{-n}=2\\) 一致。PPT34页第五问还将微分性质和Parseval联用。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质7",
+        "printedPages": [
+          43
+        ],
+        "pdfPages": [
+          60
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 16
+    },
+    {
+      "page": 17,
+      "title": "Parseval：用时域能量计算频域积分",
+      "html": "<section data-source=\"PPT物理第17页；教材第3版印刷第42、43页\" class=\"explanation\"><h2>能量等式及条件</h2><p>对于有限能量序列 \\(x\\in\\ell^2\\)，在相应的均方傅里叶变换意义下：</p></section><div class=\"key-equation\">\\[E=\\sum_{n=-\\infty}^{\\infty}|x(n)|^2=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}|X(e^{j\\omega})|^2d\\omega.\\]</div><section data-source=\"PPT物理第17页；教材第3版印刷第42、43页\" class=\"explanation\"><h2>使用时最容易遗漏的因子</h2><p>若题目要求的是积分本身，答案是 \\(2\\pi E\\)，不是E。频率积分只取一个完整周期。 \\(|X|^2=X X^*\\)，不能把一般复频谱写成 \\(X^2\\)。</p></section><section data-source=\"PPT物理第17页；教材第3版印刷第42、43页\" class=\"explanation\"><h2>补充示例：矩形序列的积分不必硬算</h2><p>对 \\(R_N(n)\\)，时间上恰好有N个单位样本，所以 \\(E=N\\)，直接得到 \\(\\int_{-\\pi}^{\\pi}|X|^2d\\omega=2\\pi N\\)。不必积分复杂的正弦比分式。</p></section><section data-source=\"PPT物理第17页；教材第3版印刷第42、43页\" class=\"note\"><p>持续非零的周期序列通常总能量无穷，不能不加说明地套有限能量结论。2.2节会改用每周期能量/平均功率与DFS系数。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质6；式(2.1.11)",
+        "printedPages": [
+          42,
+          43
+        ],
+        "pdfPages": [
+          59,
+          60
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 17
+    },
+    {
+      "page": 18,
+      "title": "Parseval的证明：能量为什么不会丢？",
+      "html": "<section data-source=\"PPT物理第18页；教材第3版印刷第42、43页\" class=\"explanation\"><h2>从内积开始比直接背结论更清楚</h2><p>令 \\(x_1\\leftrightarrow X_1\\)、\\(x_2\\leftrightarrow X_2\\)。在可以合法交换运算的条件下，把 \\(x_1\\) 用IDTFT展开：</p>\\[\\begin{aligned}\\sum_nx_1(n)x_2^*(n)&=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X_1(e^{j\\omega})\\left[\\sum_nx_2^*(n)e^{j\\omega n}\\right]d\\omega\\\\&=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X_1(e^{j\\omega})X_2^*(e^{j\\omega})d\\omega.\\end{aligned}\\]<p>再取 \\(x_1=x_2=x\\)，就得到能量式。关键是方括号等于 \\(X_2^*\\)，因为<strong>求和中序列和指数同时取共轭</strong>。</p></section><section data-source=\"PPT物理第18页；教材第3版印刷第42、43页\" class=\"explanation\"><h2>如何快速验算符号</h2><p>两边在 \\(x_1=x_2\\) 时必须为非负实数。如果推导出 \\(\\int X^2\\)，或频域没有共轭，通常就是这一步出了问题。</p></section><section data-source=\"PPT物理第18页；教材第3版印刷第42、43页\" class=\"note\"><p>教材印刷43页给出一般内积与能量公式；PPT物理18页给出证明。对仅有限能量而非绝对可和的情况，应通过均方收敛推广，不应假装所有求和交换都无条件成立。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质6：内积形式与能量形式",
+        "printedPages": [
+          42,
+          43
+        ],
+        "pdfPages": [
+          59,
+          60
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 18
+    },
+    {
+      "page": 19,
+      "title": "时域卷积为什么变成频域相乘？",
+      "html": "<section data-source=\"PPT物理第19页；教材第3版印刷第42页\" class=\"explanation\"><h2>通用公式：线性卷积，不是循环卷积</h2>\\[y(n)=(x*h)(n)=\\sum_{m=-\\infty}^{\\infty}x(m)h(n-m)\\quad\\Longrightarrow\\quad Y(e^{j\\omega})=X(e^{j\\omega})H(e^{j\\omega}).\\]<p>在DTFT中，这个时域卷积是对全部整数求和的<strong>线性卷积</strong>。一个常用充分条件是两序列都绝对可和；有限序列也可直接使用。</p></section><section data-source=\"PPT物理第19页；教材第3版印刷第42页\" class=\"explanation\"><h2>LTI系统怎么用</h2><p>零状态下，输入 \\(x\\)、单位脉冲响应 \\(h\\)、输出 \\(y=x*h\\)。可以先求 \\(Y=XH\\)，再反变换。 \\(H(e^{j\\omega})\\) 是系统频率响应，不是任意输入输出数据之比都无条件有意义。</p></section><section data-source=\"PPT物理第19页；教材第3版印刷第42页\" class=\"explanation\"><h2>补充有限样本检验</h2><p>令 \\(x=h=\\delta(n)+\\delta(n-1)\\)。时域卷积为 \\(\\delta(n)+2\\delta(n-1)+\\delta(n-2)\\)；频域相乘为 \\((1+e^{-j\\omega})^2=1+2e^{-j\\omega}+e^{-j2\\omega}\\)，逐项吻合。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质4；式(2.1.8)",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 19
+    },
+    {
+      "page": 20,
+      "title": "卷积定理的换元，以及差分方程的完整用法",
+      "html": "<details data-source=\"PPT物理第20页；教材第3版印刷第42页\" class=\"deep-section\"><summary>推导：k=n−m究竟做了什么</summary>\\[\\begin{aligned}Y&=\\sum_n\\sum_mx(m)h(n-m)e^{-j\\omega n}\\\\&=\\sum_m\\sum_kx(m)h(k)e^{-j\\omega(k+m)}\\\\&=\\left(\\sum_mx(m)e^{-j\\omega m}\\right)\\left(\\sum_kh(k)e^{-j\\omega k}\\right)=XH.\\end{aligned}\\]<p>换元后 \\(n=k+m\\)，指数自然拆成两个乘积。只有这样才真的把两个求和分开。</p></details><section data-source=\"PPT物理第20页；教材第3版印刷第42页\" class=\"explanation\"><h2>教材例2.1.6：从差分方程求频率响应</h2><p><strong>已知：</strong>零状态LTI系统 \\(y(n)-0.25y(n-1)=x(n)-x(n-2)\\)，输入 \\(x(n)=\\delta(n-1)\\)。<strong>求：</strong>系统频率响应 \\(H\\) 和输出频谱 \\(Y\\)。</p><ol><li>逐项用时移性质： \\((1-0.25e^{-j\\omega})Y=(1-e^{-j2\\omega})X\\)。</li><li>整理系统关系： \\(H=(1-e^{-j2\\omega})/(1-0.25e^{-j\\omega})\\)。</li><li>输入DTFT为 \\(X=e^{-j\\omega}\\)，因此 \\(Y=(e^{-j\\omega}-e^{-j3\\omega})/(1-0.25e^{-j\\omega})\\)。</li><li>核验： \\(\\omega=0\\) 处分子为0，所以系统抑制直流。将 \\(Y=HX\\) 代回第一步，两边相等。</li></ol></section><section data-source=\"PPT物理第20页；教材第3版印刷第42页\" class=\"note\"><p>PPT本页只标“举例”而未给题；这里明确使用第3版教材印刷42页例2.1.6补足，不声称是PPT省略内容的逐字还原。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质4；例2.1.6",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 20
+    },
+    {
+      "page": 21,
+      "title": "时域相乘对应的是2π周期卷积",
+      "html": "<section data-source=\"PPT物理第21页；教材第3版印刷第42页\" class=\"explanation\"><h2>先把两种卷积放在不同位置</h2><p>若 \\(y(n)=x(n)h(n)\\) 是同一时刻逐点相乘，则</p></section><div class=\"key-equation\">\\[Y(e^{j\\omega})=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X(e^{j\\theta})H(e^{j(\\omega-\\theta)})d\\theta.\\]</div><section data-source=\"PPT物理第21页；教材第3版印刷第42页\" class=\"explanation\"><h2>每个符号都要看清</h2><ul><li>\\(\\omega\\)：当前要求频谱的频率。</li><li>\\(\\theta\\)：积分用的哑变量，不是第二个独立输出频率。</li><li>\\(X,H\\)：都按 \\(2\\pi\\) 周期延拓。</li><li>积分：只跨一个周期，外面有 \\(1/(2\\pi)\\)。</li></ul><p>若记周期卷积为 \\(X\\circledast_{2\\pi}H\\)，则 \\(Y=(X\\circledast_{2\\pi}H)/(2\\pi)\\)。不要将它写成两条非周期函数在整条实轴上的普通卷积。</p></section><section data-source=\"PPT物理第21页；教材第3版印刷第42页\" class=\"note\"><p>可用于“无限序列乘有限窗”的加窗分析。窗使时间范围有限，同时会把频谱按窗频谱作周期卷积；这解释了频谱不再只是原频谱的简单截断。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质5；式(2.1.9)–(2.1.10)",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 21
+    },
+    {
+      "page": 22,
+      "title": "频域卷积推导：1/(2π)从哪里来？",
+      "html": "<section data-source=\"PPT物理第22页；教材第3版印刷第42页\" class=\"explanation\"><h2>只把一个乘数换成IDTFT</h2>\\[\\begin{aligned}Y(e^{j\\omega})&=\\sum_nx(n)h(n)e^{-j\\omega n}\\\\&=\\sum_nx(n)\\left[\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}H(e^{j\\theta})e^{j\\theta n}d\\theta\\right]e^{-j\\omega n}\\\\&=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}H(e^{j\\theta})\\left[\\sum_nx(n)e^{-j(\\omega-\\theta)n}\\right]d\\theta\\\\&=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}H(e^{j\\theta})X(e^{j(\\omega-\\theta)})d\\theta.\\end{aligned}\\]<p>\\(1/(2\\pi)\\) 来自代入的反变换，绝不能凭记忆删去。换序仍需要收敛条件支持。</p></section><section data-source=\"PPT物理第22页；教材第3版印刷第42页\" class=\"explanation\"><h2>补充检验：用最简单的序列检验归一化</h2><p>取 \\(h(n)=\\delta(n)\\)，那么 \\(y(n)=x(0)\\delta(n)\\)，所以 \\(Y=x(0)\\)。又 \\(H=1\\)，上式变成 \\(Y=\\frac1{2\\pi}\\int_{-\\pi}^{\\pi}X(e^{j\\theta})d\\theta=x(0)\\)，正是IDTFT在 \\(n=0\\) 的结果。</p></section><div class=\"takeaway\">时域“卷积”→频域“相乘”；时域“相乘”→频域“周期卷积÷2π”。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 性质5；式(2.1.9)–(2.1.10)",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 22
+    },
+    {
+      "page": 23,
+      "title": "共轭对称不是简单的“偶函数”",
+      "html": "<section data-source=\"PPT物理第23页；教材第3版印刷第44、45页\" class=\"explanation\"><h2>先定义，再推实虚部</h2><p>用 \\(*\\) 表示复共轭。若 \\(x(n)=x^*(-n)\\)，称为共轭对称；若 \\(x(n)=-x^*(-n)\\)，称为共轭反对称。</p>\\[\\begin{array}{ll}x(n)=x^*(-n):&\\Re x(n)=\\Re x(-n),\\quad \\Im x(n)=-\\Im x(-n),\\\\x(n)=-x^*(-n):&\\Re x(n)=-\\Re x(-n),\\quad \\Im x(n)=\\Im x(-n).\\end{array}\\]</section><section data-source=\"PPT物理第23页；教材第3版印刷第44、45页\" class=\"explanation\"><h2>最小推导</h2><p>写 \\(x(n)=a(n)+jb(n)\\)，则 \\(x^*(-n)=a(-n)-jb(-n)\\)。令两者相等，分别比较实部和虚部，就得到“实偶、虚奇”；令两者互为负数，则得到“实奇、虚偶”。</p><p>只有当序列为实数，复共轭不起作用，前两种概念才退化为通常的偶序列和奇序列。</p></section><section data-source=\"PPT物理第23页；教材第3版印刷第44、45页\" class=\"note\"><p>检查原点：共轭对称要求 \\(x(0)\\) 为实数；共轭反对称要求 \\(x(0)\\) 为纯虚数。只有<strong>实的奇序列</strong>才必须 \\(x(0)=0\\)。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 对称性；式(2.1.13)–(2.1.20)",
+        "printedPages": [
+          44,
+          45
+        ],
+        "pdfPages": [
+          61,
+          62
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 23
+    },
+    {
+      "page": 24,
+      "title": "复指数的对称性：这是判型示例，不是DTFT求解",
+      "html": "<section data-source=\"PPT物理第24页；教材第3版印刷第45页\" class=\"explanation\"><h2>已知、所求与步骤</h2><p><strong>已知：</strong>\\(x(n)=e^{j\\omega_0 n}\\)，\\(\\omega_0\\in\\mathbb R\\)。<strong>求：</strong>它具有哪种时间对称性。</p><ol><li>先翻转： \\(x(-n)=e^{-j\\omega_0n}\\)。</li><li>再共轭： \\(x^*(-n)=e^{j\\omega_0n}=x(n)\\)。</li><li>因此 \\(x\\) 是共轭对称序列。</li><li>展开成 \\(\\cos(\\omega_0n)+j\\sin(\\omega_0n)\\)，实部为偶序列、虚部为奇序列，再次核验。</li></ol></section><section data-source=\"PPT物理第24页；教材第3版印刷第45页\" class=\"note\"><p>这里的 \\(\\omega_0\\) 是序列固定参数，不是画DTFT时变化的频率。这个例子只讨论对称性。它通常不绝对可和，不能顺便把DTFT当普通收敛级数；广义DTFT需要冲激。复指数在时间上是否周期，还要判断 \\(\\omega_0/(2\\pi)\\) 是否为有理数。</p></section><div class=\"takeaway\">判断对称性只需代入−n和取共轭，不等于已经求出了傅里叶变换。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 例2.1.8",
+        "printedPages": [
+          45
+        ],
+        "pdfPages": [
+          62
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 24
+    },
+    {
+      "page": 25,
+      "title": "任意复序列怎样分成两种对称部分？",
+      "html": "<section data-source=\"PPT物理第25页；教材第3版印刷第45、46页\" class=\"explanation\"><h2>通用分解公式</h2>\\[x_e(n)=\\tfrac12[x(n)+x^*(-n)],\\qquad x_o(n)=\\tfrac12[x(n)-x^*(-n)],\\qquad x=x_e+x_o.\\]<p>这里的下标e、o分别表示共轭对称、共轭反对称，不能对一般复序列直接叫“偶、奇”。</p></section><details data-source=\"PPT物理第25页；教材第3版印刷第45、46页\" class=\"deep-section\"><summary>两个必要检查</summary><p>相加能恢复原序列：\\(x_e+x_o=x\\)。将 \\(x_e(-n)\\) 取共轭得 \\(x_e(n)\\)；将 \\(x_o(-n)\\) 取共轭得 \\(-x_o(n)\\)。所以分解既正确又符合定义。</p></details><section data-source=\"PPT物理第25页；教材第3版印刷第45、46页\" class=\"explanation\"><h2>教材例2.1.9：右边指数序列</h2><p><strong>已知：</strong>\\(x(n)=a^nu(n)\\)， \\(0&lt;a&lt;1\\)，是实序列。<strong>求：</strong>偶分量和奇分量。</p>\\[x_e(n)=\\begin{cases}1,&n=0,\\\\\\tfrac12a^{|n|},&n\\ne0,\\end{cases}\\qquad x_o(n)=\\begin{cases}\\tfrac12a^n,&n&gt;0,\\\\0,&n=0,\\\\-\\tfrac12a^{-n},&n&lt;0.\\end{cases}\\]<p>在正时间两者各占一半，相加恢复原序列；负时间互相抵消；原点全部由偶分量承担。这是具体函数示例，不能把这些分段式拿来代表任意序列。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "式(2.1.19)–(2.1.21)；例2.1.9",
+        "printedPages": [
+          45,
+          46
+        ],
+        "pdfPages": [
+          62,
+          63
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 25
+    },
+    {
+      "page": 26,
+      "title": "共轭对称分解，为什么对应频谱实虚部？",
+      "html": "<section data-source=\"PPT物理第26页；教材第3版印刷第47页\" class=\"explanation\"><h2>关键桥梁：翻转再共轭</h2><p>由 \\(x^*(-n)\\leftrightarrow X^*(e^{j\\omega})\\) 和线性可得：</p>\\[\\begin{aligned}\\mathrm{DTFT}\\{x_e\\}&=\\tfrac12(X+X^*)=\\Re X,\\\\\\mathrm{DTFT}\\{x_o\\}&=\\tfrac12(X-X^*)=j\\Im X.\\end{aligned}\\]</section><section data-source=\"PPT物理第26页；教材第3版印刷第47页\" class=\"explanation\"><h2>三处不要写错</h2><ol><li>这里的 \\(X^*\\) 是同一频率处取共轭，不是 \\(X^*(e^{-j\\omega})\\)。因为时域已经同时翻转并共轭。</li><li>第二行是 \\(j\\Im X\\)，不是单独的 \\(\\Im X\\)。</li><li>共轭对称序列的DTFT是实函数，但不一定是偶函数；还需要其他条件才能得偶性。</li></ol></section><details data-source=\"PPT物理第26页；教材第3版印刷第47页\" class=\"deep-section\"><summary>为何j不能漏</summary><p>\\(\\Im X\\) 按定义是一个实数函数， \\(j\\Im X\\) 才是频谱的纯虚部分。把第二行的j删掉，就无法使 \\(\\Re X+j\\Im X=X\\)。</p></details>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 对称性；式(2.1.29)–(2.1.32)",
+        "printedPages": [
+          47
+        ],
+        "pdfPages": [
+          64
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 26
+    },
+    {
+      "page": 27,
+      "title": "只要频谱实部，对应哪一条时间序列？",
+      "html": "<section data-source=\"PPT物理第27页；教材第3版印刷第47、48页\" class=\"explanation\"><h2>结论及其用途</h2>\\[x_e(n)\\longleftrightarrow\\Re X(e^{j\\omega}),\\qquad x_o(n)\\longleftrightarrow j\\Im X(e^{j\\omega}).\\]<p>若题目问“求频谱实部的反变换”，不必先算整个 \\(X\\)，直接把时间序列取共轭对称部分即可。</p></section><section data-source=\"PPT物理第27页；教材第3版印刷第47、48页\" class=\"explanation\"><h2>教材例2.1.10：用图上的样本直接构造</h2><p><strong>已知：</strong>教材例2.1.7的实序列（在本伴读第34页列出完整样本）。<strong>求：</strong>\\(\\Re X\\) 对应的时间序列。因为x为实数，计算 \\(x_e(n)=[x(n)+x(-n)]/2\\)。</p><ul><li>\\(x_e(0)=2\\)。</li><li>\\(x_e(\\pm1)=1\\)， \\(x_e(\\pm2)=x_e(\\pm3)=0\\)。</li><li>\\(x_e(\\pm4)=1\\)， \\(x_e(\\pm5)=1/2\\)， \\(x_e(\\pm6)=0\\)， \\(x_e(\\pm7)=-1/2\\)。</li><li>其他位置为0。</li></ul><p><strong>核验：</strong>成对位置数值相等，确实是实偶序列；其总和仍为6，因此频谱实部在0频率的值与原谱一致。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "式(2.1.31)–(2.1.32)；例2.1.10",
+        "printedPages": [
+          47,
+          48
+        ],
+        "pdfPages": [
+          64,
+          65
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 27
+    },
+    {
+      "page": 28,
+      "title": "把序列分成实部和虚部，又对应什么？",
+      "html": "<section data-source=\"PPT物理第28页；教材第3版印刷第45、47页\" class=\"explanation\"><h2>这次换一种分法，别沿用上一页结论</h2><p>写 \\(x(n)=x_r(n)+j x_i(n)\\)，其中 \\(x_r,x_i\\) 都是<strong>实序列</strong>。频谱因而分成共轭对称部分与共轭反对称部分：</p>\\[\\begin{aligned}\\mathrm{DTFT}\\{x_r(n)\\}&=X_e(e^{j\\omega})=\\tfrac12[X(e^{j\\omega})+X^*(e^{-j\\omega})],\\\\\\mathrm{DTFT}\\{j x_i(n)\\}&=X_o(e^{j\\omega})=\\tfrac12[X(e^{j\\omega})-X^*(e^{-j\\omega})].\\end{aligned}\\]</section><section data-source=\"PPT物理第28页；教材第3版印刷第45、47页\" class=\"explanation\"><h2>它和上一种分解恰好交叉</h2><ul><li>时间的“共轭对称/反对称” → 频谱的“实/纯虚”。</li><li>时间的“实/纯虚” → 频谱的“共轭对称/反对称”。</li></ul><p>小写 \\(x_e\\) 与大写 \\(X_e\\) 不是“天然互为DTFT”的同名对象： \\(x_e\\leftrightarrow\\Re X\\)，而 \\(x_r\\leftrightarrow X_e\\)。</p></section><div class=\"takeaway\">先看分解发生在时间还是频率，再看拆的是实虚还是共轭对称。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "式(2.1.22)–(2.1.28)",
+        "printedPages": [
+          45,
+          47
+        ],
+        "pdfPages": [
+          62,
+          64
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 28
+    },
+    {
+      "page": 29,
+      "title": "实序列的频谱：实偶、虚奇，但频谱不一定为实",
+      "html": "<section data-source=\"PPT物理第29页；教材第3版印刷第47、48、50页\" class=\"explanation\"><h2>从x*=x推导频域共轭对称</h2><p>若 \\(x(n)\\) 为实序列， \\(x^*(n)=x(n)\\)。结合共轭性质：</p>\\[X(e^{j\\omega})=X^*(e^{-j\\omega}).\\]<p>所以 \\(\\Re X\\) 为偶函数，\\(\\Im X\\) 为奇函数，\\(|X|\\) 为偶函数。相位在非零谱处按模 \\(2\\pi\\) 具有奇对称关系；谱零点相位无定义，不能不顾分支强行逐点相等。</p></section><section data-source=\"PPT物理第29页；教材第3版印刷第47、48、50页\" class=\"explanation\"><h2>函数示例：实指数序列并不产生纯实频谱</h2><p>对实数 \\(a\\) 且 \\(|a|&lt;1\\)， \\(x(n)=a^nu(n)\\)，把频谱有理化：</p>\\[X(e^{j\\omega})=\\frac{1-a\\cos\\omega}{1+a^2-2a\\cos\\omega}-j\\frac{a\\sin\\omega}{1+a^2-2a\\cos\\omega}.\\]<p>分母是偶函数，实部分子是偶函数，虚部分子是奇函数，符合上述结论。除特殊频率外，频谱仍有虚部。</p></section><div class=\"takeaway\">实序列→共轭对称谱；实偶序列→实偶谱。这两句不能合并成“实序列→实谱”。</div><section class=\"note\"><p>教材印刷48页该指数序列的相位末式排印为“−φ(ω)”的写法疑有漏字。这里不沿抄该末式，统一使用经共轭对称推得的 φ(−ω)≡−φ(ω)（模2π），并排除谱零点。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "式(2.1.33)–(2.1.35)；表2.1.2",
+        "printedPages": [
+          47,
+          48,
+          50
+        ],
+        "pdfPages": [
+          64,
+          65,
+          67
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 29
+    },
+    {
+      "page": 30,
+      "title": "因果性如何让偶分量决定整个实序列？",
+      "html": "<section data-source=\"PPT物理第30页；教材第3版印刷第48、49页\" class=\"explanation\"><h2>本页讨论实因果序列</h2><p>实因果序列满足 \\(h(n)=0\\)（\\(n&lt;0\\)），并可按普通偶奇分解：</p>\\[h_e(n)=\\tfrac12[h(n)+h(-n)],\\qquad h_o(n)=\\tfrac12[h(n)-h(-n)].\\]</section><section data-source=\"PPT物理第30页；教材第3版印刷第48、49页\" class=\"explanation\"><h2>把n分成三段，不能跳过原点</h2>\\[h_e(n)=\\begin{cases}h(0),&n=0,\\\\h(n)/2,&n&gt;0,\\\\h(-n)/2,&n&lt;0,\\end{cases}\\qquad h_o(n)=\\begin{cases}0,&n=0,\\\\h(n)/2,&n&gt;0,\\\\-h(-n)/2,&n&lt;0.\\end{cases}\\]<p>正半轴上两者各有原序列的一半；负半轴由对称性确定；原点的偶分量保留全部 \\(h(0)\\)，奇分量完全不含 \\(h(0)\\)。</p></section><details data-source=\"PPT物理第30页；教材第3版印刷第48、49页\" class=\"deep-section\"><summary>为什么不能全部“乘2”</summary><p>若对所有n都用 \\(h=2h_e\\)，原点会多一倍，负半轴也不会变为零。所以恢复公式必须分段，或引入下一页的专用 \\(u_+(n)\\)。</p></details>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "例2.1.11(1)；式(2.1.36)–(2.1.37)",
+        "printedPages": [
+          48,
+          49
+        ],
+        "pdfPages": [
+          65,
+          66
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 30
+    },
+    {
+      "page": 31,
+      "title": "u₊不是普通阶跃：恢复因果序列要保留原点",
+      "html": "<section data-source=\"PPT物理第31页；教材第3版印刷第49页\" class=\"explanation\"><h2>先定义这个特制的倍增选择函数</h2>\\[u_+(n)=\\begin{cases}2,&n&gt;0,\\\\1,&n=0,\\\\0,&n&lt;0.\\end{cases}\\]<p>如果普通阶跃约定 \\(u(0)=1\\)，则 \\(u_+(n)=2u(n)-\\delta(n)\\)，但这里直接记分段定义最稳妥。</p></section><div class=\"key-equation\">\\[h(n)=h_e(n)u_+(n),\\qquad h(n)=h_o(n)u_+(n)+h(0)\\delta(n).\\]</div><section data-source=\"PPT物理第31页；教材第3版印刷第49页\" class=\"explanation\"><h2>两条恢复式各需要多少信息？</h2><p>已知偶分量就能恢复全部实因果序列；已知奇分量只能恢复非零时刻，还必须另给 \\(h(0)\\)。频域上，已知整个实部可恢复h；仅给虚部时，通常缺少一个实常数所对应的原点样本。</p><p>这不是任意序列的恢复术。若没有因果条件，只知道频谱实部就只能确定时间共轭对称部分，无法确定另一个部分。</p></section><div class=\"takeaway\">正时间翻倍、负时间清零、原点单独处理。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "例2.1.11(1)；式(2.1.38)–(2.1.40)",
+        "printedPages": [
+          49
+        ],
+        "pdfPages": [
+          66
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 31
+    },
+    {
+      "page": 32,
+      "title": "速查表怎么用：每次先写原变换对",
+      "html": "<section data-source=\"PPT物理第32页；教材第3版印刷第50页\" class=\"explanation\"><h2>最常用的变换规则</h2><p>以下都假设 \\(x(n)\\leftrightarrow X(e^{j\\omega})\\)、\\(h(n)\\leftrightarrow H(e^{j\\omega})\\)，且变换和运算存在。</p><ul><li>\\(ax+bh\\leftrightarrow aX+bH\\)。</li><li>\\(x(n-m)\\leftrightarrow e^{-j\\omega m}X(e^{j\\omega})\\)， \\(m\\in\\mathbb Z\\)。</li><li>\\(e^{j\\omega_0n}x(n)\\leftrightarrow X(e^{j(\\omega-\\omega_0)})\\)。</li><li>\\(x*h\\leftrightarrow XH\\)。</li><li>\\(xh\\leftrightarrow (X\\circledast_{2\\pi}H)/(2\\pi)\\)。</li><li>\\(x^*(n)\\leftrightarrow X^*(e^{-j\\omega})\\)。</li><li>\\(x(-n)\\leftrightarrow X(e^{-j\\omega})\\)。</li><li>\\(x^*(-n)\\leftrightarrow X^*(e^{j\\omega})\\)。</li><li>\\(\\Re x\\leftrightarrow X_e\\)， \\(j\\Im x\\leftrightarrow X_o\\)。</li></ul></section><section data-source=\"PPT物理第32页；教材第3版印刷第50页\" class=\"explanation\"><h2>三个必查项目</h2><p>频移的下标是否在 \\(\\omega_0\\) 上？反变换和频域周期卷积是否保留 \\(1/(2\\pi)\\)？取共轭时是否同时改变了该变的频率符号？</p></section><section data-source=\"PPT物理第32页；教材第3版印刷第50页\" class=\"note\"><p>这是教材第3版印刷50页表2.1.2的教学重排，不是新的假设或独立公式集合。详细理由在前面各页。</p></section>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "表2.1.2 序列傅里叶变换的主要性质",
+        "printedPages": [
+          50
+        ],
+        "pdfPages": [
+          67
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 32
+    },
+    {
+      "page": 33,
+      "title": "对称性速查：实、虚、偶、奇要成对判断",
+      "html": "<section data-source=\"PPT物理第33页；教材第3版印刷第47、48、50页\" class=\"explanation\"><h2>一般复序列的两条对应</h2>\\[x_e(n)\\longleftrightarrow\\Re X(e^{j\\omega}),\\qquad x_o(n)\\longleftrightarrow j\\Im X(e^{j\\omega}).\\]<p>这里 \\(x_e,x_o\\) 仍分别指共轭对称与共轭反对称部分。</p></section><section data-source=\"PPT物理第33页；教材第3版印刷第47、48、50页\" class=\"explanation\"><h2>实序列的进一步结论</h2><ul><li>实序列：\\(X(e^{-j\\omega})=X^*(e^{j\\omega})\\)。</li><li>实偶序列：频谱实且偶。</li><li>实奇序列：频谱纯虚且奇。</li><li>实序列频谱：实部偶、虚部奇、幅度偶。</li><li>相位：非零谱处按模 \\(2\\pi\\) 比较，零点不定义。</li></ul></section><section data-source=\"PPT物理第33页；教材第3版印刷第47、48、50页\" class=\"explanation\"><h2>核验题型</h2><p>如果算出一个实序列的幅度谱不对称，先检查计算；如果算出实偶序列有非零虚部，先检查时移起点是否被误当成中心。 \\(R_N(n)\\) 从0开始，通常不是关于0的偶序列，因此有线性相位并不矛盾。</p></section><div class=\"takeaway\">“实”不等于“偶”。频谱共轭对称不等于频谱为实；时间共轭对称才对应实频谱。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "2.1.2 对称性；表2.1.2",
+        "printedPages": [
+          47,
+          48,
+          50
+        ],
+        "pdfPages": [
+          64,
+          65,
+          67
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 33
+    },
+    {
+      "page": 34,
+      "title": "教材例2.1.7：不求整个频谱，完成五个量",
+      "html": "<section data-source=\"PPT物理第34页；教材第3版印刷第43、44页\" class=\"note\"><p><strong>页码订正：</strong>PPT只写“P38 例2.1.7”。本次实际教材为第3版，该例在印刷43–44页（PDF60–61页），不是38页。下面题干、图上数据和五问均已按真实教材核对。</p></section><section data-source=\"PPT物理第34页；教材第3版印刷第43、44页\" class=\"explanation\"><h2>已知：先将图变成明确样本</h2><p>非零样本为 \\(x(-3)=-1,x(-1)=1,x(0)=2,x(1)=1,x(3)=1,x(4)=2,x(5)=1,x(7)=-1\\)，其余位置全为0。令其DTFT为 \\(X(e^{j\\omega})\\)。题目要求<strong>不要直接求整个X</strong>。</p></section><section data-source=\"PPT物理第34页；教材第3版印刷第43、44页\" class=\"explanation\"><h2>五问：每问先选择性质</h2><ol><li><strong>求 \\(X(e^{j0})\\)：</strong>把定义中的 \\(\\omega\\) 设为0，得 \\(\\sum_n x(n)=6\\)。</li><li><strong>求 \\(\\int_{-\\pi}^{\\pi}X(e^{j\\omega})d\\omega\\)：</strong>用IDTFT在 \\(n=0\\) 处，得到 \\(2\\pi x(0)=4\\pi\\)。</li><li><strong>求 \\(X(e^{j\\pi})\\)：</strong> \\(e^{-j\\pi n}=(-1)^n\\)，于是偶位置和减奇位置和 \\(4-2=2\\)。</li><li><strong>求 \\(\\int_{-\\pi}^{\\pi}|X|^2d\\omega\\)：</strong>时域能量 \\(\\sum|x|^2=14\\)，由Parseval得 \\(28\\pi\\)。</li><li><strong>求 \\(\\int_{-\\pi}^{\\pi}|dX/d\\omega|^2d\\omega\\)：</strong>\\(-jnx(n)\\leftrightarrow dX/d\\omega\\)。先算 \\(\\sum n^2|x(n)|^2=158\\)，再用Parseval得 \\(316\\pi\\)。</li></ol></section><details data-source=\"PPT物理第34页；教材第3版印刷第43、44页\" class=\"deep-section\"><summary>把最后两次求和摊开检查</summary>\\[\\sum|x|^2=1+1+4+1+1+4+1+1=14.\\]\\[\\sum n^2|x|^2=9+1+0+1+9+64+25+49=158.\\]<p>第五问若只对频谱求导后硬积分会很长；此题的教学目标就是“在时域做简单加权，再借性质回到频域”。</p></details><div class=\"takeaway\">答案依次为6、4π、2、28π、316π。每个答案背后是不同性质，而不是同一个公式反复代数。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "例2.1.7",
+        "printedPages": [
+          43,
+          44
+        ],
+        "pdfPages": [
+          60,
+          61
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 34
+    },
+    {
+      "page": 35,
+      "title": "三道综合题：把缺失条件补全，再逐步求解",
+      "html": "<section data-source=\"PPT物理第35页；教材第3版印刷第48、49、50、51页\" class=\"note\"><p>PPT旧引用“例2.1.11(P43)、例2.1.12(P45)”对应本次第3版印刷48–49页、50–51页。下面将教材两例与PPT自带例3分开，不把例3误标成教材原题。</p></section><section data-source=\"PPT物理第35页；教材第3版印刷第48、49、50、51页\" class=\"explanation\"><h2>例1：由虚部与因果性恢复h（教材例2.1.11）</h2><p><strong>已知：</strong>\\(h(n)\\) 为实因果序列， \\(h(0)=1\\)，频谱的虚部 \\(H_I(e^{j\\omega})=-\\sin\\omega\\)。<strong>求：</strong>\\(h(n)\\) 与完整 \\(H(e^{j\\omega})\\)。</p><ol><li>用对称性， \\(h_o\\leftrightarrow jH_I=-j\\sin\\omega=(e^{-j\\omega}-e^{j\\omega})/2\\)。</li><li>识别移位冲激， \\(h_o(n)=[\\delta(n-1)-\\delta(n+1)]/2\\)。</li><li>正时间翻倍、负时间清零、原点补回1，得到 \\(h(n)=\\delta(n)+\\delta(n-1)\\)。</li><li>因此 \\(H=1+e^{-j\\omega}\\)。核验其虚部为 \\(-\\sin\\omega\\)，且时域仅n=0、1非零，实且因果。</li></ol></section><section data-source=\"PPT物理第35页；教材第3版印刷第48、49、50、51页\" class=\"explanation\"><h2>例2：只给时间实部和半圆频谱约束（教材例2.1.12）</h2><p><strong>已知：</strong>\\(x=x_r+jx_i\\)，其中 \\(x_r,x_i\\) 为实序列；单位圆下半部 \\(\\pi&lt;\\omega\\leq2\\pi\\) 上 \\(X(e^{j\\omega})=0\\)；\\(x_r(0)=1/2\\)， \\(x_r(\\pm2)=-1/4\\)，其余为0。<strong>求：</strong>\\(\\Re X\\) 与 \\(\\Im X\\)。</p><ol><li>先求实序列 \\(x_r\\) 的DTFT： \\(X_e=1/2-(e^{-j2\\omega}+e^{j2\\omega})/4=(1-\\cos2\\omega)/2\\)。</li><li>这是频谱的共轭对称部分： \\(X_e=[X(e^{j\\omega})+X^*(e^{-j\\omega})]/2\\)，<strong>不是直接把它当成 \\(\\Re X\\)</strong>。</li><li>当 \\(0&lt;\\omega&lt;\\pi\\)，镜像频率位于已知为零的下半圆，于是 \\(X=2X_e=1-\\cos2\\omega\\)。下半圆仍为0。</li><li>得到 \\[\\Re X=X=\\begin{cases}1-\\cos2\\omega,&0\\leq\\omega\\leq\\pi,\\\\0,&\\pi&lt;\\omega\\leq2\\pi,\\end{cases}\\qquad\\Im X=0.\\]再作 \\(2\\pi\\) 周期延拓。端点采用教材给出的0值代表；有限个频率点的赋值不改变IDTFT，不能用开区间推理偷偷代替端点说明。</li></ol><p><strong>核验：</strong>上、下半圆平均后的共轭对称部分恰为 \\((1-\\cos2\\omega)/2\\)，反变换的时间实部恢复原先三个样本。频谱虽然是实数，却不是频率偶函数，所以时间序列不必为实序列。</p></section><section data-source=\"PPT物理第35页；教材第3版印刷第48、49、50、51页\" class=\"explanation\"><h2>例3：由频谱实部恢复实因果冲激响应（PPT原题）</h2><p><strong>已知：</strong>系统LTI且因果， \\(h(n)\\) 为实序列，</p>\\[H_R(e^{j\\omega})=\\sum_{m=0}^{5}0.5^m\\cos(m\\omega).\\]<p><strong>求：</strong>单位脉冲响应 \\(h(n)\\)。将求和指标写成m，避免与待求样本指标n混淆。</p><ol><li>\\(h_e\\leftrightarrow H_R\\)。对 \\(m\\geq1\\)， \\(\\cos(m\\omega)\\leftrightarrow[\\delta(n-m)+\\delta(n+m)]/2\\)。常数项m=0应单独保留为 \\(\\delta(n)\\)。</li><li>\\(h_e(n)=\\delta(n)+\\frac12\\sum_{m=1}^{5}0.5^m[\\delta(n-m)+\\delta(n+m)]\\)。</li><li>因果恢复得到 \\(h(n)=\\sum_{m=0}^{5}0.5^m\\delta(n-m)\\)，即n=0到5的样本为 \\(1,1/2,1/4,1/8,1/16,1/32\\)，其他为0。</li><li>核验：\\(H=\\sum_{m=0}^5 0.5^m e^{-jm\\omega}\\)，取实部正是已知式；且 \\(H(0)=63/32\\) 等于h的总和。</li></ol></section><div class=\"takeaway\">这三题分别强调：虚部恢复别漏原点；时间实部≠频谱实部；已知频谱实部还要借因果性才能恢复整个h。</div>",
+      "textbook": {
+        "title": "方勇《数字信号处理——原理与实践（第3版）》",
+        "section": "例2.1.11、例2.1.12；PPT例3依式(2.1.31)、(2.1.38)推导",
+        "printedPages": [
+          48,
+          49,
+          50,
+          51
+        ],
+        "pdfPages": [
+          65,
+          66,
+          67,
+          68
+        ],
+        "verified": true
+      },
+      "sourcePptPage": 35
+    }
+  ],
+  "learningPath": [
+    {
+      "label": "定义与适用条件",
+      "description": "先分清序列、数字频率、普通DTFT与广义DTFT，纠正充分必要条件误写。",
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        12
+      ]
+    },
+    {
+      "label": "从定义推导函数示例",
+      "description": "矩形序列有限和、幅相读图、指数序列正变换与分段频谱反变换。",
+      "pages": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "label": "运算性质与可用条件",
+      "description": "每条规则按时域操作、频域结果、推导、例题核验学习。",
+      "pages": [
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "label": "对称结构与因果恢复",
+      "description": "区分两种分解；从共轭对称到频谱实虚，再利用因果条件恢复序列。",
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "label": "完整例题与速查",
+      "description": "按真实教材补齐例2.1.7、2.1.11、2.1.12，另解PPT例3；用性质表检查。",
+      "pages": [
+        34,
+        35,
+        32,
+        33
+      ]
+    }
+  ]
+}
