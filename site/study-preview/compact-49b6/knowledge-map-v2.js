@@ -74,7 +74,7 @@
     let knownPage = current, lastDestination = current + ':', isNavigating = false, navigationToken = 0;
     const storageKey = 'study-knowledge-map-ui:' + root.location.pathname;
     const compactQuery = '(max-width: 520px), (max-width: 1150px) and (max-height: 600px)';
-    let mapEntryRequested = false, entryRevealConsumed = false, dockToken = 0, dockReturn = null, entryInteraction = false;
+    let mapEntryRequested = false, entryRevealConsumed = false, dockToken = 0, dockReturn = null, dockResume = null, entryInteraction = false;
     try { expanded = root.sessionStorage.getItem(storageKey) !== 'closed'; } catch (_) {}
     try {
       const original = root.performance?.getEntriesByType('navigation')?.[0]?.name;
@@ -138,8 +138,16 @@
     }
     function changeDockVisibility(open, before) {
       const token = ++dockToken, nav = navigationToken;
-      if (!root.matchMedia?.(compactQuery).matches) { dockReturn = null; return; }
+      if (!root.matchMedia?.(compactQuery).matches) { dockReturn = null; dockResume = null; return; }
       const restore = open ? null : dockReturn;
+      const previous = open ? dockResume : null;
+      const samePosition = (a, b) => a && b && a.page === b.page && a.mode === b.mode &&
+        a.windowTop === b.windowTop && a.windowLeft === b.windowLeft &&
+        a.readerTop === b.readerTop && a.readerLeft === b.readerLeft;
+      const resume = previous && samePosition(previous.collapsed, before) ? previous.reading : null;
+      // Capture before collapse can clamp main's scroll range. A reopen may
+      // resume it only while the collapsed reading position is still unchanged.
+      dockResume = open ? null : {reading: before, collapsed: dockPosition()};
       root.requestAnimationFrame(() => {
         if (token !== dockToken || nav !== navigationToken || expanded !== open || visiblePage() !== current || !root.matchMedia?.(compactQuery).matches) return;
         if (open) {
@@ -148,7 +156,8 @@
           if (!dockReturn) dockReturn = before;
           // Only explicit map entry/open reveals the bounded two-region dock.
           // Ordinary graph page jumps retain their own saved scroll positions.
-          if (before.page === current) { main.scrollTop = before.readerTop; main.scrollLeft = before.readerLeft; }
+          const reading = resume && resume.page === current && resume.mode === readerMode() ? resume : before;
+          if (reading.page === current) { main.scrollTop = reading.readerTop; main.scrollLeft = reading.readerLeft; }
           const top = (root.scrollY || 0) + workspace.getBoundingClientRect().top;
           root.scrollTo?.(root.scrollX || 0, Math.max(0, top));
         } else if (restore) {
@@ -160,17 +169,22 @@
           }
           dockReturn = null;
         }
+        if (!open && dockResume) dockResume.collapsed = dockPosition();
       });
     }
-    function cancelPendingDockReveal() {
+    function cancelPendingDockReveal(event) {
       ++dockToken; entryInteraction = true;
-      if (!expanded) dockReturn = null;
+      if (!expanded) {
+        dockReturn = null;
+        // The reopen button's own pointer/key activation is not new reading.
+        if (!toggle.contains(event?.target)) dockResume = null;
+      }
     }
     // A slow map fetch must never bring the document back after the reader has
     // started interacting. Input also invalidates a queued open/close frame.
     ['wheel', 'touchstart', 'pointerdown'].forEach(name => root.addEventListener(name, cancelPendingDockReveal, {capture: true, passive: true}));
     root.addEventListener('keydown', event => {
-      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) cancelPendingDockReveal();
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) cancelPendingDockReveal(event);
     }, {capture: true});
     function setExpanded(next, remember = true) {
       const changed = next !== expanded, before = changed && remember ? dockPosition() : null;
