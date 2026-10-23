@@ -7,7 +7,7 @@
   "sourcePdfPages": 50,
   "readerPages": 50,
   "verification": {
-    "method": "恢复的主PDF及50张原图逐一匹配仍存在的原独审日志SHA256；仅据可提取的首行数字记录印刷页码，其余留null。本轮新写深读和图谱属于重建候选，需独立重新审校。",
+    "method": "恢复的主PDF及50张原图逐一匹配仍存在的原独审日志SHA256；仅据可提取的首行数字记录印刷页码，其余留null。本轮新写深读和图谱属于重建版本，不冒认丢失成品逐字恢复；独立审校结论见交付记录。",
     "pageNumbering": "真实PDF物理1–50页；物理37–49页的印刷页码为47–59，缺失的印刷37–46不虚构为阅读页。",
     "recoveryStatus": "new-reconstruction-not-byte-identical-old-artifact"
   },

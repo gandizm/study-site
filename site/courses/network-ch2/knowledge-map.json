@@ -74,7 +74,11 @@
       "prerequisites": [],
       "section": "接口与通信模型",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "1": "network-ch2-deep-p1",
+        "2": "network-ch2-deep-p2"
+      }
     },
     {
       "id": "interface",
@@ -88,7 +92,10 @@
       ],
       "section": "接口与通信模型",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "3": "network-ch2-deep-p3"
+      }
     },
     {
       "id": "model",
@@ -105,7 +112,13 @@
       ],
       "section": "接口与通信模型",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "4": "network-ch2-deep-p4",
+        "5": "network-ch2-deep-p5",
+        "6": "network-ch2-deep-p6",
+        "7": "network-ch2-deep-p7"
+      }
     },
     {
       "id": "duplex",
@@ -119,7 +132,10 @@
       ],
       "section": "编码与信号状态",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "8": "network-ch2-deep-p8"
+      }
     },
     {
       "id": "nrz",
@@ -133,7 +149,10 @@
       ],
       "section": "编码与信号状态",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "9": "network-ch2-deep-p9"
+      }
     },
     {
       "id": "manchester",
@@ -147,7 +166,10 @@
       ],
       "section": "编码与信号状态",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "10": "network-ch2-deep-p10"
+      }
     },
     {
       "id": "carrier",
@@ -161,7 +183,10 @@
       ],
       "section": "编码与信号状态",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "11": "network-ch2-deep-p11"
+      }
     },
     {
       "id": "qam",
@@ -175,7 +200,10 @@
       ],
       "section": "编码与信号状态",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "12": "network-ch2-deep-p12"
+      }
     },
     {
       "id": "symbol-rate",
@@ -189,7 +217,10 @@
       ],
       "section": "容量与可分辨性",
       "type": "method",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "13": "network-ch2-deep-p13"
+      }
     },
     {
       "id": "distortion",
@@ -203,7 +234,10 @@
       ],
       "section": "容量与可分辨性",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "14": "network-ch2-deep-p14"
+      }
     },
     {
       "id": "nyquist",
@@ -217,7 +251,10 @@
       ],
       "section": "容量与可分辨性",
       "type": "method",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "15": "network-ch2-deep-p15"
+      }
     },
     {
       "id": "shannon",
@@ -231,7 +268,10 @@
       ],
       "section": "容量与可分辨性",
       "type": "method",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "16": "network-ch2-deep-p16"
+      }
     },
     {
       "id": "joint-bound",
@@ -246,7 +286,10 @@
       ],
       "section": "容量与可分辨性",
       "type": "method",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "17": "network-ch2-deep-p17"
+      }
     },
     {
       "id": "media-choice",
@@ -261,7 +304,11 @@
       ],
       "section": "铜缆与布线",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "18": "network-ch2-deep-p18",
+        "19": "network-ch2-deep-p19"
+      }
     },
     {
       "id": "twisted-pair",
@@ -275,7 +322,10 @@
       ],
       "section": "铜缆与布线",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "20": "network-ch2-deep-p20"
+      }
     },
     {
       "id": "structured-cabling",
@@ -291,7 +341,11 @@
       ],
       "section": "铜缆与布线",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "21": "network-ch2-deep-p21",
+        "22": "network-ch2-deep-p22"
+      }
     },
     {
       "id": "coax",
@@ -305,7 +359,10 @@
       ],
       "section": "铜缆与布线",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "23": "network-ch2-deep-p23"
+      }
     },
     {
       "id": "optical-link",
@@ -320,7 +377,11 @@
       ],
       "section": "光纤与连接",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "24": "network-ch2-deep-p24",
+        "25": "network-ch2-deep-p25"
+      }
     },
     {
       "id": "total-reflection",
@@ -334,7 +395,10 @@
       ],
       "section": "光纤与连接",
       "type": "method",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "26": "network-ch2-deep-p26"
+      }
     },
     {
       "id": "dispersion",
@@ -349,7 +413,10 @@
       ],
       "section": "光纤与连接",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "27": "network-ch2-deep-p27"
+      }
     },
     {
       "id": "fiber-interfaces",
@@ -365,7 +432,11 @@
       ],
       "section": "光纤与连接",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "28": "network-ch2-deep-p28",
+        "29": "network-ch2-deep-p29"
+      }
     },
     {
       "id": "wireless-paths",
@@ -379,7 +450,10 @@
       ],
       "section": "非导引传输",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "30": "network-ch2-deep-p30"
+      }
     },
     {
       "id": "microwave-relay",
@@ -393,7 +467,10 @@
       ],
       "section": "非导引传输",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "31": "network-ch2-deep-p31"
+      }
     },
     {
       "id": "satellite-delay",
@@ -407,7 +484,10 @@
       ],
       "section": "非导引传输",
       "type": "method",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "32": "network-ch2-deep-p32"
+      }
     },
     {
       "id": "ism-boundary",
@@ -421,7 +501,10 @@
       ],
       "section": "非导引传输",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "33": "network-ch2-deep-p33"
+      }
     },
     {
       "id": "multiplex",
@@ -437,7 +520,11 @@
       ],
       "section": "复用与用户接入",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "34": "network-ch2-deep-p34",
+        "35": "network-ch2-deep-p35"
+      }
     },
     {
       "id": "access-model",
@@ -451,7 +538,10 @@
       ],
       "section": "复用与用户接入",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "36": "network-ch2-deep-p36"
+      }
     },
     {
       "id": "dsl-spectrum",
@@ -466,7 +556,10 @@
       ],
       "section": "DSL与DMT",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "37": "network-ch2-deep-p37"
+      }
     },
     {
       "id": "adsl-asymmetry",
@@ -481,7 +574,10 @@
       ],
       "section": "DSL与DMT",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "38": "network-ch2-deep-p38"
+      }
     },
     {
       "id": "dmt",
@@ -497,7 +593,10 @@
       ],
       "section": "DSL与DMT",
       "type": "method",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "39": "network-ch2-deep-p39"
+      }
     },
     {
       "id": "dsl-chain",
@@ -512,7 +611,10 @@
       ],
       "section": "DSL与DMT",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "40": "network-ch2-deep-p40"
+      }
     },
     {
       "id": "adsl2",
@@ -526,7 +628,10 @@
       ],
       "section": "DSL与DMT",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "41": "network-ch2-deep-p41"
+      }
     },
     {
       "id": "hfc",
@@ -543,7 +648,11 @@
       ],
       "section": "HFC与光接入",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "42": "network-ch2-deep-p42",
+        "43": "network-ch2-deep-p43"
+      }
     },
     {
       "id": "hfc-spectrum",
@@ -558,7 +667,10 @@
       ],
       "section": "HFC与光接入",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "44": "network-ch2-deep-p44"
+      }
     },
     {
       "id": "cable-sharing",
@@ -573,7 +685,10 @@
       ],
       "section": "HFC与光接入",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "45": "network-ch2-deep-p45"
+      }
     },
     {
       "id": "fttx",
@@ -588,7 +703,10 @@
       ],
       "section": "HFC与光接入",
       "type": "concept",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "46": "network-ch2-deep-p46"
+      }
     },
     {
       "id": "pon",
@@ -604,7 +722,10 @@
       ],
       "section": "HFC与光接入",
       "type": "method",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "47": "network-ch2-deep-p47"
+      }
     },
     {
       "id": "linecode-practice",
@@ -618,7 +739,10 @@
       ],
       "section": "综合计算",
       "type": "example",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "48": "network-ch2-deep-p48"
+      }
     },
     {
       "id": "pcm-frame",
@@ -633,7 +757,10 @@
       ],
       "section": "综合计算",
       "type": "example",
-      "source": "ppt"
+      "source": "ppt",
+      "anchors": {
+        "49": "network-ch2-deep-p49"
+      }
     },
     {
       "id": "synthesis",
@@ -650,7 +777,10 @@
       ],
       "section": "综合计算",
       "type": "method",
-      "source": "supplement"
+      "source": "supplement",
+      "anchors": {
+        "50": "network-ch2-deep-p50"
+      }
     }
   ],
   "edges": [
