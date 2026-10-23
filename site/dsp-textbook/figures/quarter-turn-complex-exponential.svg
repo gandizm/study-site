@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="900" viewBox="0 0 680 900" role="img" aria-labelledby="title description">
+  <title id="title">复指数每步逆时针转四分之一周</title>
+  <desc id="description">新增教学图。复平面横轴为实部，纵轴为虚部。单位圆从最右的1开始，正角度逆时针，每次前进π/2：n等于0、1、2、3、4时，s[n]分别是1、j、负1、负j、1。虚数单位j满足j平方等于负1，不是样值或频点的编号。每步角度ω等于π/2，当前转角为ωn。n等于4回到起点，周期为4。</desc>
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#58696a"/></marker>
+    <marker id="turn-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#17645d"/></marker>
+  </defs>
+  <rect width="680" height="900" fill="#fff"/>
+  <g font-family="system-ui,'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#203538">
+    <text x="38" y="46" font-size="30" font-weight="700">复指数：每一步，转四分之一周</text>
+    <text x="38" y="90" font-size="24" fill="#58696a">新增教学图 · 先看位置，再读符号</text>
+    <text x="38" y="138" font-size="28">s[n] = e<tspan dy="-11" font-size="22">jπn/2</tspan><tspan dy="11" font-size="28">，每步角度 ω = π/2</tspan></text>
+    <circle cx="340" cy="390" r="170" stroke="#cad7d4" stroke-width="3" fill="none"/>
+    <g fill="none" stroke="#58696a" stroke-width="2" marker-end="url(#axis-arrow)"><path d="M80 390H610"/><path d="M340 610V175"/></g>
+    <text x="571" y="432" font-size="26">实部</text><text x="362" y="186" font-size="26">虚部</text>
+    <g fill="none" stroke="#17645d" stroke-width="4" marker-end="url(#turn-arrow)">
+      <path d="M458 369 A120 120 0 0 0 361 272"/>
+      <path d="M319 272 A120 120 0 0 0 222 369"/>
+      <path d="M222 411 A120 120 0 0 0 319 508"/>
+      <path d="M361 508 A120 120 0 0 0 458 411"/>
+    </g>
+    <g fill="#17645d"><circle cx="510" cy="390" r="8"/><circle cx="340" cy="220" r="8"/><circle cx="170" cy="390" r="8"/><circle cx="340" cy="560" r="8"/></g>
+    <g font-size="31" font-weight="700" fill="#17645d"><text x="536" y="374">1</text><text x="355" y="229">j</text><text x="112" y="374">−1</text><text x="358" y="570">−j</text></g>
+    <g font-size="25"><text x="521" y="415">n=0</text><text x="366" y="262">n=1</text><text x="99" y="418">n=2</text><text x="365" y="602">n=3</text></g>
+    <rect x="266" y="327" width="148" height="40" rx="8" fill="#fff"/>
+    <text x="340" y="355" text-anchor="middle" font-size="26" fill="#17645d">正角度 ↶</text>
+    <text x="38" y="657" font-size="26" font-weight="700">按时间编号 n，依次读这些位置：</text>
+    <g font-size="25" text-anchor="middle" fill="#58696a"><text x="100" y="702">n=0</text><text x="220" y="702">n=1</text><text x="340" y="702">n=2</text><text x="460" y="702">n=3</text><text x="580" y="702">n=4</text></g>
+    <g font-size="31" text-anchor="middle" fill="#17645d" font-weight="700"><text x="100" y="746">1</text><text x="220" y="746">j</text><text x="340" y="746">−1</text><text x="460" y="746">−j</text><text x="580" y="746">1</text></g>
+    <g font-size="27" text-anchor="middle" fill="#58696a"><text x="160" y="744">→</text><text x="280" y="744">→</text><text x="400" y="744">→</text><text x="520" y="744">→</text></g>
+    <path d="M38 773H642" stroke="#d8e0da" stroke-width="1.5"/>
+    <text x="38" y="815" font-size="26">j² = −1：j 是虚数单位，不是索引。</text>
+    <text x="38" y="860" font-size="26">从 n=0 到 n=4，共转4步，回到起点。</text>
+  </g>
+</svg>

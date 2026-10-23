@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "dsp-front-02",
+  "title": "为什么用复正弦描述序列",
+  "order": 3,
+  "goals": [
+    "把复指数读成两条实数坐标的旋转记号",
+    "区分时间周期和数字频率的2π等价性",
+    "按单位换算f、Ω、ω并回读课件归一化刻度"
+  ],
+  "prerequisites": [
+    "dsp-front-01"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        12
+      ],
+      "kind": "foundation",
+      "note": "提前说明复正弦2π等价性，不将该页DTFT推导标为已完成。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        19
+      ],
+      "kind": "rewritten",
+      "note": "完整解释原图频率对应与单位，后续抽样章节复用。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "foundation",
+      "note": "新编零基础铺垫。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-21",
+      "title": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "kind": "ppt",
+      "section": "2.1",
+      "pages": [
+        12
+      ],
+      "note": "整数时间索引使数字频率以2π等价；本节仅先证明复正弦，DTFT本身的周期性下一节完整证明。",
+      "sourceFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "sourceSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a"
+    },
+    {
+      "id": "dsp-original-22",
+      "title": "2.2周期序列的离散傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.2",
+      "pages": [
+        19
+      ],
+      "note": "原图f、Ω、ω和各归一化刻度，源图已实际目视；撇号在此图是归一化，不是导数。",
+      "sourceFilename": "2.2周期序列的离散傅里叶变换.pptx",
+      "sourceSha256": "109bb258604a00d13d02d82934c5a34e0cf55945ba52e66902b3a848834042e8"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "复数旋转、单位与周期的入门铺垫",
+      "kind": "supplement",
+      "section": "补充铺垫",
+      "pages": [],
+      "note": "复数代数、几组数字例、周期判据与四道自测为新编，不假称原PPT已讲。"
+    }
+  ]
+}

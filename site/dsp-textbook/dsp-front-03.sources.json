@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "id": "dsp-front-03",
+  "title": "DTFT：从序列到连续的数字频谱",
+  "order": 4,
+  "goals": [
+    "逐项读懂DTFT并计算任意数字频率处的值",
+    "通过整圈筛选规则完整推导IDTFT与归一化",
+    "分清绝对可和的充分条件、单位圆收敛域和两种δ"
+  ],
+  "prerequisites": [
+    "dsp-front-02"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "kind": "rewritten",
+      "note": "行政/路线页被明确定位为章节入口，不伪造独立定理。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        4,
+        6
+      ],
+      "kind": "rewritten",
+      "note": "保留X(z)及单位圆形式，补明收敛域条件，并给a=1/2与a=2对比。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        5
+      ],
+      "kind": "rewritten",
+      "note": "完整拆解定义，显式纠正绝对可和被称作一般充要条件的过强说法。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        7
+      ],
+      "kind": "derivation",
+      "note": "按原n求和/m目标时刻作用域推导IDTFT，再解释重命名和离散δ；补整圈积分筛选。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        12
+      ],
+      "kind": "derivation",
+      "note": "原M为整数整圈数，逐式证明2π周期，区分时间周期与最小频谱周期。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "example",
+      "note": "全部新编例题与条件说明。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-21",
+      "title": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "kind": "ppt",
+      "section": "2.1",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12
+      ],
+      "note": "原P1–3为章路线/封面/提纲；原P4–7为DTFT、Z变换、反变换；P12频谱周期性。XML文本已核，P5/6/7实际目视当前云转换公式，非原生PowerPoint保真声明。",
+      "sourceFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "sourceSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "整圈平均与双样值频谱新编教学例",
+      "kind": "supplement",
+      "section": "补充铺垫",
+      "pages": [],
+      "note": "双样值正逆变换、几何序列收敛域对比和六道自测均为新编，不冒充教材编号例题。"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "id": "dsp-overlap-add",
+  "title": "长信号分段算：重叠相加为什么不能只拼接",
+  "order": 80,
+  "goals": [
+    "区分全局块与局部数组",
+    "从线性性推导重叠相加",
+    "手算原例2.6.2并处理尾部"
+  ],
+  "prerequisites": [
+    "dsp-linear-convolution"
+  ],
+  "coverage": [
+    {
+      "sourceId": "ppt-2.6",
+      "pages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "kind": "derivation",
+      "note": "分段动机、原x_k和y_k定义、原全局分段图与输出叠加。"
+    },
+    {
+      "sourceId": "ppt-2.6",
+      "pages": [
+        14
+      ],
+      "kind": "example",
+      "note": "原例N2/M3/L4逐块卷积及全局叠加。"
+    },
+    {
+      "sourceId": "teaching-supplement",
+      "pages": [],
+      "kind": "foundation",
+      "note": "块号k与频率k的区别、局部r搬移、有限尾部及延迟权衡。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppt-2.6",
+      "title": "2.6DFT应用.pptx",
+      "kind": "ppt",
+      "section": "2.6",
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "note": "实际P10–14，含原例2.6.2；隔离转换只助读公式。",
+      "sourceFilename": "2.6DFT应用.pptx",
+      "sourceSha256": "1aea29d97f81e7ea9d685f78649659d3b1cc598ce03d09d79d9273f88a3f1cd5"
+    },
+    {
+      "id": "teaching-supplement",
+      "title": "局部索引桥接、四点DFT核验和自测",
+      "kind": "supplement",
+      "pages": [],
+      "note": "局部b_k(r)/v_k(r)为教学增加，不冒充书中原符号。"
+    }
+  ]
+}

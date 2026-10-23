@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="860" viewBox="0 0 680 860" role="img" aria-labelledby="title description">
+  <title id="title">四个时域样值及其四点DFT实系数</title>
+  <desc id="description">新增教学图。上图横坐标n是时间样值编号，n从0到3，x[n]依次为1、0、负1、0。下图横坐标k是频率格点编号，X[k]依次为0、2、0、2。采用正变换不除以N、逆变换除以N的约定。本例频率系数恰为实数，图中不是一般信号的幅度谱。一般情况下恢复信号还需要相位。k等于3的数字角频率3π/2与负π/2等价。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#58696a"/></marker></defs>
+  <rect width="680" height="860" fill="#fff"/>
+  <g font-family="system-ui,'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#203538">
+    <text x="38" y="44" font-size="30" font-weight="700">4个样值，同一组信息的两种描述</text>
+    <text x="38" y="86" font-size="24" fill="#58696a">新增教学图 · 4点 DFT</text>
+    <text x="38" y="135" font-size="27" font-weight="700" fill="#17645d">时域：x[n] = [1, 0, −1, 0]</text>
+    <g stroke="#d8e0da" stroke-width="1.5" stroke-dasharray="4 5">
+      <path d="M110 185H590M110 355H590"/>
+    </g>
+    <g stroke="#58696a" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M110 374V157"/><path d="M90 270H610"/>
+    </g>
+    <g font-size="24" text-anchor="end"><text x="96" y="194">1</text><text x="96" y="278">0</text><text x="96" y="364">−1</text></g>
+    <g stroke="#17645d" stroke-width="5" fill="#17645d">
+      <path d="M160 270V185M400 270V355"/>
+      <circle cx="160" cy="185" r="7"/><circle cx="400" cy="355" r="7"/>
+      <circle cx="280" cy="270" r="7" fill="#fff"/><circle cx="520" cy="270" r="7" fill="#fff"/>
+    </g>
+    <g font-size="25" text-anchor="middle"><text x="160" y="397">0</text><text x="280" y="397">1</text><text x="400" y="397">2</text><text x="520" y="397">3</text></g>
+    <text x="110" y="434" font-size="24">n：第几个时间样值，不是秒数</text>
+    <path d="M38 455H642" stroke="#d8e0da" stroke-width="1.5"/>
+    <text x="38" y="501" font-size="27" font-weight="700" fill="#67518a">频域：X[k] = [0, 2, 0, 2]</text>
+    <g stroke="#d8e0da" stroke-width="1.5" stroke-dasharray="4 5"><path d="M110 540H590M110 610H590"/></g>
+    <g stroke="#58696a" stroke-width="2" fill="none" marker-end="url(#arrow)"><path d="M110 696V516"/><path d="M90 680H610"/></g>
+    <g font-size="24" text-anchor="end"><text x="96" y="549">2</text><text x="96" y="619">1</text><text x="96" y="688">0</text></g>
+    <g stroke="#67518a" stroke-width="5" fill="#67518a">
+      <path d="M280 680V540M520 680V540"/>
+      <circle cx="280" cy="540" r="7"/><circle cx="520" cy="540" r="7"/>
+      <circle cx="160" cy="680" r="7" fill="#fff"/><circle cx="400" cy="680" r="7" fill="#fff"/>
+    </g>
+    <g font-size="25" text-anchor="middle"><text x="160" y="718">0</text><text x="280" y="718">1</text><text x="400" y="718">2</text><text x="520" y="718">3</text></g>
+    <text x="110" y="753" font-size="24">k：频点编号，不是时间样值编号</text>
+    <text x="38" y="793" font-size="24">本例画实数系数，一般还须保留相位。</text>
+    <text x="38" y="831" font-size="24">约定：正变换不乘 1/N，逆变换乘 1/4。</text>
+  </g>
+</svg>

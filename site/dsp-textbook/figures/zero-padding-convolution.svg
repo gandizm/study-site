@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="1200" viewBox="0 0 680 1200" role="img" aria-labelledby="title description">
+  <title id="title">补零防止循环卷积把线性卷积的末项折回</title>
+  <desc id="description">新增教学图。输入x(n)在n等于0和1处为1、2，h(n)在n等于0和1处为1、1，其他位置为0。线性卷积在n等于0、1、2处为1、3、2。若循环卷积长度L为2，位置2按模2绕回位置0，1加2得到3，两个输出成为3、3。两输入长度均为2，为保证无折叠，L至少为2加2减1等于3。正文选L为4：x补成1、2、0、0，h补成1、1、0、0，四点DFT相乘再IDFT得到1、3、2、0，前三项就是线性卷积。方括号在此只列数组元素；x(n)和h(n)保留原书圆括号记法。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#8c4c1a"/></marker><marker id="plain-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#879793"/></marker></defs>
+  <rect width="680" height="1200" fill="#fff"/>
+  <g font-family="system-ui,'Noto Sans CJK SC','Microsoft YaHei',sans-serif" fill="#203538">
+    <text x="38" y="45" font-size="30" font-weight="700">补零：给卷积结果留够位置</text>
+    <text x="38" y="88" font-size="24" fill="#58696a">新增教学图 · x(n) 为 [1,2]，h(n) 为 [1,1]</text>
+    <text x="38" y="129" font-size="24">数组都从 n=0 开始，其余位置为0。</text>
+    <rect x="38" y="157" width="604" height="228" rx="12" fill="#f1f7f4"/>
+    <text x="58" y="199" font-size="27" font-weight="700" fill="#17645d">① 先算线性卷积：结果有3个位置</text>
+    <g fill="#fff" stroke="#17645d" stroke-width="2"><rect x="100" y="225" width="100" height="66" rx="7"/><rect x="270" y="225" width="100" height="66" rx="7"/><rect x="440" y="225" width="100" height="66" rx="7"/></g>
+    <g text-anchor="middle" font-size="31" font-weight="700" fill="#17645d"><text x="150" y="270">1</text><text x="320" y="270">3</text><text x="490" y="270">2</text></g>
+    <g text-anchor="middle" font-size="25"><text x="150" y="327">n=0</text><text x="320" y="327">n=1</text><text x="490" y="327">n=2</text></g>
+    <text x="58" y="366" font-size="24">这3个数，是后面变换计算的参考答案。</text>
+    <rect x="38" y="407" width="604" height="342" rx="12" fill="#fff5e9"/>
+    <text x="58" y="452" font-size="27" font-weight="700" fill="#8c4c1a">② L=2：只留2格，末项绕回相加</text>
+    <g fill="#fff" stroke="#b9ada0" stroke-width="2"><rect x="100" y="477" width="100" height="55" rx="7"/><rect x="270" y="477" width="100" height="55" rx="7"/><rect x="440" y="477" width="100" height="55" rx="7"/></g>
+    <g text-anchor="middle" font-size="29"><text x="150" y="515">1</text><text x="320" y="515">3</text><text x="490" y="515">2</text></g>
+    <g fill="none" stroke="#879793" stroke-width="2.5" marker-end="url(#plain-arrow)"><path d="M150 536V623"/><path d="M320 536V623"/></g>
+    <path d="M490 536 C490 592 190 563 170 623" fill="none" stroke="#8c4c1a" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="353" y="611" font-size="25" fill="#8c4c1a">2 绕回第0格</text>
+    <g fill="#fff" stroke="#8c4c1a" stroke-width="2.5"><rect x="100" y="631" width="100" height="58" rx="7"/><rect x="270" y="631" width="100" height="58" rx="7"/></g>
+    <g text-anchor="middle" font-size="31" fill="#8c4c1a" font-weight="700"><text x="150" y="672">3</text><text x="320" y="672">3</text></g>
+    <text x="415" y="674" font-size="28" fill="#8c4c1a">1+2=3</text>
+    <g text-anchor="middle" font-size="25"><text x="150" y="724">n=0</text><text x="320" y="724">n=1</text></g>
+    <rect x="38" y="771" width="604" height="326" rx="12" fill="#f2f0f8"/>
+    <text x="58" y="816" font-size="27" font-weight="700" fill="#67518a">③ L≥3 不折叠；正文选 L=4</text>
+    <text x="58" y="861" font-size="26">x 补成 [1,2,0,0]，h 补成 [1,1,0,0]</text>
+    <text x="58" y="906" font-size="25">4点 DFT → 系数相乘 → 4点 IDFT</text>
+    <g fill="#fff" stroke="#67518a" stroke-width="2"><rect x="80" y="932" width="100" height="66" rx="7"/><rect x="220" y="932" width="100" height="66" rx="7"/><rect x="360" y="932" width="100" height="66" rx="7"/><rect x="500" y="932" width="100" height="66" rx="7"/></g>
+    <g text-anchor="middle" font-size="31" font-weight="700" fill="#67518a"><text x="130" y="977">1</text><text x="270" y="977">3</text><text x="410" y="977">2</text><text x="550" y="977">0</text></g>
+    <g text-anchor="middle" font-size="25"><text x="130" y="1034">n=0</text><text x="270" y="1034">n=1</text><text x="410" y="1034">n=2</text><text x="550" y="1034">n=3</text></g>
+    <text x="58" y="1076" font-size="25">本例最少留 2+2−1=3 格；末项不再折回。</text>
+    <text x="38" y="1140" font-size="25">补零不是改答案，而是防止结果互相叠加。</text>
+    <text x="38" y="1181" font-size="24">方括号只列数组；n 仍是当前输出的位置。</text>
+  </g>
+</svg>

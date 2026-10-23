@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "id": "dsp-frequency-sampling",
+  "title": "频率只取 N 个点，时域会发生什么",
+  "order": 40,
+  "goals": [
+    "推导频率采样导致的时域周期叠加",
+    "准确使用N≥M及支持区间条件",
+    "用有限核重构DTFT并分清无限长近似"
+  ],
+  "prerequisites": [
+    "dsp-front-01"
+  ],
+  "coverage": [
+    {
+      "sourceId": "ppt-2.4",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "kind": "derivation",
+      "note": "引入、Z单位圆采样、IDFT周期叠加与条件；纠正r实数误记。"
+    },
+    {
+      "sourceId": "ppt-2.4",
+      "pages": [
+        8,
+        9,
+        10
+      ],
+      "kind": "example",
+      "note": "五点等高矩形图例按单位幅度解释N5/N4；纠正周期个数与周期长度混淆。"
+    },
+    {
+      "sourceId": "ppt-2.4",
+      "pages": [
+        11
+      ],
+      "kind": "rewritten",
+      "note": "仅有例号及教材页码，正文明确缺题干，未声称完成这两个原书例题。"
+    },
+    {
+      "sourceId": "teaching-supplement",
+      "pages": [],
+      "kind": "derivation",
+      "note": "有限Dirichlet核插值、收敛边界及衰减指数误差算例。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppt-2.4",
+      "title": "2.4频域采样定理.pptx",
+      "kind": "ppt",
+      "section": "2.4",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "note": "真实11页；P7/8等原图与公式经隔离转换目视读取，不声称原貌保真。",
+      "sourceFilename": "2.4频域采样定理.pptx",
+      "sourceSha256": "53d6a04b132c0ed66d5feef880e99555033ac6eba57c999f32d94ec1c8377c5e"
+    },
+    {
+      "id": "teaching-supplement",
+      "title": "内插展开、衰减指数及自测",
+      "kind": "supplement",
+      "pages": [],
+      "note": "新增慢推导与例题明确标补充，不冒充P11教材引用题。"
+    }
+  ]
+}

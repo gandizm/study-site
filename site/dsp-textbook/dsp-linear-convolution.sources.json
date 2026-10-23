@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "id": "dsp-linear-convolution",
+  "title": "用 DFT 算线性卷积：为什么必须先补零",
+  "order": 70,
+  "goals": [
+    "逐项计算有限长线性卷积",
+    "用周期折叠解释循环卷积",
+    "选择无混叠补零长度并执行DFT相乘IDFT",
+    "回读原例2.6.1与局部记号"
+  ],
+  "prerequisites": [
+    "dsp-front-01"
+  ],
+  "coverage": [
+    {
+      "sourceId": "ppt-2.6",
+      "pages": [
+        3,
+        4,
+        5,
+        9
+      ],
+      "kind": "derivation",
+      "note": "DFT应用动机；原线性/循环卷积定义；周期折叠；补零流程与卷积定理慢推导。"
+    },
+    {
+      "sourceId": "ppt-2.6",
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "kind": "example",
+      "note": "原例2.6.1全部数据及L=8/11/13三结果回读。"
+    },
+    {
+      "sourceId": "teaching-supplement",
+      "pages": [],
+      "kind": "foundation",
+      "note": "变量角色、长度记号冲突说明；小数组手算与四点变换逐步验证。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppt-2.6",
+      "title": "2.6DFT应用.pptx",
+      "kind": "ppt",
+      "section": "2.6",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "note": "实际OOXML页序；原公式及原例由源公式预览的隔离PDF读取/目视核对，转换仅助读，不声称版式保真。",
+      "sourceFilename": "2.6DFT应用.pptx",
+      "sourceSha256": "1aea29d97f81e7ea9d685f78649659d3b1cc598ce03d09d79d9273f88a3f1cd5"
+    },
+    {
+      "id": "teaching-supplement",
+      "title": "补充慢步骤与四点DFT练习",
+      "kind": "supplement",
+      "pages": [],
+      "note": "小例h={1,1},x={1,2}、完整四点DFT/IDFT与自测为教学补充；不属于原PPT例号。"
+    }
+  ]
+}
