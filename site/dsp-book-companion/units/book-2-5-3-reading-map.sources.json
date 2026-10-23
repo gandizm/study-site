@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-5-3-reading-map",
+  "title": "DIF把频率分偶奇，别沿用DIT的x₁",
+  "bookSectionIds": [
+    "book-2-5-3"
+  ],
+  "learningPurpose": "DIF新x1/x2与r频率角色、图2.5.6–8、与DIT四项对照。",
+  "printedPages": [
+    93,
+    94,
+    95
+  ],
+  "pdfPages": [
+    110,
+    111,
+    112
+  ],
+  "prerequisites": [
+    "book-2-5-2-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "DIF新x1/x2与r频率角色、图2.5.6–8、与DIT四项对照。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "DIF新x1/x2与r频率角色、图2.5.6–8、与DIT四项对照。",
+      "printedPages": [
+        93,
+        94,
+        95
+      ],
+      "pdfPages": [
+        110,
+        111,
+        112
+      ]
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Exact book subsection only; book2.5.5 large-point parallel computation is not equivalent to PPT2.5.5 overview and remains deferred. Research pages are not a prerequisite for the standard FFT."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

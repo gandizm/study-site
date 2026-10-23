@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-6-3-reading-map",
+  "title": "2.6.3 读书定位卡：FFT提供表示，应用还需要处理规则",
+  "bookSectionIds": [
+    "book-2-6-3",
+    "book-2-3-1",
+    "book-2-5-4"
+  ],
+  "learningPurpose": "声音与图像示例边界、PPT新增OFDM框图的最小角色桥",
+  "printedPages": [
+    113,
+    114,
+    115,
+    63,
+    64,
+    96,
+    97
+  ],
+  "pdfPages": [
+    130,
+    131,
+    132,
+    80,
+    81,
+    113,
+    114
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "定位与可选桥，不新增作业或学习进度。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-26",
+      "filename": "2.6DFT应用.pptx",
+      "pages": [
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "声音与图像示例边界、PPT新增OFDM框图的最小角色桥"
+    },
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        8
+      ],
+      "roles": [
+        "research_extension",
+        "bridge_needed"
+      ],
+      "note": "与2.6P31相同类OFDM应用；书中DFT/IDFT仅支持方法，不冒充书2.6.3含同题。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "声音与图像示例边界、PPT新增OFDM框图的最小角色桥",
+      "printedPages": [
+        113,
+        114,
+        115,
+        63,
+        64,
+        96,
+        97
+      ],
+      "pdfPages": [
+        130,
+        131,
+        132
+      ]
+    },
+    {
+      "kind": "ppt-extension",
+      "claim": "DFT/IDFT定义与逆算法用于解释OFDM框图；不是书2.6.3的原应用题。",
+      "printedPages": [
+        63,
+        64,
+        96,
+        97
+      ],
+      "pdfPages": [
+        80,
+        81,
+        113,
+        114
+      ]
+    }
+  ],
+  "status": "reviewed-release"
+}

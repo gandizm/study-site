@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-3-1-transform-overview",
+  "title": "PPT跨节总览：先辨时间对象，再辨频率坐标",
+  "bookSectionIds": [
+    "book-2-3-1",
+    "book-2-1-2",
+    "book-2-2-1",
+    "book-2-2-3",
+    "book-2-3-2",
+    "book-2-4"
+  ],
+  "learningPurpose": "跨书节复习与局部符号角色；PPT2.5.5不等于书2.5.5",
+  "printedPages": [
+    42,
+    43,
+    51,
+    56,
+    57,
+    58,
+    63,
+    64,
+    65,
+    66,
+    67,
+    85,
+    86,
+    87,
+    88
+  ],
+  "pdfPages": [
+    59,
+    60,
+    68,
+    73,
+    74,
+    75,
+    80,
+    81,
+    82,
+    83,
+    84,
+    102,
+    103,
+    104,
+    105
+  ],
+  "prerequisites": [],
+  "pptReferences": [
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        29,
+        30,
+        31
+      ],
+      "roles": [
+        "bridge_needed"
+      ],
+      "note": "跨书节复习与局部符号角色；PPT2.5.5不等于书2.5.5"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "ppt-addition",
+      "claim": "跨书节复习与局部符号角色；PPT2.5.5不等于书2.5.5"
+    },
+    {
+      "kind": "book-method-support",
+      "claim": "只支持对应方法与条件，非宣称原书含同一PPT科研模型或总览页。",
+      "printedPages": [
+        42,
+        43,
+        51,
+        56,
+        57,
+        58,
+        63,
+        64,
+        65,
+        66,
+        67,
+        85,
+        86,
+        87,
+        88
+      ],
+      "pdfPages": [
+        59,
+        60,
+        68,
+        73,
+        74,
+        75,
+        80,
+        81,
+        82,
+        83,
+        84,
+        102,
+        103,
+        104,
+        105
+      ]
+    }
+  ],
+  "status": "reviewed-release"
+}

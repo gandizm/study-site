@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-5-1-reading-map",
+  "title": "FFT减少计算，不改变DFT的定义",
+  "bookSectionIds": [
+    "book-2-5-1",
+    "book-2-5-3"
+  ],
+  "learningPurpose": "FFT目标、直接计数与基2范围；P4/P27背景不当定理。",
+  "printedPages": [
+    88,
+    89,
+    96
+  ],
+  "pdfPages": [
+    105,
+    106,
+    113
+  ],
+  "prerequisites": [
+    "book-2-3-1-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        3,
+        5,
+        6,
+        7
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "FFT目标、直接计数与基2范围直接回读书P88–P89。"
+    },
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        4
+      ],
+      "roles": [
+        "background"
+      ],
+      "note": "FFT历史背景对应书P89，不作新增数学命题。"
+    },
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        27
+      ],
+      "roles": [
+        "background"
+      ],
+      "note": "数值方法与模拟近似价值的评价对应书P96的2.5.3末段；不是书P88–P89的新定理。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "FFT目标、直接计数与基2范围；P4历史背景在P89。",
+      "printedPages": [
+        88,
+        89
+      ],
+      "pdfPages": [
+        105,
+        106
+      ]
+    },
+    {
+      "kind": "background-location",
+      "claim": "课件P27的数值方法评价直接对应2.5.3末段，仅为背景支持；本卡主节仍为2.5.1。",
+      "printedPages": [
+        96
+      ],
+      "pdfPages": [
+        113
+      ]
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Exact book subsection only; book2.5.5 large-point parallel computation is not equivalent to PPT2.5.5 overview and remains deferred. Research pages are not a prerequisite for the standard FFT."
+    },
+    {
+      "kind": "ppt-specific-example",
+      "claim": "P6:24 records,5seconds each,500samples/second; per-channel2500-point transforms differ from one concatenated60000-point transform."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

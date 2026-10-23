@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-6-2-reading-map",
+  "title": "2.6.2 读书定位卡：频率格距不等于实际分辨能力",
+  "bookSectionIds": [
+    "book-2-6-2"
+  ],
+  "learningPurpose": "模拟近似的T尺度、实际记录长度、原2.6.5参数与三类误差",
+  "printedPages": [
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "pdfPages": [
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "定位与可选桥，不新增作业或学习进度。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-26",
+      "filename": "2.6DFT应用.pptx",
+      "pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "模拟近似的T尺度、实际记录长度、原2.6.5参数与三类误差"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "模拟近似的T尺度、实际记录长度、原2.6.5参数与三类误差",
+      "printedPages": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "pdfPages": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ]
+    },
+    {
+      "kind": "scope-boundary",
+      "claim": "书105–107三组图仅说明补零与增加有效记录区别；不要求书例2.6.4/6全文程序，110整周期与111–112CZT未纳入。"
+    }
+  ],
+  "status": "reviewed-release"
+}

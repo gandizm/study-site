@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-6-1-reading-map",
+  "title": "2.6.1 读书定位卡：先确定卷积长度，再谈FFT",
+  "bookSectionIds": [
+    "book-2-6-1"
+  ],
+  "learningPurpose": "线性卷积的长度选择、原三长度算例与重叠相加块号回读",
+  "printedPages": [
+    99,
+    100,
+    101,
+    102
+  ],
+  "pdfPages": [
+    116,
+    117,
+    118,
+    119
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "定位与可选桥，不新增作业或学习进度。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-26",
+      "filename": "2.6DFT应用.pptx",
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "线性卷积的长度选择、原三长度算例与重叠相加块号回读"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "线性卷积的长度选择、原三长度算例与重叠相加块号回读",
+      "printedPages": [
+        99,
+        100,
+        101,
+        102
+      ],
+      "pdfPages": [
+        116,
+        117,
+        118,
+        119
+      ]
+    },
+    {
+      "kind": "ppt-outline-supplement",
+      "claim": "相关只为P3提纲补充定义和共轭反转联系，不声称2.6.1原书展开相关证明。"
+    }
+  ],
+  "status": "reviewed-release"
+}

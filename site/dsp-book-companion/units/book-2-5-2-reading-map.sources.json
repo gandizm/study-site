@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-5-2-reading-map",
+  "title": "DIT中，r先是短序列的时间位置",
+  "bookSectionIds": [
+    "book-2-5-2"
+  ],
+  "learningPurpose": "DIT定义/拆分/蝶形/计数/倒位序；不把同页书例自动新增必做。",
+  "printedPages": [
+    89,
+    90,
+    91,
+    92
+  ],
+  "pdfPages": [
+    106,
+    107,
+    108,
+    109
+  ],
+  "prerequisites": [
+    "book-2-5-1-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "DIT定义/拆分/蝶形/计数/倒位序；不把同页书例自动新增必做。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "DIT定义/拆分/蝶形/计数/倒位序；不把同页书例自动新增必做。",
+      "printedPages": [
+        89,
+        90,
+        91,
+        92
+      ],
+      "pdfPages": [
+        106,
+        107,
+        108,
+        109
+      ]
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Exact book subsection only; book2.5.5 large-point parallel computation is not equivalent to PPT2.5.5 overview and remains deferred. Research pages are not a prerequisite for the standard FFT."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

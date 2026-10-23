@@ -11,3 +11,15 @@
 #bc-map-stage{cursor:grab;touch-action:pan-x pan-y}#bc-map-stage.bc-dragging{cursor:grabbing;user-select:none}.bc-map-menu>div{overscroll-behavior:contain}
 
 .bc-relation:hover .bc-edge,.bc-relation:focus .bc-edge{stroke:#a56a24;stroke-width:4}.bc-edge-hit{cursor:pointer}.bc-map-menu label{display:block;font-size:12px}.bc-map-menu select{max-width:100%;width:100%}
+
+/* A zoomed short landscape must not turn the graph into a 52%-height strip.
+   Only this narrow/short band changes: both panels keep independent scrolling. */
+@media screen and (min-width:520px) and (max-width:600px) and (max-height:440px){
+ .bc-top{display:flex;padding:5px 8px;gap:8px}.bc-top nav{gap:10px}
+ .bc-workspace{grid-template-columns:minmax(0,46%) minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+ .bc-map-heading{padding:4px}.bc-map-heading button{padding:3px;line-height:1.5}
+ .bc-map-toolbar{padding:4px 6px;gap:6px;line-height:1.5}
+ #bc-map-status{line-height:1.5}
+ .bc-workspace.bc-collapsed{grid-template-columns:minmax(150px,30%) minmax(0,1fr);grid-template-rows:minmax(0,1fr)}
+ .bc-collapsed .bc-map-heading{flex-wrap:wrap}
+}

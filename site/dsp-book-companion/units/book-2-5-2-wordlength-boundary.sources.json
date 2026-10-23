@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-5-2-wordlength-boundary",
+  "title": "PPT科研旁注：字长优化不是FFT定义的一部分",
+  "bookSectionIds": [
+    "book-2-5-2"
+  ],
+  "learningPurpose": "模型未给齐，书仅支持FFT分级背景，不冒充同题来源",
+  "printedPages": [
+    89,
+    90,
+    91,
+    92
+  ],
+  "pdfPages": [
+    106,
+    107,
+    108,
+    109
+  ],
+  "prerequisites": [],
+  "pptReferences": [
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        9
+      ],
+      "roles": [
+        "research_extension"
+      ],
+      "note": "模型未给齐，书仅支持FFT分级背景，不冒充同题来源"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "ppt-addition",
+      "claim": "模型未给齐，书仅支持FFT分级背景，不冒充同题来源"
+    },
+    {
+      "kind": "book-method-support",
+      "claim": "只支持对应方法与条件，非宣称原书含同一PPT科研模型或总览页。",
+      "printedPages": [
+        89,
+        90,
+        91,
+        92
+      ],
+      "pdfPages": [
+        106,
+        107,
+        108,
+        109
+      ]
+    }
+  ],
+  "status": "reviewed-release"
+}

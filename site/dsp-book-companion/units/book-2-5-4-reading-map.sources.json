@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-5-4-reading-map",
+  "title": "用正向FFT算逆变换，为什么要两次共轭",
+  "bookSectionIds": [
+    "book-2-5-4"
+  ],
+  "learningPurpose": "两次共轭与逆1/N；P8应用角色关联，不声称书2.5.4本身展开OFDM。",
+  "printedPages": [
+    96,
+    97
+  ],
+  "pdfPages": [
+    113,
+    114
+  ],
+  "prerequisites": [
+    "book-2-5-3-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-25",
+      "filename": "2.5快速傅里叶变换.pptx",
+      "pages": [
+        8,
+        28
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "两次共轭与逆1/N；P8应用角色关联，不声称书2.5.4本身展开OFDM。"
+    },
+    {
+      "deckId": "dsp-26",
+      "filename": "2.6DFT应用.pptx",
+      "pages": [
+        31
+      ],
+      "roles": [
+        "background",
+        "bridge_needed"
+      ],
+      "note": "OFDM合成/分解方向的应用桥，不宣称书2.5.4有同一框图。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "两次共轭与逆1/N；P8应用角色关联，不声称书2.5.4本身展开OFDM。",
+      "printedPages": [
+        96,
+        97
+      ],
+      "pdfPages": [
+        113,
+        114
+      ]
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Exact book subsection only; book2.5.5 large-point parallel computation is not equivalent to PPT2.5.5 overview and remains deferred. Research pages are not a prerequisite for the standard FFT."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

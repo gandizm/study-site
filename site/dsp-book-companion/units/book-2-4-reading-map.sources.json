@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-4-reading-map",
+  "title": "频率取样后的折回与恢复边界",
+  "bookSectionIds": [
+    "book-2-4",
+    "book-2-6-1"
+  ],
+  "learningPurpose": "书中频域采样定理为主线，只补恢复对象/长度条件、PPT换参及两原例的范围",
+  "printedPages": [
+    85,
+    86,
+    87,
+    88,
+    102,
+    103
+  ],
+  "pdfPages": [
+    102,
+    103,
+    104,
+    105,
+    119,
+    120
+  ],
+  "prerequisites": [
+    "book-2-3-2-reading-map",
+    "book-2-3-3-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-24",
+      "filename": "2.4频域采样定理.pptx",
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed",
+        "special_problem"
+      ],
+      "note": "P2引入并提问内插，P3–P7说明定理/恢复条件表；内插公式展开来自书P87–P88，不称P7已展开。P8–P10五个1的N5/N4与书N3/N6不同；P11指定例2.4.2和2.6.3。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "频域采样与内插到式2.4.8；排除同页滤波器实现与FFT开头。",
+      "printedPages": [
+        85,
+        86,
+        87,
+        88
+      ],
+      "pdfPages": [
+        102,
+        103,
+        104,
+        105
+      ]
+    },
+    {
+      "kind": "ppt-page-boundary",
+      "claim": "P7原保存image29.png是有限/非有限恢复条件表；P2明确提问内插。书P87–P88内插推导回答该问题，不是P7直接展示。"
+    },
+    {
+      "kind": "original-example",
+      "claim": "例2.4.2是无限长a^n u(n)，0<a<1，不是有限长序列。",
+      "printedPages": [
+        86,
+        87
+      ],
+      "pdfPages": [
+        103,
+        104
+      ]
+    },
+    {
+      "kind": "original-example",
+      "claim": "例2.6.3逆滤波并由N点记录恢复x的1..N−1，β非零；不把共页谱分析开头加入本卡。",
+      "printedPages": [
+        102,
+        103
+      ],
+      "pdfPages": [
+        119,
+        120
+      ]
+    },
+    {
+      "kind": "ppt-variant",
+      "claim": "课件R5的N5/N4与书例N3/N6参数不同；沿相同折回法保留原条件。"
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "No claim of exact original PPT image fidelity; no new required assignments or blanket inclusion of all co-located book material."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}
