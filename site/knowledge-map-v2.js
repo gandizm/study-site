@@ -73,10 +73,13 @@
     if (!pageArticles.has(current)) current = Number(articles.find(article => !article.hidden)?.dataset.page || pages[0]);
     let knownPage = current, lastDestination = current + ':', isNavigating = false, navigationToken = 0;
     const storageKey = 'study-knowledge-map-ui:' + root.location.pathname;
+    const compactQuery = '(max-width: 520px), (max-width: 1150px) and (max-height: 600px)';
+    let mapEntryRequested = false, entryRevealConsumed = false, dockToken = 0, dockReturn = null, dockResume = null, entryInteraction = false;
     try { expanded = root.sessionStorage.getItem(storageKey) !== 'closed'; } catch (_) {}
     try {
       const original = root.performance?.getEntriesByType('navigation')?.[0]?.name;
-      if (new URL(root.location.href).searchParams.get('map') === '1' || (original && new URL(original).searchParams.get('map') === '1')) expanded = true;
+      mapEntryRequested = new URL(root.location.href).searchParams.get('map') === '1' || Boolean(original && new URL(original).searchParams.get('map') === '1');
+      if (mapEntryRequested) expanded = true;
     } catch (_) {}
 
     const workspace = element('div', 'km-workspace');
@@ -120,7 +123,71 @@
     aside.append(header, content, live);
     workspace.prepend(aside);
 
+    function readerMode() {
+      const compact = Boolean(root.matchMedia?.(compactQuery).matches);
+      const narrow = root.innerWidth ? root.innerWidth <= 520 : Boolean(root.matchMedia?.('(max-width: 520px)').matches);
+      const modal = document.querySelector('#modal'), modalImage = modal?.querySelector('img');
+      return JSON.stringify([root.location.pathname, compact ? (narrow ? 'stacked' : 'beside') : 'desktop',
+        root.innerWidth || 0, root.innerHeight || 0,
+        workspace.classList.contains('kgv2-roomy-workspace'), root.CourseChapterGraph?.state?.().mode || 'overview',
+        Boolean(modal && !modal.hidden), Boolean(modalImage?.classList.contains('modal-fit'))]);
+    }
+    function dockPosition() {
+      return {page: current, mode: readerMode(), windowTop: root.scrollY || 0, windowLeft: root.scrollX || 0,
+        readerTop: main.scrollTop || 0, readerLeft: main.scrollLeft || 0};
+    }
+    function changeDockVisibility(open, before) {
+      const token = ++dockToken, nav = navigationToken;
+      if (!root.matchMedia?.(compactQuery).matches) { dockReturn = null; dockResume = null; return; }
+      const restore = open ? null : dockReturn;
+      const previous = open ? dockResume : null;
+      const samePosition = (a, b) => a && b && a.page === b.page && a.mode === b.mode &&
+        a.windowTop === b.windowTop && a.windowLeft === b.windowLeft &&
+        a.readerTop === b.readerTop && a.readerLeft === b.readerLeft;
+      const resume = previous && samePosition(previous.collapsed, before) ? previous.reading : null;
+      // Capture before collapse can clamp main's scroll range. A reopen may
+      // resume it only while the collapsed reading position is still unchanged.
+      dockResume = open ? null : {reading: before, collapsed: dockPosition()};
+      root.requestAnimationFrame(() => {
+        if (token !== dockToken || nav !== navigationToken || expanded !== open || visiblePage() !== current || !root.matchMedia?.(compactQuery).matches) return;
+        if (open) {
+          // A cancelled/pending reveal is not an actual reading-location change.
+          // Keep a return origin only once this opening really aligns the dock.
+          if (!dockReturn) dockReturn = before;
+          // Only explicit map entry/open reveals the bounded two-region dock.
+          // Ordinary graph page jumps retain their own saved scroll positions.
+          const reading = resume && resume.page === current && resume.mode === readerMode() ? resume : before;
+          if (reading.page === current) { main.scrollTop = reading.readerTop; main.scrollLeft = reading.readerLeft; }
+          const top = (root.scrollY || 0) + workspace.getBoundingClientRect().top;
+          root.scrollTo?.(root.scrollX || 0, Math.max(0, top));
+        } else if (restore) {
+          // Closing is not history. A different page, course, viewport/layout,
+          // diagram view or original-image mode owns its current reading place.
+          if (restore.page === current && restore.mode === readerMode()) {
+            main.scrollTop = restore.readerTop; main.scrollLeft = restore.readerLeft;
+            root.scrollTo?.(restore.windowLeft, restore.windowTop);
+          }
+          dockReturn = null;
+        }
+        if (!open && dockResume) dockResume.collapsed = dockPosition();
+      });
+    }
+    function cancelPendingDockReveal(event) {
+      ++dockToken; entryInteraction = true;
+      if (!expanded) {
+        dockReturn = null;
+        // The reopen button's own pointer/key activation is not new reading.
+        if (!toggle.contains(event?.target)) dockResume = null;
+      }
+    }
+    // A slow map fetch must never bring the document back after the reader has
+    // started interacting. Input also invalidates a queued open/close frame.
+    ['wheel', 'touchstart', 'pointerdown'].forEach(name => root.addEventListener(name, cancelPendingDockReveal, {capture: true, passive: true}));
+    root.addEventListener('keydown', event => {
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) cancelPendingDockReveal(event);
+    }, {capture: true});
     function setExpanded(next, remember = true) {
+      const changed = next !== expanded, before = changed && remember ? dockPosition() : null;
       expanded = next;
       aside.classList.toggle('km-collapsed', !next);
       workspace.classList.toggle('km-map-collapsed', !next);
@@ -129,6 +196,7 @@
       toggle.setAttribute('aria-label', (next ? '收起' : '展开') + '知识图谱，当前原 PPT 第' + current + '页');
       chevron.textContent = next ? '▾' : '▸';
       if (remember) try { root.sessionStorage.setItem(storageKey, next ? 'open' : 'closed'); } catch (_) {}
+      if (changed && remember) changeDockVisibility(next, before);
     }
     setExpanded(expanded, false);
     toggle.addEventListener('click', () => setExpanded(!expanded));
@@ -146,6 +214,7 @@
         pptTop: viewport?.scrollTop || 0, pptLeft: viewport?.scrollLeft || 0,
         pptZoom: Number.parseInt(article?.querySelector('.slide-toolbar output')?.textContent, 10) || 100,
         windowTop: root.scrollY || 0, windowLeft: root.scrollX || 0,
+        readerTop: main.scrollTop || 0, readerLeft: main.scrollLeft || 0,
         mapTop: graph.scrollTop, search: search.value};
     }
     function updateBack() {
@@ -185,6 +254,7 @@
       const destination = page + ':' + anchor;
       const previous = snapshot();
       const token = ++navigationToken;
+      cancelPendingDockReveal();
       if (!options.restore && (page !== current || destination !== lastDestination)) {
         backStack.push(previous); if (backStack.length > 100) backStack.shift();
       }
@@ -235,6 +305,7 @@
             if (token !== navigationToken || article.hidden || current !== page) return;
             if (teaching) { teaching.scrollTop = saved.teachingTop; teaching.scrollLeft = saved.teachingLeft; }
             if (viewport) { viewport.scrollTop = saved.pptTop; viewport.scrollLeft = saved.pptLeft; }
+            main.scrollTop = saved.readerTop || 0; main.scrollLeft = saved.readerLeft || 0;
             root.scrollTo?.(saved.windowLeft || 0, saved.windowTop || 0);
           });
         } else if (teaching) {
@@ -246,6 +317,7 @@
         // Compact layouts scroll the page as well as the two reading panes.
         // Keep the graph in place on jumps, and restore the originating page view.
         const windowPosition = options.restore || previous;
+        main.scrollTop = windowPosition.readerTop || 0; main.scrollLeft = windowPosition.readerLeft || 0;
         root.scrollTo?.(windowPosition.windowLeft || 0, windowPosition.windowTop || 0);
         syncPage(page); isNavigating = false;
       });
@@ -279,10 +351,11 @@
       const teaching = pageArticles.get(current)?.querySelector('.teaching');
       if (!teaching) return;
       teaching.focus({preventScroll: true});
-      if (root.matchMedia?.('(max-width: 520px), (max-width: 1150px) and (max-height: 600px)').matches) {
-        // This explicit reading action may reveal the below-fold lecture, but
-        // ordinary graph jumps keep their document position and sticky graph.
-        const top = (root.scrollY || 0) + teaching.getBoundingClientRect().top - aside.getBoundingClientRect().height - 8;
+      if (root.matchMedia?.(compactQuery).matches) {
+        // Compact readers have a separate scrolling region, never underneath
+        // the diagram. Only this explicit action reveals the lecture and dock.
+        main.scrollTop += teaching.getBoundingClientRect().top - main.getBoundingClientRect().top - 8;
+        const top = (root.scrollY || 0) + workspace.getBoundingClientRect().top;
         root.scrollTo?.(root.scrollX || 0, Math.max(0, top));
       }
     });
@@ -304,13 +377,13 @@
         if (isNavigating) return;
         const previousPage = knownPage;
         syncPage(pageArticles.has(page) ? visiblePage() : Number(select.value));
-        if (current !== previousPage) lastDestination = current + ':';
+        if (current !== previousPage) { lastDestination = current + ':'; cancelPendingDockReveal(); }
       });
     }
     ['course:pagechange', 'em:pagechange', 'dsp:pagechange'].forEach(name => root.addEventListener(name, onPageChange));
     root.addEventListener('hashchange', () => root.requestAnimationFrame(() => syncPage(visiblePage())));
     root.addEventListener('popstate', () => {
-      ++navigationToken; isNavigating = false;
+      ++navigationToken; isNavigating = false; cancelPendingDockReveal();
       const p = Number(root.location.hash.replace(/^#p/, ''));
       if (pageArticles.has(p) && visiblePage() !== p) { select.value = String(p); select.dispatchEvent(new Event('change', {bubbles: true})); }
       root.requestAnimationFrame(() => syncPage(visiblePage(), true));
@@ -374,6 +447,10 @@
       filterGraph(); syncPage(visiblePage());
       if (!search.value) scrollCardIntoGraph(cards.get(selectedId));
       aside.dataset.ready = 'true';
+      if (mapEntryRequested && !entryRevealConsumed) {
+        entryRevealConsumed = true;
+        if (expanded && !entryInteraction) changeDockVisibility(true, dockPosition());
+      }
       root.dispatchEvent(new CustomEvent('knowledge-map:ready', {detail: {id: data.id, nodes: data.nodes.length, pages: data.coveredPages.length}}));
     }
     function fallback(reason) {

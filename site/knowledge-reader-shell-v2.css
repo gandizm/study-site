@@ -7,9 +7,10 @@
   body.km-enabled > .top > .course-links a { flex: 0 0 auto; }
 }
 
-/* Small/short screens must not divide the last few pixels into two unreadable
- * panes. Let the page scroll normally; the graph stays sticky while the existing
- * PPT and teaching panes retain useful heights and their own scroll controls. */
+/* Compact V2 uses a bounded dock: the diagram and reader never overlap.
+ * Top navigation and progress remain in the document above the dock, reachable
+ * by scrolling up. Inside the dock only main (and existing inner panes) scroll.
+ * The 60px reserve matches body padding and exceeds the normal footer height. */
 @media screen and (max-width: 520px),
        screen and (max-width: 1150px) and (max-height: 600px) {
   body.km-enabled {
@@ -21,14 +22,54 @@
     overflow-x: hidden;
     padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
   }
-  body.km-enabled > .km-workspace { display: block; overflow: visible; }
-  body.km-enabled .km-workspace > main { overflow: visible; }
-  body.km-enabled .km-panel { position: sticky; top: 0; z-index: 8; }
+  body.km-enabled > .km-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: min(300px, 55%) minmax(0, 1fr);
+    height: calc(100vh - 60px - env(safe-area-inset-bottom, 0px));
+    height: calc(100dvh - 60px - env(safe-area-inset-bottom, 0px));
+    min-height: 0;
+    box-sizing: border-box;
+    padding: 0 5px 6px;
+    gap: 6px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  body.km-enabled .km-workspace > main {
+    min-height: 0;
+    min-width: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scroll-behavior: auto;
+    border: 1px solid #ccd9d1;
+    border-radius: 7px;
+  }
+  /* A child pane may hand vertical excess to main, never through main to
+     the document/diagram; keep the original horizontal containment. */
+  body.km-enabled .km-workspace .slide-viewport,
+  body.km-enabled .km-workspace .teaching { overscroll-behavior-y: auto; }
+  body.km-enabled .km-workspace .km-panel.kgv2-enabled {
+    position: relative;
+    top: auto;
+    z-index: 2;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    width: 100%;
+    margin: 0;
+  }
+  body.km-enabled .km-panel.kgv2-enabled .kgv2-frame { min-height: 0; }
   body.km-enabled .slide-page {
     height: auto;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: clamp(220px, 45dvh, 360px) clamp(260px, 60dvh, 440px);
     overflow: visible;
+  }
+  body.km-enabled > .km-workspace.kgv2-roomy-workspace {
+    grid-template-rows: min(70%, calc(100% - 100px)) minmax(0, 1fr);
   }
   body.km-enabled > .bottom {
     position: fixed;
@@ -36,5 +77,28 @@
     left: 0;
     right: 0;
     padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+  }
+}
+/* Short landscape has enough width to read beside a full-height diagram. */
+@media screen and (min-width: 521px) and (max-width: 1150px) and (max-height: 600px) {
+  body.km-enabled > .km-workspace {
+    grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+  body.km-enabled > .km-workspace.kgv2-roomy-workspace {
+    grid-template-columns: minmax(280px, 65%) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+}
+/* Explicit collapse restores reading space rather than leaving a blank dock. */
+@media screen and (max-width: 520px),
+       screen and (max-width: 1150px) and (max-height: 600px) {
+  body.km-enabled > .km-workspace.km-map-collapsed {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  body.km-enabled .km-workspace .km-panel.kgv2-enabled.km-collapsed {
+    height: auto;
+    min-height: 0;
   }
 }
