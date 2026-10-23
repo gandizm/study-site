@@ -1,0 +1,11 @@
+/* Scoped optional views. Existing original-image viewer and layout are unchanged. */
+.dsp-compatible-display{box-sizing:border-box;max-width:100%;margin:1rem 0;border:1px solid #9aaeb0;border-radius:10px;background:#f4f9f8;color:#153b39}
+.dsp-compatible-display>summary{padding:.85rem 1rem;cursor:pointer;font-size:1rem;font-weight:700;line-height:1.6}
+.dsp-compatible-display>summary:focus-visible,.dsp-compatible-scroll:focus-visible{outline:3px solid #287d78;outline-offset:2px}
+.dsp-compatible-body{padding:0 1rem 1rem;min-width:0}
+.dsp-compatible-body p{font-size:1rem;line-height:1.7;margin:.7rem 0}
+.dsp-compatible-body figure{margin:1rem 0}
+.dsp-compatible-scroll{box-sizing:border-box;max-width:100%;overflow:auto;border:1px solid #b3c7c6;background:white;overscroll-behavior-x:contain}
+.dsp-compatible-scroll img{display:block;width:max(680px,100%);max-width:none;height:auto;margin:0}
+.dsp-compatible-body figcaption{font-size:.95rem;line-height:1.6;margin:.65rem 0;color:#385855}
+@media(max-width:520px){.dsp-compatible-display>summary{padding:.75rem}.dsp-compatible-body{padding:0 .75rem .75rem}}
