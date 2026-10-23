@@ -1,0 +1,1796 @@
+{
+  "version": 1,
+  "id": "communications-ch4",
+  "pageCount": 105,
+  "reader": "communications-ppt.html",
+  "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+  "sourcePdfSha256": "c97293c8f3197e0890b6f4a2445022a7c0bb60dbbeccb7c7ed9a082943de98d3",
+  "sourceStatus": "重建清单：基于恢复的原站105页阅读器、原PDF及逐页图片；page/pdfPage均为实际物理页，不按幻灯片残留页脚重编号。",
+  "pages": [
+    {
+      "page": 1,
+      "title": "第4章：消息怎样搬出去，又怎样取回来",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"1\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 1,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=1",
+      "image": "/study-site/courses/communications-ch4/slides/page-001.png",
+      "imageSha256": "61c740fd998e8885b10765970f706955d2f63a5daa63f1702866057dbfe9db00",
+      "imageBytes": 1226584,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 2,
+      "title": "一条收发链，依次回答五组问题",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"2\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 2,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=2",
+      "image": "/study-site/courses/communications-ch4/slides/page-002.png",
+      "imageSha256": "b30f8398b8243bb828d43500fbe4b2c86d488d170eb86700406c00b291030a41",
+      "imageBytes": 663383,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 3,
+      "title": "学会的标志：能解释每一步为什么这样做",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"3\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 3,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=3",
+      "image": "/study-site/courses/communications-ch4/slides/page-003.png",
+      "imageSha256": "93ffc0a7a72df51f1d727fd296e7508e96a2ad81faa6740d764e2c90cb432554",
+      "imageBytes": 655897,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 4,
+      "title": "同一段消息，只是换了频谱位置和表示方式",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"4\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 4,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=4",
+      "image": "/study-site/courses/communications-ch4/slides/page-004.png",
+      "imageSha256": "2ccdbc3ee28af5647130ca51bc3cc2bc29281d90240431624d2898d649611c74",
+      "imageBytes": 651516,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 5,
+      "title": "载波原本很规则，消息究竟改变了它什么？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"5\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 5,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=5",
+      "image": "/study-site/courses/communications-ch4/slides/page-005.png",
+      "imageSha256": "6f88fdac89d1c10c76e8500f7b6fe3663108ddb18647e34902cd7c2f09738c00",
+      "imageBytes": 655582,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 6,
+      "title": "线性搬移不是“频率没变”，而是变化有同一条规则",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"6\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 6,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=6",
+      "image": "/study-site/courses/communications-ch4/slides/page-006.png",
+      "imageSha256": "cf9b3b032bac34b54a0ea0814b7f725f0a331bed7047bd48221c53d8a845a970",
+      "imageBytes": 664437,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 7,
+      "title": "把消息搬到高频，究竟解决了哪些实际限制？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"7\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 7,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=7",
+      "image": "/study-site/courses/communications-ch4/slides/page-007.png",
+      "imageSha256": "919df9cd7da087ea11fe79d364774dca9f31b5734c369d6a3a5c268b8024ddce",
+      "imageBytes": 637129,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 8,
+      "title": "先分清两种取舍：留不留载波，留哪些边带",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"8\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 8,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=8",
+      "image": "/study-site/courses/communications-ch4/slides/page-008.png",
+      "imageSha256": "74477a62c29ce2bfac0ed66aa339045543b5d14c83032904a4833ac989a50e2f",
+      "imageBytes": 661727,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 9,
+      "title": "低频消息怎样搬进高频信道？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"9\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 9,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=9",
+      "image": "/study-site/courses/communications-ch4/slides/page-009.png",
+      "imageSha256": "9b8f084f8b01f6c10ddb0ecd766f1769e5ce010582667d57b85704335889f683",
+      "imageBytes": 616398,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 10,
+      "title": "乘一次余弦，为什么多出两个边频？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"10\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 10,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=10",
+      "image": "/study-site/courses/communications-ch4/slides/page-010.png",
+      "imageSha256": "8ec73a9c50951237a7828952377d11e4ed5c0459b65580b225549a49f72651ff",
+      "imageBytes": 687715,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 11,
+      "title": "为什么AM要先给消息加一份直流？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"11\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 11,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=11",
+      "image": "/study-site/courses/communications-ch4/slides/page-011.png",
+      "imageSha256": "60baba4a3c9336c71dc7e4feae95b24137c3db5e65b7fa74b948b88fa70eeff4",
+      "imageBytes": 630265,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 12,
+      "title": "加进去的直流，最后发到哪里去了？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"12\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 12,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=12",
+      "image": "/study-site/courses/communications-ch4/slides/page-012.png",
+      "imageSha256": "80ec30544f6be36e69980debd8479162cb59db005cb81341cae082c66aed2a40",
+      "imageBytes": 627239,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 13,
+      "title": "只看外轮廓，真的能把消息取回来吗？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"13\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 13,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=13",
+      "image": "/study-site/courses/communications-ch4/slides/page-013.png",
+      "imageSha256": "1f37152aec6bc186ad0eda73cea63a216a5182df9a2b36c5f2fd62183734f22c",
+      "imageBytes": 666039,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 14,
+      "title": "AM什么时候会取不回来？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"14\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 14,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=14",
+      "image": "/study-site/courses/communications-ch4/slides/page-014.png",
+      "imageSha256": "ef6a631d08ac941db2c9d92ba2814d7564fe839ed0a2068ad889ea20e3520338",
+      "imageBytes": 683889,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 15,
+      "title": "如果不要那条额外载波，会怎样？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"15\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 15,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=15",
+      "image": "/study-site/courses/communications-ch4/slides/page-015.png",
+      "imageSha256": "ead9abff2ba42877d3d23410f41d298efd4a7ce2fb8b0492e68935bfd1930299",
+      "imageBytes": 660967,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 16,
+      "title": "DSB的负号没有消失，它藏到哪里了？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"16\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 16,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=16",
+      "image": "/study-site/courses/communications-ch4/slides/page-016.png",
+      "imageSha256": "a70871f4014402f1c8216817c4406950c02567cdaf58a980b204055a8dca47b4",
+      "imageBytes": 671488,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 17,
+      "title": "用什么办法，把DSB的正负号取回来？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"17\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 17,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=17",
+      "image": "/study-site/courses/communications-ch4/slides/page-017.png",
+      "imageSha256": "9a3d9cdada666d90710395a20edf2726fd240c4028b568788fa42c6e73c8928c",
+      "imageBytes": 655782,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 18,
+      "title": "一份消息搬出了两边，能不能只发一边？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"18\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 18,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=18",
+      "image": "/study-site/courses/communications-ch4/slides/page-018.png",
+      "imageSha256": "af2483063ff2bcaa28d324cde459ae5df264c0541ac5878e95fb5302960053ca",
+      "imageBytes": 656525,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 19,
+      "title": "怎样让下边带留下，而把上边带挡住？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"19\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 19,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=19",
+      "image": "/study-site/courses/communications-ch4/slides/page-019.png",
+      "imageSha256": "1d0377edbc25e989ea5e6557c010025cfc2a59970be59eb64110f7ffe031ee08",
+      "imageBytes": 634242,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 20,
+      "title": "只留一个边带，时域里为什么出现带帽消息？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"20\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 20,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=20",
+      "image": "/study-site/courses/communications-ch4/slides/page-020.png",
+      "imageSha256": "020c546bf0c45617921275d1a68c84bc036cd2651f07cbbcffd4fcc8dc86eddb",
+      "imageBytes": 640459,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 21,
+      "title": "把相加改成相减，就能留下另一边吗？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"21\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 21,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=21",
+      "image": "/study-site/courses/communications-ch4/slides/page-021.png",
+      "imageSha256": "435dd584db656a746ff3895a503a3f333ed91aa922813146817f196ec6f94cfb",
+      "imageBytes": 596786,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 22,
+      "title": "看见一段单边带后，接收机该对准哪里？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"22\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 22,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=22",
+      "image": "/study-site/courses/communications-ch4/slides/page-022.png",
+      "imageSha256": "308f11309c4ff5198795628dc754bc807472f55fec4883be8048b57893dfb8d5",
+      "imageBytes": 644589,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 23,
+      "title": "省掉一半频带，为什么滤波反而更难？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"23\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 23,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=23",
+      "image": "/study-site/courses/communications-ch4/slides/page-023.png",
+      "imageSha256": "6b28f9306dcdd1fba5fd74323f8fb4063af29e5c3b1a36787d9dd308ba12fc31",
+      "imageBytes": 688445,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 24,
+      "title": "不能干净切掉一边时，能否留一点再补回来？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"24\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 24,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=24",
+      "image": "/study-site/courses/communications-ch4/slides/page-024.png",
+      "imageSha256": "68166e6dc5d9cb0623f02fb97d97e1ab7c948d21786957c0dcb455357b1fa0b8",
+      "imageBytes": 641797,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 25,
+      "title": "滤波削弱了一部分，另一边凭什么能补足？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"25\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 25,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=25",
+      "image": "/study-site/courses/communications-ch4/slides/page-025.png",
+      "imageSha256": "b21dc740c5a5300f8d16bbcd741d04dda5c947d6b714170f52e2ea6476f29d6a",
+      "imageBytes": 672722,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 26,
+      "title": "残留的那一小段，在图上到底是哪一边？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"26\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 26,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=26",
+      "image": "/study-site/courses/communications-ch4/slides/page-026.png",
+      "imageSha256": "55ab234c97a06da429c0bfa48bcd4e8f0de97f51f56fd5f154417f10d97d0eb0",
+      "imageBytes": 640968,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 27,
+      "title": "把VSB搬回基带，发送滤波器的影响会不会消失？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"27\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 27,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=27",
+      "image": "/study-site/courses/communications-ch4/slides/page-027.png",
+      "imageSha256": "19e7a19b94c87dffb54539695a232424b95f253031a67eb0942fc61784f61446",
+      "imageBytes": 657586,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 28,
+      "title": "两条路径回到同一频率后，怎样判断消息变形？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"28\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 28,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=28",
+      "image": "/study-site/courses/communications-ch4/slides/page-028.png",
+      "imageSha256": "475a6c0e22f11f890dbda35863004f8351c37a3bdaa7e19188898510a4366836",
+      "imageBytes": 651650,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 29,
+      "title": "互补条件不是额外规定，而是恢复消息的要求",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"29\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 29,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=29",
+      "image": "/study-site/courses/communications-ch4/slides/page-029.png",
+      "imageSha256": "b91f5ffa67eccec10946555a5ac8b1a760097fcffec5858a6127b063422b3839",
+      "imageBytes": 678072,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 30,
+      "title": "原图四条曲线，怎样检验同一条互补条件？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"30\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 30,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=30",
+      "image": "/study-site/courses/communications-ch4/slides/page-030.png",
+      "imageSha256": "2de7643e8b3615fd1a3f791b0a00660035c852d11453e049571be92a09a28531",
+      "imageBytes": 629847,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 31,
+      "title": "省带宽、好滤波、好接收，能不能同时占全？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"31\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 31,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=31",
+      "image": "/study-site/courses/communications-ch4/slides/page-031.png",
+      "imageSha256": "3cc6b91d4b5d34963f208722023f6632444abf1ad843b3a00012887bfb60b096",
+      "imageBytes": 616127,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 32,
+      "title": "能搬回来以后，还要问：混入噪声后能听清吗？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"32\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 32,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=32",
+      "image": "/study-site/courses/communications-ch4/slides/page-032.png",
+      "imageSha256": "f82a6838e14ffc70c53b8ee5ac13368d811d409b2b6a28b887273c44c9f7351b",
+      "imageBytes": 673574,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 33,
+      "title": "噪声每次都不一样，为什么还能算它有多强？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"33\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 33,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=33",
+      "image": "/study-site/courses/communications-ch4/slides/page-033.png",
+      "imageSha256": "fd067369bce5041217085cd1fd89d9a532144450423c6c21f210c8cd7da23b36",
+      "imageBytes": 739113,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 34,
+      "title": "从哪里开始数噪声，比较才不会失去意义？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"34\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 34,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=34",
+      "image": "/study-site/courses/communications-ch4/slides/page-034.png",
+      "imageSha256": "682b8b9f8cebb2d89e527d087e5dec8c98a557a2566036c461354a94830e85d2",
+      "imageBytes": 654126,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 35,
+      "title": "带通留下了多少噪声，解调时又该怎样拆？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"35\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 35,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=35",
+      "image": "/study-site/courses/communications-ch4/slides/page-035.png",
+      "imageSha256": "91e67ad86249c5592d953a78cbb0abf7e426c985ecbff1ee24070ed9a432e7dc",
+      "imageBytes": 678108,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 36,
+      "title": "解调后更清楚，是把声音放大了，还是改善了比例？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"36\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 36,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=36",
+      "image": "/study-site/courses/communications-ch4/slides/page-036.png",
+      "imageSha256": "e5a5699dd1d826d9bc9ce95080f515c4665fce4bbdda79b791f102b8719572f7",
+      "imageBytes": 666725,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 37,
+      "title": "先把DSB送到解调器门口：信号和噪声各有多少？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"37\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 37,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=37",
+      "image": "/study-site/courses/communications-ch4/slides/page-037.png",
+      "imageSha256": "f26de591b56945a0c59b1387d35c36dd8297bfab49a51023dc3f6085634c5e5d",
+      "imageBytes": 695016,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 38,
+      "title": "同样乘余弦，为什么信号与噪声留下的比例不同？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"38\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 38,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=38",
+      "image": "/study-site/courses/communications-ch4/slides/page-038.png",
+      "imageSha256": "17ce86be1ce68b0e7f4bd7276ea19129e6c803ce75fa402e8a0cf5545e5826f1",
+      "imageBytes": 683162,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 39,
+      "title": "DSB的两倍增益来自哪里，会不会凭空创造能量？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"39\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 39,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=39",
+      "image": "/study-site/courses/communications-ch4/slides/page-039.png",
+      "imageSha256": "081c0ed1a7117253cc7d4bb7245f85838364c2c79837bf2139a4e77e493502cc",
+      "imageBytes": 634805,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 40,
+      "title": "SSB删了一边，入口有用功率会怎样改变？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"40\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 40,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=40",
+      "image": "/study-site/courses/communications-ch4/slides/page-040.png",
+      "imageSha256": "7af8c5f6e40a16bd588493f5ba09528ca80daca41197525c30d71db394c07a55",
+      "imageBytes": 678971,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 41,
+      "title": "SSB少收了噪声，消息搬回来的比例又是多少？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"41\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 41,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=41",
+      "image": "/study-site/courses/communications-ch4/slides/page-041.png",
+      "imageSha256": "a388d5c88757501fa43e8e67026e0aebcfc87842115bfc5b3d23c69e91c657ab",
+      "imageBytes": 650656,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 42,
+      "title": "SSB已经恢复了消息，为什么制度增益却只有一？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"42\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 42,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=42",
+      "image": "/study-site/courses/communications-ch4/slides/page-042.png",
+      "imageSha256": "d00253679969061ee57d2633ee573865d1b86fe62c1443623438f7cb83e1e891",
+      "imageBytes": 655274,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 43,
+      "title": "一个增益为二，一个为一，公平比较为何打平？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"43\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 43,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=43",
+      "image": "/study-site/courses/communications-ch4/slides/page-043.png",
+      "imageSha256": "b5468461f148da8b4faa61af6c56665a46be8643da7e9a309d9164c99af00bb0",
+      "imageBytes": 643705,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 44,
+      "title": "让包络更好认的载波，会付出什么噪声代价？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"44\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 44,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=44",
+      "image": "/study-site/courses/communications-ch4/slides/page-044.png",
+      "imageSha256": "219bad91129c12cf8493a19f13e2bbf07fc73cb4cb0c7af69f7476afb498fca3",
+      "imageBytes": 696833,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 45,
+      "title": "载波看似提高了输入信噪比，消息真的更清楚了吗？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"45\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 45,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=45",
+      "image": "/study-site/courses/communications-ch4/slides/page-045.png",
+      "imageSha256": "a45ac042a04957720e42e3eaa9c4e4de5d7f69d7914c5104e038823e589c1e04",
+      "imageBytes": 654736,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 46,
+      "title": "AM的制度增益，为什么由边带所占比例决定？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"46\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 46,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=46",
+      "image": "/study-site/courses/communications-ch4/slides/page-046.png",
+      "imageSha256": "e9a8cf69f52eb6d86f4fe6fe3d7d5f54ac214fd3c78b4cdfa145693e10289070",
+      "imageBytes": 650647,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 47,
+      "title": "说载波越大越差，究竟固定了哪一笔功率？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"47\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 47,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=47",
+      "image": "/study-site/courses/communications-ch4/slides/page-047.png",
+      "imageSha256": "cc58e50b2c4e0686e18bfd1f888ad4607ed60748f129586f7cbaadec39d8cf7d",
+      "imageBytes": 667549,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 48,
+      "title": "不用本地载波，只取包络，刚才的结论还成立吗？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"48\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 48,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=48",
+      "image": "/study-site/courses/communications-ch4/slides/page-048.png",
+      "imageSha256": "2c30c3f06d361f4471770332edbc933866c23789704d2d2e802f8061b56bb6b7",
+      "imageBytes": 663170,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 49,
+      "title": "包络检波器读到的根号，究竟是哪两个量合成的？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"49\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 49,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=49",
+      "image": "/study-site/courses/communications-ch4/slides/page-049.png",
+      "imageSha256": "542adb6e30ab8711b9fef7f0d5fbd9e32ee90e1a896b9f24718272366db51ecc",
+      "imageBytes": 691488,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 50,
+      "title": "信号很强时，为什么正交噪声暂时不影响一阶结果？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"50\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 50,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=50",
+      "image": "/study-site/courses/communications-ch4/slides/page-050.png",
+      "imageSha256": "a4d9de22abc5110055dacb7a61710bf2db3c1dcc335c6fdb6d430843f32360d4",
+      "imageBytes": 669583,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 51,
+      "title": "包络输出看起来更大，为什么清晰程度仍与相干AM相同？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"51\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 51,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=51",
+      "image": "/study-site/courses/communications-ch4/slides/page-051.png",
+      "imageSha256": "d04c0c542225d4f40bd4377999c69adb8b1f1426e77830d6944b72811520501e",
+      "imageBytes": 669072,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 52,
+      "title": "单音全调制为什么只得到三分之二，而不是一？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"52\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 52,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=52",
+      "image": "/study-site/courses/communications-ch4/slides/page-052.png",
+      "imageSha256": "b4b583eded718d1c929c9b33dbfff570c6381d18bd57cd442a0343bd9a1f1dc8",
+      "imageBytes": 704302,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 53,
+      "title": "噪声反过来更强时，刚才的近似该怎样换？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"53\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 53,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=53",
+      "image": "/study-site/courses/communications-ch4/slides/page-053.png",
+      "imageSha256": "e38c2f4df3f68669a6e45827559c28f507d4b4c96067abe98f88c7c15a70d8eb",
+      "imageBytes": 656024,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 54,
+      "title": "弱消息不是简单变小，而是被噪声方向乘乱了",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"54\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 54,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=54",
+      "image": "/study-site/courses/communications-ch4/slides/page-054.png",
+      "imageSha256": "5496d8f4ae37625cedc8947ca9520afc08d2cda524e1c81e650630e2ceb60e58",
+      "imageBytes": 693797,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 55,
+      "title": "为什么包络接收会突然变得很差，而相干模型不会？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"55\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 55,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=55",
+      "image": "/study-site/courses/communications-ch4/slides/page-055.png",
+      "imageSha256": "169087d5f705759d74447bb66bd16005b80e874faa8b9a4f3ae66034fd5c59b7",
+      "imageBytes": 671278,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 56,
+      "title": "面对下一道题，先判断接收器还能不能线性拆开",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"56\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 56,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=56",
+      "image": "/study-site/courses/communications-ch4/slides/page-056.png",
+      "imageSha256": "857ec97b18dac94e0ec3fe23476a774f84f05ae6bd377b58ffc0c1e160bcb29b",
+      "imageBytes": 729474,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 57,
+      "title": "这两条消息频率，经过同一个VSB滤波器各留下什么？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"57\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 57,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=57",
+      "image": "/study-site/courses/communications-ch4/slides/page-057.png",
+      "imageSha256": "994ddfb09571f7b2d896b41e0503f167db778387b96e767f1bb62dad26760c8a",
+      "imageBytes": 660659,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 58,
+      "title": "不只写出VSB波形，还用搬回来检查符号",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"58\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 58,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=58",
+      "image": "/study-site/courses/communications-ch4/slides/page-058.png",
+      "imageSha256": "e1e24b4b3e1ef48f0b8a62f45c460c6b7630ea20f627d9fb99d26d1cb486be6b",
+      "imageBytes": 576748,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 59,
+      "title": "不再改变振幅，消息还能放在哪里？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"59\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 59,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=59",
+      "image": "/study-site/courses/communications-ch4/slides/page-059.png",
+      "imageSha256": "5854db7e3467d00b4cac8ca29ca3a8bf66cf41ed00023e9cf1c4f455f216f047",
+      "imageBytes": 728046,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 60,
+      "title": "调相改变的是哪一个相位，为什么也会改变频率？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"60\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 60,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=60",
+      "image": "/study-site/courses/communications-ch4/slides/page-060.png",
+      "imageSha256": "2173dcb1b4431c1a4f66e98d9f30c2796f1743b0dd488c37e8ff44408bace79b",
+      "imageBytes": 714028,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 61,
+      "title": "若让消息控制快慢，为什么写波形时反而要积分？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"61\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 61,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=61",
+      "image": "/study-site/courses/communications-ch4/slides/page-061.png",
+      "imageSha256": "c71b656aaace4124bbcb72fb7e3e98ac14d4ad95c715611c95498d874441bea1",
+      "imageBytes": 707905,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 62,
+      "title": "看到同一个角度波形，为什么还不能立刻叫它FM？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"62\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 62,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=62",
+      "image": "/study-site/courses/communications-ch4/slides/page-062.png",
+      "imageSha256": "07e7ddb18bbb2b741594d2475b1b416f556322dff3632acbf8156805d6fe37b0",
+      "imageBytes": 659813,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 63,
+      "title": "同样的频偏，为什么慢消息会积出更大的相位摆动？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"63\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 63,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=63",
+      "image": "/study-site/courses/communications-ch4/slides/page-063.png",
+      "imageSha256": "fa1808423fae6a3633d49e0e7ce4d91e82d937bf31e1d1ee142c5516ed595f63",
+      "imageBytes": 673455,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 64,
+      "title": "调频指数算出来以后，为什么还需要一组新的系数？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"64\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 64,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=64",
+      "image": "/study-site/courses/communications-ch4/slides/page-064.png",
+      "imageSha256": "114f2b867deec5d77595fccaab8ea14973683bef170063c7a1b12643761df390",
+      "imageBytes": 687275,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 65,
+      "title": "固定了调频指数，怎样从一张图读出许多边频？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"65\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 65,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=65",
+      "image": "/study-site/courses/communications-ch4/slides/page-065.png",
+      "imageSha256": "b9245d171b9dbfbaf4ddf29550e7916679ceaf7b5400bceb2d15533d7a0c5681",
+      "imageBytes": 683291,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 66,
+      "title": "这些倍频怎样搬到载频两侧，负号又从哪里来？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"66\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 66,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=66",
+      "image": "/study-site/courses/communications-ch4/slides/page-066.png",
+      "imageSha256": "af4411be12cac1a98466e5146c515a7a18bc613ca05b04a0e6bc1111dd05b451",
+      "imageBytes": 668455,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 67,
+      "title": "把所有边频收成一行，怎样检查每一项没有写错？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"67\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 67,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=67",
+      "image": "/study-site/courses/communications-ch4/slides/page-067.png",
+      "imageSha256": "93230e9205995e935be653d5907b31e6716bfec1110420c9faf8f4fc972d7584",
+      "imageBytes": 632939,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 68,
+      "title": "时域每一项余弦，在频谱里究竟要画几根线？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"68\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 68,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=68",
+      "image": "/study-site/courses/communications-ch4/slides/page-068.png",
+      "imageSha256": "ac12ca14780fea31e71ffddc68d4dafbcdaaf0268aa8b6a5effab96ac08e144d",
+      "imageBytes": 660586,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 69,
+      "title": "包络明明不变，为什么载波谱线却会消失？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"69\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 69,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=69",
+      "image": "/study-site/courses/communications-ch4/slides/page-069.png",
+      "imageSha256": "cb0de9584f7c639aa828b685c8a1ebf9cb6b7da11d138d28387887e568854d23",
+      "imageBytes": 706078,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 70,
+      "title": "理论上无限宽的频谱，怎样进入实际有限带宽的信道？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"70\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 70,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=70",
+      "image": "/study-site/courses/communications-ch4/slides/page-070.png",
+      "imageSha256": "0d64b5cd5ebf1980fed1c0d7313d887f41312eac913d9e04e2a02736b18bec34",
+      "imageBytes": 707640,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 71,
+      "title": "频偏和消息频率，为什么要先相加再把范围翻倍？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"71\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 71,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=71",
+      "image": "/study-site/courses/communications-ch4/slides/page-071.png",
+      "imageSha256": "37de1ac8878739a13d2b72cc84ecd2244810db75c130e55b96451da2171ac50d",
+      "imageBytes": 719068,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 72,
+      "title": "频谱被摊宽以后，总功率是不是也增加了？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"72\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 72,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=72",
+      "image": "/study-site/courses/communications-ch4/slides/page-072.png",
+      "imageSha256": "332215e7d538374b95ba8bfc272b70b2f1a9177e7c3d1c824c58bd89f7407c75",
+      "imageBytes": 691816,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 73,
+      "title": "把振幅起伏压平以后，FM为什么仍然有噪声？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"73\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 73,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=73",
+      "image": "/study-site/courses/communications-ch4/slides/page-073.png",
+      "imageSha256": "68c2e5065c1000573754447539bb0277fc44a05b645967905a5277591203af39",
+      "imageBytes": 654182,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 74,
+      "title": "频偏变大需要更宽通带，入口为什么反而更吵？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"74\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 74,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=74",
+      "image": "/study-site/courses/communications-ch4/slides/page-074.png",
+      "imageSha256": "568010a1d334d3e40f097d34ce2135f269297c38c1645a379a4c37b01b238152",
+      "imageBytes": 652348,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 75,
+      "title": "噪声把向量推偏了多少，怎样从原图直接算出来？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"75\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 75,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=75",
+      "image": "/study-site/courses/communications-ch4/slides/page-075.png",
+      "imageSha256": "5006d941dcd0ab39c8e6ea685fd3754be3655263199b5a024ea2f292eecc17bc",
+      "imageBytes": 707885,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 76,
+      "title": "若噪声更强，为什么要把参考方向反过来？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"76\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 76,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=76",
+      "image": "/study-site/courses/communications-ch4/slides/page-076.png",
+      "imageSha256": "36dbc13dc30e5c51b005b153db595d6a9f7179d9033329f63bbb12cb54d31c2c",
+      "imageBytes": 648663,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 77,
+      "title": "鉴频器求一次导数，怎样同时取回消息并留下噪声？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"77\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 77,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=77",
+      "image": "/study-site/courses/communications-ch4/slides/page-077.png",
+      "imageSha256": "ae7205a7261a07cfb491e7b3b2378ad40fd5d261726fdef47bd2a38d5054416a",
+      "imageBytes": 695084,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 78,
+      "title": "为什么鉴频后高频噪声更强，而不是所有频率同样吵？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"78\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 78,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=78",
+      "image": "/study-site/courses/communications-ch4/slides/page-078.png",
+      "imageSha256": "0100e540a650b301d9485d5784ab6779ef848887c71b0e823c0af57985469de3",
+      "imageBytes": 676866,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 79,
+      "title": "前端收到的噪声，为什么不能全部算进最终输出？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"79\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 79,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=79",
+      "image": "/study-site/courses/communications-ch4/slides/page-079.png",
+      "imageSha256": "05f1b6215905efb2cab2cd64245554fe6861514a9f1bc61dff6ded06c97ca220",
+      "imageBytes": 651449,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 80,
+      "title": "把阴影面积算出来，怎样得到一般消息的输出SNR？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"80\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 80,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=80",
+      "image": "/study-site/courses/communications-ch4/slides/page-080.png",
+      "imageSha256": "e636f9dd50107061920146e76adbee293872c79b02e2493d4dd10d683d1bc3b6",
+      "imageBytes": 660789,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 81,
+      "title": "同一个调频指数，为什么会算出四百五十的制度增益？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"81\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 81,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=81",
+      "image": "/study-site/courses/communications-ch4/slides/page-081.png",
+      "imageSha256": "3422e809f7d05add9f60947d8eba92964cb2e2b64c61ff57f8abf58aea31c32c",
+      "imageBytes": 652489,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 82,
+      "title": "要说FM比AM更清楚，先把哪几项条件固定？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"82\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 82,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=82",
+      "image": "/study-site/courses/communications-ch4/slides/page-082.png",
+      "imageSha256": "e653d99ecc40bfa56f4707b7c967ce2bf21663a43c8c97fda437410bef501b76",
+      "imageBytes": 665676,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 83,
+      "title": "更清楚的代价，为什么要用两个不同的比值来说明？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"83\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 83,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=83",
+      "image": "/study-site/courses/communications-ch4/slides/page-083.png",
+      "imageSha256": "348b01dcb00273740dd9542aabb6fefedd5eb34602c992f9fbdeec89f999215e",
+      "imageBytes": 724589,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 84,
+      "title": "如果带宽能换清晰度，为什么不一直增加频偏？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"84\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 84,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=84",
+      "image": "/study-site/courses/communications-ch4/slides/page-084.png",
+      "imageSha256": "1bbac7fd91ee64a51e1ee9dc7295a11f22b175f17511708ad8cc7f302910e82a",
+      "imageBytes": 708621,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 85,
+      "title": "信号不再占优势时，合成相位究竟跟着谁走？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"85\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 85,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=85",
+      "image": "/study-site/courses/communications-ch4/slides/page-085.png",
+      "imageSha256": "6ac508d5c99c9a58f6a7ea3a2e14f74c5db6ec5f95013f3a5022b5ed63a9d7e8",
+      "imageBytes": 704119,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 86,
+      "title": "门限值为什么写在输入端，而不是写成听感要求？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"86\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 86,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=86",
+      "image": "/study-site/courses/communications-ch4/slides/page-086.png",
+      "imageSha256": "0d65358abd457c692e1ba97414db827ad1108255ce579434ecd8b7478d490a8d",
+      "imageBytes": 660998,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 87,
+      "title": "记住一个门限量级之后，还要检查哪些前提？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"87\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 87,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=87",
+      "image": "/study-site/courses/communications-ch4/slides/page-087.png",
+      "imageSha256": "59e8d0997345a63c22ccca305d04bce4e1bdce9eb836ee740b86ef55e0043baf",
+      "imageBytes": 700087,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 88,
+      "title": "让弱信号还能解调，与让输出更安静，是同一种改善吗？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"88\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 88,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=88",
+      "image": "/study-site/courses/communications-ch4/slides/page-088.png",
+      "imageSha256": "5325e47e89f8dd360cc087b264805374c57b662692c14d18d18bf01e1fd31f9d",
+      "imageBytes": 740107,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 89,
+      "title": "消息的高频本来较弱，能否只把那里的噪声压下去？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"89\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 89,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=89",
+      "image": "/study-site/courses/communications-ch4/slides/page-089.png",
+      "imageSha256": "0f6fcb057535bf7f59ed7df08b2e8ebe0feef5490676fb7a34aaadca5807f5fb",
+      "imageBytes": 763820,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 90,
+      "title": "两次相反的频率整形抵消了，为什么还能降噪？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"90\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 90,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=90",
+      "image": "/study-site/courses/communications-ch4/slides/page-090.png",
+      "imageSha256": "a0b61056feeb5ae9950d7c7621d57a48ccb6f38a5eb85f3b47b8c0039507a130",
+      "imageBytes": 756846,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 91,
+      "title": "原图的RC电路，真的把高频“放大”了吗？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"91\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 91,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=91",
+      "image": "/study-site/courses/communications-ch4/slides/page-091.png",
+      "imageSha256": "ea46d7e33932abee5ba2baddb90d88e285a5753f0ef3f395cfada3fa5c2b38ee",
+      "imageBytes": 690156,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 92,
+      "title": "给出一个角调波，怎样拆出相移、频偏与原消息？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"92\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 92,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=92",
+      "image": "/study-site/courses/communications-ch4/slides/page-092.png",
+      "imageSha256": "190fe3f1e3cc4dafa044b55a4d04c5c66221d98d5346178e7ae7708cda52ebfb",
+      "imageBytes": 631451,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 93,
+      "title": "已经会算各自的信噪比，怎样才算公平地比较？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"93\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 93,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=93",
+      "image": "/study-site/courses/communications-ch4/slides/page-093.png",
+      "imageSha256": "68563fcbe420be2a143f9ed406d375a7000381995f1f35e788454e45712f9e52",
+      "imageBytes": 729760,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 94,
+      "title": "表里的倍数，为什么在图上变成固定高度差？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"94\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 94,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=94",
+      "image": "/study-site/courses/communications-ch4/slides/page-094.png",
+      "imageSha256": "604c04b273336fd62bb2abb13870526450fc55333f7329c5455a1b07e52ae5ce",
+      "imageBytes": 758524,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 95,
+      "title": "一条信道的频带有限，给FM多分一些会挤掉什么？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"95\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 95,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=95",
+      "image": "/study-site/courses/communications-ch4/slides/page-095.png",
+      "imageSha256": "62e27e55af194e4b449adde6d854e6222662705777c8371ce755da2bec857655",
+      "imageBytes": 746092,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 96,
+      "title": "省功率、省带宽、接收简单，为什么不是同一件事？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"96\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 96,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=96",
+      "image": "/study-site/courses/communications-ch4/slides/page-096.png",
+      "imageSha256": "24082b9296ef747e270ff04269c9f594566a4b37e6d49dff063e71415831265d",
+      "imageBytes": 733559,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 97,
+      "title": "同样是工程折中，VSB与FM究竟在换什么？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"97\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 97,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=97",
+      "image": "/study-site/courses/communications-ch4/slides/page-097.png",
+      "imageSha256": "d628c806b9f11546920f50ffa615ff682b47b694d182aa702bc182cd76f2b3ac",
+      "imageBytes": 657675,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 98,
+      "title": "多路消息共用一条信道，怎样相加之后还拆得开？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"98\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 98,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=98",
+      "image": "/study-site/courses/communications-ch4/slides/page-098.png",
+      "imageSha256": "3e33c9a95817a4299fe667a4b2714b5abda70bfa8b6d2acd94665a992890ba3b",
+      "imageBytes": 742445,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 99,
+      "title": "相邻载频应该隔多远，才不是只看中心“不重叠”？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"99\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 99,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=99",
+      "image": "/study-site/courses/communications-ch4/slides/page-099.png",
+      "imageSha256": "93e1fcd480d26203d06f9e40cf061578ab40a430f6515d4eb0ba2c8ad1b368ab",
+      "imageBytes": 717438,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 100,
+      "title": "沿一条支路走一遍，分频与合成分别在哪一步发生？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"100\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 100,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=100",
+      "image": "/study-site/courses/communications-ch4/slides/page-100.png",
+      "imageSha256": "42053450050acec0faba980bb345801f235374fb4e78800e7154df7944f06665",
+      "imageBytes": 638004,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 101,
+      "title": "已经组成一个子群，为什么还可以把它整体再搬一次？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"101\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 101,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=101",
+      "image": "/study-site/courses/communications-ch4/slides/page-101.png",
+      "imageSha256": "a3b4b5634477e29ab2f813ae2d2340194334ca79110ae70e34e4c65c2342e4c2",
+      "imageBytes": 696089,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 102,
+      "title": "一个电视频道里，为什么图像与声音不必用同一种调制？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"102\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 102,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=102",
+      "image": "/study-site/courses/communications-ch4/slides/page-102.png",
+      "imageSha256": "421ffdfb0cf1e9023aa0b8707fdce555a457c6dbfb13b888afe8927499f8f889",
+      "imageBytes": 674636,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 103,
+      "title": "把左右声道合成之后，外层FM看到的还是单路音频吗？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"103\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 103,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=103",
+      "image": "/study-site/courses/communications-ch4/slides/page-103.png",
+      "imageSha256": "a126a281790359a858a760a5f8c814229f59f8950094a7e05bcbcfca8a376317",
+      "imageBytes": 636856,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 104,
+      "title": "五道作业各自接在哪一段知识链上？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"104\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 104,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=104",
+      "image": "/study-site/courses/communications-ch4/slides/page-104.png",
+      "imageSha256": "201cdaf586fe8a67a4ab92594d6b853864b3df220f87ce69825d29eacf6d5a12",
+      "imageBytes": 587240,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    },
+    {
+      "page": 105,
+      "title": "离开这一章前，能否不看答案说出每一步依据？",
+      "reader": "communications-ppt.html",
+      "selector": ".slide-page[data-page=\"105\"]",
+      "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+      "pdfPage": 105,
+      "sourceUrl": "/study-site/courses/communications-ch4/source/ch4.pdf#page=105",
+      "image": "/study-site/courses/communications-ch4/slides/page-105.png",
+      "imageSha256": "3041fef1ea93b869df753ee7679710f3eaa0b6d7192f47e55edb11415606288d",
+      "imageBytes": 864696,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG"
+    }
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "version": 1,
+  "id": "network-ch2",
+  "reader": "/study-site/network-ch2-ppt.html",
+  "sourcePdf": "/study-site/courses/source-pages/91dd4b2e4272c79ffe08/source.pdf",
+  "sourcePdfSha256": "91dd4b2e4272c79ffe080ba0006bf6b134ac3ce8a9a7f70e59a2a5d712cd06af",
+  "sourcePdfPages": 50,
+  "readerPages": 50,
+  "verification": {
+    "method": "恢复的主PDF及50张原图逐一匹配仍存在的原独审日志SHA256；仅据可提取的首行数字记录印刷页码，其余留null。本轮新写深读和图谱属于重建候选，需独立重新审校。",
+    "pageNumbering": "真实PDF物理1–50页；物理37–49页的印刷页码为47–59，缺失的印刷37–46不虚构为阅读页。",
+    "recoveryStatus": "new-reconstruction-not-byte-identical-old-artifact"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "readerIndex": 1,
+      "sourcePdfPage": 1,
+      "printedSlidePage": null,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-1.webp",
+      "sourceImageSha256": "8aa1202a439d1a1845a3f2e5229320172d6b1761df0340d99af1e455a2f85513",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 2,
+      "readerIndex": 2,
+      "sourcePdfPage": 2,
+      "printedSlidePage": null,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-2.webp",
+      "sourceImageSha256": "35303c035529900fdb6b22d7d6fa3e98eb65bb11d56ff030dd70cf3373c8991f",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 3,
+      "readerIndex": 3,
+      "sourcePdfPage": 3,
+      "printedSlidePage": 3,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-3.webp",
+      "sourceImageSha256": "a391c17db62e122f4df03780f5a289a30f6a7c11e5c68dc82f07175a9ebebb20",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 4,
+      "readerIndex": 4,
+      "sourcePdfPage": 4,
+      "printedSlidePage": null,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-4.webp",
+      "sourceImageSha256": "5cbe5b5adae5a3de0f9b4ab0f6b01b3c06b5850e13298d038b688c406a0e9925",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 5,
+      "readerIndex": 5,
+      "sourcePdfPage": 5,
+      "printedSlidePage": 5,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-5.webp",
+      "sourceImageSha256": "89e94c6016bc36f239143c984cebf108b4ea1dc722f77391ff5bcb1d757adb11",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 6,
+      "readerIndex": 6,
+      "sourcePdfPage": 6,
+      "printedSlidePage": 6,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-6.webp",
+      "sourceImageSha256": "bbb2542632b14b0e2834b5c199600752e905a5fada1cbd2418d9ba82ed18d4c6",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 7,
+      "readerIndex": 7,
+      "sourcePdfPage": 7,
+      "printedSlidePage": 7,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-7.webp",
+      "sourceImageSha256": "fa641b1ca19a548faccf5f27e05decd94e59dc9d9efb1d6998d2362b5db8e347",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 8,
+      "readerIndex": 8,
+      "sourcePdfPage": 8,
+      "printedSlidePage": 8,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-8.webp",
+      "sourceImageSha256": "69b736267cfb460a5641bac08a87aeec6a3d715d6bb1764f20cb685e100844ca",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 9,
+      "readerIndex": 9,
+      "sourcePdfPage": 9,
+      "printedSlidePage": 9,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-9.webp",
+      "sourceImageSha256": "3c6263858ec9635dcb6546b7d52466194d5d414f141ff5d5ecf0e383bf2f391f",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 10,
+      "readerIndex": 10,
+      "sourcePdfPage": 10,
+      "printedSlidePage": 10,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-10.webp",
+      "sourceImageSha256": "742d4dc32fa231ccf99187cda9c414ff4c1b9754c41dc75bc6fea5f103beac67",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 11,
+      "readerIndex": 11,
+      "sourcePdfPage": 11,
+      "printedSlidePage": 11,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-11.webp",
+      "sourceImageSha256": "eff403f5f715270d4f2aa2742e9026942a5323cf6b7f7d5bae4692bc04df7efd",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 12,
+      "readerIndex": 12,
+      "sourcePdfPage": 12,
+      "printedSlidePage": 12,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-12.webp",
+      "sourceImageSha256": "23968c3dd6887963e51a7b3d1a0a21ee6f9e1a0fd812f5ab8b3f8e946b188c13",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 13,
+      "readerIndex": 13,
+      "sourcePdfPage": 13,
+      "printedSlidePage": 13,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-13.webp",
+      "sourceImageSha256": "31307dada51b1d950433ddb75dc2795926d05127a52545080160eddacce10b69",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 14,
+      "readerIndex": 14,
+      "sourcePdfPage": 14,
+      "printedSlidePage": 14,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-14.webp",
+      "sourceImageSha256": "77aa3f888fbb1cc931523c09662458f08fa85846388f834a1fee6192b2af979b",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 15,
+      "readerIndex": 15,
+      "sourcePdfPage": 15,
+      "printedSlidePage": 15,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-15.webp",
+      "sourceImageSha256": "93e0cc44880f5db5a09b170b4a82598f21be059d676ca1ec011d8e7e33ac8833",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 16,
+      "readerIndex": 16,
+      "sourcePdfPage": 16,
+      "printedSlidePage": 16,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-16.webp",
+      "sourceImageSha256": "26c59e88fcf7483e6faaf14ea470be1758772637f654bdbba2b7257e52c3c549",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 17,
+      "readerIndex": 17,
+      "sourcePdfPage": 17,
+      "printedSlidePage": 17,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-17.webp",
+      "sourceImageSha256": "b0cbce24f6e77f7659f342decd6e418473565ad32d2f612490a9992ee779b4c3",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 18,
+      "readerIndex": 18,
+      "sourcePdfPage": 18,
+      "printedSlidePage": null,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-18.webp",
+      "sourceImageSha256": "4ca90d9a54b2eb1be26b05db71f8010e73e52d44e61e77207215af3278b4f275",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 19,
+      "readerIndex": 19,
+      "sourcePdfPage": 19,
+      "printedSlidePage": 19,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-19.webp",
+      "sourceImageSha256": "e919931e5747e6171a462c809b87de346bdbf5bca4d230ae7e1ba2ea38eff8c3",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 20,
+      "readerIndex": 20,
+      "sourcePdfPage": 20,
+      "printedSlidePage": 20,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-20.webp",
+      "sourceImageSha256": "2a34fde8ee6b6251513b9281a49daefe7522bb48ed85c0444468ecc1c5211812",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 21,
+      "readerIndex": 21,
+      "sourcePdfPage": 21,
+      "printedSlidePage": 21,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-21.webp",
+      "sourceImageSha256": "0e2116cdc910452fcfe1d891f9df46af4244146c7aeb17c67ca94a60643b4631",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 22,
+      "readerIndex": 22,
+      "sourcePdfPage": 22,
+      "printedSlidePage": 22,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-22.webp",
+      "sourceImageSha256": "2434dacf0112165fe415c40fd5547a404c7eae44c7b3f3c8de0e2adfe6fe0a62",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 23,
+      "readerIndex": 23,
+      "sourcePdfPage": 23,
+      "printedSlidePage": 23,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-23.webp",
+      "sourceImageSha256": "89f77e5eea106932e11946f91a98645700de58741f0abe4a674e77ae419f595c",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 24,
+      "readerIndex": 24,
+      "sourcePdfPage": 24,
+      "printedSlidePage": 24,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-24.webp",
+      "sourceImageSha256": "6c67687e98ee20ef9239b39d49bca68b5bc7def1d04a097a9e2a827585e22907",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 25,
+      "readerIndex": 25,
+      "sourcePdfPage": 25,
+      "printedSlidePage": 25,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-25.webp",
+      "sourceImageSha256": "dc5c687bff363575ba4730938bcc4bab4a937fc5fae3fb6caa4e59dc9cea3823",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 26,
+      "readerIndex": 26,
+      "sourcePdfPage": 26,
+      "printedSlidePage": 26,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-26.webp",
+      "sourceImageSha256": "1452b4a74df1dc23634b711b2c969508b7c787abb26ba9f38444ebe1f97235ce",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 27,
+      "readerIndex": 27,
+      "sourcePdfPage": 27,
+      "printedSlidePage": 27,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-27.webp",
+      "sourceImageSha256": "0cf8afe78f5f0c8ebcff099ccb3950c9ae6cb36bf37609c2e664fb1a344fb4dd",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 28,
+      "readerIndex": 28,
+      "sourcePdfPage": 28,
+      "printedSlidePage": 28,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-28.webp",
+      "sourceImageSha256": "aa5fb4be3ef307340793963358b379db58d6487a0b360b803856b61747d42998",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 29,
+      "readerIndex": 29,
+      "sourcePdfPage": 29,
+      "printedSlidePage": 29,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-29.webp",
+      "sourceImageSha256": "4f6fb131ac99401c2356cf5c105648edf4d7554490565a3ad88a05264d5eadc7",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 30,
+      "readerIndex": 30,
+      "sourcePdfPage": 30,
+      "printedSlidePage": 30,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-30.webp",
+      "sourceImageSha256": "ddffd13a20f792871e711881ab49ba7482e980738ad2cb804fb9a3e936ea81e9",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 31,
+      "readerIndex": 31,
+      "sourcePdfPage": 31,
+      "printedSlidePage": 31,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-31.webp",
+      "sourceImageSha256": "4f19a39950644ca28c3925f8d132a3b6a3b5828610ff25cae5670846b452bc3d",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 32,
+      "readerIndex": 32,
+      "sourcePdfPage": 32,
+      "printedSlidePage": 32,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-32.webp",
+      "sourceImageSha256": "226739d40b17713e2e0f10692be04bb4ed8dfac7a2fa813d7f16cb1b74401019",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 33,
+      "readerIndex": 33,
+      "sourcePdfPage": 33,
+      "printedSlidePage": 33,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-33.webp",
+      "sourceImageSha256": "0ae9e74ff53bf7ba92c7249974ae58c469b67fee1d766faea07488aea782d3c5",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 34,
+      "readerIndex": 34,
+      "sourcePdfPage": 34,
+      "printedSlidePage": null,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-34.webp",
+      "sourceImageSha256": "c32cbfb12c3aca2a4b3c867921b1a9bfd08e3d1b646097c3dc41d2d347d06745",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 35,
+      "readerIndex": 35,
+      "sourcePdfPage": 35,
+      "printedSlidePage": 35,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-35.webp",
+      "sourceImageSha256": "ca8514c683bef70697f731937e4cb46f5be7614dddaed252d9ae150a7eab5596",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 36,
+      "readerIndex": 36,
+      "sourcePdfPage": 36,
+      "printedSlidePage": null,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-36.webp",
+      "sourceImageSha256": "6feb75aeeaaebd04dda2d5250f0f1b008e837dcfe05609e4dbee238ab17c524d",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 37,
+      "readerIndex": 37,
+      "sourcePdfPage": 37,
+      "printedSlidePage": 47,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-37.webp",
+      "sourceImageSha256": "9c3ff0f7020ba3e2c07705c3c08eedd9901de8b691425976b4c4ca863bcb5fe8",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 38,
+      "readerIndex": 38,
+      "sourcePdfPage": 38,
+      "printedSlidePage": 48,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-38.webp",
+      "sourceImageSha256": "be710e5faff0e98b0155f6bfa733290b4a8f0040795f3eba8c740444875d1ecf",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 39,
+      "readerIndex": 39,
+      "sourcePdfPage": 39,
+      "printedSlidePage": 49,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-39.webp",
+      "sourceImageSha256": "e434142c0655448cb1c41087c5cf232db150ee0aee3b8709528726398e2af60f",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 40,
+      "readerIndex": 40,
+      "sourcePdfPage": 40,
+      "printedSlidePage": 50,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-40.webp",
+      "sourceImageSha256": "a1185c288a3eb6c84ee789f6422ad8ef443d229f463ed5fc6991df7ec2b17fda",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 41,
+      "readerIndex": 41,
+      "sourcePdfPage": 41,
+      "printedSlidePage": 51,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-41.webp",
+      "sourceImageSha256": "2c93d36dfedbd84a6e1cfea296b6906229ab3eb1ae9e18d15f7bc59d8097e873",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 42,
+      "readerIndex": 42,
+      "sourcePdfPage": 42,
+      "printedSlidePage": 52,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-42.webp",
+      "sourceImageSha256": "fca5f2c1c6dfa74894b431fd81b330950e4d525640f17eb9662c195ee1442fb8",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 43,
+      "readerIndex": 43,
+      "sourcePdfPage": 43,
+      "printedSlidePage": 53,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-43.webp",
+      "sourceImageSha256": "da21c40875accc15e3fe6f2f2761b11ce8eb6cc14b39dfc36bb49dd5d401fe5f",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 44,
+      "readerIndex": 44,
+      "sourcePdfPage": 44,
+      "printedSlidePage": 54,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-44.webp",
+      "sourceImageSha256": "9ebad3bc0786c7291ece8fbc28d0c56790ab68ac2e11d5e0f3b51c074f86d44d",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 45,
+      "readerIndex": 45,
+      "sourcePdfPage": 45,
+      "printedSlidePage": 55,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-45.webp",
+      "sourceImageSha256": "c461c81c8a193300021f0375b2dc53d876dc6a59c7b462f27d79bfe0df2b14f2",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 46,
+      "readerIndex": 46,
+      "sourcePdfPage": 46,
+      "printedSlidePage": 56,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-46.webp",
+      "sourceImageSha256": "14f855f5597120c5bacd7a65894ae3764944c134c462c368ddc60d9af2136b1a",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 47,
+      "readerIndex": 47,
+      "sourcePdfPage": 47,
+      "printedSlidePage": 57,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-47.webp",
+      "sourceImageSha256": "7200c37ea2fa8abb6aaa1a9210e9d443e2d8e716960b9700c82f072d8e93d2a6",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 48,
+      "readerIndex": 48,
+      "sourcePdfPage": 48,
+      "printedSlidePage": 58,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-48.webp",
+      "sourceImageSha256": "4fbb7c7f4520c4848d180029ccdc5f754a4f91cfe5badc06235a2c3391adb98b",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 49,
+      "readerIndex": 49,
+      "sourcePdfPage": 49,
+      "printedSlidePage": 59,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-49.webp",
+      "sourceImageSha256": "85f16e744a9a9d042b0e14b72cd5844af0197db82e5534140e948d749f659e3b",
+      "status": "matches-previous-reviewed-source-hash"
+    },
+    {
+      "page": 50,
+      "readerIndex": 50,
+      "sourcePdfPage": 50,
+      "printedSlidePage": null,
+      "sourceImage": "/study-site/courses/network-ch2/slides/page-50.webp",
+      "sourceImageSha256": "f1ce52d71f8723043fd5772923dce3252f7f1f0d6aebd6ccdc0e76df8e9606bf",
+      "status": "matches-previous-reviewed-source-hash"
+    }
+  ]
+}

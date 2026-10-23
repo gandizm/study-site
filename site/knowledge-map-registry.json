@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "maps": [
+    {
+      "chapterId": "communications-ch4",
+      "title": "通信原理 · 第4章模拟调制系统",
+      "readerPath": "communications-ppt.html",
+      "knowledgeMapPath": "courses/communications-ch4/knowledge-map.json",
+      "readerPageCount": 105,
+      "nodeCount": 57,
+      "startPage": 1
+    },
+    {
+      "chapterId": "network-ch2",
+      "title": "计算机网络 · 第二章物理层",
+      "readerPath": "network-ch2-ppt.html",
+      "knowledgeMapPath": "courses/network-ch2/knowledge-map.json",
+      "readerPageCount": 50,
+      "nodeCount": 40,
+      "startPage": 1
+    }
+  ]
+}

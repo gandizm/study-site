@@ -1,0 +1,733 @@
+{
+  "version": 1,
+  "id": "network-ch2",
+  "title": "计算机网络 第二章 物理层",
+  "reader": "/study-site/network-ch2-ppt.html",
+  "totalPages": 50,
+  "source": {
+    "pdf": "/study-site/courses/source-pages/91dd4b2e4272c79ffe08/source.pdf",
+    "sha256": "91dd4b2e4272c79ffe080ba0006bf6b134ac3ce8a9a7f70e59a2a5d712cd06af",
+    "sourcePdfPages": 50,
+    "readerPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "pageNumbering": "真实PDF物理1–50页；物理37–49页的印刷页码为47–59，缺失的印刷37–46不虚构为阅读页。"
+  },
+  "nodes": [
+    {
+      "id": "route",
+      "label": "从接口约定到用户接入的五层问题",
+      "pages": [
+        1,
+        2
+      ],
+      "summary": "先约定接口，再表示比特、检验可分辨性、选择媒体与共享资源，最后组合为接入链路；层次不同不能用一个速率标签概括。",
+      "prerequisites": [],
+      "section": "接口与通信模型",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "interface",
+      "label": "机械、电气、功能与过程的四重兼容",
+      "pages": [
+        3
+      ],
+      "summary": "插头能接只满足机械条件；电平可识别、信号含义一致与事件顺序正确仍需分别保证。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "接口与通信模型",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "model",
+      "label": "信息、数据、信号与收发系统",
+      "pages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "summary": "源点产生数据，发送器适配波形，接收器判决，信宿解释；真实数字波形仍连续变化，不把离散状态与无噪声混同。",
+      "prerequisites": [
+        "interface"
+      ],
+      "section": "接口与通信模型",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "duplex",
+      "label": "方向同时性与信号频谱是独立维度",
+      "pages": [
+        8
+      ],
+      "summary": "单工、半双工、全双工规定谁何时发送；基带编码与载波调制规定怎样表示，不能由全双工推出必须带通。",
+      "prerequisites": [
+        "model"
+      ],
+      "section": "编码与信号状态",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "nrz",
+      "label": "NRZ的电平判据与同步缺口",
+      "pages": [
+        9
+      ],
+      "summary": "连续相同比特仍占多个位间隔，却可能没有边沿供时钟校正；需配合同步、帧定界及空闲规则。",
+      "prerequisites": [
+        "duplex"
+      ],
+      "section": "编码与信号状态",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "manchester",
+      "label": "固定中点跳变与两种数据判据",
+      "pages": [
+        10
+      ],
+      "summary": "本课曼彻斯特以中点高到低为1，差分式以起始无跳变为1；差分判据看相对变化，中点总跳只提供定时。",
+      "prerequisites": [
+        "nrz"
+      ],
+      "section": "编码与信号状态",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "carrier",
+      "label": "ASK、FSK、PSK分别选择什么",
+      "pages": [
+        11
+      ],
+      "summary": "二元数据可选择载波幅度、频率或相位；相位翻转不等于改变载波频率，数据数字性也不要求电磁波离散。",
+      "prerequisites": [
+        "duplex"
+      ],
+      "section": "编码与信号状态",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "qam",
+      "label": "实际星座点数决定固定标签位数",
+      "pages": [
+        12
+      ],
+      "summary": "QAM联合幅相，图中16个实际点对应4位；12个相位方向不应机械乘2，因为并非每个方向都有两个幅度。",
+      "prerequisites": [
+        "carrier"
+      ],
+      "section": "编码与信号状态",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "symbol-rate",
+      "label": "波特数码元，比特数数据位",
+      "pages": [
+        13
+      ],
+      "summary": "固定M=2^k映射时Rb=Rs log2M；原页八级比例句写反，正确为比特率是波特率三倍，净信息率还须扣冗余。",
+      "prerequisites": [
+        "qam"
+      ],
+      "section": "容量与可分辨性",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "distortion",
+      "label": "从波形失真到采样判决余量",
+      "pages": [
+        14
+      ],
+      "summary": "失真不等于已判错，需看采样时刻、阈值、噪声和相邻脉冲；均衡、再生和编码承担不同补偿任务。",
+      "prerequisites": [
+        "symbol-rate"
+      ],
+      "section": "容量与可分辨性",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "nyquist",
+      "label": "零ISI约束、理想低通带宽与码元节拍",
+      "pages": [
+        15
+      ],
+      "summary": "零串扰要求相邻脉冲在判决时刻为零，不要求时间上完全不重叠；理想Rs≤2W，升余弦滚降后W=(1+α)Rs/2，勿混为采样定理。",
+      "prerequisites": [
+        "distortion"
+      ],
+      "section": "容量与可分辨性",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "shannon",
+      "label": "线性信噪比与有噪声容量",
+      "pages": [
+        16
+      ],
+      "summary": "AWGN及功率约束下C=W log2(1+S/N)，dB先还原；低于容量允许适当长码使误差任意小，不保证任意有限码绝对无错。",
+      "prerequisites": [
+        "distortion"
+      ],
+      "section": "容量与可分辨性",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "joint-bound",
+      "label": "增加星座状态不能越过噪声容量",
+      "pages": [
+        17
+      ],
+      "summary": "有限状态的奈奎斯特标称上界与香农容量需同时考虑；二者取小仅作教学必要上界，不证明任一具体调制已达到。",
+      "prerequisites": [
+        "nyquist",
+        "shannon"
+      ],
+      "section": "容量与可分辨性",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "media-choice",
+      "label": "传输媒体之外还要定义信道条件",
+      "pages": [
+        18,
+        19
+      ],
+      "summary": "导引与非导引描述传播路径，速率取决于媒体、距离、收发器与编码；媒体不是某个固定容量的同义词。",
+      "prerequisites": [
+        "joint-bound"
+      ],
+      "section": "铜缆与布线",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "twisted-pair",
+      "label": "双绞、差分与共模抑制",
+      "pages": [
+        20
+      ],
+      "summary": "绞合使两导线更相似地受到外界扰动，差分接收抑制共同分量；绞合不能消除全部串扰或任意延长距离。",
+      "prerequisites": [
+        "media-choice"
+      ],
+      "section": "铜缆与布线",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "structured-cabling",
+      "label": "插座、跳线、配线架与交换功能",
+      "pages": [
+        21,
+        22
+      ],
+      "summary": "综合布线由多个连接段组成，配线架主要组织无源连接，不因汇聚许多线就能像交换机按帧转发。",
+      "prerequisites": [
+        "twisted-pair",
+        "interface"
+      ],
+      "section": "铜缆与布线",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "coax",
+      "label": "同轴结构与回流、屏蔽及端接",
+      "pages": [
+        23
+      ],
+      "summary": "内外导体共同限定传播和回流，屏蔽不表示绝对无干扰；接头与阻抗不连续可引起反射。",
+      "prerequisites": [
+        "media-choice"
+      ],
+      "section": "铜缆与布线",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "optical-link",
+      "label": "电光转换与低损耗传输窗口",
+      "pages": [
+        24,
+        25
+      ],
+      "summary": "光纤传光，但发送和接收终端仍需电源及转换；高锟视频静帧作历史入口，不编造未提供的完整视频内容。",
+      "prerequisites": [
+        "media-choice"
+      ],
+      "section": "光纤与连接",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "total-reflection",
+      "label": "折射率与全反射的适用几何",
+      "pages": [
+        26
+      ],
+      "summary": "光从高折射率纤芯到低折射率包层且入射角合适才全反射；角度须相对法线量，不把所有进光都当成可导引模式。",
+      "prerequisites": [
+        "optical-link"
+      ],
+      "section": "光纤与连接",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "dispersion",
+      "label": "多模路径差与脉冲展宽",
+      "pages": [
+        27
+      ],
+      "summary": "不同传播时延使脉冲展宽，可能侵入相邻符号；单模减少模间色散，却不消除全部色散或损耗。",
+      "prerequisites": [
+        "total-reflection",
+        "distortion"
+      ],
+      "section": "光纤与连接",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "fiber-interfaces",
+      "label": "护套标识、光纤类型与连接器兼容",
+      "pages": [
+        28,
+        29
+      ],
+      "summary": "颜色仅是识别线索，还须核型号、纤芯、波长和端面；外形匹配不保证单多模或收发预算匹配。",
+      "prerequisites": [
+        "dispersion",
+        "interface"
+      ],
+      "section": "光纤与连接",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "wireless-paths",
+      "label": "地波、天波与视距传播的条件",
+      "pages": [
+        30
+      ],
+      "summary": "不同频段、天线和环境形成不同传播机制；无线覆盖不只由发射功率决定，也非所有频率都按同一路径到达。",
+      "prerequisites": [
+        "media-choice"
+      ],
+      "section": "非导引传输",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "microwave-relay",
+      "label": "分段视距接力与逐段链路预算",
+      "pages": [
+        31
+      ],
+      "summary": "接力延长可达距离，但每跳仍需足够余量并引入设备时延；图中连线不是任意遮挡下仍可通信的保证。",
+      "prerequisites": [
+        "wireless-paths"
+      ],
+      "section": "非导引传输",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "satellite-delay",
+      "label": "卫星覆盖与传播时延的几何代价",
+      "pages": [
+        32
+      ],
+      "summary": "估算上行加下行总路程再除传播速度，往返须再计回路；同步轨道参数不能套到所有低轨卫星。",
+      "prerequisites": [
+        "microwave-relay"
+      ],
+      "section": "非导引传输",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "ism-boundary",
+      "label": "共享频段仍受规则和干扰约束",
+      "pages": [
+        33
+      ],
+      "summary": "ISM不是无限功率或任意发射的许可，频段共享也可能拥塞；此页历史表格不替代所在地区的现行规定。",
+      "prerequisites": [
+        "wireless-paths"
+      ],
+      "section": "非导引传输",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "multiplex",
+      "label": "复用的资源分配与接收分离依据",
+      "pages": [
+        34,
+        35
+      ],
+      "summary": "FDM按频带、TDM按时隙等划分资源，接收端须知道对应规则；共享链路容量还要计保护与同步开销。",
+      "prerequisites": [
+        "symbol-rate",
+        "media-choice"
+      ],
+      "section": "复用与用户接入",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "access-model",
+      "label": "用户段、汇聚与骨干分清范围",
+      "pages": [
+        36
+      ],
+      "summary": "用户到ISP的一段接入由媒体、复用和终端组合；用户段独享不等于端到端专用、固定速率或全程无竞争。",
+      "prerequisites": [
+        "multiplex"
+      ],
+      "section": "复用与用户接入",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "dsl-spectrum",
+      "label": "铜用户线的频谱不等于电话业务频带",
+      "pages": [
+        37
+      ],
+      "summary": "传统语音占低频并不意味着铜线只能承载语音；分离低频电话和高频DSL仍须适当滤波、收发器及线路条件。",
+      "prerequisites": [
+        "access-model",
+        "carrier"
+      ],
+      "section": "DSL与DMT",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "adsl-asymmetry",
+      "label": "上行下行资源不对称与距离衰减",
+      "pages": [
+        38
+      ],
+      "summary": "方向以用户为参照，下行分配更多资源是业务设计；线径、长度、串扰与噪声共同影响实际速率，不是安装后人人同速。",
+      "prerequisites": [
+        "dsl-spectrum",
+        "shannon"
+      ],
+      "section": "DSL与DMT",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "dmt",
+      "label": "正交多载波、载波间距与位装载",
+      "pages": [
+        39
+      ],
+      "summary": "DMT用许多子载波并行并按各自信噪比装载比特；原25+249不可当互不重叠频带总数，保护间隔和开销也不增加净容量。",
+      "prerequisites": [
+        "adsl-asymmetry",
+        "multiplex",
+        "joint-bound"
+      ],
+      "section": "DSL与DMT",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "dsl-chain",
+      "label": "分离器、ATU与DSLAM分别做什么",
+      "pages": [
+        40
+      ],
+      "summary": "分离器按频率拆分业务，ATU两端完成调制解调，DSLAM汇聚多条用户线；训练协商速率不是永久吞吐保证。",
+      "prerequisites": [
+        "dmt",
+        "access-model"
+      ],
+      "section": "DSL与DMT",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "adsl2",
+      "label": "扩展频谱与自适应仍有物理边界",
+      "pages": [
+        41
+      ],
+      "summary": "ADSL2+增加可用下行频谱，SRA适配变化；高频衰减和噪声仍限制收益，课件历史上限不是任意用户的现行承诺。",
+      "prerequisites": [
+        "dsl-chain"
+      ],
+      "section": "DSL与DMT",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hfc",
+      "label": "从单向电视到双向光纤同轴网",
+      "pages": [
+        42,
+        43
+      ],
+      "summary": "光纤延伸主干、光节点转换后接同轴分配，交互业务还要回传通路；光节点不等于PON无源分光器。",
+      "prerequisites": [
+        "coax",
+        "optical-link",
+        "access-model"
+      ],
+      "section": "HFC与光接入",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hfc-spectrum",
+      "label": "同轴上的方向频带与用户业务接口",
+      "pages": [
+        44
+      ],
+      "summary": "上行、下行和业务信号按约定频谱组织，示意欧标美标属所示时代方案；不能将单个频率边界外推为所有现网。",
+      "prerequisites": [
+        "hfc",
+        "multiplex"
+      ],
+      "section": "HFC与光接入",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "cable-sharing",
+      "label": "共享接入要有网络侧协调和容量分配",
+      "pages": [
+        45
+      ],
+      "summary": "用户端Cable Modem仍需网络侧CMTS等功能配合；HFC共享需调度，ADSL用户线独享也不保证固定端到端速率。",
+      "prerequisites": [
+        "hfc-spectrum",
+        "dsl-chain"
+      ],
+      "section": "HFC与光接入",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "fttx",
+      "label": "光纤终止位置与剩余段责任",
+      "pages": [
+        46
+      ],
+      "summary": "FTTH/FTTB/FTTC等只说明光纤铺到哪里，未自动决定点对点或PON、每户独享与电源配置。",
+      "prerequisites": [
+        "hfc",
+        "optical-link"
+      ],
+      "section": "HFC与光接入",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "pon",
+      "label": "无源分光、上行时隙与测距调度",
+      "pages": [
+        47
+      ],
+      "summary": "ODN分光器不识别数据也不排队；OLT/ONU负责上下行收发和上行授权，测距补偿使不同距离用户突发到达时不重叠。",
+      "prerequisites": [
+        "fttx",
+        "multiplex",
+        "cable-sharing"
+      ],
+      "section": "HFC与光接入",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "linecode-practice",
+      "label": "逐半位画图并反向解码自检",
+      "pages": [
+        48
+      ],
+      "summary": "按本课映射编码10011001，先声明初始电平再逐位检查；曼彻斯特看中点方向，差分式看起始跳变而非绝对高低。",
+      "prerequisites": [
+        "manchester"
+      ],
+      "section": "综合计算",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "pcm-frame",
+      "label": "从采样量化到T1整帧速率",
+      "pages": [
+        49
+      ],
+      "summary": "24路、每路8k次每秒、7位量化先得1.344Mbit/s样值；标准T1每帧24×8+1位得到1.544Mbit/s，不能混淆题设与线路封装。",
+      "prerequisites": [
+        "symbol-rate",
+        "multiplex"
+      ],
+      "section": "综合计算",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "synthesis",
+      "label": "章末沿一条接入链逐层核对",
+      "pages": [
+        50
+      ],
+      "summary": "原页仅End；补充复盘要求分清内容、波形、接口、容量、共享和设备角色，不把复盘当成新的原PPT源内容。",
+      "prerequisites": [
+        "joint-bound",
+        "pon",
+        "pcm-frame",
+        "linecode-practice"
+      ],
+      "section": "综合计算",
+      "type": "method",
+      "source": "supplement"
+    }
+  ],
+  "edges": [
+    {
+      "from": "nrz",
+      "to": "manchester",
+      "label": "补足：增加必有跳变帮助位同步"
+    },
+    {
+      "from": "qam",
+      "to": "shannon",
+      "label": "约束：更多标称状态仍受噪声可分辨性限制"
+    },
+    {
+      "from": "nyquist",
+      "to": "shannon",
+      "label": "对比：固定状态零ISI界与AWGN信息容量"
+    },
+    {
+      "from": "distortion",
+      "to": "dispersion",
+      "label": "实例：不同传播时延造成脉冲展宽"
+    },
+    {
+      "from": "interface",
+      "to": "fiber-interfaces",
+      "label": "迁移：外形兼容只是接口兼容的一部分"
+    },
+    {
+      "from": "coax",
+      "to": "hfc",
+      "label": "应用：同轴资源用于家庭分配"
+    },
+    {
+      "from": "optical-link",
+      "to": "pon",
+      "label": "区分：传输介质与分配网是否有源"
+    },
+    {
+      "from": "satellite-delay",
+      "to": "pcm-frame",
+      "label": "区别：传播时延与每秒帧数并非同一量"
+    },
+    {
+      "from": "multiplex",
+      "to": "dmt",
+      "label": "实现：正交子载波组织频率资源"
+    },
+    {
+      "from": "dsl-spectrum",
+      "to": "hfc-spectrum",
+      "label": "共同：利用频带隔离不同方向或业务"
+    },
+    {
+      "from": "dsl-chain",
+      "to": "cable-sharing",
+      "label": "对比：用户线专用与同轴共享不等于端到端保证"
+    },
+    {
+      "from": "dmt",
+      "to": "adsl2",
+      "label": "扩展：增加可用子载波仍需逐频带评估"
+    },
+    {
+      "from": "structured-cabling",
+      "to": "pon",
+      "label": "辨析：无源连接或分配均不进行分组排队"
+    },
+    {
+      "from": "duplex",
+      "to": "hfc-spectrum",
+      "label": "实现：不同方向可使用不同频带"
+    },
+    {
+      "from": "manchester",
+      "to": "pcm-frame",
+      "label": "区分：线路表示开销与帧结构开销"
+    }
+  ]
+}

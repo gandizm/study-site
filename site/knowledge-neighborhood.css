@@ -1,0 +1,53 @@
+/* A bounded local graph, not a sprawling whole-course force diagram. */
+.kmn-controls { display:contents; }
+.kmn-switcher { display:flex; flex:0 0 auto; gap:5px; padding:8px 10px 6px; }
+.kmn-tab { flex:1; min-height:30px; padding:4px 7px; border:1px solid #b8cbb6; background:#fffef8; font-size:11px!important; }
+.kmn-tab[aria-selected="true"] { background:#246b57; color:#fffef3; border-color:#246b57; }
+.kmn-view { padding:3px 9px 14px; }
+.kmn-heading { margin:5px 2px 0; font:600 11px/1.5 system-ui,sans-serif; color:#60705d; }
+.kmn-canvas { position:relative; min-height:224px; isolation:isolate; }
+.kmn-canvas>svg { position:absolute; inset:0; width:100%; height:100%; overflow:visible; z-index:-1; color:#7f9d7a; }
+.kmn-node { position:absolute; transform:translateY(-50%); width:28%; min-height:54px; padding:6px 5px; border:1px solid #9eb99b; border-radius:8px!important; background:#fafff1; text-align:center; font-size:10px!important; line-height:1.45!important; box-shadow:0 2px 4px #2c4a3710; }
+.kmn-node:hover { background:#e4f0dc; border-color:#3e795a; }
+.kmn-in { left:0; }
+.kmn-out { right:0; }
+.kmn-node-name { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; overflow-wrap:anywhere; font-weight:650; }
+.kmn-edge-caption { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:4px; font-size:9px; font-weight:400; color:#496d50; }
+.kmn-current-node { left:36%; top:50%; min-height:68px; border:2px solid #2c7459; color:#164a34!important; background:#dfefd5; }
+.kmn-current-tag { display:block; font-size:9px; color:#3f7152; margin-bottom:4px; }
+.kmn-empty-side { position:absolute; top:50%; transform:translateY(-50%); width:28%; margin:0; padding:5px; text-align:center; color:#7c8871; font-size:10px; }
+.kmn-current-pages { justify-content:center; margin:2px 0 6px; }
+.kmn-coverage { margin:6px 0; text-align:center; font-size:10px; color:#6b7a61; }
+.kmn-all-relations { display:block; margin:7px auto; padding:4px 8px; min-height:29px; border:1px solid #b6cbb0; background:#fffdf4; font-size:11px!important; }
+@media(max-width:1150px),(orientation:portrait) {
+ .kmn-enabled .km-content { grid-template-rows:minmax(0,1fr); }
+ .kmn-controls { grid-column:1; grid-row:1; display:flex; flex-direction:column; min-width:0; min-height:0; max-height:calc(min(34dvh,280px) - 41px); overflow:auto; overscroll-behavior:contain; scrollbar-width:thin; }
+ .kmn-enabled .km-content>.km-graph { grid-column:2; grid-row:1; }
+ .kmn-enabled .km-content>.km-empty { grid-column:2; grid-row:1; align-self:start; }
+ .kmn-switcher { grid-column:1; grid-row:1; padding:6px 2px 4px 9px; gap:3px; }
+ .kmn-tab { font-size:10px!important; padding:3px; min-height:28px; }
+ .kmn-view { padding:2px 8px 10px; }
+ .kmn-canvas { min-height:224px; }
+}
+@media(max-width:520px) {
+ .kmn-controls { max-height:calc(min(29dvh,240px) - 41px); }
+ .kmn-enabled .km-content.kmn-graph-mode { grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(0,1fr); }
+ .kmn-graph-mode .kmn-controls { grid-column:1; grid-row:1; overflow:visible; max-height:none; }
+ .kmn-graph-mode .kmn-switcher { grid-column:1; grid-row:1; padding:3px 7px; max-width:220px; width:100%; align-self:center; }
+ .kmn-graph-mode .km-actions,.kmn-graph-mode .km-search-label { display:none; }
+ .kmn-enabled .km-content.kmn-graph-mode>.kmn-view { grid-column:1; grid-row:2; max-height:calc(min(29dvh,240px) - 76px); }
+ .kmn-heading { font-size:10px; margin:2px 1px 0; }
+ .kmn-canvas { min-height:104px; }
+ .kmn-node { min-height:56px; padding:5px; font-size:11px!important; }
+ .kmn-current-node { min-height:66px; }
+ .kmn-node-name { -webkit-line-clamp:2; }
+ .kmn-edge-caption { font-size:9px; margin-top:3px; }
+}
+@media(max-height:600px) and (max-width:1150px) {
+ .kmn-controls { max-height:calc(31dvh - 40px); }
+}
+@media(max-height:600px) and (max-width:520px) {
+ .kmn-graph-mode .kmn-controls { max-height:none; }
+ .kmn-enabled .km-content.kmn-graph-mode>.kmn-view { max-height:calc(31dvh - 76px); }
+}
+@media print { .kmn-switcher,.kmn-view { display:none!important; } }

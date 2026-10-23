@@ -1,0 +1,943 @@
+{
+  "version": 1,
+  "id": "communications-ch4",
+  "title": "通信原理 第4章：模拟调制系统",
+  "pageCount": 105,
+  "reader": "communications-ppt.html",
+  "sourcePdf": "courses/communications-ch4/source/ch4.pdf",
+  "sourcePdfSha256": "c97293c8f3197e0890b6f4a2445022a7c0bb60dbbeccb7c7ed9a082943de98d3",
+  "nodes": [
+    {
+      "id": "route",
+      "label": "从调制原理到抗噪与复用",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "summary": "五个知识块沿同一收发链展开；基本要求是解释表达式、频谱、解调和性能的条件。",
+      "prerequisites": [],
+      "section": "学习路线",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "baseband-carrier",
+      "label": "基带、频带与载波参量",
+      "pages": [
+        4,
+        5
+      ],
+      "summary": "基带消息信号携带待传信息；模拟调制让高频载波的幅度、频率或相位受消息控制。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "调制基础",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "linear-purpose",
+      "label": "线性搬谱与调制的目的",
+      "pages": [
+        6,
+        7
+      ],
+      "summary": "线性调幅保留基带频谱结构并搬移；非线性角调产生多阶边频，调制还服务信道适配与复用。",
+      "prerequisites": [
+        "baseband-carrier"
+      ],
+      "section": "调制基础",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "am-family",
+      "label": "AM、DSB、SSB、VSB四种取舍",
+      "pages": [
+        8
+      ],
+      "summary": "先按是否发送固定载波和保留哪些边带分类，再分别讨论功率、带宽和接收方式。",
+      "prerequisites": [
+        "linear-purpose"
+      ],
+      "section": "幅度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "multiplier",
+      "label": "乘载波与两份移位频谱",
+      "pages": [
+        9,
+        10
+      ],
+      "summary": "m(t)乘cosωct生成以±ωc为中心的两份半幅谱；输出H(ω)选择不同边带。",
+      "prerequisites": [
+        "am-family"
+      ],
+      "section": "幅度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "am-dc",
+      "label": "AM直流偏置与载波谱线",
+      "pages": [
+        11,
+        12
+      ],
+      "summary": "m₀生成独立载波线，交流消息生成两边带；固定载波消耗功率但让包络恢复更简单。",
+      "prerequisites": [
+        "multiplier"
+      ],
+      "section": "幅度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "am-envelope",
+      "label": "AM包络、过调制与带宽",
+      "pages": [
+        13,
+        14
+      ],
+      "summary": "包络为|m₀+mₚ(t)|；不翻转检查最小值，触零是理想边界；双边带跨度为2fH。",
+      "prerequisites": [
+        "am-dc"
+      ],
+      "section": "幅度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "dsb",
+      "label": "DSB的符号、倒相与相干恢复",
+      "pages": [
+        15,
+        16,
+        17
+      ],
+      "summary": "抑制固定载波仍占2fH；消息变号表现为载波倒相，单看绝对包络会丢失符号。",
+      "prerequisites": [
+        "multiplier",
+        "am-envelope"
+      ],
+      "section": "幅度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "ssb-selection",
+      "label": "SSB选边带与滤波困难",
+      "pages": [
+        18,
+        22,
+        23
+      ],
+      "summary": "两边带携带相同消息，保留一边可减半占宽；低频消息使载频附近过渡带难以实现。",
+      "prerequisites": [
+        "dsb"
+      ],
+      "section": "幅度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "ssb-hilbert",
+      "label": "希尔伯特支路与上下边带符号",
+      "pages": [
+        19,
+        20,
+        21
+      ],
+      "summary": "利用符号函数和带帽消息写正交分量；本课LSSB取加号、USSB取减号，可用单音检验。",
+      "prerequisites": [
+        "multiplier",
+        "ssb-selection"
+      ],
+      "section": "幅度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "vsb-filter",
+      "label": "VSB残留边带与滚降区",
+      "pages": [
+        24,
+        25,
+        26
+      ],
+      "summary": "放松SSB硬切要求，保留完整一侧和另一侧残留；关键不是随意删谱，而是让两侧能互补。",
+      "prerequisites": [
+        "ssb-selection"
+      ],
+      "section": "幅度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "vsb-demod",
+      "label": "VSB搬回基带的两条路径",
+      "pages": [
+        27,
+        28
+      ],
+      "summary": "相干乘法并低通后，两条移位滤波响应共同乘到M(ω)，不能把发送滤波器影响直接忽略。",
+      "prerequisites": [
+        "vsb-filter",
+        "multiplier"
+      ],
+      "section": "幅度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "vsb-complement",
+      "label": "VSB无失真的互补条件",
+      "pages": [
+        29,
+        30
+      ],
+      "summary": "消息带内H(ω−ωc)+H(ω+ωc)为常数；P30四幅移位图检验的是同一求和条件。",
+      "prerequisites": [
+        "vsb-demod"
+      ],
+      "section": "幅度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "vsb-bandwidth",
+      "label": "VSB带宽不是固定1.25倍定律",
+      "pages": [
+        31
+      ],
+      "summary": "原课采用约1.25fH作为一般设计值；题给实际频谱边缘时，应按边缘跨度计算。",
+      "prerequisites": [
+        "vsb-complement"
+      ],
+      "section": "幅度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "noise-types",
+      "label": "乘性、加性与高斯白噪声模型",
+      "pages": [
+        32,
+        33
+      ],
+      "summary": "区分非理想信道变化与叠加噪声；本章抗噪计算采用加性高斯白噪声，不泛化到所有干扰。",
+      "prerequisites": [
+        "linear-purpose"
+      ],
+      "section": "幅调抗噪",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "noise-reference",
+      "label": "输入端、输出端与制度增益",
+      "pages": [
+        34,
+        36
+      ],
+      "summary": "先界定带通后输入和解调后输出，再用G=(So/No)/(Si/Ni)；幅度放大不等于SNR改善。",
+      "prerequisites": [
+        "noise-types"
+      ],
+      "section": "幅调抗噪",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "noise-iq",
+      "label": "窄带噪声的同相正交分解",
+      "pages": [
+        35
+      ],
+      "summary": "双边带通PSD为n₀/2；窄带噪声及两个等效分量的平均功率相同，但谱位置不能混为一谈。",
+      "prerequisites": [
+        "noise-types"
+      ],
+      "section": "幅调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "dsb-input",
+      "label": "DSB入口信号功率与噪声带宽",
+      "pages": [
+        37
+      ],
+      "summary": "输入信号功率为消息均方的一半，噪声功率为n₀BDSB；先把带宽与PSD口径写清。",
+      "prerequisites": [
+        "dsb",
+        "noise-reference",
+        "noise-iq"
+      ],
+      "section": "幅调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "dsb-gain",
+      "label": "DSB相干解调与G=2",
+      "pages": [
+        38,
+        39
+      ],
+      "summary": "理想乘cos并低通后消息和同相噪声各留一半幅度；相对于该系统自身入口SNR得到G=2。",
+      "prerequisites": [
+        "dsb-input"
+      ],
+      "section": "幅调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "ssb-noise",
+      "label": "SSB输入归一化与G=1",
+      "pages": [
+        40,
+        41,
+        42
+      ],
+      "summary": "本课半幅SSB表示给Si=Pm/4、输出消息m/4；结合减半的噪声带宽，得到G=1。",
+      "prerequisites": [
+        "ssb-hilbert",
+        "noise-reference",
+        "noise-iq"
+      ],
+      "section": "幅调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "dsb-ssb-fair",
+      "label": "DSB与SSB的公平性能比较",
+      "pages": [
+        43
+      ],
+      "summary": "固定相同接收有用总功率、fH和n₀，SSB入口少收一半噪声，最终输出SNR与DSB相同。",
+      "prerequisites": [
+        "dsb-gain",
+        "ssb-noise"
+      ],
+      "section": "幅调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "am-power",
+      "label": "AM有用边带与载波功率开销",
+      "pages": [
+        44,
+        45
+      ],
+      "summary": "输入总功率含m₀²/2，去直流后的有用输出只来自交流消息；不要把恢复的直流当信息功率。",
+      "prerequisites": [
+        "am-dc",
+        "dsb-gain"
+      ],
+      "section": "幅调抗噪",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "am-gain",
+      "label": "AM制度增益与固定量条件",
+      "pages": [
+        46,
+        47
+      ],
+      "summary": "G=2Pp/(m₀²+Pp)；仅加大载波使G下降，但固定消息功率时输出SNR不随之下降。",
+      "prerequisites": [
+        "am-power"
+      ],
+      "section": "幅调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "envelope-nonlinear",
+      "label": "含噪AM包络的根号关系",
+      "pages": [
+        48,
+        49
+      ],
+      "summary": "同相分量与信号相加，正交分量平方相加后开根号；这一步非线性，不能普遍拆成消息加独立噪声。",
+      "prerequisites": [
+        "am-envelope",
+        "noise-iq"
+      ],
+      "section": "幅调抗噪",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "envelope-high",
+      "label": "大SNR包络近似与相干AM等效",
+      "pages": [
+        50,
+        51
+      ],
+      "summary": "信号包络明显大于噪声时作一阶展开，输出近似消息加同相噪声；SNR与相干AM相同。",
+      "prerequisites": [
+        "envelope-nonlinear",
+        "am-gain"
+      ],
+      "section": "幅调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "am-full-tone",
+      "label": "100%单音AM的2/3增益",
+      "pages": [
+        52
+      ],
+      "summary": "正弦均方为峰值平方的一半；单音不过调的最大G为2/3，不是任意消息的统一上界。",
+      "prerequisites": [
+        "envelope-high"
+      ],
+      "section": "幅调抗噪",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "envelope-low",
+      "label": "小SNR时消息被随机相位相乘",
+      "pages": [
+        53,
+        54
+      ],
+      "summary": "以噪声包络为主项展开，消息进入cosθ随机因子；不再具有强信号近似中的独立有用项。",
+      "prerequisites": [
+        "envelope-nonlinear"
+      ],
+      "section": "幅调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "am-threshold",
+      "label": "包络门限与理想相干接收的区别",
+      "pages": [
+        55,
+        56
+      ],
+      "summary": "非线性包络检波在低输入SNR下急剧恶化；课内理想同步线性模型可分开信号和噪声。",
+      "prerequisites": [
+        "envelope-high",
+        "envelope-low",
+        "dsb-gain"
+      ],
+      "section": "幅调抗噪",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "vsb-example",
+      "label": "例4-1：50Hz与3kHz通过VSB",
+      "pages": [
+        57,
+        58
+      ],
+      "summary": "以图中滚降中点推定fc=10kHz后增益为0.45/0.55和0/1；P58原为空解，补解须保留载频及是否含固定载波的假设。",
+      "prerequisites": [
+        "vsb-complement",
+        "multiplier"
+      ],
+      "section": "幅调综合例题",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "angle-model",
+      "label": "恒包络角度调制与非线性频谱",
+      "pages": [
+        59
+      ],
+      "summary": "消息进入总瞬时相位，振幅保持恒定；恒包络不意味着只有一条载波频谱线。",
+      "prerequisites": [
+        "baseband-carrier",
+        "linear-purpose"
+      ],
+      "section": "角度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "pm",
+      "label": "PM：相位偏移正比消息",
+      "pages": [
+        60
+      ],
+      "summary": "φ(t)=Kp m(t)，Kp按rad/V计；瞬时频偏还需对相位求导，不能把相位与频率混用。",
+      "prerequisites": [
+        "angle-model"
+      ],
+      "section": "角度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "fm",
+      "label": "FM：频偏控制与消息积分",
+      "pages": [
+        61,
+        62
+      ],
+      "summary": "φ′=KF m、φ为消息积分，KF沿课件用rad/(s·V)；没有原消息参照，不能单凭角调波形区分FM/PM。",
+      "prerequisites": [
+        "pm"
+      ],
+      "section": "角度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "fm-index",
+      "label": "单音FM的频偏与调频指数",
+      "pages": [
+        63,
+        64
+      ],
+      "summary": "正弦消息积分成相位摆动，mf=Δfmax/fm；同频偏下消息越慢，相位摆幅越大。",
+      "prerequisites": [
+        "fm"
+      ],
+      "section": "角度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "bessel-curve",
+      "label": "贝塞尔系数与边频幅度",
+      "pages": [
+        65
+      ],
+      "summary": "固定mf后沿纵线读取Jn，可为负也可为零；负系数表示相位翻转，不是负功率。",
+      "prerequisites": [
+        "fm-index"
+      ],
+      "section": "角度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "bessel-series",
+      "label": "奇偶阶边频符号与级数展开",
+      "pages": [
+        66,
+        67
+      ],
+      "summary": "J−n=(−1)^nJn决定两侧符号；第n阶位置和系数下标一致，P67三阶AJ₂应读AJ₃。",
+      "prerequisites": [
+        "bessel-curve",
+        "multiplier"
+      ],
+      "section": "角度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "fm-spectrum",
+      "label": "单边幅度谱、双边谱与载波零点",
+      "pages": [
+        68,
+        69
+      ],
+      "summary": "各阶位于fc±nfm，载波分量为AJ₀；单边图和完整实信号双边频谱不能重复计数或混用幅度。",
+      "prerequisites": [
+        "bessel-series"
+      ],
+      "section": "角度调制",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "carson",
+      "label": "有效带宽、幅度截断与Carson近似",
+      "pages": [
+        70,
+        71
+      ],
+      "summary": "严格FM谱一般无限宽；10%幅度筛选与Carson是不同准则，B≈2(Δfmax+fH)，75/15kHz例得180kHz。",
+      "prerequisites": [
+        "fm-spectrum"
+      ],
+      "section": "角度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "fm-power",
+      "label": "恒包络总功率与边频再分配",
+      "pages": [
+        72
+      ],
+      "summary": "利用ΣJn²=1和Parseval得到总功率A²/2；调制改变各谱线分配，不自动增加总发射功率。",
+      "prerequisites": [
+        "fm-spectrum"
+      ],
+      "section": "角度调制",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "fm-receiver",
+      "label": "限幅、鉴频、低通与入口SNR",
+      "pages": [
+        73,
+        74
+      ],
+      "summary": "限幅去幅度起伏但不去相位扰动；入口Si=A²/2、Ni=n₀BFM，宽通带会先引入更多噪声。",
+      "prerequisites": [
+        "fm-power",
+        "noise-reference",
+        "noise-iq"
+      ],
+      "section": "角调抗噪",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "phasor-noise",
+      "label": "信号与噪声向量相加的相位",
+      "pages": [
+        75,
+        76
+      ],
+      "summary": "分别以强信号或强噪声作参考方向写合成相位，为高低SNR采用不同展开式。",
+      "prerequisites": [
+        "fm-receiver"
+      ],
+      "section": "角调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "discriminator",
+      "label": "鉴频求导恢复消息",
+      "pages": [
+        77
+      ],
+      "summary": "高SNR下先近似合成相位，再以φ′/(2π)恢复KF m/(2π)；弧度频偏到Hz只换算一次。",
+      "prerequisites": [
+        "phasor-noise",
+        "fm"
+      ],
+      "section": "角调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "fm-noise-spectrum",
+      "label": "鉴频后f²噪声谱与最终低通",
+      "pages": [
+        78,
+        79
+      ],
+      "summary": "微分幅度响应正比f，功率谱因此正比f²；最终只积分消息低通带内噪声，不把整个前端带宽计入输出。",
+      "prerequisites": [
+        "discriminator",
+        "noise-iq"
+      ],
+      "section": "角调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "fm-snr",
+      "label": "一般消息与单音FM的输出SNR",
+      "pages": [
+        80,
+        81
+      ],
+      "summary": "保留均方/峰值平方波形因子；单音与Carson条件下G≈3mf²(mf+1)，mf=5得450是自身制度增益。",
+      "prerequisites": [
+        "fm-noise-spectrum",
+        "carson"
+      ],
+      "section": "角调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "am-fm-same-carrier",
+      "label": "同载幅FM/AM输出性能与带宽比",
+      "pages": [
+        82,
+        83
+      ],
+      "summary": "单音100%AM、同载幅及高SNR时输出SNR比为3mf²，带宽比约mf+1；mf=5得到75倍与6倍。",
+      "prerequisites": [
+        "fm-snr",
+        "am-full-tone"
+      ],
+      "section": "角调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "fm-threshold",
+      "label": "FM带宽收益为何受门限限制",
+      "pages": [
+        84,
+        85,
+        86,
+        87
+      ],
+      "summary": "扩大通带降低入口SNR，低SNR相位由噪声支配；约8–11dB是课内典型量级，不是任意接收机常数。",
+      "prerequisites": [
+        "fm-receiver",
+        "phasor-noise",
+        "fm-snr"
+      ],
+      "section": "角调抗噪",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "threshold-extension",
+      "label": "门限扩展与输出降噪不是同一指标",
+      "pages": [
+        88
+      ],
+      "summary": "PLL/负反馈改善弱信号跟踪；去加重改善音频输出噪声，不等于无条件降低射频非线性门限。",
+      "prerequisites": [
+        "fm-threshold"
+      ],
+      "section": "角调抗噪",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "emphasis",
+      "label": "预加重/去加重与RC频率整形",
+      "pages": [
+        89,
+        90,
+        91
+      ],
+      "summary": "消息经过配对网络可近似不变，途中加入的噪声只受去加重；被动电路相对高频提升不创造能量。",
+      "prerequisites": [
+        "fm-noise-spectrum",
+        "threshold-extension"
+      ],
+      "section": "角调抗噪",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "angle-example",
+      "label": "例4-2：从角调表达式反求参数",
+      "pages": [
+        92
+      ],
+      "summary": "读取φ=−10cos2000πt，得10rad、10kHz和约22kHz；频偏常数2未印单位，反求消息须区分rad/(s·V)与Hz/V。",
+      "prerequisites": [
+        "fm",
+        "fm-index",
+        "carson"
+      ],
+      "section": "角调综合例题",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "equal-power-comparison",
+      "label": "同总功率的调制比较与dB曲线",
+      "pages": [
+        93,
+        94
+      ],
+      "summary": "统一Si、n₀、fm后AM/DSB/SSB/FM才可比较；4.77dB和22.10dB均有单音、调制度和高SNR条件。",
+      "prerequisites": [
+        "dsb-ssb-fair",
+        "am-full-tone",
+        "fm-snr"
+      ],
+      "section": "综合比较",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "resource-tradeoff",
+      "label": "功率、带宽、复杂度与应用取舍",
+      "pages": [
+        95,
+        96,
+        97
+      ],
+      "summary": "FM高指数换取质量却占宽且有门限，SSB省带宽但滤波/同步复杂；课件经典应用不冒充当前标准。",
+      "prerequisites": [
+        "equal-power-comparison",
+        "vsb-bandwidth",
+        "fm-threshold"
+      ],
+      "section": "综合比较",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "fdm",
+      "label": "频分复用、保护带与非线性串扰",
+      "pages": [
+        98,
+        99
+      ],
+      "summary": "按实际已调谱边缘留净间隔；SSB槽宽fm与DSB槽宽2W不同，保护带不能滤掉已落入本路的串扰。",
+      "prerequisites": [
+        "multiplier",
+        "ssb-selection"
+      ],
+      "section": "频分复用",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "fdm-chain",
+      "label": "FDM发送合成与接收逐路分离",
+      "pages": [
+        100
+      ],
+      "summary": "发送支路先限带、调制、选频后相加；接收带通选路再解调和低通，每层功能不同。",
+      "prerequisites": [
+        "fdm"
+      ],
+      "section": "频分复用",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "telephone-example",
+      "label": "载波电话的分组搬谱与反转",
+      "pages": [
+        101
+      ],
+      "summary": "三路组成12–24kHz子群，再按F−f取下边带；4kHz槽预算与300–3400Hz实占谱的保护间隔口径要分清。",
+      "prerequisites": [
+        "fdm-chain",
+        "ssb-hilbert"
+      ],
+      "section": "频分复用",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "television-example",
+      "label": "模拟电视图像VSB与伴音FM",
+      "pages": [
+        102
+      ],
+      "summary": "8MHz是图示频道框架，80kHz是25kHz频偏、15kHz音频的伴音FM有效带宽，不能混成同一对象。",
+      "prerequisites": [
+        "vsb-filter",
+        "carson",
+        "fdm"
+      ],
+      "section": "频分复用",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "stereo-example",
+      "label": "立体声复合基带与外层FM",
+      "pages": [
+        103
+      ],
+      "summary": "L−R在38kHz做DSB占23–53kHz，另有19kHz导频；原180kHz式针对15kHz单音频，整体Carson估计应区分256kHz。",
+      "prerequisites": [
+        "dsb",
+        "fdm-chain",
+        "carson"
+      ],
+      "section": "频分复用",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "homework",
+      "label": "原四道题与额外SSB对照的来源",
+      "pages": [
+        104
+      ],
+      "summary": "原页仅4-2、4-7、4-28、4-30；伴读另列4.8.8为既有任务对照，不伪称原PPT印了第五题。",
+      "prerequisites": [
+        "vsb-example",
+        "angle-example",
+        "fdm"
+      ],
+      "section": "复习与作业",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "synthesis",
+      "label": "从源波形到接收性能的完整核查",
+      "pages": [
+        105
+      ],
+      "summary": "原页为结束页；复习需串起表达式、频谱、功率、噪声积分和条件，综合路线属于伴读补充。",
+      "prerequisites": [
+        "resource-tradeoff",
+        "stereo-example",
+        "homework"
+      ],
+      "section": "复习与作业",
+      "type": "concept",
+      "source": "supplement"
+    }
+  ],
+  "edges": [
+    {
+      "from": "am-dc",
+      "to": "dsb",
+      "label": "对比：固定载波的有无"
+    },
+    {
+      "from": "ssb-selection",
+      "to": "vsb-filter",
+      "label": "折中：放宽边带硬切"
+    },
+    {
+      "from": "dsb-gain",
+      "to": "ssb-noise",
+      "label": "对比：G=2与G=1的不同入口"
+    },
+    {
+      "from": "envelope-nonlinear",
+      "to": "phasor-noise",
+      "label": "联系：同一噪声矢量的幅度与相位"
+    },
+    {
+      "from": "am-threshold",
+      "to": "fm-threshold",
+      "label": "对比：非线性解调的门限"
+    },
+    {
+      "from": "am-fm-same-carrier",
+      "to": "equal-power-comparison",
+      "label": "区分：同载幅与同总功率"
+    },
+    {
+      "from": "vsb-complement",
+      "to": "television-example",
+      "label": "应用：图像低频恢复"
+    },
+    {
+      "from": "fm-noise-spectrum",
+      "to": "fdm",
+      "label": "联系：高副载频路的噪声代价"
+    },
+    {
+      "from": "carson",
+      "to": "stereo-example",
+      "label": "应用：按复合基带上边缘估算"
+    }
+  ]
+}
