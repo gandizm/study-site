@@ -1,0 +1,1009 @@
+{
+  "version": 1,
+  "id": "network-queueing",
+  "reader": "network-ppt.html",
+  "pageCount": 33,
+  "displayPageCount": 33,
+  "sourcePageCount": 135,
+  "sourcePages": [
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135
+  ],
+  "progressPageCount": 32,
+  "progressPages": [
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135
+  ],
+  "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+  "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda",
+  "sourceStatus": "来自恢复的原站权威完整PDF，物理页编号与阅读器保持一致。排队论以135页ch1.pdf为准，不以另一个裁剪版代替原页码。",
+  "pages": [
+    {
+      "page": 103,
+      "title": "可选引入原页",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"103\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 103,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=103",
+      "image": "/study-site/courses/network-queueing/slides/page-103.png",
+      "imageSha256": "a24d903c0a5ab56ec8b83a618168da9e1d296a1664781457d55d58bf3d977c00",
+      "imageBytes": 108575,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "intro"
+      ],
+      "countsTowardProgress": false,
+      "note": "可选引入原页；不计入32页正式伴读进度。",
+      "coverageRole": "optional-introduction",
+      "coverageReasons": [
+        "P103实际是排队/服务方框与网络类比，仅可选介绍，不纳入104–135正式进度。"
+      ]
+    },
+    {
+      "page": 104,
+      "title": "平均半秒来一份，为什么仍可能一份不来？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"104\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 104,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=104",
+      "image": "/study-site/courses/network-queueing/slides/page-104.png",
+      "imageSha256": "f86773c11668e002bfa9eb4185e2959b9941ed5a92b788ca348a9235a31ffe56",
+      "imageBytes": 199220,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "poisson"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P104给到达数Poisson分布及参数，计数变量不是间隔时间。"
+      ]
+    },
+    {
+      "page": 105,
+      "title": "要等多久，下一份报文才会来？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"105\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 105,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=105",
+      "image": "/study-site/courses/network-queueing/slides/page-105.png",
+      "imageSha256": "aa9c8140b13d2c2c59219f7307de18eed3d3044cb81bb3b17e92d961f0ef28d8",
+      "imageBytes": 286956,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "waiting"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P105通过零到达概率推等待间隔分布，尾概率微分后才是密度。"
+      ]
+    },
+    {
+      "page": 106,
+      "title": "知道平均等多久，是否已经知道等待有多不稳定？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"106\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 106,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=106",
+      "image": "/study-site/courses/network-queueing/slides/page-106.png",
+      "imageSha256": "45f9ad88ae9e8df7a9e803a61bbc4e18b8b28f82fc535acaf4e2d858c63511fb",
+      "imageBytes": 166735,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "exponential"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P106指数密度图、均值1/λ与方差1/λ²；无记忆性是既有讲义的补充推论。"
+      ]
+    },
+    {
+      "page": 107,
+      "title": "报文已经到了，链路还要忙多久才能发完？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"107\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 107,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=107",
+      "image": "/study-site/courses/network-queueing/slides/page-107.png",
+      "imageSha256": "b0c2b2e4f1395ef950dce273d118f9bda1998f7cb833a7c1ecb24e1d11eb06c4",
+      "imageBytes": 146635,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "service"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P107分组长度、比特率和服务时间转换；原λ/μc相等文字需区分到达与服务能力。"
+      ]
+    },
+    {
+      "page": 108,
+      "title": "已经开始发送的报文，还算在系统里吗？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"108\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 108,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=108",
+      "image": "/study-site/courses/network-queueing/slides/page-108.png",
+      "imageSha256": "47581bedf6fea0d09077301f1f3055563a98e718e19ad96d49f5c22e7006dc6b",
+      "imageBytes": 165973,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "boundary"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P108给系统边界与平均进入离开流量；图不是无外部输入的封闭排队网络。"
+      ]
+    },
+    {
+      "page": 109,
+      "title": "来得快、留得久，为什么平均在场数量就多？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"109\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 109,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=109",
+      "image": "/study-site/courses/network-queueing/slides/page-109.png",
+      "imageSha256": "cfbcbfcb97b64ad9c58fb7671464dba8b57a52ae8f58e821d9adfa9520441bd8",
+      "imageBytes": 158250,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "little"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P109明确平均数、有效到达率与逗留时间，三者须在同一系统边界统计。"
+      ]
+    },
+    {
+      "page": 110,
+      "title": "平均能力够用，为什么仍然可能排队？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"110\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 110,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=110",
+      "image": "/study-site/courses/network-queueing/slides/page-110.png",
+      "imageSha256": "18aa649903e931024d8f97407497b91db99fb095be7f1eb07f33044f545e502f",
+      "imageBytes": 183777,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "load"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P110/111把线路发送时间占比连到ρ=λ/(μc)，稳态式要求ρ<1。"
+      ]
+    },
+    {
+      "page": 111,
+      "title": "链路有多忙，为什么可以用到达率除以服务率？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"111\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 111,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=111",
+      "image": "/study-site/courses/network-queueing/slides/page-111.png",
+      "imageSha256": "c8c507ff8fe7f545176b3aca61cc2a56e05fbdcf4bf7cd6f244e6e4308eca76f",
+      "imageBytes": 250969,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "load"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P110/111把线路发送时间占比连到ρ=λ/(μc)，稳态式要求ρ<1。"
+      ]
+    },
+    {
+      "page": 112,
+      "title": "系统数量减去一份，为什么不等于平均队列长度？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"112\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 112,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=112",
+      "image": "/study-site/courses/network-queueing/slides/page-112.png",
+      "imageSha256": "0181d71d9492fbbb1aa1b05073a0f60a9a69dec5d02be558d50eb6c7419fd819",
+      "imageBytes": 249622,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "decomposition"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P112把排队数/系统数及等待/服务时间分解，队列与系统不能混用。"
+      ]
+    },
+    {
+      "page": 113,
+      "title": "只知道平均到达率和平均服务时间，就能确定排队吗？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"113\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 113,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=113",
+      "image": "/study-site/courses/network-queueing/slides/page-113.png",
+      "imageSha256": "697ccd2236f3533577aff88265fef539a5765559686da22207f8abbef0eb78c1",
+      "imageBytes": 215784,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "kendall"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P113/114列到达、服务、服务台、容量、规则及分类；D解释为定长确定性而非均匀随机。"
+      ]
+    },
+    {
+      "page": 114,
+      "title": "第二个字母改变时，排队公式为什么就变了？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"114\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 114,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=114",
+      "image": "/study-site/courses/network-queueing/slides/page-114.png",
+      "imageSha256": "000e94516b69414a69c70dc00289a57e26b3014298476ff80c52713501a74cb5",
+      "imageBytes": 175011,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "kendall"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P113/114列到达、服务、服务台、容量、规则及分类；D解释为定长确定性而非均匀随机。"
+      ]
+    },
+    {
+      "page": 115,
+      "title": "求等待时间，为什么接下来先研究系统里有几份？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"115\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 115,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=115",
+      "image": "/study-site/courses/network-queueing/slides/page-115.png",
+      "imageSha256": "efa3172140c9ec96970d3fcacd92c169fb6cb57bd488c6f754240f1da1212e7f",
+      "imageBytes": 133520,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "mm1"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P115定义M/M/1的假设，后面稳态结果不能脱离这些假设。"
+      ]
+    },
+    {
+      "page": 116,
+      "title": "为什么一串“系统里有几份”的状态，就能描述这个队列？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"116\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 116,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=116",
+      "image": "/study-site/courses/network-queueing/slides/page-116.png",
+      "imageSha256": "3ca75e18b1ca31b88a73264e0ad7db49b84f78351775c383004b334e18a76548",
+      "imageBytes": 215083,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "birth-death"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P116状态图按系统内分组数而非时间窗累计到达数，流量λPk与条件速率分开。"
+      ]
+    },
+    {
+      "page": 117,
+      "title": "未知概率有无穷多个，为什么先求相邻状态的比例就够了？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"117\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 117,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=117",
+      "image": "/study-site/courses/network-queueing/slides/page-117.png",
+      "imageSha256": "73722b6be560780cba21bde637fb4c5f26739352a3509e1014a88119a5823b9f",
+      "imageBytes": 145466,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "balance"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P117从相邻稳态平衡给Pk=ρ^kP0，统一服务速率符号。"
+      ]
+    },
+    {
+      "page": 118,
+      "title": "各状态的比例已知，怎样把它们变成真正的概率？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"118\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 118,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=118",
+      "image": "/study-site/courses/network-queueing/slides/page-118.png",
+      "imageSha256": "3e1d19e2b65d4ebedad5b99b3a4ede5e8ea02a276db7e6c733346afebef127c3",
+      "imageBytes": 110274,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "normalization"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P118概率归一化几何级数给P0=1−ρ，要求ρ<1才能相加。"
+      ]
+    },
+    {
+      "page": 119,
+      "title": "知道系统中各种报文数量的概率，怎样求平均数量？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"119\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 119,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=119",
+      "image": "/study-site/courses/network-queueing/slides/page-119.png",
+      "imageSha256": "0210b55239792dd33dcc8cd889fcbcaacc5cb4928179abe41fc3b878752e38bb",
+      "imageBytes": 177662,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "population"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P119给N与Nq，两者差为正在服务概率ρ，不是无条件差1。"
+      ]
+    },
+    {
+      "page": 120,
+      "title": "平均系统数量已经求出，平均时延还差哪一步？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"120\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 120,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=120",
+      "image": "/study-site/courses/network-queueing/slides/page-120.png",
+      "imageSha256": "1a5bd5b3d60ebfc50031a071df7bb196223769826ae75f41edbeed8265c8e8ce",
+      "imageBytes": 120375,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "mm1-delay"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P120/121按Little推T=1/(μc−λ)和W=T−1/(μc)，包括服务与不包括服务分清。"
+      ]
+    },
+    {
+      "page": 121,
+      "title": "拿到一题时延题，怎样把已知量连到所求量？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"121\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 121,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=121",
+      "image": "/study-site/courses/network-queueing/slides/page-121.png",
+      "imageSha256": "752f718d157eba68fbc3b359305fcf76bd0cec78d4055d4257b59e1574328080",
+      "imageBytes": 161236,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "mm1-delay"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P120/121按Little推T=1/(μc−λ)和W=T−1/(μc)，包括服务与不包括服务分清。"
+      ]
+    },
+    {
+      "page": 122,
+      "title": "平均服务时间相同，为什么一组报文仍可能排得更久？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"122\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 122,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=122",
+      "image": "/study-site/courses/network-queueing/slides/page-122.png",
+      "imageSha256": "c9639203dca6d153316c4806b29f14a12e5187b94985d014129628a51532baec",
+      "imageBytes": 171363,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "mg1"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P122一般服务分布和二阶矩进入P-K式，保留Poisson/FCFS及有限二阶矩等条件。"
+      ]
+    },
+    {
+      "page": 123,
+      "title": "如果每份发送时间固定，为什么还会有人排队？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"123\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 123,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=123",
+      "image": "/study-site/courses/network-queueing/slides/page-123.png",
+      "imageSha256": "fb7c430c3ffc388c58068ceb221b010620b2c3e76ed6f7d6c5a11b8f7e1aacc1",
+      "imageBytes": 91516,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "md1"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P123定长服务把方差置零，不能仍用指数服务方差。"
+      ]
+    },
+    {
+      "page": 124,
+      "title": "固定服务的等待减半，为什么总时延却不减半？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"124\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 124,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=124",
+      "image": "/study-site/courses/network-queueing/slides/page-124.png",
+      "imageSha256": "7f38c1d668ac7ec475db29797bb9b450edc4cb1deaf4e24f1068f7566dc231df",
+      "imageBytes": 88816,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "model-compare"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P124同负载下比较M/M/1和M/D/1；减半的是等待，不是总逗留时间。"
+      ]
+    },
+    {
+      "page": 125,
+      "title": "走过多条链路的分组，应该从哪一段开始算时延？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"125\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 125,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=125",
+      "image": "/study-site/courses/network-queueing/slides/page-125.png",
+      "imageSha256": "521c6ead4a1626f2b54d0a04b84d44311d2f9580c1447ea9dcf4a2208ad49b19",
+      "imageBytes": 162484,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "link-delay"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P125把单服务器对应单链路，单位由bit/分组和bit/s得到分组/s。"
+      ]
+    },
+    {
+      "page": 126,
+      "title": "为什么自身发送需100\\,\\mathrm{ms}，节点平均延迟却是200\\,\\mathrm{ms}？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"126\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 126,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=126",
+      "image": "/study-site/courses/network-queueing/slides/page-126.png",
+      "imageSha256": "a4845c0d2937d873339bb55f24f69ab9dfff16a5f15a3b41e8aee7c18d6eb931",
+      "imageBytes": 145970,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "single-example"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P126原例1000bit、10kbit/s、5分组/s；T=0.2s而非仅发送0.1s。"
+      ]
+    },
+    {
+      "page": 127,
+      "title": "同一份分组，为什么会给多条链路各增加一次流量？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"127\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 127,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=127",
+      "image": "/study-site/courses/network-queueing/slides/page-127.png",
+      "imageSha256": "0f56ceec0fe5b6df6b869b42766bd3b254af02b724c25cc882e6397b39d9e96d",
+      "imageBytes": 437532,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "network-model"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P127六节点八链路、平均800bit、业务与路由表；正反方向分开建模。"
+      ]
+    },
+    {
+      "page": 128,
+      "title": "随机抽一份分组，它的平均时延能用链路时延简单平均吗？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"128\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 128,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=128",
+      "image": "/study-site/courses/network-queueing/slides/page-128.png",
+      "imageSha256": "0d3a2cf967630de925d6bc6c5d30e471a8b615d4c62c11c7d2b3c059a2f6873f",
+      "imageBytes": 405412,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "weighted-target"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P128端到端平均按外部业务加权，与任取链路的平均不同。"
+      ]
+    },
+    {
+      "page": 129,
+      "title": "为什么平均段数乘平均每段时延，恰好给出整网平均时延？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"129\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 129,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=129",
+      "image": "/study-site/courses/network-queueing/slides/page-129.png",
+      "imageSha256": "f3a7bc0a5923fe9a8d6979a6ee3fa0f748c3d166f5f36ac76489266d07eebb92",
+      "imageBytes": 390178,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "ratio-identity"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P129把端到端平均写为平均跳数乘一次访问平均，来自比值约分而非独立性假设。"
+      ]
+    },
+    {
+      "page": 130,
+      "title": "算一条链路的流量，为什么不能只看两端之间的直接业务？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"130\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 130,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=130",
+      "image": "/study-site/courses/network-queueing/slides/page-130.png",
+      "imageSha256": "accfd0125b67a7261b93a545fff18a625b94521a3cba11308a16beb36a2055c2",
+      "imageBytes": 392228,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "link-loads"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P130原表逐业务沿路累加，AB=14、BF=10，不能把路径上的外部流算多次注入。"
+      ]
+    },
+    {
+      "page": 131,
+      "title": "怎样知道八条链路都没有漏算，也没有把方向算反？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"131\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 131,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=131",
+      "image": "/study-site/courses/network-queueing/slides/page-131.png",
+      "imageSha256": "fed19b027ce837e1a896883721ee8e9a1fab12ff8bf4ff4eb6b331af04884c45",
+      "imageBytes": 136843,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "direction-audit"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P131列八条方向流量14/12/6/11/13/8/10/8，方向与路由表逐条对应。"
+      ]
+    },
+    {
+      "page": 132,
+      "title": "流量最大的链路，一定是排队最严重的链路吗？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"132\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 132,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=132",
+      "image": "/study-site/courses/network-queueing/slides/page-132.png",
+      "imageSha256": "90debf2a6dae6376abe1971994fdf463330702ffb2daf8e3b68807cd75fc3d2d",
+      "imageBytes": 157465,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "link-table"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P132给每链路服务能力和T；BF的57ms原表数值与1/(25−10)不符，讲义保留更正。"
+      ]
+    },
+    {
+      "page": 133,
+      "title": "为什么一个平均要除以链路访问率，另一个要除以新分组率？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"133\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 133,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=133",
+      "image": "/study-site/courses/network-queueing/slides/page-133.png",
+      "imageSha256": "9e97cd51f5c78e2b7e0d226813be562aebfd5ef311830cda34ec45d8f01f005f",
+      "imageBytes": 206006,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "network-denominators"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P133区分链路访问总82与外部注入62，两种平均分母不互换。"
+      ]
+    },
+    {
+      "page": 134,
+      "title": "怎样把每条链路上的等待，合成一份分组的整网时延？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"134\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 134,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=134",
+      "image": "/study-site/courses/network-queueing/slides/page-134.png",
+      "imageSha256": "dfb459851936200663bcd354dc19add9beabb320dae9749c1b649f696e5a95de",
+      "imageBytes": 178073,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "network-total"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P134全网Little/路径加权给端到端114.2299ms；一次链路访问平均86.3690ms不同。"
+      ]
+    },
+    {
+      "page": 135,
+      "title": "同一张网络的业务能放大多少，才不会让某条链路失去稳态？",
+      "reader": "network-ppt.html",
+      "selector": ".slide-page[data-page=\"135\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 135,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=135",
+      "image": "/study-site/courses/network-queueing/slides/page-135.png",
+      "imageSha256": "743819e185ce8cea1adbbdee002813b5e6c905d4da7dd0b1a1dd74760fcc4497",
+      "imageBytes": 343469,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "PNG",
+      "knowledgeNodeIds": [
+        "capacity-boundary"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "concept-method-or-worked-example",
+      "coverageReasons": [
+        "P135同倍流量k需每链路ρ<1，FD先到界k<25/16；低负载端到端56.9032ms。"
+      ]
+    }
+  ],
+  "currentVerification": {
+    "baselineCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "readerSha256": "dcf06180d04da66da46324dd227c4a0ab6269b8f2718b5a8d60269a3a7ef0e69",
+    "method": "从Git不可变对象取出当前reader、PDF与每页源图，逐字节SHA绑定旧映射；逐节点复读实际PDF文本/公式与必要图像，并区分PPT主题和既有讲义扩展。",
+    "sourceImageIdentityCount": 33,
+    "sourcePageTextReviewCount": 33,
+    "nodeSemanticReviewCount": 30,
+    "visualRecheckedPages": [
+      103,
+      130,
+      131,
+      132
+    ],
+    "notClaimed": [
+      "没有本轮逐页重新目视全部277幅源图",
+      "没有本轮重跑旧全部扩展PDF的逐页视觉比对",
+      "没有修改或验收新的线上UI",
+      "没有把封面或结束页计作新增教学论证"
+    ],
+    "priorMapSha256": "a3f372c2943331d285c12b15c81f99c0d5258ba4f58586b88dbcce422b7d5163"
+  },
+  "coverageContract": {
+    "baselineCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "readerSha256": "dcf06180d04da66da46324dd227c4a0ab6269b8f2718b5a8d60269a3a7ef0e69",
+    "sourcePages": [
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135
+    ],
+    "displayPageCount": 33,
+    "progressPages": [
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135
+    ],
+    "progressPageCount": 32,
+    "nodeCoverageMeaning": "每个真实原页至少归属一个节点；封面、目录、END和可选引入单独标明，覆盖不代表原页具有新增完整论证。",
+    "modelScope": "全部节点与全量有向关系构成整章模型；不是仅当前页的一层邻接。",
+    "uiBoundary": "现V2读取section、prerequisites和edges；themes与learningPaths为可审教学元数据，尚不单独渲染。2/3层表示入/出双向关系距离，不是先修树或学科等级。",
+    "prerequisiteMeaning": "先修是推荐阅读关系，不锁门；显式对比、区分和应用边不解释为数学推出或时间因果。"
+  }
+}

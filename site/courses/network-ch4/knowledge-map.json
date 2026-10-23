@@ -1,0 +1,4362 @@
+{
+  "version": 1,
+  "id": "network-ch4",
+  "title": "计算机网络 第四章 网络层",
+  "reader": "/study-site/network-ch4-ppt.html",
+  "totalPages": 233,
+  "source": {
+    "pdf": "/study-site/courses/source-pages/21ec844ecbe2b9c4e516/source.pdf",
+    "sha256": "21ec844ecbe2b9c4e516d0ae0b25102429763a76873a6b0a3548b7f65464fb36",
+    "sourcePdfPages": 233,
+    "readerPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233
+    ],
+    "pageNumbering": "本阅读器保留真实data-page序列1–233，共233页；PDF共233物理页。每行独立记录readerIndex、readerPage及从源链接读取的sourcePdfPage，不默认三者相同。",
+    "recoveryStatus": "new-authored-map-from-restored-reader-and-source-not-old-frozen-json"
+  },
+  "nodes": [
+    {
+      "id": "network-task",
+      "label": "网络层把一跳交付接成跨网数据报服务",
+      "pages": [
+        1,
+        2,
+        8,
+        13
+      ],
+      "summary": "本组原页为封面与目录；补充串联路线：目的地址、下一跳、异常与路由维护。IP统一跨网寻址，每跳仍需链路帧；地址、首部与转发应连起来使用。",
+      "prerequisites": [],
+      "section": "服务与异构互连",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          1,
+          2,
+          8,
+          13
+        ],
+        "scope": "outline-and-teaching-route",
+        "sourceBasis": "封面与两级目录列七节及IP地址、首部、转发分工；串联路线是教学组织，不是封面新增命题。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "service-layer",
+      "label": "连接和可靠性必须指定层次，不能跨层直接推断",
+      "pages": [
+        3,
+        7
+      ],
+      "summary": "TCP连接可运行在无连接IP之上，端点按应用需要加入确认重传排序；IP尽力服务不等于系统无法可靠下载，也不等于路由器没有复杂处理。",
+      "prerequisites": [
+        "network-task"
+      ],
+      "section": "服务与异构互连",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          3,
+          7
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P7明确IP尽最大努力无连接、端系统运输层负责需要的可靠性；P3为节目录。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "virtual-circuit",
+      "label": "虚电路先建立沿途状态，再凭连接标识转发",
+      "pages": [
+        4,
+        6
+      ],
+      "summary": "逻辑连接可复用同一物理链路，不是独占电路；资源预留、可靠和按序依具体机制而非名字保证。故障可需恢复状态，既不是每发一包建链，也非瞬间无损切换。",
+      "prerequisites": [
+        "service-layer"
+      ],
+      "section": "服务与异构互连",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          4,
+          6
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P4逻辑连接与存储转发示意、P6逐项比较；可靠性不能脱离采用的网络机制。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "datagram",
+      "label": "IP每包独立决策，不承诺不丢不重和按序",
+      "pages": [
+        5,
+        6
+      ],
+      "summary": "无连接不等于路由器无表和缓存，不要求每包走不同路；IPv4标识与片偏移用于重组，不是TCP式可靠交付序号。拥塞可丢包，后续改路需等待控制信息收敛。",
+      "prerequisites": [
+        "service-layer"
+      ],
+      "section": "服务与异构互连",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          5,
+          6
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P5画分流与丢失并列无连接服务限制；P6比较建立连接、地址和到达顺序。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "protocol-roles",
+      "label": "ARP、ICMP和IGMP的任务与承载各不相同",
+      "pages": [
+        9
+      ],
+      "summary": "ARP解析IPv4本链路下一跳并直接封链路帧；ICMP诊断差错、IGMP本地IPv4多播成员报文在IP中。历史RARP问本机配置，不是全球反查任意MAC。",
+      "prerequisites": [
+        "datagram"
+      ],
+      "section": "服务与异构互连",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          9
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P9协议栈明确ARP、ICMP、IGMP的不同承载和任务；RARP回读是讲义补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "heterogeneous-ip",
+      "label": "统一IP视图隐藏链路差异，而不删除差异",
+      "pages": [
+        10,
+        11,
+        12
+      ],
+      "summary": "按本次处理的信号/帧/数据报区分中继、桥和路由；默认网关通常为路由接口。逻辑IP箭头仍逐跳封装，MTU和PHY仍不同；同网直接交付，远端先交路由器。",
+      "prerequisites": [
+        "network-task",
+        "datagram"
+      ],
+      "section": "服务与异构互连",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          10,
+          11,
+          12
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P10列异构差别与中间设备，P11虚拟互联，P12逐跳IP路径；不是物理直连。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv4-interface",
+      "label": "32位IPv4首先描述接口的网络位置",
+      "pages": [
+        14,
+        15,
+        39
+      ],
+      "summary": "四个八位组各0–255、点是分隔符，地址不是32字节或设备永久编号；多接口可多地址，私有与特殊地址不套全球唯一。分类、子网与CIDR改变边界而不改变32位总长。",
+      "prerequisites": [
+        "heterogeneous-ip"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          14,
+          15,
+          39
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P14/15给32位与128.11.3.31转换；P39明确接口标识及按前缀管理。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "historical-classes",
+      "label": "分类网络字段含固定先导位，位模式数和保留约定分开",
+      "pages": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "summary": "A/B/C按0/10/110识别历史/8、/16、/24，网络变化位分别7/14/21；旧B/C减一约定不改组合数学，明确CIDR后不再用类别猜边界。广播全一是二进制全一，不是5.1.1.1。",
+      "prerequisites": [
+        "ipv4-interface"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P16/17给字段与先导位，P18–20保留了不同历史网络数表和广播例；纠正说明保留表的版本边界。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "special-addresses",
+      "label": "网络、广播、未指定与环回的用途依上下文",
+      "pages": [
+        21
+      ],
+      "summary": "0.0.0.0特殊源与0.0.0.0/0路由不同；有限广播不跨路由，定向广播也非默认转发。网络地址可作路由前缀而非普通主机地址，127/8用于本机环回。",
+      "prerequisites": [
+        "historical-classes"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          21
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P21是全零、全一、127等特殊地址表；与默认路由和现代广播限制的区别为讲义条件回读。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "cidr-size",
+      "label": "前缀长决定总地址数，普通主机数另判条件",
+      "pages": [
+        22,
+        23,
+        24
+      ],
+      "summary": "n位前缀有2^(32−n)地址；普通广播子网才通常减二。/20示例覆盖128.14.32.0至47.255；/32主机路由、支持的点对点/31两个端点、/0兜底各有独立用途。",
+      "prerequisites": [
+        "ipv4-interface",
+        "special-addresses"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          22,
+          23,
+          24
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P22–24给/20地址块与/32、/31、/0用途；/20端点32.0至47.255可由位图复算。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "mask-and",
+      "label": "掩码保留前缀，用逐位AND求规范网络起点",
+      "pages": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "summary": "同一地址换/20、/24可得不同网络，141.14.64.0/18与/19起点相同范围却不同；不能用十进制比较或源自己的掩码判断每条路由。连续前缀对应连续1掩码。",
+      "prerequisites": [],
+      "section": "IPv4编址与前缀",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          25,
+          26,
+          27,
+          28
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P25定义连续掩码；P26算145.13.0.0/20，P27/28比较同141.14.64.0下不同范围。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "subnet-split",
+      "label": "借位增加子网数、减少每块大小，总空间不变",
+      "pages": [
+        25,
+        29
+      ],
+      "summary": "原n再借s位得到2^s等长子网，每块2^(32−n−s)地址，现代划分不无条件扣全零全一子网；/18两分/19从64和96开始。子网编号20与完整148.202.160.0/21不同。",
+      "prerequisites": [
+        "mask-and"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          25,
+          29
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P25掩码和P29把/18分两/19支撑借位划分；148.202例属于原站补充而非本两页原题。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "prefix-aggregate",
+      "label": "精确汇总需要连续、等大且按新块边界对齐",
+      "pages": [
+        30,
+        32
+      ],
+      "summary": "70/24与71/24可合70/23，71与72不能刚好合一个/23；同方向可达信息可对外汇总、内部保留细分，汇总覆盖的洞不自动可达。聚合节约表项而非增加地址。",
+      "prerequisites": [
+        "subnet-split"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          30,
+          32
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P30从两/25到/24再到70/23，P32从内部细分到ISP的/18通告，支持对齐汇总。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "address-plan",
+      "label": "VLSM按需求分块，再核数量、包含和不重叠",
+      "pages": [
+        31
+      ],
+      "summary": "206.0.68.0/22分/23、/24、/25、/25共512+256+128+128地址；和相等仍须检查对齐与范围，地址总数不是可用终端数，路由接口也需预算。",
+      "prerequisites": [
+        "subnet-split",
+        "prefix-aggregate"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "example",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          31
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P31大学/22分给四系的/23、/24、两个/25及地址数表均明确给出。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "longest-prefix",
+      "label": "先找匹配集合，再选最具体前缀",
+      "pages": [
+        33,
+        34
+      ],
+      "summary": "每条路由分别检验D&Mᵢ=Nᵢ，/25与/22同时匹配先选/25，不先比地址大小、位置或跳数；同一前缀内部才另比路由来源与代价，默认仅无更长匹配时接手。",
+      "prerequisites": [
+        "prefix-aggregate"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          33,
+          34
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P33/34的206.0.71.130同时匹配大学/22和四系/25，明确选择更长前缀。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "prefix-trie",
+      "label": "加速查表不改变最长匹配，索引候选还需验证",
+      "pages": [
+        35,
+        36,
+        37,
+        38
+      ],
+      "summary": "未排序表不能见首个匹配即停；树需保留沿途最深有效路由和回退。唯一前缀10110只是索引，规范176.2.0.0最宽/15仍不覆盖177.18.0.2，不能凭到叶子宣称匹配。",
+      "prerequisites": [
+        "longest-prefix"
+      ],
+      "section": "IPv4编址与前缀",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          35,
+          36,
+          37,
+          38
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P35–38为查找策略、二叉线索、五前缀例与叶节点再掩码验证；索引命中不等于前缀命中。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "interface-topology",
+      "label": "按前缀和路由边界数网络，不按图标或线段数",
+      "pages": [
+        40,
+        41,
+        42
+      ],
+      "summary": "本图三LAN加三/31共六网，网桥不新增IP子网；网关须选与发送方同链路接口。/31两端均可用，无编号点对点是另一机制，不把旧分节/24接口地址混进新版。",
+      "prerequisites": [
+        "ipv4-interface",
+        "cidr-size"
+      ],
+      "section": "逐跳封装与ARP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          40,
+          41,
+          42
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P40–42图为三LAN和三/31，网桥B只扩展LAN2；三页分别强调同前缀、接口和点对点。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ip-mac-scope",
+      "label": "端到端目的IP与本跳MAC各控制一层交付",
+      "pages": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52
+      ],
+      "summary": "路由先决定出口/下一跳，再做局部链路交付；三链路各重成帧而普通非NAT非隧道端点IP保持。二层不必解析IP不是IP不可见或已加密，网关地址不替换远端目的。",
+      "prerequisites": [
+        "heterogeneous-ip",
+        "interface-topology"
+      ],
+      "section": "逐跳封装与ARP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          50,
+          51,
+          52
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P43目录；P44封装；P45–48/50–52同一H1经两路由到H2的IP/MAC分层图逐步展开。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "mutable-header",
+      "label": "端点地址不变不等于数据报逐比特不变",
+      "pages": [
+        49
+      ],
+      "summary": "普通IPv4路由递减TTL并更新首部校验和，分片会改长度标志偏移；NAT和隧道还有各自地址/外层规则，不能把教学路径的保留结论无条件推广。",
+      "prerequisites": [
+        "ip-mac-scope"
+      ],
+      "section": "逐跳封装与ARP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          49
+        ],
+        "scope": "source-endpoints-with-cross-page-clarification",
+        "sourceBasis": "P49只强调端点IP与不写中间路由器地址；TTL、校验和等可变字段是对照后续页的教学补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "arp-local",
+      "label": "ARP输入是已选本链路下一跳，不是全网远端",
+      "pages": [
+        53,
+        54,
+        57
+      ],
+      "summary": "同链路可直交时解析目的本身，否则解析网关；主机和路由器都遵循先路由后ARP。缓存并非完整名单，缺项不证明主机不存在；无MAC链路和IPv6不套同一ARP流程。",
+      "prerequisites": [
+        "protocol-roles"
+      ],
+      "section": "逐跳封装与ARP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          53,
+          54,
+          57
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P53目录；P54查缓存流程；P57逐列主机/路由器到本地/远端四种ARP目标。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "arp-learning",
+      "label": "广播询问、通常单播回答，缓存更新反映局部观察",
+      "pages": [
+        55,
+        56
+      ],
+      "summary": "请求含发送者IP/MAC使目标无需反问即可回答并学习；ARP请求帧与随后IP数据帧不同。缓存老化不是包TTL，普通路由不转发ARP广播，观察得到的映射也不是永久真值。",
+      "prerequisites": [],
+      "section": "逐跳封装与ARP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          55,
+          56
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P55请求广播与响应单播同时给发送者映射，P56说明反向学习、老化及局域网范围。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv4-layout",
+      "label": "先认版本和字段单位，再划首部与载荷边界",
+      "pages": [
+        58,
+        59,
+        60
+      ],
+      "summary": "图每行32位，固定首部20字节加可选项；总长=完整首部+IP载荷，不减外层链路字段。4位版本值决定整套格式，不等于载荷协议号，IPv6不能按IPv4 IHL解析。",
+      "prerequisites": [
+        "mutable-header"
+      ],
+      "section": "IPv4首部与分片",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          58,
+          59,
+          60
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P58目录；P59固定20字节与选项图；P60版本字段。图中每行32位不是每行32字节。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv4-lengths",
+      "label": "IHL、总长度和MTU使用不同边界与单位",
+      "pages": [
+        61,
+        63,
+        74
+      ],
+      "summary": "IHL以4字节计且5–15对应20–60字节，IPv4总长以字节含首部和数据；选项需补齐4字节。MTU约束本跳整个IP包，576是历史接收/重组基线而非统一链路MTU。",
+      "prerequisites": [
+        "ipv4-layout"
+      ],
+      "section": "IPv4首部与分片",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          61,
+          63,
+          74
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P61首部长以4字节计、P63总长含首部、P74选项与填充；576的历史条件在讲义澄清。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "differentiated-service",
+      "label": "DSCP分类和ECN拥塞信号不能混成旧服务位",
+      "pages": [
+        62
+      ],
+      "summary": "现代8位DS字段为6位DSCP与2位ECN；标记需网络设备配合，不因填入优先值就获得带宽或延迟保证，也不同时按旧D/T/R/C位解释。",
+      "prerequisites": [
+        "ipv4-layout"
+      ],
+      "section": "IPv4首部与分片",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          62
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P62指出8位区分服务字段；DSCP/ECN位分解及不自动保证QoS是讲义补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "fragment-identification",
+      "label": "标识、标志与偏移共同描述原数据的分段",
+      "pages": [
+        64,
+        65,
+        66
+      ],
+      "summary": "同一原报片段靠源/目的/协议/标识等重组，ID不是全网永久唯一序号。DF允许与否不等于已经分片；MF=0可能完整或最后片；13位偏移以8字节计，相对原始IP载荷起点。",
+      "prerequisites": [],
+      "section": "IPv4首部与分片",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          64,
+          65,
+          66
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P64/65/66依次给标识、DF/MF、8字节单位偏移；重组键和MF=0边界由讲义明确。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "fragment-calculation",
+      "label": "先求可装载荷，再按8字节边界写各片字段",
+      "pages": [
+        67
+      ],
+      "summary": "MTU1420、20字节首部、原总长3820产生载荷1400/1400/1000，偏移0/175/350，MF为1/1/0。非末片上限为8⌊(MTU−H)/8⌋，每片另加首部，末片不强求8字节整倍。",
+      "prerequisites": [],
+      "section": "IPv4首部与分片",
+      "type": "example",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          67
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P67原题总长3820、数据3800、片不超1420；原图明确1400/1400/1000与0/175/350。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ttl-budget",
+      "label": "TTL作为跳数预算抑制循环，不是端到端秒表",
+      "pages": [
+        68
+      ],
+      "summary": "路由器收到TTL=1不能继续以0转发；超时可触发ICMP，但反馈也会丢失或过滤。只有知道初始TTL才可推算已过跳数，不能仅凭回复剩余值判断路径长度。",
+      "prerequisites": [
+        "mutable-header"
+      ],
+      "section": "IPv4首部与分片",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          68
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P68给8位TTL与路由器跳数限制；反馈是否到达和未知初值的限制为条件补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "protocol-dispatch",
+      "label": "Protocol区分IP载荷，不是应用端口",
+      "pages": [
+        69,
+        70
+      ],
+      "summary": "ICMP/TCP/UDP对应1/6/17，OSPF为89；4与41分别承载IPv4/IPv6隧道。RIP在UDP内，历史协议号9并不泛指所有内部网关协议；版本、载荷协议与传输端口三者分开。",
+      "prerequisites": [
+        "ipv4-layout",
+        "protocol-roles"
+      ],
+      "section": "IPv4首部与分片",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          69,
+          70
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P69/70给8位协议字段、分派图和1/2/4/6/8/9/17/41/50/89表；历史IGP名不能泛化。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv4-checksum",
+      "label": "IPv4校验和覆盖首部，采用反码加法回卷进位",
+      "pages": [
+        71,
+        72
+      ],
+      "summary": "计算先置零校验和字段，含选项填充按16位求和并回卷后取反；接收含校验和折叠结果FFFF才通过。1234+F234回卷成0469、补码FB96；TTL变化须更新，载荷不在此校验范围。",
+      "prerequisites": [
+        "ipv4-layout",
+        "ttl-budget"
+      ],
+      "section": "IPv4首部与分片",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          71,
+          72
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P71限定首部，P72完整16位反码求和与接收检验图；1234例是讲义补充验算。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "packet-address-fields",
+      "label": "首部给源与目的IP，不携带前缀掩码或通常的下一跳",
+      "pages": [
+        73,
+        79
+      ],
+      "summary": "32位目的地址送入本机路由表，每项掩码来自路由信息而不是数据报字段；普通转发的下一跳用于ARP/本跳封装，不把最终目的地址改写成网关。",
+      "prerequisites": [
+        "ipv4-interface",
+        "ip-mac-scope"
+      ],
+      "section": "IPv4转发与ICMP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          73,
+          79
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P73两个4字节地址，P79明确下一跳不写入IP首部而交ARP和MAC。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "route-selection",
+      "label": "直接、主机和默认路由都纳入统一最长匹配",
+      "pages": [
+        75,
+        76,
+        77,
+        78,
+        80
+      ],
+      "summary": "本机目的先交本地，其余按候选前缀匹配；/32可覆盖主机、/0最后兜底，但表项存在不保证远端可达。每条用自己的掩码，旧流程的“直接优先”不能替代任意CIDR重叠下最长匹配。",
+      "prerequisites": [
+        "longest-prefix",
+        "packet-address-fields"
+      ],
+      "section": "IPv4转发与ICMP",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          75,
+          76,
+          77,
+          78,
+          80
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P75目录，P76按网络列表，P77主机路由，P78默认路由，P80完整查表流程；与CIDR最长匹配联合阅读。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "subnet-forwarding-example",
+      "label": "先比较主机本地前缀，再在路由器逐项选出口",
+      "pages": [
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "summary": "128.30.33.13/25与.138/25不在同网：H1先ARP本侧R1的.33.1；R1匹配.33.128/25后直接解析H2，不绕R2。若目的.36.12/24，R1才解析下一跳R2的.33.129。",
+      "prerequisites": [
+        "mask-and",
+        "route-selection",
+        "arp-local"
+      ],
+      "section": "IPv4转发与ICMP",
+      "type": "example",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          81,
+          82,
+          83,
+          84,
+          85
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P81–85原例H1 .13到H2 .138，逐步AND并匹配.128/25；.36.12为同图的扩展检查。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "icmp-feedback",
+      "label": "ICMP报告网络条件，却不把IP变成可靠服务",
+      "pages": [
+        86,
+        87,
+        88
+      ],
+      "summary": "ICMP直接以IPv4协议1承载，不经TCP/UDP；类型、代码分层表达含义，校验覆盖整个ICMP报文而非只外层首部。反馈可能限速、丢失或被过滤，诊断消息不是自动重传修复。",
+      "prerequisites": [
+        "datagram",
+        "protocol-dispatch"
+      ],
+      "section": "IPv4转发与ICMP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          86,
+          87,
+          88
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P86目录，P87封装和用途，P88类型/代码/检验和及整ICMP校验范围。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "icmp-types",
+      "label": "类型与代码决定差错含义，历史机制不能当现行推荐",
+      "pages": [
+        89,
+        92
+      ],
+      "summary": "目的不可达不等于主机关机，TTL超时与重组超时要看代码；重定向有适用条件。回显与时间戳是查询，源站抑制和旧地址掩码请求已废弃，时间戳仅UTC午夜起毫秒而非完整日期。",
+      "prerequisites": [
+        "icmp-feedback"
+      ],
+      "section": "IPv4转发与ICMP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          89,
+          92
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P89类型表，P92回显和时间戳用途；过时机制及时间戳不含完整日期由讲义澄清。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "icmp-error-boundaries",
+      "label": "限制差错反馈以避免差错循环与广播放大",
+      "pages": [
+        90,
+        91
+      ],
+      "summary": "一般不对ICMP差错、非首片、广播/多播目的及不合法单播源再发ICMPv4差错；首片指偏移0不是最先到达。典型差错引原IP首部和至少8字节载荷，无选项最小示例共56字节，不能将IPv4规则硬套ICMPv6。",
+      "prerequisites": [
+        "icmp-feedback",
+        "fragment-identification"
+      ],
+      "section": "IPv4转发与ICMP",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          90,
+          91
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P90不报差错情形，P91引原首部及前8字节；首片按偏移判断、IPv4/IPv6规则不得混用。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ping-sample",
+      "label": "Ping证据只覆盖本次探测及其端到端路径",
+      "pages": [
+        93
+      ],
+      "summary": "截图4次中3回复，样本未回复率25%；368、374、374毫秒平均372，超时不按零算。32字节回显数据还要加8字节ICMP和20字节IPv4首部；可回显不保证HTTP服务可用。",
+      "prerequisites": [
+        "icmp-types",
+        "ipv4-lengths"
+      ],
+      "section": "IPv4转发与ICMP",
+      "type": "example",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          93
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P93真实命令截图4发3收、368/374/374ms和平均372ms，非凭提取文本编造截图数值。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "traceroute",
+      "label": "递增TTL的新探测包逐级暴露路径中的响应者",
+      "pages": [
+        94
+      ],
+      "summary": "中间通常以超时响应；UDP版终点可报端口不可达，Windows示例用ICMP回显。每跳RTT均从源测量，不能当相邻链路延迟；星号、负载均衡和路径变化使输出不是唯一故障证明。",
+      "prerequisites": [
+        "ttl-budget",
+        "icmp-error-boundaries"
+      ],
+      "section": "IPv4转发与ICMP",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          94
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P94说明路径跟踪和TTL超时/终点不可达，Windows截图与UDP文字需分清不同探测版本。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-motivation",
+      "label": "更大地址空间与简化基本首部不自动提高链路速率",
+      "pages": [
+        95,
+        96,
+        97
+      ],
+      "summary": "CIDR改善分配/聚合，NAT复用映射，IPv6提供128位空间，三者作用不同。IPv6仍需路由与链路交付，可用SLAAC和DHCPv6；流类别和标签不单独保证服务质量。",
+      "prerequisites": [
+        "cidr-size",
+        "network-task"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          95,
+          96,
+          97
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P95目录、P96耗尽及CIDR/NAT/IPv6、P97变化列表；自动配置和QoS绝对化由讲义限定。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-basic-header",
+      "label": "IPv6固定40字节的是基本首部，扩展另计",
+      "pages": [
+        98,
+        99,
+        100
+      ],
+      "summary": "字段共320位，其中源目的地址各128位共32字节，其余8字节；基本首部后可有扩展与上层数据。取消IPv4式首部校验和不等于全栈不检错，也不代表所有首部总共只能40字节。",
+      "prerequisites": [
+        "ipv6-motivation",
+        "ipv4-layout"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          98,
+          99,
+          100
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P98回顾IPv4，P99固定40字节基本首部及扩展，P100完整IPv6字段位图。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-payload-length",
+      "label": "16位载荷长从40字节基本首部之后开始计",
+      "pages": [
+        101,
+        105
+      ],
+      "summary": "扩展和运输层首部都属IPv6有效载荷，不只是应用数据；普通非巨型载荷最大65535字节，总包65575字节仍受路径MTU限制。16字节扩展加1000上层内容，载荷1016、整包1056。",
+      "prerequisites": [
+        "ipv6-basic-header"
+      ],
+      "section": "IPv6与过渡",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          101,
+          105
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P101整首部图与P105的16位载荷长；不含40字节基本首部但包含扩展，1016例为讲义补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-class-flow",
+      "label": "版本、通信量类和流标号分别决定解析、分类和认流",
+      "pages": [
+        102,
+        103,
+        104
+      ],
+      "summary": "4位版本填6；8位Traffic Class含DSCP与ECN。20位流标号需结合源目的地址识别上下文，零也合法；标号不是TCP序号，不自动建虚电路或预留资源，不能沿用源页的无条件QoS保证。",
+      "prerequisites": [
+        "ipv6-basic-header",
+        "differentiated-service"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          102,
+          103,
+          104
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P102/103/104逐个突出版本、通信量类、流标号；现代位义与流标号不保证服务需条件回读。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-next-header",
+      "label": "Next Header逐个指出紧邻后继，解析必须沿链前进",
+      "pages": [
+        106,
+        110,
+        111
+      ],
+      "summary": "基本首部可直接指TCP/UDP或先指扩展；扩展零个也合法。处理者依目的角色与具体类型，逐跳选项有配置边界；ESP后继字段在尾部，不能把“所有扩展首字节相同”当通则。",
+      "prerequisites": [
+        "protocol-dispatch",
+        "ipv6-basic-header"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          106,
+          110,
+          111
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P106定义紧邻后继、P110列扩展、P111两条首部链；处理位置与ESP例外为讲义澄清。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-hop-limit",
+      "label": "Hop Limit限制转发，不误伤已经抵达本机的包",
+      "pages": [
+        107
+      ],
+      "summary": "转发节点收到1并递减至0后不得继续转发；名称直接表达跳数预算。规则限定转发场景，目的节点不应仅因Hop Limit为0就拒绝本机正常处理。",
+      "prerequisites": [
+        "ttl-budget",
+        "ipv6-basic-header"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          107
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P107给跳数限制与逐跳递减；本机交付和转发场景区分为讲义条件说明。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-neighbor",
+      "label": "128位端点地址与邻居发现分别服务路由和本链路交付",
+      "pages": [
+        108,
+        109
+      ],
+      "summary": "原P108–109给出源、目的各128位。讲义补充：普通转发保持端点而链路地址逐跳改变；IPv6由ICMPv6邻居发现而非ARP支持本链路解析。Routing扩展的当前目的例外另论。",
+      "prerequisites": [
+        "ip-mac-scope",
+        "arp-local",
+        "ipv6-next-header"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          108,
+          109
+        ],
+        "scope": "source-address-fields-with-nd-supplement",
+        "sourceBasis": "P108/109原页只标源/目的128位字段；邻居发现和Routing例外是原站讲义补充，不冒称原图已有ND流程。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-source-fragmentation",
+      "label": "普通路由不分片，源端根据路径MTU适配",
+      "pages": [
+        112,
+        114
+      ],
+      "summary": "超MTU由转发节点按规则报ICMPv6 Packet Too Big；源端才加8字节Fragment首部，其13位偏移仍按8字节。隧道入口分自己创建的外层包不等于路由器再切内层；1280最低链路要求不等于统一最大包长。",
+      "prerequisites": [
+        "fragment-identification"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          112,
+          114
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P112源站分片/路径MTU与8字节Fragment图；P114隧道再封装图须区分外层源与普通路由器。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-fragment-example",
+      "label": "合法分片不等于最大填充，偏移只数原始可分片内容",
+      "pages": [
+        113
+      ],
+      "summary": "MTU1500且仅40+8字节首部时，课件1400/1400/200合法，整片1448/1448/248，偏移0/175/350。最大非末片数据1448，另一合法分法1448/1448/104；新增Fragment字节不计入原数据偏移。",
+      "prerequisites": [],
+      "section": "IPv6与过渡",
+      "type": "example",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          113
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P113原载荷3000、MTU1500及1400/1400/200图；1448最大非末片为同条件下补充推算。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "icmpv6-relations",
+      "label": "首部任务移位，ICMPv6反馈、ND与MLD协同承接功能",
+      "pages": [
+        115
+      ],
+      "summary": "原P115仅对照IPv4/IPv6首部。补充回读：ICMPv6以协议58承载，差错0–127、信息128–255；ND/MLD是相关功能而非另两互斥类型，检验包含消息和IPv6伪首部。",
+      "prerequisites": [
+        "icmp-feedback",
+        "ipv6-neighbor",
+        "ipv6-source-fragmentation"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "supplement",
+      "evidence": {
+        "pages": [
+          115
+        ],
+        "scope": "supplement-at-source-header-comparison",
+        "sourceBasis": "P115只有IPv4/IPv6首部对照；ICMPv6分类、ND/MLD与伪首部校验是原站讲义扩展。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-delivery-types",
+      "label": "用交付一个、全组或组内一个区分单播多播任播",
+      "pages": [
+        116,
+        117
+      ],
+      "summary": "任播的最近由路由度量决定而非地理距离；IPv6没有独立广播地址体系，主机位全1不自动广播。地址附属于接口，一个接口可有多个地址；字符串缩得短不说明作用范围小。",
+      "prerequisites": [
+        "ipv6-neighbor"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          116,
+          117
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P116目录，P117单播/多播/任播和节点接口；按路由最近不是地理最近。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-notation",
+      "label": "先还原八组，再核前缀位置与压缩唯一性",
+      "pages": [
+        118
+      ],
+      "summary": "每组只省前导零，双冒号最多一处且补整组；/60例的CD30必须在第四组，CD3补成0CD3不同。IPv4点分后缀占两组；历史compatible与mapped格式不同，表示法本身不能自动提供跨版本互通。",
+      "prerequisites": [
+        "ipv6-delivery-types"
+      ],
+      "section": "IPv6与过渡",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          118
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P118完整/压缩/点分后缀以及/60正确和错误写法，CD30所在第四组清楚。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-special-prefixes",
+      "label": "类型前缀、路由前缀和具体地址结构不可混为一谈",
+      "pages": [
+        119,
+        120,
+        121,
+        122
+      ],
+      "summary": "::/128未指明仅特殊源用途，::/0是默认前缀；::1留在本节点。多播正确FF00::/8，源文FE为错字；类型区域占2^(−k)仅组合份额，不等于所有位串可实际分配。",
+      "prerequisites": [
+        "ipv6-notation",
+        "special-addresses"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          119,
+          120,
+          121,
+          122
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P119地址类型前缀，P120–122表格及正文；P122正文FE与表FF冲突，保留讲义纠正。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-local-scope",
+      "label": "链路本地依赖接口作用域，旧站点本地与ULA另分",
+      "pages": [
+        123,
+        124
+      ],
+      "summary": "FEC0::/10旧site-local已废弃；ULA的FC00::/7及常见FD00::/8不是FE80链路本地。FE80类型10位之后标准结构还含54位零与64位接口标识，不跨链路转发；重复fe80::1须结合接口辨认。",
+      "prerequisites": [
+        "ipv6-special-prefixes"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          123,
+          124
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P123旧site-local及P124链路本地的类型表；弃用和ULA属于原站注明的标准更新补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-hierarchy",
+      "label": "全球前缀、子网与接口部分兼顾聚合和内部管理",
+      "pages": [
+        125
+      ],
+      "summary": "站点/48划/64增加16位子网编号，得65536子网，不套IPv4主机减二；通用位数分解仍须服从地址类型及SLAAC等机制要求。全球单播类型不等于此刻路由、策略和应用一定可达。",
+      "prerequisites": [
+        "prefix-aggregate",
+        "ipv6-local-scope"
+      ],
+      "section": "IPv6与过渡",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          125
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P125两个可变层级结构图；/48到/64子网数是结构应用的新算例，不是原PPT题。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "dual-stack-translation",
+      "label": "双栈只是分别能处理两种IP，不自动提供翻译映射",
+      "pages": [
+        126,
+        127,
+        128
+      ],
+      "summary": "A/AAAA是地址选择线索而非可达证明。主图IPv6首部换IPv4还缺翻译和地址映射条件，128位地址不能原样塞32位；某IPv6节点也不因协议名就必须有IPv4栈。",
+      "prerequisites": [
+        "ipv6-motivation",
+        "ipv6-notation"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          126,
+          127,
+          128
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P126目录，P127双栈图，P128首部替换示意；图不能据此推出双栈自动翻译。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-over-ipv4",
+      "label": "隧道给完整内包加外壳，不逐字段翻译",
+      "pages": [
+        129
+      ],
+      "summary": "IPv4外层B到E、Protocol41承载内层IPv6 A到F及流标号；中间只按外层E路由，出口解封装后恢复内层处理。封装占MTU预算，不天然加密，也不由双栈能力自动建成。",
+      "prerequisites": [
+        "dual-stack-translation",
+        "ipv6-source-fragmentation"
+      ],
+      "section": "IPv6与过渡",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          129
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P129明确内层A到F、外层B到E、Protocol41的封装隧道。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "routing-control",
+      "label": "路由维护信息和转发使用信息属于不同任务",
+      "pages": [
+        130,
+        131
+      ],
+      "summary": "收到用户包通常按既有表处理，不向全网现问一次；正确与完整、低开销、适应、稳定、公平及有条件最优需要权衡。跳数最少不保证时延最小，算法数学正确也不许诺真实IP必达。",
+      "prerequisites": [
+        "route-selection"
+      ],
+      "section": "路由算法与分层",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          130,
+          131
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P130目录、P131六项理想算法要求；控制与转发及多目标权衡来自该要求的联合讲解。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "routing-classification",
+      "label": "动态维护、算法形式和管理层次是三个分类轴",
+      "pages": [
+        132,
+        134,
+        135
+      ],
+      "summary": "静态/动态看信息如何维护，链路状态/距离向量看已知信息如何计算；Dijkstra可在OSPF动态更新后反复运行。分层减少控制与计算负担并保留自治，不等同静态策略或自动加密。",
+      "prerequisites": [
+        "routing-control"
+      ],
+      "section": "路由算法与分层",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          132,
+          134,
+          135
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P132静态动态和分层缘由、P134目录、P135把算法名字并列分类；讲义分开三条分类轴。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "autonomous-system",
+      "label": "AS对外表达一致策略，不等于一个子网或一种IGP",
+      "pages": [
+        133
+      ],
+      "summary": "自治系统内部可用多种协议，IGP与外部协议类别按管理范围区分；BGP还有域内会话。边界控制报文维护可达性，用户数据不因经过两个AS就被改装成RIP或BGP消息。",
+      "prerequisites": [
+        "routing-classification"
+      ],
+      "section": "路由算法与分层",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          133
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P133定义AS/IGP/EGP并画两个AS；多IGP及iBGP范围区别为讲义条件补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "dijkstra-model",
+      "label": "固定同一非负权图，区分边权、暂定距离与前驱",
+      "pages": [
+        136,
+        137,
+        141
+      ],
+      "summary": "主版左D–I图和右A–F矩阵错配，计算主线使用A–F矩阵/分节图。A–D–C代价4只更新路径估计，不把A–C直接边5改成4；P141混合矩阵首行不能当新拓扑。",
+      "prerequisites": [
+        "routing-classification"
+      ],
+      "section": "最短路径与距离向量",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          136,
+          137,
+          141
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P136/137左D–I图与右A–F矩阵实际不对应；P141又把暂定首行混进矩阵，必须固定同一题设。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "dijkstra-invariant",
+      "label": "最小候选确定后松弛，成立依据是非负边权",
+      "pages": [
+        138,
+        139
+      ],
+      "summary": "初始仅源A确定，其余按直连或∞；选未确定最小w，再比较D(v)与D(w)+l(w,v)，改善才更新前驱。第一次跨出确定集合的路径边界解释贪心正确；剩余全∞应判不可达而非虚构路。",
+      "prerequisites": [],
+      "section": "最短路径与距离向量",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          138,
+          139
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P138初始化，P139选最小w并松弛的公式；非负权和不可达边界是正确使用该算法的条件。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "dijkstra-worked",
+      "label": "逐轮追踪确定集合，数值不下降也可能有进展",
+      "pages": [
+        140,
+        142,
+        143,
+        144,
+        145
+      ],
+      "summary": "按A,D,E,B,C,F顺序，向量从(2,5,1,∞,∞)经(2,4,1,2,∞)到(2,3,1,2,4)；后续确定B/C/F不再改善。B与E并列可换顺序，不改变同图最终距离，不能混用错配左图红边。",
+      "prerequisites": [],
+      "section": "最短路径与距离向量",
+      "type": "example",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          140,
+          142,
+          143,
+          144,
+          145
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P140/142–145依次给集合与距离表；按A–F矩阵复算最终2/3/1/2/4，另图红边不混用。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "shortest-tree-next-hop",
+      "label": "由前驱回溯路径，再取源点第一步作为下一跳",
+      "pages": [
+        146
+      ],
+      "summary": "A到C虽前驱E，下一跳仍D；A到B为B，其余C/D/E/F为D。最短路径树优化根到各点，不是最小生成树。主版另图D根答案5/8/4/8/13须独立题设，红树绕行F的12不是最短8。",
+      "prerequisites": [],
+      "section": "最短路径与距离向量",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          146
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P146左表列目的、下一跳和距离；右图节点不同，按左表/前面矩阵解释，D根另图另算。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "distance-vector-minplus",
+      "label": "邻居后半段加本地第一段，按每个目的分别取小",
+      "pages": [
+        147,
+        148,
+        149
+      ],
+      "summary": "C到B/A/D本地代价8/12/7毫秒，不能直接取通告最小或邻边最小。结果A经B11、B经B8、D经D7、E经A32、F经D13；C到自己为0，邻居表不是完整或必已收敛的拓扑。",
+      "prerequisites": [
+        "routing-classification"
+      ],
+      "section": "最短路径与距离向量",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          147,
+          148,
+          149
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P147–149邻居B/A/D的8/12/7加各列报价后逐目的取小，表给11/8/7/32/13。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "rip-metric",
+      "label": "RIP把距离向量具体化为有限跳数和邻居更新",
+      "pages": [
+        150,
+        151,
+        152
+      ],
+      "summary": "本章到直连目的网络记1，邻居报告再加1，1–15有效、16不可达。周期约30秒不排除触发更新，输出受防护/过滤；少跳不等于低时延，单路径教学模型不否认实现可支持等价多路。",
+      "prerequisites": [
+        "autonomous-system"
+      ],
+      "section": "RIP更新与收敛",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          150,
+          151,
+          152
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P150目录，P151直连为1，P152最大15与16不可达、邻居交换、30秒周期。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "rip-local-learning",
+      "label": "从实际收到的信息逐步学习，不借全知图提前填表",
+      "pages": [
+        153,
+        154
+      ],
+      "summary": "先将邻居报告距离加1并封顶16，简化题把下一跳改通告者，再逐项比较。B首轮只获网1/2/6，不得预填尚未获报的网5；共直连网保持更优本地路线，不照抄邻居自己的下一跳。",
+      "prerequisites": [
+        "rip-metric"
+      ],
+      "section": "RIP更新与收敛",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          153,
+          154
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P153邻居初始/更新图，P154R4向R6通告与加1处理；B首轮例来自既有讲义补充材料。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "rip-three-update-cases",
+      "label": "新增、同来源修正和异来源竞争有不同接受条件",
+      "pages": [
+        155,
+        156,
+        157
+      ],
+      "summary": "R6例Net1新增(4,R4)，Net2原经R4必须接受变差到(5,R4)，Net3原经R5被更优(2,R4)替换。“只收更小”会永远保留失效旧信息；逐页中间表不能让已更新Net2回滚。",
+      "prerequisites": [],
+      "section": "RIP更新与收敛",
+      "type": "example",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          155,
+          156,
+          157
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P155–157分新增、同下一跳、不同下一跳三种；中间表需按当前状态连续更新。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "rip-expiry",
+      "label": "路由超时置不可达与删除、邻居整体失效不是同一动作",
+      "pages": [
+        158
+      ],
+      "summary": "本章180秒无有效更新使相应项置16，之后仍需通告与清理；可能存在其他有效替代。收敛后各节点从自身位置得到不同下一跳，等价路径亦可不同，不代表谁未收敛。",
+      "prerequisites": [
+        "rip-three-update-cases"
+      ],
+      "section": "RIP更新与收敛",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          158
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P158三分钟置16和各节点最终表不同；置不可达不是立即删除，也不能直接断言全邻居失效。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "rip-message",
+      "label": "RIPv2以UDP520承载前缀、度量和来源提示",
+      "pages": [
+        159,
+        160
+      ],
+      "summary": "4字节公共首部加每项20字节，普通25项为504，UDP后512、无选项IPv4后532；认证另有占位。掩码明确前缀，Route Tag不必是AS号；Next Hop零采用发送者，非零须本链路可用，不能无条件套简化题。",
+      "prerequisites": [
+        "rip-metric",
+        "protocol-dispatch",
+        "mask-and"
+      ],
+      "section": "RIP更新与收敛",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          159,
+          160
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P159/160给4字节首部、20字节项、最多25、掩码/下一跳/度量字段；字段条件由讲义补全。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "rip-count-to-infinity",
+      "label": "旧距离相互依赖会把失效链路伪装成备用路",
+      "pages": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ],
+      "summary": "R2旧值2本依赖R1直连1，断路后回流可使R1记3、R2记4而循环增至16；须有连贯旧消息时序，双方一致撤销后不能凭空增长。分割水平/毒性反转阻挡此二节点回流，触发更新有助收敛但非全环路免疫。",
+      "prerequisites": [
+        "rip-three-update-cases"
+      ],
+      "section": "RIP更新与收敛",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P161优缺点，P162–167连续动画图从1/2到故障和计数；P165的16支线与随后4需分时序。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ospf-link-state",
+      "label": "先传播局部链路事实，再从共同地图各自运行SPF",
+      "pages": [
+        168,
+        169
+      ],
+      "summary": "链路状态、拓扑数据库与最终表为不同阶段；同区域同步后地图相同但根不同。变化触发不表示不变时永不刷新，OSPF也有自生成LSA刷新和数据库同步，不无差别复制全AS全部细节。",
+      "prerequisites": [
+        "dijkstra-invariant",
+        "autonomous-system"
+      ],
+      "section": "OSPF链路状态",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          168,
+          169
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P168目录、P169链路状态、洪泛和SPF三要点；周期刷新/区域范围是对原绝对措辞的补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ospf-flood",
+      "label": "可靠洪泛靠新旧识别、确认与重传，而不是无限复制",
+      "pages": [
+        170
+      ],
+      "summary": "洪泛箭头是控制更新不是数据最短路径；重复LSA可不重复安装，但一些情况下仍需确认以停止对方重传。“只确认一次”不可作为通则，同图各节点的下一跳仍因位置而异。",
+      "prerequisites": [],
+      "section": "OSPF链路状态",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          170
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P170更新/ACK时间图并联系LSDB和Dijkstra；重复确认规则不可只照一句绝对表述。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ospf-areas",
+      "label": "区域限制详细拓扑范围，边界传必要可达信息",
+      "pages": [
+        171,
+        172,
+        173
+      ],
+      "summary": "32位Area ID不是IP子网，200路由器是旧建议非格式硬限；ABR跨区域，ASBR引入域外，可兼主干但不必互兼。主干0衔接区域，LSA传播范围依类型，不能说所有信息都只在本区。",
+      "prerequisites": [
+        "ospf-link-state",
+        "prefix-aggregate"
+      ],
+      "section": "OSPF链路状态",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          171,
+          172,
+          173
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P171–173同图逐项标区域0、ABR/ASBR/主干及详细拓扑范围；32位Area ID不是子网。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ospfv2-header",
+      "label": "协议89直接承载24字节公共首部，Router ID不等于出接口IP",
+      "pages": [
+        174,
+        175,
+        176
+      ],
+      "summary": "OSPFv2长度含自身首部不含外层IP，没有UDP头；Router ID辨认协议实体，Area ID辨认区域。校验和与身份鉴别职责不同，旧0/1不是仅有类型，类型2及校验排除鉴别字段等边界须保留。",
+      "prerequisites": [
+        "ospf-areas",
+        "protocol-dispatch"
+      ],
+      "section": "OSPF链路状态",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          174,
+          175,
+          176
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P174–176给直接IP承载24字节格式和字段；Router ID与认证的历史表述由讲义澄清。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ospf-database-sync",
+      "label": "Hello维持邻居，摘要、请求、更新与确认补齐数据库",
+      "pages": [
+        177
+      ],
+      "summary": "五分组类型与LSA类型不同；DBD只给摘要，LSR请求具体缺项、LSU携一个或多个LSA、LSAck确认。Hello10/Dead40是配置示例，邻居不都需形成完整邻接，也非每次变化从头复制全库。",
+      "prerequisites": [
+        "ospfv2-header"
+      ],
+      "section": "OSPF链路状态",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          177
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P177五消息和邻居/摘要/请求/更新/确认时序；Hello定时值是示例配置。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "bgp-policy",
+      "label": "域间选择按本地政策和属性，不追求统一全网最短",
+      "pages": [
+        178,
+        179,
+        184
+      ],
+      "summary": "Border Gateway Protocol交换前缀和路径属性，AS度量与商业/转接政策不统一。末梢不转接第三方不等于内部不转发，多归属也不自动同意中转；物理有边不保证路线被导入或导出。",
+      "prerequisites": [
+        "autonomous-system",
+        "routing-control"
+      ],
+      "section": "BGP路径与政策",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          178,
+          179,
+          184
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P178目录、P179政策缘由、P184AS商业/转接角色图，不能用一个全网统一距离代替政策。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "bgp-sessions",
+      "label": "eBGP和iBGP由AS关系区分，都是TCP逻辑会话",
+      "pages": [
+        180,
+        181,
+        182
+      ],
+      "summary": "发言人不必位于边界，iBGP不是IGP也不要求物理直连。内部传播不逐台加本AS；基础iBGP学习路线不普通再通告iBGP，路由反射等扩展另论。对外通告须按政策并更新AS路径，不能照抄源图简写属性。",
+      "prerequisites": [],
+      "section": "BGP路径与政策",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          180,
+          181,
+          182
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P180–182图示eBGP/iBGP及导出传播限制；TCP逻辑会话不等于物理直达。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "bgp-path-vector",
+      "label": "路径向量为同一目的前缀提供候选AS序列",
+      "pages": [
+        183,
+        185,
+        186
+      ],
+      "summary": "自身视角把本AS接在收到序列前，报文AS_PATH与含自身的路径叙述分清；主版五节点和分节八AS/ISP分层例独立。候选存在、选用、导出、实际转发四者不同，AS序列不包含内部每台设备。",
+      "prerequisites": [],
+      "section": "BGP路径与政策",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          183,
+          185,
+          186
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P183五AS、P185/186六AS路径生成，AS序列与边界通告视角区分；旧分节八AS题另读。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "bgp-loop-check",
+      "label": "收到的AS路径含自己时，普通规则拒绝回环候选",
+      "pages": [
+        187
+      ],
+      "summary": "AS3若收(2,1,3,6)再接自身会闭环，拒绝理由不是箭头方向或线长。AS_PATH提供域级防环线索，不是密码学证明；在同一目的和可用性条件下再比较政策偏好。",
+      "prerequisites": [],
+      "section": "BGP路径与政策",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          187
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P187含本AS候选被叉掉，展示路径向量防环；不是只按路径长短拒绝。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "bgp-recursion",
+      "label": "BGP下一跳经域内路由解析才落到实际本地邻居",
+      "pages": [
+        188,
+        189
+      ],
+      "summary": "R4→R3→R2→R1→X依题给IGP，iBGP虚线不是数据物理路径。保留外部NEXT_HOP或配置next-hop-self条件不同，不是一律改自己；ARP只问已经选定的本链路下一跳。",
+      "prerequisites": [
+        "bgp-sessions",
+        "route-selection",
+        "arp-local"
+      ],
+      "section": "BGP路径与政策",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          188,
+          189
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P188/189以R4到X逐步引入IGP下一跳R3、R2；BGP逻辑会话不能当数据链路。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "bgp-selection",
+      "label": "按顺序比较政策、AS路径和IGP出口代价，先声明并列条件",
+      "pages": [
+        190,
+        191,
+        192
+      ],
+      "summary": "LOCAL_PREF300优于200是政策不是带宽测量；AS跳数不等于路由器数。热土豆减本域成本不保全程最短；P192无权不能验证原句，另设单位边恰得到相反出口，不能凭图上距离猜。",
+      "prerequisites": [],
+      "section": "BGP路径与政策",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          190,
+          191,
+          192
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P190LOCAL_PREF300/200、P191AS数、P192热土豆图；原图无IGP权，不能凭距离猜验证出口。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "bgp-wire-format",
+      "label": "BGP在TCP流中用19字节公共首部划消息边界",
+      "pages": [
+        193
+      ],
+      "summary": "16字节Marker全一、Length2、Type1；长度含自身不含TCP/IP，消息边界不等于TCP段。基础19–4096字节，扩展需对端能力且不放大OPEN/KEEPALIVE；Marker不是认证。",
+      "prerequisites": [
+        "bgp-sessions",
+        "protocol-dispatch"
+      ],
+      "section": "BGP路径与政策",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          193
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P193TCP承载、16+2+1公共首部与19–4096旧范围；能力扩展与Marker语义是补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "bgp-message-types",
+      "label": "维护会话、路由增撤与重新通告使用不同消息",
+      "pages": [
+        194
+      ],
+      "summary": "Type1OPEN、2UPDATE、3NOTIFICATION、4KEEPALIVE，不能照课件列举顺序误记3/4；KEEPALIVE固定19字节。基础ROUTE-REFRESH类型5的4字节是正文，总23；初始导出也受选路政策，不是无过滤发所有候选。",
+      "prerequisites": [
+        "bgp-wire-format"
+      ],
+      "section": "BGP路径与政策",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          194
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P194四类消息以功能列举，不能把列举序号当Type编号；Route Refresh来自讲义补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "control-data-plane",
+      "label": "控制面维护并安装表，数据面逐包查找和交换",
+      "pages": [
+        195,
+        196,
+        197
+      ],
+      "summary": "路由表与转发表相关但可为不同结构，输入侧副本不取消控制面；普通过境包不每次重算SPF。消息传播、计算与安装各需时间，不因一个节点收到更新就全网同时换表。",
+      "prerequisites": [
+        "routing-control",
+        "bgp-recursion",
+        "ospf-link-state"
+      ],
+      "section": "路由器结构与交换",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          195,
+          196,
+          197
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P195目录、P196整体结构、P197路由处理机和邻居信息交换；控制面与转发面各有任务。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "router-packet-path",
+      "label": "输入解帧、查表、交换、输出重封装，各资源都可排队",
+      "pages": [
+        198
+      ],
+      "summary": "链路MAC和FCS逐跳重建，输入竞争交换、多个输入争同一输出均可等候；内部快不保证输出永不排队，有限缓存不能使IP从此不丢包。",
+      "prerequisites": [
+        "control-data-plane",
+        "ip-mac-scope"
+      ],
+      "section": "路由器结构与交换",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          198
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P198输入/输出物理链路网络处理及队列结构；每个队列和重新封装在图中可见。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "switching-fabrics",
+      "label": "存储器、共享总线与交叉开关有不同并行约束",
+      "pages": [
+        199,
+        200,
+        201
+      ],
+      "summary": "共享存储每包进出2L位且总搬运带宽B时上界B/(2L)包/秒；总线仍共享仲裁，内部端口标签不改IP目的。交叉允许不同输入到不同输出并行，同输出仍竞争，容量增加不等于带宽增加。",
+      "prerequisites": [
+        "router-packet-path"
+      ],
+      "section": "路由器结构与交换",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          199,
+          200,
+          201
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P199–201分别图示共享存储、总线和交叉开关；2L带宽界是解释其读写过程的补充计算。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "multicast-replication",
+      "label": "共同路段传一份，必要分叉再复制",
+      "pages": [
+        202,
+        203,
+        204
+      ],
+      "summary": "90成员三LAN例单播公共段90L、各支30L，理想已建组播树则各L；不含控制开销。源发一次不等于全网没有副本，也不保证各成员同时到达或不丢失；逐链路按下游需求计数。",
+      "prerequisites": [
+        "router-packet-path",
+        "datagram"
+      ],
+      "section": "IP组播与成员管理",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          202,
+          203,
+          204
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P202目录、P203/204同90主机图对比重复单播与分叉复制，控制开销不在图的计数内。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv4-multicast-address",
+      "label": "224/4目的表达组，Protocol另表达载荷种类",
+      "pages": [
+        205
+      ],
+      "summary": "组地址不能作源，永久组用途不意味着成员永久固定或全范围任意可用。UDP视频仍Protocol17，只有IGMP用2，不因目的为组就把全部数据认作IGMP；发送者不必是接收成员。",
+      "prerequisites": [
+        "multicast-replication",
+        "protocol-dispatch"
+      ],
+      "section": "IP组播与成员管理",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          205
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P205D类范围与组地址；把所有多播包Protocol写2的原句由讲义区分数据和IGMP。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "multicast-mac-map",
+      "label": "固定映射取IP低23位，32个D类编码可共用MAC",
+      "pages": [
+        206,
+        207
+      ],
+      "summary": "01-00-5E后仅23位可变，第四字节高位0；28位组编号丢5位所以32对1。224.1.2.3和224.129.2.3都映01-00-5E-01-02-03，IP仍须过滤；不用ARP寻找一个“拥有组地址”的主机。",
+      "prerequisites": [
+        "ip-mac-scope"
+      ],
+      "section": "IP组播与成员管理",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          206,
+          207
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P206目录、P207原位图取低23位且前五组位丢弃；应为多对一而非原文字方向。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "igmp-local-state",
+      "label": "IGMP提供相邻链路接收需求，不提供全网成员地图",
+      "pages": [
+        208,
+        209,
+        210,
+        211
+      ],
+      "summary": "本地两个报告不要求送两份数据，离开一人不代表接口无成员；可跟踪更细成员及源筛选，但不承诺全球名单。IGMP为IPv4协议2控制报文，不嵌入每份组播数据；IPv6相近职责由ICMPv6内MLD承担。",
+      "prerequisites": [
+        "multicast-mac-map",
+        "icmpv6-relations"
+      ],
+      "section": "IP组播与成员管理",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          208,
+          209,
+          210,
+          211
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P208目录、P209成员变化、P210协议栈、P211局域网范围；IPv6 MLD为对照补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "igmp-lifecycle",
+      "label": "加入、查询和超时维持需求，再由组播协议接上游",
+      "pages": [
+        212,
+        213
+      ],
+      "summary": "IGMP报告不原样遍传互联网；v1/v2向组发报告与v3报告去224.0.0.22有版本区别。退出和一次未响应都不直接证明全支无人，按协议稳健查询/等待清理接口组或源状态。",
+      "prerequisites": [],
+      "section": "IP组播与成员管理",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          212,
+          213
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P212加入、P213查询/清理；版本和上游组播路由协议的分工为讲义补充边界。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "multicast-tree-models",
+      "label": "源树与共享树不同，成员变化独立于物理拓扑",
+      "pages": [
+        214,
+        215,
+        216
+      ],
+      "summary": "(S,G)围绕源，(*,G)共享组结构，不能说所有组播都仅一棵源无关最短树。本地无成员仍可能为远端中转；建树低开销目标不等于全局最优，历史“未标准化”不能套今天的PIM-SM。",
+      "prerequisites": [
+        "igmp-lifecycle",
+        "multicast-replication"
+      ],
+      "section": "组播路径与隧道",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          214,
+          215,
+          216
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P214目录、P215动态成员与中转、P216源树及三方法；共享树和历史标准状态由讲义补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "reverse-path-check",
+      "label": "用回源下一跳核对进入方向，数据仍向成员传播",
+      "pages": [
+        217,
+        218,
+        219
+      ],
+      "summary": "稳定选定回源路下，来自选中父邻居才继续；横向红叉表示收后丢弃而非未占链路。等价路径需明确决胜规则，节点名R4不能证明其IP小于R5，图选父方向不等于所有协议唯一规则。",
+      "prerequisites": [
+        "route-selection"
+      ],
+      "section": "组播路径与隧道",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          217,
+          218,
+          219
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P217–219按回源第一跳验入接口，图中红叉是已接收后丢弃；地址决胜需实际地址不能看编号。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "multicast-prune",
+      "label": "剪除某组无需求子树，而非删除物理链路",
+      "pages": [
+        220
+      ],
+      "summary": "须看整个下游是否有人收，不只路由器自身；中转节点没订阅仍可需要保留。成员回来可恢复/嫁接，剪除是动态转发状态，不是永久网络拓扑修改。",
+      "prerequisites": [
+        "igmp-lifecycle"
+      ],
+      "section": "组播路径与隧道",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          220
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P220剪无成员下游树枝；是某组转发状态变化，不改物理网络。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "multicast-tunnel-core",
+      "label": "隧道解决中途承载，核心共享树解决状态组织",
+      "pages": [
+        221,
+        222
+      ],
+      "summary": "单播外壳送隧道出口，内层仍是组目的，IPv4-in-IPv4可Protocol4且有MTU开销、不天然加密。核心可聚合共享状态但不保每源最短；CBT加入接树不以全网洪泛或每边隧道为定义。",
+      "prerequisites": [
+        "multicast-tree-models",
+        "ipv6-over-ipv4"
+      ],
+      "section": "组播路径与隧道",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          221,
+          222
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P221单播封装跨不支持组播区，P222核心组织图；两机制区别和CBT条件为讲义澄清。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "private-address-scope",
+      "label": "私有地址能在内部跨网路由，但不能提供全球唯一定位",
+      "pages": [
+        223,
+        224
+      ],
+      "summary": "10/8、172.16/12、192.168/16可各机构复用，172.31在而172.32不在；公网不可全球路由不等于内部路由器一律拒转。VPN连接内部网络，NAT改地址访问外部，两者可结合但不同。",
+      "prerequisites": [
+        "cidr-size",
+        "ip-mac-scope"
+      ],
+      "section": "VPN与NAT",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          223,
+          224
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P223目录，P224三私有地址范围；全球不可路由不能扩大为机构内也不能路由。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "vpn-inner-outer",
+      "label": "内层标识通信主机，外层标识隧道端点",
+      "pages": [
+        225,
+        226
+      ],
+      "summary": "10.1.0.1→10.2.0.3保留于内层，外层125.1.2.3→194.4.5.6供公网转发；封装本身不保密，图示加密需相应安全机制。内联网/外联网按组织授权区分，远程接入终端与站点网关互连不同。",
+      "prerequisites": [
+        "private-address-scope",
+        "ipv6-over-ipv4"
+      ],
+      "section": "VPN与NAT",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          225,
+          226
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P225完整内外地址及封装，P226内联网/外联网/远程接入；保密需图示相应安全机制。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "nat-return-mapping",
+      "label": "地址转换必须解释出站改源与回程恢复目的",
+      "pages": [
+        227,
+        228,
+        229
+      ],
+      "summary": "普通内部出网NAT保留远端地址，按有效映射正向改内部源、反向改对应目的，并更新相关IPv4和运输校验。状态或同步回程路径不可缺，地址隐藏不等于加密、防火墙或所有网络必须NAT。",
+      "prerequisites": [
+        "ipv4-checksum"
+      ],
+      "section": "VPN与NAT",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          227,
+          228,
+          229
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P227目录，P228背景，P229192.168到202的地址映射表；正反向和校验更新为讲义展开。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "static-dynamic-nat",
+      "label": "固定映射与池分配改变时间复用，不等于端口复用",
+      "pages": [
+        230,
+        231
+      ],
+      "summary": "静态一对一给稳定外部标识但各占地址；两地址动态池同时最多两个内部地址映射，现用会话未终不能每发一包就回收。教材省略不证明静态失效，多对多不代表无限多主机同刻共享一个地址。",
+      "prerequisites": [],
+      "section": "VPN与NAT",
+      "type": "concept",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          230,
+          231
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P230静态一对一、P231动态池两地址；并发复用能力不能等同端口复用。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "napt-tuples",
+      "label": "地址、端口、协议等组合区分回程，端口可保留也可改写",
+      "pages": [
+        232
+      ],
+      "summary": "同外部IP用3000/3001区分，外部IP不同可同用4000；简图仍缺内部端口等真实状态。172.38不属172.16/12，主版200.168与分节192.168版本冲突保留，后者不能直接作本公网场景最终全局映射。",
+      "prerequisites": [
+        "private-address-scope"
+      ],
+      "section": "VPN与NAT",
+      "type": "method",
+      "source": "ppt",
+      "evidence": {
+        "pages": [
+          232
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P232实际图给172.38.1.5:3000/3001及200.168.0.3/4:4000；不能混为旧分节192.168版本。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "network-synthesis",
+      "label": "综合题先认当前层和内外首部，再选择本章方法",
+      "pages": [
+        233
+      ],
+      "summary": "本页原图仅END，以下是原站讲义回顾而非新PPT知识：先定真正端点与外层，再查前缀/本跳交付；NAT写前后映射，组播查成员与分支，问表来源再分DV、LS或域间政策。结束和空白分节页不虚构教学内容。",
+      "prerequisites": [
+        "route-selection",
+        "vpn-inner-outer",
+        "napt-tuples",
+        "multicast-tree-models",
+        "routing-classification"
+      ],
+      "section": "全章综合",
+      "type": "method",
+      "source": "supplement",
+      "sourceNote": "原站P233讲义综合回顾；知识依据见所列先修节点真实原页，主版END和分节结束/空白页不承载新增知识。",
+      "evidence": {
+        "pages": [
+          233
+        ],
+        "scope": "supplement-at-end-slide",
+        "sourceBasis": "P233实际仅END；综合解释链完全标作补充回顾，覆盖导航位置不等于原页新增知识。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "virtual-circuit",
+      "to": "bgp-sessions",
+      "label": "区分：控制TCP会话不把普通IP数据变为虚电路"
+    },
+    {
+      "from": "mask-and",
+      "to": "ipv6-notation",
+      "label": "迁移：二进制前缀匹配不依赖地址字符串写法"
+    },
+    {
+      "from": "fragment-calculation",
+      "to": "ipv6-fragment-example",
+      "label": "对比：新增首部预算与分片责任改变，偏移单位仍为八字节"
+    },
+    {
+      "from": "ipv4-checksum",
+      "to": "icmpv6-relations",
+      "label": "区分：首部校验取消与上层含伪首部校验不同"
+    },
+    {
+      "from": "icmp-error-boundaries",
+      "to": "ipv6-source-fragmentation",
+      "label": "联系：反馈限制与路径MTU发现共同影响能否适配"
+    },
+    {
+      "from": "ipv6-neighbor",
+      "to": "igmp-local-state",
+      "label": "对应：ND与MLD的功能不能混同为单一ARP替身"
+    },
+    {
+      "from": "prefix-trie",
+      "to": "control-data-plane",
+      "label": "应用：快速查表依赖已安装的可执行规则"
+    },
+    {
+      "from": "shortest-tree-next-hop",
+      "to": "ospf-link-state",
+      "label": "应用：共同拓扑仍以各自为根生成下一跳"
+    },
+    {
+      "from": "distance-vector-minplus",
+      "to": "dijkstra-invariant",
+      "label": "对比：邻居距离报告与完整链路图是不同输入"
+    },
+    {
+      "from": "rip-count-to-infinity",
+      "to": "ttl-budget",
+      "label": "区分：TTL止住单个包，不能自行修复控制面环路"
+    },
+    {
+      "from": "rip-expiry",
+      "to": "ospf-database-sync",
+      "label": "对比：失效与数据库同步都在处理信息新鲜度"
+    },
+    {
+      "from": "rip-message",
+      "to": "ospfv2-header",
+      "label": "对比：UDP520承载与IP协议89承载分别计头长"
+    },
+    {
+      "from": "ospfv2-header",
+      "to": "bgp-wire-format",
+      "label": "对比：协议号、端口和消息边界不能跨层代用"
+    },
+    {
+      "from": "ospf-areas",
+      "to": "autonomous-system",
+      "label": "区分：OSPF区域是AS内部组织，不等于一个AS"
+    },
+    {
+      "from": "bgp-loop-check",
+      "to": "reverse-path-check",
+      "label": "对比：域级路径环检测与数据进入方向检验不同"
+    },
+    {
+      "from": "bgp-selection",
+      "to": "dijkstra-invariant",
+      "label": "对比：域间策略最优不是统一非负权图的最短路"
+    },
+    {
+      "from": "ipv6-over-ipv4",
+      "to": "multicast-tunnel-core",
+      "label": "共性：外层负责承载，内层保留原交付语义"
+    },
+    {
+      "from": "multicast-mac-map",
+      "to": "igmp-lifecycle",
+      "label": "区分：地址映射不建立或证明成员需求"
+    },
+    {
+      "from": "multicast-prune",
+      "to": "prefix-aggregate",
+      "label": "区分：删除无需求组播分支与汇总单播前缀不同"
+    },
+    {
+      "from": "vpn-inner-outer",
+      "to": "nat-return-mapping",
+      "label": "对比：保留内包再封装与改写原地址字段不同"
+    },
+    {
+      "from": "packet-address-fields",
+      "to": "napt-tuples",
+      "label": "边界：普通路由保留端点的结论不能无条件套NAT"
+    },
+    {
+      "from": "switching-fabrics",
+      "to": "multicast-replication",
+      "label": "联系：分叉复制也消耗实际出口容量和缓存"
+    },
+    {
+      "from": "network-synthesis",
+      "to": "network-task",
+      "label": "回顾：端点、下一跳、异常和控制信息构成一条完整解释链"
+    },
+    {
+      "from": "cidr-size",
+      "to": "mask-and",
+      "label": "方法：用前缀长度构造掩码并计算网络地址"
+    },
+    {
+      "from": "mask-and",
+      "to": "longest-prefix",
+      "label": "方法：先逐项判断匹配，再比较匹配前缀长度"
+    },
+    {
+      "from": "longest-prefix",
+      "to": "ip-mac-scope",
+      "label": "流程：先选出口与下一跳，再决定本跳链路目的"
+    },
+    {
+      "from": "ip-mac-scope",
+      "to": "arp-local",
+      "label": "应用：把已选本链路下一跳解析为MAC地址"
+    },
+    {
+      "from": "arp-local",
+      "to": "arp-learning",
+      "label": "展开：缓存未命中时请求、响应并学习映射"
+    },
+    {
+      "from": "ipv4-lengths",
+      "to": "fragment-identification",
+      "label": "条件：超出本跳MTU后判断分片许可并组织重组字段"
+    },
+    {
+      "from": "fragment-identification",
+      "to": "fragment-calculation",
+      "label": "算例：按8字节偏移单位计算各片数据和MF"
+    },
+    {
+      "from": "ipv6-payload-length",
+      "to": "ipv6-source-fragmentation",
+      "label": "约束：基本首部与扩展都占路径MTU预算"
+    },
+    {
+      "from": "ipv6-source-fragmentation",
+      "to": "ipv6-fragment-example",
+      "label": "算例：由源端按首部预算计算合法片长和偏移"
+    },
+    {
+      "from": "dijkstra-model",
+      "to": "dijkstra-invariant",
+      "label": "推导条件：同一非负权图支持最小候选确定与松弛"
+    },
+    {
+      "from": "dijkstra-invariant",
+      "to": "dijkstra-worked",
+      "label": "演算：逐轮维护确定集合、距离和前驱"
+    },
+    {
+      "from": "dijkstra-worked",
+      "to": "shortest-tree-next-hop",
+      "label": "应用：回溯最短路径并取源点第一跳"
+    },
+    {
+      "from": "distance-vector-minplus",
+      "to": "rip-metric",
+      "label": "具体化：把邻居报价加本地代价取小改用有限跳数度量"
+    },
+    {
+      "from": "rip-local-learning",
+      "to": "rip-three-update-cases",
+      "label": "更新规则：按新目的、同来源、异来源分别处理"
+    },
+    {
+      "from": "rip-expiry",
+      "to": "rip-count-to-infinity",
+      "label": "失效分析：迟到旧通告可能重新引入相互依赖"
+    },
+    {
+      "from": "ospf-link-state",
+      "to": "ospf-flood",
+      "label": "传播机制：可靠洪泛同步链路状态而非发送最终路由表"
+    },
+    {
+      "from": "ospf-flood",
+      "to": "ospf-database-sync",
+      "label": "展开：摘要、请求、更新和确认完成数据库同步"
+    },
+    {
+      "from": "bgp-policy",
+      "to": "bgp-sessions",
+      "label": "承载：经域间与域内BGP会话交换受政策约束的路由"
+    },
+    {
+      "from": "bgp-sessions",
+      "to": "bgp-path-vector",
+      "label": "交换内容：目的前缀配合AS路径属性形成候选"
+    },
+    {
+      "from": "bgp-path-vector",
+      "to": "bgp-loop-check",
+      "label": "合法性检查：普通规则拒绝含本AS的路径"
+    },
+    {
+      "from": "bgp-loop-check",
+      "to": "bgp-selection",
+      "label": "选择：合法可用候选再按政策与后续决胜条件比较"
+    },
+    {
+      "from": "bgp-recursion",
+      "to": "bgp-selection",
+      "label": "条件：热土豆比较依赖到出口的域内代价"
+    },
+    {
+      "from": "ipv4-multicast-address",
+      "to": "multicast-mac-map",
+      "label": "映射：IPv4组地址低23位落到以太网多播地址"
+    },
+    {
+      "from": "igmp-local-state",
+      "to": "igmp-lifecycle",
+      "label": "维护：加入、查询与超时更新本地接收需求"
+    },
+    {
+      "from": "multicast-tree-models",
+      "to": "reverse-path-check",
+      "label": "方法：按回源选定路径验证数据进入方向"
+    },
+    {
+      "from": "reverse-path-check",
+      "to": "multicast-prune",
+      "label": "后续：在转发树上剪掉无下游成员需求的分支"
+    },
+    {
+      "from": "private-address-scope",
+      "to": "nat-return-mapping",
+      "label": "应用：内部地址借外部有效映射完成出站和回程"
+    },
+    {
+      "from": "nat-return-mapping",
+      "to": "static-dynamic-nat",
+      "label": "分类：映射固定分配或从地址池临时分配"
+    },
+    {
+      "from": "static-dynamic-nat",
+      "to": "napt-tuples",
+      "label": "对比：地址复用之外再以端口与协议区分并发流"
+    }
+  ],
+  "themes": [
+    {
+      "id": "service",
+      "label": "跨网服务与每跳交付",
+      "kind": "teaching",
+      "sections": [
+        "服务与异构互连",
+        "逐跳封装与ARP"
+      ],
+      "nodeIds": [
+        "network-task",
+        "service-layer",
+        "virtual-circuit",
+        "datagram",
+        "protocol-roles",
+        "heterogeneous-ip",
+        "interface-topology",
+        "ip-mac-scope",
+        "mutable-header",
+        "arp-local",
+        "arp-learning"
+      ],
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    {
+      "id": "address",
+      "label": "地址边界、子网与查表",
+      "kind": "teaching",
+      "sections": [
+        "IPv4编址与前缀"
+      ],
+      "nodeIds": [
+        "ipv4-interface",
+        "historical-classes",
+        "special-addresses",
+        "cidr-size",
+        "mask-and",
+        "subnet-split",
+        "prefix-aggregate",
+        "address-plan",
+        "longest-prefix",
+        "prefix-trie"
+      ],
+      "pages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "id": "ipv4",
+      "label": "IPv4数据报与差错反馈",
+      "kind": "teaching",
+      "sections": [
+        "IPv4首部与分片",
+        "IPv4转发与ICMP"
+      ],
+      "nodeIds": [
+        "ipv4-layout",
+        "ipv4-lengths",
+        "differentiated-service",
+        "fragment-identification",
+        "fragment-calculation",
+        "ttl-budget",
+        "protocol-dispatch",
+        "ipv4-checksum",
+        "packet-address-fields",
+        "route-selection",
+        "subnet-forwarding-example",
+        "icmp-feedback",
+        "icmp-types",
+        "icmp-error-boundaries",
+        "ping-sample",
+        "traceroute"
+      ],
+      "pages": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ]
+    },
+    {
+      "id": "ipv6",
+      "label": "IPv6格式、作用域与过渡",
+      "kind": "teaching",
+      "sections": [
+        "IPv6与过渡"
+      ],
+      "nodeIds": [
+        "ipv6-motivation",
+        "ipv6-basic-header",
+        "ipv6-payload-length",
+        "ipv6-class-flow",
+        "ipv6-next-header",
+        "ipv6-hop-limit",
+        "ipv6-neighbor",
+        "ipv6-source-fragmentation",
+        "ipv6-fragment-example",
+        "icmpv6-relations",
+        "ipv6-delivery-types",
+        "ipv6-notation",
+        "ipv6-special-prefixes",
+        "ipv6-local-scope",
+        "ipv6-hierarchy",
+        "dual-stack-translation",
+        "ipv6-over-ipv4"
+      ],
+      "pages": [
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ]
+    },
+    {
+      "id": "algorithms",
+      "label": "路由建模与两类算法",
+      "kind": "teaching",
+      "sections": [
+        "路由算法与分层",
+        "最短路径与距离向量"
+      ],
+      "nodeIds": [
+        "routing-control",
+        "routing-classification",
+        "autonomous-system",
+        "dijkstra-model",
+        "dijkstra-invariant",
+        "dijkstra-worked",
+        "shortest-tree-next-hop",
+        "distance-vector-minplus"
+      ],
+      "pages": [
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ]
+    },
+    {
+      "id": "igp",
+      "label": "域内路由的传播与收敛",
+      "kind": "teaching",
+      "sections": [
+        "RIP更新与收敛",
+        "OSPF链路状态"
+      ],
+      "nodeIds": [
+        "rip-metric",
+        "rip-local-learning",
+        "rip-three-update-cases",
+        "rip-expiry",
+        "rip-message",
+        "rip-count-to-infinity",
+        "ospf-link-state",
+        "ospf-flood",
+        "ospf-areas",
+        "ospfv2-header",
+        "ospf-database-sync"
+      ],
+      "pages": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177
+      ]
+    },
+    {
+      "id": "bgp-router",
+      "label": "域间政策与路由器执行",
+      "kind": "teaching",
+      "sections": [
+        "BGP路径与政策",
+        "路由器结构与交换"
+      ],
+      "nodeIds": [
+        "bgp-policy",
+        "bgp-sessions",
+        "bgp-path-vector",
+        "bgp-loop-check",
+        "bgp-recursion",
+        "bgp-selection",
+        "bgp-wire-format",
+        "bgp-message-types",
+        "control-data-plane",
+        "router-packet-path",
+        "switching-fabrics"
+      ],
+      "pages": [
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201
+      ]
+    },
+    {
+      "id": "multicast",
+      "label": "组成员、复制与转发树",
+      "kind": "teaching",
+      "sections": [
+        "IP组播与成员管理",
+        "组播路径与隧道"
+      ],
+      "nodeIds": [
+        "multicast-replication",
+        "ipv4-multicast-address",
+        "multicast-mac-map",
+        "igmp-local-state",
+        "igmp-lifecycle",
+        "multicast-tree-models",
+        "reverse-path-check",
+        "multicast-prune",
+        "multicast-tunnel-core"
+      ],
+      "pages": [
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222
+      ]
+    },
+    {
+      "id": "vpn-nat",
+      "label": "内外地址与综合回读",
+      "kind": "teaching",
+      "sections": [
+        "VPN与NAT",
+        "全章综合"
+      ],
+      "nodeIds": [
+        "private-address-scope",
+        "vpn-inner-outer",
+        "nat-return-mapping",
+        "static-dynamic-nat",
+        "napt-tuples",
+        "network-synthesis"
+      ],
+      "pages": [
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233
+      ]
+    }
+  ],
+  "learningPaths": [
+    {
+      "id": "address-to-link",
+      "label": "从目的地址找到真正的一跳",
+      "nodeIds": [
+        "cidr-size",
+        "mask-and",
+        "longest-prefix",
+        "ip-mac-scope",
+        "arp-local",
+        "arp-learning"
+      ],
+      "relations": [
+        {
+          "from": "cidr-size",
+          "to": "mask-and",
+          "label": "方法：用前缀长度构造掩码并计算网络地址"
+        },
+        {
+          "from": "mask-and",
+          "to": "longest-prefix",
+          "label": "方法：先逐项判断匹配，再比较匹配前缀长度"
+        },
+        {
+          "from": "longest-prefix",
+          "to": "ip-mac-scope",
+          "label": "流程：先选出口与下一跳，再决定本跳链路目的"
+        },
+        {
+          "from": "ip-mac-scope",
+          "to": "arp-local",
+          "label": "应用：把已选本链路下一跳解析为MAC地址"
+        },
+        {
+          "from": "arp-local",
+          "to": "arp-learning",
+          "label": "展开：缓存未命中时请求、响应并学习映射"
+        }
+      ],
+      "purpose": "说明网络前缀选择、下一跳及MAC解析为何是连续但不同的步骤。",
+      "kind": "teaching",
+      "pages": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        33,
+        34,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    {
+      "id": "fragment",
+      "label": "IPv4到IPv6分片的共同单位与责任变化",
+      "nodeIds": [
+        "ipv4-layout",
+        "ipv4-lengths",
+        "fragment-identification",
+        "fragment-calculation",
+        "ipv6-fragment-example"
+      ],
+      "relations": [
+        {
+          "from": "ipv4-layout",
+          "to": "ipv4-lengths",
+          "label": "先修"
+        },
+        {
+          "from": "ipv4-lengths",
+          "to": "fragment-identification",
+          "label": "条件：超出本跳MTU后判断分片许可并组织重组字段"
+        },
+        {
+          "from": "fragment-identification",
+          "to": "fragment-calculation",
+          "label": "算例：按8字节偏移单位计算各片数据和MF"
+        },
+        {
+          "from": "fragment-calculation",
+          "to": "ipv6-fragment-example",
+          "label": "对比：新增首部预算与分片责任改变，偏移单位仍为八字节"
+        }
+      ],
+      "purpose": "先统一首部预算与8字节单位，再比较IPv6算例；最后一步为对比迁移而非IPv4推出IPv6协议。",
+      "kind": "teaching",
+      "pages": [
+        58,
+        59,
+        60,
+        61,
+        63,
+        64,
+        65,
+        66,
+        67,
+        74,
+        113
+      ]
+    },
+    {
+      "id": "link-state",
+      "label": "从非负权图到OSPF数据库",
+      "nodeIds": [
+        "routing-classification",
+        "dijkstra-model",
+        "dijkstra-invariant",
+        "dijkstra-worked",
+        "shortest-tree-next-hop",
+        "ospf-link-state",
+        "ospf-flood",
+        "ospf-database-sync"
+      ],
+      "relations": [
+        {
+          "from": "routing-classification",
+          "to": "dijkstra-model",
+          "label": "先修"
+        },
+        {
+          "from": "dijkstra-model",
+          "to": "dijkstra-invariant",
+          "label": "推导条件：同一非负权图支持最小候选确定与松弛"
+        },
+        {
+          "from": "dijkstra-invariant",
+          "to": "dijkstra-worked",
+          "label": "演算：逐轮维护确定集合、距离和前驱"
+        },
+        {
+          "from": "dijkstra-worked",
+          "to": "shortest-tree-next-hop",
+          "label": "应用：回溯最短路径并取源点第一跳"
+        },
+        {
+          "from": "shortest-tree-next-hop",
+          "to": "ospf-link-state",
+          "label": "应用：共同拓扑仍以各自为根生成下一跳"
+        },
+        {
+          "from": "ospf-link-state",
+          "to": "ospf-flood",
+          "label": "传播机制：可靠洪泛同步链路状态而非发送最终路由表"
+        },
+        {
+          "from": "ospf-flood",
+          "to": "ospf-database-sync",
+          "label": "展开：摘要、请求、更新和确认完成数据库同步"
+        }
+      ],
+      "purpose": "区分算法正确性、具体演算、下一跳和协议传播。",
+      "kind": "teaching",
+      "pages": [
+        132,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        168,
+        169,
+        170,
+        177
+      ]
+    },
+    {
+      "id": "distance-vector",
+      "label": "从邻居报价到坏消息收敛",
+      "nodeIds": [
+        "routing-classification",
+        "distance-vector-minplus",
+        "rip-metric",
+        "rip-local-learning",
+        "rip-three-update-cases",
+        "rip-expiry",
+        "rip-count-to-infinity",
+        "ttl-budget"
+      ],
+      "relations": [
+        {
+          "from": "routing-classification",
+          "to": "distance-vector-minplus",
+          "label": "先修"
+        },
+        {
+          "from": "distance-vector-minplus",
+          "to": "rip-metric",
+          "label": "具体化：把邻居报价加本地代价取小改用有限跳数度量"
+        },
+        {
+          "from": "rip-metric",
+          "to": "rip-local-learning",
+          "label": "先修"
+        },
+        {
+          "from": "rip-local-learning",
+          "to": "rip-three-update-cases",
+          "label": "更新规则：按新目的、同来源、异来源分别处理"
+        },
+        {
+          "from": "rip-three-update-cases",
+          "to": "rip-expiry",
+          "label": "先修"
+        },
+        {
+          "from": "rip-expiry",
+          "to": "rip-count-to-infinity",
+          "label": "失效分析：迟到旧通告可能重新引入相互依赖"
+        },
+        {
+          "from": "rip-count-to-infinity",
+          "to": "ttl-budget",
+          "label": "区分：TTL止住单个包，不能自行修复控制面环路"
+        }
+      ],
+      "purpose": "比较控制面失效与数据TTL：最后一条明确是区分，TTL不修复路由环。",
+      "kind": "teaching",
+      "pages": [
+        68,
+        132,
+        134,
+        135,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ]
+    },
+    {
+      "id": "policy",
+      "label": "从AS政策到可用BGP出口",
+      "nodeIds": [
+        "autonomous-system",
+        "bgp-policy",
+        "bgp-sessions",
+        "bgp-path-vector",
+        "bgp-loop-check",
+        "bgp-selection"
+      ],
+      "relations": [
+        {
+          "from": "autonomous-system",
+          "to": "bgp-policy",
+          "label": "先修"
+        },
+        {
+          "from": "bgp-policy",
+          "to": "bgp-sessions",
+          "label": "承载：经域间与域内BGP会话交换受政策约束的路由"
+        },
+        {
+          "from": "bgp-sessions",
+          "to": "bgp-path-vector",
+          "label": "交换内容：目的前缀配合AS路径属性形成候选"
+        },
+        {
+          "from": "bgp-path-vector",
+          "to": "bgp-loop-check",
+          "label": "合法性检查：普通规则拒绝含本AS的路径"
+        },
+        {
+          "from": "bgp-loop-check",
+          "to": "bgp-selection",
+          "label": "选择：合法可用候选再按政策与后续决胜条件比较"
+        }
+      ],
+      "purpose": "避免把热土豆置于政策与合法性之前；IGP递归依赖由跨入边补足。",
+      "kind": "teaching",
+      "pages": [
+        133,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        190,
+        191,
+        192
+      ]
+    },
+    {
+      "id": "multicast",
+      "label": "从组目的到有需求的转发树",
+      "nodeIds": [
+        "multicast-replication",
+        "ipv4-multicast-address",
+        "multicast-mac-map",
+        "igmp-local-state",
+        "igmp-lifecycle",
+        "multicast-tree-models",
+        "reverse-path-check",
+        "multicast-prune"
+      ],
+      "relations": [
+        {
+          "from": "multicast-replication",
+          "to": "ipv4-multicast-address",
+          "label": "先修"
+        },
+        {
+          "from": "ipv4-multicast-address",
+          "to": "multicast-mac-map",
+          "label": "映射：IPv4组地址低23位落到以太网多播地址"
+        },
+        {
+          "from": "multicast-mac-map",
+          "to": "igmp-local-state",
+          "label": "先修"
+        },
+        {
+          "from": "igmp-local-state",
+          "to": "igmp-lifecycle",
+          "label": "维护：加入、查询与超时更新本地接收需求"
+        },
+        {
+          "from": "igmp-lifecycle",
+          "to": "multicast-tree-models",
+          "label": "先修"
+        },
+        {
+          "from": "multicast-tree-models",
+          "to": "reverse-path-check",
+          "label": "方法：按回源选定路径验证数据进入方向"
+        },
+        {
+          "from": "reverse-path-check",
+          "to": "multicast-prune",
+          "label": "后续：在转发树上剪掉无下游成员需求的分支"
+        }
+      ],
+      "purpose": "分开地址映射、成员需求、选父方向和剪枝。",
+      "kind": "teaching",
+      "pages": [
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220
+      ]
+    },
+    {
+      "id": "translation",
+      "label": "从私有地址到回程可区分映射",
+      "nodeIds": [
+        "private-address-scope",
+        "nat-return-mapping",
+        "static-dynamic-nat",
+        "napt-tuples",
+        "network-synthesis"
+      ],
+      "relations": [
+        {
+          "from": "private-address-scope",
+          "to": "nat-return-mapping",
+          "label": "应用：内部地址借外部有效映射完成出站和回程"
+        },
+        {
+          "from": "nat-return-mapping",
+          "to": "static-dynamic-nat",
+          "label": "分类：映射固定分配或从地址池临时分配"
+        },
+        {
+          "from": "static-dynamic-nat",
+          "to": "napt-tuples",
+          "label": "对比：地址复用之外再以端口与协议区分并发流"
+        },
+        {
+          "from": "napt-tuples",
+          "to": "network-synthesis",
+          "label": "先修"
+        }
+      ],
+      "purpose": "对比地址池与端口复用并回读端点/下一跳/内外首部。",
+      "kind": "teaching",
+      "pages": [
+        223,
+        224,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233
+      ]
+    }
+  ],
+  "coverageContract": {
+    "baselineCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "readerSha256": "98b658c3ae63d66b8420cfab487dcc3205a4a84806341524afc1f46172cf75a3",
+    "sourcePages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233
+    ],
+    "displayPageCount": 233,
+    "progressPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233
+    ],
+    "progressPageCount": 233,
+    "nodeCoverageMeaning": "每个真实原页至少归属一个节点；封面、目录、END和可选引入单独标明，覆盖不代表原页具有新增完整论证。",
+    "modelScope": "全部节点与全量有向关系构成整章模型；不是仅当前页的一层邻接。",
+    "uiBoundary": "现V2读取section、prerequisites和edges；themes与learningPaths为可审教学元数据，尚不单独渲染。2/3层表示入/出双向关系距离，不是先修树或学科等级。",
+    "prerequisiteMeaning": "先修是推荐阅读关系，不锁门；显式对比、区分和应用边不解释为数学推出或时间因果。"
+  },
+  "revision": {
+    "kind": "revalidated-isolated-candidate",
+    "baseGraphSha256": "6256f73f7082815e1d8a543ecd216d6e5bc2e6da59b68e7096a6ef4ec5e95aeb",
+    "baseSourceMapSha256": "eae31af3843b4359d1cd8cad3b8ebe4579482ebb01394b2444114f0a58af5ede",
+    "mainCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "productionModified": false,
+    "independentQA": "pending-new-model-review"
+  }
+}

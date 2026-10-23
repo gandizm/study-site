@@ -1,0 +1,1421 @@
+{
+  "version": 1,
+  "id": "network-queueing",
+  "title": "计算机网络 · 排队论与全网时延",
+  "reader": "network-ppt.html",
+  "pageCount": 33,
+  "displayPageCount": 33,
+  "sourcePageCount": 135,
+  "sourcePages": [
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135
+  ],
+  "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+  "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda",
+  "progressPages": [
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135
+  ],
+  "nodes": [
+    {
+      "id": "intro",
+      "label": "随机到达、等待、服务与离开",
+      "pages": [
+        103
+      ],
+      "summary": "原P103展示系统组成；保留可导航引入，不计入P104–135的32页正式伴读进度。",
+      "prerequisites": [],
+      "section": "可选原页引入",
+      "type": "concept",
+      "source": "ppt",
+      "optional": true,
+      "countsTowardProgress": false,
+      "evidence": {
+        "pages": [
+          103
+        ],
+        "scope": "optional-source-introduction",
+        "sourceBasis": "P103实际是排队/服务方框与网络类比，仅可选介绍，不纳入104–135正式进度。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "poisson",
+      "label": "泊松计数与观察窗口",
+      "pages": [
+        104
+      ],
+      "summary": "固定时间内数到达份数，均值λt无量纲；独立到达一句话不足以代替完整泊松模型条件。",
+      "prerequisites": [
+        "intro"
+      ],
+      "section": "到达与服务模型",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "104": "cn-p104-probability-law"
+      },
+      "evidence": {
+        "pages": [
+          104
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P104给到达数Poisson分布及参数，计数变量不是间隔时间。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "waiting",
+      "label": "零到达事件与指数间隔",
+      "pages": [
+        105
+      ],
+      "summary": "等候超过t等价于t内零到达，由尾概率求密度；密度值不是精确时刻的概率。",
+      "prerequisites": [
+        "poisson"
+      ],
+      "section": "到达与服务模型",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "105": "cn-p105-zero-arrivals-means-waiting"
+      },
+      "evidence": {
+        "pages": [
+          105
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P105通过零到达概率推等待间隔分布，尾概率微分后才是密度。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "exponential",
+      "label": "指数均值、方差与无记忆性",
+      "pages": [
+        106
+      ],
+      "summary": "均值1/λ、方差1/λ²和标准差1/λ分别有不同单位；平均间隔不是确定到达时刻。",
+      "prerequisites": [],
+      "section": "到达与服务模型",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "106": "cn-p106-mean-variance-standard-deviation"
+      },
+      "evidence": {
+        "pages": [
+          106
+        ],
+        "scope": "source-moments-with-memorylessness-supplement",
+        "sourceBasis": "P106指数密度图、均值1/λ与方差1/λ²；无记忆性是既有讲义的补充推论。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "service",
+      "label": "长度、容量与服务率",
+      "pages": [
+        107
+      ],
+      "summary": "平均服务时间L̄/c，服务率c/L̄=μc；原页λ=μc不能当作任意实际到达率恒等式。",
+      "prerequisites": [],
+      "section": "到达与服务模型",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "107": "cn-p107-length-to-service"
+      },
+      "evidence": {
+        "pages": [
+          107
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P107分组长度、比特率和服务时间转换；原λ/μc相等文字需区分到达与服务能力。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "boundary",
+      "label": "系统边界包含等待和服务",
+      "pages": [
+        108
+      ],
+      "summary": "报文到达后直到发送完成都在系统内；圈定边界不是禁止外部流入的封闭排队网络。",
+      "prerequisites": [
+        "service"
+      ],
+      "section": "系统边界与负载",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "108": "cn-p108-s0"
+      },
+      "evidence": {
+        "pages": [
+          108
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P108给系统边界与平均进入离开流量；图不是无外部输入的封闭排队网络。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "little",
+      "label": "Little守恒与平均在场数量",
+      "pages": [
+        109
+      ],
+      "summary": "稳定同一边界、同一业务口径下N=λT；不要求泊松，但不能拼接不同系统的数量和时间。",
+      "prerequisites": [],
+      "section": "系统边界与负载",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "109": "cn-p109-s0"
+      },
+      "evidence": {
+        "pages": [
+          109
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P109明确平均数、有效到达率与逗留时间，三者须在同一系统边界统计。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "load",
+      "label": "通信量强度与严格稳定条件",
+      "pages": [
+        110,
+        111
+      ],
+      "summary": "ρ=λE[S]=λ/(μc)，单服务器忙碌比例来自守恒；ρ<1才支持本章有限稳态队列公式。",
+      "prerequisites": [
+        "service",
+        "boundary"
+      ],
+      "section": "系统边界与负载",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "110": "cn-p110-s0",
+        "111": "cn-p111-s0"
+      },
+      "evidence": {
+        "pages": [
+          110,
+          111
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P110/111把线路发送时间占比连到ρ=λ/(μc)，稳态式要求ρ<1。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "decomposition",
+      "label": "系统与纯队列的时间、数量分解",
+      "pages": [
+        112
+      ],
+      "summary": "T=W+1/(μc)，N=Nq+ρ；服务中的平均报文数是忙闲指示的均值，不是每时每刻都为1。",
+      "prerequisites": [
+        "load"
+      ],
+      "section": "系统边界与负载",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "112": "cn-p112-s0"
+      },
+      "evidence": {
+        "pages": [
+          112
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P112把排队数/系统数及等待/服务时间分解，队列与系统不能混用。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "kendall",
+      "label": "模型五要素与A/B/m",
+      "pages": [
+        113,
+        114
+      ],
+      "summary": "先说明到达间隔、服务分布、服务台、纪律、容量；D是确定时间，不是连续均匀分布。",
+      "prerequisites": [
+        "waiting",
+        "service"
+      ],
+      "section": "排队模型与稳态推导",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "113": "cn-p113-s0",
+        "114": "cn-p114-s0"
+      },
+      "evidence": {
+        "pages": [
+          113,
+          114
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P113/114列到达、服务、服务台、容量、规则及分类；D解释为定长确定性而非均匀随机。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "mm1",
+      "label": "M/M/1的四个量与求解顺序",
+      "pages": [
+        115
+      ],
+      "summary": "泊松到达、指数服务、单服务器及稳定条件明确后，先求状态分布再由Little求数量和时延。",
+      "prerequisites": [
+        "kendall",
+        "decomposition"
+      ],
+      "section": "排队模型与稳态推导",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "115": "cn-p115-s0"
+      },
+      "evidence": {
+        "pages": [
+          115
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P115定义M/M/1的假设，后面稳态结果不能脱离这些假设。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "birth-death",
+      "label": "相邻状态与概率流",
+      "pages": [
+        116
+      ],
+      "summary": "状态k是瞬时系统内数量，不是窗口累计到达；弧上的λPk与μcPk+1是稳态概率流而非裸转移率。",
+      "prerequisites": [],
+      "section": "排队模型与稳态推导",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "116": "cn-p116-s0"
+      },
+      "evidence": {
+        "pages": [
+          116
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P116状态图按系统内分组数而非时间窗累计到达数，流量λPk与条件速率分开。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "balance",
+      "label": "相邻平衡递推Pk=ρᵏP0",
+      "pages": [
+        117
+      ],
+      "summary": "用空状态平衡与一般相邻流量守恒逐次消元，把无穷未知概率归到同一个P0。",
+      "prerequisites": [],
+      "section": "排队模型与稳态推导",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "117": "cn-p117-s0"
+      },
+      "evidence": {
+        "pages": [
+          117
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P117从相邻稳态平衡给Pk=ρ^kP0，统一服务速率符号。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "normalization",
+      "label": "归一化与几何稳态分布",
+      "pages": [
+        118
+      ],
+      "summary": "ρ<1时等比级数可归一，P0=1−ρ、Pk=(1−ρ)ρᵏ；空闲概率与负载守恒互相核验。",
+      "prerequisites": [
+        "load"
+      ],
+      "section": "排队模型与稳态推导",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "118": "cn-p118-s0"
+      },
+      "evidence": {
+        "pages": [
+          118
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P118概率归一化几何级数给P0=1−ρ，要求ρ<1才能相加。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "population",
+      "label": "系统均值N与纯队列Nq",
+      "pages": [
+        119
+      ],
+      "summary": "对kPk求和得ρ/(1−ρ)，再扣平均服务人数ρ得ρ²/(1−ρ)，不是把概率直接求和。",
+      "prerequisites": [
+        "decomposition"
+      ],
+      "section": "排队模型与稳态推导",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "119": "cn-p119-s0"
+      },
+      "evidence": {
+        "pages": [
+          119
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P119给N与Nq，两者差为正在服务概率ρ，不是无条件差1。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "mm1-delay",
+      "label": "由Little得到逗留与等待",
+      "pages": [
+        120,
+        121
+      ],
+      "summary": "T=1/(μc−λ)含服务，W=T−1/(μc)；先确认负载和单位，不把传播时间自动包含进来。",
+      "prerequisites": [
+        "population",
+        "little"
+      ],
+      "section": "排队模型与稳态推导",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "120": "cn-p120-s0",
+        "121": "cn-p121-s0"
+      },
+      "evidence": {
+        "pages": [
+          120,
+          121
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P120/121按Little推T=1/(μc−λ)和W=T−1/(μc)，包括服务与不包括服务分清。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "mg1",
+      "label": "M/G/1二阶矩与服务波动",
+      "pages": [
+        122
+      ],
+      "summary": "泊松、FCFS单服务器下W=λE[S²]/(2(1−ρ))；相同均值不等于相同等待，还需有限二阶矩。",
+      "prerequisites": [
+        "kendall",
+        "load",
+        "decomposition"
+      ],
+      "section": "排队模型与稳态推导",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "122": "cn-p122-s0"
+      },
+      "evidence": {
+        "pages": [
+          122
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P122一般服务分布和二阶矩进入P-K式，保留Poisson/FCFS及有限二阶矩等条件。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "md1",
+      "label": "固定服务的M/D/1",
+      "pages": [
+        123
+      ],
+      "summary": "设服务方差为0即可从M/G/1得到固定服务公式；泊松到达仍会聚集，因此仍可能排队。",
+      "prerequisites": [],
+      "section": "排队模型与稳态推导",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "123": "cn-p123-s0"
+      },
+      "evidence": {
+        "pages": [
+          123
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P123定长服务把方差置零，不能仍用指数服务方差。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "model-compare",
+      "label": "公平比较固定与指数服务",
+      "pages": [
+        124
+      ],
+      "summary": "同到达率和同平均服务时间时，M/D/1纯排队为M/M/1一半；总逗留并不减半。",
+      "prerequisites": [
+        "mm1-delay"
+      ],
+      "section": "排队模型与稳态推导",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "124": "cn-p124-s0"
+      },
+      "evidence": {
+        "pages": [
+          124
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P124同负载下比较M/M/1和M/D/1；减半的是等待，不是总逗留时间。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "link-delay",
+      "label": "单链路访问的排队加发送",
+      "pages": [
+        125
+      ],
+      "summary": "把c与平均长度换为μc后求T；路径多跳时每段都要计账，传播和其他延迟另加。",
+      "prerequisites": [
+        "mm1-delay"
+      ],
+      "section": "链路与全网时延",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "125": "cn-p125-s0"
+      },
+      "evidence": {
+        "pages": [
+          125
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P125把单服务器对应单链路，单位由bit/分组和bit/s得到分组/s。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "single-example",
+      "label": "1000bit、10kbit/s、5份/s例题",
+      "pages": [
+        126
+      ],
+      "summary": "服务率10份/s、ρ=0.5；总逗留0.2s，发送0.1s，纯排队0.1s。",
+      "prerequisites": [
+        "link-delay"
+      ],
+      "section": "链路与全网时延",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "126": "cn-p126-s0"
+      },
+      "evidence": {
+        "pages": [
+          126
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P126原例1000bit、10kbit/s、5分组/s；T=0.2s而非仅发送0.1s。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "network-model",
+      "label": "六节点八链路与指定有向路径",
+      "pages": [
+        127
+      ],
+      "summary": "每项端到端业务沿指定路径给每条边贡献流量；双向对称仍需分清两方向的服务能力。",
+      "prerequisites": [],
+      "section": "链路与全网时延",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "127": "cn-p127-s0"
+      },
+      "evidence": {
+        "pages": [
+          127
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P127六节点八链路、平均800bit、业务与路由表；正反方向分开建模。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "weighted-target",
+      "label": "先说清随机抽样的是分组还是链路",
+      "pages": [
+        128
+      ],
+      "summary": "端到端平均按进入网络的分组加权，不是等概率抽链路；容量、访问次数和路径都影响结果。",
+      "prerequisites": [
+        "network-model"
+      ],
+      "section": "链路与全网时延",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "128": "cn-p128-s0"
+      },
+      "evidence": {
+        "pages": [
+          128
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P128端到端平均按外部业务加权，与任取链路的平均不同。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ratio-identity",
+      "label": "平均段数乘访问平均时延",
+      "pages": [
+        129
+      ],
+      "summary": "总访问数在两个比值间约去才得到每分组时间，不需假定路径长度与拥堵独立。",
+      "prerequisites": [
+        "weighted-target",
+        "little"
+      ],
+      "section": "链路与全网时延",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "129": "cn-p129-s0"
+      },
+      "evidence": {
+        "pages": [
+          129
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P129把端到端平均写为平均跳数乘一次访问平均，来自比值约分而非独立性假设。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "link-loads",
+      "label": "沿AB、BF筛选所有过路业务",
+      "pages": [
+        130
+      ],
+      "summary": "AB由9+4+1得14，BF由1+3+2+4得10；终点不是链路端点的业务也会占用它。",
+      "prerequisites": [],
+      "section": "链路与全网时延",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "130": "cn-p130-s0"
+      },
+      "evidence": {
+        "pages": [
+          130
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P130原表逐业务沿路累加，AB=14、BF=10，不能把路径上的外部流算多次注入。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "direction-audit",
+      "label": "八链路流量与反向业务核验",
+      "pages": [
+        131
+      ],
+      "summary": "按真实有向路径复算14、12、6、11、13、8、10、8，总访问率82；对称不允许混用方向。",
+      "prerequisites": [
+        "link-loads"
+      ],
+      "section": "链路与全网时延",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "131": "cn-p131-s0"
+      },
+      "evidence": {
+        "pages": [
+          131
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P131列八条方向流量14/12/6/11/13/8/10/8，方向与路由表逐条对应。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "link-table",
+      "label": "容量、相对负载与原表BF勘误",
+      "pages": [
+        132
+      ],
+      "summary": "由800bit和容量求服务率，BF应为1/(25−10)=66.67ms而非原表57ms；FD是最紧服务余量。",
+      "prerequisites": [
+        "link-delay"
+      ],
+      "section": "链路与全网时延",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "132": "cn-p132-s0"
+      },
+      "evidence": {
+        "pages": [
+          132
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P132给每链路服务能力和T；BF的57ms原表数值与1/(25−10)不符，讲义保留更正。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "network-denominators",
+      "label": "82次访问、62份外部业务两种分母",
+      "pages": [
+        133
+      ],
+      "summary": "半表口径平均段数82/62；访问加权单跳时延约86.369ms，双向统计必须分子分母同乘2。",
+      "prerequisites": [
+        "ratio-identity"
+      ],
+      "section": "链路与全网时延",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "133": "cn-p133-s0"
+      },
+      "evidence": {
+        "pages": [
+          133
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P133区分链路访问总82与外部注入62，两种平均分母不互换。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "network-total",
+      "label": "全网114.230ms与统一放大业务",
+      "pages": [
+        134
+      ],
+      "summary": "ΣλiTi除外部到达率得端到端平均；同比放大k同时改变内外流量，只在服务余量中留下k。",
+      "prerequisites": [
+        "little"
+      ],
+      "section": "链路与全网时延",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "134": "cn-p134-s0"
+      },
+      "evidence": {
+        "pages": [
+          134
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P134全网Little/路径加权给端到端114.2299ms；一次链路访问平均86.3690ms不同。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "capacity-boundary",
+      "label": "严格瓶颈倍率与低负载极限",
+      "pages": [
+        135
+      ],
+      "summary": "所有链路需kλi<μci；FD给k<1.5625，上确界不能取等号；低负载约56.903ms，图上45度不是普适最优。",
+      "prerequisites": [
+        "load"
+      ],
+      "section": "链路与全网时延",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "135": "cn-p135-s0"
+      },
+      "evidence": {
+        "pages": [
+          135
+        ],
+        "scope": "source-concept-with-reader-conditions",
+        "sourceBasis": "P135同倍流量k需每链路ρ<1，FD先到界k<25/16；低负载端到端56.9032ms。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "poisson",
+      "to": "waiting",
+      "label": "同一到达过程：窗口计数与间隔分布"
+    },
+    {
+      "from": "service",
+      "to": "load",
+      "label": "区分：能服务多快不等于实际到达多快"
+    },
+    {
+      "from": "population",
+      "to": "mm1-delay",
+      "label": "数量到时间：同边界应用Little"
+    },
+    {
+      "from": "mm1-delay",
+      "to": "mg1",
+      "label": "推广：服务从指数变成一般分布"
+    },
+    {
+      "from": "mm1-delay",
+      "to": "md1",
+      "label": "对比：相同服务均值但不同方差"
+    },
+    {
+      "from": "ratio-identity",
+      "to": "network-total",
+      "label": "两条推导：比值约分与整网Little给同一平均"
+    },
+    {
+      "from": "link-table",
+      "to": "capacity-boundary",
+      "label": "瓶颈：绝对流量最大不等于相对负载最高"
+    },
+    {
+      "from": "link-loads",
+      "to": "direction-audit",
+      "label": "核对：逐边记账与业务率乘路径跳数守恒"
+    },
+    {
+      "from": "waiting",
+      "to": "exponential",
+      "label": "推导：由零到达尾概率得到指数间隔及其矩"
+    },
+    {
+      "from": "exponential",
+      "to": "service",
+      "label": "建模类比：指数长度经固定速率换成指数服务时间"
+    },
+    {
+      "from": "boundary",
+      "to": "little",
+      "label": "统计定律：同边界稳定平均数等于有效到达率乘平均逗留"
+    },
+    {
+      "from": "little",
+      "to": "decomposition",
+      "label": "分解：把系统内顾客分成排队与正在服务两部分"
+    },
+    {
+      "from": "mm1",
+      "to": "birth-death",
+      "label": "建模：用系统内个数建立相邻到达与离开状态"
+    },
+    {
+      "from": "birth-death",
+      "to": "balance",
+      "label": "稳态：每对相邻状态满足概率流量平衡"
+    },
+    {
+      "from": "balance",
+      "to": "normalization",
+      "label": "求常数：几何稳态概率求和为1且负载小于1"
+    },
+    {
+      "from": "normalization",
+      "to": "population",
+      "label": "求矩：由稳态分布计算平均系统内数与排队数"
+    },
+    {
+      "from": "mg1",
+      "to": "md1",
+      "label": "特例：确定服务时间把服务方差置零"
+    },
+    {
+      "from": "md1",
+      "to": "model-compare",
+      "label": "对比：与同均值指数服务比较等待而非总逗留"
+    },
+    {
+      "from": "link-delay",
+      "to": "network-model",
+      "label": "推广：每条有向链路建立对应排队服务模型"
+    },
+    {
+      "from": "network-model",
+      "to": "link-loads",
+      "label": "记账：按固定业务路由累加经过每条方向链路的到达率"
+    },
+    {
+      "from": "direction-audit",
+      "to": "link-table",
+      "label": "计算：对逐向核对的负载应用各自服务能力"
+    },
+    {
+      "from": "link-table",
+      "to": "network-denominators",
+      "label": "汇总：区分链路访问总量与外部注入总量"
+    },
+    {
+      "from": "network-denominators",
+      "to": "network-total",
+      "label": "计算：用外部注入率作端到端平均的分母"
+    },
+    {
+      "from": "network-total",
+      "to": "capacity-boundary",
+      "label": "边界：业务同倍放大时逐链路检查稳定性"
+    }
+  ],
+  "provenance": {
+    "status": "new-reconstruction-requiring-independent-review",
+    "basis": "作者重新读取全部实际源PDF页文本并目视44页源图，核对既有逐页正文、真实data-page与讲义锚点；不宣称遗失原图谱的字节恢复。"
+  },
+  "progressNote": "33个可导航原页P103–P135；P103为可选引入且与基础章交接，正式伴读进度保持P104–P135共32页。",
+  "themes": [
+    {
+      "id": "arrival",
+      "label": "可选引入与随机输入",
+      "kind": "teaching",
+      "sections": [
+        "可选原页引入",
+        "到达与服务模型"
+      ],
+      "nodeIds": [
+        "intro",
+        "poisson",
+        "waiting",
+        "exponential",
+        "service"
+      ],
+      "pages": [
+        103,
+        104,
+        105,
+        106,
+        107
+      ]
+    },
+    {
+      "id": "boundary",
+      "label": "统计边界与负载",
+      "kind": "teaching",
+      "sections": [
+        "系统边界与负载"
+      ],
+      "nodeIds": [
+        "boundary",
+        "little",
+        "load",
+        "decomposition"
+      ],
+      "pages": [
+        108,
+        109,
+        110,
+        111,
+        112
+      ]
+    },
+    {
+      "id": "steady",
+      "label": "模型条件与稳态推导",
+      "kind": "teaching",
+      "sections": [
+        "排队模型与稳态推导"
+      ],
+      "nodeIds": [
+        "kendall",
+        "mm1",
+        "birth-death",
+        "balance",
+        "normalization",
+        "population",
+        "mm1-delay",
+        "mg1",
+        "md1",
+        "model-compare"
+      ],
+      "pages": [
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ]
+    },
+    {
+      "id": "network",
+      "label": "链路到端到端时延",
+      "kind": "teaching",
+      "sections": [
+        "链路与全网时延"
+      ],
+      "nodeIds": [
+        "link-delay",
+        "single-example",
+        "network-model",
+        "weighted-target",
+        "ratio-identity",
+        "link-loads",
+        "direction-audit",
+        "link-table",
+        "network-denominators",
+        "network-total",
+        "capacity-boundary"
+      ],
+      "pages": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ]
+    }
+  ],
+  "learningPaths": [
+    {
+      "id": "random",
+      "label": "从到达计数到服务与负载",
+      "nodeIds": [
+        "poisson",
+        "waiting",
+        "exponential",
+        "service",
+        "load"
+      ],
+      "relations": [
+        {
+          "from": "poisson",
+          "to": "waiting",
+          "label": "同一到达过程：窗口计数与间隔分布"
+        },
+        {
+          "from": "waiting",
+          "to": "exponential",
+          "label": "推导：由零到达尾概率得到指数间隔及其矩"
+        },
+        {
+          "from": "exponential",
+          "to": "service",
+          "label": "建模类比：指数长度经固定速率换成指数服务时间"
+        },
+        {
+          "from": "service",
+          "to": "load",
+          "label": "区分：能服务多快不等于实际到达多快"
+        }
+      ],
+      "purpose": "区分同一到达过程的计数/间隔与另一个服务过程的速率。",
+      "kind": "teaching",
+      "pages": [
+        104,
+        105,
+        106,
+        107,
+        110,
+        111
+      ]
+    },
+    {
+      "id": "steady",
+      "label": "由系统边界推到M/M/1时延",
+      "nodeIds": [
+        "boundary",
+        "little",
+        "decomposition",
+        "mm1",
+        "birth-death",
+        "balance",
+        "normalization",
+        "population",
+        "mm1-delay"
+      ],
+      "relations": [
+        {
+          "from": "boundary",
+          "to": "little",
+          "label": "统计定律：同边界稳定平均数等于有效到达率乘平均逗留"
+        },
+        {
+          "from": "little",
+          "to": "decomposition",
+          "label": "分解：把系统内顾客分成排队与正在服务两部分"
+        },
+        {
+          "from": "decomposition",
+          "to": "mm1",
+          "label": "先修"
+        },
+        {
+          "from": "mm1",
+          "to": "birth-death",
+          "label": "建模：用系统内个数建立相邻到达与离开状态"
+        },
+        {
+          "from": "birth-death",
+          "to": "balance",
+          "label": "稳态：每对相邻状态满足概率流量平衡"
+        },
+        {
+          "from": "balance",
+          "to": "normalization",
+          "label": "求常数：几何稳态概率求和为1且负载小于1"
+        },
+        {
+          "from": "normalization",
+          "to": "population",
+          "label": "求矩：由稳态分布计算平均系统内数与排队数"
+        },
+        {
+          "from": "population",
+          "to": "mm1-delay",
+          "label": "数量到时间：同边界应用Little"
+        }
+      ],
+      "purpose": "串联模型假设、概率流平衡、归一化、平均数与Little，不省略稳定条件。",
+      "kind": "teaching",
+      "pages": [
+        108,
+        109,
+        112,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ]
+    },
+    {
+      "id": "variance",
+      "label": "同均值服务为什么时延不同",
+      "nodeIds": [
+        "service",
+        "kendall",
+        "mg1",
+        "md1",
+        "model-compare"
+      ],
+      "relations": [
+        {
+          "from": "service",
+          "to": "kendall",
+          "label": "先修"
+        },
+        {
+          "from": "kendall",
+          "to": "mg1",
+          "label": "先修"
+        },
+        {
+          "from": "mg1",
+          "to": "md1",
+          "label": "特例：确定服务时间把服务方差置零"
+        },
+        {
+          "from": "md1",
+          "to": "model-compare",
+          "label": "对比：与同均值指数服务比较等待而非总逗留"
+        }
+      ],
+      "purpose": "在共同到达与服务规则下隔离服务方差的影响。",
+      "kind": "teaching",
+      "pages": [
+        107,
+        113,
+        114,
+        122,
+        123,
+        124
+      ]
+    },
+    {
+      "id": "whole-network",
+      "label": "把业务路由逐边汇总成端到端时延",
+      "nodeIds": [
+        "link-delay",
+        "network-model",
+        "link-loads",
+        "direction-audit",
+        "link-table",
+        "network-denominators",
+        "network-total",
+        "capacity-boundary"
+      ],
+      "relations": [
+        {
+          "from": "link-delay",
+          "to": "network-model",
+          "label": "推广：每条有向链路建立对应排队服务模型"
+        },
+        {
+          "from": "network-model",
+          "to": "link-loads",
+          "label": "记账：按固定业务路由累加经过每条方向链路的到达率"
+        },
+        {
+          "from": "link-loads",
+          "to": "direction-audit",
+          "label": "核对：逐边记账与业务率乘路径跳数守恒"
+        },
+        {
+          "from": "direction-audit",
+          "to": "link-table",
+          "label": "计算：对逐向核对的负载应用各自服务能力"
+        },
+        {
+          "from": "link-table",
+          "to": "network-denominators",
+          "label": "汇总：区分链路访问总量与外部注入总量"
+        },
+        {
+          "from": "network-denominators",
+          "to": "network-total",
+          "label": "计算：用外部注入率作端到端平均的分母"
+        },
+        {
+          "from": "network-total",
+          "to": "capacity-boundary",
+          "label": "边界：业务同倍放大时逐链路检查稳定性"
+        }
+      ],
+      "purpose": "从单链路到整网保持统计方向、分母与单位一致；最后检验瓶颈。",
+      "kind": "teaching",
+      "pages": [
+        125,
+        127,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ]
+    },
+    {
+      "id": "two-averages",
+      "label": "平均跳数如何连接两种平均",
+      "nodeIds": [
+        "network-model",
+        "weighted-target",
+        "ratio-identity",
+        "network-total",
+        "capacity-boundary"
+      ],
+      "relations": [
+        {
+          "from": "network-model",
+          "to": "weighted-target",
+          "label": "先修"
+        },
+        {
+          "from": "weighted-target",
+          "to": "ratio-identity",
+          "label": "先修"
+        },
+        {
+          "from": "ratio-identity",
+          "to": "network-total",
+          "label": "两条推导：比值约分与整网Little给同一平均"
+        },
+        {
+          "from": "network-total",
+          "to": "capacity-boundary",
+          "label": "边界：业务同倍放大时逐链路检查稳定性"
+        }
+      ],
+      "purpose": "比值恒等式与整网Little给相同结果，不引入无根据的独立性假设。",
+      "kind": "teaching",
+      "pages": [
+        127,
+        128,
+        129,
+        134,
+        135
+      ]
+    }
+  ],
+  "coverageContract": {
+    "baselineCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "readerSha256": "dcf06180d04da66da46324dd227c4a0ab6269b8f2718b5a8d60269a3a7ef0e69",
+    "sourcePages": [
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135
+    ],
+    "displayPageCount": 33,
+    "progressPages": [
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135
+    ],
+    "progressPageCount": 32,
+    "nodeCoverageMeaning": "每个真实原页至少归属一个节点；封面、目录、END和可选引入单独标明，覆盖不代表原页具有新增完整论证。",
+    "modelScope": "全部节点与全量有向关系构成整章模型；不是仅当前页的一层邻接。",
+    "uiBoundary": "现V2读取section、prerequisites和edges；themes与learningPaths为可审教学元数据，尚不单独渲染。2/3层表示入/出双向关系距离，不是先修树或学科等级。",
+    "prerequisiteMeaning": "先修是推荐阅读关系，不锁门；显式对比、区分和应用边不解释为数学推出或时间因果。"
+  },
+  "revision": {
+    "kind": "revalidated-isolated-candidate",
+    "baseGraphSha256": "0f5a0af0b1c50456783dc599f4d02975cce394203ecd0d55b332e0e33d5fcd6a",
+    "baseSourceMapSha256": "a3f372c2943331d285c12b15c81f99c0d5258ba4f58586b88dbcce422b7d5163",
+    "mainCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "productionModified": false,
+    "independentQA": "pending-new-model-review"
+  }
+}

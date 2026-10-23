@@ -1,0 +1,428 @@
+{
+  "version": 1,
+  "id": "network-review",
+  "reader": "network-review-ppt.html",
+  "pageCount": 11,
+  "displayPageCount": 11,
+  "sourcePageCount": 11,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "progressPageCount": 11,
+  "progressPages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+  "sourcePdfSha256": "794b3b302763a13a743804b769a724c9a2b6b3df55ec97ee563315c5a96b1626",
+  "sourceStatus": "来自恢复的原站11页总复习PDF，source-pages文件身份经页面内容及逐页链接核对。",
+  "pages": [
+    {
+      "page": 1,
+      "title": "这份清单不是新课：用它找出自己还讲不通的那一环",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"1\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 1,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=1",
+      "image": "/study-site/courses/network-review/slides/page-1.webp",
+      "imageSha256": "582e4b1f184650a3598a4b8cd942c4496218ca521dd19953be2677ff5457de61",
+      "imageBytes": 15904,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "route"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "cover-or-outline",
+      "coverageReasons": [
+        "P1只有核心知识点总结封面；复习方法与整章路线是补充，不冒充原页知识点。"
+      ]
+    },
+    {
+      "page": 2,
+      "title": "同一份数据为什么既要交换、分层，又要排队？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"2\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 2,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=2",
+      "image": "/study-site/courses/network-review/slides/page-2.webp",
+      "imageSha256": "c8bef869e7ecb8ee94c1658f772afbe3cd90c5942f5f02d793f8615680c19c79",
+      "imageBytes": 163078,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "switching",
+        "layers",
+        "performance",
+        "queueing"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P2列电路、报文、分组交换及适用场景；完整比较由既有讲义展开。",
+        "P2列OSI/TCP-IP、各层PDU与协议/服务/接口，节点据此区分纵向与横向。",
+        "P2列时延、往返、带宽、吞吐量、时延带宽积与利用率，不能混单位。",
+        "P2明确M/M/1的负载与平均时延式；稳定性和同一边界由讲义补条件。"
+      ]
+    },
+    {
+      "page": 3,
+      "title": "从一串比特到可收到的波形，要作哪些不同的选择？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"3\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 3,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=3",
+      "image": "/study-site/courses/network-review/slides/page-3.webp",
+      "imageSha256": "3cbf14ff3396f03a983593130a619378f97ae4916b06d7481748155e183f121b",
+      "imageBytes": 138240,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "symbols",
+        "line-coding",
+        "media-interface",
+        "access"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P3列比特/码元速率、单双工和基带带通，位/码元转换是其学习任务。",
+        "P3明确曼彻斯特、差分曼彻斯特；跃迁约定须先说明。",
+        "P3四种物理接口特性与传输媒体，不把接口功能混入传输速率。",
+        "P3列ADSL、HFC、FTTx接入技术；机制比较是复习讲义展开。"
+      ]
+    },
+    {
+      "page": 4,
+      "title": "一段链路能发比特，为什么还不能保证一帧可靠交付？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"4\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 4,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=4",
+      "image": "/study-site/courses/network-review/slides/page-4.webp",
+      "imageSha256": "177dd6204450d1f6cc461639125132f4f26b113d8e94abef6b44d5cad2baa829",
+      "imageBytes": 151572,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "framing",
+        "crc",
+        "arq",
+        "ppp"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P4列封装成帧与透明传输，解决边界和内容冲突。",
+        "P4列CRC冗余码计算；检错不自动重传。",
+        "P4列停止等待、连续ARQ及选择重传；编号与窗口条件属于讲义补充。",
+        "P4列PPP特点、组成、帧与透明传输；职责不等于全部可靠交付。"
+      ]
+    },
+    {
+      "page": 5,
+      "title": "共享信道的利用率，分子到底在数哪一种成功？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"5\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 5,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=5",
+      "image": "/study-site/courses/network-review/slides/page-5.webp",
+      "imageSha256": "ef259c36d47dcc65958d9a4a9d002752cce3c109c3ed9552cc811420787f0610",
+      "imageBytes": 126012,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "poisson-access",
+        "aloha",
+        "satellite",
+        "csma-cd"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P5确有Poisson概率式P(k)=G^k exp(-G)/k!，G是一个观察窗平均尝试数。",
+        "P5确有纯ALOHA与时隙ALOHA的两条吞吐率式；脆弱区间是解释推导。",
+        "P5只要求区分卫星有/无存储的ALOHA利用率计算，未给某个具体卫星原题参数。",
+        "P5列监听、碰撞检测、强化、退避、争用期/最小帧长/端到端时延。"
+      ]
+    },
+    {
+      "page": 6,
+      "title": "同样插着网线，集线器、交换机和路由器为何不能互换？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"6\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 6,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=6",
+      "image": "/study-site/courses/network-review/slides/page-6.webp",
+      "imageSha256": "7180ac5f7b37006a9025b15d1db369ac8d22fd70433eb1b35003ea28656267b6",
+      "imageBytes": 145480,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "devices",
+        "ethernet-frame",
+        "ethernet-efficiency",
+        "fast-ethernet"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P6列集线器/网桥/路由器差别，按处理层与转发范围复习。",
+        "P6列10BASE含义、MAC帧及地址，和网络层地址区分。",
+        "P6列最大信道利用率和端到端传播时间；半双工竞争模型条件需讲义保留。",
+        "P6列扩展以太网及高速以太网，不能把现代交换全双工视为仍必然碰撞。"
+      ]
+    },
+    {
+      "page": 7,
+      "title": "地址题先找分界：部门越多，借位是下界还是上界？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"7\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 7,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=7",
+      "image": "/study-site/courses/network-review/slides/page-7.webp",
+      "imageSha256": "ef4fc788b3731d6b40513d12915aef99b32d6f9694645b8f735d9c81e2e2a0ad",
+      "imageBytes": 136698,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "ip-service",
+        "ipv4-address",
+        "mask",
+        "subnet-bounds"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P7列两服务与IP/ARP/ICMP/IGMP，职责串联而非混成一种可靠服务。",
+        "P7列IPv4表示、分类与IP/MAC关系；接口与端点作用由讲义解释。",
+        "P7明确子网掩码及由地址求网络号/主机号；必须知道边界才可计算。",
+        "P7列部门数、主机数、地址范围，原最大子网位措辞须同时受主机需求约束。"
+      ]
+    },
+    {
+      "page": 8,
+      "title": "算出地址块之后，路由器怎样知道下一步往哪走？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"8\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 8,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=8",
+      "image": "/study-site/courses/network-review/slides/page-8.webp",
+      "imageSha256": "5f88534e3166cd401c3e9b939b9bb34502aac1d0ec0d4a15be15eb127fbc21de",
+      "imageBytes": 116528,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "cidr",
+        "routing-scope",
+        "dijkstra",
+        "distance-vector"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P8列CIDR与地址块和聚合；连续相邻仍须满足二进制对齐。",
+        "P8列自治系统、内部/外部协议及RIP/OSPF/BGP，按管理范围分组。",
+        "P8指定Dijkstra最短路算法及计算；完整非负图为使用条件，不凭示意线长。",
+        "P8指定距离向量算法及计算；每个邻居报价还要加本地第一跳。"
+      ]
+    },
+    {
+      "page": 9,
+      "title": "要发给一组人、跨机构内部网，或共用公网地址，分别找谁？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"9\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 9,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=9",
+      "image": "/study-site/courses/network-review/slides/page-9.webp",
+      "imageSha256": "a5b178ed8b864339b277fb2b74703dab770f1ebd8106cd339d2b72c4591c17f2",
+      "imageBytes": 90020,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "multicast",
+        "vpn",
+        "nat"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P9列IP组播、MAC映射、IGMP与路由，成员管理和交付树分工不同。",
+        "P9列私有/公有地址与VPN，封装与安全机制区别由讲义补充。",
+        "P9列网络地址转换原理与NAPT，地址映射和端口多路复用须区分。"
+      ]
+    },
+    {
+      "page": 10,
+      "title": "IPv6 不只是地址变长：包怎样读，旧网怎样穿过？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"10\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 10,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=10",
+      "image": "/study-site/courses/network-review/slides/page-10.webp",
+      "imageSha256": "03a9cccae9ae8a79158443b88d0a60ef150fbe06f10fefe6ce7f9801f45cf04f",
+      "imageBytes": 109486,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "ipv6-header",
+        "ipv6-address",
+        "transition"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P10列IPv6特点与首部，固定基本首部不意味着没有扩展。",
+        "P10列三种交付、128位表示与前缀/子网/接口，沿真实清单复习。",
+        "P10列双栈与隧道技术，翻译与封装不能混同。"
+      ]
+    },
+    {
+      "page": 11,
+      "title": "一帧穿过 AP 时，谁是眼前接收者，谁才是最终目的？",
+      "reader": "network-review-ppt.html",
+      "selector": ".slide-page[data-page=\"11\"]",
+      "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+      "pdfPage": 11,
+      "sourceUrl": "/study-site/courses/source-pages/794b3b302763a13a7438/source.pdf#page=11",
+      "image": "/study-site/courses/network-review/slides/page-11.webp",
+      "imageSha256": "83666884815d4dab43c9c1284ea074bdd6c80bace6887e027b95cbdb17178262",
+      "imageBytes": 140432,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "wlan",
+        "hidden-exposed",
+        "csma-ca",
+        "wlan-address"
+      ],
+      "countsTowardProgress": true,
+      "coverageRole": "source-checklist",
+      "coverageReasons": [
+        "P11列AP、BSS、SSID、DS、ESS和基础设施WLAN，按角色而非缩写机械记忆。",
+        "P11明确隐藏站/暴露站，比较的是谁听得见谁而非简单节点距离。",
+        "P11列不能用CSMA/CD的原因、NAV、退避和预约；碰撞避免不保证无碰撞。",
+        "P11明确802.11帧三地址，需区分当前发送接收与原始通信端点。"
+      ]
+    }
+  ],
+  "currentVerification": {
+    "baselineCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "readerSha256": "274bbc61c17017e197a2202223a31d145b744eb24623781fba06d29be366475c",
+    "method": "从Git不可变对象取出当前reader、PDF与每页源图，逐字节SHA绑定旧映射；逐节点复读实际PDF文本/公式与必要图像，并区分PPT主题和既有讲义扩展。",
+    "sourceImageIdentityCount": 11,
+    "sourcePageTextReviewCount": 11,
+    "nodeSemanticReviewCount": 39,
+    "visualRecheckedPages": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "notClaimed": [
+      "没有本轮逐页重新目视全部277幅源图",
+      "没有本轮重跑旧全部扩展PDF的逐页视觉比对",
+      "没有修改或验收新的线上UI",
+      "没有把封面或结束页计作新增教学论证"
+    ],
+    "priorMapSha256": "a17b2e3d3e86092be6106f85caa26c3e8e5bca0c8248d545d2dbfa445e90b357"
+  },
+  "coverageContract": {
+    "baselineCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "readerSha256": "274bbc61c17017e197a2202223a31d145b744eb24623781fba06d29be366475c",
+    "sourcePages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "displayPageCount": 11,
+    "progressPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "progressPageCount": 11,
+    "nodeCoverageMeaning": "每个真实原页至少归属一个节点；封面、目录、END和可选引入单独标明，覆盖不代表原页具有新增完整论证。",
+    "modelScope": "全部节点与全量有向关系构成整章模型；不是仅当前页的一层邻接。",
+    "uiBoundary": "现V2读取section、prerequisites和edges；themes与learningPaths为可审教学元数据，尚不单独渲染。2/3层表示入/出双向关系距离，不是先修树或学科等级。",
+    "prerequisiteMeaning": "先修是推荐阅读关系，不锁门；显式对比、区分和应用边不解释为数学推出或时间因果。"
+  }
+}

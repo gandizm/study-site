@@ -1,0 +1,1507 @@
+{
+  "version": 1,
+  "id": "network-review",
+  "title": "计算机网络 · 总复习",
+  "reader": "network-review-ppt.html",
+  "pageCount": 11,
+  "displayPageCount": 11,
+  "sourcePageCount": 11,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "sourcePdf": "courses/source-pages/794b3b302763a13a7438/source.pdf",
+  "sourcePdfSha256": "794b3b302763a13a743804b769a724c9a2b6b3df55ec97ee563315c5a96b1626",
+  "progressPages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "nodes": [
+    {
+      "id": "route",
+      "label": "用复习清单定位能力缺口",
+      "pages": [
+        1
+      ],
+      "summary": "本页原图仅为“核心知识点总结”封面。补充复习方法：按机制、假设、单位和结果自检；后续清单规定知识与题型，不自带完整试题条件。",
+      "prerequisites": [],
+      "section": "复习路线",
+      "type": "concept",
+      "source": "supplement",
+      "anchors": {
+        "1": "cn-review-p001-s0"
+      },
+      "evidence": {
+        "pages": [
+          1
+        ],
+        "scope": "supplement-at-cover",
+        "sourceBasis": "P1只有核心知识点总结封面；复习方法与整章路线是补充，不冒充原页知识点。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "switching",
+      "label": "电路、报文与分组交换",
+      "pages": [
+        2
+      ],
+      "summary": "比较建立连接、存储转发、流水共享及首部开销，不把分组交换判成所有场景都最快。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "总论与性能",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "2": "cn-review-p002-s0"
+      },
+      "evidence": {
+        "pages": [
+          2
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P2列电路、报文、分组交换及适用场景；完整比较由既有讲义展开。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "layers",
+      "label": "五层、PDU、协议与服务",
+      "pages": [
+        2
+      ],
+      "summary": "对等实体遵守协议，上下层提供服务；逻辑同层通信仍依赖实际下层传送。",
+      "prerequisites": [],
+      "section": "总论与性能",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "2": "cn-review-p002-s1"
+      },
+      "evidence": {
+        "pages": [
+          2
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P2列OSI/TCP-IP、各层PDU与协议/服务/接口，节点据此区分纵向与横向。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "performance",
+      "label": "发送、传播、吞吐与时延带宽积",
+      "pages": [
+        2
+      ],
+      "summary": "L/c与d/v是不同时间；忙碌比例不是有效吞吐率，端到端需按实际路径累加。",
+      "prerequisites": [
+        "switching"
+      ],
+      "section": "总论与性能",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "2": "cn-review-p002-s2"
+      },
+      "evidence": {
+        "pages": [
+          2
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P2列时延、往返、带宽、吞吐量、时延带宽积与利用率，不能混单位。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "queueing",
+      "label": "链路M/M/1与全网平均时延",
+      "pages": [
+        2
+      ],
+      "summary": "先确认μc为服务率、ρ<1；单链路逗留不含传播，全网须按访问率加权并除外部到达率。",
+      "prerequisites": [
+        "performance"
+      ],
+      "section": "总论与性能",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "2": "cn-review-p002-s3"
+      },
+      "evidence": {
+        "pages": [
+          2
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P2明确M/M/1的负载与平均时延式；稳定性和同一边界由讲义补条件。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "symbols",
+      "label": "信号方向、比特与码元",
+      "pages": [
+        3
+      ],
+      "summary": "单/半/全双工描述方向；物理层传bit，固定M状态映射下Rb=Rs log₂M，净速率另扣开销。",
+      "prerequisites": [],
+      "section": "物理层",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "3": "cn-review-p003-s1"
+      },
+      "evidence": {
+        "pages": [
+          3
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P3列比特/码元速率、单双工和基带带通，位/码元转换是其学习任务。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "line-coding",
+      "label": "曼彻斯特与载波调制",
+      "pages": [
+        3
+      ],
+      "summary": "位中点和位边界作用不同；先给零一及初始电平约定，再区分线编码与ASK/FSK/PSK。",
+      "prerequisites": [],
+      "section": "物理层",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "3": "cn-review-p003-s2"
+      },
+      "evidence": {
+        "pages": [
+          3
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P3明确曼彻斯特、差分曼彻斯特；跃迁约定须先说明。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "media-interface",
+      "label": "媒体与四种接口特性",
+      "pages": [
+        3
+      ],
+      "summary": "机械、电气、功能、规程回答不同问题；双绞线、同轴、光纤须按衰减、干扰和距离比较。",
+      "prerequisites": [
+        "symbols"
+      ],
+      "section": "物理层",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "3": "cn-review-p003-s3"
+      },
+      "evidence": {
+        "pages": [
+          3
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P3四种物理接口特性与传输媒体，不把接口功能混入传输速率。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "access",
+      "label": "ADSL、HFC与FTTx",
+      "pages": [
+        3
+      ],
+      "summary": "沿接入最后一段介质及共享方式比较，FTTx说明光纤终点，不承诺每人独享总标称速率。",
+      "prerequisites": [
+        "media-interface"
+      ],
+      "section": "物理层",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "3": "cn-review-p003-s4"
+      },
+      "evidence": {
+        "pages": [
+          3
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P3列ADSL、HFC、FTTx接入技术；机制比较是复习讲义展开。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "framing",
+      "label": "成帧、透明传输与差错检测",
+      "pages": [
+        4
+      ],
+      "summary": "先识别帧边界，再避免载荷特殊图样冒充边界；检测到差错不等于已恢复丢失。",
+      "prerequisites": [
+        "layers",
+        "symbols"
+      ],
+      "section": "可靠帧交付",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "4": "cn-review-p004-s0"
+      },
+      "evidence": {
+        "pages": [
+          4
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P4列封装成帧与透明传输，解决边界和内容冲突。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "crc",
+      "label": "CRC模二余数与漏检边界",
+      "pages": [
+        4
+      ],
+      "summary": "附零后用生成多项式模二相除；余数零只说明通过该检验，不保证所有差错都被排除。",
+      "prerequisites": [],
+      "section": "可靠帧交付",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "4": "cn-review-p004-s1"
+      },
+      "evidence": {
+        "pages": [
+          4
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P4列CRC冗余码计算；检错不自动重传。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "arq",
+      "label": "停止等待、GBN与SR",
+      "pages": [
+        4
+      ],
+      "summary": "序号、确认、定时器与窗口负责恢复；连续ARQ不是停止等待，利用率分母包含完整确认循环。",
+      "prerequisites": [
+        "crc",
+        "performance"
+      ],
+      "section": "可靠帧交付",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "4": "cn-review-p004-s2"
+      },
+      "evidence": {
+        "pages": [
+          4
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P4列停止等待、连续ARQ及选择重传；编号与窗口条件属于讲义补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ppp",
+      "label": "PPP帧与转义",
+      "pages": [
+        4
+      ],
+      "summary": "字节转义和零比特填充适用链路不同；基础PPP具备FCS但不自动拥有逐帧ARQ可靠性。",
+      "prerequisites": [
+        "framing",
+        "crc"
+      ],
+      "section": "可靠帧交付",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "4": "cn-review-p004-s4"
+      },
+      "evidence": {
+        "pages": [
+          4
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P4列PPP特点、组成、帧与透明传输；职责不等于全部可靠交付。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "poisson-access",
+      "label": "尝试负载与泊松计数",
+      "pages": [
+        5
+      ],
+      "summary": "G=λTf按一个帧时间归一，尝试包含重传；概率的时间窗与负载定义必须一致。",
+      "prerequisites": [
+        "queueing"
+      ],
+      "section": "共享媒体访问",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "5": "cn-review-p005-s0"
+      },
+      "evidence": {
+        "pages": [
+          5
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P5确有Poisson概率式P(k)=G^k exp(-G)/k!，G是一个观察窗平均尝试数。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "aloha",
+      "label": "纯ALOHA与时隙ALOHA",
+      "pages": [
+        5
+      ],
+      "summary": "脆弱期2Tf与Tf给出Ge⁻²ᴳ及Ge⁻ᴳ；峰值1/(2e)和1/e只在同长帧泊松模型下成立。",
+      "prerequisites": [
+        "poisson-access"
+      ],
+      "section": "共享媒体访问",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "5": "cn-review-p005-s1"
+      },
+      "evidence": {
+        "pages": [
+          5
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P5确有纯ALOHA与时隙ALOHA的两条吞吐率式；脆弱区间是解释推导。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "satellite",
+      "label": "卫星缓存与效率分母",
+      "pages": [
+        5
+      ],
+      "summary": "两等速上行、一下行示例分别数至少一次成功与可保留成功帧；缓存公式仍需稳定，资源效率分母另算。",
+      "prerequisites": [
+        "aloha",
+        "queueing"
+      ],
+      "section": "共享媒体访问",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "5": "cn-review-p005-s2"
+      },
+      "evidence": {
+        "pages": [
+          5
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P5只要求区分卫星有/无存储的ALOHA利用率计算，未给某个具体卫星原题参数。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "csma-cd",
+      "label": "CSMA/CD争用期与最短帧",
+      "pages": [
+        5
+      ],
+      "summary": "本地侦听空闲不排除远端在途信号；共享半双工模型中发送持续须覆盖约2τ争用期。",
+      "prerequisites": [
+        "framing",
+        "performance"
+      ],
+      "section": "共享媒体访问",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "5": "cn-review-p005-s3"
+      },
+      "evidence": {
+        "pages": [
+          5
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P5列监听、碰撞检测、强化、退避、争用期/最小帧长/端到端时延。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "devices",
+      "label": "HUB、网桥、交换机与路由器",
+      "pages": [
+        6
+      ],
+      "summary": "按当前处理比特、帧或网络前缀辨功能；分隔碰撞域不等于自动分隔同VLAN广播域。",
+      "prerequisites": [
+        "layers"
+      ],
+      "section": "以太网",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "6": "cn-review-p006-s0"
+      },
+      "evidence": {
+        "pages": [
+          6
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P6列集线器/网桥/路由器差别，按处理层与转发范围复习。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ethernet-frame",
+      "label": "以太网媒体与MAC帧边界",
+      "pages": [
+        6
+      ],
+      "summary": "布线星形不等于逻辑不共享；经典未标记帧64–1518字节不包含前同步码，扩展格式需另算。",
+      "prerequisites": [
+        "devices",
+        "framing"
+      ],
+      "section": "以太网",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "6": "cn-review-p006-s2"
+      },
+      "evidence": {
+        "pages": [
+          6
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P6列10BASE含义、MAC帧及地址，和网络层地址区分。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ethernet-efficiency",
+      "label": "有碰撞与无碰撞效率",
+      "pages": [
+        6
+      ],
+      "summary": "按题设成功发送、争用和传播时间列分母，简化总线式不能直接套全双工交换链路。",
+      "prerequisites": [
+        "csma-cd",
+        "performance"
+      ],
+      "section": "以太网",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "6": "cn-review-p006-s3"
+      },
+      "evidence": {
+        "pages": [
+          6
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P6列最大信道利用率和端到端传播时间；半双工竞争模型条件需讲义保留。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "fast-ethernet",
+      "label": "高速以太网改变哪些假设",
+      "pages": [
+        6
+      ],
+      "summary": "MAC兼容不代表PHY介质、距离与争用模型不变；全双工不用CSMA/CD，不能照抄旧的只用光纤概括。",
+      "prerequisites": [
+        "devices",
+        "ethernet-frame"
+      ],
+      "section": "以太网",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "6": "cn-review-p006-s4"
+      },
+      "evidence": {
+        "pages": [
+          6
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P6列扩展以太网及高速以太网，不能把现代交换全双工视为仍必然碰撞。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ip-service",
+      "label": "数据报、虚电路与配套协议",
+      "pages": [
+        7
+      ],
+      "summary": "IP尽力而为；ARP在当前IPv4链路解析下一跳，ICMP报控制差错，IGMP管理多播成员。",
+      "prerequisites": [
+        "layers",
+        "devices"
+      ],
+      "section": "IPv4与子网",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "7": "cn-review-p007-s0"
+      },
+      "evidence": {
+        "pages": [
+          7
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P7列两服务与IP/ARP/ICMP/IGMP，职责串联而非混成一种可靠服务。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv4-address",
+      "label": "IPv4前缀、IP与MAC角色",
+      "pages": [
+        7
+      ],
+      "summary": "优先使用已给掩码而非历史类别；目的IP与当前一跳目的MAC角色不同，路由器重新封帧。",
+      "prerequisites": [
+        "ip-service",
+        "ethernet-frame"
+      ],
+      "section": "IPv4与子网",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "7": "cn-review-p007-s1"
+      },
+      "evidence": {
+        "pages": [
+          7
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P7列IPv4表示、分类与IP/MAC关系；接口与端点作用由讲义解释。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "mask",
+      "label": "掩码与网络、子网、主机部分",
+      "pages": [
+        7
+      ],
+      "summary": "逐位AND提取当前网络前缀；若要分原网络和借位，仍需知道原前缀，不能仅凭一个地址猜。",
+      "prerequisites": [],
+      "section": "IPv4与子网",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "7": "cn-review-p007-s2"
+      },
+      "evidence": {
+        "pages": [
+          7
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P7明确子网掩码及由地址求网络号/主机号；必须知道边界才可计算。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "subnet-bounds",
+      "label": "子网借位的上下界",
+      "pages": [
+        7
+      ],
+      "summary": "部门数量给借位下界，主机需求给上界；原页“仅按部门定最大位数”不足，/31与/32另处理。",
+      "prerequisites": [],
+      "section": "IPv4与子网",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "7": "cn-review-p007-s3"
+      },
+      "evidence": {
+        "pages": [
+          7
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P7列部门数、主机数、地址范围，原最大子网位措辞须同时受主机需求约束。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "cidr",
+      "label": "CIDR地址块与前缀对齐",
+      "pages": [
+        8
+      ],
+      "summary": "/p块含2^(32−p)地址，起点主机位为零；不能从查询地址任意向后数整个块。",
+      "prerequisites": [],
+      "section": "CIDR与路由",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "8": "cn-review-p008-s0"
+      },
+      "evidence": {
+        "pages": [
+          8
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P8列CIDR与地址块和聚合；连续相邻仍须满足二进制对齐。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "routing-scope",
+      "label": "AS、IGP与BGP的策略边界",
+      "pages": [
+        8
+      ],
+      "summary": "AS是管理和策略边界，IGP在内部工作；BGP交换路径属性并受策略约束，不保证物理最短。",
+      "prerequisites": [
+        "ip-service",
+        "cidr"
+      ],
+      "section": "CIDR与路由",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "8": "cn-review-p008-s1"
+      },
+      "evidence": {
+        "pages": [
+          8
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P8列自治系统、内部/外部协议及RIP/OSPF/BGP，按管理范围分组。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "dijkstra",
+      "label": "Dijkstra的确定集合与松弛",
+      "pages": [
+        8
+      ],
+      "summary": "非负链路代价下选暂定距离最小节点，再松弛邻居并记前驱，不是每轮选全图最短边。",
+      "prerequisites": [],
+      "section": "CIDR与路由",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "8": "cn-review-p008-s2"
+      },
+      "evidence": {
+        "pages": [
+          8
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P8指定Dijkstra最短路算法及计算；完整非负图为使用条件，不凭示意线长。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "distance-vector",
+      "label": "距离向量与RIP/OSPF比较",
+      "pages": [
+        8
+      ],
+      "summary": "经邻居代价加邻居报价再取最小；RIP交换距离向量，OSPF泛洪链路状态，消息传播与收敛不能忽略。",
+      "prerequisites": [],
+      "section": "CIDR与路由",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "8": "cn-review-p008-s3"
+      },
+      "evidence": {
+        "pages": [
+          8
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P8指定距离向量算法及计算；每个邻居报价还要加本地第一跳。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "multicast",
+      "label": "IPv4多播与以太网映射",
+      "pages": [
+        9
+      ],
+      "summary": "D类组地址低23位映入01-00-5E前缀；丢失5位使32个IP组可同MAC，仍需上层检查。",
+      "prerequisites": [
+        "ipv4-address"
+      ],
+      "section": "多播、VPN与NAT",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "9": "cn-review-p009-s0"
+      },
+      "evidence": {
+        "pages": [
+          9
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P9列IP组播、MAC映射、IGMP与路由，成员管理和交付树分工不同。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "vpn",
+      "label": "VPN、内联网与外联网",
+      "pages": [
+        9
+      ],
+      "summary": "隧道用外层地址跨公共网络，受控连通不等于自动加密；私有地址在内部仍可正常路由。",
+      "prerequisites": [
+        "ip-service",
+        "ipv4-address"
+      ],
+      "section": "多播、VPN与NAT",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "9": "cn-review-p009-s2"
+      },
+      "evidence": {
+        "pages": [
+          9
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P9列私有/公有地址与VPN，封装与安全机制区别由讲义补充。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "nat",
+      "label": "NAT与NAPT双向映射",
+      "pages": [
+        9
+      ],
+      "summary": "静态或动态基本NAT做地址映射，NAPT借端口区分通信；地址转换不等于VPN或加密。",
+      "prerequisites": [
+        "ipv4-address"
+      ],
+      "section": "多播、VPN与NAT",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "9": "cn-review-p009-s3"
+      },
+      "evidence": {
+        "pages": [
+          9
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P9列网络地址转换原理与NAPT，地址映射和端口多路复用须区分。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-header",
+      "label": "IPv6基本首部与扩展链",
+      "pages": [
+        10
+      ],
+      "summary": "固定40字节基本首部通过Next Header逐层指向后续结构；不能照搬IPv4校验和及路由器分片规则。",
+      "prerequisites": [
+        "ipv4-address"
+      ],
+      "section": "IPv6",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "10": "cn-review-p010-s0"
+      },
+      "evidence": {
+        "pages": [
+          10
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P10列IPv6特点与首部，固定基本首部不意味着没有扩展。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "ipv6-address",
+      "label": "IPv6地址类型、压缩与层级",
+      "pages": [
+        10
+      ],
+      "summary": "128位地址最多一次::；任播交给路由意义最近之一，IPv6无广播，常规/64不是所有用途的硬规则。",
+      "prerequisites": [
+        "ipv6-header",
+        "cidr"
+      ],
+      "section": "IPv6",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "10": "cn-review-p010-s2"
+      },
+      "evidence": {
+        "pages": [
+          10
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P10列三种交付、128位表示与前缀/子网/接口，沿真实清单复习。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "transition",
+      "label": "双栈与隧道不是同一种转换",
+      "pages": [
+        10
+      ],
+      "summary": "双栈运行两套协议；隧道保留内层包并加外层，IPv4中间节点可只看外层而不执行IPv6转发。",
+      "prerequisites": [
+        "ipv6-header",
+        "vpn"
+      ],
+      "section": "IPv6",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "10": "cn-review-p010-s4"
+      },
+      "evidence": {
+        "pages": [
+          10
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P10列双栈与隧道技术，翻译与封装不能混同。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "wlan",
+      "label": "AP、BSS、SSID、DS与ESS",
+      "pages": [
+        11
+      ],
+      "summary": "SSID是服务集名称；经DS组织形成ESS，同名AP不自动具备同一受控拓扑与漫游配置。",
+      "prerequisites": [
+        "devices"
+      ],
+      "section": "无线局域网",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "11": "cn-review-p011-s0"
+      },
+      "evidence": {
+        "pages": [
+          11
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P11列AP、BSS、SSID、DS、ESS和基础设施WLAN，按角色而非缩写机械记忆。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "hidden-exposed",
+      "label": "隐藏站与暴露站",
+      "pages": [
+        11
+      ],
+      "summary": "发送者本地监听不同于接收者干扰环境；隐藏可碰撞，暴露可能过度退让，还要检查ACK反向链路。",
+      "prerequisites": [
+        "csma-cd"
+      ],
+      "section": "无线局域网",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "11": "cn-review-p011-s1"
+      },
+      "evidence": {
+        "pages": [
+          11
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P11明确隐藏站/暴露站，比较的是谁听得见谁而非简单节点距离。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "csma-ca",
+      "label": "DCF、NAV、随机退避与预约",
+      "pages": [
+        11
+      ],
+      "summary": "物理/虚拟监听、帧间隔和退避共同管理风险；NAV不测能量，RTS/CTS也不承诺零碰撞。",
+      "prerequisites": [
+        "arq"
+      ],
+      "section": "无线局域网",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "11": "cn-review-p011-s2"
+      },
+      "evidence": {
+        "pages": [
+          11
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P11列不能用CSMA/CD的原因、NAV、退避和预约；碰撞避免不保证无碰撞。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    },
+    {
+      "id": "wlan-address",
+      "label": "RA/TA、SA/DA与DS方向",
+      "pages": [
+        11
+      ],
+      "summary": "眼前无线收发者不等于端到端链路数据源目的；传统双DS置位场景需四地址，不能无条件只记三地址。",
+      "prerequisites": [
+        "wlan",
+        "ipv4-address"
+      ],
+      "section": "无线局域网",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "11": "cn-review-p011-s3"
+      },
+      "evidence": {
+        "pages": [
+          11
+        ],
+        "scope": "source-checklist-with-reader-explanation",
+        "sourceBasis": "P11明确802.11帧三地址，需区分当前发送接收与原始通信端点。",
+        "boundary": "PPT页码是实际导航位置；摘要含既有逐页讲义的条件、推算和纠错，不表示这些文字逐字出现在原图。"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "crc",
+      "to": "arq",
+      "label": "机制衔接：检测差错后仍需序号确认与重传"
+    },
+    {
+      "from": "aloha",
+      "to": "csma-cd",
+      "label": "对比：不监听的随机发送与带传播风险的载波监听"
+    },
+    {
+      "from": "devices",
+      "to": "ip-service",
+      "label": "层级衔接：二层转帧与三层选下一跳"
+    },
+    {
+      "from": "dijkstra",
+      "to": "distance-vector",
+      "label": "对比：掌握拓扑后计算与只交换邻居报价"
+    },
+    {
+      "from": "vpn",
+      "to": "nat",
+      "label": "对比：逻辑专网与地址端口映射不是同一功能"
+    },
+    {
+      "from": "multicast",
+      "to": "ipv6-address",
+      "label": "对比：IPv4组地址映射与IPv6单播多播任播"
+    },
+    {
+      "from": "csma-cd",
+      "to": "csma-ca",
+      "label": "对比：发送中检测与无线碰撞避免"
+    },
+    {
+      "from": "wlan-address",
+      "to": "ethernet-frame",
+      "label": "对比：当前一跳角色与链路源目的的地址字段"
+    },
+    {
+      "from": "switching",
+      "to": "layers",
+      "label": "分层定位：区分交换方式与协议层提供的服务"
+    },
+    {
+      "from": "layers",
+      "to": "symbols",
+      "label": "下接物理层：先分清传送比特与承载码元"
+    },
+    {
+      "from": "symbols",
+      "to": "line-coding",
+      "label": "表示方法：把比特映射成可识别的信号跃迁"
+    },
+    {
+      "from": "framing",
+      "to": "crc",
+      "label": "保护对象：先定帧边界，再对帧内容计算检错冗余"
+    },
+    {
+      "from": "ipv4-address",
+      "to": "mask",
+      "label": "方法：用给定边界把32位地址分出网络部分"
+    },
+    {
+      "from": "mask",
+      "to": "subnet-bounds",
+      "label": "约束：子网数与每子网主机数共同限制借位"
+    },
+    {
+      "from": "mask",
+      "to": "cidr",
+      "label": "推广：脱离类别后仍以显式前缀判断范围和聚合"
+    },
+    {
+      "from": "routing-scope",
+      "to": "dijkstra",
+      "label": "方法选择：取得全图后按非负边权计算最短路"
+    },
+    {
+      "from": "routing-scope",
+      "to": "distance-vector",
+      "label": "方法选择：只用邻居报价加本地第一跳更新"
+    },
+    {
+      "from": "wlan",
+      "to": "hidden-exposed",
+      "label": "场景：局部听见的信道状态不等于接收端干扰状态"
+    },
+    {
+      "from": "hidden-exposed",
+      "to": "csma-ca",
+      "label": "应对：用退避、确认和可选预约降低冲突风险"
+    }
+  ],
+  "provenance": {
+    "status": "new-reconstruction-requiring-independent-review",
+    "basis": "作者重新读取全部实际源PDF页文本并目视44页源图，核对既有逐页正文、真实data-page与讲义锚点；不宣称遗失原图谱的字节恢复。"
+  },
+  "themes": [
+    {
+      "id": "foundations",
+      "label": "复习方法、分层与性能",
+      "kind": "teaching",
+      "sections": [
+        "复习路线",
+        "总论与性能"
+      ],
+      "nodeIds": [
+        "route",
+        "switching",
+        "layers",
+        "performance",
+        "queueing"
+      ],
+      "pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "physical",
+      "label": "码元、编码、媒体与接入",
+      "kind": "teaching",
+      "sections": [
+        "物理层"
+      ],
+      "nodeIds": [
+        "symbols",
+        "line-coding",
+        "media-interface",
+        "access"
+      ],
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": "link",
+      "label": "成帧、检错与可靠交付",
+      "kind": "teaching",
+      "sections": [
+        "可靠帧交付"
+      ],
+      "nodeIds": [
+        "framing",
+        "crc",
+        "arq",
+        "ppp"
+      ],
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": "shared",
+      "label": "共享信道与以太网",
+      "kind": "teaching",
+      "sections": [
+        "共享媒体访问",
+        "以太网"
+      ],
+      "nodeIds": [
+        "poisson-access",
+        "aloha",
+        "satellite",
+        "csma-cd",
+        "devices",
+        "ethernet-frame",
+        "ethernet-efficiency",
+        "fast-ethernet"
+      ],
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": "network",
+      "label": "IPv4前缀与路由方法",
+      "kind": "teaching",
+      "sections": [
+        "IPv4与子网",
+        "CIDR与路由"
+      ],
+      "nodeIds": [
+        "ip-service",
+        "ipv4-address",
+        "mask",
+        "subnet-bounds",
+        "cidr",
+        "routing-scope",
+        "dijkstra",
+        "distance-vector"
+      ],
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": "extension",
+      "label": "组播、隧道、转换与IPv6",
+      "kind": "teaching",
+      "sections": [
+        "多播、VPN与NAT",
+        "IPv6"
+      ],
+      "nodeIds": [
+        "multicast",
+        "vpn",
+        "nat",
+        "ipv6-header",
+        "ipv6-address",
+        "transition"
+      ],
+      "pages": [
+        9,
+        10
+      ]
+    },
+    {
+      "id": "wireless",
+      "label": "无线体系、竞争与地址",
+      "kind": "teaching",
+      "sections": [
+        "无线局域网"
+      ],
+      "nodeIds": [
+        "wlan",
+        "hidden-exposed",
+        "csma-ca",
+        "wlan-address"
+      ],
+      "pages": [
+        11
+      ]
+    }
+  ],
+  "learningPaths": [
+    {
+      "id": "representation",
+      "label": "从交换和分层到信号表示",
+      "nodeIds": [
+        "route",
+        "switching",
+        "layers",
+        "symbols",
+        "line-coding"
+      ],
+      "relations": [
+        {
+          "from": "route",
+          "to": "switching",
+          "label": "先修"
+        },
+        {
+          "from": "switching",
+          "to": "layers",
+          "label": "分层定位：区分交换方式与协议层提供的服务"
+        },
+        {
+          "from": "layers",
+          "to": "symbols",
+          "label": "下接物理层：先分清传送比特与承载码元"
+        },
+        {
+          "from": "symbols",
+          "to": "line-coding",
+          "label": "表示方法：把比特映射成可识别的信号跃迁"
+        }
+      ],
+      "purpose": "识别哪一层的问题，再讨论比特、码元和线路编码。",
+      "kind": "teaching",
+      "pages": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "access",
+      "label": "从负载到随机接入与碰撞处理",
+      "nodeIds": [
+        "performance",
+        "queueing",
+        "poisson-access",
+        "aloha",
+        "csma-cd",
+        "csma-ca"
+      ],
+      "relations": [
+        {
+          "from": "performance",
+          "to": "queueing",
+          "label": "先修"
+        },
+        {
+          "from": "queueing",
+          "to": "poisson-access",
+          "label": "先修"
+        },
+        {
+          "from": "poisson-access",
+          "to": "aloha",
+          "label": "先修"
+        },
+        {
+          "from": "aloha",
+          "to": "csma-cd",
+          "label": "对比：不监听的随机发送与带传播风险的载波监听"
+        },
+        {
+          "from": "csma-cd",
+          "to": "csma-ca",
+          "label": "对比：发送中检测与无线碰撞避免"
+        }
+      ],
+      "purpose": "共享Poisson计数工具后比较不同接入机制；两条对比边不是推导公式链。",
+      "kind": "teaching",
+      "pages": [
+        2,
+        5,
+        11
+      ]
+    },
+    {
+      "id": "prefix-routing",
+      "label": "从设备职责到两种路由计算",
+      "nodeIds": [
+        "devices",
+        "ip-service",
+        "ipv4-address",
+        "mask",
+        "cidr",
+        "routing-scope",
+        "dijkstra",
+        "distance-vector"
+      ],
+      "relations": [
+        {
+          "from": "devices",
+          "to": "ip-service",
+          "label": "层级衔接：二层转帧与三层选下一跳"
+        },
+        {
+          "from": "ip-service",
+          "to": "ipv4-address",
+          "label": "先修"
+        },
+        {
+          "from": "ipv4-address",
+          "to": "mask",
+          "label": "方法：用给定边界把32位地址分出网络部分"
+        },
+        {
+          "from": "mask",
+          "to": "cidr",
+          "label": "推广：脱离类别后仍以显式前缀判断范围和聚合"
+        },
+        {
+          "from": "cidr",
+          "to": "routing-scope",
+          "label": "先修"
+        },
+        {
+          "from": "routing-scope",
+          "to": "dijkstra",
+          "label": "方法选择：取得全图后按非负边权计算最短路"
+        },
+        {
+          "from": "dijkstra",
+          "to": "distance-vector",
+          "label": "对比：掌握拓扑后计算与只交换邻居报价"
+        }
+      ],
+      "purpose": "前缀确定交付范围，控制协议提供路由，最后比较算法输入。",
+      "kind": "teaching",
+      "pages": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "transition",
+      "label": "从私有网络理解封装与过渡",
+      "nodeIds": [
+        "ip-service",
+        "ipv4-address",
+        "vpn",
+        "transition"
+      ],
+      "relations": [
+        {
+          "from": "ip-service",
+          "to": "ipv4-address",
+          "label": "先修"
+        },
+        {
+          "from": "ipv4-address",
+          "to": "vpn",
+          "label": "先修"
+        },
+        {
+          "from": "vpn",
+          "to": "transition",
+          "label": "先修"
+        }
+      ],
+      "purpose": "以已有封装概念区分双栈、隧道及地址翻译。",
+      "kind": "teaching",
+      "pages": [
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "wireless",
+      "label": "从WLAN结构到无线接入选择",
+      "nodeIds": [
+        "devices",
+        "wlan",
+        "hidden-exposed",
+        "csma-ca"
+      ],
+      "relations": [
+        {
+          "from": "devices",
+          "to": "wlan",
+          "label": "先修"
+        },
+        {
+          "from": "wlan",
+          "to": "hidden-exposed",
+          "label": "场景：局部听见的信道状态不等于接收端干扰状态"
+        },
+        {
+          "from": "hidden-exposed",
+          "to": "csma-ca",
+          "label": "应对：用退避、确认和可选预约降低冲突风险"
+        }
+      ],
+      "purpose": "接收端局部条件解释为什么不能直接照搬有线碰撞检测。",
+      "kind": "teaching",
+      "pages": [
+        6,
+        11
+      ]
+    }
+  ],
+  "coverageContract": {
+    "baselineCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "readerSha256": "274bbc61c17017e197a2202223a31d145b744eb24623781fba06d29be366475c",
+    "sourcePages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "displayPageCount": 11,
+    "progressPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "progressPageCount": 11,
+    "nodeCoverageMeaning": "每个真实原页至少归属一个节点；封面、目录、END和可选引入单独标明，覆盖不代表原页具有新增完整论证。",
+    "modelScope": "全部节点与全量有向关系构成整章模型；不是仅当前页的一层邻接。",
+    "uiBoundary": "现V2读取section、prerequisites和edges；themes与learningPaths为可审教学元数据，尚不单独渲染。2/3层表示入/出双向关系距离，不是先修树或学科等级。",
+    "prerequisiteMeaning": "先修是推荐阅读关系，不锁门；显式对比、区分和应用边不解释为数学推出或时间因果。"
+  },
+  "revision": {
+    "kind": "revalidated-isolated-candidate",
+    "baseGraphSha256": "bb2870b54fe7200ed6c994846ab5ef825c3b8e83679ac2686e945b4d96c5a30b",
+    "baseSourceMapSha256": "a17b2e3d3e86092be6106f85caa26c3e8e5bca0c8248d545d2dbfa445e90b357",
+    "mainCommit": "673c796565c400946cd28b72e26d4ffbcd24a29f",
+    "productionModified": false,
+    "independentQA": "pending-new-model-review"
+  }
+}

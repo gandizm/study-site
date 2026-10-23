@@ -180,6 +180,33 @@
       "readerPageCount": 141,
       "nodeCount": 60,
       "startPage": 1
+    },
+    {
+      "chapterId": "network-ch4",
+      "title": "计算机网络 第四章 网络层",
+      "readerPath": "network-ch4-ppt.html",
+      "knowledgeMapPath": "courses/network-ch4/knowledge-map.json",
+      "readerPageCount": 233,
+      "nodeCount": 99,
+      "startPage": 1
+    },
+    {
+      "chapterId": "network-review",
+      "title": "计算机网络 · 总复习",
+      "readerPath": "network-review-ppt.html",
+      "knowledgeMapPath": "courses/network-review/knowledge-map.json",
+      "readerPageCount": 11,
+      "nodeCount": 39,
+      "startPage": 1
+    },
+    {
+      "chapterId": "network-queueing",
+      "title": "计算机网络 · 排队论与全网时延",
+      "readerPath": "network-ppt.html",
+      "knowledgeMapPath": "courses/network-queueing/knowledge-map.json",
+      "readerPageCount": 33,
+      "nodeCount": 30,
+      "startPage": 103
     }
   ]
 }
