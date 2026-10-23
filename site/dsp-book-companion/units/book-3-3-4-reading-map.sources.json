@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-3-4-reading-map",
+  "title": "模拟转数字的书本主线与频率/系数角色",
+  "bookSectionIds": [
+    "book-3-3-4"
+  ],
+  "learningPurpose": "区分两种转换保留的对象，按书预畸变与课件c约定回读，同RC题核系数/稳定性/增益。",
+  "printedPages": [
+    154,
+    155,
+    156,
+    157,
+    159
+  ],
+  "pdfPages": [
+    171,
+    172,
+    173,
+    174,
+    176
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "系统函数与通阻带频率指标；脉冲不变不同参数题按需打开已有短桥，不额外抄书。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-33",
+      "filename": "课件3.3.pptx",
+      "pages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed",
+        "special_problem"
+      ],
+      "note": "P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "154–155脉冲法定义/条件，156–157双线性及预畸变，159RC原题；原PDF实际逐图读。",
+      "printedPages": [
+        154,
+        155,
+        156,
+        157,
+        159
+      ],
+      "pdfPages": [
+        171,
+        172,
+        173,
+        174,
+        176
+      ]
+    },
+    {
+      "kind": "ppt-addition",
+      "claim": "P51–52 c与中间Ω1T/ω对应；P53–54 RC两法，原α/a1/a2与本卡b,d显式桥接。"
+    },
+    {
+      "kind": "minimal-check",
+      "claim": "RC双线性系数同原函数代换，H2(1)=1及极点单位圆内；H1直流按原书未乘T定义。"
+    }
+  ],
+  "status": "reviewed-release"
+}

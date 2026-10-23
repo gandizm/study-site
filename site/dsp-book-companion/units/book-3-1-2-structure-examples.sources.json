@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-1-2-structure-examples",
+  "title": "课件结构例题：先核系数，再沿图走",
+  "bookSectionIds": [
+    "book-3-1-2"
+  ],
+  "learningPurpose": "只补课件与书的角色或条件差异，不重复整节定义，不新增必做任务。",
+  "printedPages": [
+    125,
+    126,
+    127,
+    128
+  ],
+  "pdfPages": [
+    142,
+    143,
+    144,
+    145
+  ],
+  "prerequisites": [],
+  "pptReferences": [
+    {
+      "deckId": "dsp-31",
+      "filename": "3.1数字滤波器概述.pptx",
+      "pages": [
+        27,
+        33,
+        39
+      ],
+      "roles": [
+        "special_problem",
+        "bridge_needed"
+      ],
+      "note": "P27与第三版书例3.1.1同H但多要求直接I型；P33/P39并非当前第三版例3.1.2/3的同一数据。源图/源式符号问题只按已见数学及原对象核验。"
+    }
+  ],
+  "sourceClaims": [],
+  "status": "reviewed-release"
+}

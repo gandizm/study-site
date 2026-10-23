@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-2-2-reading-map",
+  "title": "DFS系数不是冲激的“高度”",
+  "bookSectionIds": [
+    "book-2-2-2"
+  ],
+  "learningPurpose": "按书一般线谱式与同一八点例理解坐标/尺度/冲激求和，不重复DFS计算",
+  "printedPages": [
+    53,
+    54,
+    55
+  ],
+  "pdfPages": [
+    70,
+    71,
+    72
+  ],
+  "prerequisites": [
+    "book-2-2-1-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "定位卡是本节入口，不强制逐页双读。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-22",
+      "filename": "2.2周期序列的离散傅里叶变换.pptx",
+      "pages": [
+        2,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "P2引入、P9路线、P10/11复指数冲激谱、P12一般式、P13同一N8例对照。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "复指数、一般周期序列广义DTFT与原例2.2.3；与PPT2.2 P10–13内容对应。",
+      "printedPages": [
+        53,
+        54,
+        55
+      ],
+      "pdfPages": [
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "kind": "supplement-role-bridge",
+      "claim": "k为谱线编号，ω为连续频率；δ为Dirac冲激，权重不等于有限高度。"
+    },
+    {
+      "kind": "original-example",
+      "claim": "同一周期8原例Xtilde0=4、a0=1/2、零频冲激权重π，解释P13形状相似不等于数值相同。"
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "只取一般式及PPT指定原例，不扩大到书2.2.2其余所有例题。"
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

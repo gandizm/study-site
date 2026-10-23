@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-4-3-reading-map",
+  "title": "频率采样法：原书主线与k/n角色",
+  "bookSectionIds": [
+    "book-3-4-3"
+  ],
+  "learningPurpose": "从书的设计流程理解频率样本到有限长系数，辨局部索引/相位条件与同题用途，明确同源代码不能取代原解析式。",
+  "printedPages": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197
+  ],
+  "pdfPages": [
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "IDFT定义及实数共轭配对；仅作必要桥，书例3.4.10和等波纹不追加。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-34",
+      "filename": "课件3.4.pptx",
+      "pages": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "实际图读印189–197：流程3.4.16/17、对称/反对称限制、重构误差和四原例。",
+      "printedPages": [
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197
+      ],
+      "pdfPages": [
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214
+      ]
+    },
+    {
+      "kind": "notation-bridge",
+      "claim": "k为IDFT频率求和索引，n为所求系数位置；转到H(z)时n是新作用域的哑变量。"
+    },
+    {
+      "kind": "same-example-check",
+      "claim": "例3.4.7系数公式与原三非零样本直算；例3.4.8原解析与代码不一致已另有独审。"
+    },
+    {
+      "kind": "code-consistency",
+      "claim": "例3.4.9解析系数2/33，同页MATLAB缺2；四非零样本独立IDFT能核。",
+      "printedPages": [
+        197
+      ],
+      "pdfPages": [
+        214
+      ]
+    }
+  ],
+  "status": "reviewed-release"
+}

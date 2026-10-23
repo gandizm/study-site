@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-3-4-circular-symmetry",
+  "title": "两套圆周分解与自配对边界",
+  "bookSectionIds": [
+    "book-2-3-4"
+  ],
+  "learningPurpose": "两套圆周分解与自配对边界",
+  "printedPages": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82
+  ],
+  "pdfPages": [
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "prerequisites": [
+    "book-2-3-3-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-23",
+      "filename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "pages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。",
+      "printedPages": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "pdfPages": [
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Book explains core definitions and proofs; this optional card only provides locations, local roles, source-specific conditions and comparison. No new required assignment."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

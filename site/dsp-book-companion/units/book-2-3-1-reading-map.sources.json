@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-3-1-reading-map",
+  "title": "正逆DFT的索引与恢复范围",
+  "bookSectionIds": [
+    "book-2-3-1"
+  ],
+  "learningPurpose": "正逆DFT的索引与恢复范围；已有推导直接指书，只补角色、范围与课件对应",
+  "printedPages": [
+    63,
+    64,
+    65
+  ],
+  "pdfPages": [
+    80,
+    81,
+    82
+  ],
+  "prerequisites": [
+    "book-2-1-1-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-23",
+      "filename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "pages": [
+        3,
+        4,
+        5,
+        12,
+        13
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "书63–64的定义/逆变换证明/DFT与DFS图，加65图2.3.2上两图；仅取例2.3.1第(1)问，不自动纳入其余书例。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "书63–64的定义/逆变换证明/DFT与DFS图，加65图2.3.2上两图；仅取例2.3.1第(1)问，不自动纳入其余书例。",
+      "printedPages": [
+        63,
+        64,
+        65
+      ],
+      "pdfPages": [
+        80,
+        81,
+        82
+      ]
+    },
+    {
+      "kind": "notation-role-bridge",
+      "claim": "固定k求和n、固定n求和k、代入时m为输入时间；书P64局部M为任意整数而前P63的M为序列长度。"
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Only required book portions for the cited PPT pages; no automatic coverage of other examples on the same physical pages."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-3-3-reading-map",
+  "title": "有限主值与周期延拓",
+  "bookSectionIds": [
+    "book-2-3-3"
+  ],
+  "learningPurpose": "有限主值与周期延拓；已有推导直接指书，只补角色、范围与课件对应",
+  "printedPages": [
+    64,
+    68,
+    69
+  ],
+  "pdfPages": [
+    81,
+    85,
+    86
+  ],
+  "prerequisites": [
+    "book-2-3-1-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-23",
+      "filename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "pages": [
+        11,
+        14,
+        15
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "图2.3.1及式2.3.6–10；P14仅路线。例2.3.5只提示超长折叠条件，未列为新增必做题。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "图2.3.1及式2.3.6–10；P14仅路线。例2.3.5只提示超长折叠条件，未列为新增必做题。",
+      "printedPages": [
+        64,
+        68,
+        69
+      ],
+      "pdfPages": [
+        81,
+        85,
+        86
+      ]
+    },
+    {
+      "kind": "notation-role-bridge",
+      "claim": "书m为副本求和索引，卡临时改r；PPT15可读式左右自由索引混用应按同一时间角色理解。"
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Only required book portions for the cited PPT pages; no automatic coverage of other examples on the same physical pages."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

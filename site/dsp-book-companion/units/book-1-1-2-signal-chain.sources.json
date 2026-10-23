@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "book-1-1-2-signal-chain",
+  "title": "同一条处理链，为什么有两个滤波器",
+  "bookSectionIds": [
+    "book-1-1-2"
+  ],
+  "learningPurpose": "只补课件与书的角色或条件差异，不重复整节定义，不新增必做任务。",
+  "printedPages": [
+    8,
+    9
+  ],
+  "pdfPages": [
+    25,
+    26
+  ],
+  "prerequisites": [],
+  "pptReferences": [
+    {
+      "deckId": "dsp-12",
+      "filename": "课件1.2.pptx",
+      "pages": [
+        6
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ]
+    }
+  ],
+  "sourceClaims": [],
+  "status": "reviewed-release"
+}

@@ -1256,7 +1256,14 @@
         "从非绝对可和周期序列引入冲激频谱，不作为普通求和收敛的反例混算。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-2-reading-map",
+          "contentSha256": "d343125793f3aafad6cc8e0b7182022460615f926e6bb39bd488cba09e6876fd",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P2引入、P9路线、P10/11复指数冲激谱、P12一般式、P13同一N8例对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1298,7 +1305,14 @@
         "离散傅里叶级数、系数归一化、正交性与矩形周期例。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-1-reading-map",
+          "contentSha256": "10722e39cb026ab9f8a306f14e9335f6b9672adfbff7922869bfe6a69a56f9b8",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4路线、P5/6系数、P7归一化切换与主值取样、P8八点周期矩形例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1324,7 +1338,14 @@
         "离散周期基只需N个不同k代表；原PPT无穷级数上下限与周期系数直接重复相加不相容。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-1-reading-map",
+          "contentSha256": "10722e39cb026ab9f8a306f14e9335f6b9672adfbff7922869bfe6a69a56f9b8",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4路线、P5/6系数、P7归一化切换与主值取样、P8八点周期矩形例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1346,7 +1367,14 @@
         "正交性一般按k≡m(mod N)判断；同一代表集内才可写k=m。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-1-reading-map",
+          "contentSha256": "10722e39cb026ab9f8a306f14e9335f6b9672adfbff7922869bfe6a69a56f9b8",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4路线、P5/6系数、P7归一化切换与主值取样、P8八点周期矩形例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1368,7 +1396,14 @@
         "保留原X̃(k)约定及其与a_k的N倍关系，不统一抹掉符号。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-1-reading-map",
+          "contentSha256": "10722e39cb026ab9f8a306f14e9335f6b9672adfbff7922869bfe6a69a56f9b8",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4路线、P5/6系数、P7归一化切换与主值取样、P8八点周期矩形例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1403,7 +1438,14 @@
         "原书例2.2.1以第3版实际印页52,53为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-1-reading-map",
+          "contentSha256": "10722e39cb026ab9f8a306f14e9335f6b9672adfbff7922869bfe6a69a56f9b8",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4路线、P5/6系数、P7归一化切换与主值取样、P8八点周期矩形例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1423,7 +1465,14 @@
         "周期序列的广义DTFT及冲激权重。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-2-reading-map",
+          "contentSha256": "d343125793f3aafad6cc8e0b7182022460615f926e6bb39bd488cba09e6876fd",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P2引入、P9路线、P10/11复指数冲激谱、P12一般式、P13同一N8例对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1444,7 +1493,14 @@
         "周期序列的广义DTFT及冲激权重。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-2-reading-map",
+          "contentSha256": "d343125793f3aafad6cc8e0b7182022460615f926e6bb39bd488cba09e6876fd",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P2引入、P9路线、P10/11复指数冲激谱、P12一般式、P13同一N8例对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1464,7 +1520,14 @@
         "周期序列的广义DTFT及冲激权重。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-2-reading-map",
+          "contentSha256": "d343125793f3aafad6cc8e0b7182022460615f926e6bb39bd488cba09e6876fd",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P2引入、P9路线、P10/11复指数冲激谱、P12一般式、P13同一N8例对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1484,7 +1547,14 @@
         "周期序列的广义DTFT及冲激权重。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-2-reading-map",
+          "contentSha256": "d343125793f3aafad6cc8e0b7182022460615f926e6bb39bd488cba09e6876fd",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P2引入、P9路线、P10/11复指数冲激谱、P12一般式、P13同一N8例对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1534,7 +1604,14 @@
         "原书例2.2.3以第3版实际印页54,55为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-2-reading-map",
+          "contentSha256": "d343125793f3aafad6cc8e0b7182022460615f926e6bb39bd488cba09e6876fd",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P2引入、P9路线、P10/11复指数冲激谱、P12一般式、P13同一N8例对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1554,7 +1631,14 @@
         "模拟/采样冲激串/离散序列的频谱桥接与原例2.2.7；例题文字在印59，四域图延至印60上半；排除印59下半起的2.2.4及印60轴承内容。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1574,7 +1658,14 @@
         "模拟/采样冲激串/离散序列的频谱桥接与原例2.2.7；例题文字在印59，四域图延至印60上半；排除印59下半起的2.2.4及印60轴承内容。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1594,7 +1685,14 @@
         "模拟/采样冲激串/离散序列的频谱桥接与原例2.2.7；例题文字在印59，四域图延至印60上半；排除印59下半起的2.2.4及印60轴承内容。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1614,7 +1712,14 @@
         "模拟/采样冲激串/离散序列的频谱桥接与原例2.2.7；例题文字在印59，四域图延至印60上半；排除印59下半起的2.2.4及印60轴承内容。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1634,7 +1739,14 @@
         "模拟/采样冲激串/离散序列的频谱桥接与原例2.2.7；例题文字在印59，四域图延至印60上半；排除印59下半起的2.2.4及印60轴承内容。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1654,7 +1766,14 @@
         "模拟/采样冲激串/离散序列的频谱桥接与原例2.2.7；例题文字在印59，四域图延至印60上半；排除印59下半起的2.2.4及印60轴承内容。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1694,7 +1813,14 @@
         "原书例2.2.7以第3版实际印页58,59,60为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1734,7 +1860,14 @@
         "原书例2.2.7以第3版实际印页58,59,60为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1774,7 +1907,14 @@
         "原书例2.2.7以第3版实际印页58,59,60为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1814,7 +1954,14 @@
         "原书例2.2.7以第3版实际印页58,59,60为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -1854,7 +2001,14 @@
         "原书例2.2.7以第3版实际印页58,59,60为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-2-3-reading-map",
+          "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P14–18采样频谱桥，P19频率坐标，P20–24原例2.2.7三问；同书例不另发明题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -1917,7 +2071,14 @@
         "有限DFT动机、正逆式与逆变换证明。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-1-reading-map",
+          "contentSha256": "0d5f4f02d853c9dee63f07154067d9600b3b3e21986916274d5e22400b00d93b",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书63–64的定义/逆变换证明/DFT与DFS图，加65图2.3.2上两图；仅取例2.3.1第(1)问，不自动纳入其余书例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -1937,7 +2098,14 @@
         "有限DFT动机、正逆式与逆变换证明。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-1-reading-map",
+          "contentSha256": "0d5f4f02d853c9dee63f07154067d9600b3b3e21986916274d5e22400b00d93b",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书63–64的定义/逆变换证明/DFT与DFS图，加65图2.3.2上两图；仅取例2.3.1第(1)问，不自动纳入其余书例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -1959,7 +2127,14 @@
         "有限整圈求和判据是模N相同；固定输出n与输入m不能共用求和作用域。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-1-reading-map",
+          "contentSha256": "0d5f4f02d853c9dee63f07154067d9600b3b3e21986916274d5e22400b00d93b",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书63–64的定义/逆变换证明/DFT与DFS图，加65图2.3.2上两图；仅取例2.3.1第(1)问，不自动纳入其余书例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -1979,7 +2154,14 @@
         "DFT与Z/DTFT关系，以及R4的8点/16点对比。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-2-reading-map",
+          "contentSha256": "e93f881de1b5c746c171208e0dcb1cdd5490088e76860dfe14d660ebf14af03d",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；印66下半式2.3.4/5、印67例2.3.3及图2.3.4；R4的8/16点原题条件相同。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -1999,7 +2181,14 @@
         "DFT与Z/DTFT关系，以及R4的8点/16点对比。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-2-reading-map",
+          "contentSha256": "e93f881de1b5c746c171208e0dcb1cdd5490088e76860dfe14d660ebf14af03d",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；印66下半式2.3.4/5、印67例2.3.3及图2.3.4；R4的8/16点原题条件相同。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2019,7 +2208,14 @@
         "DFT与Z/DTFT关系，以及R4的8点/16点对比。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-2-reading-map",
+          "contentSha256": "e93f881de1b5c746c171208e0dcb1cdd5490088e76860dfe14d660ebf14af03d",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；印66下半式2.3.4/5、印67例2.3.3及图2.3.4；R4的8/16点原题条件相同。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2039,7 +2235,14 @@
         "DFT与Z/DTFT关系，以及R4的8点/16点对比。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-2-reading-map",
+          "contentSha256": "e93f881de1b5c746c171208e0dcb1cdd5490088e76860dfe14d660ebf14af03d",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；印66下半式2.3.4/5、印67例2.3.3及图2.3.4；R4的8/16点原题条件相同。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2059,7 +2262,14 @@
         "DFT与Z/DTFT关系，以及R4的8点/16点对比。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-2-reading-map",
+          "contentSha256": "e93f881de1b5c746c171208e0dcb1cdd5490088e76860dfe14d660ebf14af03d",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；印66下半式2.3.4/5、印67例2.3.3及图2.3.4；R4的8/16点原题条件相同。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2079,7 +2289,14 @@
         "有限数组与周期延拓的区别。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-3-reading-map",
+          "contentSha256": "f9dd1a322d6f7d6d5e2f8115a4ea4bc5ba1a1fc75d523fa07538fe100ce751dc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；图2.3.1及式2.3.6–10；P14仅路线。例2.3.5只提示超长折叠条件，未列为新增必做题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2100,7 +2317,14 @@
         "单位脉冲N点DFT是定义的专属检查，映射不声称原书同页有同一图。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-1-reading-map",
+          "contentSha256": "0d5f4f02d853c9dee63f07154067d9600b3b3e21986916274d5e22400b00d93b",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书63–64的定义/逆变换证明/DFT与DFS图，加65图2.3.2上两图；仅取例2.3.1第(1)问，不自动纳入其余书例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2121,7 +2345,14 @@
         "单位脉冲N点DFT是定义的专属检查，映射不声称原书同页有同一图。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-1-reading-map",
+          "contentSha256": "0d5f4f02d853c9dee63f07154067d9600b3b3e21986916274d5e22400b00d93b",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书63–64的定义/逆变换证明/DFT与DFS图，加65图2.3.2上两图；仅取例2.3.1第(1)问，不自动纳入其余书例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2144,7 +2375,14 @@
         "基本概念目录，相关仅点名；书结构中用周期性、性质、卷积应用承接，不虚构一个同编号基本概念节。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-3-reading-map",
+          "contentSha256": "f9dd1a322d6f7d6d5e2f8115a4ea4bc5ba1a1fc75d523fa07538fe100ce751dc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；图2.3.1及式2.3.6–10；P14仅路线。例2.3.5只提示超长折叠条件，未列为新增必做题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2166,7 +2404,14 @@
         "PPT可读延拓式左右自由时间索引混写；桥接中固定n、用r枚举周期副本。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-3-reading-map",
+          "contentSha256": "f9dd1a322d6f7d6d5e2f8115a4ea4bc5ba1a1fc75d523fa07538fe100ce751dc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；图2.3.1及式2.3.6–10；P14仅路线。例2.3.5只提示超长折叠条件，未列为新增必做题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2186,7 +2431,14 @@
         "循环移位定义及课件五点/六点例，条件变化需保留。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2206,7 +2458,14 @@
         "循环移位定义及课件五点/六点例，条件变化需保留。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2228,7 +2487,20 @@
         "原五点数组与N5/N6、左移1/右移2是明确数值条件，不把P16/17一般定义和流程误标特定题。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-classroom-variants",
+          "contentSha256": "f77767186e01fc2f515933c6e91637d10ced501d089c461d53d8f2ee1e3432ec",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原PPT数组[2,1,3,1,0.5]的5点移位及[1,2,2,1]自卷积五问。书位置支持方法，不谎称是同一书例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2250,7 +2522,20 @@
         "原五点数组与N5/N6、左移1/右移2是明确数值条件，不把P16/17一般定义和流程误标特定题。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-classroom-variants",
+          "contentSha256": "f77767186e01fc2f515933c6e91637d10ced501d089c461d53d8f2ee1e3432ec",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原PPT数组[2,1,3,1,0.5]的5点移位及[1,2,2,1]自卷积五问。书位置支持方法，不谎称是同一书例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2271,7 +2556,14 @@
         "卷积三项提纲。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2293,7 +2585,14 @@
         "原页补线性/圆周卷积计算与折回；2.3.4的卷积性质与2.6.1算法用途分层，不按课件序号硬套。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2315,7 +2614,14 @@
         "原页补线性/圆周卷积计算与折回；2.3.4的卷积性质与2.6.1算法用途分层，不按课件序号硬套。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2337,7 +2643,14 @@
         "原页补线性/圆周卷积计算与折回；2.3.4的卷积性质与2.6.1算法用途分层，不按课件序号硬套。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2361,7 +2674,20 @@
         "必须保留同一[1,2,2,1]的线性及4/6/7/8点五问，不只列一句“会卷积”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-classroom-variants",
+          "contentSha256": "f77767186e01fc2f515933c6e91637d10ced501d089c461d53d8f2ee1e3432ec",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原PPT数组[2,1,3,1,0.5]的5点移位及[1,2,2,1]自卷积五问。书位置支持方法，不谎称是同一书例。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2400,7 +2726,14 @@
         "原书例2.3.10以第3版实际印页75,76为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2421,7 +2754,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2441,7 +2781,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2461,7 +2808,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2483,7 +2837,14 @@
         "原式n+m正m表示左移；W_N定义自带负指数，幂号不可再凭口诀翻一次。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2505,7 +2866,14 @@
         "原式n+m正m表示左移；W_N定义自带负指数，幂号不可再凭口诀翻一次。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2553,7 +2921,14 @@
         "原书例2.3.8以第3版实际印页71,72为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2573,7 +2948,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2595,7 +2977,14 @@
         "原保存缓存m−n=n′与后续上下限/指数不一致；采用与后续一致的r=n−m并明示。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2617,7 +3006,14 @@
         "此处l是频点求和变量，不是前页固定频移量。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2637,7 +3033,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2657,7 +3060,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2677,7 +3087,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2697,7 +3114,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2717,7 +3141,14 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2737,7 +3168,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2757,7 +3201,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2777,7 +3234,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2797,7 +3267,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2817,7 +3300,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2840,7 +3336,20 @@
         "“相角没有对称特性”须限定；非零配对点满足π−φ模2π，零值相位未定义。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2860,7 +3369,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2880,7 +3402,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2900,7 +3435,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2920,7 +3468,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2940,7 +3501,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2960,7 +3534,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -2980,7 +3567,20 @@
         "线性、循环移位、循环卷积、共轭、Parseval与对称性对应书2.3.4。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-23",
@@ -3017,7 +3617,20 @@
         "原书例2.3.13以第3版实际印页81,82为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-3-4-reading-map",
+          "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-3-4-circular-symmetry",
+          "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书两套分解与例2.3.13；P44/45额外拆模相位，给原定义下的非零配对条件，不把全部图示称原书逐句已有。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-24",
@@ -5047,7 +5660,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-order-roles",
+          "contentSha256": "44739efbf40202a2fbcc96981d65f4f1c6ae4367717aa76df401ae138b88bb90",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；只补书/PPT前馈与反馈的N/M角色、原P19求和下限及直接型延时计数条件。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5094,7 +5714,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-order-roles",
+          "contentSha256": "44739efbf40202a2fbcc96981d65f4f1c6ae4367717aa76df401ae138b88bb90",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；只补书/PPT前馈与反馈的N/M角色、原P19求和下限及直接型延时计数条件。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5117,7 +5744,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-order-roles",
+          "contentSha256": "44739efbf40202a2fbcc96981d65f4f1c6ae4367717aa76df401ae138b88bb90",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；只补书/PPT前馈与反馈的N/M角色、原P19求和下限及直接型延时计数条件。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5140,7 +5774,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-order-roles",
+          "contentSha256": "44739efbf40202a2fbcc96981d65f4f1c6ae4367717aa76df401ae138b88bb90",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；只补书/PPT前馈与反馈的N/M角色、原P19求和下限及直接型延时计数条件。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5163,7 +5804,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-order-roles",
+          "contentSha256": "44739efbf40202a2fbcc96981d65f4f1c6ae4367717aa76df401ae138b88bb90",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；只补书/PPT前馈与反馈的N/M角色、原P19求和下限及直接型延时计数条件。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5186,7 +5834,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-order-roles",
+          "contentSha256": "44739efbf40202a2fbcc96981d65f4f1c6ae4367717aa76df401ae138b88bb90",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；只补书/PPT前馈与反馈的N/M角色、原P19求和下限及直接型延时计数条件。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5210,7 +5865,14 @@
         "延时数通常为max(前馈阶数,反馈阶数)，原页N不少于M时才化为N；不推广成任何长度都只用N。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-order-roles",
+          "contentSha256": "44739efbf40202a2fbcc96981d65f4f1c6ae4367717aa76df401ae138b88bb90",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；只补书/PPT前馈与反馈的N/M角色、原P19求和下限及直接型延时计数条件。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5238,7 +5900,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-structure-examples",
+          "contentSha256": "3885a874942fe84edc9f20345a7d0774071e4e2b154c88cea8e2b5fb3faf7663",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P27与第三版书例3.1.1同H但多要求直接I型；P33/P39并非当前第三版例3.1.2/3的同一数据。源图/源式符号问题只按已见数学及原对象核验。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5381,7 +6050,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-structure-examples",
+          "contentSha256": "3885a874942fe84edc9f20345a7d0774071e4e2b154c88cea8e2b5fb3faf7663",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P27与第三版书例3.1.1同H但多要求直接I型；P33/P39并非当前第三版例3.1.2/3的同一数据。源图/源式符号问题只按已见数学及原对象核验。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5525,7 +6201,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-2-structure-examples",
+          "contentSha256": "3885a874942fe84edc9f20345a7d0774071e4e2b154c88cea8e2b5fb3faf7663",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P27与第三版书例3.1.1同H但多要求直接I型；P33/P39并非当前第三版例3.1.2/3的同一数据。源图/源式符号问题只按已见数学及原对象核验。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5548,7 +6231,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-3-fir-indices",
+          "contentSha256": "88f26bcd56ec8fc17b7ae849d4aed676f4c1130f2441081ca651ee7a59646ec2",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P40的时间/求和角色、P42/43的抽头范围、P44的因子分组与P46实际参数例题；不声明覆盖相邻P41/45的所有比较命题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5595,7 +6285,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-3-fir-indices",
+          "contentSha256": "88f26bcd56ec8fc17b7ae849d4aed676f4c1130f2441081ca651ee7a59646ec2",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P40的时间/求和角色、P42/43的抽头范围、P44的因子分组与P46实际参数例题；不声明覆盖相邻P41/45的所有比较命题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5618,7 +6315,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-3-fir-indices",
+          "contentSha256": "88f26bcd56ec8fc17b7ae849d4aed676f4c1130f2441081ca651ee7a59646ec2",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P40的时间/求和角色、P42/43的抽头范围、P44的因子分组与P46实际参数例题；不声明覆盖相邻P41/45的所有比较命题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5641,7 +6345,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-3-fir-indices",
+          "contentSha256": "88f26bcd56ec8fc17b7ae849d4aed676f4c1130f2441081ca651ee7a59646ec2",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P40的时间/求和角色、P42/43的抽头范围、P44的因子分组与P46实际参数例题；不声明覆盖相邻P41/45的所有比较命题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5692,7 +6403,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-1-3-fir-indices",
+          "contentSha256": "88f26bcd56ec8fc17b7ae849d4aed676f4c1130f2441081ca651ee7a59646ec2",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P40的时间/求和角色、P42/43的抽头范围、P44的因子分组与P46实际参数例题；不声明覆盖相邻P41/45的所有比较命题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5715,7 +6433,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-sampling-network",
+          "contentSha256": "97a6b642e4e4f8659586be285d8bd2c56d7ef7d71eb9df10b1c95482a73b4258",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；PPT实际频率采样网络对应书3.4.24，不按PPT3.2.3节号硬套；原P48另出现M未就地定义。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5738,7 +6463,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-sampling-network",
+          "contentSha256": "97a6b642e4e4f8659586be285d8bd2c56d7ef7d71eb9df10b1c95482a73b4258",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；PPT实际频率采样网络对应书3.4.24，不按PPT3.2.3节号硬套；原P48另出现M未就地定义。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5762,7 +6494,14 @@
         "FIR描述的是总冲激响应；实现可包含相互抵消的反馈支路。有限精度会影响精确抵消，不能以表格简写替代条件。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-sampling-network",
+          "contentSha256": "97a6b642e4e4f8659586be285d8bd2c56d7ef7d71eb9df10b1c95482a73b4258",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；PPT实际频率采样网络对应书3.4.24，不按PPT3.2.3节号硬套；原P48另出现M未就地定义。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -5785,7 +6524,14 @@
         "PPT的3.1概念/3.2结构与第三版书3.1结构/3.2概念的编号顺序不同，按主题对照。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-sampling-network",
+          "contentSha256": "97a6b642e4e4f8659586be285d8bd2c56d7ef7d71eb9df10b1c95482a73b4258",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；PPT实际频率采样网络对应书3.4.24，不按PPT3.2.3节号硬套；原P48另出现M未就地定义。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-31",
@@ -6708,7 +7454,14 @@
         "此行是内容定位，不表示所列书节整节已讲完；公式、图片和例题未完成独立核对前不计辅导完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-1-1-2-signal-chain",
+          "contentSha256": "ff9e1d2dbb0e079c76592373d98c12802a96ad02a55a62240c0b41b6dcb85c17",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；只补书图处理链中模拟/离散信号、量化及两侧滤波的局部角色。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-12",
@@ -7316,7 +8069,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7341,7 +8101,14 @@
         "性能比较中的结构/稳定性概括须带实现与系数条件，待公式/表格图及书对照；不能把常见实现误作所有实现的定义。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7361,7 +8128,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7381,7 +8155,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7401,7 +8182,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7421,7 +8209,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7441,7 +8236,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7467,6 +8269,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7494,6 +8302,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7521,6 +8335,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7542,7 +8362,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7562,7 +8389,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7582,7 +8416,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7602,7 +8443,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7630,6 +8478,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7657,6 +8511,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7684,6 +8544,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7713,6 +8579,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7742,6 +8614,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7771,6 +8649,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7798,6 +8682,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7825,6 +8715,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7852,6 +8748,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7884,6 +8786,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7916,6 +8824,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7948,6 +8862,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -7980,6 +8900,12 @@
           "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-2-reading-map",
+          "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P4–10在第三版归3.2；P12–14为书3.3.1，课件标题编号不能直接套。P20确问为什么少一半；P24–27与书例3.3.1同题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -8003,7 +8929,14 @@
         "p/q为归一化拉氏变量，lambda/eta为归一化频率；不能把它们泛化为时间/频点索引。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8023,7 +8956,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8043,7 +8983,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8063,7 +9010,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8083,7 +9037,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8103,7 +9064,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8123,7 +9091,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8143,7 +9118,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8163,7 +9145,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8183,7 +9172,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8203,7 +9199,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8223,7 +9226,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-3-reading-map",
+          "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8243,7 +9253,20 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-4-impulse-roles",
+          "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45例分子0.5012/分母系数0.6449,0.7079，与书例3.3.3不同参数；P46缓存WMF明确0.247。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8265,7 +9288,20 @@
         "脉冲响应不变h(n)=ha(nT)或T*ha(nT)尺度须逐式视觉核，不猜T归一化。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-4-impulse-roles",
+          "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45例分子0.5012/分母系数0.6449,0.7079，与书例3.3.3不同参数；P46缓存WMF明确0.247。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8287,7 +9323,20 @@
         "尺度T及频率周期求和待原公式图和书互核。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-4-impulse-roles",
+          "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45例分子0.5012/分母系数0.6449,0.7079，与书例3.3.3不同参数；P46缓存WMF明确0.247。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8307,7 +9356,20 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-4-impulse-roles",
+          "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45例分子0.5012/分母系数0.6449,0.7079，与书例3.3.3不同参数；P46缓存WMF明确0.247。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8327,7 +9389,20 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-4-impulse-roles",
+          "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45例分子0.5012/分母系数0.6449,0.7079，与书例3.3.3不同参数；P46缓存WMF明确0.247。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8352,7 +9427,20 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-4-impulse-roles",
+          "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45例分子0.5012/分母系数0.6449,0.7079，与书例3.3.3不同参数；P46缓存WMF明确0.247。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8377,7 +9465,20 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-4-impulse-roles",
+          "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45例分子0.5012/分母系数0.6449,0.7079，与书例3.3.3不同参数；P46缓存WMF明确0.247。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8402,7 +9503,20 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-3-4-impulse-roles",
+          "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45例分子0.5012/分母系数0.6449,0.7079，与书例3.3.3不同参数；P46缓存WMF明确0.247。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8422,7 +9536,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8443,7 +9564,14 @@
         "原文本层为空，已目视兼容渲染及源嵌入对象定位；仅用于内容识读，不证明PowerPoint原貌保真。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8464,7 +9592,14 @@
         "原文本层为空，已目视兼容渲染及源嵌入对象定位；仅用于内容识读，不证明PowerPoint原貌保真。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8486,7 +9621,14 @@
         "转换常数c及其量纲/预畸变定义须视觉核，不与滤波器阶数混用。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8506,7 +9648,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8531,7 +9680,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8556,7 +9712,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8577,7 +9740,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-4-reading-map",
+          "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P45–47与书例3.3.3不同题；P51–52一般c选择；P53–54同RC题多一种脉冲法对照。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8597,7 +9767,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8618,7 +9795,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8647,6 +9831,12 @@
           "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -8677,6 +9867,12 @@
           "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -8698,7 +9894,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8726,6 +9929,12 @@
           "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -8753,6 +9962,12 @@
           "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -8782,6 +9997,12 @@
           "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -8809,6 +10030,12 @@
           "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -8838,6 +10065,12 @@
           "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
           "reviewStatus": "passed",
           "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-3-4-1-reading-map",
+          "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
         }
       ]
     },
@@ -8859,7 +10092,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8879,7 +10119,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8899,7 +10146,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8919,7 +10173,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8939,7 +10200,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8959,7 +10227,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8979,7 +10254,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8999,7 +10281,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9019,7 +10308,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9039,7 +10335,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9059,7 +10362,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9079,7 +10389,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9099,7 +10416,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9119,7 +10443,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9139,7 +10470,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9159,7 +10497,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9179,7 +10524,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9204,7 +10556,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9229,7 +10588,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9254,7 +10620,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9279,7 +10652,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9306,7 +10686,14 @@
         "原文字称汉明窗阻带衰减大于100，需核图/单位/特定例题及书数据，暂不当通用窗参数传播。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-2-reading-map",
+          "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9326,7 +10713,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9346,7 +10740,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9366,7 +10767,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9386,7 +10794,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9406,7 +10821,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9426,7 +10848,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9446,7 +10875,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9466,7 +10902,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9486,7 +10929,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9508,7 +10958,14 @@
         "过渡采样点与衰减的数值是课件特定经验描述，不能未经条件核实当普遍保证。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9528,7 +10985,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9555,7 +11019,14 @@
         "“第一类”可能指偶对称大类而非现代Type-I专用编号；需与原书四类N奇偶约定对读，不能直接改书。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9580,7 +11051,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9605,7 +11083,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9630,7 +11115,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9655,7 +11147,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9683,7 +11182,14 @@
         "解析选第四类反对称N=12，但书MATLAB和图的对称性可能不一致；标疑点待数值独审，不以图代替解析证明。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9709,7 +11215,14 @@
         "解析选第四类反对称N=12，但书MATLAB和图的对称性可能不一致；标疑点待数值独审，不以图代替解析证明。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9736,7 +11249,14 @@
         "解析选第四类反对称N=12，但书MATLAB和图的对称性可能不一致；标疑点待数值独审，不以图代替解析证明。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9761,7 +11281,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -9787,7 +11314,14 @@
         "原文本层为空，已目视兼容渲染及源嵌入对象定位；仅用于内容识读，不证明PowerPoint原貌保真。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-3-reading-map",
+          "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；例3.4.6–3.4.9均与书相应例题同题，不谎称PPT特有；原P46普通文字0.15rad与该页分段式0.15π冲突。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     }
   ],
   "additionalSourceVersions": [

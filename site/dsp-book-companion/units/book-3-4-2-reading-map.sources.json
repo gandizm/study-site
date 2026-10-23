@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-4-2-reading-map",
+  "title": "窗函数法：书本定位与课件必要补充",
+  "bookSectionIds": [
+    "book-3-4-2"
+  ],
+  "learningPurpose": "依原书掌握加窗设计流程，辨认延迟/长度/窗形角色，仅补课件Blackman及最小算例核对。",
+  "printedPages": [
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184
+  ],
+  "pdfPages": [
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "若不认识带符号幅度与长度，按需看book-3-4-1-length-signed-amplitude；不锁阅读入口。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-34",
+      "filename": "课件3.4.pptx",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed",
+        "extension"
+      ],
+      "note": "同题例3.4.1与3.4.2；P22 Blackman原式在本次所核书窗方法段未单列，不称必考。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "原理印174–177，窗形177–181，步骤181–182，例3.4.1/2印182–184；全部实际逐图阅读。",
+      "printedPages": [
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184
+      ],
+      "pdfPages": [
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201
+      ]
+    },
+    {
+      "kind": "ppt-addition",
+      "claim": "P22 Blackman原定义与N>>1比较范围；P23 Kaiser原β与I0角色。"
+    },
+    {
+      "kind": "minimal-example-check",
+      "claim": "原例α6/N13、h6=1/2、h5=h7=1/π，过渡带只是原书估计。",
+      "printedPages": [
+        182,
+        183
+      ],
+      "pdfPages": [
+        199,
+        200
+      ]
+    },
+    {
+      "kind": "interpretation-boundary",
+      "claim": "最大衰减某个深谷不等于全阻带最小衰减保证；不宣称书句所有含义均错误。"
+    }
+  ],
+  "status": "reviewed-release"
+}

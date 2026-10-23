@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-3-4-classroom-variants",
+  "title": "课堂换参移位与五种卷积长度",
+  "bookSectionIds": [
+    "book-2-3-4"
+  ],
+  "learningPurpose": "课堂换参移位与五种卷积长度",
+  "printedPages": [
+    69,
+    70,
+    71,
+    73,
+    74,
+    75,
+    76
+  ],
+  "pdfPages": [
+    86,
+    87,
+    88,
+    90,
+    91,
+    92,
+    93
+  ],
+  "prerequisites": [
+    "book-2-3-3-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-23",
+      "filename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "pages": [
+        18,
+        19,
+        24
+      ],
+      "roles": [
+        "book_direct",
+        "special_problem",
+        "bridge_needed"
+      ],
+      "note": "原PPT数组[2,1,3,1,0.5]的5点移位及[1,2,2,1]自卷积五问。书位置支持方法，不谎称是同一书例。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "原PPT数组[2,1,3,1,0.5]的5点移位及[1,2,2,1]自卷积五问。书位置支持方法，不谎称是同一书例。",
+      "printedPages": [
+        69,
+        70,
+        71,
+        73,
+        74,
+        75,
+        76
+      ],
+      "pdfPages": [
+        86,
+        87,
+        88,
+        90,
+        91,
+        92,
+        93
+      ]
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Book explains core definitions and proofs; this optional card only provides locations, local roles, source-specific conditions and comparison. No new required assignment."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

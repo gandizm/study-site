@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-3-3-reading-map",
+  "title": "模拟频率变换的书本定位与p/q角色",
+  "bookSectionIds": [
+    "book-3-3-3"
+  ],
+  "learningPurpose": "依书原型变换组织高/带通/带阻，辨λ/η正频率幅度对应与p/q复变量代换，避免换字母与符号混同。",
+  "printedPages": [
+    149,
+    150,
+    151,
+    152,
+    153,
+    154
+  ],
+  "pdfPages": [
+    166,
+    167,
+    168,
+    169,
+    170,
+    171
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "低通原型与通阻带指标；只用一阶原型作换元核验，不增原书未覆盖作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-33",
+      "filename": "课件3.3.pptx",
+      "pages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "原型变换对应书3.3.3；课件没有书例3.3.2的200Hz/100Hz完整数值题，不追加必做。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "图3.3.6–9、两对应表及3.3.19–25；全部实际原PDF图读。",
+      "printedPages": [
+        149,
+        150,
+        151,
+        152,
+        153,
+        154
+      ],
+      "pdfPages": [
+        166,
+        167,
+        168,
+        169,
+        170,
+        171
+      ]
+    },
+    {
+      "kind": "minimal-bridge",
+      "claim": "p=1/q在虚轴的符号与实系数幅度偶对称；一阶高通代入、极点与两端极限。"
+    },
+    {
+      "kind": "scope",
+      "claim": "表中更严一侧约束按书处理；未重写全部MATLAB例或把相邻题变必做。"
+    }
+  ],
+  "status": "reviewed-release"
+}

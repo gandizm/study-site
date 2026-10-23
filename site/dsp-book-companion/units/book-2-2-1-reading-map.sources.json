@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-2-1-reading-map",
+  "title": "DFS的两套系数与一个周期",
+  "bookSectionIds": [
+    "book-2-2-1"
+  ],
+  "learningPurpose": "按书51–53上半读定义与原例；只补归一化、谐波角色、有限代表与主值/周期对象",
+  "printedPages": [
+    51,
+    52,
+    53
+  ],
+  "pdfPages": [
+    68,
+    69,
+    70
+  ],
+  "prerequisites": [
+    "book-2-1-1-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "定位卡是本节入口，不强制逐页双读。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-22",
+      "filename": "2.2周期序列的离散傅里叶变换.pptx",
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "P4路线、P5/6系数、P7归一化切换与主值取样、P8八点周期矩形例。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "式2.2.1–2.2.6、例2.2.1及图2.2.1，截于P53上半；波浪号与a_k/tilde X按原书保留。",
+      "printedPages": [
+        51,
+        52,
+        53
+      ],
+      "pdfPages": [
+        68,
+        69,
+        70
+      ]
+    },
+    {
+      "kind": "notation-boundary",
+      "claim": "PPT5无限离散谐波和、书51式2.2.1上限N与一组N个不同代表不相容；采用0..N−1。"
+    },
+    {
+      "kind": "original-example",
+      "claim": "周期8，前4项为1、后4项零；Xtilde0=4、a0=1/2，曲线尺度不可混。",
+      "printedPages": [
+        52,
+        53
+      ]
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "非零周期序列的广义DTFT属于下一节；本卡不要求先重做全部系数表或书中其他例。"
+    },
+    {
+      "kind": "minimum-prerequisite-supplement",
+      "claim": "原PPT5连续周期级数半页：t/T0/Ω0/A(k)角色及周期平移k与谐波k区别；不把连续无限谐波和照搬离散DFS。"
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-3-4-reading-map",
+  "title": "六组DFT性质的书节定位",
+  "bookSectionIds": [
+    "book-2-3-4"
+  ],
+  "learningPurpose": "六组DFT性质的书节定位",
+  "printedPages": [
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82
+  ],
+  "pdfPages": [
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "prerequisites": [
+    "book-2-3-3-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-23",
+      "filename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "pages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "书69–82中课件所用定义/定理/指定例2.3.7/8/10/13；不包括同页其他书例或全部MATLAB程序。",
+      "printedPages": [
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "pdfPages": [
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ]
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Book explains core definitions and proofs; this optional card only provides locations, local roles, source-specific conditions and comparison. No new required assignment."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

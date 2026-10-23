@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-4-1-reading-map",
+  "title": "线性相位FIR的原书分类与端点检查",
+  "bookSectionIds": [
+    "book-3-4-1"
+  ],
+  "learningPurpose": "按书四情况判断对称性/长度/端点；只补课件过强表述的适用条件与一次成对求和。",
+  "printedPages": [
+    141,
+    172,
+    173,
+    174
+  ],
+  "pdfPages": [
+    158,
+    189,
+    190,
+    191
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "需要时看已有长度/带符号幅度短桥，不新加重复必读课。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-34",
+      "filename": "课件3.4.pptx",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "roles": [
+        "background",
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "P1/P5标题提纲；P4任何幅度须与原表条件合读，不宣称万能。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "3.2.1比较表与3.4开头/表3.4.1实际图读；原题未改变。",
+      "printedPages": [
+        141,
+        172,
+        173,
+        174
+      ],
+      "pdfPages": [
+        158,
+        189,
+        190,
+        191
+      ]
+    },
+    {
+      "kind": "minimal-bridge",
+      "claim": "反对称系数成对相消使DC为零；奇长度中心为零。"
+    }
+  ],
+  "status": "reviewed-release"
+}

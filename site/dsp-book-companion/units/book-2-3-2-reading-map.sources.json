@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-3-2-reading-map",
+  "title": "DFT是同一有限序列DTFT的频率采样",
+  "bookSectionIds": [
+    "book-2-3-2"
+  ],
+  "learningPurpose": "DFT是同一有限序列DTFT的频率采样；已有推导直接指书，只补角色、范围与课件对应",
+  "printedPages": [
+    66,
+    67
+  ],
+  "pdfPages": [
+    83,
+    84
+  ],
+  "prerequisites": [
+    "book-2-3-1-reading-map"
+  ],
+  "prerequisiteNotes": [
+    "推荐回读，不锁定学习顺序，不添加进度或必做作业。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-23",
+      "filename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "印66下半式2.3.4/5、印67例2.3.3及图2.3.4；R4的8/16点原题条件相同。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "印66下半式2.3.4/5、印67例2.3.3及图2.3.4；R4的8/16点原题条件相同。",
+      "printedPages": [
+        66,
+        67
+      ],
+      "pdfPages": [
+        83,
+        84
+      ]
+    },
+    {
+      "kind": "notation-role-bridge",
+      "claim": "频点编号k、数字角频率2πk/N、原书按N上下文复用X(k)；卡内X_N仅为比较两次计算的辅助下标。"
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "Only required book portions for the cited PPT pages; no automatic coverage of other examples on the same physical pages."
+    }
+  ],
+  "relatedUnits": [],
+  "status": "reviewed-release"
+}

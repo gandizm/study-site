@@ -28,8 +28,8 @@
         "pdfStart": 18,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "eligible",
+      "eligible": true
     },
     {
       "id": "book-1-1",
@@ -50,8 +50,8 @@
         "pdfStart": 18,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "eligible",
+      "eligible": true
     },
     {
       "id": "book-1-1-1",
@@ -72,8 +72,8 @@
         "pdfStart": 18,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-1-1-2",
@@ -94,8 +94,8 @@
         "pdfStart": 25,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-1-1-3",
@@ -138,8 +138,8 @@
         "pdfStart": 28,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-1-2",
@@ -380,8 +380,8 @@
         "pdfStart": 68,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "eligible",
+      "eligible": true
     },
     {
       "id": "book-2-2-1",
@@ -402,8 +402,8 @@
         "pdfStart": 68,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-2-2-2",
@@ -424,8 +424,8 @@
         "pdfStart": 70,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-2-2-3",
@@ -446,8 +446,8 @@
         "pdfStart": 73,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-2-2-4",
@@ -490,8 +490,8 @@
         "pdfStart": 80,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "eligible",
+      "eligible": true
     },
     {
       "id": "book-2-3-1",
@@ -512,8 +512,8 @@
         "pdfStart": 80,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-2-3-2",
@@ -534,8 +534,8 @@
         "pdfStart": 83,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-2-3-3",
@@ -556,8 +556,8 @@
         "pdfStart": 85,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-2-3-4",
@@ -578,8 +578,8 @@
         "pdfStart": 86,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-2-4",
@@ -908,8 +908,8 @@
         "pdfStart": 141,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "eligible",
+      "eligible": true
     },
     {
       "id": "book-3-1-1",
@@ -930,8 +930,8 @@
         "pdfStart": 141,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-1-2",
@@ -952,8 +952,8 @@
         "pdfStart": 142,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-1-3",
@@ -974,8 +974,8 @@
         "pdfStart": 145,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-1-4",
@@ -996,8 +996,8 @@
         "pdfStart": 148,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-1-5",
@@ -1018,8 +1018,8 @@
         "pdfStart": 150,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-2",
@@ -1040,8 +1040,8 @@
         "pdfStart": 152,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-2-1",
@@ -1062,8 +1062,8 @@
         "pdfStart": 156,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-2-2",
@@ -1194,8 +1194,8 @@
         "pdfStart": 166,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-3-4",
@@ -1216,8 +1216,8 @@
         "pdfStart": 171,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-4",
@@ -1282,8 +1282,8 @@
         "pdfStart": 191,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-4-3",
@@ -1304,8 +1304,8 @@
         "pdfStart": 206,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-4-4",
@@ -2925,6 +2925,1536 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dfs-periodic-sequence",
+      "label": "周期序列与一个周期",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-2-1"
+      ],
+      "printedPages": [
+        51,
+        52
+      ],
+      "pdfPages": [
+        68,
+        69
+      ],
+      "unitIds": [
+        "book-2-2-1-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "波浪号表示对所有整数时间重复；取出的有限主值序列在该周期之外置零，两者不是同一时间对象。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            5,
+            7,
+            8
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dfs-distinct-basis",
+      "label": "N个不同的离散谐波",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-2-1"
+      ],
+      "printedPages": [
+        51,
+        52
+      ],
+      "pdfPages": [
+        68,
+        69
+      ],
+      "unitIds": [
+        "book-2-2-1-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "整数时间使谐波编号相差N时基序列相同；只取N个代表。正交条件一般是模N同余，而不是对任意整数只判断相等。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            5,
+            6
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dfs-normalized-coefficients",
+      "label": "DFS值与合成系数的尺度",
+      "type": "definition",
+      "bookSectionIds": [
+        "book-2-2-1"
+      ],
+      "printedPages": [
+        51,
+        52,
+        53
+      ],
+      "pdfPages": [
+        68,
+        69,
+        70
+      ],
+      "unitIds": [
+        "book-2-2-1-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "本书由a_k改用X̃(k)=Na_k；前者直接参与合成，后者的逆式外保留1/N。它们不能与下一节冲激权重混为一谈。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            5,
+            7,
+            8
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dfs-principal-sampling",
+      "label": "主值序列的单位圆采样",
+      "type": "method",
+      "bookSectionIds": [
+        "book-2-2-1"
+      ],
+      "printedPages": [
+        52
+      ],
+      "pdfPages": [
+        69
+      ],
+      "unitIds": [
+        "book-2-2-1-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "先取周期序列的一个有限周期，再对其Z变换在单位圆等间隔取值，得到DFS值的一周期，最后按N延拓。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            7
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "periodic-dtft-lines",
+      "label": "周期序列的广义冲激谱",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-2-2"
+      ],
+      "printedPages": [
+        53,
+        54,
+        55
+      ],
+      "pdfPages": [
+        70,
+        71,
+        72
+      ],
+      "unitIds": [
+        "book-2-2-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "连续数字频率轴上的第k条线位于2πk/N，权重为(2π/N)X̃(k)。无限k表示不同坐标上的2π周期复制，不是在合成式重复同一离散基。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "sampling-three-objects",
+      "label": "模拟波形、冲激串与样值序列",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-2-3"
+      ],
+      "printedPages": [
+        56,
+        57,
+        58,
+        59
+      ],
+      "pdfPages": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "unitIds": [
+        "book-2-2-3-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "x_a(t)、带帽x_a(t)、x(n)依次是模拟波形、理想加权冲激串和离散样值；前两者使用连续时间，第三个使用整数样点。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            14,
+            15,
+            20,
+            21
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "sampling-frequency-coordinates",
+      "label": "模拟与数字角频率的换坐标",
+      "type": "definition",
+      "bookSectionIds": [
+        "book-2-2-3"
+      ],
+      "printedPages": [
+        57,
+        58,
+        59,
+        60
+      ],
+      "pdfPages": [
+        74,
+        75,
+        76,
+        77
+      ],
+      "unitIds": [
+        "book-2-2-3-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "Ω用弧度/秒，ω用弧度/样本，ω=ΩT；归一化轴是另一层比例。撇号在推导中也可只表示积分哑变量。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "sampling-spectrum-copies",
+      "label": "采样引起频谱副本相加",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-2-3"
+      ],
+      "printedPages": [
+        57,
+        58
+      ],
+      "pdfPages": [
+        74,
+        75
+      ],
+      "unitIds": [
+        "book-2-2-3-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "数字谱按1/T加权叠加位移后的模拟谱；r是副本编号。复制关系本身并不保证无混叠或可以唯一恢复原波形。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            16,
+            17,
+            18
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "sampling-dirac-scaling",
+      "label": "换坐标时的冲激尺度",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-2-3"
+      ],
+      "printedPages": [
+        59,
+        60
+      ],
+      "pdfPages": [
+        76,
+        77
+      ],
+      "unitIds": [
+        "book-2-2-3-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "对T>0，δ((ω−ω₀)/T)=Tδ(ω−ω₀)。原100Hz、400Hz采样例中，这个T抵消外部1/T，而不是任意删除采样率。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-22",
+          "pages": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-transform-pair",
+      "label": "N点DFT与逆变换",
+      "type": "definition",
+      "bookSectionIds": [
+        "book-2-3-1"
+      ],
+      "printedPages": [
+        63,
+        64
+      ],
+      "pdfPages": [
+        80,
+        81
+      ],
+      "unitIds": [
+        "book-2-3-1-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "正变换固定频点k、遍历时间n；逆式固定时间n、遍历k，并保留1/N。W_N本身含负指数。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            3,
+            4,
+            5,
+            12,
+            13
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-root-orthogonality",
+      "label": "有限整圈求和的筛选条件",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-3-1"
+      ],
+      "printedPages": [
+        63,
+        64
+      ],
+      "pdfPages": [
+        80,
+        81
+      ],
+      "unitIds": [
+        "book-2-3-1-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "N项单位根之和筛选模N相同的位置；同一主值区间内才等价于两个时间索引相等。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            5
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-frequency-grid",
+      "label": "DFT的单位圆与DTFT取样",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-3-2"
+      ],
+      "printedPages": [
+        66,
+        67
+      ],
+      "pdfPages": [
+        83,
+        84
+      ],
+      "unitIds": [
+        "book-2-3-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "频点k对应ω=2πk/N及z=W_N^(−k)；整数k不是角频率本身。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-zero-padding-grid",
+      "label": "补零与频率网格密度",
+      "type": "method",
+      "bookSectionIds": [
+        "book-2-3-2"
+      ],
+      "printedPages": [
+        67
+      ],
+      "pdfPages": [
+        84
+      ],
+      "unitIds": [
+        "book-2-3-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "原R4在8点与16点下是同一有限序列，补零不改变DTFT，只加密取样网格；不等于新增观测信息。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-implicit-periodicity",
+      "label": "主值与隐含周期延拓",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-3-3"
+      ],
+      "printedPages": [
+        64,
+        68,
+        69
+      ],
+      "pdfPages": [
+        81,
+        85,
+        86
+      ],
+      "unitIds": [
+        "book-2-3-3-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "有限数组与其周期延拓对象不同；隐含周期来自变换核，不能据此断言物理信号天然周期。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            11,
+            15
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-common-length-linearity",
+      "label": "共同点数下的线性组合",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        69
+      ],
+      "pdfPages": [
+        86
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "不同长度先补到共同N，再比较同一变换的线性组合。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            28
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-circular-time-shift",
+      "label": "圆周时移与线性相位",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        69,
+        70,
+        71
+      ],
+      "pdfPages": [
+        86,
+        87,
+        88
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map",
+        "book-2-3-4-classroom-variants"
+      ],
+      "scope": "ppt_covered",
+      "summary": "按原式n+m，正m为左移；频谱乘W_N^(−km)。先固定圆周长度，再移位取主值。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            16,
+            17,
+            18,
+            19,
+            29,
+            30
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-frequency-shift",
+      "label": "频点移位与时间调制",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        70,
+        71,
+        72
+      ],
+      "pdfPages": [
+        87,
+        88,
+        89
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "X((k+l))_N对应时间乘W_N^(nl)；l是本式固定频移量，和卷积式中求和l的角色不同。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            31
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-circular-convolution",
+      "label": "圆周卷积与频域乘积",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        73,
+        76
+      ],
+      "pdfPages": [
+        90,
+        93
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map",
+        "book-2-3-4-classroom-variants"
+      ],
+      "scope": "ppt_covered",
+      "summary": "按同一个N折回下标后求和；其DFT是两输入DFT逐点乘积。固定卷积描述系统时另需LTI零状态条件。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            22,
+            23,
+            25,
+            32,
+            33
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-linear-folding",
+      "label": "线性卷积折回与足够长度",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "pdfPages": [
+        90,
+        91,
+        92,
+        93
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map",
+        "book-2-3-4-classroom-variants"
+      ],
+      "scope": "ppt_covered",
+      "summary": "N点圆周结果将线性结果同余位置相加；N不小于两输入长度和减1时，能容纳线性输出而无时间折回重叠。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            21,
+            24,
+            25
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-frequency-convolution",
+      "label": "时间乘积与频域圆周卷积",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        76
+      ],
+      "pdfPages": [
+        93
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "本书正变换无1/N，因此时间乘积的频域圆周卷积前须保留1/N。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            34
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-conjugate-reversal",
+      "label": "共轭序列与圆周频率反向",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        76,
+        77
+      ],
+      "pdfPages": [
+        93,
+        94
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "DFT[x*(n)]对应X*((−k))_N；0号保持自身，不是整个数组顺序倒排。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            35,
+            36,
+            37
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-parseval",
+      "label": "DFT的能量归一化",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        77
+      ],
+      "pdfPages": [
+        94
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "时间模平方和等于频域模平方和的1/N；有限DFT尺度不能照搬DTFT积分常数。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            38,
+            39
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-circular-conjugate-parts",
+      "label": "圆周共轭偶与奇分量",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        77,
+        78
+      ],
+      "pdfPages": [
+        94,
+        95
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map",
+        "book-2-3-4-circular-symmetry"
+      ],
+      "scope": "ppt_covered",
+      "summary": "用模N反向再取共轭分解；0及偶N的N/2是自配对点。非零共轭奇配对相位满足π−φ模2π，零值相位未定义。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-cross-decompositions",
+      "label": "实虚分解与共轭分解的交叉对应",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        78,
+        79
+      ],
+      "pdfPages": [
+        95,
+        96
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map",
+        "book-2-3-4-circular-symmetry"
+      ],
+      "scope": "ppt_covered",
+      "summary": "时间x_r/jx_i对应频域X_ep/X_op；时间x_ep/x_op对应频域X_r/jX_i。两组不能交换标签。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            47,
+            48,
+            49,
+            50,
+            51
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-real-imaginary-spectra",
+      "label": "实值或纯虚输入的谱对称条件",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        78,
+        79
+      ],
+      "pdfPages": [
+        95,
+        96
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map",
+        "book-2-3-4-circular-symmetry"
+      ],
+      "scope": "ppt_covered",
+      "summary": "实输入的谱圆周共轭偶；纯虚输入的谱圆周共轭奇。前提不同，分别限制配对值和自配对点。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            52,
+            53
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dft-two-real-separation",
+      "label": "一次复DFT分离两条实序列",
+      "type": "method",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "printedPages": [
+        79,
+        81,
+        82
+      ],
+      "pdfPages": [
+        96,
+        98,
+        99
+      ],
+      "unitIds": [
+        "book-2-3-4-reading-map",
+        "book-2-3-4-circular-symmetry"
+      ],
+      "scope": "ppt_covered",
+      "summary": "对f=x+jy且x/y均实，用F(k)与F*(N−k)配对分离两谱；不是直接取F的逐点实部与虚部。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-23",
+          "pages": [
+            53
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "signal-time-amplitude",
+      "label": "时间采样与幅度量化",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-1-1-1"
+      ],
+      "printedPages": [
+        1,
+        2
+      ],
+      "pdfPages": [
+        18,
+        19
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "数字表示要区分时间变为样本序号与幅度量化；n是整数编号，nTs才是模拟时刻。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-12",
+          "pages": [
+            3,
+            4,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dsp-conversion-chain",
+      "label": "模拟—数字—模拟处理链",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-1-1-2"
+      ],
+      "printedPages": [
+        8,
+        9
+      ],
+      "pdfPages": [
+        25,
+        26
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "A/D、数字运算和D/A处理的是不同对象；无需模拟输入或输出的场景可以不经过完整往返链。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-12",
+          "pages": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conversion-boundary-filters",
+      "label": "采样前与重建后的滤波",
+      "type": "condition",
+      "bookSectionIds": [
+        "book-1-1-2"
+      ],
+      "printedPages": [
+        8,
+        9
+      ],
+      "pdfPages": [
+        25,
+        26
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "输入抗混叠滤波和输出平滑滤波位置、目的不同；输入链入口xa(t)不应直接冒充前置滤波后的采样器输入。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-12",
+          "pages": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algorithm-implementation",
+      "label": "算法与软硬件实现",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-1-1-2"
+      ],
+      "printedPages": [
+        8,
+        9
+      ],
+      "pdfPages": [
+        25,
+        26
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "DSP可指处理方法，也可指处理器；同一算法可经不同软硬件平台实现，不因此要求完整芯片开发课程。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-11",
+          "pages": [
+            3,
+            7,
+            8,
+            9,
+            10,
+            11,
+            17
+          ]
+        },
+        {
+          "deckId": "dsp-12",
+          "pages": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital-data-applications",
+      "label": "序列、图像矩阵与通信数据",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-1-1-4"
+      ],
+      "printedPages": [
+        11,
+        14,
+        15,
+        16,
+        17
+      ],
+      "pdfPages": [
+        28,
+        31,
+        32,
+        33,
+        34
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "应用变化不改变数字数组可被运算的核心；书中图像示例和DMT框图解释不同数据对象，展示页不等于算法完整推导。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-12",
+          "pages": [
+            5,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            19,
+            23,
+            24,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "id": "filter-input-output",
+      "label": "数字滤波的输入输出关系",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-1"
+      ],
+      "printedPages": [
+        124
+      ],
+      "pdfPages": [
+        141
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "本章所用线性时不变滤波器把输入序列映射成输出；常系数差分方程与相应系统函数是在匹配的初始条件下描述同一关系。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            3,
+            4,
+            5,
+            19,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "id": "filter-impulse-type",
+      "label": "按总冲激响应区分FIR与IIR",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-1",
+        "book-3-1-3"
+      ],
+      "printedPages": [
+        124,
+        125,
+        128
+      ],
+      "pdfPages": [
+        141,
+        142,
+        145
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "FIR/IIR按总冲激响应有限或无限分类，不把某张实现图是否有反馈作为定义；有限精度抵消与内部状态另有条件。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            11,
+            20,
+            40,
+            41,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "id": "filter-frequency-response",
+      "label": "频率响应H(e^{jω})",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-1",
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        42,
+        124
+      ],
+      "pdfPages": [
+        59,
+        141
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "H(e^{jω})是h(n)的DTFT；普通频率响应存在及相关运算有效时，时域线性卷积对应Y(e^{jω})=H(e^{jω})X(e^{jω})。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            5,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "id": "network-basic-operations",
+      "label": "延时、常数乘与相加",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-1",
+        "book-3-1-2"
+      ],
+      "printedPages": [
+        124,
+        125,
+        126
+      ],
+      "pdfPages": [
+        141,
+        142,
+        143
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "z⁻¹支路代表一个样本延时；乘法支路给系数，汇入同一节点的信号相加。先写回差分式，再认结构名称。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "filter-realization-equivalence",
+      "label": "同一H的不同网络实现",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-2",
+        "book-3-1-5"
+      ],
+      "printedPages": [
+        125,
+        126,
+        127,
+        128,
+        133
+      ],
+      "pdfPages": [
+        142,
+        143,
+        144,
+        145,
+        150
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "精确运算和对应零初始状态下，不同网络可有同一系统函数；运算量、存储、量化误差和内部状态表现仍可能不同。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            17,
+            18,
+            27,
+            33,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iir-direct-i",
+      "label": "直接I型的两条延时链",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-2"
+      ],
+      "printedPages": [
+        125,
+        126
+      ],
+      "pdfPages": [
+        142,
+        143
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "一条输入延时链实现前馈项，一条输出延时链实现反馈项；符号按差分式移项辨认，不把所有系数同时反号。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            21,
+            22,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iir-direct-ii",
+      "label": "直接II型共用状态延时",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-2"
+      ],
+      "printedPages": [
+        125,
+        126
+      ],
+      "pdfPages": [
+        142,
+        143
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "交换精确线性子系统次序并共享相同输入的延时状态；所写模型需要max(前馈阶数,反馈阶数)个延时，P26在N≥M时才写N。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iir-cascade-sections",
+      "label": "因式相乘的级联结构",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-2"
+      ],
+      "printedPages": [
+        126,
+        127
+      ],
+      "pdfPages": [
+        143,
+        144
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "实系数有理函数可将共轭根配成实一/二阶节，乘积对应串接；配对、顺序和定标影响有限字长行为。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "id": "iir-parallel-sections",
+      "label": "部分分式相加的并联结构",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-2"
+      ],
+      "printedPages": [
+        127,
+        128
+      ],
+      "pdfPages": [
+        144,
+        145
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "按具体有理函数做相应部分分式分解，各支路接同一输入后求和；不声称任何分子次数和重极点都只需同一种简单支路。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            35,
+            36,
+            37,
+            38,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-direct-network",
+      "label": "有限系数的前馈求和",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-3"
+      ],
+      "printedPages": [
+        128
+      ],
+      "pdfPages": [
+        145
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "h(0)…h(N−1)给出N项有限卷积；标准直接型有N−1个单位延时。N是长度，不是最高延时。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            40,
+            42,
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-cascade-network",
+      "label": "FIR多项式的因子级联",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-3"
+      ],
+      "printedPages": [
+        128,
+        129
+      ],
+      "pdfPages": [
+        145,
+        146
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "把有限z⁻¹多项式分解成实因子并串接；书例3.1.4说明方法，课件P46使用另一组数字。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            44,
+            45,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-folded-network",
+      "label": "对称系数配对折叠网络",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-3"
+      ],
+      "printedPages": [
+        129,
+        130,
+        131
+      ],
+      "pdfPages": [
+        146,
+        147,
+        148
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "在实系数对称或反对称前提下，成对输入先相加或相减再共用系数；奇长度反对称时中点系数必须为0。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-reciprocal-zero-pairs",
+      "label": "共轭与倒数的零点配对",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-1-4"
+      ],
+      "printedPages": [
+        131,
+        132
+      ],
+      "pdfPages": [
+        148,
+        149
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "实系数提供共轭零点，线性相位对称结构再提供非零根的倒数约束；实轴或单位圆上部分伙伴会合并，需保留重数。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            59,
+            60,
+            61,
+            63,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-frequency-sampling-network",
+      "label": "频域样点重构出的并联网络",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-4-3"
+      ],
+      "printedPages": [
+        190,
+        191
+      ],
+      "pdfPages": [
+        207,
+        208
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "对已限定在0…N−1的h(n)，N点H(k)可经IDFT精确恢复；重构式由公共1−z⁻ᴺ与各一阶分支之和组成，实际有限精度的抵消另需审查。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            47,
+            48,
+            49,
+            50
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frequency-selective-filter",
+      "label": "按通带和阻带选择成分",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-2",
+        "book-3-2-1"
+      ],
+      "printedPages": [
+        135,
+        136,
+        139
+      ],
+      "pdfPages": [
+        152,
+        153,
+        156
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "低通、高通、带通和带阻描述希望保留/衰减的频带；书图3.2.1展示同一信号经选择性滤波前后，不等于所有噪声都能完全分离。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            6,
+            7,
+            11,
+            12,
+            14,
+            15,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "id": "analog-digital-frequency-axes",
+      "label": "模拟Ω与数字ω的频率轴",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-2-1"
+      ],
+      "printedPages": [
+        139
+      ],
+      "pdfPages": [
+        156
+      ],
+      "unitIds": [],
+      "scope": "ppt_covered",
+      "summary": "模拟与数字滤波器有相似的通阻带类型，但数字频率响应以2π周期重复；不把两个横轴及单位当成同一个变量。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-31",
+          "pages": [
+            15,
+            16
+          ]
+        }
+      ]
     }
   ],
   "knowledgeEdges": [
@@ -3376,6 +4906,1106 @@
         ],
         "note": "这是两个原书局部定义的符号桥，不是数学等式N阶数=N长度，也不是课程先修边。"
       }
+    },
+    {
+      "from": "dtft-sequence",
+      "to": "dfs-periodic-sequence",
+      "label": "将时间对象限定为周期序列",
+      "evidence": {
+        "printedPages": [
+          51
+        ],
+        "pdfPages": [
+          68
+        ],
+        "note": "先区分任意序列与周期序列；不是说任何序列天然周期。"
+      }
+    },
+    {
+      "from": "dfs-periodic-sequence",
+      "to": "dfs-distinct-basis",
+      "label": "用一组N个不同谐波表达",
+      "evidence": {
+        "printedPages": [
+          51,
+          52
+        ],
+        "pdfPages": [
+          68,
+          69
+        ],
+        "note": "式2.2.1–4；修正代表集上限与模N条件见已审定位卡。"
+      }
+    },
+    {
+      "from": "dfs-distinct-basis",
+      "to": "dfs-normalized-coefficients",
+      "label": "借一周期正交和提取系数",
+      "evidence": {
+        "printedPages": [
+          51,
+          52
+        ],
+        "pdfPages": [
+          68,
+          69
+        ],
+        "note": "正交关系给a_k，书随后改用N倍的X̃(k)。"
+      }
+    },
+    {
+      "from": "dfs-normalized-coefficients",
+      "to": "dfs-periodic-sequence",
+      "label": "按所用归一化合成同一周期序列",
+      "evidence": {
+        "printedPages": [
+          51,
+          52
+        ],
+        "pdfPages": [
+          68,
+          69
+        ],
+        "note": "合成的尺度必须与a_k或X̃(k)配套；这条是逆过程，不是新增先修要求。"
+      }
+    },
+    {
+      "from": "dfs-periodic-sequence",
+      "to": "dfs-principal-sampling",
+      "label": "先取有限主值再在单位圆采样",
+      "evidence": {
+        "printedPages": [
+          52
+        ],
+        "pdfPages": [
+          69
+        ],
+        "note": "式2.2.5/6；对象先取主值，不直接对非零周期序列套普通绝对可和DTFT。"
+      }
+    },
+    {
+      "from": "dfs-principal-sampling",
+      "to": "dfs-normalized-coefficients",
+      "label": "得到X̃(k)的一周期后延拓",
+      "evidence": {
+        "printedPages": [
+          52
+        ],
+        "pdfPages": [
+          69
+        ],
+        "note": "有限主值的变换采样值对应书的非归一化DFS值。"
+      }
+    },
+    {
+      "from": "dfs-normalized-coefficients",
+      "to": "periodic-dtft-lines",
+      "label": "乘2π/N得到各条冲激权重",
+      "evidence": {
+        "printedPages": [
+          54,
+          55
+        ],
+        "pdfPages": [
+          71,
+          72
+        ],
+        "note": "式2.2.10与例2.2.3；权重不是箭头有限高度。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "periodic-dtft-lines",
+      "label": "对非零周期序列采用广义表示",
+      "evidence": {
+        "printedPages": [
+          53,
+          54
+        ],
+        "pdfPages": [
+          70,
+          71
+        ],
+        "note": "复指数及一般周期序列在连续数字频率轴上形成冲激谱。"
+      }
+    },
+    {
+      "from": "dfs-distinct-basis",
+      "to": "periodic-dtft-lines",
+      "label": "对比分别采用有限代表与全轴谱线",
+      "evidence": {
+        "printedPages": [
+          51,
+          54
+        ],
+        "pdfPages": [
+          68,
+          71
+        ],
+        "note": "这是求和对象对比：有限离散基与连续频率坐标不同，不能逆写成同一种求和。"
+      }
+    },
+    {
+      "from": "sampling-three-objects",
+      "to": "sampling-frequency-coordinates",
+      "label": "在t=nT处比较同一相位增长",
+      "evidence": {
+        "printedPages": [
+          58
+        ],
+        "pdfPages": [
+          75
+        ],
+        "note": "e^(jΩnT)对应数字角频率ω=ΩT。"
+      }
+    },
+    {
+      "from": "sampling-three-objects",
+      "to": "sampling-spectrum-copies",
+      "label": "由理想采样关系得到频谱叠加",
+      "evidence": {
+        "printedPages": [
+          57,
+          58
+        ],
+        "pdfPages": [
+          74,
+          75
+        ],
+        "note": "书式2.2.13–23的对象与变换关系。"
+      }
+    },
+    {
+      "from": "sampling-frequency-coordinates",
+      "to": "sampling-spectrum-copies",
+      "label": "确定副本间隔与外部1/T尺度",
+      "evidence": {
+        "printedPages": [
+          57,
+          58
+        ],
+        "pdfPages": [
+          74,
+          75
+        ],
+        "note": "先按模拟角频率分段，再换到数字角频率。"
+      }
+    },
+    {
+      "from": "sampling-spectrum-copies",
+      "to": "sampling-dirac-scaling",
+      "label": "输入含冲激谱时还需换算冲激权重",
+      "evidence": {
+        "printedPages": [
+          59
+        ],
+        "pdfPages": [
+          76
+        ],
+        "note": "原例2.2.7由模拟余弦谱求数字谱，不能只搬横坐标。"
+      }
+    },
+    {
+      "from": "sampling-frequency-coordinates",
+      "to": "sampling-dirac-scaling",
+      "label": "缩放δ的自变量时同步缩放权重",
+      "evidence": {
+        "printedPages": [
+          59,
+          60
+        ],
+        "pdfPages": [
+          76,
+          77
+        ],
+        "note": "原100Hz采样例中Ω/ω谱权重不同但描述相应对象一致。"
+      }
+    },
+    {
+      "from": "periodic-dtft-lines",
+      "to": "sampling-dirac-scaling",
+      "label": "用周期样值的线谱作结果对照",
+      "evidence": {
+        "printedPages": [
+          54,
+          59
+        ],
+        "pdfPages": [
+          71,
+          76
+        ],
+        "note": "原例得到4周期[2,0,−2,0]，可从离散周期线谱核2π权重；不是所有采样信号都周期。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dft-frequency-grid",
+      "label": "对有限序列按等间隔频率取值",
+      "evidence": {
+        "printedPages": [
+          66,
+          67
+        ],
+        "pdfPages": [
+          83,
+          84
+        ],
+        "note": "式2.3.4/5；先限定所取有限序列，不将一般无限序列样值不加条件当N点DFT。"
+      }
+    },
+    {
+      "from": "dft-frequency-grid",
+      "to": "dft-transform-pair",
+      "label": "采样值构成N点正变换输出",
+      "evidence": {
+        "printedPages": [
+          63,
+          66
+        ],
+        "pdfPages": [
+          80,
+          83
+        ],
+        "note": "同一有限序列及相同W_N约定。"
+      }
+    },
+    {
+      "from": "dft-root-orthogonality",
+      "to": "dft-transform-pair",
+      "label": "保证逆式逐个还原主值样点",
+      "evidence": {
+        "printedPages": [
+          63,
+          64
+        ],
+        "pdfPages": [
+          80,
+          81
+        ],
+        "note": "式2.3.3的m/n/k分工与模N筛选。"
+      }
+    },
+    {
+      "from": "dfs-normalized-coefficients",
+      "to": "dft-transform-pair",
+      "label": "取一周期非归一化系数作有限数组",
+      "evidence": {
+        "printedPages": [
+          64
+        ],
+        "pdfPages": [
+          81
+        ],
+        "note": "图2.3.1；书DFS值X̃与有限DFT值X的一周期一致，不是a_k直接等于X。"
+      }
+    },
+    {
+      "from": "dft-frequency-grid",
+      "to": "dft-zero-padding-grid",
+      "label": "增大N后加密同一DTFT的网格",
+      "evidence": {
+        "printedPages": [
+          67
+        ],
+        "pdfPages": [
+          84
+        ],
+        "note": "例2.3.3的R4、8点与16点。"
+      }
+    },
+    {
+      "from": "dfs-periodic-sequence",
+      "to": "dft-implicit-periodicity",
+      "label": "对比周期对象与有限主值",
+      "evidence": {
+        "printedPages": [
+          64,
+          68
+        ],
+        "pdfPages": [
+          81,
+          85
+        ],
+        "note": "图2.3.1及式2.3.6/7；对象对比边，不称任意原信号周期。"
+      }
+    },
+    {
+      "from": "dft-transform-pair",
+      "to": "dft-implicit-periodicity",
+      "label": "变换核允许索引作周期延拓",
+      "evidence": {
+        "printedPages": [
+          68
+        ],
+        "pdfPages": [
+          85
+        ],
+        "note": "整数索引与根单位周期性。"
+      }
+    },
+    {
+      "from": "dft-transform-pair",
+      "to": "dft-common-length-linearity",
+      "label": "在相同N下逐项分配有限和",
+      "evidence": {
+        "printedPages": [
+          69
+        ],
+        "pdfPages": [
+          86
+        ],
+        "note": "式2.3.11及补零前提。"
+      }
+    },
+    {
+      "from": "dft-implicit-periodicity",
+      "to": "dft-circular-time-shift",
+      "label": "先延拓再移动并取主值",
+      "evidence": {
+        "printedPages": [
+          69,
+          70
+        ],
+        "pdfPages": [
+          86,
+          87
+        ],
+        "note": "式2.3.13/14及图2.3.5。"
+      }
+    },
+    {
+      "from": "dft-implicit-periodicity",
+      "to": "dft-frequency-shift",
+      "label": "在频点轴按同一N循环移动",
+      "evidence": {
+        "printedPages": [
+          70,
+          71
+        ],
+        "pdfPages": [
+          87,
+          88
+        ],
+        "note": "式2.3.15；与时间移位分开。"
+      }
+    },
+    {
+      "from": "dft-circular-time-shift",
+      "to": "dft-frequency-shift",
+      "label": "对比移位和调制分处两侧",
+      "evidence": {
+        "printedPages": [
+          70,
+          71
+        ],
+        "pdfPages": [
+          87,
+          88
+        ],
+        "note": "两条定理对比，不把符号m/l视为同一哑变量。"
+      }
+    },
+    {
+      "from": "dft-circular-time-shift",
+      "to": "dft-circular-convolution",
+      "label": "结合圆周反向并点乘求和",
+      "evidence": {
+        "printedPages": [
+          73
+        ],
+        "pdfPages": [
+          90
+        ],
+        "note": "图2.3.9/表2.3.1说明卷积运算过程；仅时移不足以构成卷积。"
+      }
+    },
+    {
+      "from": "dft-circular-convolution",
+      "to": "dft-linear-folding",
+      "label": "与线性结果按模N相加对照",
+      "evidence": {
+        "printedPages": [
+          74,
+          75,
+          76
+        ],
+        "pdfPages": [
+          91,
+          92,
+          93
+        ],
+        "note": "两种卷积的联系与例2.3.10可恢复边界。"
+      }
+    },
+    {
+      "from": "dft-linear-folding",
+      "to": "dft-zero-padding-grid",
+      "label": "通过足够补零避免时间折回",
+      "evidence": {
+        "printedPages": [
+          74
+        ],
+        "pdfPages": [
+          91
+        ],
+        "note": "两输入分别补到同一足够N；边是补零的另一用途，不能把频率分辨率与无时间混叠混为一谈。"
+      }
+    },
+    {
+      "from": "dft-circular-convolution",
+      "to": "dft-frequency-convolution",
+      "label": "交换两侧操作时核对1/N尺度",
+      "evidence": {
+        "printedPages": [
+          76
+        ],
+        "pdfPages": [
+          93
+        ],
+        "note": "式2.3.18–23对比。"
+      }
+    },
+    {
+      "from": "dft-transform-pair",
+      "to": "dft-conjugate-reversal",
+      "label": "取共轭并利用指数反向",
+      "evidence": {
+        "printedPages": [
+          76,
+          77
+        ],
+        "pdfPages": [
+          93,
+          94
+        ],
+        "note": "式2.3.24/25及证明。"
+      }
+    },
+    {
+      "from": "dft-root-orthogonality",
+      "to": "dft-parseval",
+      "label": "用于展开平方和后的交叉项筛选",
+      "evidence": {
+        "printedPages": [
+          63,
+          64,
+          77
+        ],
+        "pdfPages": [
+          80,
+          81,
+          94
+        ],
+        "note": "书给正交工具与Parseval结论，PPT38/39展开此证明；不声称书77已逐步写出全部证明。"
+      }
+    },
+    {
+      "from": "dft-conjugate-reversal",
+      "to": "dft-circular-conjugate-parts",
+      "label": "提供共轭反向分解操作",
+      "evidence": {
+        "printedPages": [
+          77,
+          78
+        ],
+        "pdfPages": [
+          94,
+          95
+        ],
+        "note": "式2.3.27–34；必须按周期访问自配对点。"
+      }
+    },
+    {
+      "from": "dft-circular-conjugate-parts",
+      "to": "dft-cross-decompositions",
+      "label": "与实虚分解逐式比较得到对应",
+      "evidence": {
+        "printedPages": [
+          78,
+          79
+        ],
+        "pdfPages": [
+          95,
+          96
+        ],
+        "note": "式2.3.35–37两组关系。"
+      }
+    },
+    {
+      "from": "dft-cross-decompositions",
+      "to": "dft-real-imaginary-spectra",
+      "label": "令时间虚部或实部为零得到特例",
+      "evidence": {
+        "printedPages": [
+          78,
+          79
+        ],
+        "pdfPages": [
+          95,
+          96
+        ],
+        "note": "书实序列式2.3.38；纯虚特例由前一组通式并按PPT53回读。"
+      }
+    },
+    {
+      "from": "dft-real-imaginary-spectra",
+      "to": "dft-two-real-separation",
+      "label": "用两输入均实的条件分离复合谱",
+      "evidence": {
+        "printedPages": [
+          79,
+          81
+        ],
+        "pdfPages": [
+          96,
+          98
+        ],
+        "note": "书第3项减少运算及例2.3.13。"
+      }
+    },
+    {
+      "from": "dft-cross-decompositions",
+      "to": "dft-two-real-separation",
+      "label": "从共轭偶奇部分恢复两个频谱",
+      "evidence": {
+        "printedPages": [
+          79,
+          81,
+          82
+        ],
+        "pdfPages": [
+          96,
+          98,
+          99
+        ],
+        "note": "F_ep为X，F_op为jY，后者再除j。"
+      }
+    },
+    {
+      "from": "signal-time-amplitude",
+      "to": "dsp-conversion-chain",
+      "label": "采样与量化解释A/D输出的对象",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          1,
+          2,
+          8,
+          9
+        ],
+        "pdfPages": [
+          18,
+          19,
+          25,
+          26
+        ],
+        "note": "先分时间离散和幅度量化，再定位A/D。"
+      }
+    },
+    {
+      "from": "conversion-boundary-filters",
+      "to": "dsp-conversion-chain",
+      "label": "前后两端分别限制混叠与重建高频分量",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          8,
+          9
+        ],
+        "pdfPages": [
+          25,
+          26
+        ],
+        "note": "课件明确两滤波位置，书图1.1.12给总链；此边是角色条件而非新章节。"
+      }
+    },
+    {
+      "from": "dsp-conversion-chain",
+      "to": "algorithm-implementation",
+      "label": "中间数字运算可由软件或硬件实现",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          8,
+          9
+        ],
+        "pdfPages": [
+          25,
+          26
+        ],
+        "note": "按实现方法段，不扩为全部硬件课程。"
+      }
+    },
+    {
+      "from": "algorithm-implementation",
+      "to": "digital-data-applications",
+      "label": "同类数字运算可作用于不同数据对象",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          9,
+          11,
+          14,
+          16
+        ],
+        "pdfPages": [
+          26,
+          28,
+          31,
+          33
+        ],
+        "note": "应用例说明对象变化，不声称一套算法解决所有任务。"
+      }
+    },
+    {
+      "from": "signal-time-amplitude",
+      "to": "dtft-sequence",
+      "label": "时间样本形成第二章所处理的序列",
+      "relationKind": "representation_bridge",
+      "evidence": {
+        "printedPages": [
+          1,
+          2,
+          37
+        ],
+        "pdfPages": [
+          18,
+          19,
+          54
+        ],
+        "note": "跨章对象衔接；不把采样冲激列与纯离散序列混同。"
+      }
+    },
+    {
+      "from": "algorithm-implementation",
+      "to": "filter-input-output",
+      "label": "滤波是数字序列处理的一类算法",
+      "relationKind": "application",
+      "evidence": {
+        "printedPages": [
+          8,
+          9,
+          124
+        ],
+        "pdfPages": [
+          25,
+          26,
+          141
+        ],
+        "note": "由应用/实现主线接到线性滤波模型，不把所有数字处理都当线性滤波。"
+      }
+    },
+    {
+      "from": "filter-input-output",
+      "to": "filter-impulse-type",
+      "label": "用单位脉冲响应刻画并按支撑分类",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          124,
+          125,
+          128
+        ],
+        "pdfPages": [
+          141,
+          142,
+          145
+        ],
+        "note": "FIR/IIR按总h是否有限。"
+      }
+    },
+    {
+      "from": "filter-impulse-type",
+      "to": "filter-frequency-response",
+      "label": "h的DTFT在存在时给H(e^{jω})",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          42,
+          124
+        ],
+        "pdfPages": [
+          59,
+          141
+        ],
+        "note": "普通DTFT存在条件保留；非稳定源例不自动具有普通单位圆DTFT。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "filter-frequency-response",
+      "label": "把变换对象由x换成h",
+      "relationKind": "notation_bridge",
+      "evidence": {
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ],
+        "note": "相同DTFT定义应用到冲激响应，X与H角色不同。"
+      }
+    },
+    {
+      "from": "filter-frequency-response",
+      "to": "filter-input-output",
+      "label": "时域线性卷积对应频域Y=HX",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ],
+        "note": "书式2.1.8；相应存在/交换条件下，不替换成未补零循环卷积。"
+      }
+    },
+    {
+      "from": "filter-frequency-response",
+      "to": "frequency-selective-filter",
+      "label": "选择H的频带特征改变输出谱",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          135,
+          136,
+          139
+        ],
+        "pdfPages": [
+          152,
+          153,
+          156
+        ],
+        "note": "频率选择由Y=HX解释；输出仍可能有暂态/误差。"
+      }
+    },
+    {
+      "from": "analog-digital-frequency-axes",
+      "to": "frequency-selective-filter",
+      "label": "相似通阻带类型但横轴/周期性不同",
+      "relationKind": "comparison",
+      "evidence": {
+        "printedPages": [
+          139
+        ],
+        "pdfPages": [
+          156
+        ],
+        "note": "书图3.2.4与3.2.5并列。"
+      }
+    },
+    {
+      "from": "network-basic-operations",
+      "to": "filter-input-output",
+      "label": "沿箭头写回差分方程核关系",
+      "relationKind": "representation_bridge",
+      "evidence": {
+        "printedPages": [
+          124,
+          125,
+          126
+        ],
+        "pdfPages": [
+          141,
+          142,
+          143
+        ],
+        "note": "P10二阶例对应延时、乘法、求和；不是由图外形猜系数。"
+      }
+    },
+    {
+      "from": "filter-input-output",
+      "to": "filter-realization-equivalence",
+      "label": "同一系统函数允许不同实现",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          125,
+          126,
+          127,
+          128,
+          133
+        ],
+        "pdfPages": [
+          142,
+          143,
+          144,
+          145,
+          150
+        ],
+        "note": "精确运算及对应初始条件边界。"
+      }
+    },
+    {
+      "from": "filter-realization-equivalence",
+      "to": "iir-direct-i",
+      "label": "直接按前馈与反馈项搭建",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          125
+        ],
+        "pdfPages": [
+          142
+        ],
+        "note": "两条延时链。"
+      }
+    },
+    {
+      "from": "iir-direct-i",
+      "to": "iir-direct-ii",
+      "label": "交换子系统并共享相同延时状态",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          125,
+          126
+        ],
+        "pdfPages": [
+          142,
+          143
+        ],
+        "note": "延时计数取max阶数，不无限制等于课件N。"
+      }
+    },
+    {
+      "from": "iir-direct-ii",
+      "to": "filter-realization-equivalence",
+      "label": "延时减少不等于量化误差也必减少",
+      "relationKind": "condition",
+      "evidence": {
+        "printedPages": [
+          126,
+          133
+        ],
+        "pdfPages": [
+          143,
+          150
+        ],
+        "note": "等H仅保证精确零状态外部关系；网络指标须分别比较。"
+      }
+    },
+    {
+      "from": "filter-realization-equivalence",
+      "to": "iir-cascade-sections",
+      "label": "因式乘积成为串接子系统",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          126,
+          127
+        ],
+        "pdfPages": [
+          143,
+          144
+        ],
+        "note": "实系数复根共轭配对。"
+      }
+    },
+    {
+      "from": "filter-realization-equivalence",
+      "to": "iir-parallel-sections",
+      "label": "部分分式之和成为并行支路",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          127,
+          128
+        ],
+        "pdfPages": [
+          144,
+          145
+        ],
+        "note": "按实际次数/根结构分解，不固定套所有支路模板。"
+      }
+    },
+    {
+      "from": "iir-cascade-sections",
+      "to": "iir-parallel-sections",
+      "label": "同H可分别乘回与通分验证",
+      "relationKind": "comparison",
+      "evidence": {
+        "printedPages": [
+          126,
+          127,
+          128
+        ],
+        "pdfPages": [
+          143,
+          144,
+          145
+        ],
+        "note": "PPT两页同题的表示比较，不是必须先级联才能并联。"
+      }
+    },
+    {
+      "from": "filter-impulse-type",
+      "to": "fir-direct-network",
+      "label": "有限h给有限项前馈求和",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          128
+        ],
+        "pdfPages": [
+          145
+        ],
+        "note": "式3.1.12/13与图3.1.4。"
+      }
+    },
+    {
+      "from": "fir-length",
+      "to": "fir-direct-network",
+      "label": "长度N对应标准直接型N−1延时",
+      "relationKind": "notation_bridge",
+      "evidence": {
+        "printedPages": [
+          128
+        ],
+        "pdfPages": [
+          145
+        ],
+        "note": "N是系数个数，不等于最高延时或任意最简阶数。"
+      }
+    },
+    {
+      "from": "fir-direct-network",
+      "to": "fir-cascade-network",
+      "label": "同一多项式因式分解后串接",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          128,
+          129
+        ],
+        "pdfPages": [
+          145,
+          146
+        ],
+        "note": "乘回逐系数核对；不把同题方法当同一数值题。"
+      }
+    },
+    {
+      "from": "fir-real-symmetry",
+      "to": "fir-folded-network",
+      "label": "对称相加、反对称相减后共用系数",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          129,
+          130,
+          131
+        ],
+        "pdfPages": [
+          146,
+          147,
+          148
+        ],
+        "note": "式3.1.18–21，奇反对称中点为零。"
+      }
+    },
+    {
+      "from": "fir-folded-network",
+      "to": "fir-direct-network",
+      "label": "展开成对支路回到同一有限卷积",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          130
+        ],
+        "pdfPages": [
+          147
+        ],
+        "note": "折叠不是循环卷积，只是对称系数的代数合并。"
+      }
+    },
+    {
+      "from": "fir-real-symmetry",
+      "to": "fir-reciprocal-zero-pairs",
+      "label": "实系数与倒序对称共同约束根",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          131,
+          132
+        ],
+        "pdfPages": [
+          148,
+          149
+        ],
+        "note": "书式3.1.22及四类零点；只对非零根谈倒数。"
+      }
+    },
+    {
+      "from": "fir-reciprocal-zero-pairs",
+      "to": "fir-cascade-network",
+      "label": "按零点伙伴构造实线性相位因子组",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          131,
+          132
+        ],
+        "pdfPages": [
+          148,
+          149
+        ],
+        "note": "一/二/四阶因子分组保持相应条件；并非任意根配对都保持每节线性相位。"
+      }
+    },
+    {
+      "from": "fir-length",
+      "to": "fir-frequency-sampling-network",
+      "label": "支撑落在N点主值内才可由N样点精确恢复",
+      "relationKind": "condition",
+      "evidence": {
+        "printedPages": [
+          190,
+          191
+        ],
+        "pdfPages": [
+          207,
+          208
+        ],
+        "note": "若真实支撑更长，N点回推会时域折叠；不把样本数与实际长度无条件相等。"
+      }
+    },
+    {
+      "from": "fir-frequency-sampling-network",
+      "to": "fir-direct-network",
+      "label": "IDFT重构同一h，再写有限z多项式",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          190,
+          191
+        ],
+        "pdfPages": [
+          207,
+          208
+        ],
+        "note": "式3.4.16/17/24的精确运算关系；实现中的抵消和量化另有条件。"
+      }
+    },
+    {
+      "from": "iir-parallel-sections",
+      "to": "fir-frequency-sampling-network",
+      "label": "同为支路求和，但总冲激响应类型不同",
+      "relationKind": "comparison",
+      "evidence": {
+        "printedPages": [
+          127,
+          128,
+          191
+        ],
+        "pdfPages": [
+          144,
+          145,
+          208
+        ],
+        "note": "并联外形不决定总系统必为IIR；有限长度重构因子带来抵消。"
+      }
     }
   ],
   "readingOrder": [
@@ -3566,6 +6196,238 @@
         "book-3-4-1"
       ],
       "href": "/study-site/dsp-book-companion/units/book-3-4-1-length-signed-amplitude.html"
+    },
+    {
+      "id": "book-2-2-1-reading-map",
+      "primaryBookSectionId": "book-2-2-1",
+      "presentation": "book-locator",
+      "contentSha256": "10722e39cb026ab9f8a306f14e9335f6b9672adfbff7922869bfe6a69a56f9b8",
+      "title": "DFS的两套系数与一个周期",
+      "bookSectionIds": [
+        "book-2-2-1"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-2-1-reading-map.html"
+    },
+    {
+      "id": "book-2-2-2-reading-map",
+      "primaryBookSectionId": "book-2-2-2",
+      "presentation": "book-locator",
+      "contentSha256": "d343125793f3aafad6cc8e0b7182022460615f926e6bb39bd488cba09e6876fd",
+      "title": "DFS系数不是冲激的“高度”",
+      "bookSectionIds": [
+        "book-2-2-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-2-2-reading-map.html"
+    },
+    {
+      "id": "book-2-2-3-reading-map",
+      "primaryBookSectionId": "book-2-2-3",
+      "presentation": "book-locator",
+      "contentSha256": "9ac9176bfc120e4e111d8046302a505864cca9c1533dcd8be521d05d7fa24e74",
+      "title": "三个信号对象、两种角频率",
+      "bookSectionIds": [
+        "book-2-2-3"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-2-3-reading-map.html"
+    },
+    {
+      "id": "book-2-3-1-reading-map",
+      "primaryBookSectionId": "book-2-3-1",
+      "presentation": "book-locator",
+      "contentSha256": "0d5f4f02d853c9dee63f07154067d9600b3b3e21986916274d5e22400b00d93b",
+      "title": "正逆DFT的索引与恢复范围",
+      "bookSectionIds": [
+        "book-2-3-1"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-3-1-reading-map.html"
+    },
+    {
+      "id": "book-2-3-2-reading-map",
+      "primaryBookSectionId": "book-2-3-2",
+      "presentation": "book-locator",
+      "contentSha256": "e93f881de1b5c746c171208e0dcb1cdd5490088e76860dfe14d660ebf14af03d",
+      "title": "DFT是同一有限序列DTFT的频率采样",
+      "bookSectionIds": [
+        "book-2-3-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-3-2-reading-map.html"
+    },
+    {
+      "id": "book-2-3-3-reading-map",
+      "primaryBookSectionId": "book-2-3-3",
+      "presentation": "book-locator",
+      "contentSha256": "f9dd1a322d6f7d6d5e2f8115a4ea4bc5ba1a1fc75d523fa07538fe100ce751dc",
+      "title": "有限主值与周期延拓",
+      "bookSectionIds": [
+        "book-2-3-3"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-3-3-reading-map.html"
+    },
+    {
+      "id": "book-2-3-4-reading-map",
+      "primaryBookSectionId": "book-2-3-4",
+      "presentation": "book-locator",
+      "contentSha256": "b922adffd39a39e0b3a51e6339977de1634973b9db83fc82b63648c780c54650",
+      "title": "六组DFT性质的书节定位",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-3-4-reading-map.html"
+    },
+    {
+      "id": "book-2-3-4-classroom-variants",
+      "primaryBookSectionId": "book-2-3-4",
+      "presentation": "optional-bridge",
+      "contentSha256": "f77767186e01fc2f515933c6e91637d10ced501d089c461d53d8f2ee1e3432ec",
+      "title": "课堂换参移位与五种卷积长度",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-3-4-classroom-variants.html"
+    },
+    {
+      "id": "book-2-3-4-circular-symmetry",
+      "primaryBookSectionId": "book-2-3-4",
+      "presentation": "optional-bridge",
+      "contentSha256": "70fae773f3db16d4f0ccce53f9e47ab26481dda59376c01b5ffcb3405dc6e4b7",
+      "title": "两套圆周分解与自配对边界",
+      "bookSectionIds": [
+        "book-2-3-4"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-3-4-circular-symmetry.html"
+    },
+    {
+      "id": "book-3-3-2-reading-map",
+      "primaryBookSectionId": "book-3-3-2",
+      "presentation": "book-locator",
+      "contentSha256": "21e056453c20aac2b14c9058dccdbe8d3319de22a10def3cf87f34ba498bb396",
+      "title": "巴特沃斯原型的书本路线与选极点",
+      "bookSectionIds": [
+        "book-3-3-1",
+        "book-3-3-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-3-2-reading-map.html"
+    },
+    {
+      "id": "book-3-3-3-reading-map",
+      "primaryBookSectionId": "book-3-3-3",
+      "presentation": "book-locator",
+      "contentSha256": "87bb1462c3c62f17fed3b343a714156eaa762fda90e93e391e29b8cc59aac206",
+      "title": "模拟频率变换的书本定位与p/q角色",
+      "bookSectionIds": [
+        "book-3-3-3"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-3-3-reading-map.html"
+    },
+    {
+      "id": "book-3-3-4-reading-map",
+      "primaryBookSectionId": "book-3-3-4",
+      "presentation": "book-locator",
+      "contentSha256": "498eb12d3687bd0654473997887d3732f89ff1a779474090c2dafcda8e2b4321",
+      "title": "模拟转数字的书本主线与频率/系数角色",
+      "bookSectionIds": [
+        "book-3-3-4"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-3-4-reading-map.html"
+    },
+    {
+      "id": "book-3-4-1-reading-map",
+      "primaryBookSectionId": "book-3-4-1",
+      "presentation": "book-locator",
+      "contentSha256": "40fa1ab09d1773c22fecd29a48c79d0e96176814076f7c3ac4610b0f1d9fef26",
+      "title": "线性相位FIR的原书分类与端点检查",
+      "bookSectionIds": [
+        "book-3-4-1"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-4-1-reading-map.html"
+    },
+    {
+      "id": "book-3-4-2-reading-map",
+      "primaryBookSectionId": "book-3-4-2",
+      "presentation": "book-locator",
+      "contentSha256": "9dd52127d529c5aa87cb294ee12b5a35332bd680c734d7af18e3503b916abf0f",
+      "title": "窗函数法：书本定位与课件必要补充",
+      "bookSectionIds": [
+        "book-3-4-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-4-2-reading-map.html"
+    },
+    {
+      "id": "book-3-4-3-reading-map",
+      "primaryBookSectionId": "book-3-4-3",
+      "presentation": "book-locator",
+      "contentSha256": "71540de50cfb2e4b0d8097ce6f684b8cbd11469907b67275669017deb8c76c80",
+      "title": "频率采样法：原书主线与k/n角色",
+      "bookSectionIds": [
+        "book-3-4-3"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-4-3-reading-map.html"
+    },
+    {
+      "id": "book-3-3-4-impulse-roles",
+      "primaryBookSectionId": "book-3-3-4",
+      "presentation": "optional-bridge",
+      "contentSha256": "e304825a33ee2f6b94c8a044846bf11a91777ea677ac2f5e63026b812dea6ccf",
+      "title": "3.3.4 对照辅导：脉冲响应不变的角色与增益约定",
+      "bookSectionIds": [
+        "book-3-3-4"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-3-4-impulse-roles.html"
+    },
+    {
+      "id": "book-1-1-2-signal-chain",
+      "primaryBookSectionId": "book-1-1-2",
+      "presentation": "optional-bridge",
+      "contentSha256": "ff9e1d2dbb0e079c76592373d98c12802a96ad02a55a62240c0b41b6dcb85c17",
+      "title": "同一条处理链，为什么有两个滤波器",
+      "bookSectionIds": [
+        "book-1-1-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-1-1-2-signal-chain.html"
+    },
+    {
+      "id": "book-3-1-2-order-roles",
+      "primaryBookSectionId": "book-3-1-2",
+      "presentation": "optional-bridge",
+      "contentSha256": "44739efbf40202a2fbcc96981d65f4f1c6ae4367717aa76df401ae138b88bb90",
+      "title": "IIR式里的N和M，先看它们数的是什么",
+      "bookSectionIds": [
+        "book-3-1-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-1-2-order-roles.html"
+    },
+    {
+      "id": "book-3-1-2-structure-examples",
+      "primaryBookSectionId": "book-3-1-2",
+      "presentation": "optional-bridge",
+      "contentSha256": "3885a874942fe84edc9f20345a7d0774071e4e2b154c88cea8e2b5fb3faf7663",
+      "title": "课件结构例题：先核系数，再沿图走",
+      "bookSectionIds": [
+        "book-3-1-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-1-2-structure-examples.html"
+    },
+    {
+      "id": "book-3-1-3-fir-indices",
+      "primaryBookSectionId": "book-3-1-3",
+      "presentation": "optional-bridge",
+      "contentSha256": "88f26bcd56ec8fc17b7ae849d4aed676f4c1130f2441081ca651ee7a59646ec2",
+      "title": "回读FIR图：求和变量、长度与延时数",
+      "bookSectionIds": [
+        "book-3-1-3"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-1-3-fir-indices.html"
+    },
+    {
+      "id": "book-3-4-3-sampling-network",
+      "primaryBookSectionId": "book-3-4-3",
+      "presentation": "optional-bridge",
+      "contentSha256": "97a6b642e4e4f8659586be285d8bd2c56d7ef7d71eb9df10b1c95482a73b4258",
+      "title": "频率采样式如何对应课件的并联图",
+      "bookSectionIds": [
+        "book-3-4-3"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-4-3-sampling-network.html"
     }
   ],
   "editionNotice": "课件1.1 P2提及第2版（2016.2），当前对照使用已取得的第3版（2021.8）；页码和章节位置按实际内容核对，不按课件旧页号直接套用。",

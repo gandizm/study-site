@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-1-2-order-roles",
+  "title": "IIR式里的N和M，先看它们数的是什么",
+  "bookSectionIds": [
+    "book-3-1-2"
+  ],
+  "learningPurpose": "只补课件与书的角色或条件差异，不重复整节定义，不新增必做任务。",
+  "printedPages": [
+    125,
+    126
+  ],
+  "pdfPages": [
+    142,
+    143
+  ],
+  "prerequisites": [],
+  "pptReferences": [
+    {
+      "deckId": "dsp-31",
+      "filename": "3.1数字滤波器概述.pptx",
+      "pages": [
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "roles": [
+        "book_direct",
+        "notation_difference",
+        "bridge_needed"
+      ]
+    }
+  ],
+  "sourceClaims": [],
+  "status": "reviewed-release"
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-3-4-impulse-roles",
+  "title": "3.3.4 对照辅导：脉冲响应不变的角色与增益约定",
+  "bookSectionIds": [
+    "book-3-3-4"
+  ],
+  "learningPurpose": "保留书的采样定义，辨i/n/T角色，用书的方法核课件不同参数例，并区分软件整体T因子。",
+  "printedPages": [
+    154,
+    155
+  ],
+  "pdfPages": [
+    171,
+    172
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "部分分式与稳定极点；书已有转换推导，本页只给必要对应"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-33",
+      "filename": "课件3.3.pptx",
+      "pages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed",
+        "special_problem"
+      ]
+    }
+  ],
+  "sourceClaims": [
+    {
+      "claim": "原书h(n)=ha(nT)及单极点映射，原例3.3.3参数",
+      "printedPages": [
+        154,
+        155
+      ],
+      "pdfPages": [
+        171,
+        172
+      ]
+    },
+    {
+      "claim": "原P45/P46公式不一致不是渲染漏字"
+    },
+    {
+      "claim": "纠正公式与数值"
+    },
+    {
+      "claim": "impinvar factor1/fs"
+    }
+  ],
+  "status": "reviewed-release"
+}
