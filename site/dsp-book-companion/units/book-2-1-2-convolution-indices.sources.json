@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-1-2-convolution-indices",
+  "title": "卷积证明里的k为什么不是频点",
+  "bookSectionIds": [
+    "book-2-1-2"
+  ],
+  "learningPurpose": "按原PPT换元说明时间哑变量与频率积分变量，复用书已清楚给出的两条卷积结论",
+  "printedPages": [
+    42
+  ],
+  "pdfPages": [
+    59
+  ],
+  "prerequisites": [
+    "book-2-1-1-dtft-notation"
+  ],
+  "prerequisiteNotes": [
+    "推荐符号桥接，不锁门、不增必修进度。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-21",
+      "filename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "pages": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "书给卷积结论，课件展开证明；P20明确k=n−m，故k是时间求和变量。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "两条卷积定理及频域积分变量θ在书印42的式2.1.8–2.1.10。",
+      "printedPages": [
+        42
+      ],
+      "pdfPages": [
+        59
+      ]
+    },
+    {
+      "kind": "ppt-notation-bridge",
+      "claim": "P20换元后k,m均为整数时间索引，ω固定；不是DFT频点k。"
+    },
+    {
+      "kind": "sufficient-condition",
+      "claim": "两序列绝对可和足以支持本段求和重排；有限长情形满足。"
+    }
+  ],
+  "status": "reviewed-release"
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-1-1-reading-map",
+  "title": "定义、逆变换与课件矩形例",
+  "bookSectionIds": [
+    "book-2-1-1"
+  ],
+  "learningPurpose": "按真实书位置聚合PPT P4–P10；书已清楚处只定位，保留原矩形例条件与必要边界",
+  "printedPages": [
+    37,
+    38,
+    39,
+    40
+  ],
+  "pdfPages": [
+    54,
+    55,
+    56,
+    57
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "定位卡是本节入口，不强制逐页双读。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-21",
+      "filename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "P4/5定义和存在条件，P6单位圆，P7逆变换，P8/9一般矩形及N4图，P10仅正逆公式与计算提示。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "式2.1.1、2.1.3、条件段以及表2.1.1 R_N项对应课件本组内容。",
+      "printedPages": [
+        37,
+        38,
+        39,
+        40
+      ],
+      "pdfPages": [
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    {
+      "kind": "original-ppt-example",
+      "claim": "一般R_N求和、N=4幅度/相位图，保留有限序列不做周期延拓。"
+    },
+    {
+      "kind": "supplement-boundary",
+      "claim": "有限和给可去奇点4；比值符号改变需相位加π，频谱零点相位不定义。"
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "P10未给新题干；未将同书节其他例题扩大为PPT任务，不推断考试范围。"
+    }
+  ],
+  "relatedUnits": [
+    "book-2-1-1-dtft-notation",
+    "book-2-1-1-inverse-roles"
+  ],
+  "status": "reviewed-release"
+}

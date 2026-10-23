@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-4-1-length-signed-amplitude",
+  "title": "3.4.1 对照辅导：长度N与带符号幅度Hg",
+  "bookSectionIds": [
+    "book-3-4-1"
+  ],
+  "learningPurpose": "按原表识别长度/阶数、实系数对称条件和带符号幅度，避免把FIR和线性相位自动等同。",
+  "printedPages": [
+    173,
+    174
+  ],
+  "pdfPages": [
+    190,
+    191
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "复数相角与相差pi；本页只给必要一句，不追加整节复数教材"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-34",
+      "filename": "课件3.4.pptx",
+      "pages": [
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ]
+    }
+  ],
+  "sourceClaims": [
+    {
+      "claim": "表3.4.1实系数/对称条件、N长度与Hg分解",
+      "printedPages": [
+        173,
+        174
+      ],
+      "pdfPages": [
+        190,
+        191
+      ]
+    },
+    {
+      "claim": "h=[1,1]两系数例子与Hg<0相角桥"
+    }
+  ],
+  "status": "reviewed-release"
+}

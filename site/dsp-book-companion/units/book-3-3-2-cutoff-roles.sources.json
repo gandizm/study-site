@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "id": "book-3-3-2-cutoff-roles",
+  "title": "3.3.2 对照辅导：三种边缘频率与阶数",
+  "bookSectionIds": [
+    "book-3-3-1",
+    "book-3-3-2"
+  ],
+  "learningPurpose": "分清指标边缘与3dB频率，理解取整后余量，避免把同书例程序中的不同频率代错。",
+  "printedPages": [
+    142,
+    143,
+    144,
+    145,
+    146
+  ],
+  "pdfPages": [
+    159,
+    160,
+    161,
+    162,
+    163
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "书3.2.2通阻带指标；本页以三行角色说明作最小桥"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-33",
+      "filename": "课件3.3.pptx",
+      "pages": [
+        8,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ]
+    }
+  ],
+  "sourceClaims": [
+    {
+      "claim": "书3.3.1/.2频率/阶数定义、例3.3.1及MATLAB Wc行",
+      "printedPages": [
+        142,
+        143,
+        144,
+        145,
+        146
+      ],
+      "pdfPages": [
+        159,
+        160,
+        161,
+        162,
+        163
+      ]
+    },
+    {
+      "claim": "取整后Omega_c闭区间、两端指标/错误代入数值核算"
+    }
+  ],
+  "status": "reviewed-release"
+}

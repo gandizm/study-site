@@ -358,8 +358,8 @@
         "pdfStart": 58,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-2-2",
@@ -886,8 +886,8 @@
         "pdfStart": 141,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "eligible",
+      "eligible": true
     },
     {
       "id": "book-3-1",
@@ -1128,8 +1128,8 @@
         "pdfStart": 158,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "eligible",
+      "eligible": true
     },
     {
       "id": "book-3-3-1",
@@ -1150,8 +1150,8 @@
         "pdfStart": 159,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-3-2",
@@ -1172,8 +1172,8 @@
         "pdfStart": 159,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-3-3",
@@ -1238,8 +1238,8 @@
         "pdfStart": 189,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "eligible",
+      "eligible": true
     },
     {
       "id": "book-3-4-1",
@@ -1260,8 +1260,8 @@
         "pdfStart": 189,
         "pdfEnd": null
       },
-      "scope": "deferred",
-      "eligible": false
+      "scope": "ppt_covered",
+      "eligible": true
     },
     {
       "id": "book-3-4-2",
@@ -2159,7 +2159,16 @@
       "unitIds": [
         "book-2-1-1-dtft-notation"
       ],
-      "scope": "ppt_covered"
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            5
+          ],
+          "role": "direct"
+        }
+      ]
     },
     {
       "id": "dtft-spectrum",
@@ -2179,7 +2188,17 @@
       "unitIds": [
         "book-2-1-1-dtft-notation"
       ],
-      "scope": "ppt_covered"
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            5,
+            10
+          ],
+          "role": "direct"
+        }
+      ]
     },
     {
       "id": "dtft-unit-circle",
@@ -2199,7 +2218,23 @@
       "unitIds": [
         "book-2-1-1-dtft-notation"
       ],
-      "scope": "ppt_covered"
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            4
+          ],
+          "role": "background"
+        },
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            6
+          ],
+          "role": "direct"
+        }
+      ]
     },
     {
       "id": "dtft-absolute-sum",
@@ -2217,7 +2252,679 @@
       "unitIds": [
         "book-2-1-1-dtft-notation"
       ],
-      "scope": "ppt_covered"
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            5
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-inverse",
+      "label": "整圈积分重构时间样值",
+      "type": "method",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "printedPages": [
+        38,
+        39,
+        40
+      ],
+      "pdfPages": [
+        55,
+        56,
+        57
+      ],
+      "unitIds": [
+        "book-2-1-1-inverse-roles"
+      ],
+      "scope": "ppt_covered",
+      "summary": "固定待恢复时刻，频率积分遍历一整圈；在本节普通变换与换序条件下使用。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            7,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dtft-finite-rectangle",
+      "label": "有限矩形序列的DTFT",
+      "type": "example",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "printedPages": [
+        40
+      ],
+      "pdfPages": [
+        57
+      ],
+      "unitIds": [
+        "book-2-1-1-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "用R_N一行处理原课件N=4例；有限和、可去奇点、幅度及零值相位分开。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dtft-linearity",
+      "label": "线性组合",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        41
+      ],
+      "pdfPages": [
+        58
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "对同一变换约定，序列的线性组合对应频谱的线性组合。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            13,
+            32
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-shifts",
+      "label": "时间移位与频率搬移",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        41,
+        42
+      ],
+      "pdfPages": [
+        58,
+        59
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "固定平移量不同于求和自变量；时移产生相位因子，时间调制搬移频谱。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            14,
+            32
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-reflection-conjugation",
+      "label": "时间反向与复共轭",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        42,
+        50
+      ],
+      "pdfPages": [
+        59,
+        67
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "反向与取共轭是不同操作；一般序列先保留频率反向，不擅加实序列条件。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            15,
+            32
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-periodicity",
+      "label": "数字频谱的2π周期",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        44
+      ],
+      "pdfPages": [
+        61
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "整数时间索引使数字角频率相差2π整数倍时变换值相同。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            12
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-time-convolution",
+      "label": "时间卷积对应频谱乘积",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        42
+      ],
+      "pdfPages": [
+        59
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map",
+        "book-2-1-2-convolution-indices"
+      ],
+      "scope": "ppt_covered",
+      "summary": "卷积中的k=n−m仍是时间变量；系统应用采用LTI零状态关系。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            19,
+            20,
+            32
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-frequency-convolution",
+      "label": "时间乘积对应频域周期卷积",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        42
+      ],
+      "pdfPages": [
+        59
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map",
+        "book-2-1-2-convolution-indices"
+      ],
+      "scope": "ppt_covered",
+      "summary": "频率积分遍历一整圈，按本书约定保留1/(2π)。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            21,
+            22,
+            32
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-parseval",
+      "label": "Parseval能量关系",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        42,
+        43
+      ],
+      "pdfPages": [
+        59,
+        60
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "频谱模平方的一周期积分要乘1/(2π)，才能对应时间能量。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            17,
+            18
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-frequency-derivative",
+      "label": "频域微分与时间加权",
+      "type": "property",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        43
+      ],
+      "pdfPages": [
+        60
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "时间乘n对应频谱导数乘j；逐项求导需要相应收敛条件。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            16
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-conjugate-parts",
+      "label": "共轭对称分解与实虚分解",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        44,
+        45,
+        47,
+        50
+      ],
+      "pdfPages": [
+        61,
+        62,
+        64,
+        67
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map",
+        "book-2-1-2-two-decompositions"
+      ],
+      "scope": "ppt_covered",
+      "summary": "两套分解交叉对应，x_e不是时间实部、X_e也不等于频谱实部；实序列才有额外实偶/虚奇结论。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            32,
+            33
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-causal-recovery",
+      "label": "实因果序列的恢复条件",
+      "type": "method",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        48,
+        49
+      ],
+      "pdfPages": [
+        65,
+        66
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "由偶部分可恢复实因果序列；由奇部分恢复还需原点值，u_+的2/1/0必须保留。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            30,
+            31,
+            35
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "dtft-property-selection",
+      "label": "按目标提取谱值与能量",
+      "type": "method",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "printedPages": [
+        43,
+        44
+      ],
+      "pdfPages": [
+        60,
+        61
+      ],
+      "unitIds": [
+        "book-2-1-2-reading-map"
+      ],
+      "scope": "ppt_covered",
+      "summary": "例2.1.7用总和、逆变换原点、交替和、Parseval及导数能量，而非先展开整个频谱。",
+      "pptReferences": [
+        {
+          "deckId": "dsp-21",
+          "pages": [
+            34
+          ],
+          "role": "direct"
+        }
+      ]
+    },
+    {
+      "id": "filter-design-spec",
+      "label": "通带与阻带指标",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-3-1"
+      ],
+      "printedPages": [
+        142
+      ],
+      "pdfPages": [
+        159
+      ],
+      "unitIds": [
+        "book-3-3-2-cutoff-roles"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-33",
+          "pages": [
+            8,
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "butterworth-response",
+      "label": "巴特沃斯幅度平方函数",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-3-2"
+      ],
+      "printedPages": [
+        142,
+        143
+      ],
+      "pdfPages": [
+        159,
+        160
+      ],
+      "unitIds": [
+        "book-3-3-2-cutoff-roles"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-33",
+          "pages": [
+            15,
+            16,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "id": "butterworth-order",
+      "label": "此处N：滤波器阶数",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-3-2"
+      ],
+      "printedPages": [
+        143
+      ],
+      "pdfPages": [
+        160
+      ],
+      "unitIds": [
+        "book-3-3-2-cutoff-roles"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-33",
+          "pages": [
+            22,
+            23,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "id": "butterworth-stable-poles",
+      "label": "左半平面的N个稳定极点",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-3-2"
+      ],
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        161
+      ],
+      "unitIds": [
+        "book-3-3-2-cutoff-roles"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-33",
+          "pages": [
+            18,
+            19,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "id": "butterworth-cutoff",
+      "label": "3dB频率Ωc的可选范围",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-3-2"
+      ],
+      "printedPages": [
+        144,
+        146
+      ],
+      "pdfPages": [
+        161,
+        163
+      ],
+      "unitIds": [
+        "book-3-3-2-cutoff-roles"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-33",
+          "pages": [
+            21,
+            23,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-length",
+      "label": "此处N：有限脉冲响应长度",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-4-1"
+      ],
+      "printedPages": [
+        173
+      ],
+      "pdfPages": [
+        190
+      ],
+      "unitIds": [
+        "book-3-4-1-length-signed-amplitude"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-34",
+          "pages": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-real-symmetry",
+      "label": "实系数的对称或反对称",
+      "type": "condition",
+      "bookSectionIds": [
+        "book-3-4-1"
+      ],
+      "printedPages": [
+        173,
+        174
+      ],
+      "pdfPages": [
+        190,
+        191
+      ],
+      "unitIds": [
+        "book-3-4-1-length-signed-amplitude"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-34",
+          "pages": [
+            6,
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-signed-amplitude",
+      "label": "带符号Hg与线性相位因子",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-4-1"
+      ],
+      "printedPages": [
+        173,
+        174
+      ],
+      "pdfPages": [
+        190,
+        191
+      ],
+      "unitIds": [
+        "book-3-4-1-length-signed-amplitude"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-34",
+          "pages": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fir-endpoint-zero",
+      "label": "0与π处的强制零点",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-3-4-1"
+      ],
+      "printedPages": [
+        173,
+        174
+      ],
+      "pdfPages": [
+        190,
+        191
+      ],
+      "unitIds": [
+        "book-3-4-1-length-signed-amplitude"
+      ],
+      "scope": "ppt_covered",
+      "pptReferences": [
+        {
+          "deckId": "dsp-34",
+          "pages": [
+            8,
+            10
+          ]
+        }
+      ]
     }
   ],
   "knowledgeEdges": [
@@ -2263,6 +2970,411 @@
           55
         ],
         "note": "式2.1.2及其前后说明，不声称必要条件。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-inverse",
+      "label": "通过逆变换恢复时间样值",
+      "evidence": {
+        "printedPages": [
+          38,
+          39
+        ],
+        "pdfPages": [
+          55,
+          56
+        ],
+        "note": "式2.1.3与整圈积分证明；边是运算关系，不是无条件存在性承诺。"
+      }
+    },
+    {
+      "from": "dtft-inverse",
+      "to": "dtft-sequence",
+      "label": "输出固定时刻的序列值",
+      "evidence": {
+        "printedPages": [
+          39
+        ],
+        "pdfPages": [
+          56
+        ],
+        "note": "先得到x(m)，最后自由索引改回n。"
+      }
+    },
+    {
+      "from": "dtft-absolute-sum",
+      "to": "dtft-inverse",
+      "label": "足以保证本段求和积分可换序",
+      "evidence": {
+        "printedPages": [
+          38,
+          39
+        ],
+        "pdfPages": [
+          55,
+          56
+        ],
+        "note": "书明确先假设一致收敛；绝对可和保证该条件。"
+      }
+    },
+    {
+      "from": "dtft-finite-rectangle",
+      "to": "dtft-spectrum",
+      "label": "用有限和具体计算频谱",
+      "evidence": {
+        "printedPages": [
+          40
+        ],
+        "pdfPages": [
+          57
+        ],
+        "note": "表2.1.1 R_N项；PPT8/9给N4幅相应用。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-linearity",
+      "label": "可对线性组合逐项变换",
+      "evidence": {
+        "printedPages": [
+          41
+        ],
+        "pdfPages": [
+          58
+        ],
+        "note": "书式2.1.4。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-shifts",
+      "label": "通过换元比较移位前后频谱",
+      "evidence": {
+        "printedPages": [
+          41,
+          42
+        ],
+        "pdfPages": [
+          58,
+          59
+        ],
+        "note": "书式2.1.5/2.1.6，边表示性质推导操作。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-periodicity",
+      "label": "因整数时间而具有整圈周期",
+      "evidence": {
+        "printedPages": [
+          44
+        ],
+        "pdfPages": [
+          61
+        ],
+        "note": "书2.1.2第8项。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-reflection-conjugation",
+      "label": "分别考察反向与取共轭",
+      "evidence": {
+        "printedPages": [
+          42,
+          50
+        ],
+        "pdfPages": [
+          59,
+          67
+        ],
+        "note": "式2.1.7及表2.1.2。"
+      }
+    },
+    {
+      "from": "dtft-time-convolution",
+      "to": "dtft-frequency-convolution",
+      "label": "对比两侧卷积与乘积及尺度",
+      "evidence": {
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ],
+        "note": "书第4、5项；这是对比，不声明单独一条可推出另一条。"
+      }
+    },
+    {
+      "from": "dtft-conjugate-parts",
+      "to": "dtft-reflection-conjugation",
+      "label": "分解使用共轭反射操作",
+      "evidence": {
+        "printedPages": [
+          44,
+          45,
+          50
+        ],
+        "pdfPages": [
+          61,
+          62,
+          67
+        ],
+        "note": "共轭对称分量定义中x*(−n)兼有两种操作。"
+      }
+    },
+    {
+      "from": "dtft-conjugate-parts",
+      "to": "dtft-causal-recovery",
+      "label": "再加入实值与因果条件可恢复",
+      "evidence": {
+        "printedPages": [
+          48,
+          49
+        ],
+        "pdfPages": [
+          65,
+          66
+        ],
+        "note": "例2.1.11；边标签明确额外条件。"
+      }
+    },
+    {
+      "from": "dtft-parseval",
+      "to": "dtft-property-selection",
+      "label": "计算频谱模平方积分",
+      "evidence": {
+        "printedPages": [
+          43,
+          44
+        ],
+        "pdfPages": [
+          60,
+          61
+        ],
+        "note": "例2.1.7第4问。"
+      }
+    },
+    {
+      "from": "dtft-frequency-derivative",
+      "to": "dtft-property-selection",
+      "label": "与Parseval合用计算导数能量",
+      "evidence": {
+        "printedPages": [
+          43,
+          44
+        ],
+        "pdfPages": [
+          60,
+          61
+        ],
+        "note": "例2.1.7第5问；不是仅靠微分性质就获得能量值。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-parseval",
+      "label": "以模平方一周期积分表达时间能量",
+      "evidence": {
+        "printedPages": [
+          42,
+          43
+        ],
+        "pdfPages": [
+          59,
+          60
+        ],
+        "note": "式2.1.11及其前述条件；归一化1/(2π)。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-time-convolution",
+      "label": "把时间卷积变成频谱乘积",
+      "evidence": {
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ],
+        "note": "式2.1.8/2.1.9。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-frequency-derivative",
+      "label": "对频率求导对应时间加权",
+      "evidence": {
+        "printedPages": [
+          43
+        ],
+        "pdfPages": [
+          60
+        ],
+        "note": "第7项：时间乘n对应频域导数乘j。"
+      }
+    },
+    {
+      "from": "dtft-spectrum",
+      "to": "dtft-conjugate-parts",
+      "label": "可按共轭反射分解",
+      "evidence": {
+        "printedPages": [
+          45,
+          47
+        ],
+        "pdfPages": [
+          62,
+          64
+        ],
+        "note": "式2.1.22–24及后续两表。"
+      }
+    },
+    {
+      "from": "filter-design-spec",
+      "to": "butterworth-order",
+      "label": "同时满足通阻带约束，求阶数并向上取整",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          143
+        ],
+        "pdfPages": [
+          160
+        ],
+        "note": "书式3.3.7–3.3.9及小数阶数取整说明。"
+      }
+    },
+    {
+      "from": "butterworth-order",
+      "to": "butterworth-response",
+      "label": "阶数影响下降速度与过渡带",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          143
+        ],
+        "pdfPages": [
+          160
+        ],
+        "note": "书图3.3.2与上下文字，不把阶数大小单独当规格保证。"
+      }
+    },
+    {
+      "from": "butterworth-response",
+      "to": "butterworth-cutoff",
+      "label": "在Ωc处为直流幅度的1/√2",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          142,
+          143
+        ],
+        "pdfPages": [
+          159,
+          160
+        ],
+        "note": "书式3.3.6及3dB定义；可选区间是由同式指标不等式推导的辅导桥。"
+      }
+    },
+    {
+      "from": "butterworth-order",
+      "to": "butterworth-stable-poles",
+      "label": "从2N个幅度平方极点选N个",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          144
+        ],
+        "pdfPages": [
+          161
+        ],
+        "note": "式3.3.10–3.3.12；N是阶数，不是离散频率点数。"
+      }
+    },
+    {
+      "from": "butterworth-stable-poles",
+      "to": "butterworth-response",
+      "label": "构造稳定的Ha(s)实现该幅度",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          144
+        ],
+        "pdfPages": [
+          161
+        ],
+        "note": "只选左半平面极点是所述因果稳定模拟滤波器要求。"
+      }
+    },
+    {
+      "from": "fir-length",
+      "to": "fir-real-symmetry",
+      "label": "另检对称条件，有限长本身不够",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          173,
+          174
+        ],
+        "pdfPages": [
+          190,
+          191
+        ],
+        "note": "书表3.4.1的实序列与h(n)=±h(N−1−n)前提，不作有限长必然线性相位的推断。"
+      }
+    },
+    {
+      "from": "fir-real-symmetry",
+      "to": "fir-signed-amplitude",
+      "label": "使频响写成实Hg乘线性相位因子",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          173,
+          174
+        ],
+        "pdfPages": [
+          190,
+          191
+        ],
+        "note": "书H(e^jω)=Hg(ω)e^jθ(ω)及表中分解；Hg可为负。"
+      }
+    },
+    {
+      "from": "fir-real-symmetry",
+      "to": "fir-endpoint-zero",
+      "label": "与长度奇偶共同约束端点",
+      "relationKind": "mathematical_relation",
+      "evidence": {
+        "printedPages": [
+          173,
+          174
+        ],
+        "pdfPages": [
+          190,
+          191
+        ],
+        "note": "书情况1–4后关于0/π端点的限制，不等于任意指定幅度皆可实现。"
+      }
+    },
+    {
+      "from": "butterworth-order",
+      "to": "fir-length",
+      "label": "同字母N换角色：阶数变为长度",
+      "relationKind": "notation_bridge",
+      "evidence": {
+        "printedPages": [
+          143,
+          173
+        ],
+        "pdfPages": [
+          160,
+          190
+        ],
+        "note": "这是两个原书局部定义的符号桥，不是数学等式N阶数=N长度，也不是课程先修边。"
       }
     }
   ],
@@ -2368,12 +3480,84 @@
   "availableUnits": [
     {
       "id": "book-2-1-1-dtft-notation",
+      "presentation": "optional-bridge",
       "contentSha256": "601d95a972cb6bae795c0e66b27c7df35a1bda46669ea2e9cd24fa254da2b378",
       "title": "DTFT式里，谁在变，谁在被加起来",
       "bookSectionIds": [
         "book-2-1-1"
       ],
       "href": "/study-site/dsp-book-companion/units/book-2-1-1-dtft-notation.html"
+    },
+    {
+      "id": "book-2-1-1-reading-map",
+      "presentation": "book-locator",
+      "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
+      "title": "定义、逆变换与课件矩形例",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-1-1-reading-map.html"
+    },
+    {
+      "id": "book-2-1-1-inverse-roles",
+      "presentation": "optional-bridge",
+      "contentSha256": "1fcf06505253e1289464f767151427c90ddd52871d6a5cac332330736e22b0dc",
+      "title": "逆变换证明为什么先写m，最后又写n",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-1-1-inverse-roles.html"
+    },
+    {
+      "id": "book-2-1-2-reading-map",
+      "presentation": "book-locator",
+      "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+      "title": "性质按用途找，课件只补条件与题型",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-1-2-reading-map.html"
+    },
+    {
+      "id": "book-2-1-2-convolution-indices",
+      "presentation": "optional-bridge",
+      "contentSha256": "63bcdf2cc54476b87e89c0edbc295ee6f4fdf8abbf74aeceeb2de7af669ee849",
+      "title": "卷积证明里的k为什么不是频点",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-1-2-convolution-indices.html"
+    },
+    {
+      "id": "book-2-1-2-two-decompositions",
+      "presentation": "optional-bridge",
+      "contentSha256": "cee05c0043be7a9ee8c8ea005dcf4f396512e2de0939e0c947b7b72707847c66",
+      "title": "两套分解表，别把下标当成同一种意思",
+      "bookSectionIds": [
+        "book-2-1-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-1-2-two-decompositions.html"
+    },
+    {
+      "id": "book-3-3-2-cutoff-roles",
+      "presentation": "optional-bridge",
+      "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+      "title": "3.3.2 对照辅导：三种边缘频率与阶数",
+      "bookSectionIds": [
+        "book-3-3-1",
+        "book-3-3-2"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-3-2-cutoff-roles.html"
+    },
+    {
+      "id": "book-3-4-1-length-signed-amplitude",
+      "presentation": "optional-bridge",
+      "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
+      "title": "3.4.1 对照辅导：长度N与带符号幅度Hg",
+      "bookSectionIds": [
+        "book-3-4-1"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-3-4-1-length-signed-amplitude.html"
     }
   ],
   "editionNotice": "课件1.1 P2提及第2版（2016.2），当前对照使用已取得的第3版（2021.8）；页码和章节位置按实际内容核对，不按课件旧页号直接套用。",

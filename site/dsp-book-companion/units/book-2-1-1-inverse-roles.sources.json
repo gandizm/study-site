@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-1-1-inverse-roles",
+  "title": "逆变换证明为什么先写m，最后又写n",
+  "bookSectionIds": [
+    "book-2-1-1"
+  ],
+  "learningPurpose": "只补原证明的自由索引/求和哑变量/积分变量，以及离散δ与交换条件",
+  "printedPages": [
+    38,
+    39
+  ],
+  "pdfPages": [
+    55,
+    56
+  ],
+  "prerequisites": [
+    "book-2-1-1-dtft-notation"
+  ],
+  "prerequisiteNotes": [
+    "推荐补桥关系，不锁阅读入口；原书已读懂者可直接略过。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-21",
+      "filename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "pages": [
+        7
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "原P7与书中逆变换证明对应。当前可读图仅用于辨认公式角色，不宣称PPT原貌保真。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "印38末开始用e^{jωm}乘定义式；印39推导得到2πx(m)，最终式2.1.3改回x(n)。",
+      "printedPages": [
+        38,
+        39
+      ],
+      "pdfPages": [
+        55,
+        56
+      ]
+    },
+    {
+      "kind": "supplement-role-bridge",
+      "claim": "m固定、n求和、ω积分；最后自由变量改名与先前求和变量不在同一作用域。"
+    },
+    {
+      "kind": "condition",
+      "claim": "绝对可和是交换该求和积分的一组充分条件；整数m,n下的δ为离散单位脉冲。"
+    }
+  ],
+  "status": "reviewed-release"
+}

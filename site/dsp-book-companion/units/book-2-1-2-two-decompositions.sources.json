@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-1-2-two-decompositions",
+  "title": "两套分解表，别把下标当成同一种意思",
+  "bookSectionIds": [
+    "book-2-1-2"
+  ],
+  "learningPurpose": "只补原书两种分解与课件R/I大小写的角色回读，不重写对称性证明",
+  "printedPages": [
+    45,
+    47
+  ],
+  "pdfPages": [
+    62,
+    64
+  ],
+  "prerequisites": [
+    "book-2-1-1-dtft-notation"
+  ],
+  "prerequisiteNotes": [
+    "推荐符号桥接，不锁门、不增必修进度。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-21",
+      "filename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "pages": [
+        27,
+        29
+      ],
+      "roles": [
+        "book_direct",
+        "notation_difference",
+        "bridge_needed"
+      ],
+      "note": "P27为时间共轭对称分解→频谱实虚；P29为时间实虚分解→频谱共轭对称分解。两图已实际目视，不宣称原貌保真。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "原书印45的共轭对称/反对称定义，以及印47的式2.1.25–2.1.32给出两套分解对应。",
+      "printedPages": [
+        45,
+        47
+      ],
+      "pdfPages": [
+        62,
+        64
+      ]
+    },
+    {
+      "kind": "ppt-notation-bridge",
+      "claim": "P27使用X_R与X_I，书印47对应X_r与X_i；P29另一张表不可与P27互换。"
+    },
+    {
+      "kind": "supplement-example",
+      "claim": "δ(n−1)作为新增核对，用于区分共轭对称频谱与实频谱，不冒充原书例题。"
+    }
+  ],
+  "status": "reviewed-release"
+}

@@ -247,6 +247,12 @@
           "contentSha256": "601d95a972cb6bae795c0e66b27c7df35a1bda46669ea2e9cd24fa254da2b378",
           "reviewStatus": "passed",
           "scopeNote": "仅此单元明确讲解的定义/角色/条件；不把本页其他命题或整节算完成。"
+        },
+        {
+          "unitId": "book-2-1-1-reading-map",
+          "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
+          "reviewStatus": "passed",
+          "scopeNote": "由原P4引入定位到书中定义；不声称原P4已有完整定义公式。"
         }
       ]
     },
@@ -280,6 +286,12 @@
           "contentSha256": "601d95a972cb6bae795c0e66b27c7df35a1bda46669ea2e9cd24fa254da2b378",
           "reviewStatus": "passed",
           "scopeNote": "仅此单元明确讲解的定义/角色/条件；不把本页其他命题或整节算完成。"
+        },
+        {
+          "unitId": "book-2-1-1-reading-map",
+          "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
+          "reviewStatus": "passed",
+          "scopeNote": "只解释DTFT定义与充分收敛条件的对应，不覆盖本书节其它例题。"
         }
       ]
     },
@@ -309,6 +321,12 @@
           "contentSha256": "601d95a972cb6bae795c0e66b27c7df35a1bda46669ea2e9cd24fa254da2b378",
           "reviewStatus": "passed",
           "scopeNote": "仅此单元明确讲解的定义/角色/条件；不把本页其他命题或整节算完成。"
+        },
+        {
+          "unitId": "book-2-1-1-reading-map",
+          "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
+          "reviewStatus": "passed",
+          "scopeNote": "只定位ROC包含单位圆时的Z变换联系。"
         }
       ]
     },
@@ -335,7 +353,20 @@
         "书逆变换证明先固定m，正变换仍对n求和；最后改回n只是自由变量改名。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-1-reading-map",
+          "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
+          "reviewStatus": "passed",
+          "scopeNote": "只定位本页逆变换及符号角色。"
+        },
+        {
+          "unitId": "book-2-1-1-inverse-roles",
+          "contentSha256": "1fcf06505253e1289464f767151427c90ddd52871d6a5cac332330736e22b0dc",
+          "reviewStatus": "passed",
+          "scopeNote": "仅m固定、n求和、ω积分的证明角色及离散δ/交换条件；不是整页新课。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -355,7 +386,14 @@
         "DTFT定义、Z关系、逆变换与有限矩形例对应书2.1.1；不是沿用课件页号。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-1-reading-map",
+          "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
+          "reviewStatus": "passed",
+          "scopeNote": "原P8一般有限矩形R_N求和及随后指定N=4的条件。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -376,7 +414,14 @@
         "DTFT定义、Z关系、逆变换与有限矩形例对应书2.1.1；不是沿用课件页号。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-1-reading-map",
+          "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
+          "reviewStatus": "passed",
+          "scopeNote": "原P9四个1的有限序列与分段幅度/相位图；不作周期延拓。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -396,7 +441,14 @@
         "DTFT定义、Z关系、逆变换与有限矩形例对应书2.1.1；不是沿用课件页号。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-1-reading-map",
+          "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
+          "reviewStatus": "passed",
+          "scopeNote": "仅正逆公式与计算提示；本页未给完整新题干。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -416,7 +468,14 @@
         "性质目录，不代替证明。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -438,7 +497,14 @@
         "对应书印44、2.1.2第8项周期性；概念由定义解释，但书内归属不是2.1.1。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -458,7 +524,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -483,7 +556,14 @@
         "频移缓存下标疑似位置问题，正确角色为固定ω0乘时间n；保留证据限定而非臆造原生对象结论。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -503,7 +583,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -524,7 +611,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -544,7 +638,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -564,7 +665,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -584,7 +692,20 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-1-2-convolution-indices",
+          "contentSha256": "63bcdf2cc54476b87e89c0edbc295ee6f4fdf8abbf74aeceeb2de7af669ee849",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书给卷积结论，课件展开证明；P20明确k=n−m，故k是时间求和变量。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -608,7 +729,20 @@
         "卷积证明里的k=n−m是时间哑变量，不是DFT频点。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-1-2-convolution-indices",
+          "contentSha256": "63bcdf2cc54476b87e89c0edbc295ee6f4fdf8abbf74aeceeb2de7af669ee849",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书给卷积结论，课件展开证明；P20明确k=n−m，故k是时间求和变量。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -628,7 +762,20 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-1-2-convolution-indices",
+          "contentSha256": "63bcdf2cc54476b87e89c0edbc295ee6f4fdf8abbf74aeceeb2de7af669ee849",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书给卷积结论，课件展开证明；P20明确k=n−m，故k是时间求和变量。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -648,7 +795,20 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-1-2-convolution-indices",
+          "contentSha256": "63bcdf2cc54476b87e89c0edbc295ee6f4fdf8abbf74aeceeb2de7af669ee849",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；书给卷积结论，课件展开证明；P20明确k=n−m，故k是时间求和变量。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -668,7 +828,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -689,7 +856,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -709,7 +883,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -729,7 +910,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -749,7 +937,20 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-1-2-two-decompositions",
+          "contentSha256": "cee05c0043be7a9ee8c8ea005dcf4f396512e2de0939e0c947b7b72707847c66",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P27为时间共轭对称分解→频谱实虚；P29为时间实虚分解→频谱共轭对称分解。两图已实际目视，不宣称原貌保真。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -769,7 +970,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -789,7 +997,20 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        },
+        {
+          "unitId": "book-2-1-2-two-decompositions",
+          "contentSha256": "cee05c0043be7a9ee8c8ea005dcf4f396512e2de0939e0c947b7b72707847c66",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P27为时间共轭对称分解→频谱实虚；P29为时间实虚分解→频谱共轭对称分解。两图已实际目视，不宣称原貌保真。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -809,7 +1030,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -829,7 +1057,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -849,7 +1084,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -869,7 +1111,14 @@
         "对应书2.1.2性质及其例题；局部符号和原题参数按各页记录。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -904,7 +1153,14 @@
         "原书例2.1.7以第3版实际印页43,44为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-21",
@@ -953,7 +1209,14 @@
         "原书例2.1.12以第3版实际印页50,51为准；PPT旧页号另存，不直接替换。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-2-1-2-reading-map",
+          "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-22",
@@ -7198,7 +7461,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7218,7 +7488,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7238,7 +7515,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7340,7 +7624,14 @@
         "本处N是滤波器阶数，和FIR页中长度N、DFT变换点数N是不同局部角色。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7360,7 +7651,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7380,7 +7678,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7402,7 +7707,14 @@
         "必须分清幅度平方表达式的2N极点与稳定传递函数选取的N个左半平面极点。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7424,7 +7736,14 @@
         "2N点说的是幅度平方对应极点集合，不能全部放进稳定Ha(s)。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7446,7 +7765,14 @@
         "原页提问“为什么少了一半”是明确课堂提问证据，不是必考承诺。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7466,7 +7792,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7486,7 +7819,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7506,7 +7846,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7531,7 +7878,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7556,7 +7910,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7581,7 +7942,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -7606,7 +7974,14 @@
         "这是课件明确例题；是否与本书同题尚待逐式比对，当前不标“课件特有题”。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-3-2-cutoff-roles",
+          "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P24–27是与书例3.3.1同题；P20明确问为何极点少一半，不作考试预测。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-33",
@@ -8266,7 +8641,14 @@
         "FIR有限长保证BIBO稳定（有限系数）；线性相位不是所有FIR自动具备的性质。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-length-signed-amplitude",
+          "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8289,7 +8671,14 @@
         "“FIR具有严格线性相位”需补实系数对称/反对称等适用条件；只按书核验后释义。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-length-signed-amplitude",
+          "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8331,7 +8720,14 @@
         "此处N是脉冲响应长度，通常阶数N-1。四类由实系数对称性及N奇偶决定。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-length-signed-amplitude",
+          "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8351,7 +8747,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-length-signed-amplitude",
+          "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8373,7 +8776,14 @@
         "实系数偶对称N偶数在omega=pi必有零点；高通/带阻适用性需看所需端点响应。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-length-signed-amplitude",
+          "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8393,7 +8803,14 @@
         "依据本版书目录标题与原PPT有序文本建立候选书节对应；未完成该页公式/原图及书正文逐项独审，不计辅导已完成。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-length-signed-amplitude",
+          "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",
@@ -8415,7 +8832,14 @@
         "教材概括的滤波类型限制须回到omega=0/pi强制零点，不表述成所有带通设计均可无条件实现。"
       ],
       "coverageStatus": "mapped_pending_review",
-      "availableTutoring": []
+      "availableTutoring": [
+        {
+          "unitId": "book-3-4-1-length-signed-amplitude",
+          "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
+          "reviewStatus": "passed",
+          "scopeNote": "本页相关的可选书本对照；P6–10与书表3.4.1相同四种情况；P3–4概括需连同P6条件读，不推断教师考试范围。 仅表示该短段可用，不表示所列每页已完成全部辅导。"
+        }
+      ]
     },
     {
       "deckId": "dsp-34",

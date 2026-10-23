@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-1-2-reading-map",
+  "title": "性质按用途找，课件只补条件与题型",
+  "bookSectionIds": [
+    "book-2-1-2"
+  ],
+  "learningPurpose": "以书内性质/图表/例号为主，串起原P11–P35；保留P35额外六项余弦题的条件与简解",
+  "printedPages": [
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "pdfPages": [
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "定位卡是本节入口，不强制逐页双读。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-21",
+      "filename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "pages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "roles": [
+        "book_direct",
+        "repeated_emphasis",
+        "bridge_needed",
+        "special_problem"
+      ],
+      "note": "P11目录、P12–31性质/推导、P32/33总表、P34/35指定书例与P35六项余弦额外题；角色按组解释，不把每页都标特有题。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "第2.1.2各性质、表2.1.2和指定例2.1.7/11/12按实际书页定位；不以PPT旧页号替代。",
+      "printedPages": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "pdfPages": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ]
+    },
+    {
+      "kind": "original-ppt-example",
+      "claim": "P35额外题原条件为实因果LTI及从n0到5的六项0.5^n余弦和；答h(n)=0.5^n仅0..5，其他零。"
+    },
+    {
+      "kind": "supplement-boundary",
+      "claim": "卷积输出采用LTI零状态；实序列非零谱相位模2π对称；一般时间翻转先保留频率反向。"
+    },
+    {
+      "kind": "scope-limit",
+      "claim": "书内已清楚的性质只定位不重讲；特定例号不等于考试预测。"
+    }
+  ],
+  "relatedUnits": [
+    "book-2-1-2-convolution-indices",
+    "book-2-1-2-two-decompositions"
+  ],
+  "status": "reviewed-release"
+}
