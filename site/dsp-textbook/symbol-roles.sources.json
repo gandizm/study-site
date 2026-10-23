@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "id": "symbol-roles",
+  "title": "先认角色，再看字母：n和k到底能不能互换？",
+  "order": 1,
+  "goals": [
+    "区分时间索引、频率格点与求和哑变量",
+    "在变量换名时保持作用域和全部关联位置一致",
+    "读回原PPT的DTFT与时域卷积记号"
+  ],
+  "prerequisites": [
+    "guide"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-21",
+      "pages": [
+        5,
+        19,
+        20
+      ],
+      "kind": "foundation",
+      "note": "仅解释所引式子的符号角色；这些页的完整推导与教学由后续对应小节覆盖。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-21",
+      "title": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "kind": "ppt",
+      "section": "2.1",
+      "pages": [
+        5,
+        19,
+        20
+      ],
+      "note": "第5页DTFT定义；19–20页时域卷积关系。",
+      "sourceFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "sourceSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a"
+    },
+    {
+      "id": "symbol-supplement",
+      "title": "符号角色桥接、DFT符号预览与回忆练习",
+      "kind": "supplement",
+      "section": "阅读铺垫",
+      "pages": [],
+      "note": "通用记号练习，不声称这些新增算式逐字出现在原PPT。"
+    }
+  ]
+}

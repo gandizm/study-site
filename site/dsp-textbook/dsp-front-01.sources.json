@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "id": "dsp-front-01",
+  "title": "从4个采样值看频率成分",
+  "order": 2,
+  "goals": [
+    "区分时间样值索引、频率索引与求和哑变量",
+    "完整求出4点DFT并逆变换验算",
+    "用原课件W_N形式认回同一公式"
+  ],
+  "prerequisites": [
+    "symbol-roles"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        4
+      ],
+      "kind": "foundation",
+      "note": "先通过4点算例读懂定义，完整N点原理与证明留后续，不将P4全内容标完成。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        5
+      ],
+      "kind": "foundation",
+      "note": "仅解释m接替时间求和角色的换名，尚未完整证明逆变换。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        28
+      ],
+      "kind": "example",
+      "note": "用两个4点序列相加验证线性，完整一般证明留后续。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "foundation",
+      "note": "新编入门，不对应虚构原PPT页。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-23",
+      "title": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "kind": "ppt",
+      "section": "2.3",
+      "pages": [
+        4,
+        5,
+        28
+      ],
+      "note": "原P4定义、P5逆变换证明的m/n换名、P28线性。4点数据由本讲补充，不冒充原例。",
+      "sourceFilename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "sourceSha256": "80c4e87b080ddae66af7ed9ae83d35b058e60d7c0aef0765aa20cc32eaf881bc"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "从零理解与4点验证例",
+      "kind": "supplement",
+      "section": "补充铺垫",
+      "pages": [],
+      "note": "四种实数图样、复数最小铺垫、[1,0,-1,0]及全部自测为本讲新编。"
+    }
+  ]
+}
