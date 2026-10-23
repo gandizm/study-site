@@ -3480,6 +3480,7 @@
   "availableUnits": [
     {
       "id": "book-2-1-1-dtft-notation",
+      "primaryBookSectionId": "book-2-1-1",
       "presentation": "optional-bridge",
       "contentSha256": "601d95a972cb6bae795c0e66b27c7df35a1bda46669ea2e9cd24fa254da2b378",
       "title": "DTFT式里，谁在变，谁在被加起来",
@@ -3490,6 +3491,7 @@
     },
     {
       "id": "book-2-1-1-reading-map",
+      "primaryBookSectionId": "book-2-1-1",
       "presentation": "book-locator",
       "contentSha256": "5c82d4c3be5901bb5e58f170f4b4de695c1c7cc6f7e8e933d8b2ff0c5655f286",
       "title": "定义、逆变换与课件矩形例",
@@ -3500,6 +3502,7 @@
     },
     {
       "id": "book-2-1-1-inverse-roles",
+      "primaryBookSectionId": "book-2-1-1",
       "presentation": "optional-bridge",
       "contentSha256": "1fcf06505253e1289464f767151427c90ddd52871d6a5cac332330736e22b0dc",
       "title": "逆变换证明为什么先写m，最后又写n",
@@ -3510,6 +3513,7 @@
     },
     {
       "id": "book-2-1-2-reading-map",
+      "primaryBookSectionId": "book-2-1-2",
       "presentation": "book-locator",
       "contentSha256": "dab274ef7a47391347d03565a8f30ca02b328ed29a750e1a84822698b1b025fc",
       "title": "性质按用途找，课件只补条件与题型",
@@ -3520,6 +3524,7 @@
     },
     {
       "id": "book-2-1-2-convolution-indices",
+      "primaryBookSectionId": "book-2-1-2",
       "presentation": "optional-bridge",
       "contentSha256": "63bcdf2cc54476b87e89c0edbc295ee6f4fdf8abbf74aeceeb2de7af669ee849",
       "title": "卷积证明里的k为什么不是频点",
@@ -3530,6 +3535,7 @@
     },
     {
       "id": "book-2-1-2-two-decompositions",
+      "primaryBookSectionId": "book-2-1-2",
       "presentation": "optional-bridge",
       "contentSha256": "cee05c0043be7a9ee8c8ea005dcf4f396512e2de0939e0c947b7b72707847c66",
       "title": "两套分解表，别把下标当成同一种意思",
@@ -3540,6 +3546,7 @@
     },
     {
       "id": "book-3-3-2-cutoff-roles",
+      "primaryBookSectionId": "book-3-3-2",
       "presentation": "optional-bridge",
       "contentSha256": "d6c99bedac1415154994e9775538d6581d7b6170faabe271446e24fadb5f673e",
       "title": "3.3.2 对照辅导：三种边缘频率与阶数",
@@ -3551,6 +3558,7 @@
     },
     {
       "id": "book-3-4-1-length-signed-amplitude",
+      "primaryBookSectionId": "book-3-4-1",
       "presentation": "optional-bridge",
       "contentSha256": "60504984a86e2208618a18d43216602257c90c32e34669be25d47e5de12cb8c7",
       "title": "3.4.1 对照辅导：长度N与带符号幅度Hg",
