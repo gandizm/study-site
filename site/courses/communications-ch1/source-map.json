@@ -1,0 +1,1611 @@
+{
+  "version": 1,
+  "id": "communications-ch1",
+  "pageCount": 94,
+  "reader": "communications-ch1-ppt.html",
+  "sourcePpt": "通信原理A_chapt1.ppt",
+  "sourcePptSha256": "321bc6934f85d9f3e106b6ca2b951394e16359bea60842531e708947d4ee7ab3",
+  "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+  "sourcePdfSha256": "e6ad0ad46dc5abafc4bfe9382cd819025508755deb109eac0e924f33bdf0690f",
+  "sourceStatus": "依据用户原PPT重新转换，按物理页1–94对应。转换页脚自动更新时间已披露；不能沿用旧PDF或旧渲染图片hash。",
+  "pages": [
+    {
+      "page": 1,
+      "title": "先把通信看成一个受约束的信息传递问题",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"1\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 1,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=1",
+      "image": "/study-site/courses/communications-ch1/slides/page-1.webp",
+      "imageSha256": "c11d049e9a07d3a57806a8c6db2b5136c847af9d9de4e3b26f3ad631666b93a1",
+      "imageBytes": 320602,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 2,
+      "title": "怎样使用参考书，而不把旧课件安排当作当前课程通知",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"2\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 2,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=2",
+      "image": "/study-site/courses/communications-ch1/slides/page-2.webp",
+      "imageSha256": "a9f89b192d73623cb17d9477dcac3935ce8ef205d6ed5f70080af0ab5a4248cc",
+      "imageBytes": 300012,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 3,
+      "title": "九章课程如何形成一条连续的技术路线",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"3\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 3,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=3",
+      "image": "/study-site/courses/communications-ch1/slides/page-3.webp",
+      "imageSha256": "5b7270d55862d58791cfab15935230d5966e55ef796b229fafa030263775daff",
+      "imageBytes": 287046,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 4,
+      "title": "把“掌握原理”拆成能检查的四种能力",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"4\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 4,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=4",
+      "image": "/study-site/courses/communications-ch1/slides/page-4.webp",
+      "imageSha256": "13fb3567e71e330ccbba25de7ae1384ae7ed8f6e281c8f99999b01d5b2e00f34",
+      "imageBytes": 321926,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 5,
+      "title": "第1章的核心：在资源有限时怎样可靠传信息",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"5\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 5,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=5",
+      "image": "/study-site/courses/communications-ch1/slides/page-5.webp",
+      "imageSha256": "98ff966e4f87942bc17c869cca2cda1a0937f7e276d4ea8a0b44c2e56cb89f1f",
+      "imageBytes": 456308,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 6,
+      "title": "五个知识块不是并列清单，而是一条因果链",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"6\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 6,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=6",
+      "image": "/study-site/courses/communications-ch1/slides/page-6.webp",
+      "imageSha256": "1fa35e8107c08e176199a8085cf4dfc84d3b7d4597f7092d7df5d597d6dd011a",
+      "imageBytes": 280008,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 7,
+      "title": "本章自测应检查模型、度量和边界",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"7\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 7,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=7",
+      "image": "/study-site/courses/communications-ch1/slides/page-7.webp",
+      "imageSha256": "139e0d29ee582a5547cb1b1f41fc865cbe31c2484548b3cfac00a38d0f81f4da",
+      "imageBytes": 304668,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 8,
+      "title": "通信传的是信息，信道中运动的是信号",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"8\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 8,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=8",
+      "image": "/study-site/courses/communications-ch1/slides/page-8.webp",
+      "imageSha256": "9abc57ecc1db12fed53b073e1a1b8fda1ef4d6830c8b38c0182dc7b2be8d7a9a",
+      "imageBytes": 308534,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 9,
+      "title": "历史发展的共同方向：扩展距离、规模与处理能力",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"9\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 9,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=9",
+      "image": "/study-site/courses/communications-ch1/slides/page-9.webp",
+      "imageSha256": "4db8b05d81eec0cbc2520b389090b4d6dd227f60f5b91807ea9db6d9c11106d4",
+      "imageBytes": 285084,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 10,
+      "title": "有效性与可靠性：不是一个数字能同时说完",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"10\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 10,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=10",
+      "image": "/study-site/courses/communications-ch1/slides/page-10.webp",
+      "imageSha256": "01bd3edb5889379f93075d203d30eb965420f839aa3fb9cd89a4a54521455789",
+      "imageBytes": 299964,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 11,
+      "title": "“无失真”应换成明确的可检验要求",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"11\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 11,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=11",
+      "image": "/study-site/courses/communications-ch1/slides/page-11.webp",
+      "imageSha256": "a15a60b9cc2bb1c2f04f40d30b4986ba76173c87ceda0400c8ac9787b11a552d",
+      "imageBytes": 293198,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 12,
+      "title": "把课件中的发展趋势看成设计动机，而非现状清单",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"12\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 12,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=12",
+      "image": "/study-site/courses/communications-ch1/slides/page-12.webp",
+      "imageSha256": "b26a31e9bc99fe9ba0891a9da68ae69950a9e27e9f73504c1f827309585af9a8",
+      "imageBytes": 276494,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 13,
+      "title": "提高频谱效率与提高抗干扰能力分别靠什么",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"13\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 13,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=13",
+      "image": "/study-site/courses/communications-ch1/slides/page-13.webp",
+      "imageSha256": "c429d71bc5b0de3d38b1acb862a0f430c791ea4cdb88c5d6166fa08d4ac6068c",
+      "imageBytes": 287156,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 14,
+      "title": "沿一般通信系统框图走一次",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"14\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 14,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=14",
+      "image": "/study-site/courses/communications-ch1/slides/page-14.webp",
+      "imageSha256": "15ffc2fd03d8cee759190ac0d00823da1d0ca780d1e367f4b6293516f514d763",
+      "imageBytes": 274426,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 15,
+      "title": "发送器的职责是适配，而不只是“把信号放大”",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"15\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 15,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=15",
+      "image": "/study-site/courses/communications-ch1/slides/page-15.webp",
+      "imageSha256": "9764f2d6644c4f5510e457747f8dad43afb13a11230a2076980acfe93624c818",
+      "imageBytes": 290334,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 16,
+      "title": "加性扰动和乘性变化怎样写进模型",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"16\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 16,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=16",
+      "image": "/study-site/courses/communications-ch1/slides/page-16.webp",
+      "imageSha256": "8c8c087a1e175f79f7797130e7512171e923e2dcdb4539687032f4cf1261e94f",
+      "imageBytes": 298790,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 17,
+      "title": "模拟通信中，调制与解调应相互匹配",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"17\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 17,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=17",
+      "image": "/study-site/courses/communications-ch1/slides/page-17.webp",
+      "imageSha256": "5e8867d696d616f452173b44a2c79c49e3f0bd315d95ccbe57b7b4860bdd66a3",
+      "imageBytes": 259040,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 18,
+      "title": "数字系统每个模块到底改变了什么",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"18\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 18,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=18",
+      "image": "/study-site/courses/communications-ch1/slides/page-18.webp",
+      "imageSha256": "85f1f46744aed33e2da6a9ed7e14762802f74947e41e694b206babaca4996791",
+      "imageBytes": 270730,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 19,
+      "title": "连续消息与离散消息，分类看表达对象",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"19\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 19,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=19",
+      "image": "/study-site/courses/communications-ch1/slides/page-19.webp",
+      "imageSha256": "ef6e471aa09b6978852d92dabf96061d19391f41ac11e6c2358b53125d07a4cd",
+      "imageBytes": 259216,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 20,
+      "title": "时间离散不等于幅度数字化",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"20\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 20,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=20",
+      "image": "/study-site/courses/communications-ch1/slides/page-20.webp",
+      "imageSha256": "5b931218bb329cf0f689dc0eaaeea252838d06887b415e2368900331b7ea11de",
+      "imageBytes": 281710,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 21,
+      "title": "调制的三个作用要分别理解",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"21\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 21,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=21",
+      "image": "/study-site/courses/communications-ch1/slides/page-21.webp",
+      "imageSha256": "ccfb5bc8be856ff239360f65a8c4d57a5d5fbb09899724bf3f966b2892a56d01",
+      "imageBytes": 286552,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 22,
+      "title": "同样叫编码，信源与信道为何方向相反",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"22\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 22,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=22",
+      "image": "/study-site/courses/communications-ch1/slides/page-22.webp",
+      "imageSha256": "6106f467efb0a10c69219da01b03062b9ef22b90404aa33a0799aa70f78a3919",
+      "imageBytes": 319730,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 23,
+      "title": "广播描述受众结构，不是调制方法",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"23\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 23,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=23",
+      "image": "/study-site/courses/communications-ch1/slides/page-23.webp",
+      "imageSha256": "240e0d8535fbca78ee9ffcc5f0f92ace4f6618b7ee245ba0649efb277e499481",
+      "imageBytes": 293158,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 24,
+      "title": "单工、半双工、全双工分的是方向与同时性",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"24\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 24,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=24",
+      "image": "/study-site/courses/communications-ch1/slides/page-24.webp",
+      "imageSha256": "50201292c696a50bee633609bc215816028f50cb7270c63cef2319cfbb684388",
+      "imageBytes": 295824,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 25,
+      "title": "串行与并行：线路数、时序和距离的折中",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"25\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 25,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=25",
+      "image": "/study-site/courses/communications-ch1/slides/page-25.webp",
+      "imageSha256": "e8a1c2607b9c63621eac237882b82ab63d4470a9bf96206a012d45db842e9c6a",
+      "imageBytes": 284800,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 26,
+      "title": "先选性能指标，再比较通信方案",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"26\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 26,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=26",
+      "image": "/study-site/courses/communications-ch1/slides/page-26.webp",
+      "imageSha256": "ff0baffaaf031360562b88b663432c9264ee1bc4bb815db7f6ffc23db0c62eb0",
+      "imageBytes": 267336,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 27,
+      "title": "码元速率计数的是波形选择次数",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"27\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 27,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=27",
+      "image": "/study-site/courses/communications-ch1/slides/page-27.webp",
+      "imageSha256": "7961b241a89a7677a4d5f7db52fa01f0f77bcfb441d9b044cbd15080e0708e6a",
+      "imageBytes": 307660,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 28,
+      "title": "不同进制的码元率必须在同一信息率下比较",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"28\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 28,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=28",
+      "image": "/study-site/courses/communications-ch1/slides/page-28.webp",
+      "imageSha256": "75f951e879763b1485a7add5fe4fd0f95bccfd4b3a998965642ce1a3318bbe7b",
+      "imageBytes": 269348,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 29,
+      "title": "名义比特率与真实平均信息率要分开",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"29\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 29,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=29",
+      "image": "/study-site/courses/communications-ch1/slides/page-29.webp",
+      "imageSha256": "3dc095cb291236ac76ebb9f9eeafb39b822062e5e1abc99be0b7e4a1ea92c5b2",
+      "imageBytes": 303192,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 30,
+      "title": "完整例题：四进制1200 Bd到底转换哪两个量",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"30\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 30,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=30",
+      "image": "/study-site/courses/communications-ch1/slides/page-30.webp",
+      "imageSha256": "e8905f19abe534c43328641af08dd6646c1640e123b80395b6bb617ab3d5594c",
+      "imageBytes": 290382,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 31,
+      "title": "模拟可靠性：信噪比与均方误差并不等价",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"31\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 31,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=31",
+      "image": "/study-site/courses/communications-ch1/slides/page-31.webp",
+      "imageSha256": "b8e7b15f964e0ae996ceccfa93dfd60e9f00f88d56b37c0f1090d167b19416ba",
+      "imageBytes": 314416,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 32,
+      "title": "码元错误率：一次符号判错只记一个事件",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"32\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 32,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=32",
+      "image": "/study-site/courses/communications-ch1/slides/page-32.webp",
+      "imageSha256": "7005cda391ce55c15bea4167f69c36d9634bbbaafab578a7e1fb94831dea9b24",
+      "imageBytes": 290410,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 33,
+      "title": "误比特率取决于码元映射及错误模式",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"33\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 33,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=33",
+      "image": "/study-site/courses/communications-ch1/slides/page-33.webp",
+      "imageSha256": "5b466c4814f72a5e95b9c79fda9ae6a5aa30219ead29bf3ea27b3a05d2ae5ae6",
+      "imageBytes": 301984,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 34,
+      "title": "香农极限约束可靠性与速率的可兼得程度",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"34\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 34,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=34",
+      "image": "/study-site/courses/communications-ch1/slides/page-34.webp",
+      "imageSha256": "80f775d500e63c952438d008922bbe54655f40bcc722d7c02b7aef5b52ca0dad",
+      "imageBytes": 266254,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 35,
+      "title": "信息论度量的是不确定性，不是消息的重要程度",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"35\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 35,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=35",
+      "image": "/study-site/courses/communications-ch1/slides/page-35.webp",
+      "imageSha256": "89dd60f864344e92f4c875d0b8d851919e8c8d22fef87582edfbee69b486afc2",
+      "imageBytes": 293838,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 36,
+      "title": "消息、信源、信号：课件术语要按层次校准",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"36\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 36,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=36",
+      "image": "/study-site/courses/communications-ch1/slides/page-36.webp",
+      "imageSha256": "66a7af599aa3b37f70ccc087b8e16d43e85a25dd2b8cf8bb8b7ac40ddf75a399",
+      "imageBytes": 321002,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 37,
+      "title": "自信息是针对一次符号事件的量",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"37\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 37,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=37",
+      "image": "/study-site/courses/communications-ch1/slides/page-37.webp",
+      "imageSha256": "dbc8e08a8cd22c80867d701f8700111ef32a73317fb37179627dbe7ede709573",
+      "imageBytes": 284690,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 38,
+      "title": "为什么信息量采用对数形式",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"38\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 38,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=38",
+      "image": "/study-site/courses/communications-ch1/slides/page-38.webp",
+      "imageSha256": "e714071361fbefd39c6137d735d7d7b73d5e60fc6d0abd5b25582b49a857bb09",
+      "imageBytes": 296668,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 39,
+      "title": "对数底决定单位，不改变排序",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"39\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 39,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=39",
+      "image": "/study-site/courses/communications-ch1/slides/page-39.webp",
+      "imageSha256": "b7b424d3363d1a355f45eebedec17a0db1d8d0fd7cf6e7fc011ce7a9591db194",
+      "imageBytes": 285846,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 40,
+      "title": "纠正符号混用：消息长度与字母表大小不是同一个M",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"40\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 40,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=40",
+      "image": "/study-site/courses/communications-ch1/slides/page-40.webp",
+      "imageSha256": "17a08dd78f488e19d51fca341dc04fd532dd13c2dd997878b5db2acf8c6a70c1",
+      "imageBytes": 276870,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 41,
+      "title": "二进制每符号1 bit的前提",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"41\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 41,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=41",
+      "image": "/study-site/courses/communications-ch1/slides/page-41.webp",
+      "imageSha256": "432dbdbd357aa147464394615b386dc42c08c806d98c4b3d38e6fee339356be8",
+      "imageBytes": 275248,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 42,
+      "title": "M进制的log₂M与固定长度二进制标签",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"42\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 42,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=42",
+      "image": "/study-site/courses/communications-ch1/slides/page-42.webp",
+      "imageSha256": "93e59ca7b48ca19efe9e0b0434a14cd55447d76167e3de6b482d985226cb3a06",
+      "imageBytes": 273222,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 43,
+      "title": "非等概信源先检查概率是否合法",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"43\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 43,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=43",
+      "image": "/study-site/courses/communications-ch1/slides/page-43.webp",
+      "imageSha256": "6cffefbe9734230938c8511c9bda2b95279ee822e51063afb05b10c3207a3445",
+      "imageBytes": 265584,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 44,
+      "title": "纠错：自信息之和、序列信息量与熵是三件事",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"44\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 44,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=44",
+      "image": "/study-site/courses/communications-ch1/slides/page-44.webp",
+      "imageSha256": "0c125b980704be6cf6cfcfd45fbd70e5caa7a65b01f37559bdf9778d23bb36d7",
+      "imageBytes": 283906,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 45,
+      "title": "熵是自信息的期望值",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"45\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 45,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=45",
+      "image": "/study-site/courses/communications-ch1/slides/page-45.webp",
+      "imageSha256": "b72ea3ecda590b207eae51b86d5dc18fc8538c2eed9fc7d27401d0c8b4935a8f",
+      "imageBytes": 284004,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 46,
+      "title": "完整例题：57个符号的信息量不能偷换成57H",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"46\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 46,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=46",
+      "image": "/study-site/courses/communications-ch1/slides/page-46.webp",
+      "imageSha256": "ae5c09f2569717973272280e8f2c2c4f1587879014c3886f2d87f99f5f48f9ad",
+      "imageBytes": 269382,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 47,
+      "title": "从每符号熵变成每秒信息率",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"47\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 47,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=47",
+      "image": "/study-site/courses/communications-ch1/slides/page-47.webp",
+      "imageSha256": "a2dc959a47466adecd9edc1421b00871eddc79720ee11ddf50baf76e763cd656",
+      "imageBytes": 259316,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 48,
+      "title": "二元熵曲线如何推导",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"48\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 48,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=48",
+      "image": "/study-site/courses/communications-ch1/slides/page-48.webp",
+      "imageSha256": "21ed20e1b8286efcd0d1d4f11ea0357ac09648595a5f3cf551abf7ed0656257c",
+      "imageBytes": 302992,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 49,
+      "title": "二元最大熵1 bit对应最难预测的公平选择",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"49\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 49,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=49",
+      "image": "/study-site/courses/communications-ch1/slides/page-49.webp",
+      "imageSha256": "aa972dfd11051e2904e5626c8403d77767c13bc7b14fc2a72c6d040abe34b7e4",
+      "imageBytes": 299710,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 50,
+      "title": "M符号最大熵及其成立条件",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"50\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 50,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=50",
+      "image": "/study-site/courses/communications-ch1/slides/page-50.webp",
+      "imageSha256": "f56df836524ef4e0535667075f89fd03b932fb34bb9d3f95618977c0cff592b9",
+      "imageBytes": 288966,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 51,
+      "title": "完整例题：概率不均匀时每秒多少bit",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"51\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 51,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=51",
+      "image": "/study-site/courses/communications-ch1/slides/page-51.webp",
+      "imageSha256": "a722104d6570e78ef5cdbb8b017ffccdc1abbe6415d530e10d25ff6a8364da86",
+      "imageBytes": 302942,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 52,
+      "title": "纠错：这叫微分熵，不是KL相对熵",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"52\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 52,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=52",
+      "image": "/study-site/courses/communications-ch1/slides/page-52.webp",
+      "imageSha256": "c66a7841c5b3cfa5a1016fe19e3ade3a3e11191739668e08f044adf1d8cd264d",
+      "imageBytes": 279760,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 53,
+      "title": "连续消息要变成码率，必须交代采样和精度",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"53\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 53,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=53",
+      "image": "/study-site/courses/communications-ch1/slides/page-53.webp",
+      "imageSha256": "205424bc3a65954d39268f083a8c63b2fd0fcd180a9620f9a90469f897e5a769",
+      "imageBytes": 268760,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 54,
+      "title": "完整例题：四级非等概量化的平均信息率",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"54\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 54,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=54",
+      "image": "/study-site/courses/communications-ch1/slides/page-54.webp",
+      "imageSha256": "1b013f22cc8887d62d853b852b39806f9cc051cb42668eba7631b548a2dcf3de",
+      "imageBytes": 307300,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 55,
+      "title": "八级量化：信息更多还是表示更精细",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"55\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 55,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=55",
+      "image": "/study-site/courses/communications-ch1/slides/page-55.webp",
+      "imageSha256": "8a267f1bc8813ec82074a09e6db092d6fcb93ea5b5c7744968a6f67d5e8d9371",
+      "imageBytes": 268216,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 56,
+      "title": "同一条链路，换边界就得到不同信道模型",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"56\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 56,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=56",
+      "image": "/study-site/courses/communications-ch1/slides/page-56.webp",
+      "imageSha256": "bb9c2d1bba937e7df3822f385c358ebce4c02247bbb701ac25fd87ba5e6b442d",
+      "imageBytes": 271868,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 57,
+      "title": "狭义信道与广义信道是建模边界的选择",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"57\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 57,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=57",
+      "image": "/study-site/courses/communications-ch1/slides/page-57.webp",
+      "imageSha256": "05799d6c75df8135729536e66090e97361e22d3783aa36de3911688c14416cf2",
+      "imageBytes": 294668,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 58,
+      "title": "调制信道与编码信道的输入输出是什么",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"58\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 58,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=58",
+      "image": "/study-site/courses/communications-ch1/slides/page-58.webp",
+      "imageSha256": "eafadbf80b5839f4feb758f3542d91e06da91936692bb3c1172f85df75b8061f",
+      "imageBytes": 279762,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 59,
+      "title": "时变线性模型怎样概括传播效应",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"59\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 59,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=59",
+      "image": "/study-site/courses/communications-ch1/slides/page-59.webp",
+      "imageSha256": "a2935c33f57f430c6d470f479cf3c80a4c5d60fdfca288b043d4db6260e52840",
+      "imageBytes": 291134,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 60,
+      "title": "二元信道：先把条件概率方向读对",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"60\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 60,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=60",
+      "image": "/study-site/courses/communications-ch1/slides/page-60.webp",
+      "imageSha256": "6a99a7547bb9335dfd995dcc2f4da822a1e2de9dc345fea5597e0454138de23c",
+      "imageBytes": 291344,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 61,
+      "title": "离散、连续、混合信道分类看输入输出集合",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"61\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 61,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=61",
+      "image": "/study-site/courses/communications-ch1/slides/page-61.webp",
+      "imageSha256": "3b6e216c7b82502e9fc7c21d69189bc3fd30cdca21a084b2e0d27c25e70f0cb0",
+      "imageBytes": 311466,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 62,
+      "title": "多端信道不仅是把点对点公式乘人数",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"62\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 62,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=62",
+      "image": "/study-site/courses/communications-ch1/slides/page-62.webp",
+      "imageSha256": "f2f92feef4d332571862a3a72da61bc947066f5b0d9596705cf1b072e9f27bf9",
+      "imageBytes": 300706,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 63,
+      "title": "无扰信道是理想化，不是某类接口永远无噪声",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"63\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 63,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=63",
+      "image": "/study-site/courses/communications-ch1/slides/page-63.webp",
+      "imageSha256": "bb60f3fe3183d5de713cd0415476a812b1146431feff051953fc1be029803209",
+      "imageBytes": 285622,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 64,
+      "title": "记忆、时变和对称性是三个独立维度",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"64\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 64,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=64",
+      "image": "/study-site/courses/communications-ch1/slides/page-64.webp",
+      "imageSha256": "b91bf928aab4059d725ae227fea278ee207f1a6967d6e3d8de7360b0bdb88a8f",
+      "imageBytes": 327946,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 65,
+      "title": "带宽受限与功率受限决定不同优化方向",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"65\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 65,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=65",
+      "image": "/study-site/courses/communications-ch1/slides/page-65.webp",
+      "imageSha256": "404b655beb1b6847b99e997e478320ca10668b2bd8c924ea7e13534e01ce839d",
+      "imageBytes": 276652,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 66,
+      "title": "恒参不等于无失真：无失真条件是什么",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"66\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 66,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=66",
+      "image": "/study-site/courses/communications-ch1/slides/page-66.webp",
+      "imageSha256": "0148836059879ef005f65a6210b9d3b4e1c5298e61b7d06466fe1f07739c6227",
+      "imageBytes": 283344,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 67,
+      "title": "具体介质是否恒参，取决于时间和工作条件",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"67\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 67,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=67",
+      "image": "/study-site/courses/communications-ch1/slides/page-67.webp",
+      "imageSha256": "6b3e8240235b1d4f9a5c5e13b3a7e9fc0461c80cedb3ffff95b833d64df3bf72",
+      "imageBytes": 279568,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 68,
+      "title": "随参信道的核心是增益、延迟和多径会变化",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"68\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 68,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=68",
+      "image": "/study-site/courses/communications-ch1/slides/page-68.webp",
+      "imageSha256": "b1eb8a8c26e674b47763c4746d4c7a23e6f543d1892a03a7758e8546b800ac01",
+      "imageBytes": 267572,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 69,
+      "title": "散射与反射链路为什么更容易随参",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"69\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 69,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=69",
+      "image": "/study-site/courses/communications-ch1/slides/page-69.webp",
+      "imageSha256": "7f09f749d805b96b6980a121d97dec2206368dc61d8fbc707a9aa9e1f744f86a",
+      "imageBytes": 283020,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 70,
+      "title": "频率与波长先用物理关系核算",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"70\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 70,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=70",
+      "image": "/study-site/courses/communications-ch1/slides/page-70.webp",
+      "imageSha256": "fa5e3553a71a66eb94182a8bfb93f42244a9478c2c583fa6ad5a8879de8ec066",
+      "imageBytes": 311156,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 71,
+      "title": "频段名称与传播方式相关，但不是严格一一对应",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"71\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 71,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=71",
+      "image": "/study-site/courses/communications-ch1/slides/page-71.webp",
+      "imageSha256": "2ff36f7ae050aad30ecf885595e233dd54d89defcd590be98162da273734e07c",
+      "imageBytes": 312548,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 72,
+      "title": "光通信同样服从频率与波长关系",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"72\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 72,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=72",
+      "image": "/study-site/courses/communications-ch1/slides/page-72.webp",
+      "imageSha256": "43e2bb39dda96c749fae9439dcedce01cd7d1191e1b80462f6e0e3260b9c2ab7",
+      "imageBytes": 293088,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 73,
+      "title": "三种传播模式先看信号经过哪里",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"73\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 73,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=73",
+      "image": "/study-site/courses/communications-ch1/slides/page-73.webp",
+      "imageSha256": "7d4a4a9c69025d9c841b3d746248b68e1956d79b03fd0eb7efeb321ae94f2564",
+      "imageBytes": 261994,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 74,
+      "title": "地波的距离受频率与地表损耗共同限制",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"74\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 74,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=74",
+      "image": "/study-site/courses/communications-ch1/slides/page-74.webp",
+      "imageSha256": "a2eea5ca9ac0e77f0992a47f27ed2f7a4f6a90339884668edf5effcfa70190cf",
+      "imageBytes": 274182,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 75,
+      "title": "天波的“反射”是方便的宏观说法",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"75\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 75,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=75",
+      "image": "/study-site/courses/communications-ch1/slides/page-75.webp",
+      "imageSha256": "01ff1fea34fa13ab24d058fe2915a64b8ea40d0f4bbb200a18acb4cc76621e8b",
+      "imageBytes": 276026,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 76,
+      "title": "完整推导：单端地平线距离和两端总视距不能混",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"76\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 76,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=76",
+      "image": "/study-site/courses/communications-ch1/slides/page-76.webp",
+      "imageSha256": "7c88874c528fcea8dad82c4fc0bf7be72589aef61dd0be9658edf3d1ae53cec4",
+      "imageBytes": 277624,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 77,
+      "title": "噪声的定义取决于“有用信号”的任务边界",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"77\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 77,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=77",
+      "image": "/study-site/courses/communications-ch1/slides/page-77.webp",
+      "imageSha256": "682771dffcaa9ea9058d74a9a1f4b57a07db10438e6d6e3090f5958c63a7e4c6",
+      "imageBytes": 254256,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 78,
+      "title": "窄带、脉冲与起伏噪声的应对方式不同",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"78\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 78,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=78",
+      "image": "/study-site/courses/communications-ch1/slides/page-78.webp",
+      "imageSha256": "750c716b0c2f8332fc6b2855f3ce09aec2f2782eee33207698361d3e0a05edf7",
+      "imageBytes": 317900,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 79,
+      "title": "白噪声、热噪声和高斯不是同一个定义",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"79\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 79,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=79",
+      "image": "/study-site/courses/communications-ch1/slides/page-79.webp",
+      "imageSha256": "2d153181a696fc355490aa1531cbab4e0204ab012448dfbee2ba728e2c2a64b6",
+      "imageBytes": 325354,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 80,
+      "title": "从实际消息率走向信道最多能支持多少",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"80\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 80,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=80",
+      "image": "/study-site/courses/communications-ch1/slides/page-80.webp",
+      "imageSha256": "6f2982faa0434bf1002c2d1701e829cc3a5f509ef24443207e0fdcc1a3b8539b",
+      "imageBytes": 267564,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 81,
+      "title": "时间熵：每个符号多少信息乘每秒多少符号",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"81\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 81,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=81",
+      "image": "/study-site/courses/communications-ch1/slides/page-81.webp",
+      "imageSha256": "ab4919d37d5942ff52b5adb91da5e9ac45a513b045bc1e310a988ca72f8c639f",
+      "imageBytes": 278582,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 82,
+      "title": "无扰固定速率离散信道的容量",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"82\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 82,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=82",
+      "image": "/study-site/courses/communications-ch1/slides/page-82.webp",
+      "imageSha256": "4850249a0adf73491669bb9c9c3f0af427f22d4ddeec8f419ba63d1c9808c5ed",
+      "imageBytes": 304946,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 83,
+      "title": "均匀编码信道的“均匀”指码元时长",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"83\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 83,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=83",
+      "image": "/study-site/courses/communications-ch1/slides/page-83.webp",
+      "imageSha256": "98177593a694e18b22c9eab6cdd4fa4d69bb0b5792888118b2666fee6f6a4477",
+      "imageBytes": 297148,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 84,
+      "title": "平均码长是按消息概率加权，不是简单平均",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"84\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 84,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=84",
+      "image": "/study-site/courses/communications-ch1/slides/page-84.webp",
+      "imageSha256": "22488cbb9478622b538de5394d05d4e8ee6cb64875081912329c02a502e1d2cb",
+      "imageBytes": 300282,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 85,
+      "title": "每码元信息量不等于每秒信息率",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"85\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 85,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=85",
+      "image": "/study-site/courses/communications-ch1/slides/page-85.webp",
+      "imageSha256": "f51dd022727b0ba33e6689f6a755dd657f700e5db24b803ca37d3113a655bb26",
+      "imageBytes": 287384,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 86,
+      "title": "用可区分消息数推导无扰容量",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"86\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 86,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=86",
+      "image": "/study-site/courses/communications-ch1/slides/page-86.webp",
+      "imageSha256": "93a7be1cbdcb2b24dcb507a592d4853c7eb59928fc69528cbfb269910303776d",
+      "imageBytes": 304452,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 87,
+      "title": "二进制每次信道使用最多1 bit，不等于每赫兹1 bit",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"87\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 87,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=87",
+      "image": "/study-site/courses/communications-ch1/slides/page-87.webp",
+      "imageSha256": "0b14de2cc4dd06318c7f5ffb14ed7b01b361585689ae4514fc65e0606f068b2a",
+      "imageBytes": 276830,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 88,
+      "title": "连续信道的容量还需要功率与带宽约束",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"88\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 88,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=88",
+      "image": "/study-site/courses/communications-ch1/slides/page-88.webp",
+      "imageSha256": "ed9144c9f31b3e196545aedb5e61e3bc21e3aef7d46df39c8459b702d869434c",
+      "imageBytes": 264036,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 89,
+      "title": "香农容量公式中的每个量都要选同一参考点",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"89\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 89,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=89",
+      "image": "/study-site/courses/communications-ch1/slides/page-89.webp",
+      "imageSha256": "c70b218d128bd00bea534ee90883348ebf61a71bca3a90ef859f49acdb7afa1d",
+      "imageBytes": 297954,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 90,
+      "title": "无限加带宽为何不能无限增容量：要固定S和N₀",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"90\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 90,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=90",
+      "image": "/study-site/courses/communications-ch1/slides/page-90.webp",
+      "imageSha256": "967ce6780665f88c982dffb3b8ed4254fbd56268ee2086ad40c54f5808b14308",
+      "imageBytes": 318896,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 91,
+      "title": "完整例题：电视原始信息率与最小理论带宽",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"91\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 91,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=91",
+      "image": "/study-site/courses/communications-ch1/slides/page-91.webp",
+      "imageSha256": "4656a7752c96b92773826f82c46dae1f1a97510791a013757fb55a7322a29d2c",
+      "imageBytes": 299084,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 92,
+      "title": "完整例题：固定2位码字的线路率与源信息率",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"92\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 92,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=92",
+      "image": "/study-site/courses/communications-ch1/slides/page-92.webp",
+      "imageSha256": "497f6390ed587fcbd093130646360b919a36df042ae8458fb2ace2f14bce7d27",
+      "imageBytes": 291990,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 93,
+      "title": "作业题号需要真实教材题干才能严谨解答",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"93\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 93,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=93",
+      "image": "/study-site/courses/communications-ch1/slides/page-93.webp",
+      "imageSha256": "06b35179783e51328d903a9bb32c20d735f0b698be7e2e3a22c8d59222ec393b",
+      "imageBytes": 236110,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    },
+    {
+      "page": 94,
+      "title": "把第一章带到后续章节：一条完整计算链",
+      "reader": "communications-ch1-ppt.html",
+      "selector": ".slide-page[data-page=\"94\"]",
+      "sourcePdf": "courses/communications-ch1/source/ch1.pdf",
+      "pdfPage": 94,
+      "sourceUrl": "/study-site/courses/communications-ch1/source/ch1.pdf#page=94",
+      "image": "/study-site/courses/communications-ch1/slides/page-94.webp",
+      "imageSha256": "67757bea5c79c3e582a5d7f7d141bac1886c567306e6a90bb66caf0c6e51feea",
+      "imageBytes": 318576,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP"
+    }
+  ]
+}

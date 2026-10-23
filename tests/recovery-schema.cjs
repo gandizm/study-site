@@ -4,7 +4,8 @@ const {validateKnowledgeMap}=require('../site/knowledge-map.js');
 const {neighborhoodModel}=require('../site/knowledge-neighborhood.js');
 const site=process.env.STUDY_SITE_ROOT ? path.join(process.env.STUDY_SITE_ROOT,'site') : path.resolve(__dirname,'../site');
 let pagesTotal=0,nodesTotal=0,edgesTotal=0;
-for(const [id,reader,total] of [['communications-ch4','communications-ppt.html',105],['network-ch2','network-ch2-ppt.html',50]]){
+const registry=JSON.parse(fs.readFileSync(path.join(site,'knowledge-map-registry.json'),'utf8'));
+for(const {chapterId:id,readerPath:reader,readerPageCount:total} of registry.maps){
  const html=fs.readFileSync(path.join(site,reader),'utf8');
  const pages=[...html.matchAll(/<article\b[^>]*class="[^"]*slide-page[^>]*data-page="(\d+)"/g)].map(match=>Number(match[1]));
  assert.equal(pages.length,total);assert.equal(new Set(pages).size,total);
@@ -31,4 +32,4 @@ for(const change of [
  data=>{data.edges=[{from:'a',to:'missing',label:'invalid'}];},data=>{data.edges=[{from:'a',to:'b',label:''}];},
  data=>{data.nodes[1].anchors={105:'wrong-page'};},data=>{data.nodes[1].anchor=4;}
 ]){const invalid=structuredClone(good);change(invalid);assert.throws(()=>validateKnowledgeMap(invalid,[103,104]));}
-console.log(JSON.stringify({newRecoveryCore:true,chapters:2,pages:pagesTotal,nodes:nodesTotal,relations:edgesTotal,invalidCases:13,browserGeometry:'not tested'},null,2));
+console.log(JSON.stringify({newRecoveryCore:true,chapters:registry.maps.length,pages:pagesTotal,nodes:nodesTotal,relations:edgesTotal,invalidCases:13,browserGeometry:'not tested'},null,2));

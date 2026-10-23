@@ -18,6 +18,15 @@
       "readerPageCount": 50,
       "nodeCount": 40,
       "startPage": 1
+    },
+    {
+      "chapterId": "communications-ch1",
+      "title": "通信原理 · 第1章绪论",
+      "readerPath": "communications-ch1-ppt.html",
+      "knowledgeMapPath": "courses/communications-ch1/knowledge-map.json",
+      "readerPageCount": 94,
+      "nodeCount": 59,
+      "startPage": 1
     }
   ]
 }

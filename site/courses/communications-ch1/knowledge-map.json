@@ -1,0 +1,1324 @@
+{
+  "version": 1,
+  "id": "communications-ch1",
+  "title": "通信原理 第1章 绪论：模型、信息度量与容量",
+  "reader": "/study-site/communications-ch1-ppt.html",
+  "sourcePageCount": 94,
+  "displayPageCount": 94,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94
+  ],
+  "status": "reconstructed-from-original-source-and-reviewed-94-page-companion; not a byte-recovery of the lost graph",
+  "source": {
+    "ppt": "通信原理A_chapt1.ppt",
+    "pptSha256": "321bc6934f85d9f3e106b6ca2b951394e16359bea60842531e708947d4ee7ab3",
+    "pdf": "/study-site/courses/communications-ch1/source/ch1.pdf",
+    "sha256": "e6ad0ad46dc5abafc4bfe9382cd819025508755deb109eac0e924f33bdf0690f",
+    "pageNumbering": "原PPT转换PDF的物理页1–94，与reader data-page及深读锚点逐页一致",
+    "note": "依据用户原PPT重新转换，按物理页1–94对应。转换页脚自动更新时间已披露；不能沿用旧PDF或旧渲染图片hash。"
+  },
+  "nodes": [
+    {
+      "id": "study-contract",
+      "label": "模型、单位与成立条件的核查",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "summary": "由课程封面、章节结构与教学要求建立学习方法：先画系统边界，再写单位、独立性与资源约束；旧学时和考核安排不代表当前课程通知。",
+      "prerequisites": [],
+      "section": "系统模型与表示",
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "1": "communications-ch1-deep-p1",
+        "2": "communications-ch1-deep-p2",
+        "3": "communications-ch1-deep-p3",
+        "4": "communications-ch1-deep-p4",
+        "5": "communications-ch1-deep-p5",
+        "6": "communications-ch1-deep-p6",
+        "7": "communications-ch1-deep-p7"
+      }
+    },
+    {
+      "id": "message-information-signal",
+      "label": "消息、信息、信号与信源",
+      "pages": [
+        8,
+        35,
+        36
+      ],
+      "summary": "消息是表达对象，信号是物理载体，信源是生成消息的机制；信息论度量接收前的不确定性，不把语义价值或文件长度直接当成信息量。",
+      "prerequisites": [
+        "study-contract"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "8": "communications-ch1-deep-p8",
+        "35": "communications-ch1-deep-p35",
+        "36": "communications-ch1-deep-p36"
+      }
+    },
+    {
+      "id": "historical-scope",
+      "label": "通信演进与趋势的适用范围",
+      "pages": [
+        9,
+        12
+      ],
+      "summary": "从传播距离、复制规模和处理能力理解技术演进；原课件的数字化、光纤及移动通信趋势是历史描述，不能当作今天的市场或网络结构统计。",
+      "prerequisites": [
+        "message-information-signal"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "9": "communications-ch1-deep-p9",
+        "12": "communications-ch1-deep-p12"
+      }
+    },
+    {
+      "id": "effectiveness-reliability",
+      "label": "有效性、可靠性与资源折中",
+      "pages": [
+        10,
+        11,
+        26,
+        34
+      ],
+      "summary": "有效性看速率及频谱效率，可靠性看误差或失真；比较时固定带宽、功率和业务目标。容量约束可靠速率，但不保证任意有限码长实现都能达到。",
+      "prerequisites": [
+        "message-information-signal"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "10": "communications-ch1-deep-p10",
+        "11": "communications-ch1-deep-p11",
+        "26": "communications-ch1-deep-p26",
+        "34": "communications-ch1-deep-p34"
+      }
+    },
+    {
+      "id": "system-chain",
+      "label": "一般通信系统与端口边界",
+      "pages": [
+        14,
+        15,
+        16
+      ],
+      "summary": "沿信源、发送器、信道、接收器到信宿标明每条箭头的量；发送器负责信道适配，集中噪声源是等效表示，改变边界会改变功率和损伤的记账位置。",
+      "prerequisites": [
+        "message-information-signal"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "14": "communications-ch1-deep-p14",
+        "15": "communications-ch1-deep-p15",
+        "16": "communications-ch1-deep-p16"
+      }
+    },
+    {
+      "id": "additive-multiplicative",
+      "label": "加性扰动与乘性变化建模",
+      "pages": [
+        16
+      ],
+      "summary": "补充把原框图写成 y(t)=a(t)x(t)+n(t)：加性噪声在无输入时仍可存在；乘性增益不能独自解释它。复基带增益还可包含相位，不能直接当实电压相乘。",
+      "prerequisites": [
+        "system-chain"
+      ],
+      "section": "系统模型与表示",
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "16": "communications-ch1-deep-p16"
+      }
+    },
+    {
+      "id": "analog-system",
+      "label": "模拟通信与匹配解调",
+      "pages": [
+        17
+      ],
+      "summary": "模拟系统把消息映射到载波参数，再由相匹配的解调器恢复；不同解调器的抗噪表现不同，DSB 的符号通常不能由直接取包络恢复。",
+      "prerequisites": [
+        "system-chain"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "17": "communications-ch1-deep-p17"
+      }
+    },
+    {
+      "id": "digital-system",
+      "label": "数字系统的编码、映射与同步",
+      "pages": [
+        18
+      ],
+      "summary": "信源编码、信道编码、保密和调制各自改变不同对象；同步决定采样时刻、载波参考和分组边界，收到正确比特也不等于消息边界必然正确。",
+      "prerequisites": [
+        "system-chain"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "18": "communications-ch1-deep-p18"
+      }
+    },
+    {
+      "id": "sampling-quantization",
+      "label": "连续/离散消息与数字化三步骤",
+      "pages": [
+        19,
+        20
+      ],
+      "summary": "分开时间与幅度两个维度：采样离散时间，量化限制幅度等级，编码表示等级；离散时间样值仍可为连续幅值，数字传输的物理波形仍连续存在。",
+      "prerequisites": [
+        "message-information-signal",
+        "digital-system"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "19": "communications-ch1-deep-p19",
+        "20": "communications-ch1-deep-p20"
+      }
+    },
+    {
+      "id": "modulation-purpose",
+      "label": "频移、复用与抗扰的不同作用",
+      "pages": [
+        21
+      ],
+      "summary": "调制可适配媒质和天线、支持频分复用并改变抗扰表现；乘余弦产生双边频移，正频带 DSB 占宽 2B，不能把负频率镜像再当额外无线频道。",
+      "prerequisites": [
+        "analog-system"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "21": "communications-ch1-deep-p21"
+      }
+    },
+    {
+      "id": "source-channel-coding",
+      "label": "压缩与纠错：相反的冗余操作",
+      "pages": [
+        13,
+        22
+      ],
+      "summary": "信源编码利用统计冗余缩短描述，信道编码增加受控冗余保护传输。正文三重复码例子依赖独立错误，不能忽略码率、能量和突发错误的代价。",
+      "prerequisites": [
+        "digital-system",
+        "effectiveness-reliability"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "13": "communications-ch1-deep-p13",
+        "22": "communications-ch1-deep-p22"
+      }
+    },
+    {
+      "id": "communication-topology",
+      "label": "广播、点对点与收发关系",
+      "pages": [
+        23,
+        24
+      ],
+      "summary": "广播描述一个发送方服务多个接收方，点对点描述一对收发端；这些是系统组织方式，不等价于模拟/数字或某一种调制。",
+      "prerequisites": [
+        "system-chain"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "23": "communications-ch1-deep-p23",
+        "24": "communications-ch1-deep-p24"
+      }
+    },
+    {
+      "id": "duplex-direction",
+      "label": "单工、半双工与全双工",
+      "pages": [
+        24
+      ],
+      "summary": "依据允许的方向及能否同时双向工作分类；双方都可发言不一定是全双工，吞吐还受切换时间、上下行资源和协议开销约束。",
+      "prerequisites": [
+        "communication-topology"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "24": "communications-ch1-deep-p24"
+      }
+    },
+    {
+      "id": "serial-parallel",
+      "label": "串行与并行的时序约束",
+      "pages": [
+        25
+      ],
+      "summary": "并行增加通道数但引入偏斜、串扰和连线成本；串行需要更高单通道速率及同步。多线原始速率之和不能不扣开销就当净业务率。",
+      "prerequisites": [
+        "digital-system"
+      ],
+      "section": "系统模型与表示",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "25": "communications-ch1-deep-p25"
+      }
+    },
+    {
+      "id": "symbol-clock",
+      "label": "码元时长、时隙与码元率",
+      "pages": [
+        27
+      ],
+      "summary": "码元率 Rₛ=1/T 计数每秒符号选择次数，单位 Bd；连续相同符号可能没有电平跳变，码元内部也可能有多个边沿，所以不能靠数跳变求码元率。",
+      "prerequisites": [
+        "digital-system"
+      ],
+      "section": "速率与可靠性",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "27": "communications-ch1-deep-p27"
+      }
+    },
+    {
+      "id": "fixed-symbol-mapping",
+      "label": "M进制映射与名义比特率",
+      "pages": [
+        28,
+        29,
+        42
+      ],
+      "summary": "固定 k 位映射满足 R_b=kRₛ，M=2ᵏ 时 k=log₂M；非2幂字母表的逐符号固定标签需要向上取整。改变进制不保证带宽或误码性能按同一比例变化。",
+      "prerequisites": [
+        "symbol-clock"
+      ],
+      "section": "速率与可靠性",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "28": "communications-ch1-deep-p28",
+        "29": "communications-ch1-deep-p29",
+        "42": "communications-ch1-deep-p42"
+      }
+    },
+    {
+      "id": "source-rate-vs-line-rate",
+      "label": "线路率、平均信息率与熵率",
+      "pages": [
+        29,
+        47,
+        81
+      ],
+      "summary": "固定标签率描述发送多少位；独立同分布符号的平均信息率为 RₛH。存在记忆时用熵率，不能把每符号边缘熵或名义线路率直接当持续新增信息率。",
+      "prerequisites": [
+        "symbol-clock",
+        "entropy-mean"
+      ],
+      "section": "速率与可靠性",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "29": "communications-ch1-deep-p29",
+        "47": "communications-ch1-deep-p47",
+        "81": "communications-ch1-deep-p81"
+      }
+    },
+    {
+      "id": "quaternary-rate-example",
+      "label": "例题：四进制1200 Bd",
+      "pages": [
+        30
+      ],
+      "summary": "四符号等概且无记忆时，每符号2 bit，平均信息率为2400 bit/s；保持该率改用等概独立二进制需2400 Bd，而原四进制波形本身仍是1200 Bd。",
+      "prerequisites": [
+        "fixed-symbol-mapping",
+        "source-rate-vs-line-rate"
+      ],
+      "section": "速率与可靠性",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "30": "communications-ch1-deep-p30"
+      }
+    },
+    {
+      "id": "analog-reliability",
+      "label": "功率SNR、分贝与均方误差",
+      "pages": [
+        31
+      ],
+      "summary": "功率比用10倍对数，同阻抗幅度比才可用20倍对数；SNR不完整描述非线性失真，计算MSE还应处理允许的固定增益和时延。",
+      "prerequisites": [
+        "effectiveness-reliability"
+      ],
+      "section": "速率与可靠性",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "31": "communications-ch1-deep-p31"
+      }
+    },
+    {
+      "id": "symbol-bit-errors",
+      "label": "误码元率与误比特率的事件口径",
+      "pages": [
+        32,
+        33
+      ],
+      "summary": "误码元率以符号数作分母，误比特率以二进制位数作分母，不是自信息的错误比例；一个符号判错可能包含多个错误位。",
+      "prerequisites": [
+        "digital-system",
+        "symbol-clock"
+      ],
+      "section": "速率与可靠性",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "32": "communications-ch1-deep-p32",
+        "33": "communications-ch1-deep-p33"
+      }
+    },
+    {
+      "id": "ser-ber-mapping",
+      "label": "由错误位数联系SER与BER",
+      "pages": [
+        33
+      ],
+      "summary": "每符号 k 位时，P_b=P_s·E[错误位数|符号错]/k，因此 P_s/k≤P_b≤P_s；映射和错误模式决定条件平均，格雷码并非所有错误都只错一位。",
+      "prerequisites": [
+        "symbol-bit-errors",
+        "fixed-symbol-mapping"
+      ],
+      "section": "速率与可靠性",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "33": "communications-ch1-deep-p33"
+      }
+    },
+    {
+      "id": "zero-error-confidence",
+      "label": "零观测错误不等于零错误概率",
+      "pages": [
+        32
+      ],
+      "summary": "补充有限样本核查：独立且错误概率固定时，N次零错误的单侧95%上界约为3/N；百万符号零错误不足以支持10⁻⁹误码率目标。",
+      "prerequisites": [
+        "symbol-bit-errors"
+      ],
+      "section": "速率与可靠性",
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "32": "communications-ch1-deep-p32"
+      }
+    },
+    {
+      "id": "probability-model",
+      "label": "概率归一、支持集与无记忆条件",
+      "pages": [
+        43
+      ],
+      "summary": "先检查概率非负且总和为1，再区分边缘分布与序列模型；熵中零概率项按极限取0，但不能因此把零概率事件的自信息理解成有限数。",
+      "prerequisites": [
+        "message-information-signal"
+      ],
+      "section": "概率与信息度量",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "43": "communications-ch1-deep-p43"
+      }
+    },
+    {
+      "id": "self-information",
+      "label": "自信息、对数可加性与单位",
+      "pages": [
+        37,
+        38,
+        39
+      ],
+      "summary": "一次事件的自信息为−log₂p；独立概率相乘对应信息相加。对数底2、e、10分别给出bit、nat、hartley，事件自信息不必等于整数码字长度。",
+      "prerequisites": [
+        "probability-model"
+      ],
+      "section": "概率与信息度量",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "37": "communications-ch1-deep-p37",
+        "38": "communications-ch1-deep-p38",
+        "39": "communications-ch1-deep-p39"
+      }
+    },
+    {
+      "id": "joint-independent",
+      "label": "联合信息与独立等概序列",
+      "pages": [
+        40,
+        41
+      ],
+      "summary": "区分字母表M与序列长L：独立等概时指定序列信息量为Llog₂M；各位置边缘等概不保证独立，整段全0或全1只含1 bit不确定性。",
+      "prerequisites": [
+        "self-information"
+      ],
+      "section": "概率与信息度量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "40": "communications-ch1-deep-p40",
+        "41": "communications-ch1-deep-p41"
+      }
+    },
+    {
+      "id": "entropy-mean",
+      "label": "熵是自信息的概率加权平均",
+      "pages": [
+        44,
+        45
+      ],
+      "summary": "H=−Σp log₂p 是平均每符号信息量；单符号自信息、指定序列的频数加权和、信源熵不能互换，非等概时也不能用简单算术平均。",
+      "prerequisites": [
+        "self-information"
+      ],
+      "section": "概率与信息度量",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "44": "communications-ch1-deep-p44",
+        "45": "communications-ch1-deep-p45"
+      }
+    },
+    {
+      "id": "frequency-sequence-example",
+      "label": "例题：57符号指定序列与57H",
+      "pages": [
+        46
+      ],
+      "summary": "按实际频数23、14、13、7算指定独立序列，自信息约107.5459 bit；57H约108.6214 bit是随机序列的期望。题目未改为无序频数事件时不额外乘排列数。",
+      "prerequisites": [
+        "joint-independent",
+        "entropy-mean"
+      ],
+      "section": "概率与信息度量",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "46": "communications-ch1-deep-p46"
+      }
+    },
+    {
+      "id": "binary-entropy",
+      "label": "二元熵曲线及最大值推导",
+      "pages": [
+        48,
+        49
+      ],
+      "summary": "二元熵关于1/2对称，二阶导严格为负，在公平分布达到1 bit；这是单符号结论，要让多个符号的联合熵相加仍需独立性。",
+      "prerequisites": [
+        "entropy-mean"
+      ],
+      "section": "概率与信息度量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "48": "communications-ch1-deep-p48",
+        "49": "communications-ch1-deep-p49"
+      }
+    },
+    {
+      "id": "maximum-entropy",
+      "label": "M符号最大熵与等号条件",
+      "pages": [
+        50
+      ],
+      "summary": "单随机变量的H≤log₂M，等号仅在M种符号等概时成立；零概率缩小实际支持集。独立性用于序列熵或最大熵率，不是单变量定理额外前提。",
+      "prerequisites": [
+        "entropy-mean",
+        "binary-entropy"
+      ],
+      "section": "概率与信息度量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "50": "communications-ch1-deep-p50"
+      }
+    },
+    {
+      "id": "nonuniform-rate-example",
+      "label": "例题：每毫秒一次非等概选择",
+      "pages": [
+        51
+      ],
+      "summary": "在独立同分布符号模型下，概率0.4、0.3、0.2、0.1给H≈1.846439；每毫秒一次选择是1000 Bd，平均约1846.439 bit/s，而固定2位标签率仍为2000 bit/s。",
+      "prerequisites": [
+        "source-rate-vs-line-rate",
+        "entropy-mean"
+      ],
+      "section": "概率与信息度量",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "51": "communications-ch1-deep-p51"
+      }
+    },
+    {
+      "id": "differential-entropy",
+      "label": "微分熵不是KL相对熵",
+      "pages": [
+        52
+      ],
+      "summary": "原页公式是微分熵，它依赖尺度并可为负；a≠0时h(aX)=h(X)+log|a|。KL散度以密度之比定义，不能把这两个量或离散码字长度混为一谈。",
+      "prerequisites": [
+        "entropy-mean"
+      ],
+      "section": "概率与信息度量",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "52": "communications-ch1-deep-p52"
+      }
+    },
+    {
+      "id": "quantized-source-rate",
+      "label": "采样、量化精度与源信息率",
+      "pages": [
+        53
+      ],
+      "summary": "把每样本信息量乘采样率才得到bit/s；固定n位原始率为nfₛ。理想带限的临界采样须核带边与相位，实际留过渡带，量化误差与压缩效率分别分析。",
+      "prerequisites": [
+        "sampling-quantization",
+        "source-rate-vs-line-rate"
+      ],
+      "section": "概率与信息度量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "53": "communications-ch1-deep-p53"
+      }
+    },
+    {
+      "id": "four-level-example",
+      "label": "例题：四级非等概量化",
+      "pages": [
+        54
+      ],
+      "summary": "在独立同分布量化样本模型下，概率1/8、3/8、3/8、1/8给H≈1.811278；按原题理想2B采样，B=4 kHz时平均约14.4902 kbit/s，固定2位线路率仍为16 kbit/s，取舍解释课件近似。",
+      "prerequisites": [
+        "quantized-source-rate",
+        "entropy-mean"
+      ],
+      "section": "概率与信息度量",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "54": "communications-ch1-deep-p54"
+      }
+    },
+    {
+      "id": "eight-level-example",
+      "label": "例题：八级量化与等概上界",
+      "pages": [
+        55
+      ],
+      "summary": "八级等概且独立样本时每样本3 bit，理想2B采样给6B；有相关性时需熵率。量化等级、分布及范围都影响结果，不能只归因于多一位。",
+      "prerequisites": [
+        "quantized-source-rate",
+        "maximum-entropy"
+      ],
+      "section": "概率与信息度量",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "55": "communications-ch1-deep-p55"
+      }
+    },
+    {
+      "id": "channel-boundaries",
+      "label": "狭义/广义与调制/编码信道",
+      "pages": [
+        56,
+        57,
+        58
+      ],
+      "summary": "先画端口：狭义信道指物理媒质，广义信道随分析任务选边界；调制信道处理波形，编码信道处理发送符号与判决结果的转移关系。",
+      "prerequisites": [
+        "system-chain",
+        "digital-system"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "56": "communications-ch1-deep-p56",
+        "57": "communications-ch1-deep-p57",
+        "58": "communications-ch1-deep-p58"
+      }
+    },
+    {
+      "id": "waveform-channel",
+      "label": "线性时变冲激响应模型",
+      "pages": [
+        59
+      ],
+      "summary": "用h(t,τ)区分观察时刻与延迟贡献，参数不随t变化时退化为卷积；线性仅表示叠加成立，既不保证无失真，也不保证无记忆或无码间干扰。",
+      "prerequisites": [
+        "channel-boundaries",
+        "additive-multiplicative"
+      ],
+      "section": "信道边界与传播",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "59": "communications-ch1-deep-p59"
+      }
+    },
+    {
+      "id": "channel-transition",
+      "label": "二元转移概率与条件方向",
+      "pages": [
+        60
+      ],
+      "summary": "P(接收|发送)按固定输入归一；转移矩阵行列取决于约定。收到某符号后反推发送符号需先验和贝叶斯关系，不能直接倒转箭头。",
+      "prerequisites": [
+        "channel-boundaries",
+        "probability-model"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "60": "communications-ch1-deep-p60"
+      }
+    },
+    {
+      "id": "channel-alphabets",
+      "label": "离散、连续与混合信道",
+      "pages": [
+        61
+      ],
+      "summary": "分类依据选定输入输出的取值集合，时间采样与幅值字母表是不同维度；每毫秒取一次实数电压并不使输出字母表自动有限。",
+      "prerequisites": [
+        "channel-boundaries",
+        "sampling-quantization"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "61": "communications-ch1-deep-p61"
+      }
+    },
+    {
+      "id": "multiuser-channel",
+      "label": "多端信道与共享约束",
+      "pages": [
+        62
+      ],
+      "summary": "多个信息源或接收者共享带宽、功率与干扰环境，可实现目标可能是一组用户速率区域；不能将点对点单独测试容量直接乘用户数。",
+      "prerequisites": [
+        "communication-topology",
+        "channel-boundaries"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "62": "communications-ch1-deep-p62"
+      }
+    },
+    {
+      "id": "ideal-noiseless",
+      "label": "无扰信道的理想化边界",
+      "pages": [
+        63
+      ],
+      "summary": "无扰用于推导上界或忽略当前尺度下很小的损伤；短距离接口也可有噪声和抖动，暂未观测到错误不证明严格无扰。",
+      "prerequisites": [
+        "channel-boundaries",
+        "zero-error-confidence"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "63": "communications-ch1-deep-p63"
+      }
+    },
+    {
+      "id": "channel-memory-time",
+      "label": "记忆、时变、平稳和对称性",
+      "pages": [
+        64,
+        65
+      ],
+      "summary": "无记忆强调给定输入后的跨时刻条件分解，时变关注规则随时间改变，对称性关注符号转移结构；固定多抽头信道仍有记忆，独立时刻模型也可随时间变。",
+      "prerequisites": [
+        "waveform-channel",
+        "channel-transition"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "64": "communications-ch1-deep-p64",
+        "65": "communications-ch1-deep-p65"
+      }
+    },
+    {
+      "id": "bandwidth-power-budget",
+      "label": "带宽受限与功率受限",
+      "pages": [
+        65
+      ],
+      "summary": "两种约束可同时存在。增加调制阶数影响谱效率与所需SNR；增带宽时若噪声PSD固定，总噪声也增长，比较必须声明固定量。",
+      "prerequisites": [
+        "effectiveness-reliability",
+        "analog-reliability"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "65": "communications-ch1-deep-p65"
+      }
+    },
+    {
+      "id": "undistorted-lti",
+      "label": "恒参条件与无失真频响",
+      "pages": [
+        66,
+        67
+      ],
+      "summary": "恒参只表示参数在所考察时间内近似不变；无失真要求信号频带内幅度常数、相位线性，即固定增益与时延，仅幅度平坦还不足。",
+      "prerequisites": [
+        "waveform-channel"
+      ],
+      "section": "信道边界与传播",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "66": "communications-ch1-deep-p66",
+        "67": "communications-ch1-deep-p67"
+      }
+    },
+    {
+      "id": "multipath-fading",
+      "label": "多径相消、频率选择性与随参",
+      "pages": [
+        68,
+        69
+      ],
+      "summary": "延迟路径相干叠加可在某些频率相消，形成频率选择性；路径随运动或介质改变才进一步产生时间选择性，静态多径不自动等于快衰落。",
+      "prerequisites": [
+        "waveform-channel",
+        "undistorted-lti"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "68": "communications-ch1-deep-p68",
+        "69": "communications-ch1-deep-p69"
+      }
+    },
+    {
+      "id": "frequency-wavelength",
+      "label": "用频率—波长关系核频段表",
+      "pages": [
+        70,
+        71,
+        72
+      ],
+      "summary": "用λ=c/f核对自由空间电磁波的数量级，并区分真空/介质波长与声波声速；课件的频段和应用表是教学示例，不是现行频率许可。",
+      "prerequisites": [
+        "modulation-purpose"
+      ],
+      "section": "信道边界与传播",
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "70": "communications-ch1-deep-p70",
+        "71": "communications-ch1-deep-p71",
+        "72": "communications-ch1-deep-p72"
+      }
+    },
+    {
+      "id": "propagation-modes",
+      "label": "地波、天波与空间波",
+      "pages": [
+        73,
+        74,
+        75
+      ],
+      "summary": "先画主要路径再选模型：地波受地表条件和频率影响，天波依赖电离层，空间波以视距为主；模式与典型距离均不是不受条件约束的覆盖保证。",
+      "prerequisites": [
+        "frequency-wavelength"
+      ],
+      "section": "信道边界与传播",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "73": "communications-ch1-deep-p73",
+        "74": "communications-ch1-deep-p74",
+        "75": "communications-ch1-deep-p75"
+      }
+    },
+    {
+      "id": "horizon-geometry",
+      "label": "推导：单端地平线与双端总视距",
+      "pages": [
+        76
+      ],
+      "summary": "由切线几何得单端d≈3.57√h；两端总视距是两项相加，同高时h≈D²/51才接近课件D²/50。高度用米、距离用千米，尚未计折射与菲涅耳区。",
+      "prerequisites": [
+        "propagation-modes"
+      ],
+      "section": "信道边界与传播",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "76": "communications-ch1-deep-p76"
+      }
+    },
+    {
+      "id": "noise-interference",
+      "label": "任务相关噪声与干扰的分类",
+      "pages": [
+        77,
+        78
+      ],
+      "summary": "有用信号取决于接收任务；窄带、脉冲和起伏描述不同谱形或时间特征，类别不必互斥。突发噪声会破坏独立比特错误的简化假设。",
+      "prerequisites": [
+        "system-chain"
+      ],
+      "section": "噪声与容量",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "77": "communications-ch1-deep-p77",
+        "78": "communications-ch1-deep-p78"
+      }
+    },
+    {
+      "id": "white-gaussian-thermal",
+      "label": "白、高斯、热噪声的不同含义",
+      "pages": [
+        79
+      ],
+      "summary": "白指PSD平坦，高斯指分布，热噪声指物理来源；理想无限带宽白噪声功率无限，需经接收滤波限定带宽，不能把这三个词当同义定义。",
+      "prerequisites": [
+        "noise-interference",
+        "analog-reliability"
+      ],
+      "section": "噪声与容量",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "79": "communications-ch1-deep-p79"
+      }
+    },
+    {
+      "id": "noise-bandwidth",
+      "label": "单/双边PSD与带内噪声功率",
+      "pages": [
+        79,
+        89
+      ],
+      "summary": "积分前统一电压、电流、功率及单/双边口径；单边N₀在带宽B内给N=N₀B，双边N₀/2在对称总宽2B上积分得到相同功率。",
+      "prerequisites": [
+        "white-gaussian-thermal"
+      ],
+      "section": "噪声与容量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "79": "communications-ch1-deep-p79",
+        "89": "communications-ch1-deep-p89"
+      }
+    },
+    {
+      "id": "capacity-vs-source-rate",
+      "label": "实际源信息率与信道容量",
+      "pages": [
+        80,
+        81,
+        88
+      ],
+      "summary": "信息率说当前源产生多少不确定性，容量说约束下最多能可靠传多少；不给每秒使用次数只能谈bit/次，连续幅值信道还需带宽、功率和噪声约束。",
+      "prerequisites": [
+        "source-rate-vs-line-rate",
+        "ideal-noiseless"
+      ],
+      "section": "噪声与容量",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "80": "communications-ch1-deep-p80",
+        "81": "communications-ch1-deep-p81",
+        "88": "communications-ch1-deep-p88"
+      }
+    },
+    {
+      "id": "discrete-capacity",
+      "label": "可区分消息计数推导无扰容量",
+      "pages": [
+        82,
+        86,
+        87
+      ],
+      "summary": "无扰且每次可区分D种符号时，nT次独立选择形成D^(nT)条消息，容量为nlog₂D bit/s；每次使用log₂D bit不等于每秒或每Hz的容量。",
+      "prerequisites": [
+        "maximum-entropy",
+        "symbol-clock",
+        "ideal-noiseless"
+      ],
+      "section": "噪声与容量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "82": "communications-ch1-deep-p82",
+        "86": "communications-ch1-deep-p86",
+        "87": "communications-ch1-deep-p87"
+      }
+    },
+    {
+      "id": "variable-code-length",
+      "label": "等宽码元、可变码长与加权平均",
+      "pages": [
+        83,
+        84
+      ],
+      "summary": "均匀编码信道指码元时长相同，并非源符号等概；码字仍可变长，平均码长应按消息概率加权，连续码流还需唯一可译，前缀码只是充分条件。",
+      "prerequisites": [
+        "source-channel-coding",
+        "fixed-symbol-mapping",
+        "probability-model"
+      ],
+      "section": "噪声与容量",
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "83": "communications-ch1-deep-p83",
+        "84": "communications-ch1-deep-p84"
+      }
+    },
+    {
+      "id": "coded-information-rate",
+      "label": "每码元信息量换算成bit/s",
+      "pages": [
+        85
+      ],
+      "summary": "一块消息平均信息H(Xᵏ)除以平均码长得到bit/码元，再乘码元率才得到bit/s；仅在无记忆源下才可把块熵写为kH。",
+      "prerequisites": [
+        "variable-code-length",
+        "entropy-mean",
+        "source-rate-vs-line-rate"
+      ],
+      "section": "噪声与容量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "85": "communications-ch1-deep-p85"
+      }
+    },
+    {
+      "id": "awgn-capacity",
+      "label": "香农容量与线性SNR参考点",
+      "pages": [
+        89
+      ],
+      "summary": "带限AWGN模型给C=B log₂(1+S/N)；S与N须同一等效参考点且使用线性功率比。反解SNR是理想可行性下界，不保证任意编码或解调器都实现。",
+      "prerequisites": [
+        "capacity-vs-source-rate",
+        "noise-bandwidth",
+        "bandwidth-power-budget"
+      ],
+      "section": "噪声与容量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "89": "communications-ch1-deep-p89"
+      }
+    },
+    {
+      "id": "wideband-limit",
+      "label": "固定S与PSD的宽带容量极限",
+      "pages": [
+        90
+      ],
+      "summary": "固定S和单边N₀时，N=N₀B随带宽增长，容量趋S/(N₀ln2)；若固定SNR则结论不同。−1.59 dB的Eb/N₀极限还对应趋零谱效率和理想编码条件。",
+      "prerequisites": [
+        "awgn-capacity",
+        "noise-bandwidth"
+      ],
+      "section": "噪声与容量",
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "90": "communications-ch1-deep-p90"
+      }
+    },
+    {
+      "id": "television-capacity-example",
+      "label": "例题：电视信息率与理论带宽",
+      "pages": [
+        91
+      ],
+      "summary": "独立等概、无压缩像素模型给36 Mbit/s；30 dB先转为功率比1000，再得理论带宽约3.61184 MHz。压缩、相关、纠错开销及SNR参考点须另核。",
+      "prerequisites": [
+        "awgn-capacity",
+        "fixed-symbol-mapping",
+        "source-rate-vs-line-rate"
+      ],
+      "section": "噪声与容量",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "91": "communications-ch1-deep-p91"
+      }
+    },
+    {
+      "id": "fixed-letter-code-example",
+      "label": "例题：固定2脉冲字母编码",
+      "pages": [
+        92
+      ],
+      "summary": "每脉冲5 ms、每字母2脉冲给100字母/s和200线路bit/s；非等概时平均源信息率约197.7217 bit/s，但概率变化不会自动缩短固定码字。",
+      "prerequisites": [
+        "coded-information-rate",
+        "entropy-mean",
+        "source-rate-vs-line-rate"
+      ],
+      "section": "噪声与容量",
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "92": "communications-ch1-deep-p92"
+      }
+    },
+    {
+      "id": "end-to-end-audit",
+      "label": "综合核查与缺题干边界",
+      "pages": [
+        93,
+        94
+      ],
+      "summary": "用源模型、概率度量、码元时长、信道边界、噪声口径和容量串起解题；原页只给作业题号，必须取得教材版本和真实题干，不能编造数值解答。",
+      "prerequisites": [
+        "frequency-sequence-example",
+        "television-capacity-example",
+        "fixed-letter-code-example"
+      ],
+      "section": "噪声与容量",
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "93": "communications-ch1-deep-p93",
+        "94": "communications-ch1-deep-p94"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "source-channel-coding",
+      "to": "variable-code-length",
+      "label": "压缩用平均码长评价"
+    },
+    {
+      "from": "source-channel-coding",
+      "to": "symbol-bit-errors",
+      "label": "纠错以错误事件评价"
+    },
+    {
+      "from": "source-rate-vs-line-rate",
+      "to": "fixed-symbol-mapping",
+      "label": "对比：熵率与标签率"
+    },
+    {
+      "from": "joint-independent",
+      "to": "maximum-entropy",
+      "label": "最大熵率另需独立性"
+    },
+    {
+      "from": "frequency-sequence-example",
+      "to": "nonuniform-rate-example",
+      "label": "对比：实际序列与平均率"
+    },
+    {
+      "from": "four-level-example",
+      "to": "eight-level-example",
+      "label": "对比：等级与概率都改变"
+    },
+    {
+      "from": "channel-transition",
+      "to": "symbol-bit-errors",
+      "label": "转移概率决定判错事件"
+    },
+    {
+      "from": "multipath-fading",
+      "to": "channel-memory-time",
+      "label": "延迟扩散产生信道记忆"
+    },
+    {
+      "from": "noise-interference",
+      "to": "source-channel-coding",
+      "label": "突发会破坏独立错误假设"
+    },
+    {
+      "from": "horizon-geometry",
+      "to": "multipath-fading",
+      "label": "视距也可能有两径干涉"
+    },
+    {
+      "from": "analog-reliability",
+      "to": "awgn-capacity",
+      "label": "先统一功率比与参考点"
+    },
+    {
+      "from": "discrete-capacity",
+      "to": "awgn-capacity",
+      "label": "对比：无扰字母表与有噪约束"
+    },
+    {
+      "from": "awgn-capacity",
+      "to": "effectiveness-reliability",
+      "label": "限定可靠传输速率边界"
+    },
+    {
+      "from": "maximum-entropy",
+      "to": "eight-level-example",
+      "label": "等概时达到每样本上界"
+    },
+    {
+      "from": "fixed-symbol-mapping",
+      "to": "fixed-letter-code-example",
+      "label": "固定码字保留线路时钟"
+    },
+    {
+      "from": "noise-bandwidth",
+      "to": "wideband-limit",
+      "label": "固定PSD时N随B增加"
+    }
+  ]
+}

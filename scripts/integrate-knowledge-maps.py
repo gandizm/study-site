@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'site'
-LESSONS=[('communications-ch4','communications-ppt.html','通信原理 · 第4章模拟调制系统',105),('network-ch2','network-ch2-ppt.html','计算机网络 · 第二章物理层',50)]
+LESSONS=[('communications-ch4','communications-ppt.html','通信原理 · 第4章模拟调制系统',105),('network-ch2','network-ch2-ppt.html','计算机网络 · 第二章物理层',50),('communications-ch1','communications-ch1-ppt.html','通信原理 · 第1章绪论',94)]
 def version(path):return hashlib.sha256((SITE/path).read_bytes()).hexdigest()[:12]
 def main():
  rows=[]
