@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "id": "dsp-front-05",
+  "title": "时移、频移与频谱运算",
+  "order": 6,
+  "goals": [
+    "从定义推导线性、时移、频移、翻转与微分",
+    "区分n/n0和ω/ω0并检验每个正负号",
+    "用同一短序列逐条核验，学会组合性质"
+  ],
+  "prerequisites": [
+    "dsp-front-04"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        11
+      ],
+      "kind": "rewritten",
+      "note": "性质目录定位，未把卷积/能量/对称性假称本节已完成。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "kind": "derivation",
+      "note": "全部相应性质由定义推导，换元角色明确，逐条给完整有限算例与检查。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        32
+      ],
+      "kind": "foundation",
+      "note": "只回读频移式，P32总表的整体覆盖在后续综合回读单元。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "example",
+      "note": "新编算例与自测，不冒充课件原例。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-21",
+      "title": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "kind": "ppt",
+      "section": "2.1",
+      "pages": [
+        11,
+        13,
+        14,
+        15,
+        16,
+        32
+      ],
+      "note": "P11目录与P13–16性质逐条推导；P32仅交叉核频移原式，整张总表留至综合回读。P14/16/32原公式已实际目视。",
+      "sourceFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "sourceSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "三样值共同算例与性质组合",
+      "kind": "supplement",
+      "section": "补充铺垫",
+      "pages": [],
+      "note": "[1,2,3]各变式、余弦调制推导、微分充分条件和五道问答为新增教学内容。"
+    }
+  ]
+}

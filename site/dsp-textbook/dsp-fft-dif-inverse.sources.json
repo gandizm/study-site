@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "id": "dsp-fft-dif-inverse",
+  "title": "另一种蝶形、位反转与逆变换",
+  "order": 60,
+  "goals": [
+    "推导DIF与DIT的区别",
+    "用共轭及FFT实现IDFT",
+    "区分DFT与DFS归一化并回读正交全貌"
+  ],
+  "prerequisites": [
+    "dsp-fft-dit",
+    "dsp-frequency-sampling"
+  ],
+  "coverage": [
+    {
+      "sourceId": "ppt-2.5",
+      "pages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "kind": "derivation",
+      "note": "DIF前后半分解、偶奇频率、蝶形、流图和位反转、逐级蝶距/旋转因子与意义。"
+    },
+    {
+      "sourceId": "ppt-2.5",
+      "pages": [
+        28
+      ],
+      "kind": "derivation",
+      "note": "原IDFT共轭算法，星号含义与方向澄清。"
+    },
+    {
+      "sourceId": "ppt-2.5",
+      "pages": [
+        29,
+        30,
+        31
+      ],
+      "kind": "rewritten",
+      "note": "连续正交概览逐式角色回读、有限复指数基和Parseval归一化、四种变换关系。"
+    },
+    {
+      "sourceId": "teaching-supplement",
+      "pages": [],
+      "kind": "example",
+      "note": "同一四点输入DIF/逆变换/能量三重核验与自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppt-2.5",
+      "title": "2.5快速傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.5",
+      "pages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "note": "P29–31内容为图片，已实际查看隔离PDF页面，不仅依据空OOXML文本。",
+      "sourceFilename": "2.5快速傅里叶变换.pptx",
+      "sourceSha256": "3c4033aa0f78ad3905d26a2593aa67f001c6232a42c2ae00631b1f4051cef965"
+    },
+    {
+      "id": "teaching-supplement",
+      "title": "四点DIF与有限正交系数的教学展开",
+      "kind": "supplement",
+      "pages": [],
+      "note": "新例与归一化慢推导；原P29均方分母符号/正交归一条件明确指出。"
+    }
+  ]
+}

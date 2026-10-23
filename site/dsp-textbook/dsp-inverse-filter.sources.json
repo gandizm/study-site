@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "id": "dsp-inverse-filter",
+  "title": "原书例 2.6.3：逆滤波为什么会坏掉第一个点",
+  "order": 85,
+  "goals": [
+    "从原系统函数推导逆差分",
+    "解释循环首项污染与N−1点保证",
+    "区别补零和真实边界信息"
+  ],
+  "prerequisites": [
+    "dsp-linear-convolution"
+  ],
+  "coverage": [
+    {
+      "sourceId": "ppt-2.4",
+      "pages": [
+        11
+      ],
+      "kind": "example",
+      "note": "闭合此页列出的对应教材原例，不能将另一例归为本篇。"
+    },
+    {
+      "sourceId": "textbook-third-edition",
+      "pages": [
+        102,
+        103
+      ],
+      "kind": "example",
+      "note": "原题参数及原解的条件/边界逐式解释，不声称重教这两印刷页上其他相邻小节。"
+    },
+    {
+      "sourceId": "teaching-supplement",
+      "pages": [],
+      "kind": "derivation",
+      "note": "符号角色、条件、数值核验和回忆练习。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppt-2.4",
+      "title": "2.4频域采样定理.pptx",
+      "kind": "ppt",
+      "section": "2.4",
+      "pages": [
+        11
+      ],
+      "note": "原P11只列例号与不同版本页码；本篇根据已取回第3版实际题页闭合。",
+      "sourceFilename": "2.4频域采样定理.pptx",
+      "sourceSha256": "53d6a04b132c0ed66d5feef880e99555033ac6eba57c999f32d94ec1c8377c5e"
+    },
+    {
+      "id": "textbook-third-edition",
+      "title": "方勇《数字信号处理——原理与实践》第3版，2021",
+      "kind": "textbook",
+      "section": "2.6",
+      "pages": [
+        102,
+        103
+      ],
+      "pdfPages": [
+        119,
+        120
+      ],
+      "pageNumberMeaning": "pages are verified printed page numbers; pdfPages are 1-based physical pages",
+      "note": "实际扫描页已目视，原书仅私有核题，不将扫描页或整书加入公开站。",
+      "sourceFilename": "digital-signal-processing-third-edition.pdf",
+      "sourceSha256": "a03853467fa0cd0b6cb9da8a89147f219b807040b1b1213d7b81a4f3add8265c"
+    },
+    {
+      "id": "teaching-supplement",
+      "title": "慢推导、误差核验与自测",
+      "kind": "supplement",
+      "pages": [],
+      "note": "保留原题形式与参数，额外数例明确标新编。"
+    }
+  ]
+}

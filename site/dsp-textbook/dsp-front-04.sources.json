@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "id": "dsp-front-04",
+  "title": "DTFT正逆变换的完整算例：一串连续的1",
+  "order": 5,
+  "goals": [
+    "从等比数列推导矩形序列DTFT而非背公式",
+    "正确处理0/0、真正零点及相位跳跃",
+    "完整逆变换并区分有限序列与周期延拓"
+  ],
+  "prerequisites": [
+    "dsp-front-03"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        8
+      ],
+      "kind": "derivation",
+      "note": "原R_N定义、等比求和、半角式，并补可去奇点与真正零点条件。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        9
+      ],
+      "kind": "rewritten",
+      "note": "原R4时域/幅相图，给关键点全算和一周期相位分段回读；零频谱处不强赋相位。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        10
+      ],
+      "kind": "rewritten",
+      "note": "明确原页为公式/举例提示，沿用原矩形主例补逆变换而非声称恢复未给题干。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "example",
+      "note": "补充算例和五道完整问答。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-21",
+      "title": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "kind": "ppt",
+      "section": "2.1",
+      "pages": [
+        8,
+        9,
+        10
+      ],
+      "note": "三页公式和原图已实际目视当前云转换件。P8原矩形序列例/P9幅相图完整解释；P10只有正逆公式与计算举例提示，未提供另一具体题干。",
+      "sourceFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "sourceSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "矩形序列逆变换、非网格频点与自测补充",
+      "kind": "supplement",
+      "section": "补充铺垫",
+      "pages": [],
+      "note": "π/3、3π/4逐项计算、逆变换全步骤、DFT比较及五道题为新编补充，不冒充P10原例。"
+    }
+  ]
+}

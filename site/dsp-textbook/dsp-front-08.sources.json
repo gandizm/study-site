@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "id": "dsp-front-08",
+  "title": "DTFT综合题与原表回读",
+  "order": 9,
+  "goals": [
+    "完整回读原性质总表并保留条件",
+    "独立完成原例2.1.7/11/12而非只列题号",
+    "解决PPT实因果余弦和原题并回读求和哑变量"
+  ],
+  "prerequisites": [
+    "dsp-front-07"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        32,
+        33
+      ],
+      "kind": "rewritten",
+      "note": "原表全类条目分组回读，明确实序列条件、相位模2π及原m固定平移量的角色。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        34
+      ],
+      "kind": "example",
+      "note": "原引用例2.1.7全部5问完整计算。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        35
+      ],
+      "kind": "example",
+      "note": "原引用例2.1.11/12与PPT直接给定的6项余弦和题全部完成。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        43,
+        44
+      ],
+      "kind": "example",
+      "note": "例2.1.7样值逐项核对，5个结果6/4π/2/28π/316π。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        48,
+        49
+      ],
+      "kind": "example",
+      "note": "例2.1.11实因果表示与h0=1、Hi=−sinω完整恢复。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        50,
+        51
+      ],
+      "kind": "example",
+      "note": "例2.1.12时间实部与单位圆下半为零条件，完整推出频谱实虚部分。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "foundation",
+      "note": "新增条件解释、解题路线与自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-21",
+      "title": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "kind": "ppt",
+      "section": "2.1",
+      "pages": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "note": "P32/33总表和P35余弦和原题实际目视；P34/35仅书例号题干由真实第三版书页补核。旧书页码不冒充第三版印刷页。",
+      "sourceFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "sourceSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a"
+    },
+    {
+      "id": "dsp-textbook-third-edition",
+      "title": "方勇《数字信号处理——原理与实践》第3版（清华大学出版社，2021，ISBN 978-7-302-58243-4）",
+      "kind": "textbook",
+      "section": "2.1",
+      "pages": [
+        43,
+        44,
+        48,
+        49,
+        50,
+        51
+      ],
+      "pdfPages": [
+        60,
+        61,
+        65,
+        66,
+        67,
+        68
+      ],
+      "pageNumbering": "printed book pages",
+      "note": "六页扫描全部实际目视，按例号核题；只私有核对，不公开原书PDF或扫描。本站使用重写讲解。",
+      "sourceFilename": "digital-signal-processing-third-edition.pdf",
+      "sourceSha256": "a03853467fa0cd0b6cb9da8a89147f219b807040b1b1213d7b81a4f3add8265c"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "解题路线、条件边界与四道迁移自测",
+      "kind": "supplement",
+      "section": "补充讲解",
+      "pages": [],
+      "note": "原例条件保留；逐步教学、检查与自测为新写。"
+    }
+  ]
+}

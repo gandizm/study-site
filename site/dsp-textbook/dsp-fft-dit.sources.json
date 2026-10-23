@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "id": "dsp-fft-dit",
+  "title": "FFT 为什么快：奇偶拆分与四点手算",
+  "order": 50,
+  "goals": [
+    "推导DIT分解与蝶形",
+    "完成四点FFT",
+    "区分位反转/普通倒序及运算计数"
+  ],
+  "prerequisites": [
+    "dsp-front-01"
+  ],
+  "coverage": [
+    {
+      "sourceId": "ppt-2.5",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "kind": "rewritten",
+      "note": "目标、提纲、DFT与FFT区别、背景与直接法复杂度；24道独立记录口径纠正。"
+    },
+    {
+      "sourceId": "ppt-2.5",
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "kind": "derivation",
+      "note": "奇偶拆分、蝶形、再拆分、流图读法、级号/旋转因子/位反转与运算量。"
+    },
+    {
+      "sourceId": "teaching-supplement",
+      "pages": [],
+      "kind": "example",
+      "note": "完整四点数例、8点索引表、自测与明确记号切换。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppt-2.5",
+      "title": "2.5快速傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.5",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "note": "真实原页，历史P4按背景页归类；公式及图流标签以真实源读取。",
+      "sourceFilename": "2.5快速傅里叶变换.pptx",
+      "sourceSha256": "3c4033aa0f78ad3905d26a2593aa67f001c6232a42c2ae00631b1f4051cef965"
+    },
+    {
+      "id": "teaching-supplement",
+      "title": "四点手算、换元桥接与计数校核",
+      "kind": "supplement",
+      "pages": [],
+      "note": "四点{1,2,3,4}为新编练习。"
+    }
+  ]
+}

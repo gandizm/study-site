@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "id": "dsp-front-07",
+  "title": "对称性怎样减少计算：先分清偶与共轭偶",
+  "order": 8,
+  "goals": [
+    "分清一般复序列共轭对称与实序列奇偶",
+    "完整推导两组实虚/共轭对称交叉对应并保留原记号",
+    "由实因果条件恢复序列，知道仅虚部还缺原点"
+  ],
+  "prerequisites": [
+    "dsp-front-06"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        23,
+        24,
+        25
+      ],
+      "kind": "derivation",
+      "note": "定义、原复指数例、任意复序列分解及验证，特别说明固定ω与DTFT变量及普通DTFT存在边界。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        26,
+        27
+      ],
+      "kind": "derivation",
+      "note": "完整推出共轭对称部分对应频谱实部，反对称对应j倍虚部。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        28,
+        29
+      ],
+      "kind": "derivation",
+      "note": "完整推出时间实虚分解对应频域共轭对称分解，逐项对照原下标而非统一改名。"
+    },
+    {
+      "sourceId": "dsp-original-21",
+      "pages": [
+        30,
+        31
+      ],
+      "kind": "derivation",
+      "note": "原实因果一般例分正/零/负时刻推导，说明u_+非普通阶跃，奇部分必须补原点。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "example",
+      "note": "全部新编数例、自测与边界反例。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-21",
+      "title": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "kind": "ppt",
+      "section": "2.1",
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "note": "全部原页文本核读，P23/24/25/27/28/29/30/31公式实际目视。保留x_e/x_o与x_r/x_i、X_R/X_I及X_e/X_o的不同定义；原u_+分段照实解释。",
+      "sourceFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "sourceSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "三复样值拆分与实因果重建新编例",
+      "kind": "supplement",
+      "section": "补充铺垫",
+      "pages": [],
+      "note": "三复样值表、h=[2,3,1]、相位分支边界与五道自测为补充，不冒充原数字例。"
+    }
+  ]
+}

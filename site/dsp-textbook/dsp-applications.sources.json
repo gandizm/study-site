@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "id": "dsp-applications",
+  "title": "频谱能告诉我们什么：声音、图像与 OFDM",
+  "order": 100,
+  "goals": [
+    "区分变换与应用算法",
+    "解释OFDM的IFFT/FFT及条件",
+    "读懂示例与硬件指标的证据边界"
+  ],
+  "prerequisites": [
+    "dsp-spectrum-analysis",
+    "dsp-linear-convolution",
+    "dsp-fft-dif-inverse"
+  ],
+  "coverage": [
+    {
+      "sourceId": "ppt-2.6",
+      "pages": [
+        27,
+        28
+      ],
+      "kind": "rewritten",
+      "note": "应用目的、音高/谐波/时变谱，澄清不能由频谱确定性别。"
+    },
+    {
+      "sourceId": "ppt-2.6",
+      "pages": [
+        29,
+        30
+      ],
+      "kind": "rewritten",
+      "note": "图像对比的真实内容及缺失参数，二维DFT与滤波策略区分。"
+    },
+    {
+      "sourceId": "ppt-2.6",
+      "pages": [
+        31
+      ],
+      "kind": "derivation",
+      "note": "OFDM框图发送IFFT/接收FFT原理；新增循环前缀条件明确补充。"
+    },
+    {
+      "sourceId": "ppt-2.5",
+      "pages": [
+        8,
+        9
+      ],
+      "kind": "rewritten",
+      "note": "同类OFDM应用；字长/削波工程层、LUT数字29.74%与统计假设。"
+    },
+    {
+      "sourceId": "teaching-supplement",
+      "pages": [],
+      "kind": "example",
+      "note": "150Hz谐波、单子载波四点例、CP条件与自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppt-2.5",
+      "title": "2.5快速傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.5",
+      "pages": [
+        8,
+        9
+      ],
+      "note": "P28/30图及OFDM框图实际读取；实例参数缺失处明确不重建原算法。",
+      "sourceFilename": "2.5快速傅里叶变换.pptx",
+      "sourceSha256": "3c4033aa0f78ad3905d26a2593aa67f001c6232a42c2ae00631b1f4051cef965"
+    },
+    {
+      "id": "ppt-2.6",
+      "title": "2.6DFT应用.pptx",
+      "kind": "ppt",
+      "section": "2.6",
+      "pages": [
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "note": "P28/30图及OFDM框图实际读取；实例参数缺失处明确不重建原算法。",
+      "sourceFilename": "2.6DFT应用.pptx",
+      "sourceSha256": "1aea29d97f81e7ea9d685f78649659d3b1cc598ce03d09d79d9273f88a3f1cd5"
+    },
+    {
+      "id": "teaching-supplement",
+      "title": "应用边界、二维DFT与四点OFDM例",
+      "kind": "supplement",
+      "pages": [],
+      "note": "新增数学说明和边界条件，不把未给出的滤波器/识别器/循环前缀公式冒充原页内容。"
+    }
+  ]
+}
