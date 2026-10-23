@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "id": "book-2-1-1-dtft-notation",
+  "title": "DTFT式里，谁在变，谁在被加起来",
+  "bookSectionIds": [
+    "book-2-1-1"
+  ],
+  "learningPurpose": "在原书已有定义上补求和索引角色与课件条件限定，不另写一遍完整DTFT课",
+  "printedPages": [
+    37,
+    38
+  ],
+  "pdfPages": [
+    54,
+    55
+  ],
+  "prerequisites": [],
+  "prerequisiteNotes": [
+    "能读求和符号，知道j是虚数单位；若仍有障碍只补对应基础，不强制重读旧29课。"
+  ],
+  "pptReferences": [
+    {
+      "deckId": "dsp-21",
+      "filename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "pages": [
+        4
+      ],
+      "roles": [
+        "background"
+      ],
+      "note": "Z与DTFT的引入，不冒称此页已给定义。"
+    },
+    {
+      "deckId": "dsp-21",
+      "filename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "pages": [
+        5
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "定义对应书式2.1.1；原PPT纯文本称绝对可和为充分必要条件，依书P38纠正为充分条件。k替换n是补充角色桥接，不声称原P5必使用k。"
+    },
+    {
+      "deckId": "dsp-21",
+      "filename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "pages": [
+        6
+      ],
+      "roles": [
+        "book_direct",
+        "bridge_needed"
+      ],
+      "note": "单位圆关系；回读书P38的收敛域包含单位圆条件。"
+    }
+  ],
+  "sourceClaims": [
+    {
+      "kind": "book-location",
+      "claim": "式2.1.1以及单位圆关系在书P37，充分条件及收敛域限定在P38。",
+      "printedPages": [
+        37,
+        38
+      ],
+      "pdfPages": [
+        54,
+        55
+      ]
+    },
+    {
+      "kind": "supplement-notation-bridge",
+      "claim": "一致改求和哑变量不改变结果；同一字母在不同公式可担任不同角色。",
+      "originalBookFormula": "2.1.1"
+    },
+    {
+      "kind": "supplement-self-check",
+      "claim": "仅x(1)=1的单项检查是新增教学题，不称原例2.1.1。"
+    }
+  ],
+  "status": "reviewed-release"
+}

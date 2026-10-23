@@ -1,0 +1,2382 @@
+{
+  "schemaVersion": 1,
+  "book": {
+    "title": "数字信号处理——原理与实践",
+    "edition": "第3版",
+    "author": "方勇",
+    "publisher": "清华大学出版社",
+    "publicationDate": "2021-08",
+    "isbn": "978-7-302-58243-4"
+  },
+  "sections": [
+    {
+      "id": "book-1",
+      "type": "chapter",
+      "number": "1",
+      "title": "数字信号处理基本概念",
+      "parentId": null,
+      "order": 1,
+      "printedPages": [
+        1
+      ],
+      "pdfPages": [
+        18
+      ],
+      "pageLocator": {
+        "printedStart": 1,
+        "printedEnd": null,
+        "pdfStart": 18,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-1",
+      "type": "section",
+      "number": "1.1",
+      "title": "概述",
+      "parentId": "book-1",
+      "order": 2,
+      "printedPages": [
+        1
+      ],
+      "pdfPages": [
+        18
+      ],
+      "pageLocator": {
+        "printedStart": 1,
+        "printedEnd": null,
+        "pdfStart": 18,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-1-1",
+      "type": "section",
+      "number": "1.1.1",
+      "title": "数字信号",
+      "parentId": "book-1-1",
+      "order": 3,
+      "printedPages": [
+        1
+      ],
+      "pdfPages": [
+        18
+      ],
+      "pageLocator": {
+        "printedStart": 1,
+        "printedEnd": null,
+        "pdfStart": 18,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-1-2",
+      "type": "section",
+      "number": "1.1.2",
+      "title": "数字信号处理及实现方法",
+      "parentId": "book-1-1",
+      "order": 4,
+      "printedPages": [
+        8
+      ],
+      "pdfPages": [
+        25
+      ],
+      "pageLocator": {
+        "printedStart": 8,
+        "printedEnd": null,
+        "pdfStart": 25,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-1-3",
+      "type": "section",
+      "number": "1.1.3",
+      "title": "数字信号处理的特点",
+      "parentId": "book-1-1",
+      "order": 5,
+      "printedPages": [
+        9
+      ],
+      "pdfPages": [
+        26
+      ],
+      "pageLocator": {
+        "printedStart": 9,
+        "printedEnd": null,
+        "pdfStart": 26,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-1-4",
+      "type": "section",
+      "number": "1.1.4",
+      "title": "数字信号处理的应用",
+      "parentId": "book-1-1",
+      "order": 6,
+      "printedPages": [
+        11
+      ],
+      "pdfPages": [
+        28
+      ],
+      "pageLocator": {
+        "printedStart": 11,
+        "printedEnd": null,
+        "pdfStart": 28,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-2",
+      "type": "section",
+      "number": "1.2",
+      "title": "数字信号处理仿真工具MATLAB简介",
+      "parentId": "book-1",
+      "order": 7,
+      "printedPages": [
+        18
+      ],
+      "pdfPages": [
+        35
+      ],
+      "pageLocator": {
+        "printedStart": 18,
+        "printedEnd": null,
+        "pdfStart": 35,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-2-1",
+      "type": "section",
+      "number": "1.2.1",
+      "title": "MATLAB与数字信号处理",
+      "parentId": "book-1-2",
+      "order": 8,
+      "printedPages": [
+        18
+      ],
+      "pdfPages": [
+        35
+      ],
+      "pageLocator": {
+        "printedStart": 18,
+        "printedEnd": null,
+        "pdfStart": 35,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-2-2",
+      "type": "section",
+      "number": "1.2.2",
+      "title": "序列运算、Z变换及系统响应的仿真算法",
+      "parentId": "book-1-2",
+      "order": 9,
+      "printedPages": [
+        19
+      ],
+      "pdfPages": [
+        36
+      ],
+      "pageLocator": {
+        "printedStart": 19,
+        "printedEnd": null,
+        "pdfStart": 36,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-2-3",
+      "type": "section",
+      "number": "1.2.3",
+      "title": "MATLAB应用举例",
+      "parentId": "book-1-2",
+      "order": 10,
+      "printedPages": [
+        28
+      ],
+      "pdfPages": [
+        45
+      ],
+      "pageLocator": {
+        "printedStart": 28,
+        "printedEnd": null,
+        "pdfStart": 45,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-3",
+      "type": "section",
+      "number": "1.3",
+      "title": "本章小结",
+      "parentId": "book-1",
+      "order": 11,
+      "printedPages": [
+        34
+      ],
+      "pdfPages": [
+        51
+      ],
+      "pageLocator": {
+        "printedStart": 34,
+        "printedEnd": null,
+        "pdfStart": 51,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-1-exercises",
+      "type": "exercises",
+      "number": null,
+      "title": "习题",
+      "parentId": "book-1",
+      "order": 12,
+      "printedPages": [
+        34
+      ],
+      "pdfPages": [
+        51
+      ],
+      "pageLocator": {
+        "printedStart": 34,
+        "printedEnd": null,
+        "pdfStart": 51,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2",
+      "type": "chapter",
+      "number": "2",
+      "title": "信号的傅里叶变换与分析",
+      "parentId": null,
+      "order": 13,
+      "printedPages": [
+        37
+      ],
+      "pdfPages": [
+        54
+      ],
+      "pageLocator": {
+        "printedStart": 37,
+        "printedEnd": null,
+        "pdfStart": 54,
+        "pdfEnd": null
+      },
+      "scope": "eligible",
+      "eligible": true
+    },
+    {
+      "id": "book-2-1",
+      "type": "section",
+      "number": "2.1",
+      "title": "离散时间序列的傅里叶变换",
+      "parentId": "book-2",
+      "order": 14,
+      "printedPages": [
+        37
+      ],
+      "pdfPages": [
+        54
+      ],
+      "pageLocator": {
+        "printedStart": 37,
+        "printedEnd": null,
+        "pdfStart": 54,
+        "pdfEnd": null
+      },
+      "scope": "eligible",
+      "eligible": true
+    },
+    {
+      "id": "book-2-1-1",
+      "type": "section",
+      "number": "2.1.1",
+      "title": "DTFT的定义",
+      "parentId": "book-2-1",
+      "order": 15,
+      "printedPages": [
+        37
+      ],
+      "pdfPages": [
+        54
+      ],
+      "pageLocator": {
+        "printedStart": 37,
+        "printedEnd": null,
+        "pdfStart": 54,
+        "pdfEnd": null
+      },
+      "scope": "ppt_covered",
+      "eligible": true
+    },
+    {
+      "id": "book-2-1-2",
+      "type": "section",
+      "number": "2.1.2",
+      "title": "DTFT的性质",
+      "parentId": "book-2-1",
+      "order": 16,
+      "printedPages": [
+        41
+      ],
+      "pdfPages": [
+        58
+      ],
+      "pageLocator": {
+        "printedStart": 41,
+        "printedEnd": null,
+        "pdfStart": 58,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-2",
+      "type": "section",
+      "number": "2.2",
+      "title": "周期序列的离散傅里叶级数及傅里叶变换表示式",
+      "parentId": "book-2",
+      "order": 17,
+      "printedPages": [
+        51
+      ],
+      "pdfPages": [
+        68
+      ],
+      "pageLocator": {
+        "printedStart": 51,
+        "printedEnd": null,
+        "pdfStart": 68,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-2-1",
+      "type": "section",
+      "number": "2.2.1",
+      "title": "离散傅里叶级数",
+      "parentId": "book-2-2",
+      "order": 18,
+      "printedPages": [
+        51
+      ],
+      "pdfPages": [
+        68
+      ],
+      "pageLocator": {
+        "printedStart": 51,
+        "printedEnd": null,
+        "pdfStart": 68,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-2-2",
+      "type": "section",
+      "number": "2.2.2",
+      "title": "傅里叶变换表示式",
+      "parentId": "book-2-2",
+      "order": 19,
+      "printedPages": [
+        53
+      ],
+      "pdfPages": [
+        70
+      ],
+      "pageLocator": {
+        "printedStart": 53,
+        "printedEnd": null,
+        "pdfStart": 70,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-2-3",
+      "type": "section",
+      "number": "2.2.3",
+      "title": "离散信号的傅里叶变换与模拟信号的傅里叶变换的关系",
+      "parentId": "book-2-2",
+      "order": 20,
+      "printedPages": [
+        56
+      ],
+      "pdfPages": [
+        73
+      ],
+      "pageLocator": {
+        "printedStart": 56,
+        "printedEnd": null,
+        "pdfStart": 73,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-2-4",
+      "type": "section",
+      "number": "2.2.4",
+      "title": "离散信号的傅里叶变换应用",
+      "parentId": "book-2-2",
+      "order": 21,
+      "printedPages": [
+        59
+      ],
+      "pdfPages": [
+        76
+      ],
+      "pageLocator": {
+        "printedStart": 59,
+        "printedEnd": null,
+        "pdfStart": 76,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-3",
+      "type": "section",
+      "number": "2.3",
+      "title": "有限长序列的离散傅里叶变换",
+      "parentId": "book-2",
+      "order": 22,
+      "printedPages": [
+        63
+      ],
+      "pdfPages": [
+        80
+      ],
+      "pageLocator": {
+        "printedStart": 63,
+        "printedEnd": null,
+        "pdfStart": 80,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-3-1",
+      "type": "section",
+      "number": "2.3.1",
+      "title": "DFT的定义",
+      "parentId": "book-2-3",
+      "order": 23,
+      "printedPages": [
+        63
+      ],
+      "pdfPages": [
+        80
+      ],
+      "pageLocator": {
+        "printedStart": 63,
+        "printedEnd": null,
+        "pdfStart": 80,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-3-2",
+      "type": "section",
+      "number": "2.3.2",
+      "title": "DFT与Z变换、DTFT的关系",
+      "parentId": "book-2-3",
+      "order": 24,
+      "printedPages": [
+        66
+      ],
+      "pdfPages": [
+        83
+      ],
+      "pageLocator": {
+        "printedStart": 66,
+        "printedEnd": null,
+        "pdfStart": 83,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-3-3",
+      "type": "section",
+      "number": "2.3.3",
+      "title": "DFT的隐含周期性",
+      "parentId": "book-2-3",
+      "order": 25,
+      "printedPages": [
+        68
+      ],
+      "pdfPages": [
+        85
+      ],
+      "pageLocator": {
+        "printedStart": 68,
+        "printedEnd": null,
+        "pdfStart": 85,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-3-4",
+      "type": "section",
+      "number": "2.3.4",
+      "title": "DFT的性质",
+      "parentId": "book-2-3",
+      "order": 26,
+      "printedPages": [
+        69
+      ],
+      "pdfPages": [
+        86
+      ],
+      "pageLocator": {
+        "printedStart": 69,
+        "printedEnd": null,
+        "pdfStart": 86,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-4",
+      "type": "section",
+      "number": "2.4",
+      "title": "频域采样定理",
+      "parentId": "book-2",
+      "order": 27,
+      "printedPages": [
+        85
+      ],
+      "pdfPages": [
+        102
+      ],
+      "pageLocator": {
+        "printedStart": 85,
+        "printedEnd": null,
+        "pdfStart": 102,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-5",
+      "type": "section",
+      "number": "2.5",
+      "title": "快速傅里叶变换",
+      "parentId": "book-2",
+      "order": 28,
+      "printedPages": [
+        88
+      ],
+      "pdfPages": [
+        105
+      ],
+      "pageLocator": {
+        "printedStart": 88,
+        "printedEnd": null,
+        "pdfStart": 105,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-5-1",
+      "type": "section",
+      "number": "2.5.1",
+      "title": "FFT的基本思想",
+      "parentId": "book-2-5",
+      "order": 29,
+      "printedPages": [
+        88
+      ],
+      "pdfPages": [
+        105
+      ],
+      "pageLocator": {
+        "printedStart": 88,
+        "printedEnd": null,
+        "pdfStart": 105,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-5-2",
+      "type": "section",
+      "number": "2.5.2",
+      "title": "时域抽取法基2FFT的基本原理",
+      "parentId": "book-2-5",
+      "order": 30,
+      "printedPages": [
+        89
+      ],
+      "pdfPages": [
+        106
+      ],
+      "pageLocator": {
+        "printedStart": 89,
+        "printedEnd": null,
+        "pdfStart": 106,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-5-3",
+      "type": "section",
+      "number": "2.5.3",
+      "title": "频域抽取法基2FFT的基本原理",
+      "parentId": "book-2-5",
+      "order": 31,
+      "printedPages": [
+        93
+      ],
+      "pdfPages": [
+        110
+      ],
+      "pageLocator": {
+        "printedStart": 93,
+        "printedEnd": null,
+        "pdfStart": 110,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-5-4",
+      "type": "section",
+      "number": "2.5.4",
+      "title": "IDFT的高效算法",
+      "parentId": "book-2-5",
+      "order": 32,
+      "printedPages": [
+        96
+      ],
+      "pdfPages": [
+        113
+      ],
+      "pageLocator": {
+        "printedStart": 96,
+        "printedEnd": null,
+        "pdfStart": 113,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-5-5",
+      "type": "section",
+      "number": "2.5.5",
+      "title": "大点数FFT算法的快速并行实现",
+      "parentId": "book-2-5",
+      "order": 33,
+      "printedPages": [
+        98
+      ],
+      "pdfPages": [
+        115
+      ],
+      "pageLocator": {
+        "printedStart": 98,
+        "printedEnd": null,
+        "pdfStart": 115,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-6",
+      "type": "section",
+      "number": "2.6",
+      "title": "DFT的应用",
+      "parentId": "book-2",
+      "order": 34,
+      "printedPages": [
+        99
+      ],
+      "pdfPages": [
+        116
+      ],
+      "pageLocator": {
+        "printedStart": 99,
+        "printedEnd": null,
+        "pdfStart": 116,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-6-1",
+      "type": "section",
+      "number": "2.6.1",
+      "title": "计算线性卷积",
+      "parentId": "book-2-6",
+      "order": 35,
+      "printedPages": [
+        99
+      ],
+      "pdfPages": [
+        116
+      ],
+      "pageLocator": {
+        "printedStart": 99,
+        "printedEnd": null,
+        "pdfStart": 116,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-6-2",
+      "type": "section",
+      "number": "2.6.2",
+      "title": "信号的谱分析",
+      "parentId": "book-2-6",
+      "order": 36,
+      "printedPages": [
+        103
+      ],
+      "pdfPages": [
+        120
+      ],
+      "pageLocator": {
+        "printedStart": 103,
+        "printedEnd": null,
+        "pdfStart": 120,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-6-3",
+      "type": "section",
+      "number": "2.6.3",
+      "title": "实际应用举例",
+      "parentId": "book-2-6",
+      "order": 37,
+      "printedPages": [
+        113
+      ],
+      "pdfPages": [
+        130
+      ],
+      "pageLocator": {
+        "printedStart": 113,
+        "printedEnd": null,
+        "pdfStart": 130,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-7",
+      "type": "section",
+      "number": "2.7",
+      "title": "本章小结",
+      "parentId": "book-2",
+      "order": 38,
+      "printedPages": [
+        117
+      ],
+      "pdfPages": [
+        134
+      ],
+      "pageLocator": {
+        "printedStart": 117,
+        "printedEnd": null,
+        "pdfStart": 134,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-2-exercises",
+      "type": "exercises",
+      "number": null,
+      "title": "习题",
+      "parentId": "book-2",
+      "order": 39,
+      "printedPages": [
+        118
+      ],
+      "pdfPages": [
+        135
+      ],
+      "pageLocator": {
+        "printedStart": 118,
+        "printedEnd": null,
+        "pdfStart": 135,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3",
+      "type": "chapter",
+      "number": "3",
+      "title": "数字滤波器设计",
+      "parentId": null,
+      "order": 40,
+      "printedPages": [
+        124
+      ],
+      "pdfPages": [
+        141
+      ],
+      "pageLocator": {
+        "printedStart": 124,
+        "printedEnd": null,
+        "pdfStart": 141,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-1",
+      "type": "section",
+      "number": "3.1",
+      "title": "数字滤波系统的基本网络结构",
+      "parentId": "book-3",
+      "order": 41,
+      "printedPages": [
+        124
+      ],
+      "pdfPages": [
+        141
+      ],
+      "pageLocator": {
+        "printedStart": 124,
+        "printedEnd": null,
+        "pdfStart": 141,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-1-1",
+      "type": "section",
+      "number": "3.1.1",
+      "title": "数字滤波系统的基本概念",
+      "parentId": "book-3-1",
+      "order": 42,
+      "printedPages": [
+        124
+      ],
+      "pdfPages": [
+        141
+      ],
+      "pageLocator": {
+        "printedStart": 124,
+        "printedEnd": null,
+        "pdfStart": 141,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-1-2",
+      "type": "section",
+      "number": "3.1.2",
+      "title": "IIR滤波系统的基本网络结构",
+      "parentId": "book-3-1",
+      "order": 43,
+      "printedPages": [
+        125
+      ],
+      "pdfPages": [
+        142
+      ],
+      "pageLocator": {
+        "printedStart": 125,
+        "printedEnd": null,
+        "pdfStart": 142,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-1-3",
+      "type": "section",
+      "number": "3.1.3",
+      "title": "FIR滤波系统的基本网络结构",
+      "parentId": "book-3-1",
+      "order": 44,
+      "printedPages": [
+        128
+      ],
+      "pdfPages": [
+        145
+      ],
+      "pageLocator": {
+        "printedStart": 128,
+        "printedEnd": null,
+        "pdfStart": 145,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-1-4",
+      "type": "section",
+      "number": "3.1.4",
+      "title": "线性相位FIR滤波器零点分布特点",
+      "parentId": "book-3-1",
+      "order": 45,
+      "printedPages": [
+        131
+      ],
+      "pdfPages": [
+        148
+      ],
+      "pageLocator": {
+        "printedStart": 131,
+        "printedEnd": null,
+        "pdfStart": 148,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-1-5",
+      "type": "section",
+      "number": "3.1.5",
+      "title": "数字滤波系统的MATLAB实现",
+      "parentId": "book-3-1",
+      "order": 46,
+      "printedPages": [
+        133
+      ],
+      "pdfPages": [
+        150
+      ],
+      "pageLocator": {
+        "printedStart": 133,
+        "printedEnd": null,
+        "pdfStart": 150,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-2",
+      "type": "section",
+      "number": "3.2",
+      "title": "数字滤波器的基本概念",
+      "parentId": "book-3",
+      "order": 47,
+      "printedPages": [
+        135
+      ],
+      "pdfPages": [
+        152
+      ],
+      "pageLocator": {
+        "printedStart": 135,
+        "printedEnd": null,
+        "pdfStart": 152,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-2-1",
+      "type": "section",
+      "number": "3.2.1",
+      "title": "频率选择性滤波器",
+      "parentId": "book-3-2",
+      "order": 48,
+      "printedPages": [
+        139
+      ],
+      "pdfPages": [
+        156
+      ],
+      "pageLocator": {
+        "printedStart": 139,
+        "printedEnd": null,
+        "pdfStart": 156,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-2-2",
+      "type": "section",
+      "number": "3.2.2",
+      "title": "滤波器的技术指标",
+      "parentId": "book-3-2",
+      "order": 49,
+      "printedPages": [
+        140
+      ],
+      "pdfPages": [
+        157
+      ],
+      "pageLocator": {
+        "printedStart": 140,
+        "printedEnd": null,
+        "pdfStart": 157,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-2-3",
+      "type": "section",
+      "number": "3.2.3",
+      "title": "数字滤波器的设计方法",
+      "parentId": "book-3-2",
+      "order": 50,
+      "printedPages": [
+        140
+      ],
+      "pdfPages": [
+        157
+      ],
+      "pageLocator": {
+        "printedStart": 140,
+        "printedEnd": null,
+        "pdfStart": 157,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-3",
+      "type": "section",
+      "number": "3.3",
+      "title": "IIR型滤波器的设计",
+      "parentId": "book-3",
+      "order": 51,
+      "printedPages": [
+        141
+      ],
+      "pdfPages": [
+        158
+      ],
+      "pageLocator": {
+        "printedStart": 141,
+        "printedEnd": null,
+        "pdfStart": 158,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-3-1",
+      "type": "section",
+      "number": "3.3.1",
+      "title": "模拟低通滤波器",
+      "parentId": "book-3-3",
+      "order": 52,
+      "printedPages": [
+        142
+      ],
+      "pdfPages": [
+        159
+      ],
+      "pageLocator": {
+        "printedStart": 142,
+        "printedEnd": null,
+        "pdfStart": 159,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-3-2",
+      "type": "section",
+      "number": "3.3.2",
+      "title": "巴特沃斯低通滤波器的设计",
+      "parentId": "book-3-3",
+      "order": 53,
+      "printedPages": [
+        142
+      ],
+      "pdfPages": [
+        159
+      ],
+      "pageLocator": {
+        "printedStart": 142,
+        "printedEnd": null,
+        "pdfStart": 159,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-3-3",
+      "type": "section",
+      "number": "3.3.3",
+      "title": "模拟滤波器的频率转换——模拟高通、带通及带阻滤波器的设计",
+      "parentId": "book-3-3",
+      "order": 54,
+      "printedPages": [
+        149
+      ],
+      "pdfPages": [
+        166
+      ],
+      "pageLocator": {
+        "printedStart": 149,
+        "printedEnd": null,
+        "pdfStart": 166,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-3-4",
+      "type": "section",
+      "number": "3.3.4",
+      "title": "模拟与数字滤波器的转换方法",
+      "parentId": "book-3-3",
+      "order": 55,
+      "printedPages": [
+        154
+      ],
+      "pdfPages": [
+        171
+      ],
+      "pageLocator": {
+        "printedStart": 154,
+        "printedEnd": null,
+        "pdfStart": 171,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-4",
+      "type": "section",
+      "number": "3.4",
+      "title": "FIR型滤波器的设计",
+      "parentId": "book-3",
+      "order": 56,
+      "printedPages": [
+        172
+      ],
+      "pdfPages": [
+        189
+      ],
+      "pageLocator": {
+        "printedStart": 172,
+        "printedEnd": null,
+        "pdfStart": 189,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-4-1",
+      "type": "section",
+      "number": "3.4.1",
+      "title": "线性相位FIR滤波器及其特点",
+      "parentId": "book-3-4",
+      "order": 57,
+      "printedPages": [
+        172
+      ],
+      "pdfPages": [
+        189
+      ],
+      "pageLocator": {
+        "printedStart": 172,
+        "printedEnd": null,
+        "pdfStart": 189,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-4-2",
+      "type": "section",
+      "number": "3.4.2",
+      "title": "利用窗函数法设计FIR滤波器",
+      "parentId": "book-3-4",
+      "order": 58,
+      "printedPages": [
+        174
+      ],
+      "pdfPages": [
+        191
+      ],
+      "pageLocator": {
+        "printedStart": 174,
+        "printedEnd": null,
+        "pdfStart": 191,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-4-3",
+      "type": "section",
+      "number": "3.4.3",
+      "title": "利用频率采样法设计FIR滤波器",
+      "parentId": "book-3-4",
+      "order": 59,
+      "printedPages": [
+        189
+      ],
+      "pdfPages": [
+        206
+      ],
+      "pageLocator": {
+        "printedStart": 189,
+        "printedEnd": null,
+        "pdfStart": 206,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-4-4",
+      "type": "section",
+      "number": "3.4.4",
+      "title": "FIR滤波器的最优等波纹设计法",
+      "parentId": "book-3-4",
+      "order": 60,
+      "printedPages": [
+        199
+      ],
+      "pdfPages": [
+        216
+      ],
+      "pageLocator": {
+        "printedStart": 199,
+        "printedEnd": null,
+        "pdfStart": 216,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-5",
+      "type": "section",
+      "number": "3.5",
+      "title": "有限字长效应",
+      "parentId": "book-3",
+      "order": 61,
+      "printedPages": [
+        202
+      ],
+      "pdfPages": [
+        219
+      ],
+      "pageLocator": {
+        "printedStart": 202,
+        "printedEnd": null,
+        "pdfStart": 219,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-5-1",
+      "type": "section",
+      "number": "3.5.1",
+      "title": "数的表示方法对量化的影响",
+      "parentId": "book-3-5",
+      "order": 62,
+      "printedPages": [
+        202
+      ],
+      "pdfPages": [
+        219
+      ],
+      "pageLocator": {
+        "printedStart": 202,
+        "printedEnd": null,
+        "pdfStart": 219,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-5-2",
+      "type": "section",
+      "number": "3.5.2",
+      "title": "A/D转换的量化效应",
+      "parentId": "book-3-5",
+      "order": 63,
+      "printedPages": [
+        204
+      ],
+      "pdfPages": [
+        221
+      ],
+      "pageLocator": {
+        "printedStart": 204,
+        "printedEnd": null,
+        "pdfStart": 221,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-5-3",
+      "type": "section",
+      "number": "3.5.3",
+      "title": "数字滤波器的有限字长效应",
+      "parentId": "book-3-5",
+      "order": 64,
+      "printedPages": [
+        205
+      ],
+      "pdfPages": [
+        222
+      ],
+      "pageLocator": {
+        "printedStart": 205,
+        "printedEnd": null,
+        "pdfStart": 222,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-5-4",
+      "type": "section",
+      "number": "3.5.4",
+      "title": "FFT运算中的有限字长效应",
+      "parentId": "book-3-5",
+      "order": 65,
+      "printedPages": [
+        212
+      ],
+      "pdfPages": [
+        229
+      ],
+      "pageLocator": {
+        "printedStart": 212,
+        "printedEnd": null,
+        "pdfStart": 229,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-6",
+      "type": "section",
+      "number": "3.6",
+      "title": "本章小结",
+      "parentId": "book-3",
+      "order": 66,
+      "printedPages": [
+        213
+      ],
+      "pdfPages": [
+        230
+      ],
+      "pageLocator": {
+        "printedStart": 213,
+        "printedEnd": null,
+        "pdfStart": 230,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-3-exercises",
+      "type": "exercises",
+      "number": null,
+      "title": "习题",
+      "parentId": "book-3",
+      "order": 67,
+      "printedPages": [
+        214
+      ],
+      "pdfPages": [
+        231
+      ],
+      "pageLocator": {
+        "printedStart": 214,
+        "printedEnd": null,
+        "pdfStart": 231,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4",
+      "type": "chapter",
+      "number": "4",
+      "title": "信号的小波变换与分析",
+      "parentId": null,
+      "order": 68,
+      "printedPages": [
+        218
+      ],
+      "pdfPages": [
+        235
+      ],
+      "pageLocator": {
+        "printedStart": 218,
+        "printedEnd": null,
+        "pdfStart": 235,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-1",
+      "type": "section",
+      "number": "4.1",
+      "title": "小波变换",
+      "parentId": "book-4",
+      "order": 69,
+      "printedPages": [
+        218
+      ],
+      "pdfPages": [
+        235
+      ],
+      "pageLocator": {
+        "printedStart": 218,
+        "printedEnd": null,
+        "pdfStart": 235,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-1-1",
+      "type": "section",
+      "number": "4.1.1",
+      "title": "小波的基本概念",
+      "parentId": "book-4-1",
+      "order": 70,
+      "printedPages": [
+        218
+      ],
+      "pdfPages": [
+        235
+      ],
+      "pageLocator": {
+        "printedStart": 218,
+        "printedEnd": null,
+        "pdfStart": 235,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-1-2",
+      "type": "section",
+      "number": "4.1.2",
+      "title": "小波分析",
+      "parentId": "book-4-1",
+      "order": 71,
+      "printedPages": [
+        221
+      ],
+      "pdfPages": [
+        238
+      ],
+      "pageLocator": {
+        "printedStart": 221,
+        "printedEnd": null,
+        "pdfStart": 238,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-1-3",
+      "type": "section",
+      "number": "4.1.3",
+      "title": "小波分析与傅里叶分析的区别",
+      "parentId": "book-4-1",
+      "order": 72,
+      "printedPages": [
+        221
+      ],
+      "pdfPages": [
+        238
+      ],
+      "pageLocator": {
+        "printedStart": 221,
+        "printedEnd": null,
+        "pdfStart": 238,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-2",
+      "type": "section",
+      "number": "4.2",
+      "title": "连续小波变换",
+      "parentId": "book-4",
+      "order": 73,
+      "printedPages": [
+        224
+      ],
+      "pdfPages": [
+        241
+      ],
+      "pageLocator": {
+        "printedStart": 224,
+        "printedEnd": null,
+        "pdfStart": 241,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-2-1",
+      "type": "section",
+      "number": "4.2.1",
+      "title": "连续小波变换的定义",
+      "parentId": "book-4-2",
+      "order": 74,
+      "printedPages": [
+        224
+      ],
+      "pdfPages": [
+        241
+      ],
+      "pageLocator": {
+        "printedStart": 224,
+        "printedEnd": null,
+        "pdfStart": 241,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-2-2",
+      "type": "section",
+      "number": "4.2.2",
+      "title": "连续小波变换的性质",
+      "parentId": "book-4-2",
+      "order": 75,
+      "printedPages": [
+        226
+      ],
+      "pdfPages": [
+        243
+      ],
+      "pageLocator": {
+        "printedStart": 226,
+        "printedEnd": null,
+        "pdfStart": 243,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-2-3",
+      "type": "section",
+      "number": "4.2.3",
+      "title": "几种常用信号的连续小波变换",
+      "parentId": "book-4-2",
+      "order": 76,
+      "printedPages": [
+        226
+      ],
+      "pdfPages": [
+        243
+      ],
+      "pageLocator": {
+        "printedStart": 226,
+        "printedEnd": null,
+        "pdfStart": 243,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-2-4",
+      "type": "section",
+      "number": "4.2.4",
+      "title": "连续小波变换的应用举例",
+      "parentId": "book-4-2",
+      "order": 77,
+      "printedPages": [
+        227
+      ],
+      "pdfPages": [
+        244
+      ],
+      "pageLocator": {
+        "printedStart": 227,
+        "printedEnd": null,
+        "pdfStart": 244,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-3",
+      "type": "section",
+      "number": "4.3",
+      "title": "离散小波变换与多分辨率分析",
+      "parentId": "book-4",
+      "order": 78,
+      "printedPages": [
+        229
+      ],
+      "pdfPages": [
+        246
+      ],
+      "pageLocator": {
+        "printedStart": 229,
+        "printedEnd": null,
+        "pdfStart": 246,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-3-1",
+      "type": "section",
+      "number": "4.3.1",
+      "title": "离散小波变换与多分辨率分析的基本概念",
+      "parentId": "book-4-3",
+      "order": 79,
+      "printedPages": [
+        229
+      ],
+      "pdfPages": [
+        246
+      ],
+      "pageLocator": {
+        "printedStart": 229,
+        "printedEnd": null,
+        "pdfStart": 246,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-3-2",
+      "type": "section",
+      "number": "4.3.2",
+      "title": "快速离散小波变换的塔形算法",
+      "parentId": "book-4-3",
+      "order": 80,
+      "printedPages": [
+        230
+      ],
+      "pdfPages": [
+        247
+      ],
+      "pageLocator": {
+        "printedStart": 230,
+        "printedEnd": null,
+        "pdfStart": 247,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-4",
+      "type": "section",
+      "number": "4.4",
+      "title": "离散小波变换的应用",
+      "parentId": "book-4",
+      "order": 81,
+      "printedPages": [
+        233
+      ],
+      "pdfPages": [
+        250
+      ],
+      "pageLocator": {
+        "printedStart": 233,
+        "printedEnd": null,
+        "pdfStart": 250,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-4-1",
+      "type": "section",
+      "number": "4.4.1",
+      "title": "数据压缩",
+      "parentId": "book-4-4",
+      "order": 82,
+      "printedPages": [
+        233
+      ],
+      "pdfPages": [
+        250
+      ],
+      "pageLocator": {
+        "printedStart": 233,
+        "printedEnd": null,
+        "pdfStart": 250,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-4-2",
+      "type": "section",
+      "number": "4.4.2",
+      "title": "信号消噪",
+      "parentId": "book-4-4",
+      "order": 83,
+      "printedPages": [
+        237
+      ],
+      "pdfPages": [
+        254
+      ],
+      "pageLocator": {
+        "printedStart": 237,
+        "printedEnd": null,
+        "pdfStart": 254,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-4-5",
+      "type": "section",
+      "number": "4.5",
+      "title": "本章小结",
+      "parentId": "book-4",
+      "order": 84,
+      "printedPages": [
+        240
+      ],
+      "pdfPages": [
+        257
+      ],
+      "pageLocator": {
+        "printedStart": 240,
+        "printedEnd": null,
+        "pdfStart": 257,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5",
+      "type": "chapter",
+      "number": "5",
+      "title": "数字信号处理器",
+      "parentId": null,
+      "order": 85,
+      "printedPages": [
+        241
+      ],
+      "pdfPages": [
+        258
+      ],
+      "pageLocator": {
+        "printedStart": 241,
+        "printedEnd": null,
+        "pdfStart": 258,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-1",
+      "type": "section",
+      "number": "5.1",
+      "title": "引言",
+      "parentId": "book-5",
+      "order": 86,
+      "printedPages": [
+        241
+      ],
+      "pdfPages": [
+        258
+      ],
+      "pageLocator": {
+        "printedStart": 241,
+        "printedEnd": null,
+        "pdfStart": 258,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-2",
+      "type": "section",
+      "number": "5.2",
+      "title": "数字信号处理器的特点",
+      "parentId": "book-5",
+      "order": 87,
+      "printedPages": [
+        242
+      ],
+      "pdfPages": [
+        259
+      ],
+      "pageLocator": {
+        "printedStart": 242,
+        "printedEnd": null,
+        "pdfStart": 259,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-2-1",
+      "type": "section",
+      "number": "5.2.1",
+      "title": "功能特点",
+      "parentId": "book-5-2",
+      "order": 88,
+      "printedPages": [
+        242
+      ],
+      "pdfPages": [
+        259
+      ],
+      "pageLocator": {
+        "printedStart": 242,
+        "printedEnd": null,
+        "pdfStart": 259,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-2-2",
+      "type": "section",
+      "number": "5.2.2",
+      "title": "结构特点",
+      "parentId": "book-5-2",
+      "order": 89,
+      "printedPages": [
+        242
+      ],
+      "pdfPages": [
+        259
+      ],
+      "pageLocator": {
+        "printedStart": 242,
+        "printedEnd": null,
+        "pdfStart": 259,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-2-3",
+      "type": "section",
+      "number": "5.2.3",
+      "title": "典型的数字信号处理器",
+      "parentId": "book-5-2",
+      "order": 90,
+      "printedPages": [
+        244
+      ],
+      "pdfPages": [
+        261
+      ],
+      "pageLocator": {
+        "printedStart": 244,
+        "printedEnd": null,
+        "pdfStart": 261,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-3",
+      "type": "section",
+      "number": "5.3",
+      "title": "DSP选型",
+      "parentId": "book-5",
+      "order": 91,
+      "printedPages": [
+        246
+      ],
+      "pdfPages": [
+        263
+      ],
+      "pageLocator": {
+        "printedStart": 246,
+        "printedEnd": null,
+        "pdfStart": 263,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-4",
+      "type": "section",
+      "number": "5.4",
+      "title": "DSP系统开发",
+      "parentId": "book-5",
+      "order": 92,
+      "printedPages": [
+        246
+      ],
+      "pdfPages": [
+        263
+      ],
+      "pageLocator": {
+        "printedStart": 246,
+        "printedEnd": null,
+        "pdfStart": 263,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-4-1",
+      "type": "section",
+      "number": "5.4.1",
+      "title": "DSP应用系统组成",
+      "parentId": "book-5-4",
+      "order": 93,
+      "printedPages": [
+        247
+      ],
+      "pdfPages": [
+        264
+      ],
+      "pageLocator": {
+        "printedStart": 247,
+        "printedEnd": null,
+        "pdfStart": 264,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-4-2",
+      "type": "section",
+      "number": "5.4.2",
+      "title": "DSP应用系统的开发流程",
+      "parentId": "book-5-4",
+      "order": 94,
+      "printedPages": [
+        247
+      ],
+      "pdfPages": [
+        264
+      ],
+      "pageLocator": {
+        "printedStart": 247,
+        "printedEnd": null,
+        "pdfStart": 264,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-5",
+      "type": "section",
+      "number": "5.5",
+      "title": "部分数字信号处理器简介",
+      "parentId": "book-5",
+      "order": 95,
+      "printedPages": [
+        248
+      ],
+      "pdfPages": [
+        265
+      ],
+      "pageLocator": {
+        "printedStart": 248,
+        "printedEnd": null,
+        "pdfStart": 265,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-5-6",
+      "type": "section",
+      "number": "5.6",
+      "title": "本章小结",
+      "parentId": "book-5",
+      "order": 96,
+      "printedPages": [
+        250
+      ],
+      "pdfPages": [
+        267
+      ],
+      "pageLocator": {
+        "printedStart": 250,
+        "printedEnd": null,
+        "pdfStart": 267,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    },
+    {
+      "id": "book-references",
+      "type": "references",
+      "number": null,
+      "title": "参考文献",
+      "parentId": null,
+      "order": 97,
+      "printedPages": [
+        251
+      ],
+      "pdfPages": null,
+      "pageLocator": {
+        "printedStart": 251,
+        "printedEnd": null,
+        "pdfStart": null,
+        "pdfEnd": null
+      },
+      "scope": "deferred",
+      "eligible": false
+    }
+  ],
+  "concepts": [
+    {
+      "id": "dtft-sequence",
+      "label": "离散时间序列",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "printedPages": [
+        37
+      ],
+      "pdfPages": [
+        54
+      ],
+      "unitIds": [
+        "book-2-1-1-dtft-notation"
+      ],
+      "scope": "ppt_covered"
+    },
+    {
+      "id": "dtft-spectrum",
+      "label": "连续数字频率上的DTFT",
+      "type": "concept",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "printedPages": [
+        37,
+        38
+      ],
+      "pdfPages": [
+        54,
+        55
+      ],
+      "unitIds": [
+        "book-2-1-1-dtft-notation"
+      ],
+      "scope": "ppt_covered"
+    },
+    {
+      "id": "dtft-unit-circle",
+      "label": "Z变换在单位圆上的取值",
+      "type": "method",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "printedPages": [
+        37,
+        38
+      ],
+      "pdfPages": [
+        54,
+        55
+      ],
+      "unitIds": [
+        "book-2-1-1-dtft-notation"
+      ],
+      "scope": "ppt_covered"
+    },
+    {
+      "id": "dtft-absolute-sum",
+      "label": "绝对可和：一个充分条件",
+      "type": "condition",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "printedPages": [
+        38
+      ],
+      "pdfPages": [
+        55
+      ],
+      "unitIds": [
+        "book-2-1-1-dtft-notation"
+      ],
+      "scope": "ppt_covered"
+    }
+  ],
+  "knowledgeEdges": [
+    {
+      "from": "dtft-sequence",
+      "to": "dtft-spectrum",
+      "label": "经DTFT映射到频域",
+      "evidence": {
+        "printedPages": [
+          37
+        ],
+        "pdfPages": [
+          54
+        ],
+        "note": "式2.1.1；边表示变换关系，不是课程先修次序。"
+      }
+    },
+    {
+      "from": "dtft-unit-circle",
+      "to": "dtft-spectrum",
+      "label": "收敛域含单位圆时可求取",
+      "evidence": {
+        "printedPages": [
+          37,
+          38
+        ],
+        "pdfPages": [
+          54,
+          55
+        ],
+        "note": "书中Z变换代入z=e^{jω}及ROC条件。"
+      }
+    },
+    {
+      "from": "dtft-absolute-sum",
+      "to": "dtft-spectrum",
+      "label": "保证普通DTFT存在的充分条件",
+      "evidence": {
+        "printedPages": [
+          38
+        ],
+        "pdfPages": [
+          55
+        ],
+        "note": "式2.1.2及其前后说明，不声称必要条件。"
+      }
+    }
+  ],
+  "readingOrder": [
+    "book-1",
+    "book-1-1",
+    "book-1-1-1",
+    "book-1-1-2",
+    "book-1-1-3",
+    "book-1-1-4",
+    "book-1-2",
+    "book-1-2-1",
+    "book-1-2-2",
+    "book-1-2-3",
+    "book-1-3",
+    "book-1-exercises",
+    "book-2",
+    "book-2-1",
+    "book-2-1-1",
+    "book-2-1-2",
+    "book-2-2",
+    "book-2-2-1",
+    "book-2-2-2",
+    "book-2-2-3",
+    "book-2-2-4",
+    "book-2-3",
+    "book-2-3-1",
+    "book-2-3-2",
+    "book-2-3-3",
+    "book-2-3-4",
+    "book-2-4",
+    "book-2-5",
+    "book-2-5-1",
+    "book-2-5-2",
+    "book-2-5-3",
+    "book-2-5-4",
+    "book-2-5-5",
+    "book-2-6",
+    "book-2-6-1",
+    "book-2-6-2",
+    "book-2-6-3",
+    "book-2-7",
+    "book-2-exercises",
+    "book-3",
+    "book-3-1",
+    "book-3-1-1",
+    "book-3-1-2",
+    "book-3-1-3",
+    "book-3-1-4",
+    "book-3-1-5",
+    "book-3-2",
+    "book-3-2-1",
+    "book-3-2-2",
+    "book-3-2-3",
+    "book-3-3",
+    "book-3-3-1",
+    "book-3-3-2",
+    "book-3-3-3",
+    "book-3-3-4",
+    "book-3-4",
+    "book-3-4-1",
+    "book-3-4-2",
+    "book-3-4-3",
+    "book-3-4-4",
+    "book-3-5",
+    "book-3-5-1",
+    "book-3-5-2",
+    "book-3-5-3",
+    "book-3-5-4",
+    "book-3-6",
+    "book-3-exercises",
+    "book-4",
+    "book-4-1",
+    "book-4-1-1",
+    "book-4-1-2",
+    "book-4-1-3",
+    "book-4-2",
+    "book-4-2-1",
+    "book-4-2-2",
+    "book-4-2-3",
+    "book-4-2-4",
+    "book-4-3",
+    "book-4-3-1",
+    "book-4-3-2",
+    "book-4-4",
+    "book-4-4-1",
+    "book-4-4-2",
+    "book-4-5",
+    "book-5",
+    "book-5-1",
+    "book-5-2",
+    "book-5-2-1",
+    "book-5-2-2",
+    "book-5-2-3",
+    "book-5-3",
+    "book-5-4",
+    "book-5-4-1",
+    "book-5-4-2",
+    "book-5-5",
+    "book-5-6",
+    "book-references"
+  ],
+  "availableUnits": [
+    {
+      "id": "book-2-1-1-dtft-notation",
+      "contentSha256": "601d95a972cb6bae795c0e66b27c7df35a1bda46669ea2e9cd24fa254da2b378",
+      "title": "DTFT式里，谁在变，谁在被加起来",
+      "bookSectionIds": [
+        "book-2-1-1"
+      ],
+      "href": "/study-site/dsp-book-companion/units/book-2-1-1-dtft-notation.html"
+    }
+  ],
+  "editionNotice": "课件1.1 P2提及第2版（2016.2），当前对照使用已取得的第3版（2021.8）；页码和章节位置按实际内容核对，不按课件旧页号直接套用。",
+  "mapBoundary": "目录是全书定位，不是必学清单。概念图只含已核且课件涉及的局部；其余关系待补。",
+  "scopePolicy": "本轮做哪些由已收到课件的内容决定，怎么组织以书本结构为主。课件未覆盖部分暂缓；必要前置另标补充。不据此预测考试范围。"
+}
