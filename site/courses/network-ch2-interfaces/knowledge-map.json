@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "id": "network-ch2-interfaces",
+  "title": "计算机网络 物理接口专题",
+  "reader": "/study-site/network-ch2-interfaces-ppt.html",
+  "totalPages": 8,
+  "source": {
+    "pdf": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf",
+    "sha256": "545e56f55969c6ec9ee240b01d94bc153c6bc1ca6089b60242720a1119293791",
+    "sourcePdfPages": 34,
+    "readerPages": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "pageNumbering": "专题只有8个阅读位置，真实data-page为27–34；分别使用34页主版PDF的物理27–34页。不是把reader位置1–8误指到PDF1–8，也不新增主物理层P51等虚构页。",
+    "recoveryStatus": "new-authored-map-from-restored-reader-and-source-not-old-frozen-json"
+  },
+  "nodes": [
+    {
+      "id": "dte-dce",
+      "label": "终端处理数据，DCE适配传输线路",
+      "pages": [
+        27,
+        28
+      ],
+      "summary": "DTE与DCE是接口角色，不按机箱或所有者分类；DCE转换、编码及电路控制不等于包办链路层检错重传或端到端可靠性。",
+      "prerequisites": [],
+      "section": "角色与接口",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "four-properties",
+      "label": "机械、电气、功能、过程必须同时匹配",
+      "pages": [
+        28
+      ],
+      "summary": "插头可接只满足部分条件；电压判读、每根数据/控制线含义及握手顺序仍需一致，角色可能集成在同一设备内。",
+      "prerequisites": [
+        "dte-dce"
+      ],
+      "section": "角色与接口",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "local-scope",
+      "label": "局部DTE-DCE接口不等于中间远程线路",
+      "pages": [
+        28,
+        30
+      ],
+      "summary": "两端本地EIA-232/V.24与中间通信网络分段负责；跨城市通信成功不能证明裸RS-232电缆支持相同距离。",
+      "prerequisites": [
+        "dte-dce"
+      ],
+      "section": "角色与接口",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "dte-perspective",
+      "label": "DB-25数据与控制方向以DTE为视角",
+      "pages": [
+        29
+      ],
+      "summary": "本图TxD针2输出、RxD针3输入，DCE在对应脚反向接收/输出；针号不照搬DB-9，信号名称也不能脱离角色解释。",
+      "prerequisites": [
+        "dte-dce",
+        "four-properties"
+      ],
+      "section": "引脚与握手",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "control-meaning",
+      "label": "就绪、发送许可、载波和振铃分别报告状态",
+      "pages": [
+        29
+      ],
+      "summary": "DTR/DSR、RTS/CTS、DCD和RI不是同一“已收到数据”信号；数据线送比特，控制线按适用设备模式协调，不要求所有串口使用全部信号。",
+      "prerequisites": [
+        "dte-perspective"
+      ],
+      "section": "引脚与握手",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "ground-reference",
+      "label": "保护接地与信号参考不能任意等同",
+      "pages": [
+        29,
+        31,
+        32
+      ],
+      "summary": "本图针1保护地与针7信号地作用不同；各接线图的跨端或本地连接需分别读，不能脱离器件要求自行合并接地和屏蔽方案。",
+      "prerequisites": [
+        "four-properties"
+      ],
+      "section": "引脚与握手",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "straight-through",
+      "label": "DTE到DCE的匹配方向支持相应直通线",
+      "pages": [
+        30
+      ],
+      "summary": "标准角色下终端输出面对DCE输入，故匹配直通能工作；连接器外形相同不证明实际针脚、电平或设备角色相同。",
+      "prerequisites": [
+        "dte-perspective",
+        "local-scope"
+      ],
+      "section": "接线与功能",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "crossed-data",
+      "label": "两个DTE直连需让发送输出接对方接收输入",
+      "pages": [
+        31,
+        32
+      ],
+      "summary": "本专题DB-25的关键为2接对端3、3接对端2；null modem通过接线匹配角色，并不真的执行调制解调。",
+      "prerequisites": [
+        "straight-through"
+      ],
+      "section": "接线与功能",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "local-loopback",
+      "label": "本地握手回环不能表达远端背压",
+      "pages": [
+        31,
+        32
+      ],
+      "summary": "本端RTS回本端CTS时许可由自己驱动，远端忙不必改变它；P31另接对端DCD/RI及P32(b)本地模拟须按原图分别追线，不能拼成万能接法。",
+      "prerequisites": [
+        "crossed-data",
+        "control-meaning"
+      ],
+      "section": "接线与功能",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "remote-handshake",
+      "label": "跨端控制线提供远端状态，软件还要正确使用",
+      "pages": [
+        32
+      ],
+      "summary": "图(a)RTS驱动对端CTS/DCD、DTR驱动对端DSR；图(b)相关线本地回环。交叉处有无连接点决定电路，控制通路存在也不自动证明流控机制正确。",
+      "prerequisites": [
+        "crossed-data",
+        "control-meaning"
+      ],
+      "section": "接线与功能",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "standard-division",
+      "label": "RS-449与RS-423/422分别约束接口与电气",
+      "pages": [
+        33
+      ],
+      "summary": "RS-449组织机械、功能及过程，引用RS-423非平衡或RS-422平衡电气规范；这不是三种可任意互插的完整网络协议。",
+      "prerequisites": [
+        "four-properties"
+      ],
+      "section": "电气方式与组网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "differential",
+      "label": "差分抑制共同扰动，但仍有共模范围和失衡限制",
+      "pages": [
+        33,
+        34
+      ],
+      "summary": "用两线电压之差消去近似共同的干扰，非共同残余仍在；A/B标签不保证跨厂商极性一致，差分也不免除参考和接地条件。",
+      "prerequisites": [
+        "standard-division",
+        "ground-reference"
+      ],
+      "section": "电气方式与组网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "rate-reach",
+      "label": "距离与速率必须作为有条件配对读",
+      "pages": [
+        33,
+        34
+      ],
+      "summary": "原页10m/10Mbit每秒与1km/100kbit每秒不能各取大值合并；RS-485原3000m同样缺线材、速率和中继条件，不作无条件工程承诺。",
+      "prerequisites": [
+        "differential",
+        "local-scope"
+      ],
+      "section": "电气方式与组网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "multidriver",
+      "label": "RS-485允许多驱动挂接，不允许任意同时驱动",
+      "pages": [
+        34
+      ],
+      "summary": "驱动使能让多站共享总线；常见两线半双工仍需上层分配发送权。电气接口本身不规定地址、报文格式和轮询策略。",
+      "prerequisites": [
+        "differential",
+        "remote-handshake"
+      ],
+      "section": "电气方式与组网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "unit-load",
+      "label": "单位负载预算只检查节点数的一项约束",
+      "pages": [
+        34
+      ],
+      "summary": "32单位负载下每节点四分之一UL可算128节点，但还须满足驱动、偏置、终端、拓扑和时序条件；不能把128节点、3000m、10Mbit每秒同时当默认保证。",
+      "prerequisites": [
+        "multidriver",
+        "rate-reach"
+      ],
+      "section": "电气方式与组网",
+      "type": "method",
+      "source": "ppt"
+    }
+  ],
+  "edges": [
+    {
+      "from": "local-loopback",
+      "to": "remote-handshake",
+      "label": "对比：同样能传字符却反映不同的远端状态"
+    },
+    {
+      "from": "crossed-data",
+      "to": "ground-reference",
+      "label": "约束：数据交叉正确不能替代参考和保护设计"
+    },
+    {
+      "from": "control-meaning",
+      "to": "multidriver",
+      "label": "递进：局部握手与多站发送权是不同层次协调"
+    },
+    {
+      "from": "rate-reach",
+      "to": "unit-load",
+      "label": "互补：驱动负载足够不意味着长距离高速也成立"
+    },
+    {
+      "from": "four-properties",
+      "to": "unit-load",
+      "label": "收束：接口互通必须综合多项条件而非只数节点"
+    }
+  ]
+}

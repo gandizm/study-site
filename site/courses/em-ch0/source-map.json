@@ -1,0 +1,298 @@
+{
+  "version": 1,
+  "id": "em-ch0",
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt0.html",
+    "readerSha256": "7092a01729a04135ba3e210f8706482c590a567631434cf955219e3a63950c35",
+    "readerGitBlob": "ead3a3d1b884cf21f6d0dc82128e76472639e742",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "pageCount": 20,
+  "pages": [
+    {
+      "page": 1,
+      "readerArticleId": "p01",
+      "imageSelector": "article[data-page=\"1\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "9bf007ee70735e8c6cc3d2a3f97d87c586a74036c82e13f2b2053049e09f9fb8",
+      "imageBytes": 117531,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p01-cover"
+      ]
+    },
+    {
+      "page": 2,
+      "readerArticleId": "p02",
+      "imageSelector": "article[data-page=\"2\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "2f3ae575c1314017fc8804de117673be62ce8d5f1a5dd810406be810cadf1312",
+      "imageBytes": 250759,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p02-model",
+        "p02-comparison"
+      ]
+    },
+    {
+      "page": 3,
+      "readerArticleId": "p03",
+      "imageSelector": "article[data-page=\"3\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "1fd32169a7b64180e732b7853b03eafb45ad7fd8251c2df3b97bd3b437664c71",
+      "imageBytes": 125361,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p03-target1",
+        "p03-target23"
+      ]
+    },
+    {
+      "page": 4,
+      "readerArticleId": "p04",
+      "imageSelector": "article[data-page=\"4\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "782d75353dbfa5383833e9675d44587bb8d9872e91fed70028e77daf0f5e0ae5",
+      "imageBytes": 226152,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p04-task",
+        "p04-options"
+      ]
+    },
+    {
+      "page": 5,
+      "readerArticleId": "p05",
+      "imageSelector": "article[data-page=\"5\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "cca656291a3857c97c3a046350e9c8f185470139af42cafdc3300e630739563c",
+      "imageBytes": 155091,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p05-weight",
+        "p05-eligibility"
+      ]
+    },
+    {
+      "page": 6,
+      "readerArticleId": "p06",
+      "imageSelector": "article[data-page=\"6\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "8fd4b343ce8c978109da6365b50edb03a3427a6cf12fa451b1b1d2950d20b491",
+      "imageBytes": 133930,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p06-class",
+        "p06-lab"
+      ]
+    },
+    {
+      "page": 7,
+      "readerArticleId": "p07",
+      "imageSelector": "article[data-page=\"7\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "b9b51328769953689350474a4541b39591be3cb5024ace2a5c27cbcf58ac13ab",
+      "imageBytes": 137309,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p07-textbook",
+        "p07-reference"
+      ]
+    },
+    {
+      "page": 8,
+      "readerArticleId": "p08",
+      "imageSelector": "article[data-page=\"8\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "f6215a8d2043952d1e5850324bef1d1a1c2b9d501240ada2e6f3fe3c15968c5c",
+      "imageBytes": 217314,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p08-resources",
+        "p08-labbook"
+      ]
+    },
+    {
+      "page": 9,
+      "readerArticleId": "p09",
+      "imageSelector": "article[data-page=\"9\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "8d6df287910a516b4e25a1ba340d69b5d638fe68b231d778a326ab90f00b3fbc",
+      "imageBytes": 118875,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p09-position"
+      ]
+    },
+    {
+      "page": 10,
+      "readerArticleId": "p10",
+      "imageSelector": "article[data-page=\"10\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "fb50aaef41821ac645b6b248a6d9f1cc2558fec770bca8465dacfacfbab66a31",
+      "imageBytes": 378043,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p10-paths",
+        "p10-unification"
+      ]
+    },
+    {
+      "page": 11,
+      "readerArticleId": "p11",
+      "imageSelector": "article[data-page=\"11\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "6117b8ce1ff66051ca075c0f5a181217c39a6a629b77de3658ed8d765bbca280",
+      "imageBytes": 187996,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p11-applications",
+        "p11-bracket"
+      ]
+    },
+    {
+      "page": 12,
+      "readerArticleId": "p12",
+      "imageSelector": "article[data-page=\"12\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "6c29ad89890264d20c04a325233758aa839063bf8c5484a00aed6f43f18d61bf",
+      "imageBytes": 141961,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p12-disciplines",
+        "p12-method"
+      ]
+    },
+    {
+      "page": 13,
+      "readerArticleId": "p13",
+      "imageSelector": "article[data-page=\"13\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "e42dd60001c21a00b9a4230c0dc7260643378c9995c9bc288d1d5ebf73d94113",
+      "imageBytes": 105070,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p13-center",
+        "p13-two"
+      ]
+    },
+    {
+      "page": 14,
+      "readerArticleId": "p14",
+      "imageSelector": "article[data-page=\"14\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "fc0a5a072fdc7fad22e25349869bdcaa3be39705e4c362c84e121c8721a8bdb4",
+      "imageBytes": 193524,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p14-foundations",
+        "p14-waves",
+        "p14-radiation"
+      ]
+    },
+    {
+      "page": 15,
+      "readerArticleId": "p15",
+      "imageSelector": "article[data-page=\"15\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "29e10eace6517c60543bcd46f4868d27ec9eb4a3bc2c4ba284965472ec8ecfc1",
+      "imageBytes": 145883,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p15-vector",
+        "p15-difficulty"
+      ]
+    },
+    {
+      "page": 16,
+      "readerArticleId": "p16",
+      "imageSelector": "article[data-page=\"16\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "bc8d44d5db8b0050552b7557d9706b396c9aae56c0c5c749e0186d89c1459b16",
+      "imageBytes": 396293,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p16-lines",
+        "p16-equipotential"
+      ]
+    },
+    {
+      "page": 17,
+      "readerArticleId": "p17",
+      "imageSelector": "article[data-page=\"17\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "38c67b4d87f66b309314326c434af7e35dcb76d20da216b9bf5edbd186b36353",
+      "imageBytes": 786410,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p17-image",
+        "p17-physics"
+      ]
+    },
+    {
+      "page": 18,
+      "readerArticleId": "p18",
+      "imageSelector": "article[data-page=\"18\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "14dd14d425cbdb949307a7a5d62aee164eca163c1e6940ad0f16438a92186e59",
+      "imageBytes": 161338,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p18-before",
+        "p18-after"
+      ]
+    },
+    {
+      "page": 19,
+      "readerArticleId": "p19",
+      "imageSelector": "article[data-page=\"19\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "c9d9d24b2bfde75bee088841d24157c4b9f17d0cadaa3afffb2e7acec73a273c",
+      "imageBytes": 209062,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p19-compare",
+        "p19-practice"
+      ]
+    },
+    {
+      "page": 20,
+      "readerArticleId": "p20",
+      "imageSelector": "article[data-page=\"20\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "c4569b7c3cfe3f1313a72de85fb2f8b39a93cd2e62accfa7e366d1e00f7659a6",
+      "imageBytes": 203238,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p20-theory",
+        "p20-practical",
+        "p20-scope"
+      ]
+    }
+  ]
+}

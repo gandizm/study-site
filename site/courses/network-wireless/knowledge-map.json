@@ -1,0 +1,883 @@
+{
+  "version": 1,
+  "id": "network-wireless",
+  "title": "计算机网络 无线网络基础",
+  "reader": "/study-site/network-wireless-ppt.html",
+  "totalPages": 75,
+  "source": {
+    "pdf": "/study-site/courses/source-pages/62bfbc2ff680eb0dd891/source.pdf",
+    "sha256": "62bfbc2ff680eb0dd891a34d7bcdf8dbcd02830eadfb5ea947c5bbea28cce2c4",
+    "sourcePdfPages": 75,
+    "readerPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75
+    ],
+    "pageNumbering": "真实主版PDF1–75页；保留原阅读器data-page，不把补充推导另算原PPT页。",
+    "recoveryStatus": "nodes-and-edges-recovered-from-preserved-complete-generator-new-output-not-verified-old-frozen-bytes",
+    "visibleSourceRule": "本轮重新查看全部逐页原图与PDF并排渲染，按可见内容对应；不用隐藏旧文本替代可见源内容。"
+  },
+  "nodes": [
+    {
+      "id": "wireless-problem",
+      "label": "共享介质、传播范围与移动性",
+      "pages": [
+        1
+      ],
+      "summary": "以列车无线场景提出接入、链路变化与共享空口的问题；主版新闻图片是场景入口，不能单凭图片推出网络性能。",
+      "prerequisites": [],
+      "section": "无线局域网组成",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "bss-ap",
+      "label": "基础设施BSS与AP转交",
+      "pages": [
+        2,
+        3
+      ],
+      "summary": "AP及其关联站构成局部服务集；本课普通基础设施通信由AP转交，不因两终端都在覆盖内就默认直接交换。",
+      "prerequisites": [
+        "wireless-problem"
+      ],
+      "section": "无线局域网组成",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "ssid-channel",
+      "label": "SSID、BSSID与信道各司其职",
+      "pages": [
+        4
+      ],
+      "summary": "SSID最大32字节而非32个汉字，名称、BSS身份和频谱位置是不同参数；同名服务可由不同AP或信道提供。",
+      "prerequisites": [
+        "bss-ap"
+      ],
+      "section": "无线局域网组成",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "ess-ds",
+      "label": "DS互连多个BSS形成ESS",
+      "pages": [
+        5
+      ],
+      "summary": "分配系统承担跨BSS交付，不限于图示有线实现；多个覆盖圆有重叠不等于已完成统一网络组织。",
+      "prerequisites": [
+        "bss-ap",
+        "ssid-channel"
+      ],
+      "section": "无线局域网组成",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "portal",
+      "label": "802.11与其他网络之间的门户",
+      "pages": [
+        6
+      ],
+      "summary": "Portal完成向非802.11网络的集成，不是网页认证入口；桥接集成与IP路由是不同职责，可在设备中组合实现。",
+      "prerequisites": [
+        "ess-ds"
+      ],
+      "section": "无线局域网组成",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "association",
+      "label": "发现、关联、安全与IP配置分层",
+      "pages": [
+        8,
+        9
+      ],
+      "summary": "被动接收Beacon或主动Probe都只是发现候选；关联建立AP服务关系，完整上网还要满足适用安全及IP条件。",
+      "prerequisites": [
+        "ssid-channel"
+      ],
+      "section": "无线局域网组成",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "roaming",
+      "label": "空间覆盖之外还要衔接接入状态",
+      "pages": [
+        7
+      ],
+      "summary": "从一个BSS移动到另一个时，关联及转发状态须相应更新；同SSID与重叠覆盖都不是零中断保证。",
+      "prerequisites": [
+        "ess-ds",
+        "association"
+      ],
+      "section": "无线局域网组成",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hotspot",
+      "label": "AP设备、热点区域与运营者",
+      "pages": [
+        10
+      ],
+      "summary": "热点是提供无线接入的服务区域，AP是设备，WISP是服务提供者；公共热点还需回传和适当接入机制。",
+      "prerequisites": [
+        "portal",
+        "association"
+      ],
+      "section": "无线局域网组成",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "adhoc-routing",
+      "label": "自组网的多跳路径与动态拓扑",
+      "pages": [
+        11,
+        12,
+        16
+      ],
+      "summary": "一般MANET可由节点代转并维护变化路径，图示A到E经过B、C、D；IBSS不自动具备MANET路由，移动IP也不是同一问题。",
+      "prerequisites": [
+        "wireless-problem"
+      ],
+      "section": "自组网与传感网络",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "sensor-constraints",
+      "label": "传感节点的资源与业务约束",
+      "pages": [
+        13,
+        14,
+        15
+      ],
+      "summary": "感知、处理存储、收发共同消耗有限能量；小报文不等于无实时要求，自组织与重构还要兼顾安全和可靠性。",
+      "prerequisites": [
+        "adhoc-routing"
+      ],
+      "section": "自组网与传感网络",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "mobility-levels",
+      "label": "按接入时的移动和连续性区分服务",
+      "pages": [
+        17
+      ],
+      "summary": "固定、游牧、便携、移动的关键在使用位置变化及通信连续性，不是设备能否拿走；终端移动与转发拓扑移动也应区分。",
+      "prerequisites": [
+        "roaming",
+        "adhoc-routing"
+      ],
+      "section": "自组网与传感网络",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "phy-mac",
+      "label": "PHY传送波形，MAC分配机会",
+      "pages": [
+        18,
+        21
+      ],
+      "summary": "DSSS、FHSS、OFDM和红外属于物理层实现；DCF、PCF安排共享介质访问，不把分层方框当成多台物理设备。",
+      "prerequisites": [
+        "bss-ap"
+      ],
+      "section": "PHY与接入协调",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "generation-rates",
+      "label": "历史PHY上限与Wi-Fi代际",
+      "pages": [
+        19,
+        20
+      ],
+      "summary": "b/a/g/n频段、带宽、空间流等条件不同，速率表不是应用吞吐或覆盖承诺；Wi-Fi代际名称也不直接给出单终端能力。",
+      "prerequisites": [
+        "phy-mac"
+      ],
+      "section": "PHY与接入协调",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "dcf-pcf",
+      "label": "分布争用与点协调轮询",
+      "pages": [
+        22,
+        23
+      ],
+      "summary": "经典DCF由各站遵循共同规则争用，传统PCF由协调器轮询；无组内竞争不等于无外部干扰，PCF也不是必备万能保证。",
+      "prerequisites": [
+        "phy-mac"
+      ],
+      "section": "PHY与接入协调",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "no-collision-detection",
+      "label": "为何不能照搬共享以太网CD",
+      "pages": [
+        24
+      ],
+      "summary": "本机强发射掩盖远端弱信号，且发送端局部监听不代表接收端干扰；这是传统机制的适用限制，不宣称无线全双工物理上绝不可能。",
+      "prerequisites": [
+        "dcf-pcf"
+      ],
+      "section": "碰撞避免的动机",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hidden-terminal",
+      "label": "隐藏站：听不见彼此却干扰共同接收者",
+      "pages": [
+        25
+      ],
+      "summary": "A与C相互不可听仍可同时影响B；即使都正确发前监听，也无法从本地空闲证明B处安全。",
+      "prerequisites": [
+        "no-collision-detection"
+      ],
+      "section": "碰撞避免的动机",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "exposed-terminal",
+      "label": "暴露站：过度退让损失可并行机会",
+      "pages": [
+        26
+      ],
+      "summary": "B到A与C到D可能在满足干扰条件时并行；需同时检查反向ACK，不能仅由目的地址不同断言整次交换可并发。",
+      "prerequisites": [
+        "no-collision-detection"
+      ],
+      "section": "碰撞避免的动机",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "ca-feedback",
+      "label": "CA降低冲突机会，ACK反馈链路结果",
+      "pages": [
+        27,
+        28,
+        32
+      ],
+      "summary": "基本单播用ACK及重试弥补不能边发边知成功的缺口；未获ACK可能是数据或ACK损失，且广播等并非每帧逐一确认。",
+      "prerequisites": [
+        "hidden-terminal",
+        "exposed-terminal"
+      ],
+      "section": "DCF基本交换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "basic-exchange",
+      "label": "监听、等待、DATA与SIFS后ACK",
+      "pages": [
+        29,
+        30,
+        31
+      ],
+      "summary": "新争用与已有交换的接续机会不同；初始可直接发送需满足空闲间隔及退避状态，不能把任何新包都当成免退避首帧。",
+      "prerequisites": [
+        "ca-feedback"
+      ],
+      "section": "DCF基本交换",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "ifs-priority",
+      "label": "帧间间隔保护规定的响应顺序",
+      "pages": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "summary": "SIFS用于指定响应和接续，PIFS用于相应点协调，DIFS用于本课DCF争用；PIFS=SIFS+一时隙，DIFS多两时隙，28/78/128微秒仅属早期FHSS参数。",
+      "prerequisites": [
+        "basic-exchange",
+        "dcf-pcf"
+      ],
+      "section": "DCF基本交换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "avoidance-composition",
+      "label": "间隔、预约、NAV与退避互补",
+      "pages": [
+        33
+      ],
+      "summary": "间隔保护接续，RTS/CTS传播保留，NAV记录逻辑忙，退避错开竞争者；这些机制并非五种互相替代的能量检测。",
+      "prerequisites": [
+        "basic-exchange"
+      ],
+      "section": "DCF基本交换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "virtual-carrier",
+      "label": "从解码信息维护未来占用",
+      "pages": [
+        38,
+        39,
+        40
+      ],
+      "summary": "虚拟监听由所听帧的Duration维护本地NAV；从当前通知帧结束算剩余时间，不能再计自身帧，也不是所有站共有的全局时钟。",
+      "prerequisites": [
+        "avoidance-composition",
+        "ifs-priority"
+      ],
+      "section": "虚拟监听与退避",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "random-window",
+      "label": "候选最大值CW与数量CW+1",
+      "pages": [
+        41
+      ],
+      "summary": "随机计数取0至CW，均匀独立仍可能抽到同值；退避累计空闲时隙，不把固定DIFS当成能够分开所有等待者的随机化。",
+      "prerequisites": [
+        "avoidance-composition"
+      ],
+      "section": "虚拟监听与退避",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "backoff-growth",
+      "label": "明确PHY和阶段后再扩大窗口",
+      "pages": [
+        43
+      ],
+      "summary": "主版首次32候选与旧版8候选存在原文差异，不能替旧值虚构依据；DSSS初始CW=31、FHSS初始CW=15，候选加倍对应CW更新为2(CW+1)−1且有上限。",
+      "prerequisites": [
+        "random-window",
+        "phy-mac"
+      ],
+      "section": "虚拟监听与退避",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "freeze-resume",
+      "label": "忙时冻结，恢复原剩余计数",
+      "pages": [
+        42,
+        44
+      ],
+      "summary": "只在合格空闲时隙递减；忙期保留剩余量，重新满足DIFS再继续。图中B被C、D、E先后打断三次，不是三次自身碰撞或重新抽签。",
+      "prerequisites": [
+        "random-window",
+        "ifs-priority"
+      ],
+      "section": "虚拟监听与退避",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "post-backoff",
+      "label": "成功后也要按状态完成退避",
+      "pages": [
+        45
+      ],
+      "summary": "退避不是只惩罚失败；持续有数据不免除成功后的post-backoff，ACK和CTS等SIFS响应则不是普通新争用。",
+      "prerequisites": [
+        "freeze-resume",
+        "ca-feedback"
+      ],
+      "section": "虚拟监听与退避",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "rts-cts-neighborhood",
+      "label": "由两端把预约送到各自邻域",
+      "pages": [
+        46,
+        47
+      ],
+      "summary": "发送者RTS通知其附近站，接收者CTS再通知隐藏在接收侧的站；RTS本身仍需争用且可碰撞，预约有条件且增加开销。",
+      "prerequisites": [
+        "hidden-terminal",
+        "virtual-carrier",
+        "post-backoff"
+      ],
+      "section": "RTS/CTS预约",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "reservation-duration",
+      "label": "从不同帧末指向同一ACK结束点",
+      "pages": [
+        48
+      ],
+      "summary": "未分片简图中RTS余3SIFS+CTS+DATA+ACK，CTS余2SIFS+DATA+ACK，DATA余SIFS+ACK；不含自身帧、先前DIFS或退避，CTS不能原值复制RTS。",
+      "prerequisites": [
+        "rts-cts-neighborhood",
+        "ifs-priority"
+      ],
+      "section": "RTS/CTS预约",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "frame-types",
+      "label": "管理、控制与数据帧的任务",
+      "pages": [
+        49
+      ],
+      "summary": "发现关联、接入响应、用户载荷由不同帧类型承担；不能把数据帧字段表套到所有控制和管理帧。",
+      "prerequisites": [
+        "association",
+        "rts-cts-neighborhood"
+      ],
+      "section": "802.11帧与地址",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "frame-layout",
+      "label": "首部、帧体与FCS的计数边界",
+      "pages": [
+        50
+      ],
+      "summary": "经典三地址首部24字节、四地址30字节，QoS等可再扩展；旧图帧体上限不是所有新格式或应用层的统一MTU。",
+      "prerequisites": [
+        "frame-types"
+      ],
+      "section": "802.11帧与地址",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "address-roles",
+      "label": "当前无线收发者与原始源目的分开",
+      "pages": [
+        51
+      ],
+      "summary": "RA/TA指本跳无线端点，SA/DA指原始MAC端点；To DS/From DS组合决定地址槽位，四地址用于相应分配系统转发而非IBSS自动启用。",
+      "prerequisites": [
+        "frame-layout",
+        "ess-ds"
+      ],
+      "section": "802.11帧与地址",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "address-trace",
+      "label": "沿每一跳重画802.11和以太网封装",
+      "pages": [
+        52,
+        53
+      ],
+      "summary": "同BSS A到B通常先A到AP、再AP到B；跨网例题先认每跳介质与路由接口，桥接的以太网箭头不能强行填入四地址无线表。",
+      "prerequisites": [
+        "address-roles",
+        "portal"
+      ],
+      "section": "802.11帧与地址",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "sequence-control",
+      "label": "序号、分片号、Duration与控制位",
+      "pages": [
+        54,
+        55
+      ],
+      "summary": "12位序号和4位分片号帮助区分新帧、重试及分片，首片号0不代表必定未分片；More Fragments为1表示后面仍有片，旧WEP标注不作安全推荐。",
+      "prerequisites": [
+        "frame-layout",
+        "ca-feedback"
+      ],
+      "section": "802.11帧与地址",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "fragment-burst",
+      "label": "分片突发的SIFS接续与滚动保留",
+      "pages": [
+        56
+      ],
+      "summary": "相邻分片及其ACK以规定短间隔接续，Duration逐步保护后续交换；失败可打断突发并需再争用，小帧降低单次损失也增加开销。",
+      "prerequisites": [
+        "sequence-control",
+        "reservation-duration"
+      ],
+      "section": "802.11帧与地址",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "pan-purpose",
+      "label": "PAN、WPAN与WLAN按用途区分",
+      "pages": [
+        57,
+        58
+      ],
+      "summary": "个人近距设备互连不等于无协调者、固定10米或必定低速；无线性、服务范围、速率和频段是不同维度。",
+      "prerequisites": [
+        "generation-rates"
+      ],
+      "section": "个人区域网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "bluetooth-radio",
+      "label": "经典蓝牙的跳频与时分协调",
+      "pages": [
+        59
+      ],
+      "summary": "早期经典蓝牙以同步的时分和跳频组织通信，课件720kbit/s与1Mbit/s属不同有效/毛速率口径；不把历史值套到所有LE模式。",
+      "prerequisites": [
+        "pan-purpose",
+        "phy-mac"
+      ],
+      "section": "个人区域网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "piconet",
+      "label": "经典微微网的活动成员与协调者",
+      "pages": [
+        60
+      ],
+      "summary": "本页BR/EDR微微网由一个中心协调最多7个活动外围设备；活动数不是已保存配对数量，也不是所有蓝牙LE拓扑的上限。",
+      "prerequisites": [
+        "bluetooth-radio"
+      ],
+      "section": "个人区域网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "scatternet",
+      "label": "共享节点连接微微网而非覆盖自动互通",
+      "pages": [
+        61
+      ],
+      "summary": "散射网需要共享节点及相应时序协调，图中暂停设备与活动成员不同；覆盖重叠本身不会自动构成可转发网络。",
+      "prerequisites": [
+        "piconet"
+      ],
+      "section": "个人区域网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "low-rate-wpan",
+      "label": "低速PHY/MAC与ZigBee上层分工",
+      "pages": [
+        62,
+        63,
+        65,
+        66
+      ],
+      "summary": "IEEE802.15.4规定底层，ZigBee在其上组织网络与应用；使用802.15.4不必然就是ZigBee，旧版速率及年份须带历史条件。",
+      "prerequisites": [
+        "pan-purpose",
+        "sensor-constraints"
+      ],
+      "section": "低功耗组网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "duty-cycle",
+      "label": "低占空比与电池寿命的条件",
+      "pages": [
+        64
+      ],
+      "summary": "平均功耗取决于活动、休眠及转换开销；不到1%活动时间不能独立证明十年寿命，地址空间或理论节点数也不是同时吞吐容量。",
+      "prerequisites": [
+        "low-rate-wpan",
+        "sensor-constraints"
+      ],
+      "section": "低功耗组网",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "zigbee-roles",
+      "label": "协调器、路由器与终端的不同责任",
+      "pages": [
+        67
+      ],
+      "summary": "树、星、网状组织对转发与休眠要求不同；FFD是能力类别而非必定担任路由器，数据路径也不必每跳都经过协调器。",
+      "prerequisites": [
+        "low-rate-wpan",
+        "duty-cycle"
+      ],
+      "section": "低功耗组网",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "uwb",
+      "label": "超宽频谱与短距高速的区别",
+      "pages": [
+        68
+      ],
+      "summary": "UWB强调信号占用的频谱宽度而非覆盖距离；课件802.15.3a及比例阈值有历史语境，不能当作所有现代设备或地区的统一规则。",
+      "prerequisites": [
+        "pan-purpose",
+        "phy-mac"
+      ],
+      "section": "广域接入与技术比较",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "wman-wimax",
+      "label": "城域无线接入与WiMAX体系",
+      "pages": [
+        69,
+        70,
+        71
+      ],
+      "summary": "IEEE802.16标准与WiMAX生态有关但不是任意设备互通的保证；WLAN接入、WMAN回传和ISP网络可组合，移动能力需匹配具体版本。",
+      "prerequisites": [
+        "portal",
+        "mobility-levels"
+      ],
+      "section": "广域接入与技术比较",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "cellular-evolution",
+      "label": "蜂窝代际与GSM/GPRS两类业务路径",
+      "pages": [
+        72,
+        73
+      ],
+      "summary": "历史1G/2G/3G按复用和业务能力演进，3G并非一开始全部IP化；图中电话经MSC/GMSC、分组数据经SGSN/GGSN，不混成同一用户路径。",
+      "prerequisites": [
+        "mobility-levels",
+        "phy-mac"
+      ],
+      "section": "广域接入与技术比较",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "comparison-axes",
+      "label": "按范围、速率、移动性和能耗比较",
+      "pages": [
+        74
+      ],
+      "summary": "纵轴为对数速率，横轴为PAN/LAN/MAN/WAN类别而非精确距离；旧图只示历史定位，不能作为当前产品性能排名。",
+      "prerequisites": [
+        "wman-wimax",
+        "cellular-evolution",
+        "zigbee-roles",
+        "uwb",
+        "generation-rates"
+      ],
+      "section": "广域接入与技术比较",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "chapter-recap",
+      "label": "章末复盘：拓扑、空口状态与业务边界",
+      "pages": [
+        75
+      ],
+      "summary": "主版末页只有END；补充复盘把接入组织、共享机会、地址角色与技术取舍串联，不冒充原PPT末页新增知识。",
+      "prerequisites": [
+        "address-trace",
+        "fragment-burst",
+        "comparison-axes"
+      ],
+      "section": "综合回看",
+      "type": "method",
+      "source": "supplement"
+    }
+  ],
+  "edges": [
+    {
+      "from": "roaming",
+      "to": "mobility-levels",
+      "label": "联系：覆盖变化要求服务时间上的接续"
+    },
+    {
+      "from": "adhoc-routing",
+      "to": "zigbee-roles",
+      "label": "比较：多跳都需明确转发角色和路径维护"
+    },
+    {
+      "from": "sensor-constraints",
+      "to": "duty-cycle",
+      "label": "约束：业务采样与休眠不能独立设计"
+    },
+    {
+      "from": "generation-rates",
+      "to": "comparison-axes",
+      "label": "提醒：同一PHY峰值不代表同等有效服务"
+    },
+    {
+      "from": "hidden-terminal",
+      "to": "exposed-terminal",
+      "label": "对比：信息不足与过度保守造成不同损失"
+    },
+    {
+      "from": "exposed-terminal",
+      "to": "rts-cts-neighborhood",
+      "label": "边界：预约并不自动消除所有不必要退让"
+    },
+    {
+      "from": "no-collision-detection",
+      "to": "ca-feedback",
+      "label": "促成：以接收反馈替代边发边判定"
+    },
+    {
+      "from": "ifs-priority",
+      "to": "backoff-growth",
+      "label": "限制：间隔与初始窗口不能跨PHY混搭"
+    },
+    {
+      "from": "virtual-carrier",
+      "to": "random-window",
+      "label": "互补：记录已预约时间与错开新竞争"
+    },
+    {
+      "from": "freeze-resume",
+      "to": "backoff-growth",
+      "label": "区分：被别人打断不等于自己失败扩大窗口"
+    },
+    {
+      "from": "post-backoff",
+      "to": "dcf-pcf",
+      "label": "落实：分布规则也约束连续发送者"
+    },
+    {
+      "from": "reservation-duration",
+      "to": "fragment-burst",
+      "label": "扩展：未分片公式不能原样套整串分片"
+    },
+    {
+      "from": "association",
+      "to": "frame-types",
+      "label": "落地：发现与接入通过相应管理帧实现"
+    },
+    {
+      "from": "address-roles",
+      "to": "sequence-control",
+      "label": "区分：通信身份与帧重试/分片身份"
+    },
+    {
+      "from": "ess-ds",
+      "to": "scatternet",
+      "label": "对比：服务域互连机制不同于覆盖交叠"
+    },
+    {
+      "from": "low-rate-wpan",
+      "to": "uwb",
+      "label": "对比：个人区域用途不限定低速或高带宽"
+    },
+    {
+      "from": "wman-wimax",
+      "to": "cellular-evolution",
+      "label": "比较：接入覆盖与移动服务依具体体系"
+    }
+  ]
+}

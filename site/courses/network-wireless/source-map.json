@@ -1,0 +1,767 @@
+{
+  "version": 1,
+  "id": "network-wireless",
+  "reader": "/study-site/network-wireless-ppt.html",
+  "sourcePdf": "/study-site/courses/source-pages/62bfbc2ff680eb0dd891/source.pdf",
+  "sourcePdfSha256": "62bfbc2ff680eb0dd891a34d7bcdf8dbcd02830eadfb5ea947c5bbea28cce2c4",
+  "sourcePdfPages": 75,
+  "readerPages": 75,
+  "verification": {
+    "method": "本轮恢复后重新核对全部75页reader页号、源图SHA及对应PDF物理页，按400×300栅格比较，并实际查看全部逐页左右并排联系表；数值差异只用于筛查，不以隐藏文本替代可见原图。",
+    "result": "75页可见内容与对应主版PDF物理页一致。",
+    "contentBoundary": "P75为END，复盘节点单独标supplement。P43保留主版32与旧版8候选的差异而不编造参数；早期PHY数字、WEP及802.15.3a等按历史语境说明，不作为现代配置建议。",
+    "recoveryStatus": "new-source-audit-not-old-frozen-source-map"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "readerIndex": 1,
+      "sourcePdfPage": 1,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-1.webp",
+      "sourceImageSha256": "8962a849662b3fc6621509c482c0223daac256d83e361f7b3b3e94f729b96daf",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.454197
+    },
+    {
+      "page": 2,
+      "readerIndex": 2,
+      "sourcePdfPage": 2,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-2.webp",
+      "sourceImageSha256": "e5129647bc336e0be0afe490ed32340531537424391953826ad28ace1d5ed6a8",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 4.435008
+    },
+    {
+      "page": 3,
+      "readerIndex": 3,
+      "sourcePdfPage": 3,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-3.webp",
+      "sourceImageSha256": "f3390ecc672ad2996091a5f1f47f6a33333cef06c9fd2ac880965b6ef0146c6e",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.476969
+    },
+    {
+      "page": 4,
+      "readerIndex": 4,
+      "sourcePdfPage": 4,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-4.webp",
+      "sourceImageSha256": "edad73c605ee9a61795f894a6c761ccbd492ac48329c7c44065aefd07399d65c",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.378242
+    },
+    {
+      "page": 5,
+      "readerIndex": 5,
+      "sourcePdfPage": 5,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-5.webp",
+      "sourceImageSha256": "cb63309187435de39f003ddab3dd56c6d852752b604394de4760fa8485372b58",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.753811
+    },
+    {
+      "page": 6,
+      "readerIndex": 6,
+      "sourcePdfPage": 6,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-6.webp",
+      "sourceImageSha256": "1ca1f33be88408c606da69f7a413b1af9f5467c296a20f595f9cb0adf6518f43",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.282608
+    },
+    {
+      "page": 7,
+      "readerIndex": 7,
+      "sourcePdfPage": 7,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-7.webp",
+      "sourceImageSha256": "4ffdc6f93e977323332cbabfb46f60a4b0ee83f587719c476e11e2b9dc8cfac1",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.162703
+    },
+    {
+      "page": 8,
+      "readerIndex": 8,
+      "sourcePdfPage": 8,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-8.webp",
+      "sourceImageSha256": "2a24bbde62555cbda837c3500d66adb4f4ff9179818d1c91bce655a407fdd301",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.859964
+    },
+    {
+      "page": 9,
+      "readerIndex": 9,
+      "sourcePdfPage": 9,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-9.webp",
+      "sourceImageSha256": "6b4f9d4c731f04cc62c2c219a2048a6c08e900941b2ef5897b3a4a61f46c8668",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.606375
+    },
+    {
+      "page": 10,
+      "readerIndex": 10,
+      "sourcePdfPage": 10,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-10.webp",
+      "sourceImageSha256": "02bb089b9ad48012be17b0ae6225d71445ed60ca585936643809e0a343904489",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.847539
+    },
+    {
+      "page": 11,
+      "readerIndex": 11,
+      "sourcePdfPage": 11,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-11.webp",
+      "sourceImageSha256": "cbbbccc66ec10f2f1ba5c5e2259768bb3777b670e95ce6df511be4a82918b7fb",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.128431
+    },
+    {
+      "page": 12,
+      "readerIndex": 12,
+      "sourcePdfPage": 12,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-12.webp",
+      "sourceImageSha256": "78373d031d3c3833bca5591294eaf6dafa2aa6e839e1640482751cb4e716ea77",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.399222
+    },
+    {
+      "page": 13,
+      "readerIndex": 13,
+      "sourcePdfPage": 13,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-13.webp",
+      "sourceImageSha256": "d75828b02a11ba014055c37c6f54de60a49e2e9371cc6135ff3a377ebb25c1b1",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.707006
+    },
+    {
+      "page": 14,
+      "readerIndex": 14,
+      "sourcePdfPage": 14,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-14.webp",
+      "sourceImageSha256": "391fb66a5c4bc9c7945cebb08018a6f5a46d8fd8c9320bf58968bc4032725ad2",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.507858
+    },
+    {
+      "page": 15,
+      "readerIndex": 15,
+      "sourcePdfPage": 15,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-15.webp",
+      "sourceImageSha256": "2f57d5f18d2765a59f99a8f60be6d2f7daca1a2a83b40bbdffcecc5a131a127b",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.764458
+    },
+    {
+      "page": 16,
+      "readerIndex": 16,
+      "sourcePdfPage": 16,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-16.webp",
+      "sourceImageSha256": "8f589c443e6ca1ebdcab1601b1d4ce7b438e9fcb83778b00584d693673f4e7f9",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.913714
+    },
+    {
+      "page": 17,
+      "readerIndex": 17,
+      "sourcePdfPage": 17,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-17.webp",
+      "sourceImageSha256": "00145d78bd16216fd1beac1c6a0d06f196cc17aa1cfba1932d564850cd074337",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.894183
+    },
+    {
+      "page": 18,
+      "readerIndex": 18,
+      "sourcePdfPage": 18,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-18.webp",
+      "sourceImageSha256": "7092238e76c758bdba025720e0b0cf3fe158519f9c7a97bd667bc09e509209a4",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.537317
+    },
+    {
+      "page": 19,
+      "readerIndex": 19,
+      "sourcePdfPage": 19,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-19.webp",
+      "sourceImageSha256": "1b10ef8620e668b46ce71e73b8835311927ba5c1b19c39adcbefc10a59f14de4",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.692417
+    },
+    {
+      "page": 20,
+      "readerIndex": 20,
+      "sourcePdfPage": 20,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-20.webp",
+      "sourceImageSha256": "7c9f75f79378409ed28fadfed86653d6bd607921875d53abb8196e5cd7294cf6",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 1.752875
+    },
+    {
+      "page": 21,
+      "readerIndex": 21,
+      "sourcePdfPage": 21,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-21.webp",
+      "sourceImageSha256": "7e538f77c5d20d8a2af20cf8be443489eef5d3060b9dba968943482b6b8e0cff",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.490897
+    },
+    {
+      "page": 22,
+      "readerIndex": 22,
+      "sourcePdfPage": 22,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-22.webp",
+      "sourceImageSha256": "0706b055208df05ff843be9492ccc091fa2447a817f2b1b922cd7d810d6b3882",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.808189
+    },
+    {
+      "page": 23,
+      "readerIndex": 23,
+      "sourcePdfPage": 23,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-23.webp",
+      "sourceImageSha256": "73ac72d41c6959f11a63dd33c8c50ae0e976163148d1bf65a9b368305d2b6f2e",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.465156
+    },
+    {
+      "page": 24,
+      "readerIndex": 24,
+      "sourcePdfPage": 24,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-24.webp",
+      "sourceImageSha256": "282846337f0fba7c153f4a6bd9dcf1bae51b90cd996dc3e16f20c58a5e462e49",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.333494
+    },
+    {
+      "page": 25,
+      "readerIndex": 25,
+      "sourcePdfPage": 25,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-25.webp",
+      "sourceImageSha256": "34303683735661a442079d0d1948c2172d7b77581eacd7a1cbe70f39279444ae",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.770272
+    },
+    {
+      "page": 26,
+      "readerIndex": 26,
+      "sourcePdfPage": 26,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-26.webp",
+      "sourceImageSha256": "099dcb953bac39c7cb4acee7d63014a01f849b2b0a9e4bf1c7ef9fb65f7c1ff0",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.677692
+    },
+    {
+      "page": 27,
+      "readerIndex": 27,
+      "sourcePdfPage": 27,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-27.webp",
+      "sourceImageSha256": "4572dff28025ff9f443b1cf75192d461a1059d3c92812b1463e812a9d4e11fc7",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.090656
+    },
+    {
+      "page": 28,
+      "readerIndex": 28,
+      "sourcePdfPage": 28,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-28.webp",
+      "sourceImageSha256": "7a9f55bb385d5c2a5682ae0b7f6a4f0db62560d1fdcc8dcb595171dfd831dfc0",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.959939
+    },
+    {
+      "page": 29,
+      "readerIndex": 29,
+      "sourcePdfPage": 29,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-29.webp",
+      "sourceImageSha256": "828b8a22636727649b1bc3fb14ed371f43543b7eaf5afe8b8f4a7ab5c2f601ea",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.353822
+    },
+    {
+      "page": 30,
+      "readerIndex": 30,
+      "sourcePdfPage": 30,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-30.webp",
+      "sourceImageSha256": "9ece536bdbb1bb5dcb0c97db6620fb5f49a79a5279f103af113fabb5941270ba",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.346969
+    },
+    {
+      "page": 31,
+      "readerIndex": 31,
+      "sourcePdfPage": 31,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-31.webp",
+      "sourceImageSha256": "8d30a9f83a21e06d50d15431f108f6ae5c35567761b282cb1b8e2ba631e9849d",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.007714
+    },
+    {
+      "page": 32,
+      "readerIndex": 32,
+      "sourcePdfPage": 32,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-32.webp",
+      "sourceImageSha256": "9c25d118ee663f91c2c98f1c9c38eb1e09f565672f18c4b2b184a878f7dbcdf8",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.043628
+    },
+    {
+      "page": 33,
+      "readerIndex": 33,
+      "sourcePdfPage": 33,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-33.webp",
+      "sourceImageSha256": "fd891cc8411ac85bf1df8137fe161247e467d097f3866fa5fb07a49972899fca",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.499436
+    },
+    {
+      "page": 34,
+      "readerIndex": 34,
+      "sourcePdfPage": 34,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-34.webp",
+      "sourceImageSha256": "d36853238a09784344da4de8b38147d5f6fa084736a7847dc19ab1f2c48c01c1",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.570067
+    },
+    {
+      "page": 35,
+      "readerIndex": 35,
+      "sourcePdfPage": 35,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-35.webp",
+      "sourceImageSha256": "96328810c20e1837fcac70d34f3212e106b8964545a00ddbf5dfe50b8f94e65c",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.664542
+    },
+    {
+      "page": 36,
+      "readerIndex": 36,
+      "sourcePdfPage": 36,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-36.webp",
+      "sourceImageSha256": "291207497cd70f0a67e665f2860bba63963689b6e4bdb3e24e7381a468d0122b",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.981708
+    },
+    {
+      "page": 37,
+      "readerIndex": 37,
+      "sourcePdfPage": 37,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-37.webp",
+      "sourceImageSha256": "921d122612862bea17da41143f9add00b82524afd74ca2b2e5859be43f9059fc",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.488836
+    },
+    {
+      "page": 38,
+      "readerIndex": 38,
+      "sourcePdfPage": 38,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-38.webp",
+      "sourceImageSha256": "baf4e28761c3db320e18be4c03fd45d7850980e894498cacd5fa14cb060dc585",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.758725
+    },
+    {
+      "page": 39,
+      "readerIndex": 39,
+      "sourcePdfPage": 39,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-39.webp",
+      "sourceImageSha256": "05ddd215b839e8e66335aa58353e82c1101c4737948126678f6ec93386ee8222",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.485625
+    },
+    {
+      "page": 40,
+      "readerIndex": 40,
+      "sourcePdfPage": 40,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-40.webp",
+      "sourceImageSha256": "f1edd4e9d75a3fbb2504c4be5eeb4e231f1940c353e44a25727fc4d028f3c361",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.162211
+    },
+    {
+      "page": 41,
+      "readerIndex": 41,
+      "sourcePdfPage": 41,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-41.webp",
+      "sourceImageSha256": "62fce6dd51a2af484d74f43f06befed7ba71f808af490cc87f597e22fc97eee1",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.750936
+    },
+    {
+      "page": 42,
+      "readerIndex": 42,
+      "sourcePdfPage": 42,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-42.webp",
+      "sourceImageSha256": "442185b4ef60bdd1621b205a0429433511b4d2727932c1d7245e23c74e79aef8",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.335017
+    },
+    {
+      "page": 43,
+      "readerIndex": 43,
+      "sourcePdfPage": 43,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-43.webp",
+      "sourceImageSha256": "a416f7ae403732297b121b7c2795e2bc64ab6701d6832c6ab42dba957cb4f06c",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.139083
+    },
+    {
+      "page": 44,
+      "readerIndex": 44,
+      "sourcePdfPage": 44,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-44.webp",
+      "sourceImageSha256": "c554f9ddb0b62a6c73eaeb9e50c69ae0784134f557e78811f9cc057037ab7197",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.017233
+    },
+    {
+      "page": 45,
+      "readerIndex": 45,
+      "sourcePdfPage": 45,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-45.webp",
+      "sourceImageSha256": "cd67f10dbdc8379637eeb1ef7770817a9f68669fe89e623c2b0d20b4f3feba55",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.558642
+    },
+    {
+      "page": 46,
+      "readerIndex": 46,
+      "sourcePdfPage": 46,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-46.webp",
+      "sourceImageSha256": "2b4cfa289c799c4a5cef03fa8fe21f84055447359fcd1fbc034d74e02b761675",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.062219
+    },
+    {
+      "page": 47,
+      "readerIndex": 47,
+      "sourcePdfPage": 47,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-47.webp",
+      "sourceImageSha256": "bedea34d8a683695ed9964be614e1b3d9b0f536363da1da165df7d64cbfe854f",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.928764
+    },
+    {
+      "page": 48,
+      "readerIndex": 48,
+      "sourcePdfPage": 48,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-48.webp",
+      "sourceImageSha256": "269074fa0f93ec5861c7b8d3f42a8f62d3e5a207c5d3f705b6006028420dc9d4",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.493939
+    },
+    {
+      "page": 49,
+      "readerIndex": 49,
+      "sourcePdfPage": 49,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-49.webp",
+      "sourceImageSha256": "6a47942098705e10bbad4ea1594444501f52aa730c1f0039560cf8d3218e25f1",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.468056
+    },
+    {
+      "page": 50,
+      "readerIndex": 50,
+      "sourcePdfPage": 50,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-50.webp",
+      "sourceImageSha256": "f94ff76e6b0504d93f68643d0a45547dc0c39a0f9bc754500b35d2eabb4dc490",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 4.743589
+    },
+    {
+      "page": 51,
+      "readerIndex": 51,
+      "sourcePdfPage": 51,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-51.webp",
+      "sourceImageSha256": "84f74b8bbeb51a0a676f7e36ce2ddf60b3c0b6019d603562d9c59c133b0549d6",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 4.404558
+    },
+    {
+      "page": 52,
+      "readerIndex": 52,
+      "sourcePdfPage": 52,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-52.webp",
+      "sourceImageSha256": "02d5c48a43527a92873a7c44e49069b170c5b6e636fbcf4a07eb947e5adec7f6",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.268361
+    },
+    {
+      "page": 53,
+      "readerIndex": 53,
+      "sourcePdfPage": 53,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-53.webp",
+      "sourceImageSha256": "910e8ed3b0ec89fdf3be62cc94025ed9d5596d404e9d7750aed493fd20a8b530",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 4.090081
+    },
+    {
+      "page": 54,
+      "readerIndex": 54,
+      "sourcePdfPage": 54,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-54.webp",
+      "sourceImageSha256": "d984dbd40eea2ac19402878da9da5f226418f26ea3d1a3ad4ed3528196c22814",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 4.311469
+    },
+    {
+      "page": 55,
+      "readerIndex": 55,
+      "sourcePdfPage": 55,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-55.webp",
+      "sourceImageSha256": "3040fbf40c2712d6d7fecb3faaed220cba6023b19018863ac7144d3925abb221",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.168844
+    },
+    {
+      "page": 56,
+      "readerIndex": 56,
+      "sourcePdfPage": 56,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-56.webp",
+      "sourceImageSha256": "9d2f10c61650e3256ee3d2b90ecf9d3513e37cc904a40552baea15aca5528d06",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 1.690156
+    },
+    {
+      "page": 57,
+      "readerIndex": 57,
+      "sourcePdfPage": 57,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-57.webp",
+      "sourceImageSha256": "91408148f272c9a0a3f297a01f33a4fe9f61538a63cacd9bafdc8a5e3b731d9d",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.353544
+    },
+    {
+      "page": 58,
+      "readerIndex": 58,
+      "sourcePdfPage": 58,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-58.webp",
+      "sourceImageSha256": "c5b0c04ab04341e44ba40b5d3c3905706d13d56398e1d910c9bf33467286fc26",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.014689
+    },
+    {
+      "page": 59,
+      "readerIndex": 59,
+      "sourcePdfPage": 59,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-59.webp",
+      "sourceImageSha256": "02d9127aea5195ab550afbca1ee30fd35a3d088e80f6011f2cee9437ad877188",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.413347
+    },
+    {
+      "page": 60,
+      "readerIndex": 60,
+      "sourcePdfPage": 60,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-60.webp",
+      "sourceImageSha256": "71da3eda7dcb61e803571166c5de1a73d39bb705d056bf02ab62628f09e858dc",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.366506
+    },
+    {
+      "page": 61,
+      "readerIndex": 61,
+      "sourcePdfPage": 61,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-61.webp",
+      "sourceImageSha256": "92b2cc11cedfe393d3e52f1dda55b922c1097b73185ef95a44a5f2e7ad49ac0b",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 1.575969
+    },
+    {
+      "page": 62,
+      "readerIndex": 62,
+      "sourcePdfPage": 62,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-62.webp",
+      "sourceImageSha256": "a8f27f49ca535feaed90ba9a79774c3f9bcefa06b59a2762e648c2ad28141d42",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.450339
+    },
+    {
+      "page": 63,
+      "readerIndex": 63,
+      "sourcePdfPage": 63,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-63.webp",
+      "sourceImageSha256": "693bf07854c1bdc66a59340f4add114d2f9d6aa2c2687ba1c3d0563649c6607b",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 1.867603
+    },
+    {
+      "page": 64,
+      "readerIndex": 64,
+      "sourcePdfPage": 64,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-64.webp",
+      "sourceImageSha256": "87ad6d596f914db2d8fd6483de5d90979e94d1b6ed3b900dc5cbefd8223a8b4b",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.786631
+    },
+    {
+      "page": 65,
+      "readerIndex": 65,
+      "sourcePdfPage": 65,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-65.webp",
+      "sourceImageSha256": "4c2e562ae8858e0df63a09961c1c566a78733b2c2fdf33cf39af5ea85a1765ce",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.357989
+    },
+    {
+      "page": 66,
+      "readerIndex": 66,
+      "sourcePdfPage": 66,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-66.webp",
+      "sourceImageSha256": "1376f7ea41d136a95b49f69a41d7fdb424566ed7ea79885e3b67d4e2d7604249",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 1.69255
+    },
+    {
+      "page": 67,
+      "readerIndex": 67,
+      "sourcePdfPage": 67,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-67.webp",
+      "sourceImageSha256": "e0e5c5d729de9f8fd1c9344f53718f8ee2e418c9429965d86c0833ed7b8eacb1",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.063658
+    },
+    {
+      "page": 68,
+      "readerIndex": 68,
+      "sourcePdfPage": 68,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-68.webp",
+      "sourceImageSha256": "50b10143408674b06829a369f2701f36ea288c70fea1d3658021a902c0213f10",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 5.239572
+    },
+    {
+      "page": 69,
+      "readerIndex": 69,
+      "sourcePdfPage": 69,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-69.webp",
+      "sourceImageSha256": "97aecef3d0c689ce871322d14325a5d94bb6f956ef018d75ef9093b252b43c7d",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.959392
+    },
+    {
+      "page": 70,
+      "readerIndex": 70,
+      "sourcePdfPage": 70,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-70.webp",
+      "sourceImageSha256": "1650e09fc033b8dbb4ae9a0b12d8a36ca22fcfaaa9fd7132ecc2c2a905a04e60",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.883619
+    },
+    {
+      "page": 71,
+      "readerIndex": 71,
+      "sourcePdfPage": 71,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-71.webp",
+      "sourceImageSha256": "492ea860a34780e0adeac8a63e83d9aff9714ca64310eeb28eefc2234bb4c151",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.652131
+    },
+    {
+      "page": 72,
+      "readerIndex": 72,
+      "sourcePdfPage": 72,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-72.webp",
+      "sourceImageSha256": "9210c2dce74a3664323ae79b22f8bedd891e24fd05f26bed9b1ae16bf9472e5e",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 4.612836
+    },
+    {
+      "page": 73,
+      "readerIndex": 73,
+      "sourcePdfPage": 73,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-73.webp",
+      "sourceImageSha256": "3545b73c7829dd9cbe17b31c811162c056fffed1f0b502410f884a95ec28ed20",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.519461
+    },
+    {
+      "page": 74,
+      "readerIndex": 74,
+      "sourcePdfPage": 74,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-74.webp",
+      "sourceImageSha256": "81c1c78a2e7516d0b640e4e50ffb807b94af79626e4c208c77e62800c6799e64",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.082619
+    },
+    {
+      "page": 75,
+      "readerIndex": 75,
+      "sourcePdfPage": 75,
+      "sourceVersion": "main-75-page-pdf",
+      "sourceImage": "/study-site/courses/network-wireless/slides/page-75.webp",
+      "sourceImageSha256": "35be2f67d775df6336e7a9cf49e2ca61dfc7d13b77d80e4606ccef8c4091bcdb",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 0.564889
+    }
+  ]
+}

@@ -27,6 +27,150 @@
       "readerPageCount": 94,
       "nodeCount": 59,
       "startPage": 1
+    },
+    {
+      "chapterId": "network-wireless",
+      "title": "计算机网络 无线网络基础",
+      "readerPath": "network-wireless-ppt.html",
+      "knowledgeMapPath": "courses/network-wireless/knowledge-map.json",
+      "readerPageCount": 75,
+      "nodeCount": 46,
+      "startPage": 1
+    },
+    {
+      "chapterId": "network-wireless-app",
+      "title": "计算机网络 无线局域网工程应用",
+      "readerPath": "network-wireless-app-ppt.html",
+      "knowledgeMapPath": "courses/network-wireless-app/knowledge-map.json",
+      "readerPageCount": 55,
+      "nodeCount": 39,
+      "startPage": 1
+    },
+    {
+      "chapterId": "network-intro",
+      "title": "计算机网络 课程导学",
+      "readerPath": "network-intro-ppt.html",
+      "knowledgeMapPath": "courses/network-intro/knowledge-map.json",
+      "readerPageCount": 11,
+      "nodeCount": 10,
+      "startPage": 1
+    },
+    {
+      "chapterId": "network-ch2-interfaces",
+      "title": "计算机网络 物理接口专题",
+      "readerPath": "network-ch2-interfaces-ppt.html",
+      "knowledgeMapPath": "courses/network-ch2-interfaces/knowledge-map.json",
+      "readerPageCount": 8,
+      "nodeCount": 15,
+      "startPage": 27
+    },
+    {
+      "chapterId": "em-ch0",
+      "title": "电磁场绪论 · 建模、理论骨架与读图",
+      "readerPath": "ppt0.html",
+      "knowledgeMapPath": "courses/em-ch0/knowledge-map.json",
+      "readerPageCount": 20,
+      "nodeCount": 17,
+      "startPage": 1
+    },
+    {
+      "chapterId": "em-ch1",
+      "title": "电磁场第1章 · 矢量分析",
+      "readerPath": "ppt1.html",
+      "knowledgeMapPath": "courses/em-ch1/knowledge-map.json",
+      "readerPageCount": 42,
+      "nodeCount": 34,
+      "startPage": 1
+    },
+    {
+      "chapterId": "communications-ch2",
+      "title": "通信原理 第2章：确知信号与频谱",
+      "readerPath": "communications-ch2-ppt.html",
+      "knowledgeMapPath": "courses/communications-ch2/knowledge-map.json",
+      "readerPageCount": 64,
+      "nodeCount": 33,
+      "startPage": 1
+    },
+    {
+      "chapterId": "dsp-21",
+      "title": "数字信号处理 2.1：离散时间傅里叶变换",
+      "readerPath": "dsp-21-ppt.html",
+      "knowledgeMapPath": "courses/dsp-21/knowledge-map.json",
+      "readerPageCount": 35,
+      "nodeCount": 24,
+      "startPage": 1
+    },
+    {
+      "chapterId": "dsp-22",
+      "title": "数字信号处理 2.2：周期序列与采样频谱",
+      "readerPath": "dsp-22-ppt.html",
+      "knowledgeMapPath": "courses/dsp-22/knowledge-map.json",
+      "readerPageCount": 24,
+      "nodeCount": 17,
+      "startPage": 1
+    },
+    {
+      "chapterId": "em-ch2",
+      "title": "电磁场第2章 · 场方程、边界与能量",
+      "readerPath": "ppt2.html",
+      "knowledgeMapPath": "courses/em-ch2/knowledge-map.json",
+      "readerPageCount": 57,
+      "nodeCount": 44,
+      "startPage": 1
+    },
+    {
+      "chapterId": "em-ch3",
+      "title": "电磁场第3章 · 静电边值、镜像与分离变量",
+      "readerPath": "ppt3.html",
+      "knowledgeMapPath": "courses/em-ch3/knowledge-map.json",
+      "readerPageCount": 24,
+      "nodeCount": 21,
+      "startPage": 1
+    },
+    {
+      "chapterId": "em-ch5",
+      "title": "电磁场第5章 · 相量、平面波、损耗与极化",
+      "readerPath": "ppt5.html",
+      "knowledgeMapPath": "courses/em-ch5/knowledge-map.json",
+      "readerPageCount": 78,
+      "nodeCount": 49,
+      "startPage": 1
+    },
+    {
+      "chapterId": "em-ch6",
+      "title": "电磁场第6章 · 反射、折射、导波与全反射",
+      "readerPath": "ppt6.html",
+      "knowledgeMapPath": "courses/em-ch6/knowledge-map.json",
+      "readerPageCount": 74,
+      "nodeCount": 42,
+      "startPage": 1
+    },
+    {
+      "chapterId": "em-ch7",
+      "title": "电磁场第7章 · 位函数、电流元与小环辐射",
+      "readerPath": "ppt7.html",
+      "knowledgeMapPath": "courses/em-ch7/knowledge-map.json",
+      "readerPageCount": 35,
+      "nodeCount": 28,
+      "startPage": 1
+    },
+    {
+      "chapterId": "network-ch1-foundations",
+      "title": "计算机网络 第一章：基础与体系结构",
+      "readerPath": "network-ch1-foundations-ppt.html",
+      "knowledgeMapPath": "courses/network-ch1-foundations/knowledge-map.json",
+      "readerPageCount": 103,
+      "nodeCount": 55,
+      "startPage": 1
+    },
+    {
+      "chapterId": "network-ch3",
+      "title": "计算机网络 第三章 数据链路层",
+      "readerPath": "network-ch3-ppt.html",
+      "knowledgeMapPath": "courses/network-ch3/knowledge-map.json",
+      "readerPageCount": 149,
+      "nodeCount": 79,
+      "startPage": 1
     }
   ]
 }

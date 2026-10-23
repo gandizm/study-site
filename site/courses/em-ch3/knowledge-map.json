@@ -1,0 +1,459 @@
+{
+  "version": 1,
+  "id": "em-ch3",
+  "title": "电磁场第3章 · 静电边值、镜像与分离变量",
+  "reader": "/study-site/ppt3.html",
+  "sourcePageCount": 24,
+  "displayPageCount": 24,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt3.html",
+    "readerSha256": "430a1e15c58ca63201c13bb9b8b4c779219bc633c5e95e7288d16471aafe2d7f",
+    "readerGitBlob": "4c35aed4b6d50f6d3fef5ac9002f582670f0c4e6",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "nodes": [
+    {
+      "id": "boundary-route",
+      "label": "先定问题，再构造并验证解",
+      "pages": [
+        1,
+        3
+      ],
+      "summary": "边值法以域内电位为未知，避开未知感应电荷的直接积分。唯一性给验解依据，镜像法和分离变量法构造候选；解析或数值方法都须服从同一方程、源及完整边界数据。",
+      "section": "定解基础",
+      "prerequisites": [],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "1": "p01-route",
+        "3": "p03-tree"
+      }
+    },
+    {
+      "id": "boundary-types",
+      "label": "定电位、法向导数与混合条件",
+      "pages": [
+        2
+      ],
+      "summary": "Dirichlet给电位，Neumann给域外法向导数；本页第三类公式实际是不同边界段的混合给定，不是同一点的Robin线性组合。纯Neumann还需总通量与总电荷相容，电位保留加法常数。",
+      "section": "定解基础",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "2": "p02-types"
+      }
+    },
+    {
+      "id": "poisson-laplace",
+      "label": "电位方程与无源的含义",
+      "pages": [
+        4
+      ],
+      "summary": "静电且均匀线性各向同性介质中，高斯定律与E=−grad φ给泊松方程；只有域内无体源才化为拉普拉斯。边界或域外激励仍可产生非零场，点电荷奇点须保留源信息。",
+      "section": "定解基础",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "4": "p04-poisson"
+      }
+    },
+    {
+      "id": "electrostatic-uniqueness",
+      "label": "电场唯一与电位参考",
+      "pages": [
+        5
+      ],
+      "summary": "对同源同边界的两解之差用能量积分得零梯度，先推出电位差为常数。定电位边界或参考消去该常数；纯Neumann仅保证场唯一。还须连通性、正介电率、适当正则性及远处条件。",
+      "section": "定解基础",
+      "prerequisites": [
+        "boundary-types",
+        "poisson-laplace"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "5": "p05-statement"
+      }
+    },
+    {
+      "id": "image-principle",
+      "label": "域外镜像保持真实域内源",
+      "pages": [
+        6,
+        13
+      ],
+      "summary": "镜像是计算用虚拟源，不是导体内部真实电荷。先划定待求域，再选镜像个数、位置和电量，逐项验证真实源不变、全部边界和远处条件满足，由唯一性保证仅在已验域内等效。",
+      "section": "镜像法",
+      "prerequisites": [
+        "electrostatic-uniqueness"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "6": "p06-tests",
+        "13": "p13-summary"
+      }
+    },
+    {
+      "id": "ground-plane-model",
+      "label": "接地平面的真实域与辅助问题",
+      "pages": [
+        7,
+        8
+      ],
+      "summary": "真实电荷在接地无限平面上方，求解仅取上半空间。延拓同一均匀介质并在平面对称的域外位置设待定镜像，可用线性叠加构造候选电位；辅助下半空间不是真导体内场。",
+      "section": "镜像法",
+      "prerequisites": [
+        "image-principle"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "7": "p07-problem",
+        "8": "p08-transform"
+      }
+    },
+    {
+      "id": "ground-plane-validation",
+      "label": "由等距与零电位确定负镜像",
+      "pages": [
+        9
+      ],
+      "summary": "平面各点到真实源与对称镜像等距，零电位要求镜像为−q。再验真实源奇点、整个平面和无穷远，方可认定上半空间等效；真实接地导体内部电位和电场均为零。",
+      "section": "镜像法",
+      "prerequisites": [
+        "ground-plane-model"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "9": "p09-boundary"
+      }
+    },
+    {
+      "id": "plane-induced-charge",
+      "label": "从单侧法向场求感应面电荷",
+      "pages": [
+        10
+      ],
+      "summary": "以导体指向上方介质的法向取D，得到负感应面电荷；对整个无限平面积分总量为−q。一般空间点的E有横向分量，原页中间只列z分量的式子不能当完整矢量。",
+      "section": "镜像法",
+      "prerequisites": [
+        "ground-plane-validation"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "10": "p10-density"
+      }
+    },
+    {
+      "id": "right-angle-images",
+      "label": "直角接地劈的三镜像",
+      "pages": [
+        11
+      ],
+      "summary": "分别对两接地面反射先得两个负像，再加一个正像，才使两面都成异号等距配对。三个镜像均在待求角域外；横截面图中的点电荷电位仍用三维距离核。",
+      "section": "镜像法",
+      "prerequisites": [
+        "image-principle",
+        "ground-plane-validation"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "11": "p11-right"
+      }
+    },
+    {
+      "id": "wedge-images",
+      "label": "标准π/n劈角的闭合镜像组",
+      "pages": [
+        11,
+        12
+      ],
+      "summary": "两无限接地半平面、均匀介质、整数n且源在角域内时，标准π/n劈角需2n−1个镜像，不含真实源。π/3例为一个真源加五像；绿色连接线是配对几何，不是场线，任意角度不能硬套计数。",
+      "section": "镜像法",
+      "prerequisites": [
+        "right-angle-images"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "11": "p11-wedge",
+        "12": "p12-images"
+      }
+    },
+    {
+      "id": "image-interpretation",
+      "label": "镜像场、受力与能量的解释边界",
+      "pages": [
+        13
+      ],
+      "summary": "所得势与场只在验证过的区域使用。算真实电荷受力时排除自场，仅取等效镜像场；不能未经推导把辅助两点电荷的相互作用能直接当成真实导体系统能量。",
+      "section": "镜像法",
+      "prerequisites": [
+        "image-principle"
+      ],
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "13": "p13-summary"
+      }
+    },
+    {
+      "id": "separation-principle",
+      "label": "乘积基本解与线性叠加",
+      "pages": [
+        14,
+        17
+      ],
+      "summary": "分离变量先生成单变量乘积型基本解，再叠加以匹配一般边界。先列域、方程和边界；齐次边界筛模态，非齐次边界定权重，单个乘积通常不是任意问题的完整答案。",
+      "section": "分离变量",
+      "prerequisites": [
+        "boundary-types",
+        "poisson-laplace"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "14": "p14-principle",
+        "17": "p17-model"
+      }
+    },
+    {
+      "id": "separation-constants",
+      "label": "相反分离常数与零模态",
+      "pages": [
+        15
+      ],
+      "summary": "二维无源拉普拉斯方程中设φ=XY，独立变量使X″/X与Y″/Y各为常数且和为零。非零实波数对应一侧三角、另一侧指数/双曲；零分离常数给线性项，去留必须由边界判断。",
+      "section": "分离变量",
+      "prerequisites": [
+        "separation-principle"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "15": "p15-reduction"
+      }
+    },
+    {
+      "id": "solution-bases",
+      "label": "解型由方程符号和实际边界决定",
+      "pages": [
+        16
+      ],
+      "summary": "指数与双曲函数可表示同一解空间，选基底只是便利。两端零Dirichlet会给正弦模态，不等于周期边界；有限或无限区域的口令不能代替特征根和端点条件。",
+      "section": "分离变量",
+      "prerequisites": [
+        "separation-constants"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "16": "p16-signs"
+      }
+    },
+    {
+      "id": "rectangle-data",
+      "label": "矩形盒四边的数据不能混读",
+      "pages": [
+        18
+      ],
+      "summary": "上下边电位零、左边法向电场零、右边为指定正弦电位。左侧零导数不是接地，右侧变化的电位不是一整块等位理想导体；由上下条件选择正弦方向，再决定横向双曲形式。",
+      "section": "分离变量",
+      "prerequisites": [
+        "solution-bases"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "18": "p18-bc"
+      }
+    },
+    {
+      "id": "rectangle-modes",
+      "label": "三条齐次边界筛出允许模态",
+      "pages": [
+        19
+      ],
+      "summary": "上下零电位消去余弦并量化波数，左侧零导数消去双曲正弦项。余下cosh乘sin的级数已满足三边，右边激励只负责定各模态系数，不再任意改变允许波数。",
+      "section": "分离变量",
+      "prerequisites": [
+        "rectangle-data"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "19": "p19-three"
+      }
+    },
+    {
+      "id": "rectangle-projection",
+      "label": "单正弦激励的正交匹配",
+      "pages": [
+        20
+      ],
+      "summary": "将右边激励投影到正弦基，只有第2模态非零，系数须除以该模态在右边的cosh倍率。最终逐边验值/导数并验拉普拉斯方程，一般激励不能照抄单模态答案。",
+      "section": "分离变量",
+      "prerequisites": [
+        "rectangle-modes"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "20": "p20-projection"
+      }
+    },
+    {
+      "id": "slot-decay",
+      "label": "半无限槽的衰减边值模型",
+      "pages": [
+        21
+      ],
+      "summary": "槽口定常电位、上下壁接地且远处电位趋零，沿深度只保留衰减指数。槽口与壁的理想角点数据不连续，边界在各边开区间施加；实际需绝缘缝或分离电极，不强求角点同时取两个电位。",
+      "section": "分离变量",
+      "prerequisites": [
+        "solution-bases"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "21": "p21-geometry"
+      }
+    },
+    {
+      "id": "slot-fourier",
+      "label": "常量槽口激励的奇数模态",
+      "pages": [
+        22
+      ],
+      "summary": "把槽口常量作正弦展开，积分产生奇偶选择，只留奇数项；每项乘沿槽深的指数衰减。高阶衰减更快，深处可由首模主导，但该近似不适用于槽口角点。",
+      "section": "分离变量",
+      "prerequisites": [
+        "slot-decay"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "22": "p22-modes"
+      }
+    },
+    {
+      "id": "slot-field-charge",
+      "label": "槽内负梯度与上壁法向",
+      "pages": [
+        23
+      ],
+      "summary": "在槽内x>0逐项对电位求负梯度，分别追踪指数与三角导数符号。上壁导体指向槽内法向向下，正槽口电压对应负面电荷；锐角发散是理想边界极限，非真实圆角处精确预测。",
+      "section": "分离变量",
+      "prerequisites": [
+        "slot-fourier"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "23": "p23-field"
+      }
+    },
+    {
+      "id": "coefficient-methods",
+      "label": "比较系数就是正交展开的特例",
+      "pages": [
+        24
+      ],
+      "summary": "比较系数、傅里叶级数与三角正交法都在用基函数匹配边界；简单单模激励可直接读系数，一般函数要投影积分。得到势后以负梯度求场，以单侧法向D求面电荷，并检查所用导体假设。",
+      "section": "验解闭环",
+      "prerequisites": [
+        "rectangle-projection",
+        "slot-field-charge"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "24": "p24-coefficients"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "boundary-route",
+      "to": "image-principle",
+      "label": "选法：利用特殊边界的等效源"
+    },
+    {
+      "from": "boundary-route",
+      "to": "separation-principle",
+      "label": "选法：利用可分坐标与模态展开"
+    },
+    {
+      "from": "electrostatic-uniqueness",
+      "to": "ground-plane-validation",
+      "label": "依据：完整验边界才保证等效"
+    },
+    {
+      "from": "plane-induced-charge",
+      "to": "slot-field-charge",
+      "label": "共用规则：导体外单侧法向决定符号"
+    },
+    {
+      "from": "rectangle-projection",
+      "to": "slot-fourier",
+      "label": "对比：单模激励与常量的全级数"
+    },
+    {
+      "from": "rectangle-modes",
+      "to": "slot-decay",
+      "label": "对比：有限左端零导数与无穷远衰减"
+    },
+    {
+      "from": "solution-bases",
+      "to": "wedge-images",
+      "label": "共通限制：不能脱离几何机械套公式"
+    },
+    {
+      "from": "coefficient-methods",
+      "to": "electrostatic-uniqueness",
+      "label": "闭环：方程与完整边界逐项验解"
+    },
+    {
+      "from": "image-interpretation",
+      "to": "ground-plane-model",
+      "label": "提醒：辅助问题不是全部真实空间"
+    }
+  ]
+}

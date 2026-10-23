@@ -1,0 +1,397 @@
+{
+  "version": 1,
+  "id": "dsp-21",
+  "title": "数字信号处理 2.1：离散时间傅里叶变换",
+  "pageCount": 35,
+  "reader": "dsp-21-ppt.html",
+  "nodes": [
+    {
+      "id": "route",
+      "label": "DTFT、DFS与DFT的分工",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "summary": "时间离散不等于频率离散；本节处理连续数字频率上的DTFT，不混用后续DFS和有限长DFT。",
+      "prerequisites": [],
+      "section": "定义与条件",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "z-circle",
+      "label": "Z变换与单位圆",
+      "pages": [
+        4,
+        6
+      ],
+      "summary": "只有单位圆处于所给序列的收敛域内，才可直接将z取为单位圆上的点获得普通DTFT。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "定义与条件",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "definition",
+      "label": "DTFT定义与存在意义",
+      "pages": [
+        5
+      ],
+      "summary": "绝对可和是普通DTFT存在的充分条件，不是所有意义下的必要条件；周期序列需广义冲激谱。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "定义与条件",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "inverse",
+      "label": "IDTFT与整数指数正交",
+      "pages": [
+        7
+      ],
+      "summary": "反变换在任意完整2π区间积分并乘1/(2π)，由整数复指数的正交性恢复每个时间样本。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "定义与条件",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "rectangle",
+      "label": "有限矩形序列的频谱",
+      "pages": [
+        8
+      ],
+      "summary": "从0开始的N点矩形经有限等比和形成正弦比和线性相位；可去奇点回到原和取值N。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "计算实例",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "phase",
+      "label": "幅度、相位与谱零点",
+      "pages": [
+        9
+      ],
+      "summary": "N=4示例中幅度取绝对值，正弦比变号须处理相位分支，谱零点相位没有定义。",
+      "prerequisites": [
+        "rectangle"
+      ],
+      "section": "计算实例",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "examples",
+      "label": "指数序列与分段谱反变换",
+      "pages": [
+        10
+      ],
+      "summary": "先判断指数序列的收敛条件，再求几何和；分段频谱按IDTFT积分并单独处理n=0。",
+      "prerequisites": [
+        "definition",
+        "inverse"
+      ],
+      "section": "计算实例",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "properties",
+      "label": "按时域操作选择性质",
+      "pages": [
+        11
+      ],
+      "summary": "先识别加权、移位、翻转、卷积、相乘与对称结构，再选规则并核验收敛条件。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "periodicity",
+      "label": "数字频率的2π周期性",
+      "pages": [
+        12
+      ],
+      "summary": "整数样本使频率相差2π的复指数完全相同；这是频谱周期性，不推出时间序列周期。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "linearity",
+      "label": "常数线性组合",
+      "pages": [
+        13
+      ],
+      "summary": "在所用变换意义存在时，常数可提出、序列可叠加；随n变化的加权不是此常数线性规则。",
+      "prerequisites": [
+        "properties"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "shifts",
+      "label": "时移与调制频移",
+      "pages": [
+        14
+      ],
+      "summary": "时间延迟对应相位因子；乘固定频率复指数才搬移频谱，必须区分频率参数与样本指标。",
+      "prerequisites": [
+        "properties"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "reverse",
+      "label": "时间翻转与取共轭",
+      "pages": [
+        15
+      ],
+      "summary": "翻转、共轭、翻转再共轭是三种不同操作；任意复序列不可直接套实序列相位推论。",
+      "prerequisites": [
+        "properties"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "derivative",
+      "label": "频域微分与时间加权",
+      "pages": [
+        16
+      ],
+      "summary": "频域求导对应时域乘n及相应虚数因子；逐项微分需足够收敛，有限长序列满足常用条件。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "parseval",
+      "label": "Parseval能量与内积",
+      "pages": [
+        17,
+        18
+      ],
+      "summary": "时域有限能量等于一周期频谱模平方积分的1/(2π)；内积证明不可漏共轭或换序条件。",
+      "prerequisites": [
+        "inverse"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "convolution",
+      "label": "线性卷积与LTI系统",
+      "pages": [
+        19,
+        20
+      ],
+      "summary": "DTFT把全整数上的线性卷积变为相乘，零状态LTI输出谱为输入谱乘频率响应。",
+      "prerequisites": [
+        "properties",
+        "shifts"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "multiplication",
+      "label": "相乘与频域周期卷积",
+      "pages": [
+        21,
+        22
+      ],
+      "summary": "时域逐点相乘对应一周期频域卷积并乘1/(2π)；不能写成全轴非周期卷积。",
+      "prerequisites": [
+        "inverse",
+        "periodicity"
+      ],
+      "section": "运算性质",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "conjugate",
+      "label": "共轭对称与反对称",
+      "pages": [
+        23,
+        24
+      ],
+      "summary": "共轭对称是实部偶、虚部奇；反对称相反。复指数判型示例不等于普通DTFT已经收敛。",
+      "prerequisites": [
+        "reverse"
+      ],
+      "section": "对称结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "decompose",
+      "label": "两种时间对称部分",
+      "pages": [
+        25
+      ],
+      "summary": "任意复序列用自身和翻转共轭的半和、半差分解，不能把一般复情形直接叫普通偶奇。",
+      "prerequisites": [
+        "conjugate"
+      ],
+      "section": "对称结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "real-imag",
+      "label": "时间共轭对称对应谱实虚",
+      "pages": [
+        26,
+        27
+      ],
+      "summary": "时间共轭对称部分对应谱实部，反对称部分对应j乘谱虚部；第二项不能漏j。",
+      "prerequisites": [
+        "decompose",
+        "linearity"
+      ],
+      "section": "对称结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "dual-symmetry",
+      "label": "时间实虚对应谱共轭对称",
+      "pages": [
+        28,
+        29
+      ],
+      "summary": "时间实部对应共轭对称谱，纯虚部分对应反对称谱；实序列的谱不一定为实。",
+      "prerequisites": [
+        "reverse",
+        "linearity"
+      ],
+      "section": "对称结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "causal",
+      "label": "因果性与原点恢复",
+      "pages": [
+        30,
+        31
+      ],
+      "summary": "实因果序列可由偶分量完整恢复；奇分量缺原点值，恢复时正半轴翻倍、负半轴清零。",
+      "prerequisites": [
+        "real-imag"
+      ],
+      "section": "对称结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "lookup",
+      "label": "性质与对称性速查",
+      "pages": [
+        32,
+        33
+      ],
+      "summary": "使用速查前先写原变换对，核对频移参数、共轭符号以及反变换和周期卷积的尺度。",
+      "prerequisites": [
+        "shifts",
+        "reverse",
+        "derivative",
+        "parseval",
+        "convolution",
+        "multiplication",
+        "dual-symmetry"
+      ],
+      "section": "综合应用",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "five-values",
+      "label": "例2.1.7：不求全谱的五问",
+      "pages": [
+        34
+      ],
+      "summary": "从样本求直流、零点反演、π频率、能量及加权能量，分别运用定义、IDTFT和Parseval。",
+      "prerequisites": [
+        "inverse",
+        "derivative",
+        "parseval"
+      ],
+      "section": "综合应用",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "recovery",
+      "label": "由局部频谱与额外条件恢复",
+      "pages": [
+        35
+      ],
+      "summary": "三道综合题区分实因果假设、原点已知值及半圆谱约束；缺条件不能声称唯一恢复。",
+      "prerequisites": [
+        "causal",
+        "dual-symmetry"
+      ],
+      "section": "综合应用",
+      "type": "concept",
+      "source": "ppt"
+    }
+  ],
+  "edges": [
+    {
+      "from": "periodicity",
+      "to": "inverse",
+      "label": "解释只积分一个周期"
+    },
+    {
+      "from": "rectangle",
+      "to": "parseval",
+      "label": "用样本数核验谱积分"
+    },
+    {
+      "from": "convolution",
+      "to": "multiplication",
+      "label": "区分两种卷积所在的域"
+    },
+    {
+      "from": "real-imag",
+      "to": "dual-symmetry",
+      "label": "对比分解方向"
+    },
+    {
+      "from": "five-values",
+      "to": "lookup",
+      "label": "回查各问使用的性质"
+    }
+  ],
+  "sourcePptFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+  "sourcePptSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a"
+}

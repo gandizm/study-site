@@ -1,0 +1,1096 @@
+{
+  "version": 1,
+  "id": "em-ch5",
+  "title": "电磁场第5章 · 相量、平面波、损耗与极化",
+  "reader": "/study-site/ppt5.html",
+  "sourcePageCount": 78,
+  "displayPageCount": 78,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78
+  ],
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt5.html",
+    "readerSha256": "dcae30f4355142a5a5f1842b5a5053428f82065616e59757307437e188964312",
+    "readerGitBlob": "b821464f9d867bc8a1773fef420515170b97ae47",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "nodes": [
+    {
+      "id": "workflow",
+      "label": "相量、传播与极化的共同检查",
+      "pages": [
+        1,
+        2,
+        78
+      ],
+      "summary": "先统一时间因子和峰值/有效值，再由空间相位定传播方向，按损耗比选媒质模型，用场关系与共轭功率检验，最后比较正交分量幅相确定极化。时谐只限定时间变化，不自动意味着处处都是行波。",
+      "section": "相量与场方程",
+      "prerequisites": [],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "1": "ch5-p01-s1",
+        "2": "ch5-p02-s1",
+        "78": "ch5-p78-s1"
+      }
+    },
+    {
+      "id": "complex-convention",
+      "label": "复数、共轭与正弦的相位",
+      "pages": [
+        3
+      ],
+      "summary": "本章以exp(jωt)取实部恢复场，余弦系数为实数，正弦需相应−j因子。共轭改变相位符号，取实部却不能任意分配到乘积，这一点决定后面的平均功率公式。",
+      "section": "相量与场方程",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "3": "ch5-p03-s1"
+      }
+    },
+    {
+      "id": "phasor-amplitude",
+      "label": "相量省去时间但保留空间",
+      "pages": [
+        4,
+        25
+      ],
+      "summary": "相量保存单频峰值和初相，通常仍随空间变化，恢复瞬时值须乘回exp(jωt)并取实部。P25以后省略点号不表示返回时域；点号本来也不是时间导数。",
+      "section": "相量与场方程",
+      "prerequisites": [
+        "complex-convention"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "4": "ch5-p04-s1",
+        "25": "ch5-p25-s1"
+      }
+    },
+    {
+      "id": "phasor-derivative",
+      "label": "时间微分对应jω",
+      "pages": [
+        5
+      ],
+      "summary": "固定位置相量不含时间，一阶时间导数乘jω，二阶乘−ω²；空间梯度、散度与旋度仍须计算。符号依赖本章正时间指数约定，不能中途换成另一约定。",
+      "section": "相量与场方程",
+      "prerequisites": [
+        "phasor-amplitude"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "5": "ch5-p05-s1"
+      }
+    },
+    {
+      "id": "complex-vector",
+      "label": "同频矢量分量可以不同相",
+      "pages": [
+        6
+      ],
+      "summary": "三个同频分量各带自身幅相，再以实坐标基组合。复矢量一般不是固定实方向乘一个正弦，不同正交分量的相位差会形成圆或椭圆极化。",
+      "section": "相量与场方程",
+      "prerequisites": [
+        "phasor-amplitude"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "6": "ch5-p06-s1"
+      }
+    },
+    {
+      "id": "conversion-example",
+      "label": "瞬时值与相量的双向核验",
+      "pages": [
+        7,
+        8
+      ],
+      "summary": "将正弦转为余弦或直接识别复指数系数，两法应一致。空间传播因子保留，不能当时间频率；最后逐分量乘回exp(jωt)取实部，核对原题符号与相位。",
+      "section": "相量与场方程",
+      "prerequisites": [
+        "complex-vector",
+        "complex-convention"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "7": "ch5-p07-s1",
+        "8": "ch5-p08-s1"
+      }
+    },
+    {
+      "id": "frequency-linearity",
+      "label": "逐频求解还依赖系统线性",
+      "pages": [
+        9
+      ],
+      "summary": "信号可作频率分解，而各频率响应互不耦合还需线性、时间不变模型。非线性材料可产生频率混合，不能仅因采用傅里叶分解就无条件逐频独立求场。",
+      "section": "相量与场方程",
+      "prerequisites": [
+        "phasor-amplitude"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "9": "ch5-p09-s1"
+      }
+    },
+    {
+      "id": "frequency-maxwell",
+      "label": "相量Maxwell方程与源守恒",
+      "pages": [
+        10,
+        11
+      ],
+      "summary": "保留空间运算并替换时间导数，Faraday项为−jωB，位移电流项为+jωD。简单材料消元须检查线性、各向同性及空间均匀性，外加电流不能全部换成σE；源相量仍须满足连续性。",
+      "section": "相量与场方程",
+      "prerequisites": [
+        "phasor-derivative",
+        "frequency-linearity"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "10": "ch5-p10-s1",
+        "11": "ch5-p11-s1"
+      }
+    },
+    {
+      "id": "helmholtz-boundary",
+      "label": "Helmholtz体方程与界面条件",
+      "pages": [
+        12
+      ],
+      "summary": "均匀无损无源区满足带+k²项的Helmholtz方程；它与界面跳量约束分别使用。先固定界面法向与1减2的约定，再计自由面电荷和面电流，不能只满足体方程就认为场已完整。",
+      "section": "相量与场方程",
+      "prerequisites": [
+        "frequency-maxwell"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "12": "ch5-p12-s1"
+      }
+    },
+    {
+      "id": "paired-field-examples",
+      "label": "由一个场的旋度求配对场",
+      "pages": [
+        13,
+        14,
+        15
+      ],
+      "summary": "先将已知场写成相量，再用对应旋度方程求另一场，核对E×H传播方向与两场相位。频率先换角频率，微安每米经阻抗得到微伏每米，不能漏掉单位前缀。",
+      "section": "相量与场方程",
+      "prerequisites": [
+        "frequency-maxwell",
+        "conversion-example"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "13": "ch5-p13-s1",
+        "14": "ch5-p14-s1",
+        "15": "ch5-p15-s1"
+      }
+    },
+    {
+      "id": "power-not-phasor",
+      "label": "二次功率不是原频率的相量",
+      "pages": [
+        16,
+        17
+      ],
+      "summary": "两个同频实场相乘得到直流平均项及2ω项，瞬时能流不能由复功率直接乘exp(jωt)恢复。展开正负频率交叉项才能看清共轭与系数1/2的来源。",
+      "section": "复功率",
+      "prerequisites": [
+        "complex-vector"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "16": "ch5-p16-s1",
+        "17": "ch5-p17-s1"
+      }
+    },
+    {
+      "id": "complex-poynting",
+      "label": "复、平均、瞬时三种能流",
+      "pages": [
+        18,
+        19,
+        20
+      ],
+      "summary": "峰值相量定义复能流为1/2 E×H*，实部是周期平均，瞬时值需先恢复两个实场再叉乘。若改用有效值相量须去掉1/2；虚部不是另一条可直接加到平均实能流上的功率。",
+      "section": "复功率",
+      "prerequisites": [
+        "power-not-phasor"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "18": "ch5-p18-s1",
+        "19": "ch5-p19-s1",
+        "20": "ch5-p20-s1"
+      }
+    },
+    {
+      "id": "complex-power-theorem",
+      "label": "复功率定理的符号与储能条件",
+      "pages": [
+        21,
+        22
+      ],
+      "summary": "对共轭场方程与叉乘散度进行代入，外法向取流出，负号才代表输入。实常参数欧姆媒质中实部给有功平衡，虚部给平均磁能与电能之差；不能一般称为总储能最大变化率。",
+      "section": "复功率",
+      "prerequisites": [
+        "complex-poynting",
+        "frequency-maxwell"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "21": "ch5-p21-s1",
+        "22": "ch5-p22-s1"
+      }
+    },
+    {
+      "id": "plate-mode-field",
+      "label": "平行板场含纵向磁场分量",
+      "pages": [
+        23
+      ],
+      "summary": "横向正弦幅度与轴向相位各产生一个旋度分量，因此磁场含纵向分量，不是均匀TEM平面波。无源无损自洽解还须满足横向与轴向波数的色散约束。",
+      "section": "复功率",
+      "prerequisites": [
+        "helmholtz-boundary",
+        "paired-field-examples"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "23": "ch5-p23-s1"
+      }
+    },
+    {
+      "id": "plate-power-current",
+      "label": "板间有功、横向无功与面电流",
+      "pages": [
+        24
+      ],
+      "summary": "轴向复功率实部表示沿板输运，横向纯虚项不代表平均功率进入理想导体。下板面电流须按金属指向介质的法向取叉乘，再恢复瞬时值；不能只停在相量。",
+      "section": "复功率",
+      "prerequisites": [
+        "plate-mode-field",
+        "complex-poynting"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "24": "ch5-p24-s1"
+      }
+    },
+    {
+      "id": "two-travelling-waves",
+      "label": "一维通解中的正反向波",
+      "pages": [
+        26,
+        27
+      ],
+      "summary": "沿单一坐标变化的Helmholtz方程有两个独立指数解，系数可为复数。连同exp(jωt)跟踪等相位点，exp(−jkz)向+z、exp(+jkz)向−z，不能脱离时间约定只看负号。",
+      "section": "无损平面波",
+      "prerequisites": [
+        "helmholtz-boundary"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "26": "ch5-p26-s1",
+        "27": "ch5-p27-s1"
+      }
+    },
+    {
+      "id": "phase-parameters",
+      "label": "波前、角波数、频率与波长",
+      "pages": [
+        28,
+        29,
+        30
+      ],
+      "summary": "等相位面定义波前，均匀平面波还要求波前上幅度相同。k是每米相位变化，完整周期数密度为k/2π；相速ω/k跟踪相位，不自动等于任意媒质中的信息或能量速度。",
+      "section": "无损平面波",
+      "prerequisites": [
+        "two-travelling-waves"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "28": "ch5-p28-s1",
+        "29": "ch5-p29-s1",
+        "30": "ch5-p30-s1"
+      }
+    },
+    {
+      "id": "impedance-tem",
+      "label": "波阻抗与横向Maxwell约束",
+      "pages": [
+        31,
+        32,
+        33
+      ],
+      "summary": "单一均匀无损无源波的散度式给横向性，旋度式给H=传播单位向量×E/η。E、H与传播方向构成右手关系，实波阻抗使对应分量同相；阻抗有欧姆单位但不是一段空间的电阻。",
+      "section": "无损平面波",
+      "prerequisites": [
+        "two-travelling-waves",
+        "frequency-maxwell"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "31": "ch5-p31-s1",
+        "32": "ch5-p32-s1",
+        "33": "ch5-p33-s1"
+      }
+    },
+    {
+      "id": "lossless-power",
+      "label": "单一无损行波的纯实复功率",
+      "pages": [
+        34
+      ],
+      "summary": "E与H*相乘时空间相位抵消，平均能流沿传播方向且沿途不变。无虚部只适用于本页单一无损行波，不能推广到同一无损空间的所有叠加场或驻波。",
+      "section": "无损平面波",
+      "prerequisites": [
+        "impedance-tem",
+        "complex-poynting"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "34": "ch5-p34-s1"
+      }
+    },
+    {
+      "id": "lossless-energy",
+      "label": "无损行波的等能与能量速度",
+      "pages": [
+        35,
+        36
+      ],
+      "summary": "常实参数无色散单一无损行波中，瞬时电能与磁能相等且同时变化，并非在同一点轮流交换。以平均能流除以总平均储能得相速；缺一半储能会错一倍，不能凭TEM推广到任意色散材料。",
+      "section": "无损平面波",
+      "prerequisites": [
+        "lossless-power"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "35": "ch5-p35-s1",
+        "36": "ch5-p36-s1"
+      }
+    },
+    {
+      "id": "local-plane",
+      "label": "球面波的局部平面近似",
+      "pages": [
+        37
+      ],
+      "summary": "远处小接收孔径内，只有波前曲率造成的相位误差与幅度变化都足够小时才可近似均匀平面波。距离要相对波长、源尺寸和孔径判断，不表示整个球面波幅度恒定。",
+      "section": "无损平面波",
+      "prerequisites": [
+        "phase-parameters"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "37": "ch5-p37-s1"
+      }
+    },
+    {
+      "id": "eirp-example",
+      "label": "EIRP、场幅与卫星传播时延",
+      "pages": [
+        38,
+        39
+      ],
+      "summary": "将dBW按功率关系还原，再用该方向EIRP除以4πr²得到自由空间平均能流，按峰值约定恢复场幅。两段斜距相加除光速只给传播时延，不含处理延迟，也不能从功率推出绝对初相。",
+      "section": "无损平面波",
+      "prerequisites": [
+        "local-plane",
+        "lossless-power"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "38": "ch5-p38-s1",
+        "39": "ch5-p39-s1"
+      }
+    },
+    {
+      "id": "spectrum-scope",
+      "label": "波谱与模型的解释范围",
+      "pages": [
+        40
+      ],
+      "summary": "真空频率和波长满足λf=c，各波段名称不是场方程改变的边界。波粒表现取决于实验过程和能量尺度，不能按频段互斥分类；工程频谱资源有限也不表示数学频率轴有限。",
+      "section": "无损平面波",
+      "prerequisites": [
+        "phase-parameters"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "40": "ch5-p40-s1"
+      }
+    },
+    {
+      "id": "complex-permittivity",
+      "label": "导电响应并入复介电常数",
+      "pages": [
+        41
+      ],
+      "summary": "无外加源仍可有欧姆传导电流，将它与位移项合并得εc=ε−jσ/ω，与exp(jωt)约定一致。损耗没有消失，而是进入复参数；把总电流直接置零会错误删掉耗散。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "frequency-maxwell"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "41": "ch5-p41-s1"
+      }
+    },
+    {
+      "id": "loss-ratio",
+      "label": "以σ/(ωε)选择近似",
+      "pages": [
+        42
+      ],
+      "summary": "传导与位移电流幅值比决定低损耗、中间完整模型或良导体近似。材料名称不是永久分类，频率和允许误差都重要；远大于或远小于1应与精度目标配套。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "complex-permittivity"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "42": "ch5-p42-s1"
+      }
+    },
+    {
+      "id": "complex-wave-number",
+      "label": "复波数的被动衰减分支",
+      "pages": [
+        43
+      ],
+      "summary": "正向场写为exp(−αz)exp(−jβz)，α控制幅度、β控制相位，同由色散关系确定。被动媒质须选沿传播方向衰减的根；复阻抗根式的分母须保留有量纲的ε，不能误写常数1。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "complex-permittivity"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "43": "ch5-p43-s1"
+      }
+    },
+    {
+      "id": "attenuation-units",
+      "label": "奈比、分贝与场功率的二倍关系",
+      "pages": [
+        44
+      ],
+      "summary": "同一媒质同一波型中场幅按exp(−αz)而功率按exp(−2αz)衰减，20log场比与10log功率比对应同一损耗。跨不同阻抗不能不加修正把功率比当场幅比平方。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "complex-wave-number"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "44": "ch5-p44-s1"
+      }
+    },
+    {
+      "id": "lossy-phase-dispersion",
+      "label": "有耗相速与频率色散",
+      "pages": [
+        45
+      ],
+      "summary": "相速取ω/β而不是ω除复波数，即使ε、μ、σ视为常数，传导项仍使传播相位随频率改变。多频信号畸变还取决于带内相位非线性和衰减变化，不能把群速无条件当信息速度。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "complex-wave-number",
+        "phase-parameters"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "45": "ch5-p45-s1"
+      }
+    },
+    {
+      "id": "lossy-impedance",
+      "label": "复阻抗、两场相位差与TEM",
+      "pages": [
+        46,
+        47,
+        48
+      ],
+      "summary": "被动欧姆媒质选实部为正的阻抗分支，H相对E滞后阻抗相角，两者共享α与β。均匀各向同性平面波仍横向且空间正交，所以是否TEM与是否同相是两个不同问题。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "complex-wave-number",
+        "impedance-tem"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "46": "ch5-p46-s1",
+        "47": "ch5-p47-s1",
+        "48": "ch5-p48-s1"
+      }
+    },
+    {
+      "id": "lossy-power",
+      "label": "有耗复功率必须使用η的共轭",
+      "pages": [
+        49,
+        52
+      ],
+      "summary": "由H=E/η求功率时出现1/η*，实部还含阻抗相角余弦，功率随exp(−2αz)衰减。瞬时能流可局部反向而平均仍正向；机械把所有实参数改复数却漏共轭会写反相角。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "lossy-impedance",
+        "complex-poynting"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "49": "ch5-p49-s1",
+        "52": "ch5-p52-s1"
+      }
+    },
+    {
+      "id": "lossy-energy-speed",
+      "label": "有耗模型的平均储能与速度限制",
+      "pages": [
+        50,
+        51
+      ],
+      "summary": "本章实常ε、μ及欧姆损耗模型中，平均磁能大于电能；用所给总储能与平均能流计算能量速度可得ω/β。这个受模型限定的等式不意味着群速度、相速和信息速度普遍相等。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "lossy-power",
+        "lossless-energy"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "50": "ch5-p50-s1",
+        "51": "ch5-p51-s1"
+      }
+    },
+    {
+      "id": "low-loss-expansion",
+      "label": "低损耗展开的阶数一致性",
+      "pages": [
+        53
+      ],
+      "summary": "损耗比很小时，一阶修正首先给衰减，β的一阶修正为零。若需要E/H的小相位差，阻抗也须保留相应一阶项，不能一面采用零阶实阻抗一面声称保留该相差。",
+      "section": "有耗传播",
+      "prerequisites": [
+        "loss-ratio",
+        "complex-wave-number"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "53": "ch5-p53-s1"
+      }
+    },
+    {
+      "id": "good-conductor",
+      "label": "良导体的α≈β与45°阻抗",
+      "pages": [
+        54,
+        55
+      ],
+      "summary": "σ远大于ωε且局域欧姆模型适用时，α≈β≈√(ωμσ/2)，阻抗实虚部相等，H滞后E约45°。相速随频率改变，不是电子漂移速度，根的选择仍须保证正向衰减。",
+      "section": "良导体与集肤",
+      "prerequisites": [
+        "loss-ratio",
+        "lossy-impedance"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "54": "ch5-p54-s1",
+        "55": "ch5-p55-s1"
+      }
+    },
+    {
+      "id": "copper-example",
+      "label": "铜中波长、相速与阻抗核算",
+      "pages": [
+        56
+      ],
+      "summary": "先检验给定频率下良导体条件，再由传播常数求相速与波长、由复阻抗配对场。E/H是有欧姆单位的量，不能把E远小于H写成无量纲物理比较。",
+      "section": "良导体与集肤",
+      "prerequisites": [
+        "good-conductor"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "56": "ch5-p56-s1"
+      }
+    },
+    {
+      "id": "conductor-energy",
+      "label": "进入厚导体的功率与焦耳热",
+      "pages": [
+        57,
+        58
+      ],
+      "summary": "足够厚且无另一侧透射的导体半空间中，已进入表面的平均功率最终转为热，不包含外侧反射功率。局部功率衰减率等于体焦耳耗散，可独立复核α而非另定义它。",
+      "section": "良导体与集肤",
+      "prerequisites": [
+        "good-conductor",
+        "lossy-power"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "57": "ch5-p57-s1",
+        "58": "ch5-p58-s1"
+      }
+    },
+    {
+      "id": "skin-depth",
+      "label": "集肤深度是场幅的1/e尺度",
+      "pages": [
+        59
+      ],
+      "summary": "δ=1/α处场幅为表面值1/e、功率为1/e²，不是1/e。良导体根式才有δ≈√(2/ωμσ)；指数穿透没有突然截止的硬边界。",
+      "section": "良导体与集肤",
+      "prerequisites": [
+        "good-conductor",
+        "attenuation-units"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "59": "ch5-p59-s1"
+      }
+    },
+    {
+      "id": "surface-impedance",
+      "label": "厚良导体的表面阻抗与损耗",
+      "pages": [
+        60
+      ],
+      "summary": "在厚度远大于δ且局部表面近似平面的模型中，切向场比可等效为表面阻抗。实部配合峰值面电流给单位表面积热损耗，单位W/m²，不要与体损耗密度混淆。",
+      "section": "良导体与集肤",
+      "prerequisites": [
+        "skin-depth",
+        "conductor-energy"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "60": "ch5-p60-s1"
+      }
+    },
+    {
+      "id": "seawater-example",
+      "label": "海水穿透：先选模型再辨场比",
+      "pages": [
+        61,
+        62
+      ],
+      "summary": "两频率分别计算损耗比，低频可用良导体近似，高频按完整根式核算。指定的是海水内表面场，不是空气入射场；场幅阈值用α，功率衰减用2α，不能把不同频率参数交叉代用。",
+      "section": "良导体与集肤",
+      "prerequisites": [
+        "skin-depth",
+        "loss-ratio",
+        "attenuation-units"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "61": "ch5-p61-s1",
+        "62": "ch5-p62-s1"
+      }
+    },
+    {
+      "id": "polarization-definition",
+      "label": "固定一点观察电场端点",
+      "pages": [
+        63,
+        64
+      ],
+      "summary": "同频相干的两个正交横向分量以幅度比和相位差决定线、圆或椭圆轨迹，共同初相只改起点。极化不是电荷运动轨迹，也不是固定时刻沿空间画出的螺旋。",
+      "section": "极化",
+      "prerequisites": [
+        "complex-vector",
+        "impedance-tem"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "63": "ch5-p63-s1",
+        "64": "ch5-p64-s1"
+      }
+    },
+    {
+      "id": "linear-polarization",
+      "label": "同相、反相或单分量的线极化",
+      "pages": [
+        65
+      ],
+      "summary": "非零两分量同相或反相时固定实比例给一条极化轴，单分量也是线极化。电场每半周期反向不表示极化轴在旋转，轴倾角按模π理解。",
+      "section": "极化",
+      "prerequisites": [
+        "polarization-definition"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "65": "ch5-p65-s1"
+      }
+    },
+    {
+      "id": "circular-condition",
+      "label": "等幅加四分之一周期才是圆",
+      "pages": [
+        66
+      ],
+      "summary": "圆极化同时要求等幅与±π/2相差，两者缺一不可。固定点的电场模恒定，转角要连续展开，不能把反正切主值误作无跳跃的一整圈运动。",
+      "section": "极化",
+      "prerequisites": [
+        "polarization-definition"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "66": "ch5-p66-s1"
+      }
+    },
+    {
+      "id": "handedness",
+      "label": "旋向须固定约定与传播方向",
+      "pages": [
+        67,
+        68
+      ],
+      "summary": "先声明exp(jωt)、实际传播方向和本章手性定义，再在固定位置比较相邻时刻实电场。不能只凭一个±j或固定时刻的空间螺旋命名左右旋，反向传播时尤其要重新核对。",
+      "section": "极化",
+      "prerequisites": [
+        "circular-condition"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "67": "ch5-p67-s1",
+        "68": "ch5-p68-s1"
+      }
+    },
+    {
+      "id": "animation-evidence",
+      "label": "动画缺失页用相位序列读懂",
+      "pages": [
+        69
+      ],
+      "summary": "现有嵌图仅保留绿色三维背景，没有可播放运动过程。按前页同一左旋表达式写出四分之一周期实场序列可补足推理，但不能称已从静态图看到了原动画。",
+      "section": "极化",
+      "prerequisites": [
+        "handedness"
+      ],
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "69": "ch5-p69-s1"
+      }
+    },
+    {
+      "id": "circular-basis-reflection",
+      "label": "圆基正交与反射的条件",
+      "pages": [
+        70
+      ],
+      "summary": "理想同传播方向下左右圆基正交，线极化可分解为两圆基。反射只有在两正交分量响应满足相应对称条件时才保持纯圆并反转手性，一般斜入射可变椭圆，实际天线与多径也会破坏完全隔离。",
+      "section": "极化",
+      "prerequisites": [
+        "handedness",
+        "linear-polarization"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "70": "ch5-p70-s1"
+      }
+    },
+    {
+      "id": "ellipse-elimination",
+      "label": "消去相位时保留全周期符号",
+      "pages": [
+        71
+      ],
+      "summary": "从同频两分量消去公共相位得到二次轨迹，不能把正弦在全周期都替为正平方根。非圆椭圆不一定要求两坐标幅度不等，等幅而非特殊相差也能形成倾斜椭圆。",
+      "section": "极化",
+      "prerequisites": [
+        "polarization-definition"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "71": "ch5-p71-s1"
+      }
+    },
+    {
+      "id": "ellipse-axes",
+      "label": "坐标幅度不一定等于椭圆主轴",
+      "pages": [
+        72
+      ],
+      "summary": "轨迹含交叉项时主轴旋转，坐标分量峰值比不能直接当轴比。对二次型确定长短半轴、倾角及旋向，圆的轴比为1，线极化是短轴趋零的退化情形。",
+      "section": "极化",
+      "prerequisites": [
+        "ellipse-elimination"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "72": "ch5-p72-s1"
+      }
+    },
+    {
+      "id": "polarization-ratio",
+      "label": "复比值平面表示极化状态",
+      "pages": [
+        73
+      ],
+      "summary": "相量比值消去公共幅度、初相与传播因子，模和辐角给相对幅相。图上一点代表一种极化状态，不是电场端点轨迹；分母为零的纯坐标轴线极化需另作极限。",
+      "section": "极化",
+      "prerequisites": [
+        "ellipse-axes",
+        "handedness"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "73": "ch5-p73-s1"
+      }
+    },
+    {
+      "id": "circular-field-example",
+      "label": "圆极化的配对磁场与恒定能流",
+      "pages": [
+        74,
+        75
+      ],
+      "summary": "由传播方向叉乘电场除实阻抗得到磁场，二者同速同旋向转动且始终空间垂直。单一无损圆极化波两场瞬时模恒定，瞬时能流也恒定，不是电磁能交替达到峰值。",
+      "section": "极化",
+      "prerequisites": [
+        "circular-condition",
+        "handedness",
+        "impedance-tem"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "74": "ch5-p74-s1",
+        "75": "ch5-p75-s1"
+      }
+    },
+    {
+      "id": "ellipse-power-example",
+      "label": "相位差改极化但不改该例总平均功率",
+      "pages": [
+        76,
+        77
+      ],
+      "summary": "按两不等幅分量及相差判椭圆与本章旋向，再由共轭场关系求功率。同传播方向、同一实阻抗的正交分量，其总平均功率取各幅度模平方和，与相对相位无关。",
+      "section": "极化",
+      "prerequisites": [
+        "polarization-ratio",
+        "complex-poynting"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "76": "ch5-p76-s1",
+        "77": "ch5-p77-s1"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "phasor-amplitude",
+      "to": "complex-poynting",
+      "label": "约定检查：峰值与有效值决定1/2"
+    },
+    {
+      "from": "paired-field-examples",
+      "to": "impedance-tem",
+      "label": "归纳：旋度求场化为平面波阻抗关系"
+    },
+    {
+      "from": "plate-mode-field",
+      "to": "impedance-tem",
+      "label": "对比：非均匀导波含纵向分量"
+    },
+    {
+      "from": "lossless-power",
+      "to": "lossy-power",
+      "label": "对比：纯实阻抗与共轭复阻抗"
+    },
+    {
+      "from": "lossless-energy",
+      "to": "lossy-energy-speed",
+      "label": "对比：储能等分结论不可直接迁移"
+    },
+    {
+      "from": "low-loss-expansion",
+      "to": "good-conductor",
+      "label": "分流：同一损耗比的相反极限"
+    },
+    {
+      "from": "conductor-energy",
+      "to": "skin-depth",
+      "label": "核验：耗散与穿透尺度相容"
+    },
+    {
+      "from": "complex-power-theorem",
+      "to": "conductor-energy",
+      "label": "应用：局部有功平衡检验衰减"
+    },
+    {
+      "from": "attenuation-units",
+      "to": "eirp-example",
+      "label": "对比：场幅20log与功率10log"
+    },
+    {
+      "from": "two-travelling-waves",
+      "to": "handedness",
+      "label": "共同前提：时间指数与实际传播方向"
+    },
+    {
+      "from": "linear-polarization",
+      "to": "circular-condition",
+      "label": "对比：固定轴振荡与定长旋转"
+    },
+    {
+      "from": "circular-condition",
+      "to": "ellipse-axes",
+      "label": "特例：圆是等主轴椭圆"
+    },
+    {
+      "from": "ellipse-axes",
+      "to": "ellipse-power-example",
+      "label": "区别：极化形状不直接决定总平均功率"
+    },
+    {
+      "from": "animation-evidence",
+      "to": "handedness",
+      "label": "复核：用时间序列而非空背景判旋向"
+    },
+    {
+      "from": "workflow",
+      "to": "loss-ratio",
+      "label": "选法：先判媒质再选传播公式"
+    },
+    {
+      "from": "workflow",
+      "to": "polarization-definition",
+      "label": "选法：固定一点再看矢量轨迹"
+    }
+  ]
+}

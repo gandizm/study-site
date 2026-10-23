@@ -1,0 +1,1163 @@
+{
+  "version": 1,
+  "id": "communications-ch2",
+  "pageCount": 64,
+  "reader": "communications-ch2-ppt.html",
+  "pages": [
+    {
+      "page": 1,
+      "title": "为什么学调制之前，要先学会从频率看信号？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"1\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-1.webp",
+      "imageSha256": "56e46f5e24dbbb4cb64604b19c803cba1dec714ad408adf130a30e23606d730a",
+      "imageBytes": 391396,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 1,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 1,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=1"
+    },
+    {
+      "page": 2,
+      "title": "一份信号，怎样从“有什么”走到“需要多宽”？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"2\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-2.webp",
+      "imageSha256": "c98a88ff4624e9d598e6a805f7123f32331dbdfa1debb71e3ea311df3a3309d5",
+      "imageBytes": 283244,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 2,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 2,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=2"
+    },
+    {
+      "page": 3,
+      "title": "学到什么程度，才算能用这套工具？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"3\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-3.webp",
+      "imageSha256": "0156340159a9c2594cdb6db79c770a36a818d26fb702b489aed7abd5ef24c6a5",
+      "imageBytes": 297782,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 3,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 3,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=3"
+    },
+    {
+      "page": 4,
+      "title": "这一章的几种“谱”，究竟在回答不同的什么？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"4\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-4.webp",
+      "imageSha256": "053075d34697308eeafbac5860afa81f280ff6a820b9a10cdd2e08a591c2a6ea",
+      "imageBytes": 286844,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 4,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 4,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=4"
+    },
+    {
+      "page": 5,
+      "title": "波形一直重复，为什么只需一列固定频率？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"5\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-5.webp",
+      "imageSha256": "95bb2aa5d5bf0fcd2350f8bd6a609dd526fb66bcd35083fe37c9570932934266",
+      "imageBytes": 294844,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 5,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 5,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=5"
+    },
+    {
+      "page": 6,
+      "title": "一条余弦的振幅，为什么不直接等于本课系数？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"6\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-6.webp",
+      "imageSha256": "877fa5fc97ac50d195c6520f66e368b4ff9693825fb7cc59cbd1d9ad210b7915",
+      "imageBytes": 292356,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 6,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 6,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=6"
+    },
+    {
+      "page": 7,
+      "title": "怎样从复杂波形里，单独挑出某一次谐波？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"7\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-7.webp",
+      "imageSha256": "71b3426dab63e325bf8ab1f758b5f8f8f25b478da00b615b0764148847d88451",
+      "imageBytes": 273758,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 7,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 7,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=7"
+    },
+    {
+      "page": 8,
+      "title": "正负频率一起出现，为什么仍能得到实波形？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"8\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-8.webp",
+      "imageSha256": "2f033611e19a9ca4c3091dd842fe0f5de74b54a32e88363b43a8d4cad170ef1b",
+      "imageBytes": 275020,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 8,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 8,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=8"
+    },
+    {
+      "page": 9,
+      "title": "谱线的横坐标和高度，分别告诉我们什么？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"9\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-9.webp",
+      "imageSha256": "8f9828732b84f339b2a1a6302e530160628369f62ded0edba81d63c1c865cc1e",
+      "imageBytes": 336452,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 9,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 9,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=9"
+    },
+    {
+      "page": 10,
+      "title": "只出现一次的脉冲，还能用固定的谐波格点吗？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"10\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-10.webp",
+      "imageSha256": "a0bedafd5dd65673397b5cc0ad5cfff38649c5e3ed4086092e41683c5efd4943",
+      "imageBytes": 284336,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 10,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 10,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=10"
+    },
+    {
+      "page": 11,
+      "title": "拆到频域后，怎样保证还能原样拼回来？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"11\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-11.webp",
+      "imageSha256": "bd736d47a7e394b1b1e88a5ae6b4429829dfa3bf23c0d54d9400af0c6741af0c",
+      "imageBytes": 280642,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 11,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 11,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=11"
+    },
+    {
+      "page": 12,
+      "title": "幅度谱一样，为什么时间波形仍可能不同？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"12\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-12.webp",
+      "imageSha256": "ccf75e8fd438e11fd850522364396620ad92df6e952e0b7fa7f1b0fbfea9426e",
+      "imageBytes": 283398,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 12,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 12,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=12"
+    },
+    {
+      "page": 13,
+      "title": "不重新积分，怎样判断延时、搬频和微分的结果？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"13\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-13.webp",
+      "imageSha256": "b9b5c609885b35daf8fcf644fa1a72d525649141716aef773921ebdf51434a24",
+      "imageBytes": 290604,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 13,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 13,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=13"
+    },
+    {
+      "page": 14,
+      "title": "滤波为什么能在频域相乘，调制却要用卷积？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"14\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-14.webp",
+      "imageSha256": "c89850d7bd135f4bef492ec8da1f7711a8547ee6de07d6ebc09a5e0d998bc1d7",
+      "imageBytes": 280988,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 14,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 14,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=14"
+    },
+    {
+      "page": 15,
+      "title": "方方正正的脉冲，怎样由一串正弦拼出来？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"15\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-15.webp",
+      "imageSha256": "9cde41c6591626a65de4f5a522e245c3846a737e96ad8d698556592d6da046fc",
+      "imageBytes": 269158,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 15,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 15,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=15"
+    },
+    {
+      "page": 16,
+      "title": "先读这幅波形：哪一个参数决定重复，哪一个决定宽窄？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"16\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-16.webp",
+      "imageSha256": "277ec21e68ea3df5247a298bce5f91d41a5af3d2721aeeb6986ad4f8903db2a8",
+      "imageBytes": 258442,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 16,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 16,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=16"
+    },
+    {
+      "page": 17,
+      "title": "一次积分，为什么会出现正弦除以自变量？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"17\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-17.webp",
+      "imageSha256": "e58236b6aa0ed0a9847004702d10b1713e9651840e6c2a4b36e932a4714820c8",
+      "imageBytes": 280890,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 17,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 17,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=17"
+    },
+    {
+      "page": 18,
+      "title": "半个周期为高电平，为什么恰好缺掉偶次谐波？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"18\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-18.webp",
+      "imageSha256": "73259a55cc5d7f79fe4811af7e4ada6456d3a5820f7a27d06f4bf8efabb9c07d",
+      "imageBytes": 276178,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 18,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 18,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=18"
+    },
+    {
+      "page": 19,
+      "title": "图中的负谱线，难道表示负能量吗？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"19\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-19.webp",
+      "imageSha256": "959815e4254a2700ef8247f1c31dcd109cccbc2f3b2d459ce745217e5503872f",
+      "imageBytes": 279120,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 19,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 19,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=19"
+    },
+    {
+      "page": 20,
+      "title": "脉冲变窄，谱线到底是变密，还是包络变宽？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"20\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-20.webp",
+      "imageSha256": "c0f46064d997188f3b642a4fd617362ebb21cc25a357c3bfda579d9c5d84f933",
+      "imageBytes": 282792,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 20,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 20,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=20"
+    },
+    {
+      "page": 21,
+      "title": "为什么越尖锐的时间细节，越需要高频成分？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"21\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-21.webp",
+      "imageSha256": "c562149cb4eae49570621540d7dad8b0ad91d6e7167b023d7f1f94d9caf1b30a",
+      "imageBytes": 299088,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 21,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 21,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=21"
+    },
+    {
+      "page": 22,
+      "title": "同一条周期谱，为什么换个写法多出冲激和系数？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"22\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-22.webp",
+      "imageSha256": "848f2ef61dbd12ceb519eaee098acd9190ea75ce856926bc324f130842175897",
+      "imageBytes": 301856,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 22,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 22,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=22"
+    },
+    {
+      "page": 23,
+      "title": "两种方法“得到一致频谱”，一致的究竟是什么？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"23\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-23.webp",
+      "imageSha256": "eb221a925d1ce0f76de8c1856b2241d8b05212c4f2869881aca1b657555def3e",
+      "imageBytes": 292546,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 23,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 23,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=23"
+    },
+    {
+      "page": 24,
+      "title": "只留一个矩形，不再重复，频谱会怎样改变？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"24\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-24.webp",
+      "imageSha256": "8bdf637b94817b0817c424355d776a43241d9a753b3d468ceecf770955673eb0",
+      "imageBytes": 282930,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 24,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 24,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=24"
+    },
+    {
+      "page": 25,
+      "title": "用三个标记，就能检查门函数谱画得对不对？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"25\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-25.webp",
+      "imageSha256": "42adafed817503013d87e0ee9938f63eb3b746a148407957b5e0aef99ecd4058",
+      "imageBytes": 277890,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 25,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 25,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=25"
+    },
+    {
+      "page": 26,
+      "title": "第一零点带宽，为什么只从零频量到正侧？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"26\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-26.webp",
+      "imageSha256": "4b784ff8d142b119efe2af6c2943ebd5d2f4768f9178a4653dd1234bc0caa3b3",
+      "imageBytes": 286178,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 26,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 26,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=26"
+    },
+    {
+      "page": 27,
+      "title": "把脉冲无限压窄，怎样还能保留一个有限的作用？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"27\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-27.webp",
+      "imageSha256": "98d46a4cd3f1afd518e858d4bd022c92bb85d90343a07faffe519fed22575ebf",
+      "imageBytes": 288896,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 27,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 27,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=27"
+    },
+    {
+      "page": 28,
+      "title": "频谱处处一样，是否就意味着单位冲激只有单位能量？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"28\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-28.webp",
+      "imageSha256": "98086a887a2ffcc8adbdb077dfeb39b8216076ac0e060db1681cf3a2623c1179",
+      "imageBytes": 293262,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 28,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 28,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=28"
+    },
+    {
+      "page": 29,
+      "title": "单位冲激不断重复，为什么频域也出现一排梳齿？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"29\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-29.webp",
+      "imageSha256": "925efa68c01fc54a834d953bc5a610f125063985f1e405d6eeb403a40c33e005",
+      "imageBytes": 289908,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 29,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 29,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=29"
+    },
+    {
+      "page": 30,
+      "title": "两张梳状图都画箭头，应该分别读哪三个量？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"30\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-30.webp",
+      "imageSha256": "1072b9104b1628ffe0a9d047445b5a31be315f7b14cfea95e4fa0923c5c28a06",
+      "imageBytes": 279132,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 30,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 30,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=30"
+    },
+    {
+      "page": 31,
+      "title": "“冲激强度增加”，是不是信号真的被放大了？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"31\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-31.webp",
+      "imageSha256": "41c2be51d095c82addb1ec192e12d6d4dd8db14149b83351256ae618ddb1c6e5",
+      "imageBytes": 276736,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 31,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 31,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=31"
+    },
+    {
+      "page": 32,
+      "title": "频谱已经知道了，怎样给整份信号算一笔能量账？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"32\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-32.webp",
+      "imageSha256": "e9a513859127456746b7acd5f3197f9236af32bfb00fca8cc0305718ef89279d",
+      "imageBytes": 283986,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 32,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 32,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=32"
+    },
+    {
+      "page": 33,
+      "title": "一直不停的信号，能量无限还怎样比较强弱？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"33\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-33.webp",
+      "imageSha256": "9f03ae6e5739ee7f995d8c6a8a295bb6b48123991a69cc08e7d46d10c853fd27",
+      "imageBytes": 278366,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 33,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 33,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=33"
+    },
+    {
+      "page": 34,
+      "title": "同一份能量，换到频域应该怎样累加？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"34\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-34.webp",
+      "imageSha256": "c238560a7978ac0998d6f1586c85e1ad608fd423f4a2cb748fee1644b124f34e",
+      "imageBytes": 280556,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 34,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 34,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=34"
+    },
+    {
+      "page": 35,
+      "title": "频谱是复数，怎样变成非负的能量分布？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"35\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-35.webp",
+      "imageSha256": "cdbe5ba37b1d7855cce234bc5ec91b25b3434bb3b81c6c682f081c8018214810",
+      "imageBytes": 286084,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 35,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 35,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=35"
+    },
+    {
+      "page": 36,
+      "title": "帕什瓦尔等式怎样帮我们少算一个难积分？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"36\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-36.webp",
+      "imageSha256": "53935c3ad54ceea37a3f8f9d05274e71bcc5b8cf6b51d20583639341ff9a429d",
+      "imageBytes": 291800,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 36,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 36,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=36"
+    },
+    {
+      "page": 37,
+      "title": "周期信号的总平均功率，能不能把各谐波直接相加？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"37\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-37.webp",
+      "imageSha256": "fe2d7ec4f6831b596450f16252d6834ad1312fb16a74fb4d626c4a9917e529e5",
+      "imageBytes": 320782,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 37,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 37,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=37"
+    },
+    {
+      "page": 38,
+      "title": "周期功率谱的箭头，面积代表哪一笔功率？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"38\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-38.webp",
+      "imageSha256": "86a82768624d34eaeb173bf7ba979b39e9277afa90317ec72f4a0f0d0d2180a6",
+      "imageBytes": 319852,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 38,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 38,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=38"
+    },
+    {
+      "page": 39,
+      "title": "持续但不重复的信号，怎样得到它的功率谱？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"39\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-39.webp",
+      "imageSha256": "88a8e8986d8c4111943ffc0e7710a0570b748415bded017144f3b0820732130d",
+      "imageBytes": 283670,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 39,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 39,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=39"
+    },
+    {
+      "page": 40,
+      "title": "一个系统把许多输入时刻的作用叠起来，为什么叫卷积？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"40\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-40.webp",
+      "imageSha256": "0e2478935a0f40976c98cf6fc502d4fc7f52ee1be364cb650b8ce1300ad578d9",
+      "imageBytes": 278588,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 40,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 40,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=40"
+    },
+    {
+      "page": 41,
+      "title": "同一件滤波操作，怎样从重叠积分变成逐频率相乘？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"41\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-41.webp",
+      "imageSha256": "47ccf39dc2f2748ab15452658a9137fc9ef387db87f9513c8bc01ace256c65f5",
+      "imageBytes": 289304,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 41,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 41,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=41"
+    },
+    {
+      "page": 42,
+      "title": "乘上信号与卷积信号，为什么不能混成一个动作？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"42\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-42.webp",
+      "imageSha256": "d02f2ac0559e43078ac8207871ad58c91196b5a531395803605a3ddac36b346a",
+      "imageBytes": 292814,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 42,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 42,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=42"
+    },
+    {
+      "page": 43,
+      "title": "一个延迟冲激，怎样把整条波形往后推？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"43\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-43.webp",
+      "imageSha256": "eedee476fb95643facfee7f73e3af975e5f488d9d6a96e7e5f7936a1fae8cf47",
+      "imageBytes": 260270,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 43,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 43,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=43"
+    },
+    {
+      "page": 44,
+      "title": "收到一份相似波形，怎样判断它比原信号晚了多久？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"44\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-44.webp",
+      "imageSha256": "66ea42fed843759bda241d52ea7e4bbfef3b70938188699e60eb9e6194b82b4b",
+      "imageBytes": 276298,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 44,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 44,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=44"
+    },
+    {
+      "page": 45,
+      "title": "信号持续很久，互相关为什么还要除以观察时间？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"45\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-45.webp",
+      "imageSha256": "29f6ca81837bef702ad7325081a6f9894207a883ec95e346a0981a1608bf378a",
+      "imageBytes": 324746,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 45,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 45,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=45"
+    },
+    {
+      "page": 46,
+      "title": "周期信号与有限能量信号，相关积分为什么不一样？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"46\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-46.webp",
+      "imageSha256": "56e6ce3c69727fa97e2bd93bebbeaea5bf9d5ea18f81e32487a84f284ecaf13a",
+      "imageBytes": 312072,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 46,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 46,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=46"
+    },
+    {
+      "page": 47,
+      "title": "让信号与自己比较，自相关到底在量什么？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"47\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-47.webp",
+      "imageSha256": "96d424334ee5ec55ce9f60e36dbd6e3fb4648dfd29403dd00ff198f9ebdce243",
+      "imageBytes": 293588,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 47,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 47,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=47"
+    },
+    {
+      "page": 48,
+      "title": "零错位的功率自相关，为什么恰好等于平均功率？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"48\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-48.webp",
+      "imageSha256": "dc80336a6a244ff78ac3ee9c2a10c7d18014d859df3c9eabc6e44522c12fb802",
+      "imageBytes": 305140,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 48,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 48,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=48"
+    },
+    {
+      "page": 49,
+      "title": "自相关为什么在零错位最大，又为什么左右对称？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"49\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-49.webp",
+      "imageSha256": "9ae713169e800b828d5cda98b244c66c30f1d43404c889b0d26168a425bfd3e5",
+      "imageBytes": 325754,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 49,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 49,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=49"
+    },
+    {
+      "page": 50,
+      "title": "没有好算的频谱，能不能先求自相关再换过去？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"50\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-50.webp",
+      "imageSha256": "069b50687fe50ba7878344779a51f385f2fab042e6af45b5bd5122e8961054d1",
+      "imageBytes": 305422,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 50,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 50,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=50"
+    },
+    {
+      "page": 51,
+      "title": "自相关为什么不能把原信号的相位完整找回来？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"51\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-51.webp",
+      "imageSha256": "e535676f606024b2bbea17d1f69b4be58506cbddeb620606009675b9712b9f5a",
+      "imageBytes": 291222,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 51,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 51,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=51"
+    },
+    {
+      "page": 52,
+      "title": "频谱没有突然截止，怎样说“保留这些就够了”？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"52\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-52.webp",
+      "imageSha256": "5cb0d1201553b29bcf940a763dfa6bd28d919310a62f86f6a550192afbef2fad",
+      "imageBytes": 278412,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 52,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 52,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=52"
+    },
+    {
+      "page": 53,
+      "title": "若信号一直持续，应保留的是能量还是平均功率？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"53\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-53.webp",
+      "imageSha256": "02a3a4cd35fe804e31f26d7b24ba40b0654068780db89efe950c15fc10cb528f",
+      "imageBytes": 267448,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 53,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 53,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=53"
+    },
+    {
+      "page": 54,
+      "title": "半功率带宽，为什么不是“包含一半总能量”的带宽？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"54\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-54.webp",
+      "imageSha256": "0a0845f6008475e8295778ab21eec67798d4447e4c91274f1be1f2c02e768616",
+      "imageBytes": 306488,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 54,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 54,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=54"
+    },
+    {
+      "page": 55,
+      "title": "矩形脉冲的第一零点带宽，怎样与前两种口径分开？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"55\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-55.webp",
+      "imageSha256": "7a7ae7f75fe90829118df38149729018d6fac83e8d666edda9727f05ce1430da",
+      "imageBytes": 293868,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 55,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 55,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=55"
+    },
+    {
+      "page": 56,
+      "title": "用一块等高矩形替代原谱，怎样保证总量不变？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"56\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-56.webp",
+      "imageSha256": "a80a3454464d811e0745eaee91915969cf2f715f03ec79978b0750304ea7237a",
+      "imageBytes": 304078,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 56,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 56,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=56"
+    },
+    {
+      "page": 57,
+      "title": "能不能只改各频率的相位，而不改变它们的强弱？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"57\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-57.webp",
+      "imageSha256": "2d483239f9c09457b18dbb5b7c0151561a06a06753baf47123cb2d13d153c872",
+      "imageBytes": 291756,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 57,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 57,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=57"
+    },
+    {
+      "page": 58,
+      "title": "这条带奇点的积分，怎样改读成一个系统？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"58\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-58.webp",
+      "imageSha256": "19c62ea752745c6d4ffe701408fd0628795af6d64de985a64c7d4d56cba8f4ae",
+      "imageBytes": 300978,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 58,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 58,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=58"
+    },
+    {
+      "page": 59,
+      "title": "幅频图是平的，相频图为什么却分成上下两段？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"59\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-59.webp",
+      "imageSha256": "4d986f06984f1fd759b3e2d2338d5199feb591e1ef94d8d8ecd81f376eb9e65d",
+      "imageBytes": 285334,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 59,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 59,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=59"
+    },
+    {
+      "page": 60,
+      "title": "固定相角的相移，是不是一个固定延时？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"60\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-60.webp",
+      "imageSha256": "0fa88ed8e0d2182641bf68b06f312de50cdbfb7a0eb409745a79863f57da5929",
+      "imageBytes": 327222,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 60,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 60,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=60"
+    },
+    {
+      "page": 61,
+      "title": "连续通过两个相同的希尔伯特系统，为什么输出反号？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"61\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-61.webp",
+      "imageSha256": "6216eb395c4255f484dd0063bde361349d970fe74416f21c02e3f22c0ee9ebe0",
+      "imageBytes": 328294,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 61,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 61,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=61"
+    },
+    {
+      "page": 62,
+      "title": "波形看起来变了，能量和自相关为什么却保持？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"62\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-62.webp",
+      "imageSha256": "ff1ef58f6df1a8fe2325996319f64afda98e258ea7a2e8c79282537bba3538e8",
+      "imageBytes": 300024,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 62,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 62,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=62"
+    },
+    {
+      "page": 63,
+      "title": "“正交”到底是每一刻乘积为零，还是合计后为零？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"63\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-63.webp",
+      "imageSha256": "9063019fb5618ce1ac469daffd03325b219dd4ffd79aa3f8bc884f78049492c0",
+      "imageBytes": 264670,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 63,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 63,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=63"
+    },
+    {
+      "page": 64,
+      "title": "回到通信问题：现在手里已经有什么工具？",
+      "reader": "communications-ch2-ppt.html",
+      "selector": ".slide-page[data-page=\"64\"]",
+      "image": "/study-site/courses/communications-ch2/slides/page-64.webp",
+      "imageSha256": "efc4a0dcf38d6acdc014a8e6a95921f2ff3c8190666236f134031646649b3836",
+      "imageBytes": 331736,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 64,
+      "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+      "pdfPage": 64,
+      "sourceUrl": "/study-site/courses/source-pages/6f58726e38bcaf315904/source.pdf#page=64"
+    }
+  ],
+  "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+  "sourcePdfSha256": "6f58726e38bcaf31590441fc658d2a86fccf9e51091534526bbb1eda6eef7b6d",
+  "sourceStatus": "主版PDF64个物理页与现有64页伴读一一对应；不按残留印刷编号重排。"
+}

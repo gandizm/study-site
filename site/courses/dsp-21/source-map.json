@@ -1,0 +1,536 @@
+{
+  "version": 1,
+  "id": "dsp-21",
+  "pageCount": 35,
+  "reader": "dsp-21-ppt.html",
+  "pages": [
+    {
+      "page": 1,
+      "title": "这一章研究什么，先学哪两个概念？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"1\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-1.webp",
+      "imageSha256": "9daf5228e7e8f52d401847f55b52651745a1a84829019ed0c715633b7c478e54",
+      "imageBytes": 92474,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 1
+    },
+    {
+      "page": 2,
+      "title": "2.1的终点：从序列走到频谱，再走回来",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"2\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-2.webp",
+      "imageSha256": "7d25148d7b5dd1b0cb316a691bd7b4c9fe60e67668fcfaad06671de1b2b8cb94",
+      "imageBytes": 80000,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 2
+    },
+    {
+      "page": 3,
+      "title": "不要按公式出现顺序死记，按问题学习",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"3\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-3.webp",
+      "imageSha256": "33b024a972842c8e665573ca270e111f5f5325d3d0dddf9c70aad1668e2ffb2e",
+      "imageBytes": 42236,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 3
+    },
+    {
+      "page": 4,
+      "title": "为什么已有Z变换，还需要DTFT？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"4\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-4.webp",
+      "imageSha256": "849966fd29033fcfdc194c5cc508c27df8cf1f4220893d478061773aec4ddeba",
+      "imageBytes": 104818,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 4
+    },
+    {
+      "page": 5,
+      "title": "DTFT的定义，以及“存在”的真正条件",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"5\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-5.webp",
+      "imageSha256": "ea6541c20d361c4e61929726dad7c0d1d19025698966031bba6feabefab28f5b",
+      "imageBytes": 90858,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 5
+    },
+    {
+      "page": 6,
+      "title": "什么情况下可令z=e^{jω}？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"6\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-6.webp",
+      "imageSha256": "b48e005ae29d1ed0a511a082552f4c204089fe77b527a20ce6a4b560b590867a",
+      "imageBytes": 66376,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 6
+    },
+    {
+      "page": 7,
+      "title": "IDTFT为什么只积分一个周期？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"7\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-7.webp",
+      "imageSha256": "7115124a71570850f17c1889e48fb3c490814c42ea62a6f4425a803685441a7e",
+      "imageBytes": 116566,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 7
+    },
+    {
+      "page": 8,
+      "title": "矩形序列的DTFT：这是一道例题，不是新的定义",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"8\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-8.webp",
+      "imageSha256": "a77bb024a8f80f0c3f370a9deb2eea7a46b4f37d897d41b419b0a5c9f4c3d491",
+      "imageBytes": 76158,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 8
+    },
+    {
+      "page": 9,
+      "title": "N=4时，怎样正确读幅度谱和相位谱？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"9\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-9.webp",
+      "imageSha256": "242e496f3a47cd7c30ca0c1524af8f4acb59930e31647acef237b346e8dda3b7",
+      "imageBytes": 68864,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 9
+    },
+    {
+      "page": 10,
+      "title": "正变换与反变换各完整算一次",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"10\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-10.webp",
+      "imageSha256": "e203a370181c7d47e0462535b82fed8699e292c8786e6b8465facd24a3df4075",
+      "imageBytes": 54826,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 10
+    },
+    {
+      "page": 11,
+      "title": "性质不是一串答案，而是一张操作字典",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"11\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-11.webp",
+      "imageSha256": "81f3c097e9144cdd192de257895a313902cf67bc9b680662733624726e4a6740",
+      "imageBytes": 71538,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 11
+    },
+    {
+      "page": 12,
+      "title": "为什么DTFT总是以2π为周期？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"12\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-12.webp",
+      "imageSha256": "f7fbbe73cc922a348a4766d05037f05bbc88ab629e85ff43d596cacd2a9c2cbb",
+      "imageBytes": 82356,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 12
+    },
+    {
+      "page": 13,
+      "title": "线性：常数可以提出，叠加可以拆开",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"13\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-13.webp",
+      "imageSha256": "0fcbdf50814c66b25c2c7be17b773101fb852c718257303cbe850f95d36648bb",
+      "imageBytes": 58850,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 13
+    },
+    {
+      "page": 14,
+      "title": "时移与频移：两个“移”不能混用",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"14\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-14.webp",
+      "imageSha256": "1b3dbb04b27777d39d7f4a9f273efb843024cc012d64b05c1d5eee3e781c4314",
+      "imageBytes": 57490,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 14
+    },
+    {
+      "page": 15,
+      "title": "时间翻转：改变量的符号，不是随意取共轭",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"15\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-15.webp",
+      "imageSha256": "e9e134f3c97d312c4ff179bc07c885736ed881218966d9d3832cf245d638b258",
+      "imageBytes": 55088,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 15
+    },
+    {
+      "page": 16,
+      "title": "频域微分：为什么时域多一个n？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"16\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-16.webp",
+      "imageSha256": "b247ab5cc07e2c5a8d5b13b7d9d62f41cef0f63f972e61cac4ac26d3ed71a540",
+      "imageBytes": 50304,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 16
+    },
+    {
+      "page": 17,
+      "title": "Parseval：用时域能量计算频域积分",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"17\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-17.webp",
+      "imageSha256": "21c194f8785b1cc5c90d233f4c2a4ea34abfe02d3cec91ea3964079e61c88c03",
+      "imageBytes": 56622,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 17
+    },
+    {
+      "page": 18,
+      "title": "Parseval的证明：能量为什么不会丢？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"18\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-18.webp",
+      "imageSha256": "e206f1374ec14766ea8ab2735fd865c9b344f13cb44bbb40928a7ffe144c2e67",
+      "imageBytes": 79262,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 18
+    },
+    {
+      "page": 19,
+      "title": "时域卷积为什么变成频域相乘？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"19\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-19.webp",
+      "imageSha256": "63d38f05d179c8e85afd7fe373b385753534e5bd3774cd82b80f4686ccbdffff",
+      "imageBytes": 91946,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 19
+    },
+    {
+      "page": 20,
+      "title": "卷积定理的换元，以及差分方程的完整用法",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"20\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-20.webp",
+      "imageSha256": "1efd3d4cdc51e8232e8a1bf3cb7079398a1c025e6a72e6dea4a9f16697d1f04a",
+      "imageBytes": 66894,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 20
+    },
+    {
+      "page": 21,
+      "title": "时域相乘对应的是2π周期卷积",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"21\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-21.webp",
+      "imageSha256": "1d8eaa9d6503d96e11d3abc9b0904ecc3341128a3b459aac4e61a0b299383315",
+      "imageBytes": 57492,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 21
+    },
+    {
+      "page": 22,
+      "title": "频域卷积推导：1/(2π)从哪里来？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"22\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-22.webp",
+      "imageSha256": "eb9206d41e220ef5ce675f6841a2bc2c5052e1d8921716d1c1a90a0b40c38dcb",
+      "imageBytes": 96370,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 22
+    },
+    {
+      "page": 23,
+      "title": "共轭对称不是简单的“偶函数”",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"23\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-23.webp",
+      "imageSha256": "0ed6d5de30e9eb718f8fd018ed4f26d2c71b5a59b1924318a4dbb94e05246655",
+      "imageBytes": 69034,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 23
+    },
+    {
+      "page": 24,
+      "title": "复指数的对称性：这是判型示例，不是DTFT求解",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"24\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-24.webp",
+      "imageSha256": "894aeafc5dd2023aae00be9331daff4a58246355f282adbdd36cde25d9a559f9",
+      "imageBytes": 87790,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 24
+    },
+    {
+      "page": 25,
+      "title": "任意复序列怎样分成两种对称部分？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"25\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-25.webp",
+      "imageSha256": "8e90da1456655ea3fa8e8a09b3c3ea94bdace33fca0a49614cdaa1dba29cf276",
+      "imageBytes": 50988,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 25
+    },
+    {
+      "page": 26,
+      "title": "共轭对称分解，为什么对应频谱实虚部？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"26\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-26.webp",
+      "imageSha256": "81cfde1f5bcb17ea85efd37dd7af4d4ad7459bca3f437c461ddfec5c8c75f27a",
+      "imageBytes": 77088,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 26
+    },
+    {
+      "page": 27,
+      "title": "只要频谱实部，对应哪一条时间序列？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"27\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-27.webp",
+      "imageSha256": "660b4248d18fc24ee12a203bcd6a92580e09ed82951babfb63caf50a407659a0",
+      "imageBytes": 72242,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 27
+    },
+    {
+      "page": 28,
+      "title": "把序列分成实部和虚部，又对应什么？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"28\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-28.webp",
+      "imageSha256": "3191c01c92da45f30cbbc48bb118b970b39c66439f3b962cd16d6975d3cc882b",
+      "imageBytes": 69606,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 28
+    },
+    {
+      "page": 29,
+      "title": "实序列的频谱：实偶、虚奇，但频谱不一定为实",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"29\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-29.webp",
+      "imageSha256": "70710fbd749df72dc8d6dba0e20a31ba4707ada22a92e13d1f5ef81fda9aeb87",
+      "imageBytes": 69102,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 29
+    },
+    {
+      "page": 30,
+      "title": "因果性如何让偶分量决定整个实序列？",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"30\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-30.webp",
+      "imageSha256": "7e71e86b886270f9ccb30b513860ef55bdacdb5d4cafc13af89a51e52cfaa3ab",
+      "imageBytes": 68842,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 30
+    },
+    {
+      "page": 31,
+      "title": "u₊不是普通阶跃：恢复因果序列要保留原点",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"31\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-31.webp",
+      "imageSha256": "403ccd3424d53d2b9e202cd3d8101b83c45cc9baedbeb913bf2fa892ac4e9985",
+      "imageBytes": 58236,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 31
+    },
+    {
+      "page": 32,
+      "title": "速查表怎么用：每次先写原变换对",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"32\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-32.webp",
+      "imageSha256": "30d9491e03eba434e83e22b917b224672394cf4189259da0296c869c68953e54",
+      "imageBytes": 207926,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 32
+    },
+    {
+      "page": 33,
+      "title": "对称性速查：实、虚、偶、奇要成对判断",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"33\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-33.webp",
+      "imageSha256": "6d938466458c7d2f1cfb639655020441ebcf2f38e9154ab270b429247ea9e421",
+      "imageBytes": 223618,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 33
+    },
+    {
+      "page": 34,
+      "title": "教材例2.1.7：不求整个频谱，完成五个量",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"34\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-34.webp",
+      "imageSha256": "bc4e69424cc145ce0aaf028211e7c7a2c3fdeaa7c414ea5e5d34828639fcca49",
+      "imageBytes": 41612,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 34
+    },
+    {
+      "page": 35,
+      "title": "三道综合题：把缺失条件补全，再逐步求解",
+      "reader": "dsp-21-ppt.html",
+      "selector": ".slide-page[data-page=\"35\"]",
+      "image": "/study-site/courses/dsp-21/slides/page-35.webp",
+      "imageSha256": "dbbc5c35127d9c5cb1e43d93f0148d3ac1fe3ab5f308f1113c9bac13a188a4e3",
+      "imageBytes": 77636,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 35
+    }
+  ],
+  "sourcePptFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+  "sourcePptSha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a",
+  "sourceStatus": "原PPTX的物理页顺序、正文及现有逐页伴读核对；图片哈希记录当前网站图像，未声称重新渲染与原PPT逐像素一致；不公开教材原件。"
+}

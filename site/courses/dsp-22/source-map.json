@@ -1,0 +1,371 @@
+{
+  "version": 1,
+  "id": "dsp-22",
+  "pageCount": 24,
+  "reader": "dsp-22-ppt.html",
+  "pages": [
+    {
+      "page": 1,
+      "title": "2.2先解决什么问题",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"1\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-1.webp",
+      "imageSha256": "0aa584406249f4fd02f092ef26edbdfcbbfa95e26c710cd4ad5852f65bb4a975",
+      "imageBytes": 87664,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 1
+    },
+    {
+      "page": 2,
+      "title": "周期序列为什么要引入冲激谱",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"2\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-2.webp",
+      "imageSha256": "44bbf76c8285b15c43c82f3f2a4486c3a1bb18acbcd1dce0dae7cd26781e86f8",
+      "imageBytes": 61504,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 2
+    },
+    {
+      "page": 3,
+      "title": "按教材组织本节的学习路线",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"3\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-3.webp",
+      "imageSha256": "b7a2482e28a46bc602c8e364dbc1496bc95de2283c75e30e987eb05412d491a9",
+      "imageBytes": 47698,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 3
+    },
+    {
+      "page": 4,
+      "title": "DFS的符号先统一",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"4\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-4.webp",
+      "imageSha256": "b74e4e73a90e7ae5cc1dc8441e910c94474b22bc6f0bf5726b15f4b402d14a63",
+      "imageBytes": 47888,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 4
+    },
+    {
+      "page": 5,
+      "title": "为什么离散周期序列只需N个谐波",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"5\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-5.webp",
+      "imageSha256": "3dafe84803a17b549a0b8024e1b17fdc0f4bb98ae3b2eacc14f11ecaf23f29ab",
+      "imageBytes": 83946,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 5
+    },
+    {
+      "page": 6,
+      "title": "由正交性一步步求出a_k",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"6\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-6.webp",
+      "imageSha256": "99e532ec0322e9189af9cfb7b3a07cf7101b5d8d6b752796800739b120d6f3dd",
+      "imageBytes": 101468,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 6
+    },
+    {
+      "page": 7,
+      "title": "DFS与IDFS：归一化和适用对象",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"7\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-7.webp",
+      "imageSha256": "43a8407431ab70490a307da9ed06f75d86de830850b206991547f364c0c816a3",
+      "imageBytes": 106172,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 7
+    },
+    {
+      "page": 8,
+      "title": "原例1：R₄(n)按N=8延拓的DFS",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"8\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-8.webp",
+      "imageSha256": "2b04d48b03a38f14d1cdc483d40da842f65bd59c4c9219854db2b1d14c6a6536",
+      "imageBytes": 70638,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 8
+    },
+    {
+      "page": 9,
+      "title": "进入DTFT前：δ是哪一种冲激",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"9\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-9.webp",
+      "imageSha256": "aab9ccf7a4017d6911a489351cea128fbd96bb8a3f6ac0e0a9825144736ad93b",
+      "imageBytes": 67644,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 9
+    },
+    {
+      "page": 10,
+      "title": "基本函数：复指数序列的DTFT",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"10\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-10.webp",
+      "imageSha256": "6f2658b4dd6e0deee580b23155a8d47e8f75685a06f4eca679eea6cb9bd0f57d",
+      "imageBytes": 101410,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 10
+    },
+    {
+      "page": 11,
+      "title": "怎样读“一个2π区间里一条冲激”的图",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"11\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-11.webp",
+      "imageSha256": "f5d57cfe1ab378afb503b4329fa7eb522e5a13c6d658fc013ff0ec07667e1662",
+      "imageBytes": 58834,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 11
+    },
+    {
+      "page": 12,
+      "title": "从DFS推导一般周期序列的冲激DTFT",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"12\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-12.webp",
+      "imageSha256": "8fcd3e2d232a343c6c50e76db93773fe6189c2ab382339ed1940d3e97441ecd1",
+      "imageBytes": 99084,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 12
+    },
+    {
+      "page": 13,
+      "title": "原例延续：同一周期矩形序列的DTFT",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"13\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-13.webp",
+      "imageSha256": "e43f451f223f5bdcc0198a95247d34f8e80585bbc86aab4923111362d3f89088",
+      "imageBytes": 80898,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 13
+    },
+    {
+      "page": 14,
+      "title": "模拟信号、理想采样信号与序列是三个对象",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"14\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-14.webp",
+      "imageSha256": "fa7205d07e312224d13cea533fd8998390ee6692ac016e09878ed126d69cbeee",
+      "imageBytes": 90302,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 14
+    },
+    {
+      "page": 15,
+      "title": "把采样流程图中的问号补完整",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"15\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-15.webp",
+      "imageSha256": "0b5ccd428300da8f467bb51017d73a293a3609e59ef26f0e7e715abe90fb4b1f",
+      "imageBytes": 55210,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 15
+    },
+    {
+      "page": 16,
+      "title": "采样关系推导起点：两个反变换",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"16\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-16.webp",
+      "imageSha256": "9a505458b05ec3007b476c544dfb540d493f452ef70e2a33f60c191390486590",
+      "imageBytes": 104450,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 16
+    },
+    {
+      "page": 17,
+      "title": "分段、平移、换元：1/T从哪里来",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"17\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-17.webp",
+      "imageSha256": "c1940c818691dfb1237cf780045f2fd5fb76c1b8e5c018816feb9dc9536bf35a",
+      "imageBytes": 95518,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 17
+    },
+    {
+      "page": 18,
+      "title": "最终采样频谱关系：变量和周期都写全",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"18\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-18.webp",
+      "imageSha256": "792e2d3d429ae0da3cb190a8dc3faef185a36555dd76091d340d19f7675e1281",
+      "imageBytes": 83664,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 18
+    },
+    {
+      "page": 19,
+      "title": "频率定标：Hz、rad/s、rad/sample",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"19\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-19.webp",
+      "imageSha256": "e7be07cdb9396bf6cd8565567d516a3e21f08c6b0bdb5b47d7c4cf41057d959b",
+      "imageBytes": 59744,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 19
+    },
+    {
+      "page": 20,
+      "title": "原例2.2.7：先把已知和三个所求拆开",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"20\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-20.webp",
+      "imageSha256": "e52d2f83aae6fff3630e11637d8ac0e6056b272a2c6f23395c8a558df04c2767",
+      "imageBytes": 76552,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 20
+    },
+    {
+      "page": 21,
+      "title": "原例2.2.7（1）（2）：模拟谱与两种采样结果",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"21\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-21.webp",
+      "imageSha256": "1112eab32ee91a10665f02098acb74190a504d90f45c0ef34af9ac0e2601634b",
+      "imageBytes": 67286,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 21
+    },
+    {
+      "page": 22,
+      "title": "原例2.2.7（3）：两种频谱分别求",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"22\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-22.webp",
+      "imageSha256": "149e55dbdfa2d159a7a5a7524013bc58d5ae4e55fe9635e6e5ae5ede223c5557",
+      "imageBytes": 75854,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 22
+    },
+    {
+      "page": 23,
+      "title": "原例2.2.7的另一解：用δ缩放核对系数",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"23\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-23.webp",
+      "imageSha256": "ecce87d076be667cbd5e7113c29c0b02ea76133a60284e57e9c5353e733caa88",
+      "imageBytes": 60092,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 23
+    },
+    {
+      "page": 24,
+      "title": "四幅图怎么相互验算：本节收束",
+      "reader": "dsp-22-ppt.html",
+      "selector": ".slide-page[data-page=\"24\"]",
+      "image": "/study-site/courses/dsp-22/slides/page-24.webp",
+      "imageSha256": "dc42d179fa18f283714d130dec8fac98e4dca71f9f642588fdcd94aa42968d0c",
+      "imageBytes": 72478,
+      "imageSize": [
+        1600,
+        1200
+      ],
+      "imageFormat": "WEBP",
+      "sourcePptPage": 24
+    }
+  ],
+  "sourcePptFilename": "2.2周期序列的离散傅里叶变换.pptx",
+  "sourcePptSha256": "109bb258604a00d13d02d82934c5a34e0cf55945ba52e66902b3a848834042e8",
+  "sourceStatus": "原PPTX的物理页顺序、正文及现有逐页伴读核对；图片哈希记录当前网站图像，未声称重新渲染与原PPT逐像素一致；不公开教材原件。"
+}

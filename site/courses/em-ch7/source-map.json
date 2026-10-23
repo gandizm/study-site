@@ -1,0 +1,509 @@
+{
+  "version": 1,
+  "id": "em-ch7",
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt7.html",
+    "readerSha256": "5bd310b4165115a58b41a69d03b19d72dd4e332ff59890b30375bb0713fa69e9",
+    "readerGitBlob": "2c093538b7b8503e91a3d10df8a324c6da0b9c2d",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "pageCount": 35,
+  "pages": [
+    {
+      "page": 1,
+      "readerArticleId": "p01",
+      "imageSelector": "article[data-page=\"1\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "b8c21f5129104e3f64b9d0c825873a2c90e7baf0dd719ecb910a0ee938d49d61",
+      "imageBytes": 85620,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p01-r1",
+        "p01-r2"
+      ]
+    },
+    {
+      "page": 2,
+      "readerArticleId": "p02",
+      "imageSelector": "article[data-page=\"2\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "5c701e14a07a2c84c8b59ccbf6be2990f4d2107a0959c1096e6781fe5127c48f",
+      "imageBytes": 53912,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p02-r1"
+      ]
+    },
+    {
+      "page": 3,
+      "readerArticleId": "p03",
+      "imageSelector": "article[data-page=\"3\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "06f219eafdf07a22474d41ce8d928842d5c2fd4bb3f440da3c1af32320e097bf",
+      "imageBytes": 81253,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p03-r1",
+        "p03-r2",
+        "p03-r3"
+      ]
+    },
+    {
+      "page": 4,
+      "readerArticleId": "p04",
+      "imageSelector": "article[data-page=\"4\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "ab9af815a0e8f90a8bf240be498d12cb9a2994c004118132544242d61cf6376b",
+      "imageBytes": 90871,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p04-r1",
+        "p04-r2"
+      ]
+    },
+    {
+      "page": 5,
+      "readerArticleId": "p05",
+      "imageSelector": "article[data-page=\"5\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "b46f76626e9968004fc7c908e19d133c57a6bc3d8d4aaab7abc7aef729f48cdb",
+      "imageBytes": 67712,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p05-r1",
+        "p05-r2"
+      ]
+    },
+    {
+      "page": 6,
+      "readerArticleId": "p06",
+      "imageSelector": "article[data-page=\"6\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "e02da6551b458e2f7d9e66311f0d5a000ea10f07ce7d93037ceedc0a32b69007",
+      "imageBytes": 88201,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p06-r1",
+        "p06-r2"
+      ]
+    },
+    {
+      "page": 7,
+      "readerArticleId": "p07",
+      "imageSelector": "article[data-page=\"7\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "41795e8d145d35a342498d21208729dc2954db4dc9f3cde31d5c4b39c48c229b",
+      "imageBytes": 97744,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p07-r1",
+        "p07-r2"
+      ]
+    },
+    {
+      "page": 8,
+      "readerArticleId": "p08",
+      "imageSelector": "article[data-page=\"8\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "294ca5f55a4ad35823ed8a59c09c361fc515171af8cbfebdd84170c27ad37e2e",
+      "imageBytes": 94094,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p08-r1",
+        "p08-r2"
+      ]
+    },
+    {
+      "page": 9,
+      "readerArticleId": "p09",
+      "imageSelector": "article[data-page=\"9\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "05ae18ca58945cd13d48f9468dbe22b742ba7bbf14a710f379fd83524b90ee75",
+      "imageBytes": 120842,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p09-r1",
+        "p09-r2"
+      ]
+    },
+    {
+      "page": 10,
+      "readerArticleId": "p10",
+      "imageSelector": "article[data-page=\"10\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "7c04a30a18b5752866b09db3dbfb18b859834d9c52a7d058ccdbf22760b06c14",
+      "imageBytes": 137673,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p10-r1",
+        "p10-r2"
+      ]
+    },
+    {
+      "page": 11,
+      "readerArticleId": "p11",
+      "imageSelector": "article[data-page=\"11\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "17c20197d2a6a0ac34e1ed5bfe05557a689c55a3ff97647b78aaa46d583fd228",
+      "imageBytes": 92187,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p11-r1",
+        "p11-r2"
+      ]
+    },
+    {
+      "page": 12,
+      "readerArticleId": "p12",
+      "imageSelector": "article[data-page=\"12\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "d8a492dc03d63900fce410a71ca1b26fdec83bc02bf18da8e8ea922494b3c3a7",
+      "imageBytes": 207983,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p12-r1"
+      ]
+    },
+    {
+      "page": 13,
+      "readerArticleId": "p13",
+      "imageSelector": "article[data-page=\"13\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "9294ba18c4b80cf979651276d85cdd9fb109747e7454fcecf3e7e6781898045b",
+      "imageBytes": 77525,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p13-r1",
+        "p13-r2"
+      ]
+    },
+    {
+      "page": 14,
+      "readerArticleId": "p14",
+      "imageSelector": "article[data-page=\"14\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "ed26b41c1d8e0b3927eb06e0bf4d7704545295c58f7a1050d6df5f3e5046f8ea",
+      "imageBytes": 127915,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p14-r1",
+        "p14-r2"
+      ]
+    },
+    {
+      "page": 15,
+      "readerArticleId": "p15",
+      "imageSelector": "article[data-page=\"15\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "e50f41f574f0208076aed2262a4f50db3a034ca01c2b00db3a11584899f4e4e8",
+      "imageBytes": 85575,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p15-r1",
+        "p15-r2"
+      ]
+    },
+    {
+      "page": 16,
+      "readerArticleId": "p16",
+      "imageSelector": "article[data-page=\"16\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "64a1070113c6f3bfa6223f4dbea76239df0612f28da54351b59260eb1bb9dbbe",
+      "imageBytes": 111237,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p16-r1",
+        "p16-r2"
+      ]
+    },
+    {
+      "page": 17,
+      "readerArticleId": "p17",
+      "imageSelector": "article[data-page=\"17\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "48e2729050c87d5e1196038a7a1cf3342051ed9e63b578eae47038e3b1c470ed",
+      "imageBytes": 256960,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p17-r1",
+        "p17-r2"
+      ]
+    },
+    {
+      "page": 18,
+      "readerArticleId": "p18",
+      "imageSelector": "article[data-page=\"18\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "ef89e8b2d5921bcf465f83c12ef574f3b46b7e54b9fd6041c47ffb9b65d40143",
+      "imageBytes": 76555,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p18-r1",
+        "p18-r2"
+      ]
+    },
+    {
+      "page": 19,
+      "readerArticleId": "p19",
+      "imageSelector": "article[data-page=\"19\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "00af289d53fc6c1ef6af6df0c181cdfff2d73f3f8069415c2b2e1f01cacf4e0d",
+      "imageBytes": 276262,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p19-r1",
+        "p19-r2"
+      ]
+    },
+    {
+      "page": 20,
+      "readerArticleId": "p20",
+      "imageSelector": "article[data-page=\"20\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "096a0d33e21c254236969dec58ae00d84ceaf8915585a8a9c2768400a213eda4",
+      "imageBytes": 159277,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p20-r1",
+        "p20-r2"
+      ]
+    },
+    {
+      "page": 21,
+      "readerArticleId": "p21",
+      "imageSelector": "article[data-page=\"21\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "63cd1f3e474ffd12c0684ca34d414a602227375e0b9bddc82f288e591116d6c4",
+      "imageBytes": 94408,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p21-r1",
+        "p21-r2"
+      ]
+    },
+    {
+      "page": 22,
+      "readerArticleId": "p22",
+      "imageSelector": "article[data-page=\"22\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "bc895e59cf81b7d3e7b6830695c1f1bcc405384b03a7229a4519602f8a189bf4",
+      "imageBytes": 58330,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p22-r1",
+        "p22-r2"
+      ]
+    },
+    {
+      "page": 23,
+      "readerArticleId": "p23",
+      "imageSelector": "article[data-page=\"23\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "1a9a006edc896b131d66cd4d0c80143a30b0983317c50833ad26ec2de1ea2c1f",
+      "imageBytes": 92584,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p23-r1",
+        "p23-r2"
+      ]
+    },
+    {
+      "page": 24,
+      "readerArticleId": "p24",
+      "imageSelector": "article[data-page=\"24\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "730346ffdd3d29cbbd7b2b973e734bb667cc3f67685fd640354eadc6ecf20b18",
+      "imageBytes": 50859,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p24-r1",
+        "p24-r2"
+      ]
+    },
+    {
+      "page": 25,
+      "readerArticleId": "p25",
+      "imageSelector": "article[data-page=\"25\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "8e908081d19772bac4196dd7adb7937733791cc72996817cd6b7db00bfa82f48",
+      "imageBytes": 118882,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p25-r1",
+        "p25-r2"
+      ]
+    },
+    {
+      "page": 26,
+      "readerArticleId": "p26",
+      "imageSelector": "article[data-page=\"26\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "3178376df1936a37abd850ab3466eed3a2b6cf91c794e498382dd3509066f677",
+      "imageBytes": 107654,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p26-r1",
+        "p26-r2"
+      ]
+    },
+    {
+      "page": 27,
+      "readerArticleId": "p27",
+      "imageSelector": "article[data-page=\"27\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "b34fb259a8f0eaac2692c0375594233a10ef4a400fbbffbee3a5b25bcc12c22f",
+      "imageBytes": 70957,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p27-r1",
+        "p27-r2"
+      ]
+    },
+    {
+      "page": 28,
+      "readerArticleId": "p28",
+      "imageSelector": "article[data-page=\"28\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "64c4fee99acf748e24a96774a34d3f54170e5ce83b1ccff4792d5de92a3b9db3",
+      "imageBytes": 86546,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p28-r1",
+        "p28-r2"
+      ]
+    },
+    {
+      "page": 29,
+      "readerArticleId": "p29",
+      "imageSelector": "article[data-page=\"29\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "3dca06138466a4db1efd9081511bc9f3c211029b5c43b7b551d63cf5dc83c1b8",
+      "imageBytes": 101941,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p29-r1",
+        "p29-r2",
+        "p29-r3"
+      ]
+    },
+    {
+      "page": 30,
+      "readerArticleId": "p30",
+      "imageSelector": "article[data-page=\"30\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "be27dce96f4e0d675eb4c1b8cd1b224ed95caf0bfb6d7ca99c129e67e7499713",
+      "imageBytes": 77976,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p30-r1",
+        "p30-r2"
+      ]
+    },
+    {
+      "page": 31,
+      "readerArticleId": "p31",
+      "imageSelector": "article[data-page=\"31\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "927e09b54ab433afed7f0ff8e66766d8ed552d6a6ed383d2ad1eeccf8e8d599c",
+      "imageBytes": 82323,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p31-r1",
+        "p31-r2"
+      ]
+    },
+    {
+      "page": 32,
+      "readerArticleId": "p32",
+      "imageSelector": "article[data-page=\"32\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "2e1121c1e92db32fa61cea50ca79c39b2e6698b3b040f84fa1ce03026c7af72f",
+      "imageBytes": 101315,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p32-r1",
+        "p32-r2"
+      ]
+    },
+    {
+      "page": 33,
+      "readerArticleId": "p33",
+      "imageSelector": "article[data-page=\"33\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "a6233930ea39b111f8c48e2ccfa6f56637da5d60b32dd9fb5c44b4de0a52b5ba",
+      "imageBytes": 238535,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p33-r1",
+        "p33-r2"
+      ]
+    },
+    {
+      "page": 34,
+      "readerArticleId": "p34",
+      "imageSelector": "article[data-page=\"34\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "4e5792f467d0a3c98d07b52f6848dc902cf3ef1febe67db726c5c96b3c19178e",
+      "imageBytes": 92384,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p34-r1",
+        "p34-r2",
+        "p34-r3"
+      ]
+    },
+    {
+      "page": 35,
+      "readerArticleId": "p35",
+      "imageSelector": "article[data-page=\"35\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "4c906f6a172f89ba39f0e1afb61cdcb87b1c5e7c0d61bd674d87ab3afaac67d0",
+      "imageBytes": 66488,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p35-r1",
+        "p35-r2"
+      ]
+    }
+  ]
+}

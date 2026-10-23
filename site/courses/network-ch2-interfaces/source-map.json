@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "id": "network-ch2-interfaces",
+  "reader": "/study-site/network-ch2-interfaces-ppt.html",
+  "sourcePdf": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf",
+  "sourcePdfSha256": "545e56f55969c6ec9ee240b01d94bc153c6bc1ca6089b60242720a1119293791",
+  "sourcePdfPages": 34,
+  "readerPages": 8,
+  "readerPageNumbers": [
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+  ],
+  "pageNumbering": "专题只有8个阅读位置，真实data-page为27–34；分别使用34页主版PDF的物理27–34页。不是把reader位置1–8误指到PDF1–8，也不新增主物理层P51等虚构页。",
+  "verification": {
+    "method": "逐article独立读取data-page、source.pdf#page链接与原图，再重新渲染所指PDF物理页进行400×300比较；本轮已实际查看全部8页左右并排联系表，数值差异只用于筛查。",
+    "result": "8页可见原图、所指PDF物理页与来源链接一致。",
+    "pageIndexConvention": "readerIndex是专题阅读位置；page/readerPage是实际data-page；sourcePdfPage是PDF从1起物理页。",
+    "contentBoundary": "专题保留真实P27–34，不并入主物理层虚构P51等页。接线图按各自连接点解释，型号历史版本、速率距离及节点数量均带条件，不作为实际布线安全保证。",
+    "recoveryStatus": "new-source-audit-not-old-frozen-source-map"
+  },
+  "pages": [
+    {
+      "page": 27,
+      "readerIndex": 1,
+      "readerPage": 27,
+      "sourcePdfPage": 27,
+      "sourceVersion": "main-34-page-pdf",
+      "sourcePageLink": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf#page=27",
+      "sourceImage": "/study-site/courses/network-ch2-interfaces/slides/page-27.webp",
+      "sourceImageSha256": "5ff2383d35c2115cd8d19c804f08d84b97a1a9c9010a27a7287eb13305dd1357",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.488103
+    },
+    {
+      "page": 28,
+      "readerIndex": 2,
+      "readerPage": 28,
+      "sourcePdfPage": 28,
+      "sourceVersion": "main-34-page-pdf",
+      "sourcePageLink": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf#page=28",
+      "sourceImage": "/study-site/courses/network-ch2-interfaces/slides/page-28.webp",
+      "sourceImageSha256": "9106873b1130fcdca2295098af7abd5bbe6bca25b3a957924b2ac66d6c4bccac",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.141522
+    },
+    {
+      "page": 29,
+      "readerIndex": 3,
+      "readerPage": 29,
+      "sourcePdfPage": 29,
+      "sourceVersion": "main-34-page-pdf",
+      "sourcePageLink": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf#page=29",
+      "sourceImage": "/study-site/courses/network-ch2-interfaces/slides/page-29.webp",
+      "sourceImageSha256": "3a7418722699180c0f8b8212bd4e4ebfc2c1c8e9b7fd2c20167f0cc3cf3602a2",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.205717
+    },
+    {
+      "page": 30,
+      "readerIndex": 4,
+      "readerPage": 30,
+      "sourcePdfPage": 30,
+      "sourceVersion": "main-34-page-pdf",
+      "sourcePageLink": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf#page=30",
+      "sourceImage": "/study-site/courses/network-ch2-interfaces/slides/page-30.webp",
+      "sourceImageSha256": "655aa2e24a0bbc65e53eadb1313cb9967adf4337ac2e6650ef2d5e134c1fb62e",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 1.335581
+    },
+    {
+      "page": 31,
+      "readerIndex": 5,
+      "readerPage": 31,
+      "sourcePdfPage": 31,
+      "sourceVersion": "main-34-page-pdf",
+      "sourcePageLink": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf#page=31",
+      "sourceImage": "/study-site/courses/network-ch2-interfaces/slides/page-31.webp",
+      "sourceImageSha256": "b5e079cf03dc0c3acf7aed7ec990405ca7e721627f723f1388e02da50ce51562",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 3.105389
+    },
+    {
+      "page": 32,
+      "readerIndex": 6,
+      "readerPage": 32,
+      "sourcePdfPage": 32,
+      "sourceVersion": "main-34-page-pdf",
+      "sourcePageLink": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf#page=32",
+      "sourceImage": "/study-site/courses/network-ch2-interfaces/slides/page-32.webp",
+      "sourceImageSha256": "66eaa23d34b94bbf18f7c4586e3ac7a0b53a5195948eb4544dd94cc2d899139d",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 2.845864
+    },
+    {
+      "page": 33,
+      "readerIndex": 7,
+      "readerPage": 33,
+      "sourcePdfPage": 33,
+      "sourceVersion": "main-34-page-pdf",
+      "sourcePageLink": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf#page=33",
+      "sourceImage": "/study-site/courses/network-ch2-interfaces/slides/page-33.webp",
+      "sourceImageSha256": "ebb2b54540175e07fa2bfac21c16c706d81cf4b42be4794fe4b783951e79f485",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 1.841714
+    },
+    {
+      "page": 34,
+      "readerIndex": 8,
+      "readerPage": 34,
+      "sourcePdfPage": 34,
+      "sourceVersion": "main-34-page-pdf",
+      "sourcePageLink": "/study-site/courses/source-pages/545e56f55969c6ec9ee2/source.pdf#page=34",
+      "sourceImage": "/study-site/courses/network-ch2-interfaces/slides/page-34.webp",
+      "sourceImageSha256": "3c045c1d0898b79795c0c045ac432653bb8a92012886e75ea444afc25b18b6e5",
+      "status": "matched-visible-render",
+      "meanRgbDifferenceAt400x300": 1.944292
+    }
+  ]
+}

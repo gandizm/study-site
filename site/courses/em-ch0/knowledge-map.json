@@ -1,0 +1,403 @@
+{
+  "version": 1,
+  "id": "em-ch0",
+  "title": "电磁场绪论 · 建模、理论骨架与读图",
+  "reader": "/study-site/ppt0.html",
+  "sourcePageCount": 20,
+  "displayPageCount": 20,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt0.html",
+    "readerSha256": "7092a01729a04135ba3e210f8706482c590a567631434cf955219e3a63950c35",
+    "readerGitBlob": "ead3a3d1b884cf21f6d0dc82128e76472639e742",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "nodes": [
+    {
+      "id": "course-record",
+      "label": "课程记录与考核口径",
+      "pages": [
+        1,
+        3,
+        5,
+        6
+      ],
+      "summary": "封面、考核对应、成绩构成和课时安排是这份课件的历史记录，不自动代表现在执行的通知。P5为平时40%与期末60%；出勤/作业低于30%的原文口径须向教师确认，不擅自改成两个独立门槛。",
+      "section": "课程与证据",
+      "prerequisites": [],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "1": "p01-cover",
+        "3": "p03-target1",
+        "5": "p05-eligibility",
+        "6": "p06-class"
+      }
+    },
+    {
+      "id": "source-scope",
+      "label": "教材版本、资源与范围核对",
+      "pages": [
+        7,
+        8,
+        20
+      ],
+      "summary": "先核教材版次、原页码与授课范围，再定位例题和作业。静态材料不等于已取得动画；P20的课时分配不是考试权重，章3节号与实际伴读存在差别时保留差异并待教师确认。",
+      "section": "课程与证据",
+      "prerequisites": [],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "7": "p07-textbook",
+        "8": "p08-resources",
+        "20": "p20-scope"
+      }
+    },
+    {
+      "id": "engineering-model",
+      "label": "从工程对象建立场模型",
+      "pages": [
+        2,
+        9
+      ],
+      "summary": "把工程对象转成源、材料、几何、未知场量及边界/初始条件。场论直接处理空间分布；集中参数电路是在适用尺度与假设下的简化，而不是另一套矛盾的基本物理。",
+      "section": "建模主线",
+      "prerequisites": [],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "2": "p02-model",
+        "9": "p09-position"
+      }
+    },
+    {
+      "id": "fair-comparison",
+      "label": "同条件比较方案",
+      "pages": [
+        2,
+        4
+      ],
+      "summary": "先说明任务、评价指标与共同工作条件，再比较技术路线的优缺点及可持续性。P4列出六类可选方向及中英文文献要求，没有给出的截止日期、字数和指标不能自行补成课程规定。",
+      "section": "建模主线",
+      "prerequisites": [
+        "engineering-model"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "2": "p02-comparison",
+        "4": "p04-options"
+      }
+    },
+    {
+      "id": "unified-propagation",
+      "label": "导引传播与自由传播",
+      "pages": [
+        10
+      ],
+      "summary": "卫星、无线链路与海底光纤都可由电磁规律研究，差别在频率、材料、几何和边界。示意图中的通信连线不等于电场线，也不能由线的方向推出极化。",
+      "section": "建模主线",
+      "prerequisites": [
+        "engineering-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "10": "p10-unification"
+      }
+    },
+    {
+      "id": "field-applications",
+      "label": "传播、耦合与吸收的应用",
+      "pages": [
+        11,
+        12
+      ],
+      "summary": "通信、传感、电力和光学共享电磁规律，但使用的近似、尺度及目标不同。无线链路重传输，微波加热重吸收；课件对未来全光网络的表述只作当时展望，不当作已核实现状。",
+      "section": "建模主线",
+      "prerequisites": [
+        "unified-propagation"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "11": "p11-applications",
+        "12": "p12-disciplines"
+      }
+    },
+    {
+      "id": "scalar-vector",
+      "label": "标量场、矢量场与空间算子",
+      "pages": [
+        15
+      ],
+      "summary": "场是随空间位置变化的物理量。E、H是矢量场，电位与电荷密度是标量场；梯度、散度、旋度分别回答不同问题，不能把所有场量都说成矢量。",
+      "section": "理论骨架",
+      "prerequisites": [
+        "engineering-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "15": "p15-vector"
+      }
+    },
+    {
+      "id": "maxwell-closure",
+      "label": "麦克斯韦方程与完整条件",
+      "pages": [
+        13,
+        14
+      ],
+      "summary": "以麦克斯韦方程为中心描述场与源、场之间的联系。实际求解还须给定本构关系、源分布和边界/初始条件，不能以仅写出四个方程代替完整建模。",
+      "section": "理论骨架",
+      "prerequisites": [
+        "engineering-model",
+        "scalar-vector"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "13": "p13-center",
+        "14": "p14-foundations"
+      }
+    },
+    {
+      "id": "properties-solvers",
+      "label": "场的性质与求场方法",
+      "pages": [
+        13,
+        14
+      ],
+      "summary": "“性质”解释场必须满足的关系，“方法”在具体条件下求出场。位函数、边界关系与能流衔接基本规律；静电镜像法和分离变量法各有适用几何与边界条件。",
+      "section": "理论骨架",
+      "prerequisites": [
+        "maxwell-closure"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "13": "p13-two",
+        "14": "p14-foundations"
+      }
+    },
+    {
+      "id": "wave-interface",
+      "label": "平面波与界面问题",
+      "pages": [
+        14
+      ],
+      "summary": "先确定传播方向、介质和极化，再研究正入射或斜入射的反射、透射。全透射与全反射是不同条件下的结论，不能仅凭名字相近或图形把二者混同。",
+      "section": "理论骨架",
+      "prerequisites": [
+        "maxwell-closure",
+        "unified-propagation"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "14": "p14-waves"
+      }
+    },
+    {
+      "id": "radiation-model",
+      "label": "辐射源、等效源与远区",
+      "pages": [
+        14,
+        17
+      ],
+      "summary": "时变电荷/电流可形成向外辐射；远区近似不能直接用于近场。磁流是等效建模工具，并不表示发现了真实磁单极；辐射方向图也不同于某时刻的电场线图。",
+      "section": "理论骨架",
+      "prerequisites": [
+        "maxwell-closure"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "14": "p14-radiation",
+        "17": "p17-physics"
+      }
+    },
+    {
+      "id": "electrostatic-dipole",
+      "label": "静电偶极子的场线与等位面",
+      "pages": [
+        16
+      ],
+      "summary": "以均匀线性介质中等量异号静止点电荷为模型，避开点源奇点并给定位参考。电场线指示场方向，等位面与其正交；本页图是定性示意，没有数值标定。",
+      "section": "读图与辨析",
+      "prerequisites": [
+        "scalar-vector",
+        "properties-solvers"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "16": "p16-lines"
+      }
+    },
+    {
+      "id": "zero-potential",
+      "label": "零电位不意味着零电场",
+      "pages": [
+        16
+      ],
+      "summary": "偶极子中垂面上两电位贡献可抵消为零，但两电场仍可能同向相加。E取决于电位的空间梯度，而不是某一点电位的数值；电位参考的改变也不改变场。",
+      "section": "读图与辨析",
+      "prerequisites": [
+        "electrostatic-dipole"
+      ],
+      "type": "example",
+      "source": "supplement",
+      "anchors": {
+        "16": "p16-equipotential"
+      }
+    },
+    {
+      "id": "time-varying-dipole",
+      "label": "静态偶极与时变辐射的区别",
+      "pages": [
+        17
+      ],
+      "summary": "振荡偶极需要时变源与传播时延，不能把静止电荷的空间场形直接当作辐射。近区储能场与远区传输能量的辐射场须结合距离、波长和时间变化区分。",
+      "section": "读图与辨析",
+      "prerequisites": [
+        "electrostatic-dipole",
+        "radiation-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "17": "p17-physics"
+      }
+    },
+    {
+      "id": "static-image-limit",
+      "label": "静态帧的证据边界",
+      "pages": [
+        17
+      ],
+      "summary": "当前阅读器保留的是一张静态彩色图，未给出完整图例和时间序列。不能擅自认定颜色对应某个场分量，也不能把猜想的运动过程说成已看到的动画。",
+      "section": "读图与辨析",
+      "prerequisites": [],
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "17": "p17-image"
+      }
+    },
+    {
+      "id": "controlled-comparison",
+      "label": "对比前固定约定和假设",
+      "pages": [
+        19
+      ],
+      "summary": "对比散度与旋度、无损与有损介质时先写共同条件。相量时间因子、传播方向和频率约定不同，公式表面差异不一定是物理结论矛盾。",
+      "section": "学习闭环",
+      "prerequisites": [
+        "scalar-vector",
+        "fair-comparison"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "19": "p19-compare"
+      }
+    },
+    {
+      "id": "independent-verification",
+      "label": "独立求解与结果自检",
+      "pages": [
+        12,
+        18,
+        19
+      ],
+      "summary": "预习找问题，课堂记条件，教材补推导，再独立解题。交付的不只是结果，还包括假设与适用范围，并用量纲、边界、极限和守恒关系检查；抄懂答案不等于能独立建模。",
+      "section": "学习闭环",
+      "prerequisites": [
+        "properties-solvers",
+        "controlled-comparison"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "12": "p12-method",
+        "18": "p18-after",
+        "19": "p19-practice"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "source-scope",
+      "to": "course-record",
+      "label": "核对依据：版本与历史安排不等于当前通知"
+    },
+    {
+      "from": "course-record",
+      "to": "independent-verification",
+      "label": "考核映射：不同目标需不同证据"
+    },
+    {
+      "from": "fair-comparison",
+      "to": "field-applications",
+      "label": "应用：同任务和工况下比较技术路线"
+    },
+    {
+      "from": "unified-propagation",
+      "to": "wave-interface",
+      "label": "具体化：不同边界形成不同传播问题"
+    },
+    {
+      "from": "properties-solvers",
+      "to": "wave-interface",
+      "label": "解题路线：方程加界面条件"
+    },
+    {
+      "from": "electrostatic-dipole",
+      "to": "time-varying-dipole",
+      "label": "对比：静止源场不自动成为辐射场"
+    },
+    {
+      "from": "zero-potential",
+      "to": "scalar-vector",
+      "label": "反例：场值与空间梯度不可混同"
+    },
+    {
+      "from": "static-image-limit",
+      "to": "time-varying-dipole",
+      "label": "证据限制：图示不能替代时间序列"
+    },
+    {
+      "from": "source-scope",
+      "to": "independent-verification",
+      "label": "使用前核对：版本、节号与资源完整性"
+    }
+  ]
+}

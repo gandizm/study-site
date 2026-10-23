@@ -1,0 +1,894 @@
+{
+  "version": 1,
+  "id": "network-ch1-foundations",
+  "title": "计算机网络 第一章：基础与体系结构",
+  "pageCount": 103,
+  "reader": "network-ch1-foundations-ppt.html",
+  "nodes": [
+    {
+      "id": "applications",
+      "label": "从远程应用看网络",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "summary": "远程信息交换依赖多个设备和转发设施合作，连通性也伴随隐私、规则与责任。",
+      "prerequisites": [],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "iot",
+      "label": "感知、标识与物流数据",
+      "pages": [
+        4,
+        5
+      ],
+      "summary": "传感器采集物理量、标识设备识别对象，网络将现场数据交给远端业务处理。",
+      "prerequisites": [
+        "applications"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "cloud-edge",
+      "label": "云计算与边缘分工",
+      "pages": [
+        6,
+        7
+      ],
+      "summary": "云按需组织计算资源，近端处理可缓解时延和传输压力；边缘不是简单替代所有云功能。",
+      "prerequisites": [
+        "iot"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "data-value",
+      "label": "数据规模与业务闭环",
+      "pages": [
+        8,
+        9
+      ],
+      "summary": "数据规模带来存储、处理与分析问题，技术价值须回到感知、传送、处理和行动的业务链。",
+      "prerequisites": [
+        "iot",
+        "cloud-edge"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "definition",
+      "label": "节点、链路与协议协作",
+      "pages": [
+        10,
+        11
+      ],
+      "summary": "网络由通信连接和自治设备组成，有线相连仍需一致规则才能交换可理解的信息。",
+      "prerequisites": [
+        "applications"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "internet",
+      "label": "internet与Internet",
+      "pages": [
+        12
+      ],
+      "summary": "互连网络是一般概念，Internet指使用共同协议连接的全球特定互联体系，不等同任意单一网络。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "history",
+      "label": "组织扩展与历史分类",
+      "pages": [
+        13,
+        14,
+        15,
+        18,
+        19,
+        20
+      ],
+      "summary": "异构互联、层次组织与标准协作解释网络扩展；不同教材的网络代际与因特网阶段不能硬配。",
+      "prerequisites": [
+        "internet"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "isp",
+      "label": "ISP层次与IXP横向互联",
+      "pages": [
+        16,
+        17
+      ],
+      "summary": "运营商提供接入和中转，横向互联可减少绕路，实际路径仍取决于路由和运营策略。",
+      "prerequisites": [
+        "internet"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "edge-core",
+      "label": "边缘应用与核心转发",
+      "pages": [
+        21,
+        22,
+        26
+      ],
+      "summary": "端系统运行应用，核心设备转发数据；边缘/核心按职责而不是地理远近区分。",
+      "prerequisites": [
+        "definition",
+        "isp"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "client-server",
+      "label": "客户服务器请求响应",
+      "pages": [
+        23,
+        24
+      ],
+      "summary": "服务器按服务约定接收请求，客户端启动一次交互，不必事先枚举每位客户身份。",
+      "prerequisites": [
+        "edge-core"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "peer",
+      "label": "对等通信中的动态角色",
+      "pages": [
+        25
+      ],
+      "summary": "对等节点既可请求也可提供资源，具体一次交互仍可区分请求方与提供方。",
+      "prerequisites": [
+        "client-server"
+      ],
+      "section": "应用与互联",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "mesh",
+      "label": "全互连线路的组合计数",
+      "pages": [
+        27
+      ],
+      "summary": "N个终端逐对直连需要N(N−1)/2条无向连接，重复从两端计数须除以2。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "交换方式",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "circuit",
+      "label": "电路建立、通信与释放",
+      "pages": [
+        28,
+        29
+      ],
+      "summary": "电路交换先分配连接资源再通信，突发业务的空闲仍可能占用预留资源；专用资源不等于独享整根电缆。",
+      "prerequisites": [
+        "mesh"
+      ],
+      "section": "交换方式",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "segmentation",
+      "label": "分组化与首部控制信息",
+      "pages": [
+        30,
+        31,
+        32
+      ],
+      "summary": "大报文切成受长度约束的小单元并加首部，缩短中间设备每次必须收齐的对象。",
+      "prerequisites": [
+        "circuit"
+      ],
+      "section": "交换方式",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "reassembly",
+      "label": "分组重组的成功条件",
+      "pages": [
+        33
+      ],
+      "summary": "接收端按规则恢复内容与顺序，原图假定无丢失出错；有首部不自动保证可靠交付。",
+      "prerequisites": [
+        "segmentation"
+      ],
+      "section": "交换方式",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "forwarding",
+      "label": "逐跳存储转发与路径",
+      "pages": [
+        34,
+        35
+      ],
+      "summary": "每个节点接收、缓存、查表和发送，路径可随条件变化；模型中的一条路径不是唯一固定通路。",
+      "prerequisites": [
+        "segmentation",
+        "edge-core"
+      ],
+      "section": "交换方式",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "tradeoff",
+      "label": "共享链路的收益与代价",
+      "pages": [
+        36
+      ],
+      "summary": "分组按需共享适合突发流量，也带来首部开销、处理和排队；可靠性仍依赖协议及网络条件。",
+      "prerequisites": [
+        "forwarding",
+        "reassembly"
+      ],
+      "section": "交换方式",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "switch-compare",
+      "label": "电路、报文、分组交换对照",
+      "pages": [
+        37
+      ],
+      "summary": "先问是否建立资源通路，再问中间节点等待整个报文还是一个分组；两者都可能存储转发。",
+      "prerequisites": [
+        "circuit",
+        "forwarding"
+      ],
+      "section": "交换方式",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "pipeline",
+      "label": "多跳分组传送的流水线",
+      "pages": [
+        38
+      ],
+      "summary": "不同链路可同时发送不同分组，缩短整份报文的完工时间；需连同分组数、链路速率和开销计算。",
+      "prerequisites": [
+        "switch-compare"
+      ],
+      "section": "交换方式",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "classification",
+      "label": "覆盖范围与使用范围",
+      "pages": [
+        39,
+        40,
+        41,
+        42
+      ],
+      "summary": "LAN/WAN等按覆盖与技术场景，公用/专用按使用范围分类，两条分类轴可同时成立。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "网络分类",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "topology",
+      "label": "拓扑对成本和故障的影响",
+      "pages": [
+        43
+      ],
+      "summary": "总线、星形等连接结构会改变共享、布线与故障风险，不等同使用对象或覆盖地域分类。",
+      "prerequisites": [
+        "classification"
+      ],
+      "section": "网络分类",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "layering",
+      "label": "分层与复杂任务拆解",
+      "pages": [
+        44,
+        45,
+        47,
+        48,
+        49,
+        50
+      ],
+      "summary": "把文件业务、可靠传送和网络接入等职责拆层，上层请求服务而不包办每个底层步骤。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "protocol",
+      "label": "协议的语法、语义与时序",
+      "pages": [
+        46
+      ],
+      "summary": "同层实体须对消息结构、含义与操作先后一致，仅共享词语不等于正确通信。",
+      "prerequisites": [
+        "definition"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "interface",
+      "label": "接口、服务与实现分离",
+      "pages": [
+        51,
+        52,
+        53
+      ],
+      "summary": "同层遵循协议，相邻层通过接口提供服务；实现可以改变，前提是对外约定保持。",
+      "prerequisites": [
+        "layering",
+        "protocol"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "models",
+      "label": "OSI与TCP/IP分层模型",
+      "pages": [
+        54,
+        55,
+        56
+      ],
+      "summary": "七层、四层和教学五层是不同模型口径；参考模型的价值不等于整套协议实际占有率。",
+      "prerequisites": [
+        "interface"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "application-layer",
+      "label": "应用协议与业务含义",
+      "pages": [
+        57
+      ],
+      "summary": "应用层约定请求、响应与内容解释，端到端可达仍不自动产生业务语义。",
+      "prerequisites": [
+        "models",
+        "client-server"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "transport-layer",
+      "label": "进程端点与运输服务",
+      "pages": [
+        58
+      ],
+      "summary": "运输层把主机通信交到正确进程，可靠性等具体服务依所选协议而定。",
+      "prerequisites": [
+        "models"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "network-layer",
+      "label": "跨网寻址与转发路径",
+      "pages": [
+        59
+      ],
+      "summary": "网络层处理跨网络寻址和逐跳转发，不能用一个链路内的交付替代远端主机路径。",
+      "prerequisites": [
+        "models",
+        "forwarding"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "link-layer",
+      "label": "相邻节点间的成帧交付",
+      "pages": [
+        60
+      ],
+      "summary": "数据链路层在具体链路上传帧，逐跳邻居可变化而上层远端目的仍不变。",
+      "prerequisites": [
+        "network-layer"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "physical-layer",
+      "label": "比特与介质信号",
+      "pages": [
+        61
+      ],
+      "summary": "物理层把比特表示成介质可传的信号，并不负责解释上层业务内容。",
+      "prerequisites": [
+        "link-layer"
+      ],
+      "section": "体系结构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "encap-app",
+      "label": "应用数据形成应用PDU",
+      "pages": [
+        62
+      ],
+      "summary": "应用控制信息加在业务内容上，完整应用PDU交给下一层，不只交裸业务正文。",
+      "prerequisites": [
+        "application-layer"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "encap-transport",
+      "label": "运输层封装与端点信息",
+      "pages": [
+        63
+      ],
+      "summary": "运输层把完整应用PDU视作载荷，再加入本层控制信息，不丢弃应用自己的首部。",
+      "prerequisites": [
+        "encap-app",
+        "transport-layer"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "encap-network",
+      "label": "网络层封装与远端目标",
+      "pages": [
+        64
+      ],
+      "summary": "网络首部服务跨网交付，载荷仍是完整运输层PDU，两层控制信息不能互相替代。",
+      "prerequisites": [
+        "encap-transport",
+        "network-layer"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "encap-link",
+      "label": "链路层首部、尾部与帧",
+      "pages": [
+        65
+      ],
+      "summary": "帧包住网络层PDU，尾部可承载差错检测等链路控制信息，外层不会改成业务正文。",
+      "prerequisites": [
+        "encap-network",
+        "link-layer"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "bits-travel",
+      "label": "发送比特与介质传播",
+      "pages": [
+        66,
+        67,
+        68
+      ],
+      "summary": "帧按比特经信号发送并传播，已发出不等于已到达；对端收到比特仍需逐层解释。",
+      "prerequisites": [
+        "encap-link",
+        "physical-layer"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "decap-link",
+      "label": "检查帧再向上交付",
+      "pages": [
+        69,
+        75,
+        76
+      ],
+      "summary": "物理层接收的是含完整帧首尾的比特，链路层依协议检查和处理本层信息，再交网络层PDU。",
+      "prerequisites": [
+        "bits-travel"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "decap-network",
+      "label": "最终主机的网络层解封装",
+      "pages": [
+        70,
+        77
+      ],
+      "summary": "图中最终主机可把网络载荷交运输层；中间路由器通常继续转发，不能照抄最终交付过程。",
+      "prerequisites": [
+        "decap-link"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "decap-upper",
+      "label": "运输解复用与应用解释",
+      "pages": [
+        71,
+        72,
+        73,
+        78,
+        79
+      ],
+      "summary": "运输层把载荷送正确应用，应用继续读自身控制信息后交业务内容，不把所有首部同时删掉。",
+      "prerequisites": [
+        "decap-network"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "encap-order",
+      "label": "嵌套顺序与逆向核查",
+      "pages": [
+        74,
+        80
+      ],
+      "summary": "发送由上至下增加本层信息，接收按相应职责逐层处理；每层看到的载荷边界不同。",
+      "prerequisites": [
+        "encap-link",
+        "decap-upper"
+      ],
+      "section": "封装与解封装",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "overhead",
+      "label": "封装开销比例的分母",
+      "pages": [
+        81
+      ],
+      "summary": "开销占总传输量时分母包括有效载荷和控制开销；若改问相对原数据增加比例，分母不同。",
+      "prerequisites": [
+        "encap-order"
+      ],
+      "section": "体系结构应用",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "pdu-sdu",
+      "label": "服务边界、PDU与SDU",
+      "pages": [
+        82,
+        83
+      ],
+      "summary": "上层PDU可作为下层SDU；命名依观察层次，不是同一数据对象拥有唯一固定层名。",
+      "prerequisites": [
+        "interface",
+        "encap-order"
+      ],
+      "section": "体系结构应用",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "router-stack",
+      "label": "端系统和路由器的协议范围",
+      "pages": [
+        84
+      ],
+      "summary": "普通路由转发不替所有应用完成整套端到端协议；设备职责与协议层次须按具体功能判断。",
+      "prerequisites": [
+        "network-layer",
+        "pdu-sdu"
+      ],
+      "section": "体系结构应用",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "suite",
+      "label": "TCP/IP协议簇与沙漏结构",
+      "pages": [
+        85,
+        86,
+        87
+      ],
+      "summary": "多种应用和链路通过共同IP层互联；TCP/UDP仍属于运输层，沙漏形状表达接口而非性能瓶颈。",
+      "prerequisites": [
+        "models",
+        "router-stack"
+      ],
+      "section": "体系结构应用",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "multi-service",
+      "label": "多服务与跨层通信流程",
+      "pages": [
+        88,
+        89,
+        90
+      ],
+      "summary": "同一主机可运行多服务，通过端点和协议分工处理；判断功能先看职责而不是框图位置。",
+      "prerequisites": [
+        "suite",
+        "application-layer",
+        "transport-layer"
+      ],
+      "section": "体系结构应用",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "metrics",
+      "label": "性能问题与测量口径",
+      "pages": [
+        91
+      ],
+      "summary": "速率、吞吐量、时延和利用率回答不同问题，比较前明确计数对象、方向、位置和时间。",
+      "prerequisites": [
+        "tradeoff"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "rate",
+      "label": "比特率与单比特时间",
+      "pages": [
+        92,
+        94
+      ],
+      "summary": "比特率数每秒发送比特，单比特持续时间为其倒数；提高速率不等于提高介质传播速度。",
+      "prerequisites": [
+        "metrics"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "bandwidth",
+      "label": "Hz带宽与bit/s带宽",
+      "pages": [
+        93
+      ],
+      "summary": "频率带宽和数字链路能力常共用带宽一词但单位不同，不能省掉调制和信道条件直接换算。",
+      "prerequisites": [
+        "rate"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "throughput",
+      "label": "吞吐量与有效吞吐量",
+      "pages": [
+        95
+      ],
+      "summary": "吞吐量是实际通过量除时间；计入全部链路数据还是有用应用载荷会得到不同口径。",
+      "prerequisites": [
+        "metrics",
+        "rate"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "transmission",
+      "label": "发送时延L/R",
+      "pages": [
+        96
+      ],
+      "summary": "分组长度除发送速率得到把最后一位推出发送器的时间，与传播距离不是同一因素。",
+      "prerequisites": [
+        "rate"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "propagation",
+      "label": "传播时延d/v",
+      "pages": [
+        97
+      ],
+      "summary": "信号跨链路的传播时间由距离和介质传播速度决定，最后一位发出后仍可能在路上。",
+      "prerequisites": [
+        "physical-layer"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "waiting",
+      "label": "处理与排队时间",
+      "pages": [
+        98
+      ],
+      "summary": "节点处理和等待出口属于发送开始前的耗时，不能都并入L/R或忽略负载波动。",
+      "prerequisites": [
+        "tradeoff"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "latency",
+      "label": "单向总时延与RTT",
+      "pages": [
+        99
+      ],
+      "summary": "各不重叠时延按路径累加；RTT跨去回程，只有特定对称近似才等于两倍传播时延。",
+      "prerequisites": [
+        "transmission",
+        "propagation",
+        "waiting"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "bdp",
+      "label": "传播时延带宽积",
+      "pages": [
+        100
+      ],
+      "summary": "发送速率乘单向传播时延得到连续发送时在途比特量，单位是bit，不能悄换成RTT窗口口径。",
+      "prerequisites": [
+        "rate",
+        "propagation"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "utilization",
+      "label": "利用率与模型内时延曲线",
+      "pages": [
+        101
+      ],
+      "summary": "忙时比例是利用率；接近满载时的时延关系需指定稳定队列假设，不能外推成任意整网定律。",
+      "prerequisites": [
+        "waiting",
+        "throughput"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "queueing",
+      "label": "到达波动与服务能力",
+      "pages": [
+        102,
+        103
+      ],
+      "summary": "系统包含等待和服务，队列人数不含正在服务者；平均到达率不同于满负荷服务能力，随机假设须另说明。",
+      "prerequisites": [
+        "latency",
+        "utilization"
+      ],
+      "section": "性能与排队",
+      "type": "concept",
+      "source": "ppt"
+    }
+  ],
+  "edges": [
+    {
+      "from": "cloud-edge",
+      "to": "latency",
+      "label": "应用部署取舍关联时延"
+    },
+    {
+      "from": "circuit",
+      "to": "tradeoff",
+      "label": "对比资源预留与按需共享"
+    },
+    {
+      "from": "pipeline",
+      "to": "latency",
+      "label": "检查多跳时间线"
+    },
+    {
+      "from": "protocol",
+      "to": "pdu-sdu",
+      "label": "规则与服务观察边界"
+    },
+    {
+      "from": "router-stack",
+      "to": "decap-network",
+      "label": "中继和最终主机区别"
+    },
+    {
+      "from": "throughput",
+      "to": "bandwidth",
+      "label": "实得与额定能力区别"
+    },
+    {
+      "from": "bdp",
+      "to": "latency",
+      "label": "区分单向传播和RTT"
+    },
+    {
+      "from": "utilization",
+      "to": "queueing",
+      "label": "补齐曲线所需随机模型"
+    }
+  ],
+  "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+  "sourceStatus": "图谱pages指当前主版阅读器物理页1–103；补充图来自多份分节PDF，source-map逐图保存实际文件页，禁止将补充PDF页号当成阅读器跳页号。",
+  "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+}

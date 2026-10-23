@@ -1,0 +1,757 @@
+{
+  "version": 1,
+  "id": "em-ch1",
+  "title": "电磁场第1章 · 矢量分析",
+  "reader": "/study-site/ppt1.html",
+  "sourcePageCount": 42,
+  "displayPageCount": 42,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt1.html",
+    "readerSha256": "4261d6e82ef145563d9cf2643f5b5c3558f1934b0568ea6fbf1fc3cda3e920cb",
+    "readerGitBlob": "bf22c820135d3ad2bfa56210910540faab443f36",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "nodes": [
+    {
+      "id": "operator-roadmap",
+      "label": "表示、局部变化与积分重建",
+      "pages": [
+        1,
+        22,
+        30,
+        31
+      ],
+      "summary": "本章由矢量表示进入通量/散度、环量/旋度和标量场梯度，再用积分定理连接局部与整体。先判断输入输出类型及线、面、体积分对象，换坐标不会改变几何定义。",
+      "section": "路线与表示",
+      "prerequisites": [],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "1": "ch1-p01-s1",
+        "22": "ch1-p22-s1",
+        "30": "ch1-p30-s1",
+        "31": "ch1-p31-s1"
+      }
+    },
+    {
+      "id": "components-unit",
+      "label": "分量、模与单位方向",
+      "pages": [
+        2
+      ],
+      "summary": "正交归一基下分量是带符号投影，模非负。只有非零矢量才能单位化；方向余弦平方和为一，换基改变分量但不改变同一几何矢量。",
+      "section": "路线与表示",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "2": "ch1-p02-s1"
+      }
+    },
+    {
+      "id": "dot-product",
+      "label": "点乘提取带符号投影",
+      "pages": [
+        3
+      ],
+      "summary": "点乘结果是标量，正交坐标中为同名分量乘积之和。力做功只取位移方向的力分量；夹角钝角时点乘可负，不能把它当成两个模直接相乘。",
+      "section": "路线与表示",
+      "prerequisites": [
+        "components-unit"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "3": "ch1-p03-s1"
+      }
+    },
+    {
+      "id": "cross-product",
+      "label": "叉乘同时记录面积与取向",
+      "pages": [
+        4
+      ],
+      "summary": "叉乘大小对应平行四边形面积，方向依右手规则；换序变号，平行时为零。力矩要同时确定力臂、大小和转轴方向，行列式第二项的符号不可丢。",
+      "section": "路线与表示",
+      "prerequisites": [
+        "components-unit"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "4": "ch1-p04-s1"
+      }
+    },
+    {
+      "id": "triple-products",
+      "label": "三重积的类型与括号",
+      "pages": [
+        5
+      ],
+      "summary": "标量三重积给有向体积，循环换位不变；矢量三重积展开依赖括号位置。叉乘不满足结合律，应先判输出类型再使用BAC−CAB公式。",
+      "section": "路线与表示",
+      "prerequisites": [
+        "dot-product",
+        "cross-product"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "5": "ch1-p05-s1"
+      }
+    },
+    {
+      "id": "flux-orientation",
+      "label": "通量与有向面积元",
+      "pages": [
+        6
+      ],
+      "summary": "通量积累场的法向投影。闭面取外法向，开面先约定法向；零净通量只说明有符号总源相抵，不能推出内部每一点无源。",
+      "section": "通量与散度",
+      "prerequisites": [
+        "dot-product"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "6": "ch1-p06-s1"
+      }
+    },
+    {
+      "id": "divergence-local",
+      "label": "散度是局部净源密度",
+      "pages": [
+        7
+      ],
+      "summary": "小闭面净通量除以体积再取极限得到标量散度。它不是场强大小；均匀非零场可散度为零，点源奇点不能直接套普通可微定义。",
+      "section": "通量与散度",
+      "prerequisites": [
+        "flux-orientation"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "7": "ch1-p07-s1"
+      }
+    },
+    {
+      "id": "divergence-cartesian",
+      "label": "相对面抵消推导散度",
+      "pages": [
+        8,
+        9
+      ],
+      "summary": "对微小长方体的相对面作一阶展开，外法向相反使常数项抵消，三对面留下同名偏导之和。直角基固定是分量简式成立的条件，算子不能像普通矢量随意换位。",
+      "section": "通量与散度",
+      "prerequisites": [
+        "divergence-local"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "8": "ch1-p08-s1",
+        "9": "ch1-p09-s1"
+      }
+    },
+    {
+      "id": "divergence-theorem",
+      "label": "公共面相消与散度定理",
+      "pages": [
+        10
+      ],
+      "summary": "相邻体元公共面法向相反，通量相消，只剩外边界，从而连接体积分与闭面积分。经典形式要求相应光滑性；存在奇点或界面源时必须另行处理。",
+      "section": "通量与散度",
+      "prerequisites": [
+        "divergence-cartesian"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "10": "ch1-p10-s2"
+      }
+    },
+    {
+      "id": "point-charge-div",
+      "label": "点电荷：源外无散不等于无源",
+      "pages": [
+        11,
+        12
+      ],
+      "summary": "点电荷场只在源外可按经典偏导求得零散度，包围电荷的球面电通量仍为q。挖去源点后内外边界通量相抵；不可把原点当成普通无散点。",
+      "section": "通量与散度",
+      "prerequisites": [
+        "divergence-cartesian",
+        "divergence-theorem"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "11": "ch1-p11-s1",
+        "12": "ch1-p12-s1"
+      }
+    },
+    {
+      "id": "position-flux",
+      "label": "位置矢量场的通量例题",
+      "pages": [
+        13
+      ],
+      "summary": "位置矢量场的散度为3，闭面通量为所包围体积的3倍。先比较面积分与体积分的难度；对球面可用两条路线交叉核对量纲和数值。",
+      "section": "通量与散度",
+      "prerequisites": [
+        "divergence-theorem"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "13": "ch1-p13-s1"
+      }
+    },
+    {
+      "id": "circulation",
+      "label": "环量与闭路方向",
+      "pages": [
+        14
+      ],
+      "summary": "环量只取沿闭路的切向贡献，回路反向则变号。理想长直导线外部局部可无旋，但绕被排除导线的闭路仍有非零环量，须检查张面中的源与奇点。",
+      "section": "环量与旋度",
+      "prerequisites": [
+        "dot-product"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "14": "ch1-p14-s1"
+      }
+    },
+    {
+      "id": "curl-local",
+      "label": "旋度是定向环量密度的矢量",
+      "pages": [
+        15
+      ],
+      "summary": "指定面法向时，单位面积小回路环量极限是旋度在该法向的投影；一个方向的投影为零不足以断定旋度为零。局部无旋推出全局保守还需合适的区域拓扑和光滑条件。",
+      "section": "环量与旋度",
+      "prerequisites": [
+        "circulation",
+        "cross-product"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "15": "ch1-p15-s1"
+      }
+    },
+    {
+      "id": "curl-cartesian",
+      "label": "小回路推导旋度分量",
+      "pages": [
+        16
+      ],
+      "summary": "在与指定法向垂直的小矩形上累加环量，得到交叉偏导的反对称组合。回路与法向按右手配对，循环置换恢复三分量；行列式只是保存求导次序与符号的缩写。",
+      "section": "环量与旋度",
+      "prerequisites": [
+        "curl-local"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "16": "ch1-p16-s1"
+      }
+    },
+    {
+      "id": "curl-identities",
+      "label": "旋无散与旋旋恒等式",
+      "pages": [
+        17,
+        18
+      ],
+      "summary": "足够光滑时混合偏导相消，旋度的散度为零；旋度再取旋度一般不为零，而为梯度散度减矢量拉普拉斯。曲面坐标下不能把矢量拉普拉斯无条件当成各分量标量拉普拉斯。",
+      "section": "环量与旋度",
+      "prerequisites": [
+        "curl-cartesian",
+        "divergence-cartesian"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "17": "ch1-p17-s2",
+        "18": "ch1-p18-s1"
+      }
+    },
+    {
+      "id": "stokes-theorem",
+      "label": "公共边相消与斯托克斯定理",
+      "pages": [
+        18
+      ],
+      "summary": "小片公共边被反向积分而相消，把旋度的曲面通量变为边界环量。可定向曲面、右手配向和场在邻域内光滑是关键，不能任意换张面穿过未处理奇点。",
+      "section": "环量与旋度",
+      "prerequisites": [
+        "curl-local"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "18": "ch1-p18-s2"
+      }
+    },
+    {
+      "id": "point-charge-curl",
+      "label": "静电点电荷场的无旋性",
+      "pages": [
+        19
+      ],
+      "summary": "源外点电荷场的交叉偏导两两相等，旋度为零。它描述局部环量，与源外散度为零是不同性质；也可由静电势的负梯度及梯无旋作独立核验。",
+      "section": "环量与旋度",
+      "prerequisites": [
+        "curl-cartesian"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "19": "ch1-p19-s1"
+      }
+    },
+    {
+      "id": "vector-stokes",
+      "label": "体积分版旋度恒等式",
+      "pages": [
+        20
+      ],
+      "summary": "以任意空间常矢量取投影，用叉乘散度恒等式及散度定理证明旋度体积分与闭面叉乘积分的关系。它不同于通常的曲面—边界斯托克斯形式，叉乘次序决定负号。",
+      "section": "环量与旋度",
+      "prerequisites": [
+        "triple-products",
+        "divergence-theorem",
+        "curl-identities"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "20": "ch1-p20-s1"
+      }
+    },
+    {
+      "id": "div-curl-uniqueness",
+      "label": "散度、旋度与唯一性的条件",
+      "pages": [
+        21
+      ],
+      "summary": "散度刻画净源，旋度刻画局部环流，两者并非完整梯度矩阵。仅给两者不足以无条件唯一确定场：加常矢量不改变它们，还需边界或无穷远条件及适当正则性。",
+      "section": "方法比较",
+      "prerequisites": [
+        "divergence-local",
+        "curl-local"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "21": "ch1-p21-s1"
+      }
+    },
+    {
+      "id": "directional-derivative",
+      "label": "方向导数是梯度的单位方向投影",
+      "pages": [
+        23,
+        28
+      ],
+      "summary": "用链式法则把沿单位长度的标量变化率写成梯度与单位方向点乘。先求偏导再代点，非零方向矢量必须归一化，否则算到的是参数变化率而非单位长度变化率。",
+      "section": "梯度与势",
+      "prerequisites": [
+        "components-unit",
+        "dot-product"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "23": "ch1-p23-s1",
+        "28": "ch1-p28-s1"
+      }
+    },
+    {
+      "id": "gradient-maximum",
+      "label": "梯度与最大增长方向",
+      "pages": [
+        24
+      ],
+      "summary": "非零梯度给最快增长方向，梯度模是最大方向导数。梯度为零只说明所有一阶方向导数为零，不能仅凭这一条件判定极大、极小或鞍点。",
+      "section": "梯度与势",
+      "prerequisites": [
+        "directional-derivative"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "24": "ch1-p24-s1"
+      }
+    },
+    {
+      "id": "level-surface",
+      "label": "等值面法向与梯度",
+      "pages": [
+        25
+      ],
+      "summary": "正则等值面切向导数为零，故非零梯度垂直切面并指向标量增大侧。临界点不能除以梯度模；梯无旋与梯度的散度为拉普拉斯是不同结论。",
+      "section": "梯度与势",
+      "prerequisites": [
+        "gradient-maximum"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "25": "ch1-p25-s1"
+      }
+    },
+    {
+      "id": "gradient-chain",
+      "label": "梯度的乘积与链式法则",
+      "pages": [
+        25,
+        26
+      ],
+      "summary": "普通一元求导规则逐分量给出梯度的乘积、商与复合函数规则。外层导数为负会反转梯度方向，商法则需分母非零；梯无旋需相应光滑条件。",
+      "section": "梯度与势",
+      "prerequisites": [
+        "directional-derivative"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "25": "ch1-p25-s2",
+        "26": "ch1-p26-s1"
+      }
+    },
+    {
+      "id": "source-field-gradient",
+      "label": "源点与场点求导的反号",
+      "pages": [
+        27
+      ],
+      "summary": "分离矢量始终从源点指向场点，分别固定另一组坐标。距离倒数对场点的梯度指向源点，对源点的梯度反向；源场重合处不能使用该普通函数公式。",
+      "section": "梯度与势",
+      "prerequisites": [
+        "gradient-chain"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "27": "ch1-p27-s1"
+      }
+    },
+    {
+      "id": "gradient-example",
+      "label": "方向导数例题的归一化检查",
+      "pages": [
+        28
+      ],
+      "summary": "按求函数梯度、代入点、方向单位化、点乘的顺序完成例题。结果绝对值不超过点上梯度模，用这个界可独立发现遗漏单位化的错误。",
+      "section": "梯度与势",
+      "prerequisites": [
+        "directional-derivative",
+        "gradient-maximum"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "28": "ch1-p28-s2"
+      }
+    },
+    {
+      "id": "green-identities",
+      "label": "由散度定理推导格林恒等式",
+      "pages": [
+        29
+      ],
+      "summary": "令矢量场为一标量乘另一标量的梯度，结合乘积求导得格林第一恒等式；互换并相减得第二式。边界项用外法向导数，位问题仍需方程与边界条件。",
+      "section": "梯度与势",
+      "prerequisites": [
+        "divergence-theorem",
+        "gradient-chain"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "29": "ch1-p29-s1"
+      }
+    },
+    {
+      "id": "cylindrical-geometry",
+      "label": "柱坐标基矢、线元与测度",
+      "pages": [
+        32,
+        33
+      ],
+      "summary": "方位角增量对应半径乘角度的弧长，三条正交边长生成面积与体积元。局部径向/方位基随位置转动；轴上方位不唯一是坐标问题，不自动等于物理场奇点。",
+      "section": "曲面坐标",
+      "prerequisites": [
+        "components-unit"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "32": "ch1-p32-s1",
+        "33": "ch1-p33-s1"
+      }
+    },
+    {
+      "id": "spherical-geometry",
+      "label": "球坐标角约定与尺度因子",
+      "pages": [
+        34,
+        35
+      ],
+      "summary": "极角从正轴量起，极角弧与方位角弧的半径分别为r与r sinθ。面积元按法向选另两条边，体积元为三边乘积；P35第三尺度下标按方位坐标理解为h3。",
+      "section": "曲面坐标",
+      "prerequisites": [
+        "cylindrical-geometry"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "34": "ch1-p34-s1",
+        "35": "ch1-p35-s1"
+      }
+    },
+    {
+      "id": "position-transform",
+      "label": "位置变换与象限",
+      "pages": [
+        36
+      ],
+      "summary": "先投影到水平面再分解直角分量可重建坐标变换。反求角度须保留象限，宜用双参数反正切；原点与极轴的角度不唯一需单独约定。",
+      "section": "曲面坐标",
+      "prerequisites": [
+        "spherical-geometry"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "36": "ch1-p36-s1"
+      }
+    },
+    {
+      "id": "basis-components",
+      "label": "换基与矢量分量转换",
+      "pages": [
+        37,
+        38
+      ],
+      "summary": "变换矩阵元素是同一点新旧单位基矢的点积，正交矩阵的逆为转置。位置坐标变换不等于矢量分量变换；用纯方位基检验P38的x分量末项应为负号。",
+      "section": "曲面坐标",
+      "prerequisites": [
+        "position-transform",
+        "dot-product"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "37": "ch1-p37-s1",
+        "38": "ch1-p38-s1"
+      }
+    },
+    {
+      "id": "moving-basis",
+      "label": "曲面坐标求导必须微分基矢",
+      "pages": [
+        39
+      ],
+      "summary": "每单位真实长度的变化率包含尺度因子；矢量求导还须保留基矢转动产生的项。方向变化也会使导数非零，不能只求分量偏导或把增量一概说成与原矢量不同向。",
+      "section": "曲面坐标",
+      "prerequisites": [
+        "basis-components",
+        "gradient-chain"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "39": "ch1-p39-s1"
+      }
+    },
+    {
+      "id": "cylindrical-operators",
+      "label": "柱坐标散度与旋度",
+      "pages": [
+        40
+      ],
+      "summary": "方位基的转动产生散度的额外径向项，合并为半径乘径向分量的导数。旋度同样带尺度因子，不能仅替换直角坐标字母；轴上须用原场或极限判断。",
+      "section": "曲面坐标",
+      "prerequisites": [
+        "moving-basis",
+        "divergence-cartesian",
+        "curl-cartesian"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "40": "ch1-p40-s1"
+      }
+    },
+    {
+      "id": "spherical-operators",
+      "label": "球坐标散度与旋度",
+      "pages": [
+        41
+      ],
+      "summary": "球面面积增长和纬圈半径产生径向平方与极角正弦因子。保留全部基矢角导数；用反平方径向场及位置矢量场检查散度，原点与极轴不能直接代入正常坐标公式。",
+      "section": "曲面坐标",
+      "prerequisites": [
+        "moving-basis",
+        "spherical-geometry",
+        "divergence-cartesian",
+        "curl-cartesian"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "41": "ch1-p41-s1"
+      }
+    },
+    {
+      "id": "dipole-potential-example",
+      "label": "由远区静电偶极势求场",
+      "pages": [
+        42
+      ],
+      "summary": "真空静电偶极近似要求观察距离远大于电荷间距，偶极矩从负电荷指向正电荷。负梯度给径向与极角分量，角偏导须除以r；轴对称仅使方位分量为零，不使极角分量为零。",
+      "section": "曲面坐标",
+      "prerequisites": [
+        "moving-basis",
+        "spherical-geometry",
+        "gradient-maximum"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "42": "ch1-p42-s1"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "flux-orientation",
+      "to": "circulation",
+      "label": "对比：穿面法向与沿线切向"
+    },
+    {
+      "from": "divergence-theorem",
+      "to": "stokes-theorem",
+      "label": "类比：公共面相消与公共边相消"
+    },
+    {
+      "from": "point-charge-div",
+      "to": "point-charge-curl",
+      "label": "对比：同名偏导相加与交叉偏导相减"
+    },
+    {
+      "from": "circulation",
+      "to": "div-curl-uniqueness",
+      "label": "反例提醒：局部性质不代替全局条件"
+    },
+    {
+      "from": "level-surface",
+      "to": "dipole-potential-example",
+      "label": "应用：电场取电位负梯度"
+    },
+    {
+      "from": "gradient-chain",
+      "to": "point-charge-curl",
+      "label": "核验：静电势的负梯度无旋"
+    },
+    {
+      "from": "source-field-gradient",
+      "to": "point-charge-div",
+      "label": "联系：反距离势与反平方场"
+    },
+    {
+      "from": "spherical-operators",
+      "to": "point-charge-div",
+      "label": "复核：正常点反平方径向场无散"
+    },
+    {
+      "from": "spherical-operators",
+      "to": "position-flux",
+      "label": "复核：位置矢量场散度为3"
+    },
+    {
+      "from": "operator-roadmap",
+      "to": "divergence-theorem",
+      "label": "选法：闭面与体积分互换"
+    },
+    {
+      "from": "operator-roadmap",
+      "to": "stokes-theorem",
+      "label": "选法：闭线与旋度曲面积分互换"
+    },
+    {
+      "from": "operator-roadmap",
+      "to": "directional-derivative",
+      "label": "选法：标量场先问方向变化率"
+    },
+    {
+      "from": "triple-products",
+      "to": "vector-stokes",
+      "label": "工具：循环换位与叉乘符号"
+    },
+    {
+      "from": "basis-components",
+      "to": "spherical-operators",
+      "label": "推导来源：球基角导数"
+    },
+    {
+      "from": "green-identities",
+      "to": "div-curl-uniqueness",
+      "label": "联系：位的边值求解不可缺边界数据"
+    }
+  ]
+}

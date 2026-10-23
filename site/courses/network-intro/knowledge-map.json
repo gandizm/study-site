@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "id": "network-intro",
+  "title": "计算机网络 课程导学",
+  "reader": "/study-site/network-intro-ppt.html",
+  "totalPages": 11,
+  "source": {
+    "pdf": "/study-site/courses/source-pages/6f8998ec885940fd9311/source.pdf",
+    "sha256": "6f8998ec885940fd93117c5de26cc3f830583f7d4dbe00deb4eeccb272a65be7",
+    "sourcePdfPages": 11,
+    "readerPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "pageNumbering": "reader内位置1–11对应真实data-page1–11及主版PDF物理1–11页。",
+    "recoveryStatus": "new-authored-map-from-restored-reader-and-source-not-old-frozen-json"
+  },
+  "nodes": [
+    {
+      "id": "network-questions",
+      "label": "从一次联网操作建立问题链",
+      "pages": [
+        1,
+        4
+      ],
+      "summary": "从连接、转发、差错与快慢追问机制，再按传信号、组织一跳、协调无线共享、跨网寻路理解课程顺序；章节编号跳跃不等于漏页。",
+      "prerequisites": [],
+      "section": "课程问题与组织",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "course-agreement",
+      "label": "区分课件安排、学习记录与正式课程要求",
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "summary": "封面2.5学分与P2的4学分冲突原样标明；20%+20%+60%是原课总评构成，考勤和提交以正式当期要求为准，网页读完不等于作业已提交。",
+      "prerequisites": [
+        "network-questions"
+      ],
+      "section": "课程问题与组织",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "learning-evidence",
+      "label": "以解释、条件变化和实践记录检验理解",
+      "pages": [
+        2,
+        3,
+        6
+      ],
+      "summary": "从自己的因果笔记、建模步骤、订正与实验观察判断是否掌握；会背名字或抄公式不能代替解释变量和适用条件。",
+      "prerequisites": [
+        "network-questions"
+      ],
+      "section": "学习方法与证据",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "layered-responsibility",
+      "label": "信号、一跳、共享与跨网各有责任",
+      "pages": [
+        4
+      ],
+      "summary": "物理层、链路层、无线协调、网络层分别回答不同问题；MAC与IP路径、流量控制与差错重传、采样定理与码元速率约束不混为同一机制。",
+      "prerequisites": [
+        "network-questions"
+      ],
+      "section": "课程问题与组织",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "model-boundaries",
+      "label": "比较公式之前先统一系统与统计边界",
+      "pages": [
+        4,
+        6,
+        8
+      ],
+      "summary": "同一字母可能对应不同量，发送时延与传播时延、含不含排队等条件必须先核；用改变一个条件的反例检验模型，而非把不同来源的式子直接拼接。",
+      "prerequisites": [
+        "learning-evidence",
+        "layered-responsibility"
+      ],
+      "section": "学习方法与证据",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "engineering-cases",
+      "label": "把技术案例落到机制、约束和可验证结论",
+      "pages": [
+        5
+      ],
+      "summary": "主干速率不等于每户速率，标准存在不等于产品达标；CADP原表ISO/ITU笔误按现有讲义区分ISO/IEC，路由案例需比较范围与目标而非找永远最好协议。",
+      "prerequisites": [
+        "layered-responsibility",
+        "model-boundaries"
+      ],
+      "section": "学习方法与证据",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "reading-sources",
+      "label": "按具体问题使用教材、参考书和旧链接",
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "summary": "用版次、主题、定义和来源定位，不把教材页码等同PPT页码；旧课程链接未核可访问性不等于其技术论证已被否定，也不冒称已经读过外部材料。",
+      "prerequisites": [
+        "model-boundaries"
+      ],
+      "section": "材料与工具",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "topology-model",
+      "label": "连线图是追踪路径的模型，不是可达证明",
+      "pages": [
+        10
+      ],
+      "summary": "用路由器、交换机、主机和服务器拓扑解释下一跳与断链影响；尚无配置、带宽、负载和协议条件时，生成的连通图不能证明可达或给出性能。",
+      "prerequisites": [
+        "layered-responsibility",
+        "model-boundaries"
+      ],
+      "section": "材料与工具",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "observation-inference",
+      "label": "机器人静帧只支持观察，不确认通信实现",
+      "pages": [
+        11
+      ],
+      "summary": "把直接观察、候选控制/回传/同步需求与待核实现分开；整齐动作可有不同原因，不能仅凭画面认定Wi-Fi、实时联网或云控。",
+      "prerequisites": [
+        "engineering-cases",
+        "topology-model"
+      ],
+      "section": "材料与工具",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "practice-loop",
+      "label": "问题、模型、证据、复核形成学习闭环",
+      "pages": [
+        2,
+        6,
+        10,
+        11
+      ],
+      "summary": "选一条数据流说明发送者、接收者与业务约束，再提出可检验模型和所需证据；记录过程而非只留成功截图，作业分析与正式提交仍是两件事。",
+      "prerequisites": [
+        "learning-evidence",
+        "reading-sources",
+        "observation-inference"
+      ],
+      "section": "学习方法与证据",
+      "type": "method",
+      "source": "ppt"
+    }
+  ],
+  "edges": [
+    {
+      "from": "course-agreement",
+      "to": "practice-loop",
+      "label": "约束：学习成果仍须按课程要求完成提交"
+    },
+    {
+      "from": "reading-sources",
+      "to": "engineering-cases",
+      "label": "核对：书目和原始规范帮助检查案例边界"
+    },
+    {
+      "from": "topology-model",
+      "to": "engineering-cases",
+      "label": "应用：沿数据路径定位技术贡献"
+    },
+    {
+      "from": "observation-inference",
+      "to": "model-boundaries",
+      "label": "提醒：候选解释必须声明条件与证据缺口"
+    },
+    {
+      "from": "network-questions",
+      "to": "practice-loop",
+      "label": "贯穿：最终应能解释最初那次联网操作"
+    }
+  ]
+}

@@ -20,12 +20,12 @@ def resource(href):
  assert not p.startswith('/'),href
  f=(SITE/p).resolve();assert f.is_relative_to(SITE.resolve()) and f.is_file(),f'Missing resource: {href}';return f
 def check():
- r=json.loads((SITE/'knowledge-map-registry.json').read_text());assert r['schemaVersion']==1
+ r=json.loads((SITE/'knowledge-map-registry.json').read_text(encoding='utf-8'));assert r['schemaVersion']==1
  seen=set()
  for row in r['maps']:
   chapter=row['chapterId'];assert chapter not in seen;seen.add(chapter)
-  g=json.loads(resource(row['knowledgeMapPath']).read_text());assert g['version']==1 and g['id']==chapter
-  p=Reader();p.feed(resource(row['readerPath']).read_text());pages=set(p.pages)
+  g=json.loads(resource(row['knowledgeMapPath']).read_text(encoding='utf-8'));assert g['version']==1 and g['id']==chapter
+  p=Reader();p.feed(resource(row['readerPath']).read_text(encoding='utf-8'));pages=set(p.pages)
   assert len(pages)==len(p.pages)==row['readerPageCount'],f'{chapter}: page count'
   assert len(p.maps)==1 and resource(p.maps[0])==resource(row['knowledgeMapPath'])
   for asset in ['knowledge-map.js','knowledge-neighborhood.js']:

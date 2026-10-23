@@ -1,0 +1,5489 @@
+{
+  "version": 1,
+  "id": "network-ch1-foundations",
+  "pageCount": 103,
+  "reader": "network-ch1-foundations-ppt.html",
+  "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+  "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda",
+  "sourceStatus": "图谱pages指当前主版阅读器物理页1–103；补充图来自多份分节PDF，source-map逐图保存实际文件页，禁止将补充PDF页号当成阅读器跳页号。",
+  "pages": [
+    {
+      "page": 1,
+      "title": "手机能看到远处的信息，中间发生了什么？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"1\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 1,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=1",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-1.webp",
+          "imageSha256": "67c010e8c9ce02220aff61a5b69eaa567035ca6549852621c6456aa2562b9cc1",
+          "imageBytes": 433646,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-1.webp",
+          "imageSha256": "56bdbc40fbdb3864687c94b209d9e7592f746bde48ecdb259e26675d928b3c63",
+          "imageBytes": 49004,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-1.webp",
+      "imageSha256": "67c010e8c9ce02220aff61a5b69eaa567035ca6549852621c6456aa2562b9cc1",
+      "imageBytes": 433646,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 1,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 1,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "title": "远处的设备，难道都和我的手机直接连线？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"2\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 2,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=2",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-2.webp",
+          "imageSha256": "422a625d0ecbcfdd2d686891d40123198daa591fcd9a80a39a9196427152b5f3",
+          "imageBytes": 941858,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-3.webp",
+          "imageSha256": "4b05277ef1900d641885b0f3fe15afe0094d0e196cc554cef49b18f0519b39a2",
+          "imageBytes": 890196,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-2.webp",
+      "imageSha256": "422a625d0ecbcfdd2d686891d40123198daa591fcd9a80a39a9196427152b5f3",
+      "imageBytes": 941858,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 3,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 2,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "title": "能跨地域共享信息，为什么也需要规则与责任？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"3\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 3,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=3",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-3.webp",
+          "imageSha256": "e499df321c2294e2f876f39526bc5658e22c4d96899f8efcd73dc45cc740feca",
+          "imageBytes": 61140,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-4.webp",
+          "imageSha256": "7de6e381f42951508e2d213303be66829c1649b2aca5ee9afe9e130073a6403e",
+          "imageBytes": 138580,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-5.webp",
+          "imageSha256": "32bb2d3e0d0eb2ef1e876df8d0c3f62d54f84a492a2585f2b77a970d2361e95b",
+          "imageBytes": 73914,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-3.webp",
+      "imageSha256": "e499df321c2294e2f876f39526bc5658e22c4d96899f8efcd73dc45cc740feca",
+      "imageBytes": 61140,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 4,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 5,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 3,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "title": "温度和货物身份，怎样变成能传送的数据？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"4\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 4,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=4",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-4.webp",
+          "imageSha256": "cc22636181918ae7e78402a9845e4f72b90fdead28e4201e85b4e0034f020319",
+          "imageBytes": 302378,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-6.webp",
+          "imageSha256": "b12c8ca0721f930407cc382bb761c2561c96e8ae5e3a15acca81fafd2997fb82",
+          "imageBytes": 301640,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-4.webp",
+      "imageSha256": "cc22636181918ae7e78402a9845e4f72b90fdead28e4201e85b4e0034f020319",
+      "imageBytes": 302378,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 6,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 4,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "title": "货物在移动，数据库里的信息又沿哪条路走？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"5\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 5,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=5",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-5.webp",
+          "imageSha256": "87c51b696b046bf792bd18c93e32f9cfeb364ef20bdf457a7418d97195450053",
+          "imageBytes": 474020,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-7.webp",
+          "imageSha256": "883c43211c30bc01ef53eea374189b1c73b3948ac87c668ff1ed655eb1dc9583",
+          "imageBytes": 510408,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-5.webp",
+      "imageSha256": "87c51b696b046bf792bd18c93e32f9cfeb364ef20bdf457a7418d97195450053",
+      "imageBytes": 474020,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 7,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 5,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "title": "设备多起来以后，后台计算资源怎样按需分配？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"6\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 6,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=6",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-6.webp",
+          "imageSha256": "595cdce8a51b377f2d61e328b64ea28a2b8522cce097f862c3339c7af1ae9a0c",
+          "imageBytes": 330740,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-8.webp",
+          "imageSha256": "2c5c1c6bf8cf5d8b0af20bd1c2c1bd3ddff5149009abc0fc9a78bb8cfa063fed",
+          "imageBytes": 301174,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-44.webp",
+          "imageSha256": "25ff9f693dfbf978d0d50d86bcded8b3ec458f1f3c77f5cef0a773af90678653",
+          "imageBytes": 79552,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-6.webp",
+      "imageSha256": "595cdce8a51b377f2d61e328b64ea28a2b8522cce097f862c3339c7af1ae9a0c",
+      "imageBytes": 330740,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 8,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 44,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 6,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "title": "既然云端能算，为什么还要把一部分计算留在近处？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"7\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 7,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=7",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-7.webp",
+          "imageSha256": "62b6fa3f5c7f5725ee94e77e70262eaef34a6a79179b920849a05c21a58e53c3",
+          "imageBytes": 204814,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-9.webp",
+          "imageSha256": "05caa4a4da91e4ec40b7ca15a910399751362ac7c11c4ec0c6d05ba1d99f5114",
+          "imageBytes": 207126,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-7.webp",
+      "imageSha256": "62b6fa3f5c7f5725ee94e77e70262eaef34a6a79179b920849a05c21a58e53c3",
+      "imageBytes": 204814,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 9,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 7,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "title": "记录越积越多，为什么不只是换一块更大的硬盘？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"8\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 8,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=8",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-8.webp",
+          "imageSha256": "69bf317ccd037761f114e820eae0a9b2eebcecb1f0953164607e1ca55567bf41",
+          "imageBytes": 338460,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-10.webp",
+          "imageSha256": "4b01be5ede1bf2b20a8be0e0f7fdaec047524ed6aa29153084ef0fdddf2993ee",
+          "imageBytes": 353190,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-8.webp",
+      "imageSha256": "69bf317ccd037761f114e820eae0a9b2eebcecb1f0953164607e1ca55567bf41",
+      "imageBytes": 338460,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 10,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 8,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "title": "这些技术放在一起，怎样真正改变原来的业务？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"9\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 9,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=9",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-9.webp",
+          "imageSha256": "9f6c3ed5d3c846a4292f9e4c521dd63fd8bdd0ca48fd4677260738976c2ddaa2",
+          "imageBytes": 804548,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-11.webp",
+          "imageSha256": "e71c01d28156366ed5d07e9e9d034606360e9a0b0c829b09119d6940b7ec0181",
+          "imageBytes": 722896,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-9.webp",
+      "imageSha256": "9f6c3ed5d3c846a4292f9e4c521dd63fd8bdd0ca48fd4677260738976c2ddaa2",
+      "imageBytes": 804548,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 11,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 9,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "title": "把应用名称拿走，网络本身还剩哪些对象？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"10\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 10,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=10",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-10.webp",
+          "imageSha256": "4a514907083dbeea95b97437c16ff6ab57f78bfe3d138cb6144e6ca253844375",
+          "imageBytes": 114664,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-2.webp",
+          "imageSha256": "ab0c7c88b07d12673b0a7a404359c690a7df2aa031ed02c531ade793b06f865e",
+          "imageBytes": 71922,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-10.webp",
+      "imageSha256": "4a514907083dbeea95b97437c16ff6ab57f78bfe3d138cb6144e6ca253844375",
+      "imageBytes": 114664,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 2,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 10,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "title": "连上了线，为什么还不一定能交换有意义的数据？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"11\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 11,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=11",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-11.webp",
+          "imageSha256": "c32449f1a0991c28640aa39e00a4e5be8701398b8342f20736d3b9890015297e",
+          "imageBytes": 152294,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-12.webp",
+          "imageSha256": "0e49ca9bb01078208f2f1bf3ea4f18fd30033a36eed6bc2ae6a3882bba289dcc",
+          "imageBytes": 113450,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-13.webp",
+          "imageSha256": "fde03595b30c9634499f1eebb06f286beba690bb1f51098da808e58f9ee8cc87",
+          "imageBytes": 110298,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-18.webp",
+          "imageSha256": "905c0da3491e8304f8c1568b7f223ef4e3cff71fd2cd5cae58f3465d0271f8d2",
+          "imageBytes": 186806,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-44.webp",
+          "imageSha256": "25ff9f693dfbf978d0d50d86bcded8b3ec458f1f3c77f5cef0a773af90678653",
+          "imageBytes": 79552,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-11.webp",
+      "imageSha256": "c32449f1a0991c28640aa39e00a4e5be8701398b8342f20736d3b9890015297e",
+      "imageBytes": 152294,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 12,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 13,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 18,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 44,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 11,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "title": "一个网络接上另一个网络，为什么还要区分internet和Internet？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"12\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 12,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=12",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-12.webp",
+          "imageSha256": "196aedeb3ca25c48ef7f44dcb6d57377e1d53e79c75f59bbc74a9250e10cb334",
+          "imageBytes": 112950,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-13.webp",
+          "imageSha256": "fde03595b30c9634499f1eebb06f286beba690bb1f51098da808e58f9ee8cc87",
+          "imageBytes": 110298,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-14.webp",
+          "imageSha256": "bf611911d3e49519bc90a2c6edd983ca8c1fdb83e84bc206d49dd415d32251c9",
+          "imageBytes": 66800,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-12.webp",
+      "imageSha256": "196aedeb3ca25c48ef7f44dcb6d57377e1d53e79c75f59bbc74a9250e10cb334",
+      "imageBytes": 112950,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 13,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 14,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 12,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "title": "网络规模变大时，最先要解决哪种组织问题？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"13\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 13,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=13",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-13.webp",
+          "imageSha256": "1adadba50223293c18143da95138066b359089934a56fd01baf7acaa0ce61e6b",
+          "imageBytes": 122132,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-13.webp",
+      "imageSha256": "1adadba50223293c18143da95138066b359089934a56fd01baf7acaa0ce61e6b",
+      "imageBytes": 122132,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 13,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "title": "不同技术建成的网络，为什么能连成一个因特网？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"14\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 14,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=14",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-14.webp",
+          "imageSha256": "70fd8d0956588b3f729894b9660722195c5148af1c448428e5c6d22dd84eb20c",
+          "imageBytes": 85274,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-14.webp",
+      "imageSha256": "70fd8d0956588b3f729894b9660722195c5148af1c448428e5c6d22dd84eb20c",
+      "imageBytes": 85274,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 14,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "title": "校园越连越多，怎样避免每两处都直接拉线？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"15\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 15,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=15",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-15.webp",
+          "imageSha256": "8fa254bfcd3d26593751d02e7f5f50dad88b691fab7b2327056017655a91b2e5",
+          "imageBytes": 209288,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-15.webp",
+      "imageSha256": "8fa254bfcd3d26593751d02e7f5f50dad88b691fab7b2327056017655a91b2e5",
+      "imageBytes": 209288,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 15,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "title": "普通用户不自建主干网，怎样获得网络连通？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"16\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 16,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=16",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-16.webp",
+          "imageSha256": "b8e06202ed076c27fa620520f9ab08c6e619554737dd1aa7be5913c5452da077",
+          "imageBytes": 134480,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-19.webp",
+          "imageSha256": "eac88c184b92dac9b2140ecb905b5e9e1faf53f1d0dce42ba695bac3b779a5dd",
+          "imageBytes": 138748,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-16.webp",
+      "imageSha256": "b8e06202ed076c27fa620520f9ab08c6e619554737dd1aa7be5913c5452da077",
+      "imageBytes": 134480,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 19,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 16,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "title": "访问另一个网络，数据一定要一路送到最顶层吗？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"17\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 17,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=17",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-17.webp",
+          "imageSha256": "c386cd7c49a52e9d1f0e0ffc332edbef6e848c5fd1c0330366367f26659bf5df",
+          "imageBytes": 110082,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-20.webp",
+          "imageSha256": "4b37c945cb3383bda39c1bffceb3a15eb99a172163c9a37f9beabae4e11b4e1d",
+          "imageBytes": 157340,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-17.webp",
+      "imageSha256": "c386cd7c49a52e9d1f0e0ffc332edbef6e848c5fd1c0330366367f26659bf5df",
+      "imageBytes": 110082,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 20,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 17,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "title": "从一台主机服务许多终端，到许多主机互相协作",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"18\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 18,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=18",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-18.webp",
+          "imageSha256": "cf46d2ceb519e917247b3435077f9591d71724e6efcf56f9816002750bb7e63d",
+          "imageBytes": 62358,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-15.webp",
+          "imageSha256": "c0414923afca5aa50889a7e677ab42a0c3b44077df35b4e920de5c224e8c2359",
+          "imageBytes": 242488,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-16.webp",
+          "imageSha256": "c6858ab7c28039790d3bbb7bdb8a917c25fd01a6d2ce4450be5e6738099acb86",
+          "imageBytes": 81540,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-17.webp",
+          "imageSha256": "f7407c546b0b82c23e73347403985bad0046caf07402bc7df1eb90f07021acc5",
+          "imageBytes": 97770,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-18.webp",
+          "imageSha256": "905c0da3491e8304f8c1568b7f223ef4e3cff71fd2cd5cae58f3465d0271f8d2",
+          "imageBytes": 186806,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-21.webp",
+          "imageSha256": "439cbf4f14d0b37719506b2d53e87f277464b61cb338a8fb42c603d41ec2f10c",
+          "imageBytes": 102396,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-22.webp",
+          "imageSha256": "b26de11af6ca8c70591c4132b5c1e4fb26dcd469bff585188d07f4b4c34b9a5f",
+          "imageBytes": 83554,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-23.webp",
+          "imageSha256": "eee681531a9ff252f4b86c20b01f2860c70c38c70466dd20204329a48aeef6c9",
+          "imageBytes": 84824,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-18.webp",
+      "imageSha256": "cf46d2ceb519e917247b3435077f9591d71724e6efcf56f9816002750bb7e63d",
+      "imageBytes": 62358,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 15,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 16,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 17,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 18,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 21,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 22,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 23,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 18,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "title": "主干传得更快，与大家按共同标准合作，是同一件事吗？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"19\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 19,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=19",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-19.webp",
+          "imageSha256": "c44e0e116d84568f407cc741bc635b8921eb6d8efd9cc0def6e60a10e1c0ab09",
+          "imageBytes": 435872,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-24.webp",
+          "imageSha256": "697cd83ac46b51886ae1a17904d0f0c3ab8a3b439010f82457330150695454c2",
+          "imageBytes": 429600,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-19.webp",
+      "imageSha256": "c44e0e116d84568f407cc741bc635b8921eb6d8efd9cc0def6e60a10e1c0ab09",
+      "imageBytes": 435872,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 24,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 19,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "title": "不同名称的网络，分别服务谁，又怎样属于更大的互联？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"20\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 20,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=20",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-20.webp",
+          "imageSha256": "fb33cc69461a7af8c8fc63b1ad676ad2677220bcaad8ccc8b88865f1629a83c6",
+          "imageBytes": 64008,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-25.webp",
+          "imageSha256": "7734c03f9822c9efe595acccd783b683b6e551072123238f5b94af0dd0285bb3",
+          "imageBytes": 95642,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-20.webp",
+      "imageSha256": "fb33cc69461a7af8c8fc63b1ad676ad2677220bcaad8ccc8b88865f1629a83c6",
+      "imageBytes": 64008,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 25,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 20,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "title": "数据要从手机到后台，谁负责应用，谁负责沿途转送？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"21\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 21,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=21",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-21.webp",
+          "imageSha256": "184585a33f0bf130b7fbf01a7579c6cda822fb81e89b3bb4637ba083ffa90b8a",
+          "imageBytes": 120862,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-21.webp",
+      "imageSha256": "184585a33f0bf130b7fbf01a7579c6cda822fb81e89b3bb4637ba083ffa90b8a",
+      "imageBytes": 120862,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 21,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "title": "边缘与核心，为什么不是地图上的远近？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"22\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 22,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=22",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-22.webp",
+          "imageSha256": "32aa4332960cbb5ce80b7896e5f29ee19a9e67fe2bf85853cce0e1377cc20ccb",
+          "imageBytes": 137766,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-22.webp",
+      "imageSha256": "32aa4332960cbb5ce80b7896e5f29ee19a9e67fe2bf85853cce0e1377cc20ccb",
+      "imageBytes": 137766,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 22,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "title": "手机怎样让远处的后台知道“我想查询温度”？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"23\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 23,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=23",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-23.webp",
+          "imageSha256": "5cec4919dcc2e92ae8fbab717b3b9a15ea531178d4872b74567294f8fba2379e",
+          "imageBytes": 168800,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-45.webp",
+          "imageSha256": "13d96d138b7b7d7907b4fdab26fefa5030fa304bb09f519aaa6d24c29fc5303f",
+          "imageBytes": 77526,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-23.webp",
+      "imageSha256": "5cec4919dcc2e92ae8fbab717b3b9a15ea531178d4872b74567294f8fba2379e",
+      "imageBytes": 168800,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 45,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 23,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "title": "服务器等请求时，为什么不必预先认识每一位客户？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"24\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 24,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=24",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-24.webp",
+          "imageSha256": "ac25ea87a9c7298b94442a98a20e712bdeb3c98420b8f8ed4df79330d61fa494",
+          "imageBytes": 177058,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-24.webp",
+      "imageSha256": "ac25ea87a9c7298b94442a98a20e712bdeb3c98420b8f8ed4df79330d61fa494",
+      "imageBytes": 177058,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 24,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "title": "每台机器都能提供资源时，还能分清谁请求、谁回答吗？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"25\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 25,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=25",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-25.webp",
+          "imageSha256": "28c81bdb36b4ac44a82a6fc6f4e58027db47a8d3cb7b8e71bae48cb3c187121e",
+          "imageBytes": 159112,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-25.webp",
+      "imageSha256": "28c81bdb36b4ac44a82a6fc6f4e58027db47a8d3cb7b8e71bae48cb3c187121e",
+      "imageBytes": 159112,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 25,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 26,
+      "title": "核心设备不懂温度，凭什么把它送到正确的后台？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"26\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 26,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=26",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-26.webp",
+          "imageSha256": "47543bc457f5d5d702e05d82f762244dd8edd1cbf9d9f108898ab18cf354888d",
+          "imageBytes": 252506,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-26.webp",
+      "imageSha256": "47543bc457f5d5d702e05d82f762244dd8edd1cbf9d9f108898ab18cf354888d",
+      "imageBytes": 252506,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 26,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "title": "如果每两部电话都单独连线，线路为什么很快不够用？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"27\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 27,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=27",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-27.webp",
+          "imageSha256": "1e4001d3107c10f2826d1e4f136f36de526f78027f8238f535a832a828aa038b",
+          "imageBytes": 85746,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-35.webp",
+          "imageSha256": "2203fef17a4e2937e4ab538460a681ce3172a4e5a5f0a7202f3cc596f2979609",
+          "imageBytes": 114348,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-27.webp",
+      "imageSha256": "1e4001d3107c10f2826d1e4f136f36de526f78027f8238f535a832a828aa038b",
+      "imageBytes": 85746,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 35,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 27,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "title": "不用每两部直连，交换机怎样帮它们接通？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"28\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 28,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=28",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-28.webp",
+          "imageSha256": "b1fe41c4963a5aef1459fb051c386e01dd449d75d54119bd47f31e6d7e9f2725",
+          "imageBytes": 126410,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-35.webp",
+          "imageSha256": "2203fef17a4e2937e4ab538460a681ce3172a4e5a5f0a7202f3cc596f2979609",
+          "imageBytes": 114348,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-36.webp",
+          "imageSha256": "aafb4f5bcd83c6d3e39d147ead96a9ca64f4e3eabdb8408ccb6b8c03753eb033",
+          "imageBytes": 124660,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-28.webp",
+      "imageSha256": "b1fe41c4963a5aef1459fb051c386e01dd449d75d54119bd47f31e6d7e9f2725",
+      "imageBytes": 126410,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 35,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 36,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 28,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "title": "通信有时很忙、有时安静，专用通路会浪费在哪里？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"29\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 29,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=29",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-29.webp",
+          "imageSha256": "1baf483a5b821a99c0bf977a6039c4e2d8749a0d3c18565e268bb7fb4cfcf5e4",
+          "imageBytes": 143580,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-36.webp",
+          "imageSha256": "aafb4f5bcd83c6d3e39d147ead96a9ca64f4e3eabdb8408ccb6b8c03753eb033",
+          "imageBytes": 124660,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-37.webp",
+          "imageSha256": "24746dd403077ae60304476e428af983a5e708dbdd4c58e30e0ba6cbd664749a",
+          "imageBytes": 94918,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-29.webp",
+      "imageSha256": "1baf483a5b821a99c0bf977a6039c4e2d8749a0d3c18565e268bb7fb4cfcf5e4",
+      "imageBytes": 143580,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 36,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 37,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 29,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "title": "要让别人利用空闲间隙，为什么先把大报文切小？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"30\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 30,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=30",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-30.webp",
+          "imageSha256": "54ca979a656f642308e9350eb7ffd276055002749b008c72345c87eb6b6c4a0b",
+          "imageBytes": 91404,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-39.webp",
+          "imageSha256": "0f26e260f720ec19b15e2bf28b2509268cea440528a4991b0a05e7f9c01abefe",
+          "imageBytes": 148958,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-30.webp",
+      "imageSha256": "54ca979a656f642308e9350eb7ffd276055002749b008c72345c87eb6b6c4a0b",
+      "imageBytes": 91404,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 39,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 30,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "title": "每个短数据段都加首部，究竟换来了什么？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"31\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 31,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=31",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-31.webp",
+          "imageSha256": "e259f52ed7ab890080da23f5f7c47f7b5ef879d808d1a458771572c7e92f6137",
+          "imageBytes": 117092,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-39.webp",
+          "imageSha256": "0f26e260f720ec19b15e2bf28b2509268cea440528a4991b0a05e7f9c01abefe",
+          "imageBytes": 148958,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-31.webp",
+      "imageSha256": "e259f52ed7ab890080da23f5f7c47f7b5ef879d808d1a458771572c7e92f6137",
+      "imageBytes": 117092,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 39,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 31,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 32,
+      "title": "一份报文拆成多份后，链路实际一次在传什么？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"32\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 32,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=32",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-32.webp",
+          "imageSha256": "1c73e9badfdf441c9b7cb0db36d8234729225c1db194c4e1aab47ed6a0a54cb7",
+          "imageBytes": 72136,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-39.webp",
+          "imageSha256": "0f26e260f720ec19b15e2bf28b2509268cea440528a4991b0a05e7f9c01abefe",
+          "imageBytes": 148958,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-32.webp",
+      "imageSha256": "1c73e9badfdf441c9b7cb0db36d8234729225c1db194c4e1aab47ed6a0a54cb7",
+      "imageBytes": 72136,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 39,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 32,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 33,
+      "title": "收齐这些短单元，怎样才算拿回原来的报文？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"33\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 33,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=33",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-33.webp",
+          "imageSha256": "8b22bcc249c040d69e928158302cd7d2e8443995c0486743cf00c156cc83a9cf",
+          "imageBytes": 95222,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-39.webp",
+          "imageSha256": "0f26e260f720ec19b15e2bf28b2509268cea440528a4991b0a05e7f9c01abefe",
+          "imageBytes": 148958,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-33.webp",
+      "imageSha256": "8b22bcc249c040d69e928158302cd7d2e8443995c0486743cf00c156cc83a9cf",
+      "imageBytes": 95222,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 39,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 33,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 34,
+      "title": "同一张网容纳多次通信，路径为什么不必永远一样？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"34\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 34,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=34",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-34.webp",
+          "imageSha256": "33f50f5cab97d119dad3c38431118a3c39e83d1f4c8d5c9e8ad92fa945fe1197",
+          "imageBytes": 103006,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-40.webp",
+          "imageSha256": "f9b6c71eaa02bd277bab1446b91aee2a0057370e662e00f470add9c6c2a9dcc6",
+          "imageBytes": 117144,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-34.webp",
+      "imageSha256": "33f50f5cab97d119dad3c38431118a3c39e83d1f4c8d5c9e8ad92fa945fe1197",
+      "imageBytes": 103006,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 40,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 34,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 35,
+      "title": "一份分组经过三个路由器，每一站到底重复哪几步？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"35\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 35,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=35",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-35.webp",
+          "imageSha256": "48691d8171532b204c7a223027cd4c3cc997a8d23ad0f772af9b7786604bf55e",
+          "imageBytes": 97716,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-38.webp",
+          "imageSha256": "3401b77d7a00863418e208dc6a5e4e2acb08848b60f7eca252bdd1339d4cecf8",
+          "imageBytes": 104550,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-35.webp",
+      "imageSha256": "48691d8171532b204c7a223027cd4c3cc997a8d23ad0f772af9b7786604bf55e",
+      "imageBytes": 97716,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 38,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 35,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 36,
+      "title": "不再一直预留通路，得到的好处要付什么代价？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"36\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 36,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=36",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-36.webp",
+          "imageSha256": "dd7e93a78c868a8f7469690d76a94397e74f984a0b6c2801ab024201a909da35",
+          "imageBytes": 155708,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-43.webp",
+          "imageSha256": "d37ff651b2f4491123e6cf012bc057d0853f7ffb2706e6a5491f454c75c57a03",
+          "imageBytes": 111720,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-36.webp",
+      "imageSha256": "dd7e93a78c868a8f7469690d76a94397e74f984a0b6c2801ab024201a909da35",
+      "imageBytes": 155708,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 43,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 36,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 37,
+      "title": "三种交换方式，究竟是在“等什么”上不同？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"37\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 37,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=37",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-37.webp",
+          "imageSha256": "cc2edeb67b1ef19e9c796d761655f263dd4e69a20938d645f84e3827b03e93f8",
+          "imageBytes": 110358,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-34.webp",
+          "imageSha256": "96b23b69795a652c454995d629247f1ce7ed17b7686d9877567b0556edc007b9",
+          "imageBytes": 120628,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-42.webp",
+          "imageSha256": "cef8bee3bccab750a8dbbb05495e15ca4cb8da169166a192028ab637860c6a3a",
+          "imageBytes": 105654,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-37.webp",
+      "imageSha256": "cc2edeb67b1ef19e9c796d761655f263dd4e69a20938d645f84e3827b03e93f8",
+      "imageBytes": 110358,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 34,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 42,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 37,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 38,
+      "title": "分成小份之后，为什么整份报文可能更早到达？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"38\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 38,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=38",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-38.webp",
+          "imageSha256": "db6bfa86160685f428c7c68f9e3f6bf57a94dbdd496d3f6c5e9c936c54d86e2c",
+          "imageBytes": 102612,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-41.webp",
+          "imageSha256": "afd954a7e898eac23488dd2d282f1f1d3458b2d0191ba169dd5475749dbdaef1",
+          "imageBytes": 105280,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-42.webp",
+          "imageSha256": "cef8bee3bccab750a8dbbb05495e15ca4cb8da169166a192028ab637860c6a3a",
+          "imageBytes": 105654,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-38.webp",
+      "imageSha256": "db6bfa86160685f428c7c68f9e3f6bf57a94dbdd496d3f6c5e9c936c54d86e2c",
+      "imageBytes": 102612,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 41,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 42,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 38,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 39,
+      "title": "校园网既是局域网，又能是专用网，矛盾吗？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"39\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 39,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=39",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-39.webp",
+          "imageSha256": "c47b445c46dfdcadd2a418722ac911ec5fe1ac8a8aa5e346e205cc40a3bb5786",
+          "imageBytes": 122992,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-26.webp",
+          "imageSha256": "8ca5c2ff28dbf0136337471f9a3b439485ad882c16bc9fa72f87f96886903802",
+          "imageBytes": 80498,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-39.webp",
+      "imageSha256": "c47b445c46dfdcadd2a418722ac911ec5fe1ac8a8aa5e346e205cc40a3bb5786",
+      "imageBytes": 122992,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 26,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 39,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 40,
+      "title": "覆盖范围与接入位置，为什么不能只靠米数硬分？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"40\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 40,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=40",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-40.webp",
+          "imageSha256": "12865bea5d3aa21cf40234b6331e07e6bc112f824b9bd538235829a23544eab2",
+          "imageBytes": 157912,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-27.webp",
+          "imageSha256": "a54a121921882284005c9f681b2563d82ebaf1ab5168d9e46eb099c0f9e7f546",
+          "imageBytes": 109452,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-28.webp",
+          "imageSha256": "a804dfaebcdbf812e142270b9b0b27ae4375b8dece9b8361608f9a517667845d",
+          "imageBytes": 88894,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-40.webp",
+      "imageSha256": "12865bea5d3aa21cf40234b6331e07e6bc112f824b9bd538235829a23544eab2",
+      "imageBytes": 157912,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 27,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 28,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 40,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 41,
+      "title": "从企业网走向远方，图里的各类网络怎样接起来？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"41\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 41,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=41",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-41.webp",
+          "imageSha256": "b21e32c6c78547c628ad60c6315a2e6e7446366f53d9ce2eeff2cc7773456859",
+          "imageBytes": 57264,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-29.webp",
+          "imageSha256": "9d32781833569d5bab5d510335ae8f03ee31f106df59fe07f488f5d18a8a6140",
+          "imageBytes": 92646,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-41.webp",
+      "imageSha256": "b21e32c6c78547c628ad60c6315a2e6e7446366f53d9ce2eeff2cc7773456859",
+      "imageBytes": 57264,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 29,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 41,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 42,
+      "title": "服务谁与怎么连，是两道不同的设计题",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"42\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 42,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=42",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-42.webp",
+          "imageSha256": "bf621aec29895ed173cf6d293e5f162fa9fe2ddec3f1662368d682c876b19903",
+          "imageBytes": 114950,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-30.webp",
+          "imageSha256": "8a1a9aca42192df6be579457d129e6e789907df1cd9ea9613bb954854f20545d",
+          "imageBytes": 67986,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-31.webp",
+          "imageSha256": "6bed1e5e0ace64b7af62137f76402cffd61d4379ef951f84f349b94f6d7e076c",
+          "imageBytes": 84192,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-42.webp",
+      "imageSha256": "bf621aec29895ed173cf6d293e5f162fa9fe2ddec3f1662368d682c876b19903",
+      "imageBytes": 114950,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 30,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 31,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 42,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 43,
+      "title": "换一种连法，会把成本、共享与故障风险移到哪里？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"43\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 43,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=43",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-43.webp",
+          "imageSha256": "6957cfa002b61a0a4a8ac3b7893b03b975ed31dc48983b504d452c485b253309",
+          "imageBytes": 79130,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-31.webp",
+          "imageSha256": "6bed1e5e0ace64b7af62137f76402cffd61d4379ef951f84f349b94f6d7e076c",
+          "imageBytes": 84192,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-32.webp",
+          "imageSha256": "9f18491aecf495277cda715b120ed9fd805b2433e691c9acac9a8ba855713a25",
+          "imageBytes": 80502,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/dffc0ac8e942bf3de767/page-33.webp",
+          "imageSha256": "c80e78434d54c71265d2bf76631372d6476870b7e3b57705f9478a24315b3950",
+          "imageBytes": 68180,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-43.webp",
+      "imageSha256": "6957cfa002b61a0a4a8ac3b7893b03b975ed31dc48983b504d452c485b253309",
+      "imageBytes": 79130,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 31,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 32,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/source-pages/dffc0ac8e942bf3de767/source.pdf",
+          "pdfPage": 33,
+          "sourcePdfSha256": "dffc0ac8e942bf3de7677e5fa2f1f24dc88491465349fb0f8740e3cc81fa8467"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 43,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 44,
+      "title": "知道了线路和转发，为什么还需要一套分层规则？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"44\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 44,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=44",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-44.webp",
+          "imageSha256": "9d2a623fd3423fd0fdb36917fa9fd48a6c6d667a44efeb7a7171a1374ccbb7c1",
+          "imageBytes": 124420,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-1.webp",
+          "imageSha256": "8df22af7db06548d3cffadddf821e6c5c683ad26433d90fa7e8a4ddbe0caa4f2",
+          "imageBytes": 104124,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-44.webp",
+      "imageSha256": "9d2a623fd3423fd0fdb36917fa9fd48a6c6d667a44efeb7a7171a1374ccbb7c1",
+      "imageBytes": 124420,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 1,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 44,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "title": "一项完整通信太复杂，怎样拆分才真的更容易做？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"45\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 45,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=45",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-45.webp",
+          "imageSha256": "6437ec694d95aa15050a10270906009e7f4ecd14920cc5759b2fd120c8e4c3d2",
+          "imageBytes": 131342,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-1.webp",
+          "imageSha256": "8df22af7db06548d3cffadddf821e6c5c683ad26433d90fa7e8a4ddbe0caa4f2",
+          "imageBytes": 104124,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-7.webp",
+          "imageSha256": "1a987c40d1b12c111e7226f48b480953bbc5fad16e8bf4d5c46e40d77d99cb3a",
+          "imageBytes": 79566,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-45.webp",
+      "imageSha256": "6437ec694d95aa15050a10270906009e7f4ecd14920cc5759b2fd120c8e4c3d2",
+      "imageBytes": 131342,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 1,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 7,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 45,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "title": "双方都说“收到”，为什么还可能没有真正理解对方？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"46\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 46,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=46",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-46.webp",
+          "imageSha256": "07e0f0d49e807d1e02941ed74a8515a3221aa85db7c31b794305c8a01e3ee25b",
+          "imageBytes": 177146,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-46.webp",
+      "imageSha256": "07e0f0d49e807d1e02941ed74a8515a3221aa85db7c31b794305c8a01e3ee25b",
+      "imageBytes": 177146,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 46,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 47,
+      "title": "传一份记录文件，应用层面最先要确认什么？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"47\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 47,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=47",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-47.webp",
+          "imageSha256": "4eade7bd57892f5673c3828b8c86ede71999ad159e5b8431b9b86f76cf6fbf44",
+          "imageBytes": 133344,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-2.webp",
+          "imageSha256": "9a89ce3a60772000a37471938a3d3b6e355279c7ba41283826fb2bd4e50eb7d6",
+          "imageBytes": 134436,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-47.webp",
+      "imageSha256": "4eade7bd57892f5673c3828b8c86ede71999ad159e5b8431b9b86f76cf6fbf44",
+      "imageBytes": 133344,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 2,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 47,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 48,
+      "title": "应用要求“完整可靠地送到”，能否不自己处理每次丢失？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"48\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 48,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=48",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-48.webp",
+          "imageSha256": "83b4e87dbd7b2cf808c4ee7e1a4e2ddc92e359679ac91af35efb4a46ba876686",
+          "imageBytes": 129268,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-3.webp",
+          "imageSha256": "74c3d384ea7a3d30ab9c28f8953ce40fbd8c3ccd7f12ae8b36402b3c8d218a95",
+          "imageBytes": 116788,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-48.webp",
+      "imageSha256": "83b4e87dbd7b2cf808c4ee7e1a4e2ddc92e359679ac91af35efb4a46ba876686",
+      "imageBytes": 129268,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 3,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 48,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 49,
+      "title": "应用不懂网卡细节，数据仍怎样进入具体网络？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"49\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 49,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=49",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-49.webp",
+          "imageSha256": "001d79df38f88029bdd26d47fd87ac33fbb7baffabb0519ea9e44b964ff7dc15",
+          "imageBytes": 134728,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-4.webp",
+          "imageSha256": "4ebad0cda4db32b940cf6461281a6a17f7fa0f8baa413cf1de4b26139f9e5af0",
+          "imageBytes": 111460,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-49.webp",
+      "imageSha256": "001d79df38f88029bdd26d47fd87ac33fbb7baffabb0519ea9e44b964ff7dc15",
+      "imageBytes": 134728,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 4,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 49,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 50,
+      "title": "寄信人不懂运输调度，信为什么仍能到达？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"50\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 50,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=50",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-50.webp",
+          "imageSha256": "84612449c9e235be1e392ba39fb14c174ee81f70293358474eb6605e919029cf",
+          "imageBytes": 157052,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-5.webp",
+          "imageSha256": "9ecfbc30f52d082694f5d951f216e0e36d4824c198f2c874f06e81abafdafd14",
+          "imageBytes": 138416,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-50.webp",
+      "imageSha256": "84612449c9e235be1e392ba39fb14c174ee81f70293358474eb6605e919029cf",
+      "imageBytes": 157052,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 5,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 50,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 51,
+      "title": "换了下层实现，上层为何有时不用跟着重写？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"51\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 51,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=51",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-51.webp",
+          "imageSha256": "576e155504c9261f343549cd08b3f3402d91288ee2851fd9905e27a4390e93a8",
+          "imageBytes": 139964,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-6.webp",
+          "imageSha256": "807bc6eb245fdb1c7920ad4b16efa4b11db51e830df10568c852d759174f488a",
+          "imageBytes": 125266,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-51.webp",
+      "imageSha256": "576e155504c9261f343549cd08b3f3402d91288ee2851fd9905e27a4390e93a8",
+      "imageBytes": 139964,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 6,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 51,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 52,
+      "title": "同一套网络规则，为什么可以有不同硬件与程序实现？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"52\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 52,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=52",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-52.webp",
+          "imageSha256": "8e0d58a1e8649ae0b0756393a0bb1eefb0d5b52b5a8dc4278a2a0b3e5208477b",
+          "imageBytes": 153964,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-52.webp",
+      "imageSha256": "8e0d58a1e8649ae0b0756393a0bb1eefb0d5b52b5a8dc4278a2a0b3e5208477b",
+      "imageBytes": 153964,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 52,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 53,
+      "title": "同层谈协议，上下层谈服务，为什么不能互换？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"53\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 53,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=53",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-53.webp",
+          "imageSha256": "463129d9426995d0fa37b982677bc35c52e9846dd8822d8d606cf90c3ee7f1ac",
+          "imageBytes": 135050,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-8.webp",
+          "imageSha256": "ab3bef30d2eae825ae6345a375e8b45256cf38a684bc9acb57e9726ede00750f",
+          "imageBytes": 66130,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-9.webp",
+          "imageSha256": "27ad29a14495ed0a3849478bc2378c97725e4c21f7b738869067160e13399faa",
+          "imageBytes": 104092,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-10.webp",
+          "imageSha256": "a1cb0c8ad4a20c4968886449038065fdebc49417c8d12ff6697cae2ecda0b2ea",
+          "imageBytes": 89686,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-53.webp",
+      "imageSha256": "463129d9426995d0fa37b982677bc35c52e9846dd8822d8d606cf90c3ee7f1ac",
+      "imageBytes": 135050,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 8,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 9,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 10,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 53,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 54,
+      "title": "七层参考模型，怎样把端系统与中继的职责画在一起？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"54\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 54,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=54",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-54.webp",
+          "imageSha256": "0c07b18a9fef42901ad1936eaf37ce5087862d38bf1aaf2ca768286e094cd756",
+          "imageBytes": 166640,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-11.webp",
+          "imageSha256": "66fc88cf5a2766ac2bee61ec453cd6a1eb35072157e6164af05ad8c4fc4d729d",
+          "imageBytes": 65758,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-12.webp",
+          "imageSha256": "c78b4efd4e465eecb9e50387b2dff24a9b43af5b71ac4b435d4880f3881c377a",
+          "imageBytes": 190190,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-13.webp",
+          "imageSha256": "045b483adaa56ca0ae36983146f2282fe179535393f1a1f4c177d525468965eb",
+          "imageBytes": 144332,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-24.webp",
+          "imageSha256": "d8367aa64cdc6b6b30e1b51c51c56d71eeac97de5d55b4461ac69470c5176c73",
+          "imageBytes": 104828,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-54.webp",
+      "imageSha256": "0c07b18a9fef42901ad1936eaf37ce5087862d38bf1aaf2ca768286e094cd756",
+      "imageBytes": 166640,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 11,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 12,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 13,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 24,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 54,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 55,
+      "title": "参考模型有用，为什么不等于它的协议体系赢得了市场？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"55\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 55,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=55",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-55.webp",
+          "imageSha256": "6fe5f579d7fee70f31ff41925bc7abaf915fc139f382e25293cd0370aea20c20",
+          "imageBytes": 138152,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-55.webp",
+      "imageSha256": "6fe5f579d7fee70f31ff41925bc7abaf915fc139f382e25293cd0370aea20c20",
+      "imageBytes": 138152,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 55,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 56,
+      "title": "七层、四层、五层都出现，究竟应该数哪一套？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"56\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 56,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=56",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-56.webp",
+          "imageSha256": "e83856e8d93fce784c9b8e98a5f4a6a37b9fab2dc3f36866a44e27735835550d",
+          "imageBytes": 144508,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-18.webp",
+          "imageSha256": "1cf209b15e79c6e065c7213162a086982d608f958a4b75567e0206149d438c90",
+          "imageBytes": 107514,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-20.webp",
+          "imageSha256": "07c5060bca303eb41c7c7e315db72ae6e7b325182f6b922ec6d22ad814641762",
+          "imageBytes": 75864,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-21.webp",
+          "imageSha256": "d01165b4b22974251a76a15a3d5f34a7ff2ce27d19d0c94d1a0dc3810c898f09",
+          "imageBytes": 83524,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-56.webp",
+      "imageSha256": "e83856e8d93fce784c9b8e98a5f4a6a37b9fab2dc3f36866a44e27735835550d",
+      "imageBytes": 144508,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 18,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 20,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 21,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 56,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 57,
+      "title": "网络已经能送数据，应用层还需要约定什么？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"57\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 57,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=57",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-57.webp",
+          "imageSha256": "102c840e57ae19a905ee1636257baf0f3b59ca6014a643e70e8ff8fe4e865e81",
+          "imageBytes": 113802,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-25.webp",
+          "imageSha256": "3a51c5c133f43e98a5ddac3e3060162e0c4fb0a9a62c4aff4b92e04f6d34aad3",
+          "imageBytes": 69342,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-57.webp",
+      "imageSha256": "102c840e57ae19a905ee1636257baf0f3b59ca6014a643e70e8ff8fe4e865e81",
+      "imageBytes": 113802,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 25,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 57,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 58,
+      "title": "一台主机同时运行多个应用，收到的数据该交给谁？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"58\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 58,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=58",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-58.webp",
+          "imageSha256": "9572a6dea135d861f36ec864af64a5baa7e6ccf243ac804fb372e0576716f2fa",
+          "imageBytes": 126780,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-23.webp",
+          "imageSha256": "d4aa2ddd5f68c8b035636e8fffcb5a488a9edc951cd2fd0c0f3f744233a1c525",
+          "imageBytes": 105578,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-58.webp",
+      "imageSha256": "9572a6dea135d861f36ec864af64a5baa7e6ccf243ac804fb372e0576716f2fa",
+      "imageBytes": 126780,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 23,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 58,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 59,
+      "title": "跨过多个不同网络，谁来选择继续往哪走？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"59\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 59,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=59",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-59.webp",
+          "imageSha256": "8d0c35a88a2747f644fe875fded93501397f069658ae145ca6599a22df445b74",
+          "imageBytes": 118536,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-23.webp",
+          "imageSha256": "d4aa2ddd5f68c8b035636e8fffcb5a488a9edc951cd2fd0c0f3f744233a1c525",
+          "imageBytes": 105578,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-59.webp",
+      "imageSha256": "8d0c35a88a2747f644fe875fded93501397f069658ae145ca6599a22df445b74",
+      "imageBytes": 118536,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 23,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 59,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 60,
+      "title": "已经知道远端目标，为什么还要先把数据交给相邻节点？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"60\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 60,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=60",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-60.webp",
+          "imageSha256": "f7ee21f48cab1af69ac382f277f7215319085689de12260929c7f573f02ee43d",
+          "imageBytes": 115934,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-22.webp",
+          "imageSha256": "984f578df799e1a67dddbc018cf76128261ab52fd2747c7de73ca61c3acbdc8a",
+          "imageBytes": 127490,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-60.webp",
+      "imageSha256": "f7ee21f48cab1af69ac382f277f7215319085689de12260929c7f573f02ee43d",
+      "imageBytes": 115934,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 22,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 60,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 61,
+      "title": "帧由比特组成，比特又怎样变成能在介质里传播的东西？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"61\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 61,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=61",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-61.webp",
+          "imageSha256": "051c539da1fb08c7db98b9a557b26c665c5d2e9a9ffa7c75e58f121ade7b8834",
+          "imageBytes": 107534,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-22.webp",
+          "imageSha256": "984f578df799e1a67dddbc018cf76128261ab52fd2747c7de73ca61c3acbdc8a",
+          "imageBytes": 127490,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-61.webp",
+      "imageSha256": "051c539da1fb08c7db98b9a557b26c665c5d2e9a9ffa7c75e58f121ade7b8834",
+      "imageBytes": 107534,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 22,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 61,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 62,
+      "title": "应用数据交出去时，为什么还需要应用层自己的说明？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"62\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 62,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=62",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-62.webp",
+          "imageSha256": "7cfe9e8a81deb815c4f398eff5e1242d9730c82e29087c1e63aa702394fcf722",
+          "imageBytes": 83874,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-26.webp",
+          "imageSha256": "45360c78a77844d2584a4cab57cd57cf9e3c6820abbaf07681599b89d4813533",
+          "imageBytes": 60428,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-62.webp",
+      "imageSha256": "7cfe9e8a81deb815c4f398eff5e1242d9730c82e29087c1e63aa702394fcf722",
+      "imageBytes": 83874,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 26,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 62,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 63,
+      "title": "运输层接到的，为什么不只是一段裸业务数据？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"63\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 63,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=63",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-63.webp",
+          "imageSha256": "f52e1afba416b96a3821cea6e9ffc46dd88bb18b715d55e5467e3d650083cb1d",
+          "imageBytes": 81282,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-27.webp",
+          "imageSha256": "2839dddfb8e07b340c8ba5fe312d36e246518a197d0d9f2d0628a79a9896ca3b",
+          "imageBytes": 57194,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-63.webp",
+      "imageSha256": "f52e1afba416b96a3821cea6e9ffc46dd88bb18b715d55e5467e3d650083cb1d",
+      "imageBytes": 81282,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 27,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 63,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 64,
+      "title": "知道应用通信端点之后，为什么还需要网络层首部？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"64\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 64,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=64",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-64.webp",
+          "imageSha256": "5dc036b3238813e64cc5db009a27b61437cecdda6698218b6764a26833e840fb",
+          "imageBytes": 83200,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-28.webp",
+          "imageSha256": "80f063c1847615ff028e34dba928b39c4e6b642da548dc70ea8c7c9b744a1e6c",
+          "imageBytes": 62696,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-64.webp",
+      "imageSha256": "5dc036b3238813e64cc5db009a27b61437cecdda6698218b6764a26833e840fb",
+      "imageBytes": 83200,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 28,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 64,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 65,
+      "title": "同样叫封装，为什么链路层这次既加头又加尾？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"65\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 65,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=65",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-65.webp",
+          "imageSha256": "4144c6de5bb39d3007f8fbfad519908d9fa29834a250f59d39b98149a607b2a3",
+          "imageBytes": 84110,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-29.webp",
+          "imageSha256": "82828f3eb05e2e0801c9e6137db046c3485d51c614b9ad02ec69b2d6ae0f9546",
+          "imageBytes": 59540,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-65.webp",
+      "imageSha256": "4144c6de5bb39d3007f8fbfad519908d9fa29834a250f59d39b98149a607b2a3",
+      "imageBytes": 84110,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 29,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 65,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 66,
+      "title": "帧准备好了，为什么还不能把整块图形直接塞进电缆？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"66\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 66,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=66",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-66.webp",
+          "imageSha256": "65a8dd0e69d0d7f03fc51f553728a17bb0201f4064f51a0df0a7f5a507a39c7f",
+          "imageBytes": 84244,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-30.webp",
+          "imageSha256": "4ec4e61067e2dfc307fcbbea20dc77be3f6063801b9b6cc432e7e2f0ef4fc7ce",
+          "imageBytes": 60646,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-66.webp",
+      "imageSha256": "65a8dd0e69d0d7f03fc51f553728a17bb0201f4064f51a0df0a7f5a507a39c7f",
+      "imageBytes": 84244,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 30,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 66,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 67,
+      "title": "开始发送以后，为什么“已经发出”和“已经到达”不是一回事？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"67\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 67,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=67",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-67.webp",
+          "imageSha256": "ea95a3b2a5c4ee920867343296589b7931468de5a73036da7a8ea774597cd89f",
+          "imageBytes": 89146,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-31.webp",
+          "imageSha256": "aedd6672015876d13aa9fb2f3ab9f339a25064aee3b18cbdc735ef0f9947afe0",
+          "imageBytes": 70688,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-67.webp",
+      "imageSha256": "ea95a3b2a5c4ee920867343296589b7931468de5a73036da7a8ea774597cd89f",
+      "imageBytes": 89146,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 31,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 67,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 68,
+      "title": "对端识别到比特，为什么还没有完成应用交付？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"68\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 68,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=68",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-68.webp",
+          "imageSha256": "0b8d67a2076b07ee09ab1fdb65e77b238906226c94d1cbf18d3b6f58eac4f394",
+          "imageBytes": 78456,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-32.webp",
+          "imageSha256": "d706ffc581ff4083b8155838eb3b2f0973b208e8936fe64016debd6b6738ed19",
+          "imageBytes": 55666,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-68.webp",
+      "imageSha256": "0b8d67a2076b07ee09ab1fdb65e77b238906226c94d1cbf18d3b6f58eac4f394",
+      "imageBytes": 78456,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 32,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 68,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 69,
+      "title": "链路层去掉首尾，为什么不能理解成“什么也没检查就剪掉”？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"69\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 69,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=69",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-69.webp",
+          "imageSha256": "80a2d94764c4c1620c631cfb944825cff7f29866f2959b157b37c9a8c899d4fd",
+          "imageBytes": 81418,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-33.webp",
+          "imageSha256": "1f581ea2ca20001ed42dac72f8a1eeb75b6f5307d9ad8428e621edbfbb935b3a",
+          "imageBytes": 61282,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-69.webp",
+      "imageSha256": "80a2d94764c4c1620c631cfb944825cff7f29866f2959b157b37c9a8c899d4fd",
+      "imageBytes": 81418,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 33,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 69,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 70,
+      "title": "网络层取出运输数据，这一步为什么只适用于图中的最终主机？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"70\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 70,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=70",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-70.webp",
+          "imageSha256": "1c9759942cd52c6e2b321dde4ccc060e4f44645774513ce9dc69a845ed3c62e1",
+          "imageBytes": 78388,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-34.webp",
+          "imageSha256": "b720d2518b2589a6ab17c4348aa309c41c5c3698200e9c8fcd11f40ce8409d30",
+          "imageBytes": 56446,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-70.webp",
+      "imageSha256": "1c9759942cd52c6e2b321dde4ccc060e4f44645774513ce9dc69a845ed3c62e1",
+      "imageBytes": 78388,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 34,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 70,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 71,
+      "title": "运输层去掉控制信息后，怎样让内容回到正确的应用？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"71\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 71,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=71",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-71.webp",
+          "imageSha256": "2a2a9565a6f04812a7584305045f31b7530330354943baa974297d00340e490f",
+          "imageBytes": 78170,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-35.webp",
+          "imageSha256": "cd98ac2a1e10c1a9ae73b1c2c3012140365add3745bc4e5e2ca9b359fc0fc30a",
+          "imageBytes": 56054,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-71.webp",
+      "imageSha256": "2a2a9565a6f04812a7584305045f31b7530330354943baa974297d00340e490f",
+      "imageBytes": 78170,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 35,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 71,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 72,
+      "title": "最后一层还要读什么，才能把业务内容交给程序？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"72\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 72,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=72",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-72.webp",
+          "imageSha256": "cdd142cc73c5d7a6fc186ad5fd7d79fab7014e8b2173d367b8b9be72ba40c179",
+          "imageBytes": 78712,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-36.webp",
+          "imageSha256": "ac6a77cc8a297b58b4dcb4a4aed02d8d89bbcf95ad83199a9fe8679ad0662c79",
+          "imageBytes": 57278,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-72.webp",
+      "imageSha256": "cdd142cc73c5d7a6fc186ad5fd7d79fab7014e8b2173d367b8b9be72ba40c179",
+      "imageBytes": 78712,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 36,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 72,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 73,
+      "title": "终于收到应用数据，沿途添加的信息去了哪里？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"73\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 73,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=73",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-73.webp",
+          "imageSha256": "d2d578a66bc638882ce9994ec29da8ab9170539586a2265b0f287fb9b009a911",
+          "imageBytes": 80368,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-37.webp",
+          "imageSha256": "4f5afc2b105e92770e60afd40524ed388269ee8b9fe8a4182983de9bb2c5face",
+          "imageBytes": 56862,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-73.webp",
+      "imageSha256": "d2d578a66bc638882ce9994ec29da8ab9170539586a2265b0f287fb9b009a911",
+      "imageBytes": 80368,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 37,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 73,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 74,
+      "title": "把每层的头尾摊开，完整帧内部到底是什么顺序？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"74\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 74,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=74",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-74.webp",
+          "imageSha256": "73bf1adaeef26a7f9609e1df2064ed0ea799bcdd3a0ffe60210727cfa1a73c6d",
+          "imageBytes": 105624,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-38.webp",
+          "imageSha256": "b2c0bc7e2b66098ed0609d7d6f72b72fb51ffaef7d96e2062fe426a02d3fb682",
+          "imageBytes": 89368,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-14.webp",
+          "imageSha256": "3a81063456fbcdca34a3dbe464f7ba246b562256436ea7f274f5e82440a9a062",
+          "imageBytes": 76696,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-74.webp",
+      "imageSha256": "73bf1adaeef26a7f9609e1df2064ed0ea799bcdd3a0ffe60210727cfa1a73c6d",
+      "imageBytes": 105624,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 38,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 14,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 74,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 75,
+      "title": "对端物理层拿到的比特，是否已经排除了链路首尾？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"75\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 75,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=75",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-75.webp",
+          "imageSha256": "fdb9b4bca20114054acba4690e797937236e0132799839061be403f25b088613",
+          "imageBytes": 91646,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-39.webp",
+          "imageSha256": "0b764cc5ad9bfe75c7c3a6f3ebcb64f43b986e3519ac751678a260ba0547fd90",
+          "imageBytes": 68852,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-75.webp",
+      "imageSha256": "fdb9b4bca20114054acba4690e797937236e0132799839061be403f25b088613",
+      "imageBytes": 91646,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 39,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 75,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 76,
+      "title": "链路层去掉最外层后，为什么里面还有好几个首部？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"76\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 76,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=76",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-76.webp",
+          "imageSha256": "b226c604e768c1d579b12c43ae3b23fd7746cb2ae547460316bf8bba64abf490",
+          "imageBytes": 89270,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-40.webp",
+          "imageSha256": "16ef219ce792eb3dac34e5e5d52e27a29577fa22be02322d7c62ba0d20bde285",
+          "imageBytes": 70394,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-76.webp",
+      "imageSha256": "b226c604e768c1d579b12c43ae3b23fd7746cb2ae547460316bf8bba64abf490",
+      "imageBytes": 89270,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 40,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 76,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 77,
+      "title": "网络层的载荷，在运输层看来又是什么？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"77\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 77,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=77",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-77.webp",
+          "imageSha256": "faef14ed48a033cdc7ecac7e3ed70b0bc9785ca05d63e7759ff602206b94be3b",
+          "imageBytes": 90052,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-41.webp",
+          "imageSha256": "32a4456ccf186e8a30a0ca5a6ea8ff5f0910043c2757748e181c738e8f832408",
+          "imageBytes": 71000,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-77.webp",
+      "imageSha256": "faef14ed48a033cdc7ecac7e3ed70b0bc9785ca05d63e7759ff602206b94be3b",
+      "imageBytes": 90052,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 41,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 77,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 78,
+      "title": "运输层处理完以后，为什么不能把应用首部也当作杂物丢掉？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"78\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 78,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=78",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-78.webp",
+          "imageSha256": "e8be857ce0749f53483667448d0dbdade07f7da9db42aa666813906a52d1e1e8",
+          "imageBytes": 89706,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-42.webp",
+          "imageSha256": "ca7d255a6ff429207507e3b85b7d01cc6b02dcd946274033e0dce79266f918c7",
+          "imageBytes": 65942,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-78.webp",
+      "imageSha256": "e8be857ce0749f53483667448d0dbdade07f7da9db42aa666813906a52d1e1e8",
+      "imageBytes": 89706,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 42,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 78,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 79,
+      "title": "去掉最后一层控制信息，程序拿到的应该是哪一部分？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"79\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 79,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=79",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-79.webp",
+          "imageSha256": "c3bb17d57cde759718b6a8a551e640a9e9d5328375811813e087e9e1964e29ee",
+          "imageBytes": 87330,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-43.webp",
+          "imageSha256": "d5722f91d9ee9c8ec7e868ada8c106e9a2af643b9aed4097e4b814b1c67e5ccb",
+          "imageBytes": 65168,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-79.webp",
+      "imageSha256": "c3bb17d57cde759718b6a8a551e640a9e9d5328375811813e087e9e1964e29ee",
+      "imageBytes": 87330,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 43,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 79,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 80,
+      "title": "怎样快速检查自己有没有把封装和解封装顺序讲反？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"80\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 80,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=80",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-80.webp",
+          "imageSha256": "38aa1188e40d63dd4f43304ec760b46d52af2bf02e784764e37fd7622f7b6409",
+          "imageBytes": 80524,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-44.webp",
+          "imageSha256": "f9e0473c878239ec292ffaa24e4d09fe5199d300811d0aeccee276627d66c205",
+          "imageBytes": 56498,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-80.webp",
+      "imageSha256": "38aa1188e40d63dd4f43304ec760b46d52af2bf02e784764e37fd7622f7b6409",
+      "imageBytes": 80524,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 44,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 80,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 81,
+      "title": "每层加一个头，开销比例的分母该放什么？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"81\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 81,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=81",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-81.webp",
+          "imageSha256": "b9b2e9f0ec6ab2b25f47841415503c28422572eac0f4d5d9a4c8620185af8bc7",
+          "imageBytes": 87388,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-15.webp",
+          "imageSha256": "6053074334923004149b1e1407f344d16051b20b9c73de626645cde48bc1739a",
+          "imageBytes": 73224,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-81.webp",
+      "imageSha256": "b9b2e9f0ec6ab2b25f47841415503c28422572eac0f4d5d9a4c8620185af8bc7",
+      "imageBytes": 87388,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 15,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 81,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 82,
+      "title": "上层看见的是服务，为什么不必知道下面怎么实现？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"82\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 82,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=82",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-82.webp",
+          "imageSha256": "d3b6bf05009ba1b61aec0a2cee3b99abb083aceb5dbbcb9db302ea4109248c04",
+          "imageBytes": 136270,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-82.webp",
+      "imageSha256": "d3b6bf05009ba1b61aec0a2cee3b99abb083aceb5dbbcb9db302ea4109248c04",
+      "imageBytes": 136270,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 82,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 83,
+      "title": "同一段数据，为什么既能叫PDU又能叫SDU？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"83\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 83,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=83",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-83.webp",
+          "imageSha256": "40bc1d027c29dfd94b5a0d6aea101c94c8c0b2a7a14406549f81939ee3c914ac",
+          "imageBytes": 136566,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-83.webp",
+      "imageSha256": "40bc1d027c29dfd94b5a0d6aea101c94c8c0b2a7a14406549f81939ee3c914ac",
+      "imageBytes": 136566,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 83,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 84,
+      "title": "路由器为什么不用替每个应用完成整套协议？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"84\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 84,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=84",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-84.webp",
+          "imageSha256": "47afa5b99360a8e44beba85da72e8e74e107a619fa2650c7c64d23209b3e33bd",
+          "imageBytes": 96008,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-16.webp",
+          "imageSha256": "c39d8fcad3f8861bc5bf9a8ea70cba8c67b4695e829aa07ba25a514810e5a3a9",
+          "imageBytes": 98392,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-84.webp",
+      "imageSha256": "47afa5b99360a8e44beba85da72e8e74e107a619fa2650c7c64d23209b3e33bd",
+      "imageBytes": 96008,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 16,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 84,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 85,
+      "title": "协议簇里这么多名字，怎样不把它们背成一串字母？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"85\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 85,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=85",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-85.webp",
+          "imageSha256": "3f02049cc4842842c67597b478a0d9fb97c140c851214c1d5acee33db9c8e8fa",
+          "imageBytes": 72178,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-17.webp",
+          "imageSha256": "0efa606dba443856465da3b87d9df8979f33ab9362d4d2a67a2643ac70a33fe9",
+          "imageBytes": 83636,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-85.webp",
+      "imageSha256": "3f02049cc4842842c67597b478a0d9fb97c140c851214c1d5acee33db9c8e8fa",
+      "imageBytes": 72178,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 17,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 85,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 86,
+      "title": "换一种画法以后，TCP和UDP的地位变了吗？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"86\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 86,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=86",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-86.webp",
+          "imageSha256": "36bbf7bbc3827d7349711a2100c66f7ea127d333cd6d9d7e3a4e9c55866e99ff",
+          "imageBytes": 51246,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-86.webp",
+      "imageSha256": "36bbf7bbc3827d7349711a2100c66f7ea127d333cd6d9d7e3a4e9c55866e99ff",
+      "imageBytes": 51246,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 86,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 87,
+      "title": "为什么TCP/IP看起来像中间细、两头宽的沙漏？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"87\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 87,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=87",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-87.webp",
+          "imageSha256": "7e6ae5867e8f7d669c0ec34fc7051dffe6f3de72aabe8a12a83d15dc610715a8",
+          "imageBytes": 84102,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-19.webp",
+          "imageSha256": "e0345013484f4d42f826e43cf1b6b94e349569463d4902e8c6b7c6c75c4c3843",
+          "imageBytes": 91558,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-87.webp",
+      "imageSha256": "7e6ae5867e8f7d669c0ec34fc7051dffe6f3de72aabe8a12a83d15dc610715a8",
+      "imageBytes": 84102,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 19,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 87,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 88,
+      "title": "客户向服务器提出请求，为什么图中仍要逐级使用下层？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"88\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 88,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=88",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-88.webp",
+          "imageSha256": "eece1983625f6a0eb871d87e9521fd2099d63b849b02eefdc4a6e0cfdd0d0896",
+          "imageBytes": 94308,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-88.webp",
+      "imageSha256": "eece1983625f6a0eb871d87e9521fd2099d63b849b02eefdc4a6e0cfdd0d0896",
+      "imageBytes": 94308,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 88,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 89,
+      "title": "一台计算机为什么可以同时当几个服务器？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"89\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 89,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=89",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-89.webp",
+          "imageSha256": "af9a220943b6abbe5fa7d8cb140e60c065d20c8d9fd44bd1756144547525fc8f",
+          "imageBytes": 104282,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-89.webp",
+      "imageSha256": "af9a220943b6abbe5fa7d8cb140e60c065d20c8d9fd44bd1756144547525fc8f",
+      "imageBytes": 104282,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 89,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 90,
+      "title": "看到一个功能，怎样判断该由哪一层负责？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"90\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 90,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=90",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-90.webp",
+          "imageSha256": "b9769af54dc4af9e694b746caece0bb593b4d315b702a67aff9d1f08dedfefa3",
+          "imageBytes": 65334,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/c48387b134752f379576/page-45.webp",
+          "imageSha256": "b0e692f21ce6620365e3fcf7a017bfa4cf946ddb71ac17c48ae71a6d80e19b49",
+          "imageBytes": 74330,
+          "imageSize": [
+            1500,
+            1061
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-90.webp",
+      "imageSha256": "b9769af54dc4af9e694b746caece0bb593b4d315b702a67aff9d1f08dedfefa3",
+      "imageBytes": 65334,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/c48387b134752f379576/source.pdf",
+          "pdfPage": 45,
+          "sourcePdfSha256": "c48387b134752f3795766807533db90785dcd20477597be0c9887a67f2957706"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 90,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 91,
+      "title": "结构都理解了，怎样判断一次通信到底好不好？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"91\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 91,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=91",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-91.webp",
+          "imageSha256": "e7beb11e6325c850796a94b760ae792fc480cb7d51cf84b4c61f317d0ac7922c",
+          "imageBytes": 122110,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-15.webp",
+          "imageSha256": "510e12a2eebc8bec02d34568fb556fd6eb9a7365f870eaf1380c6a19bde09fa2",
+          "imageBytes": 80516,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-91.webp",
+      "imageSha256": "e7beb11e6325c850796a94b760ae792fc480cb7d51cf84b4c61f317d0ac7922c",
+      "imageBytes": 122110,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 15,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 91,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 92,
+      "title": "百兆链路的“兆”，究竟每秒在数什么？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"92\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 92,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=92",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-92.webp",
+          "imageSha256": "2f025a49665501fa486b8b3748d6e795e4143c46ccf02adc9e8354959cbb2b4c",
+          "imageBytes": 109026,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-92.webp",
+      "imageSha256": "2f025a49665501fa486b8b3748d6e795e4143c46ccf02adc9e8354959cbb2b4c",
+      "imageBytes": 109026,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 92,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 93,
+      "title": "带宽为什么有时用赫兹，有时又用比特每秒？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"93\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 93,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=93",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-93.webp",
+          "imageSha256": "70f55e9ea062d83092b2cae155ffe778dabb01ff515443f67deef090e1679855",
+          "imageBytes": 89060,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-1.webp",
+          "imageSha256": "d1f06e49278402abc347dc6cdedd618f3812b9ab7d7ec192cff7a46220f39c83",
+          "imageBytes": 115806,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-2.webp",
+          "imageSha256": "05ad55354fbd8d0ca1fb8f51319364eae64b9d8a6ec2dfefce4fd2cae1827ef6",
+          "imageBytes": 81618,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-93.webp",
+      "imageSha256": "70f55e9ea062d83092b2cae155ffe778dabb01ff515443f67deef090e1679855",
+      "imageBytes": 89060,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 1,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 2,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 93,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 94,
+      "title": "速率提高以后，变短的是哪一段时间？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"94\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 94,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=94",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-94.webp",
+          "imageSha256": "f65b51afd44ac4d9caff8f5f369b957ea268bfebacb8ed277559c27323e41c8a",
+          "imageBytes": 64264,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-3.webp",
+          "imageSha256": "0e6cf128400d86a1de8bd8d71cb8a81e29e985a371d0354e904ad5eb4f388c04",
+          "imageBytes": 80950,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-94.webp",
+      "imageSha256": "f65b51afd44ac4d9caff8f5f369b957ea268bfebacb8ed277559c27323e41c8a",
+      "imageBytes": 64264,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 3,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 94,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 95,
+      "title": "额定百兆，为什么实测未必每秒都送满百兆？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"95\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 95,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=95",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-95.webp",
+          "imageSha256": "3c80664afa2bc5b44cad99aaa80105f8ca672faf2745f2d014c79aada48b83d2",
+          "imageBytes": 134488,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-14.webp",
+          "imageSha256": "709a330257b6291e8fd502f896e331aea2b2c3a54ed7d59546d898c135abf672",
+          "imageBytes": 63926,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-95.webp",
+      "imageSha256": "3c80664afa2bc5b44cad99aaa80105f8ca672faf2745f2d014c79aada48b83d2",
+      "imageBytes": 134488,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 14,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 95,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 96,
+      "title": "一个分组开始发送后，多久才能把最后一位推出去？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"96\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 96,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=96",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-96.webp",
+          "imageSha256": "5babc832607ed3f9711f0d681d17d38a4953c864e9220db99fab7da58848658b",
+          "imageBytes": 148906,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-4.webp",
+          "imageSha256": "4b85c9eec370f81c24d3224adceca2bce3783bb5247fa8e7ed95528a48d907c6",
+          "imageBytes": 82612,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-96.webp",
+      "imageSha256": "5babc832607ed3f9711f0d681d17d38a4953c864e9220db99fab7da58848658b",
+      "imageBytes": 148906,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 4,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 96,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 97,
+      "title": "最后一位发出之后，为什么还可能在路上？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"97\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 97,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=97",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-97.webp",
+          "imageSha256": "6c86553c505e72d2aec31e6115077ba593a7a8adc1a0b4d8e117a8462482b468",
+          "imageBytes": 134996,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-5.webp",
+          "imageSha256": "077bf03c6a42fc5fb5f208ef1b70e466e3c9310f7201989ce2517497c2dd3206",
+          "imageBytes": 80862,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-97.webp",
+      "imageSha256": "6c86553c505e72d2aec31e6115077ba593a7a8adc1a0b4d8e117a8462482b468",
+      "imageBytes": 134996,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 5,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 97,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 98,
+      "title": "链路还没开始发，时间为什么已经过去了？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"98\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 98,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=98",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-98.webp",
+          "imageSha256": "7629009eb3940874ab059416e303c3f1fe3115f13ab085ec67249d1e97362705",
+          "imageBytes": 158828,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-6.webp",
+          "imageSha256": "36ce9e531472d96dda83842d7d34d2a53eff89527a46941db2d57fe20b3b8765",
+          "imageBytes": 115760,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-98.webp",
+      "imageSha256": "7629009eb3940874ab059416e303c3f1fe3115f13ab085ec67249d1e97362705",
+      "imageBytes": 158828,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 6,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 98,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 99,
+      "title": "把一次传输的时间接起来，哪里最容易重复或漏算？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"99\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 99,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=99",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-99.webp",
+          "imageSha256": "49e24ba70e29bf7eb6a0ff560bc7ef5288430e4d7aeb4f9f81687980e8ceeca8",
+          "imageBytes": 218268,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-7.webp",
+          "imageSha256": "6a3a6eeea4556a8d7cdd3fb28c3587e8cf48578405973af7e303e7e04bc41611",
+          "imageBytes": 76378,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-8.webp",
+          "imageSha256": "cd122ab87df1687c2ab82cb01deb0b3c9b041709cca348f595519cf505839e15",
+          "imageBytes": 110148,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-9.webp",
+          "imageSha256": "e6ec57feab32c96b60292f858250b768bddbcd24a1ba76400d3bd72b012e214b",
+          "imageBytes": 90570,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-11.webp",
+          "imageSha256": "bc490e8c972de50b887e582db8014b8757676580389be3f24047fe20c756a021",
+          "imageBytes": 90580,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-99.webp",
+      "imageSha256": "49e24ba70e29bf7eb6a0ff560bc7ef5288430e4d7aeb4f9f81687980e8ceeca8",
+      "imageBytes": 218268,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 7,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 8,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 9,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 11,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 99,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 100,
+      "title": "链路正在传输时，路上最多能排着多少比特？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"100\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 100,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=100",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-100.webp",
+          "imageSha256": "6395e5ed9ab006be4b8b5921278e4ca3b65efe01d9a4bd2b234e107141eaae61",
+          "imageBytes": 81396,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-10.webp",
+          "imageSha256": "31eb120cc91f9bbf3344cabd5edf3e228127c68206a04cfd123bb6d913f5f4ec",
+          "imageBytes": 84734,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-100.webp",
+      "imageSha256": "6395e5ed9ab006be4b8b5921278e4ca3b65efe01d9a4bd2b234e107141eaae61",
+      "imageBytes": 81396,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 10,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 100,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 101,
+      "title": "链路越忙越好吗？利用率接近满载时为什么反而等得久？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"101\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 101,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=101",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-101.webp",
+          "imageSha256": "f1411ca4b7342f1fcd6456248a72c98467c8dddd10ab7e9d7656b8893ec128ff",
+          "imageBytes": 125278,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-12.webp",
+          "imageSha256": "193d2c7c9b6aeea1b96be38a8603f69e94ffdc09502c6acf4754788541f7aa66",
+          "imageBytes": 93332,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        },
+        {
+          "image": "/study-site/courses/source-pages/3104a7fc8c582aafd556/page-13.webp",
+          "imageSha256": "e9459f697134dbd0d43c9bba8276a2f358e0277ab0bc9d15a7d5ba0da1e5f969",
+          "imageBytes": 98332,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-101.webp",
+      "imageSha256": "f1411ca4b7342f1fcd6456248a72c98467c8dddd10ab7e9d7656b8893ec128ff",
+      "imageBytes": 125278,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 12,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/source-pages/3104a7fc8c582aafd556/source.pdf",
+          "pdfPage": 13,
+          "sourcePdfSha256": "3104a7fc8c582aafd556063679da45698d7398ee4709593a6f60c745f7c7eafd"
+        },
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 101,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 102,
+      "title": "知道时延的组成以后，为什么还需要排队论？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"102\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 102,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=102",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-102.webp",
+          "imageSha256": "6096da700dd0aceaf9f49c0db7929e6d5120fb2e7139ec666a9a476eaf738273",
+          "imageBytes": 119024,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-102.webp",
+      "imageSha256": "6096da700dd0aceaf9f49c0db7929e6d5120fb2e7139ec666a9a476eaf738273",
+      "imageBytes": 119024,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 102,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    },
+    {
+      "page": 103,
+      "title": "把报文当作排队的顾客，哪些东西是一一对应的？",
+      "reader": "network-ch1-foundations-ppt.html",
+      "selector": ".slide-page[data-page=\"103\"]",
+      "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+      "pdfPage": 103,
+      "sourceUrl": "/study-site/courses/network-queueing/source/ch1.pdf#page=103",
+      "images": [
+        {
+          "image": "/study-site/courses/network-ch1-foundations/slides/page-103.webp",
+          "imageSha256": "460f39a1facffa4af6acbfc9d0b8111eb8a716b9826cccd212e5396ac6399850",
+          "imageBytes": 49822,
+          "imageSize": [
+            1500,
+            1125
+          ],
+          "imageFormat": "WEBP"
+        }
+      ],
+      "image": "/study-site/courses/network-ch1-foundations/slides/page-103.webp",
+      "imageSha256": "460f39a1facffa4af6acbfc9d0b8111eb8a716b9826cccd212e5396ac6399850",
+      "imageBytes": 49822,
+      "imageSize": [
+        1500,
+        1125
+      ],
+      "imageFormat": "WEBP",
+      "supplementaryPdfReferences": [
+        {
+          "sourcePdf": "courses/network-queueing/source/ch1.pdf",
+          "pdfPage": 103,
+          "sourcePdfSha256": "648a364847a8ec7fbd62d932d3167a7dd4dc32219c830596815fe1d8d95f0dda"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "version": 1,
+  "id": "em-ch3",
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt3.html",
+    "readerSha256": "430a1e15c58ca63201c13bb9b8b4c779219bc633c5e95e7288d16471aafe2d7f",
+    "readerGitBlob": "4c35aed4b6d50f6d3fef5ac9002f582670f0c4e6",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "pageCount": 24,
+  "pages": [
+    {
+      "page": 1,
+      "readerArticleId": "p01",
+      "imageSelector": "article[data-page=\"1\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "d17f18bb1ca83f1d770dea50b8ff34a0c6b575a03277255610f8ca08bf62005e",
+      "imageBytes": 99844,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p01-route",
+        "p01-methods"
+      ]
+    },
+    {
+      "page": 2,
+      "readerArticleId": "p02",
+      "imageSelector": "article[data-page=\"2\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "aae4089f406a52a41b36284aaa699088e877efba5693604a027f9aa14068e45a",
+      "imageBytes": 122728,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p02-types",
+        "p02-bc"
+      ]
+    },
+    {
+      "page": 3,
+      "readerArticleId": "p03",
+      "imageSelector": "article[data-page=\"3\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "ba163cf5009090baa9fcdc271c8481504900d5864e81a3d944e91fc5f330a8cc",
+      "imageBytes": 62402,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p03-tree",
+        "p03-list"
+      ]
+    },
+    {
+      "page": 4,
+      "readerArticleId": "p04",
+      "imageSelector": "article[data-page=\"4\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "61793d4c6559f9fc6906e5fb3e9f00a53fc380bf065f2c1e0a5032235ca100e5",
+      "imageBytes": 43469,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p04-poisson",
+        "p04-laplace"
+      ]
+    },
+    {
+      "page": 5,
+      "readerArticleId": "p05",
+      "imageSelector": "article[data-page=\"5\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "6304b501a1a7383fe6c31afebde4b353e6a359a4a39248669b481cc122450b48",
+      "imageBytes": 115730,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p05-statement",
+        "p05-use"
+      ]
+    },
+    {
+      "page": 6,
+      "readerArticleId": "p06",
+      "imageSelector": "article[data-page=\"6\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "cc03cf13bc712a76a1e71cf315b59226d4ccf2a4795f97e4a23edba0bd368d74",
+      "imageBytes": 108531,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p06-definition",
+        "p06-tests"
+      ]
+    },
+    {
+      "page": 7,
+      "readerArticleId": "p07",
+      "imageSelector": "article[data-page=\"7\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "8f2ab806fe82a827c298d1e688aad7ca436e29391100c17535903e7192de3829",
+      "imageBytes": 113655,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p07-problem",
+        "p07-figure"
+      ]
+    },
+    {
+      "page": 8,
+      "readerArticleId": "p08",
+      "imageSelector": "article[data-page=\"8\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "cbcc34934d6498b64e142ed6f9c7aa85ddd78aea5c3e9835bc0133c677a7b38d",
+      "imageBytes": 92389,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p08-transform",
+        "p08-superposition"
+      ]
+    },
+    {
+      "page": 9,
+      "readerArticleId": "p09",
+      "imageSelector": "article[data-page=\"9\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "69f379eeb2040d60f1030f15a7507a94472319086fb140976b304375a19c175e",
+      "imageBytes": 119674,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p09-boundary",
+        "p09-solution"
+      ]
+    },
+    {
+      "page": 10,
+      "readerArticleId": "p10",
+      "imageSelector": "article[data-page=\"10\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "24aa522434c7e3f1f8fa5033ac9f5f7b185b8c6dd8711be96ea0bbc4801e7cc6",
+      "imageBytes": 115917,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p10-density",
+        "p10-vector",
+        "p10-total"
+      ]
+    },
+    {
+      "page": 11,
+      "readerArticleId": "p11",
+      "imageSelector": "article[data-page=\"11\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "74a00d67c95d2fca276840d786695080519c59ac13faf3cf7e057646828e41aa",
+      "imageBytes": 157748,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p11-right",
+        "p11-wedge"
+      ]
+    },
+    {
+      "page": 12,
+      "readerArticleId": "p12",
+      "imageSelector": "article[data-page=\"12\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "3be8dd9a7e7211073f9b9f402a397fa16b9dca2f633164fb4cdc655459802f1d",
+      "imageBytes": 41400,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p12-original",
+        "p12-images"
+      ]
+    },
+    {
+      "page": 13,
+      "readerArticleId": "p13",
+      "imageSelector": "article[data-page=\"13\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "542290879bce0aaa52bb9278d40b4f365a82a30c374f8424fbf0b89afef09938",
+      "imageBytes": 97822,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p13-summary",
+        "p13-homework"
+      ]
+    },
+    {
+      "page": 14,
+      "readerArticleId": "p14",
+      "imageSelector": "article[data-page=\"14\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "b48ceae52d9475f999c6b2674ee3b30f893d4dd04ed80aeb6e304cfb8f8ea355",
+      "imageBytes": 130514,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p14-principle",
+        "p14-steps"
+      ]
+    },
+    {
+      "page": 15,
+      "readerArticleId": "p15",
+      "imageSelector": "article[data-page=\"15\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "40baf945d133b38c3d85f5d14ac0a439393c1f0574c3630895310aa985d5471b",
+      "imageBytes": 90990,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p15-reduction",
+        "p15-constant",
+        "p15-series"
+      ]
+    },
+    {
+      "page": 16,
+      "readerArticleId": "p16",
+      "imageSelector": "article[data-page=\"16\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "4397d0fe83106bfc18ffd00b40ec0795c2caa24dec7a6c3e3279cc130955c882",
+      "imageBytes": 41898,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p16-signs",
+        "p16-selection"
+      ]
+    },
+    {
+      "page": 17,
+      "readerArticleId": "p17",
+      "imageSelector": "article[data-page=\"17\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "85e45945beebd161b6789a6b606940d3cff9178777b01d0232b04f68f60cd59a",
+      "imageBytes": 61385,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p17-model",
+        "p17-solve"
+      ]
+    },
+    {
+      "page": 18,
+      "readerArticleId": "p18",
+      "imageSelector": "article[data-page=\"18\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "d10002a838ae8d6cd4616958887896238313d4cfafc3dcc3817aebc778ef3e77",
+      "imageBytes": 111261,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p18-bc",
+        "p18-separate"
+      ]
+    },
+    {
+      "page": 19,
+      "readerArticleId": "p19",
+      "imageSelector": "article[data-page=\"19\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "b79b975c07d4dabebcd1717587017fe2c1508d91c99fe1bf41288efb4cb99c90",
+      "imageBytes": 78965,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p19-three",
+        "p19-series"
+      ]
+    },
+    {
+      "page": 20,
+      "readerArticleId": "p20",
+      "imageSelector": "article[data-page=\"20\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "f6a2eb8deb32fdac47d9e83198ea69e46008a38a83d23204cee146a13810e1e2",
+      "imageBytes": 87539,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p20-projection",
+        "p20-answer"
+      ]
+    },
+    {
+      "page": 21,
+      "readerArticleId": "p21",
+      "imageSelector": "article[data-page=\"21\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "0b26fee0d18bb486351c961882e0ea26c1be5098a131698c92fd3c485261570a",
+      "imageBytes": 108230,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p21-geometry",
+        "p21-forms"
+      ]
+    },
+    {
+      "page": 22,
+      "readerArticleId": "p22",
+      "imageSelector": "article[data-page=\"22\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "43a62f956fe6615a481a3d5f3abbbac61912b74883ac3efcd2c9abe813295a5f",
+      "imageBytes": 95838,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p22-modes",
+        "p22-fourier",
+        "p22-result"
+      ]
+    },
+    {
+      "page": 23,
+      "readerArticleId": "p23",
+      "imageSelector": "article[data-page=\"23\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "8e1d80a569afa5e9e8fe6f64d286831be772197890102603f27fcc9ad126760d",
+      "imageBytes": 45139,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p23-field",
+        "p23-charge"
+      ]
+    },
+    {
+      "page": 24,
+      "readerArticleId": "p24",
+      "imageSelector": "article[data-page=\"24\"] .original img",
+      "imageMime": "image/png",
+      "imageSha256": "fb7a3eee13dc3f54e91c04f45eac399e98b91344cdce51778f006125baa336dc",
+      "imageBytes": 54763,
+      "imageWidth": 1348,
+      "imageHeight": 953,
+      "teachingAnchors": [
+        "p24-coefficients",
+        "p24-fields",
+        "p24-homework"
+      ]
+    }
+  ]
+}

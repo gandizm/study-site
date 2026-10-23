@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "id": "dsp-22",
+  "title": "数字信号处理 2.2：周期序列与采样频谱",
+  "pageCount": 24,
+  "reader": "dsp-22-ppt.html",
+  "nodes": [
+    {
+      "id": "route",
+      "label": "周期序列、DFS与采样路线",
+      "pages": [
+        1,
+        3
+      ],
+      "summary": "先求一周期谐波系数，再构造冲激DTFT，最后连接模拟信号采样；DFS与DFT不混称。",
+      "prerequisites": [],
+      "section": "学习路线",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "generalized",
+      "label": "非零周期序列与广义谱",
+      "pages": [
+        2
+      ],
+      "summary": "非零周期序列不绝对可和，DFS用有限和，DTFT用广义冲激；绝对可和不是所有存在意义的必要条件。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "DFS定义",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "notation",
+      "label": "周期、系数与归一化",
+      "pages": [
+        4,
+        5
+      ],
+      "summary": "区分n、k、所选周期N及展开系数a_k；本课DFS系数为N倍a_k，反变换带1/N。",
+      "prerequisites": [
+        "generalized"
+      ],
+      "section": "DFS定义",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "orthogonality",
+      "label": "有限复指数正交与系数反求",
+      "pages": [
+        6
+      ],
+      "summary": "一周期指数和仅在频率索引同余模N时为N，其余为0，由此求展开系数。",
+      "prerequisites": [
+        "notation"
+      ],
+      "section": "DFS定义",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "dfs-pair",
+      "label": "DFS/IDFS变换对",
+      "pages": [
+        7
+      ],
+      "summary": "正变换一周期有限求和，反变换带1/N；系数按N延拓，并可联系一周期序列Z变换的单位圆采样。",
+      "prerequisites": [
+        "orthogonality"
+      ],
+      "section": "DFS定义",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "rectangle",
+      "label": "N=8矩形周期序列",
+      "pages": [
+        8
+      ],
+      "summary": "对R₄按N=8延拓，计算一周期DFS，等比和的分母零点须回到有限和处理。",
+      "prerequisites": [
+        "dfs-pair"
+      ],
+      "section": "原题与冲激谱",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "impulse",
+      "label": "复指数序列的冲激DTFT",
+      "pages": [
+        9,
+        10,
+        11
+      ],
+      "summary": "复指数DTFT是在其数字频率位置及2π平移处的冲激列，每条权重2π；半开区间避免重复边界。",
+      "prerequisites": [
+        "generalized"
+      ],
+      "section": "原题与冲激谱",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "periodic-transform",
+      "label": "由DFS构造周期序列DTFT",
+      "pages": [
+        12
+      ],
+      "summary": "把各谐波的DFS系数乘2π/N作为冲激权重，并将频谱按2π重复，索引同余对应同一系数。",
+      "prerequisites": [
+        "dfs-pair",
+        "impulse"
+      ],
+      "section": "原题与冲激谱",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "rectangle-transform",
+      "label": "矩形例的DFS与DTFT互验",
+      "pages": [
+        13
+      ],
+      "summary": "同一N=8例的谱线位置为πk/4、冲激权重为π/4乘DFS系数；竖线数值与冲激面积不同。",
+      "prerequisites": [
+        "rectangle",
+        "periodic-transform"
+      ],
+      "section": "原题与冲激谱",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "objects",
+      "label": "模拟、冲激采样与样值序列",
+      "pages": [
+        14,
+        15
+      ],
+      "summary": "连续波形、连续时间冲激采样信号、离散序列是三个对象；频域用ω=ΩT连接而不是直接换字母。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "采样与频率定标",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "inverse-route",
+      "label": "比较两个反变换",
+      "pages": [
+        16
+      ],
+      "summary": "模拟反变换跨全频轴，IDTFT只跨一个2π区间；需统一区间和变量才能比较频谱。",
+      "prerequisites": [
+        "objects"
+      ],
+      "section": "采样与频率定标",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "folding",
+      "label": "分段平移与1/T尺度",
+      "pages": [
+        17
+      ],
+      "summary": "模拟频轴按2π/T分段并平移，整数指数使移位相位为1，换元微分带来1/T。",
+      "prerequisites": [
+        "inverse-route"
+      ],
+      "section": "采样与频率定标",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "sampling-spectrum",
+      "label": "采样后的谱副本求和",
+      "pages": [
+        18
+      ],
+      "summary": "序列谱由模拟谱平移缩放后相加；数字周期2π、模拟频率周期2π/T，公式本身不保证无混叠。",
+      "prerequisites": [
+        "folding"
+      ],
+      "section": "采样与频率定标",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "units",
+      "label": "Hz、rad/s与rad/sample",
+      "pages": [
+        19
+      ],
+      "summary": "ω=ΩT=2πf/f_s；归一化频率的分母不同会使奈奎斯特边界标成0.5或1。",
+      "prerequisites": [
+        "objects"
+      ],
+      "section": "采样与频率定标",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "example-data",
+      "label": "100Hz余弦以400Hz采样",
+      "pages": [
+        20,
+        21
+      ],
+      "summary": "从振幅2的余弦得到样值(2,0,−2,0)，分别写连续采样冲激与序列，核对T和各频率单位。",
+      "prerequisites": [
+        "units"
+      ],
+      "section": "采样原题",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "two-spectra",
+      "label": "两种采样谱及冲激尺度",
+      "pages": [
+        22,
+        23
+      ],
+      "summary": "模拟频率轴冲激权重800π，数字频率轴权重2π；变量缩放时δ的尺度因子使两种写法一致。",
+      "prerequisites": [
+        "example-data",
+        "sampling-spectrum",
+        "impulse"
+      ],
+      "section": "采样原题",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "verify",
+      "label": "四图与DFS独立核验",
+      "pages": [
+        24
+      ],
+      "summary": "用N=4、DFS=(0,4,0,4)核出2π冲激权重；时间基本周期4不等于本例频谱最小周期π。",
+      "prerequisites": [
+        "two-spectra",
+        "periodic-transform"
+      ],
+      "section": "采样原题",
+      "type": "concept",
+      "source": "ppt"
+    }
+  ],
+  "edges": [
+    {
+      "from": "notation",
+      "to": "periodic-transform",
+      "label": "系数归一化决定冲激权重"
+    },
+    {
+      "from": "rectangle-transform",
+      "to": "verify",
+      "label": "两道原题共用DFS交叉验算"
+    },
+    {
+      "from": "sampling-spectrum",
+      "to": "two-spectra",
+      "label": "检验1/T与δ缩放"
+    },
+    {
+      "from": "units",
+      "to": "folding",
+      "label": "区分两个频率坐标"
+    }
+  ],
+  "sourcePptFilename": "2.2周期序列的离散傅里叶变换.pptx",
+  "sourcePptSha256": "109bb258604a00d13d02d82934c5a34e0cf55945ba52e66902b3a848834042e8"
+}

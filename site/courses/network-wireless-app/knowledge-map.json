@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "id": "network-wireless-app",
+  "title": "计算机网络 无线局域网工程应用",
+  "reader": "/study-site/network-wireless-app-ppt.html",
+  "totalPages": 55,
+  "source": {
+    "pdf": "/study-site/courses/source-pages/4ebd70a7bdbef196b65c/source.pdf",
+    "sha256": "4ebd70a7bdbef196b65c2d6028bb9619af696e45f31890ba84f9b4151dead402",
+    "sourcePdfPages": 55,
+    "readerPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "pageNumbering": "真实主版PDF1–55页；保留原阅读器data-page，不把补充推导另算原PPT页。",
+    "recoveryStatus": "nodes-and-edges-recovered-from-preserved-complete-generator-new-output-not-verified-old-frozen-bytes",
+    "visibleSourceRule": "本轮重新查看全部逐页原图与PDF并排渲染，按可见内容对应；不用隐藏旧文本替代可见源内容。"
+  },
+  "nodes": [
+    {
+      "id": "system-route",
+      "label": "业务路径与空口机会是两个设计层次",
+      "pages": [
+        1,
+        2,
+        4,
+        5,
+        26
+      ],
+      "summary": "车地场景先问数据经过谁、谁负责管理，再问共享空口何时允许发送；视频静帧只作情境入口，不编造未提供的视频情节或技术证据。",
+      "prerequisites": [],
+      "section": "从需求到架构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "business-budget",
+      "label": "把并发业务和方向转成容量约束",
+      "pages": [
+        3,
+        9,
+        27
+      ],
+      "summary": "TCMS、PIS及多路视频可能共同占用链路，先明确方向、同时性与计量口径；36公里、28站台不确定AP数量，1Gbit/s展示也不保证切换和忙时性能。",
+      "prerequisites": [
+        "system-route"
+      ],
+      "section": "从需求到架构",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "bss-identity",
+      "label": "AP、STA、SSID与信道分别表示什么",
+      "pages": [
+        6
+      ],
+      "summary": "BSS以AP组织关联站，星形不表示每条线独占带宽；SSID最大32字节，服务名、设备身份和频谱信道不能混为一谈。",
+      "prerequisites": [
+        "system-route"
+      ],
+      "section": "从需求到架构",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "discovery-association",
+      "label": "扫描得到候选，关联建立服务关系",
+      "pages": [
+        7
+      ],
+      "summary": "Beacon被动发现与Probe主动探测都不等于已成功关联；认证、安全和IP配置还需适用条件，图示往返不是完整入网规范。",
+      "prerequisites": [
+        "bss-identity"
+      ],
+      "section": "从需求到架构",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "deployment-forwarding",
+      "label": "AC接线位置与用户数据路径独立",
+      "pages": [
+        8
+      ],
+      "summary": "直挂/旁挂描述部署连接，集中/本地转发描述数据位置；旁挂也可经CAPWAP数据隧道集中转发，不能记成所有用户包永远绕开AC。",
+      "prerequisites": [
+        "bss-identity"
+      ],
+      "section": "AC架构与数据路径",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "fat-ap-limits",
+      "label": "独立接入与规模化协同的取舍",
+      "pages": [
+        10
+      ],
+      "summary": "胖AP可以工作但大规模统一配置、接入衔接和运维成本更高；相同SSID不保证无缝漫游，也不能反推胖AP任何实现都不能漫游。",
+      "prerequisites": [
+        "deployment-forwarding",
+        "business-budget",
+        "discovery-association"
+      ],
+      "section": "AC架构与数据路径",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "central-bottleneck",
+      "label": "沿端到端路径寻找集中转发瓶颈",
+      "pages": [
+        11
+      ],
+      "summary": "汇聚用户数据会共享AC处理与上联资源，是否成为瓶颈依容量及负载；单独提高空口峰值不会自动解除后方拥堵。",
+      "prerequisites": [
+        "deployment-forwarding",
+        "business-budget"
+      ],
+      "section": "AC架构与数据路径",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "local-forwarding",
+      "label": "统一管理与就近转发可以共存",
+      "pages": [
+        12
+      ],
+      "summary": "本例旁挂AC继续统一控制，视频由AP进入交换网络本地转发；负载分担仍受终端、覆盖和信道限制，且需一致的VLAN与安全策略。",
+      "prerequisites": [
+        "central-bottleneck",
+        "fat-ap-limits"
+      ],
+      "section": "AC架构与数据路径",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "handoff-gap",
+      "label": "覆盖连续不等于业务连续",
+      "pages": [
+        13
+      ],
+      "summary": "新接入尚未可用而旧链路已失效会出现空窗；100毫秒只是本案例量级，按速度换算位移不能直接推出所需重叠覆盖长度。",
+      "prerequisites": [
+        "discovery-association",
+        "business-budget"
+      ],
+      "section": "Mesh与移动接续",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "mesh-path",
+      "label": "区分用户接入、Mesh回传和门户",
+      "pages": [
+        14,
+        15
+      ],
+      "summary": "沿STA1→MP4→MP1→MPP→LAN辨认多跳职责；Mesh可有固定节点与基础设施，不等于IBSS，多跳同频转发还会重复消耗空口资源。",
+      "prerequisites": [
+        "handoff-gap",
+        "deployment-forwarding"
+      ],
+      "section": "Mesh与移动接续",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "make-before-break",
+      "label": "先准备可用链路，再切离旧路径",
+      "pages": [
+        16
+      ],
+      "summary": "车头车尾多链路为提前接续创造条件，但小于10毫秒和零丢包是待验证的案例主张；不能仅凭多链路名称等同Wi-Fi 7 MLO。",
+      "prerequisites": [
+        "mesh-path",
+        "handoff-gap"
+      ],
+      "section": "Mesh与移动接续",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "rail-integrated",
+      "label": "把旁挂控制与Mesh接续放入实际业务路径",
+      "pages": [
+        17
+      ],
+      "summary": "从车内交换机和车载AP追到轨旁AP及地面回传；AC管理、移动接续、组播源和公网出口各有职责，所有视频并不必然绕公网。",
+      "prerequisites": [
+        "make-before-break",
+        "local-forwarding"
+      ],
+      "section": "Mesh与移动接续",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "field-validation",
+      "label": "现场覆盖、忙时容量与管理分别验收",
+      "pages": [
+        18
+      ],
+      "summary": "隧道高架传播条件不同，设备在线不能证明视频达标；需分别核验链路质量、负载下业务表现与跨线路运维。",
+      "prerequisites": [
+        "rail-integrated",
+        "business-budget"
+      ],
+      "section": "规模化管理与证据",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "central-ac-pool",
+      "label": "分层管理、运维与控制器资源池",
+      "pages": [
+        19,
+        22
+      ],
+      "summary": "Central AC先分配工作AC，AP再与工作AC建相应隧道并协调配置状态；这是案例池化方案，不是所有CAPWAP系统必须具有的统一步骤。",
+      "prerequisites": [
+        "local-forwarding",
+        "field-validation"
+      ],
+      "section": "规模化管理与证据",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "configuration-lineage",
+      "label": "冲突合并先识别配置来源和策略",
+      "pages": [
+        20
+      ],
+      "summary": "源配置、继承配置、继承并修改有不同处理；本例保留设备配置不等于删除云端所有缺项，不能把图中短横线臆测为无操作。",
+      "prerequisites": [
+        "central-ac-pool"
+      ],
+      "section": "规模化管理与证据",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "diagnostic-evidence",
+      "label": "从体验现象到证据，再验证优化效果",
+      "pages": [
+        21
+      ],
+      "summary": "Ping、抓包与健康评估回答不同问题；一次连通成功不证明业务正常，AI优化须在授权最小范围取证并有同条件对照和回退。",
+      "prerequisites": [
+        "field-validation",
+        "configuration-lineage"
+      ],
+      "section": "规模化管理与证据",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "cadp-role",
+      "label": "CADP明确云AC调度与网元接口",
+      "pages": [
+        23
+      ],
+      "summary": "AP、NMS、云AC池与调度平台职责不同，调度平台不是所有视频必经转发点；源页标准名应按讲义纠为ISO/IEC 5021两部分，不是空口调制标准。",
+      "prerequisites": [
+        "central-ac-pool"
+      ],
+      "section": "规模化管理与证据",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "sdn-composition",
+      "label": "按问题组合架构而非按名字互斥选择",
+      "pages": [
+        24,
+        25
+      ],
+      "summary": "Central AC强调分层协调，CADP明确云调度，SDN组织可编程控制；可与旁挂及Mesh组合，但多一层依赖不自动提高频谱或可靠性。",
+      "prerequisites": [
+        "cadp-role",
+        "rail-integrated"
+      ],
+      "section": "规模化管理与证据",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "interference-conditions",
+      "label": "信道编号不同不等于频谱隔离",
+      "pages": [
+        28
+      ],
+      "summary": "传统2.4GHz信道示意须结合占宽和当地可用条件；同频可能争用也可能有害干扰，新闻截图不等于已完成事故归因。",
+      "prerequisites": [
+        "bss-identity",
+        "business-budget"
+      ],
+      "section": "无线MAC设计前提",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "access-evolution",
+      "label": "ALOHA、CSMA与CD各减少哪种浪费",
+      "pages": [
+        29
+      ],
+      "summary": "时隙约束减少任意错开重叠，发前监听减少盲发，适用介质中碰撞检测减少失败后的继续发送；现代全双工交换以太网不是共享总线争用。",
+      "prerequisites": [
+        "interference-conditions"
+      ],
+      "section": "无线MAC设计前提",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "local-information",
+      "label": "强自发射与远端干扰限制碰撞检测",
+      "pages": [
+        30,
+        31
+      ],
+      "summary": "发送端难以边强发射边辨弱干扰，且本地安静不能代表接收端；衰落和外部干扰也可导致失败，不把所有丢帧都唯一归因为碰撞。",
+      "prerequisites": [
+        "access-evolution"
+      ],
+      "section": "无线MAC设计前提",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hidden-terminal",
+      "label": "隐藏站：共同接收者不在本地视野中",
+      "pages": [
+        32
+      ],
+      "summary": "A和C彼此不可听却都影响B，正确发前监听仍可能在B处重叠失败；需要把接收侧附近也纳入预约信息传播。",
+      "prerequisites": [
+        "local-information"
+      ],
+      "section": "无线MAC设计前提",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "exposed-terminal",
+      "label": "暴露站：听见忙不必然必须禁止并行",
+      "pages": [
+        33
+      ],
+      "summary": "B到A与C到D只有在两侧接收及反向ACK都安全时才可并行；目的地址不同本身不是干扰隔离证据。",
+      "prerequisites": [
+        "local-information"
+      ],
+      "section": "无线MAC设计前提",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "ca-ack",
+      "label": "事前避碰与事后确认解决不同缺口",
+      "pages": [
+        34,
+        35
+      ],
+      "summary": "基本单播按ACK或超时决定本跳重试，ACK丢失可能导致重复数据，需序号辨认；并非所有帧逐一ACK，停等简图也不是全部现代聚合实现。",
+      "prerequisites": [
+        "hidden-terminal",
+        "exposed-terminal"
+      ],
+      "section": "CSMA/CA状态与时序",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "contention-state",
+      "label": "监听、倒计时、发送和反馈构成状态机",
+      "pages": [
+        36,
+        37,
+        38
+      ],
+      "summary": "物理监听看当前，NAV记保留，间隔保护响应，随机数错开等待者；计数归零仍非成功保证，未获确认也不能唯一证明碰撞。",
+      "prerequisites": [
+        "ca-ack"
+      ],
+      "section": "CSMA/CA状态与时序",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "ifs-priority",
+      "label": "SIFS保护响应，不是任意高优先用户特权",
+      "pages": [
+        39,
+        40
+      ],
+      "summary": "SIFS、PIFS、DIFS按帧和协调功能选择，不是三段依次串等；28/78/128微秒属于早期FHSS50微秒时隙条件，不能跨PHY当通用常量。",
+      "prerequisites": [
+        "contention-state"
+      ],
+      "section": "CSMA/CA状态与时序",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "rts-cts",
+      "label": "RTS和CTS把保留信息带到两个邻域",
+      "pages": [
+        41
+      ],
+      "summary": "RTS含RA和TA，基本CTS仅含RA而非再复制TA；接收者CTS可通知听不见源站的隐藏站，但RTS自身仍争用且预约有开销。",
+      "prerequisites": [
+        "hidden-terminal",
+        "contention-state"
+      ],
+      "section": "CSMA/CA状态与时序",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "nav-residual",
+      "label": "NAV记录当前帧结束后的剩余保留",
+      "pages": [
+        42
+      ],
+      "summary": "本地逻辑忙可跨越DATA和ACK间的短暂静默；基本未分片DATA通知SIFS+ACK，NAV到期仍需物理空闲及适用间隔退避。",
+      "prerequisites": [
+        "ifs-priority",
+        "rts-cts"
+      ],
+      "section": "CSMA/CA状态与时序",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "window-growth",
+      "label": "CW最大计数、候选数量与阶段索引",
+      "pages": [
+        43,
+        44
+      ],
+      "summary": "从0至CW共有CW+1项；失败扩大遵循2(CW+1)−1并受上限，初始32候选和FHSS16候选不可混搭，旧版8候选不虚构标准依据。",
+      "prerequisites": [
+        "contention-state",
+        "ifs-priority"
+      ],
+      "section": "退避与完整交换",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "post-backoff",
+      "label": "空闲和新包不自动取消退避义务",
+      "pages": [
+        45
+      ],
+      "summary": "成功后post-backoff限制连续独占；新包是否可直接接入依当前状态，SIFS的ACK/CTS响应不能套普通DCF新争用规则。",
+      "prerequisites": [
+        "window-growth",
+        "ca-ack"
+      ],
+      "section": "退避与完整交换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "freeze-trace",
+      "label": "冻结剩余量，恢复后只数合格空闲时隙",
+      "pages": [
+        46,
+        47
+      ],
+      "summary": "B先后让C、D、E发送时保留原倒计时，并非三次自身失败或重新抽签；从事件轨迹区分墙钟流逝、空闲计数与重试次数。",
+      "prerequisites": [
+        "window-growth",
+        "post-backoff"
+      ],
+      "section": "退避与完整交换",
+      "type": "example",
+      "source": "ppt"
+    },
+    {
+      "id": "duration-accounting",
+      "label": "RTS到ACK同一结束点的三种剩余时间",
+      "pages": [
+        48
+      ],
+      "summary": "未分片模型RTS余3SIFS+CTS+DATA+ACK、CTS余2SIFS+DATA+ACK、DATA余SIFS+ACK；修正图中上方NAV错位标签，不相加三条保留条或复制不减。",
+      "prerequisites": [
+        "nav-residual",
+        "freeze-trace"
+      ],
+      "section": "退避与完整交换",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "dense-load",
+      "label": "密集接入要优化有效交付和排队",
+      "pages": [
+        49
+      ],
+      "summary": "控制、争用和重传占用空口，持续超出服务能力的到达会积压；高单机峰值不能单独证明多人短包时延或应用稳定。",
+      "prerequisites": [
+        "duration-accounting",
+        "business-budget"
+      ],
+      "section": "高密接入与Wi-Fi 6",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "metric-separation",
+      "label": "峰值、并发与时延必须分别定义验证",
+      "pages": [
+        50
+      ],
+      "summary": "9.6Gbit/s需特定带宽、空间流、调制编码和保护间隔，非手机应用吞吐；1024相对256QAM是每符号10比特比8比特，不是四倍净速率。",
+      "prerequisites": [
+        "dense-load"
+      ],
+      "section": "高密接入与Wi-Fi 6",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "ofdma-mumimo",
+      "label": "按频率RU与空间流协调多用户",
+      "pages": [
+        51
+      ],
+      "summary": "OFDMA分配频率资源，MU-MIMO利用空间维度，可在资源和能力限制下组合；仍需先取得适用发送机会，不能推成所有站任意同时发。",
+      "prerequisites": [
+        "metric-separation",
+        "contention-state"
+      ],
+      "section": "高密接入与Wi-Fi 6",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "bss-coloring",
+      "label": "颜色先分类，阈值和功率条件才允许复用",
+      "pages": [
+        52
+      ],
+      "summary": "HE信令中的6位颜色不代替BSSID也不形成频谱隔离；图中36/52/100/152是信道号，异色强信号仍不能无条件忽略，空间复用须满足相应约束。",
+      "prerequisites": [
+        "exposed-terminal",
+        "interference-conditions",
+        "ofdma-mumimo"
+      ],
+      "section": "高密接入与Wi-Fi 6",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "mixed-bearers",
+      "label": "按业务后果选择承载与保障",
+      "pages": [
+        53
+      ],
+      "summary": "可见源图是轨道LTE-M与Wi-Fi 6融合，控制和视频业务分工不同；轨道厂商TD-LTE语境不直接等同蜂窝Cat-M1，正式安全系统还需独立工程验证。",
+      "prerequisites": [
+        "rail-integrated",
+        "dense-load",
+        "bss-coloring"
+      ],
+      "section": "系统综合与实践",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "system-synthesis",
+      "label": "需求、架构、接入和测试相互约束",
+      "pages": [
+        54
+      ],
+      "summary": "旁挂AC不消除隐藏站，Wi-Fi 6不修正错误VLAN或不足回传，Mesh也需真实备用路径；每个机制都要说明解决什么及何种条件下有效。",
+      "prerequisites": [
+        "sdn-composition",
+        "mixed-bearers",
+        "diagnostic-evidence"
+      ],
+      "section": "系统综合与实践",
+      "type": "method",
+      "source": "ppt"
+    },
+    {
+      "id": "reproducible-lab",
+      "label": "用拓扑、模型假设和事件轨迹证明理解",
+      "pages": [
+        55
+      ],
+      "summary": "分别画控制/数据路径并声明MAC模型，测试成功、同计数碰撞、忙时冻结和ACK丢失；普通Mininet能ping通不证明已模拟802.11空口，标准研读须区分能力与设备实现。",
+      "prerequisites": [
+        "system-synthesis",
+        "freeze-trace",
+        "duration-accounting"
+      ],
+      "section": "系统综合与实践",
+      "type": "method",
+      "source": "ppt"
+    }
+  ],
+  "edges": [
+    {
+      "from": "business-budget",
+      "to": "metric-separation",
+      "label": "贯穿：业务净需求不能直接等同PHY峰值"
+    },
+    {
+      "from": "deployment-forwarding",
+      "to": "cadp-role",
+      "label": "复用：调度控制不必成为用户数据必经路径"
+    },
+    {
+      "from": "central-bottleneck",
+      "to": "dense-load",
+      "label": "对比：回传集中瓶颈与共享空口瓶颈"
+    },
+    {
+      "from": "local-forwarding",
+      "to": "interference-conditions",
+      "label": "边界：移开数据绕行不取消射频干扰"
+    },
+    {
+      "from": "handoff-gap",
+      "to": "diagnostic-evidence",
+      "label": "验证：连续覆盖还要测切换期间业务损失"
+    },
+    {
+      "from": "mesh-path",
+      "to": "dense-load",
+      "label": "代价：多跳若同频会再消耗共享空口时间"
+    },
+    {
+      "from": "make-before-break",
+      "to": "mixed-bearers",
+      "label": "协同：提前接续与不同业务承载各有职责"
+    },
+    {
+      "from": "configuration-lineage",
+      "to": "sdn-composition",
+      "label": "落实：集中编排仍要处理继承与局部例外"
+    },
+    {
+      "from": "hidden-terminal",
+      "to": "exposed-terminal",
+      "label": "对比：少退让引发冲突，多退让浪费机会"
+    },
+    {
+      "from": "exposed-terminal",
+      "to": "bss-coloring",
+      "label": "呼应：在可验证干扰条件下减少保守退让"
+    },
+    {
+      "from": "ca-ack",
+      "to": "window-growth",
+      "label": "触发：失败反馈驱动重试而非唯一诊断碰撞"
+    },
+    {
+      "from": "ifs-priority",
+      "to": "duration-accounting",
+      "label": "基础：从通知帧末数尚未发生的响应间隔"
+    },
+    {
+      "from": "nav-residual",
+      "to": "window-growth",
+      "label": "互补：让过已预约交换后再错开新竞争"
+    },
+    {
+      "from": "freeze-trace",
+      "to": "window-growth",
+      "label": "区分：冻结不是本机失败扩大窗口"
+    },
+    {
+      "from": "rts-cts",
+      "to": "duration-accounting",
+      "label": "展开：两端预约需正确扣减已过时间"
+    },
+    {
+      "from": "ofdma-mumimo",
+      "to": "bss-coloring",
+      "label": "区分：同一协调机会多用户与跨BSS空间复用"
+    },
+    {
+      "from": "diagnostic-evidence",
+      "to": "reproducible-lab",
+      "label": "迁移：保留可复查过程而非只给成功截图"
+    },
+    {
+      "from": "discovery-association",
+      "to": "central-ac-pool",
+      "label": "区分：终端找AP与AP找控制器"
+    }
+  ]
+}

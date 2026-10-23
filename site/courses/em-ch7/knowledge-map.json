@@ -1,0 +1,605 @@
+{
+  "version": 1,
+  "id": "em-ch7",
+  "title": "电磁场第7章 · 位函数、电流元与小环辐射",
+  "reader": "/study-site/ppt7.html",
+  "sourcePageCount": 35,
+  "displayPageCount": 35,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt7.html",
+    "readerSha256": "5bd310b4165115a58b41a69d03b19d72dd4e332ff59890b30375bb0713fa69e9",
+    "readerGitBlob": "2c093538b7b8503e91a3d10df8a324c6da0b9c2d",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "nodes": [
+    {
+      "id": "source-to-radiation",
+      "label": "源、位、完整场与远区指标",
+      "pages": [
+        1,
+        2,
+        35
+      ],
+      "summary": "由给定电流分布先求位再微分得场，区分近远区后才提取方向图、功率与辐射电阻。电流元、等效磁流元和真实小环可沿同一链比较，计算前固定时间约定、电流幅值、尺度及基矢。",
+      "section": "位函数与传播核",
+      "prerequisites": [],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "1": "p01-r1",
+        "2": "p02-r1",
+        "35": "p35-r1"
+      }
+    },
+    {
+      "id": "harmonic-potentials",
+      "label": "时谐位函数与洛仑兹规范",
+      "pages": [
+        3
+      ],
+      "summary": "exp(jωt)下以B=curl A和E=−grad φ−jωA恢复场，洛仑兹规范使用散度而非旋度。源到位的Helmholtz方程取均匀线性各向同性模型，含1/ω的消元式不能直接用在ω=0。",
+      "section": "位函数与传播核",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "3": "p03-r1"
+      }
+    },
+    {
+      "id": "delta-source",
+      "label": "三维点源与抽样性质",
+      "pages": [
+        4
+      ],
+      "summary": "单位点源以三维δ分布定义，积分包含源点时权重为1。它不是普通函数在一点取无穷，也不能把径向简写δ(r)未经球坐标测度归一化就当一维δ来积分。",
+      "section": "位函数与传播核",
+      "prerequisites": [
+        "harmonic-potentials"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "4": "p04-r1"
+      }
+    },
+    {
+      "id": "spherical-green",
+      "label": "球对称方程的1/r传播结构",
+      "pages": [
+        5,
+        6
+      ],
+      "summary": "源外令u=rφ把径向方程化成一维波动型方程，出现exp(±jkr)/r。exp(jωt)约定下向外波取负空间指数，还须“无远处外来入射”的辐射条件；源强归一化另定系数。",
+      "section": "位函数与传播核",
+      "prerequisites": [
+        "delta-source"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "5": "p05-r1",
+        "6": "p06-r1"
+      }
+    },
+    {
+      "id": "source-field-distance",
+      "label": "分布源叠加须用源到场距离",
+      "pages": [
+        7
+      ],
+      "summary": "固定场点r，让源点r′遍历源区，幅度1/R和相位exp(−jkR)都使用R=|r−r′|。不能过早以离原点的r代替各R，也不能在体积分外多添距离或源因子。",
+      "section": "位函数与传播核",
+      "prerequisites": [
+        "spherical-green"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "7": "p07-r1"
+      }
+    },
+    {
+      "id": "retarded-vector-potential",
+      "label": "电流矢位与有限传播时延",
+      "pages": [
+        8
+      ],
+      "summary": "以同一向外Green核对电流密度各固定坐标分量积分得到A。无损非色散模型中exp(−jkR)对应R/v时延，观察到的是源在传播时间之前的影响，不是同时瞬时作用。",
+      "section": "位函数与传播核",
+      "prerequisites": [
+        "source-field-distance"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "8": "p08-r1"
+      }
+    },
+    {
+      "id": "current-element",
+      "label": "均匀电流元不等于任意短振子",
+      "pages": [
+        9
+      ],
+      "summary": "理想短直线电流元要求电长度小且沿线电流近似均匀，源强用电流矩Il。沿线不变不等于时间不变；普通短对称振子常为近似三角形电流，不能不加区别套均匀模型系数。",
+      "section": "电流元完整场",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "9": "p09-r1"
+      }
+    },
+    {
+      "id": "element-magnetic",
+      "label": "从轴向矢位到环向磁场",
+      "pages": [
+        10
+      ],
+      "summary": "先保留矢位的固定轴向再换球基，用正确球坐标旋度得到Hφ，含1/r与1/r²项。有限短线段的源距离近似还需观察距离远大于线长，不只是线长小于波长。",
+      "section": "电流元完整场",
+      "prerequisites": [
+        "current-element",
+        "retarded-vector-potential"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "10": "p10-r1"
+      }
+    },
+    {
+      "id": "element-electric",
+      "label": "由H旋度恢复径向与横向E",
+      "pages": [
+        11
+      ],
+      "summary": "源外用Ampère–Maxwell方程求E，H仅有φ分量仍可产生Er与Eθ。完整场保留各距离阶次，Er没有首阶1/r辐射项，不能在推导起点就删成纯横场。",
+      "section": "电流元完整场",
+      "prerequisites": [
+        "element-magnetic"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "11": "p11-r1"
+      }
+    },
+    {
+      "id": "distance-scales",
+      "label": "kr量级只作近远场比较",
+      "pages": [
+        12
+      ],
+      "summary": "比较1/r、1/r²、1/r³项前先用kr归一化，同时保留角因子与复相位。kr≈1只是量级交叉而非普适硬边界，真实场分量不是图中几条幂律曲线的简单无条件相加。",
+      "section": "近远区",
+      "prerequisites": [
+        "element-electric"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "12": "p12-r1"
+      }
+    },
+    {
+      "id": "near-region",
+      "label": "电准静态近区的双重尺度",
+      "pages": [
+        13
+      ],
+      "summary": "有限短电流元近区须l≪r且kr≪1，不能把原点包含进去。主导E保留1/r³、H保留1/r²并可近似传播相位，二者不服从远区E/H=η关系。",
+      "section": "近远区",
+      "prerequisites": [
+        "distance-scales"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "13": "p13-r1"
+      }
+    },
+    {
+      "id": "near-reactive",
+      "label": "近区主项无功不等于没有净辐射",
+      "pages": [
+        14
+      ],
+      "summary": "准静态主项中E与电荷同相、H与电流同相，因守恒关系而相差四分之一周期；仅以这些主项算平均实能流为零。被省略的小项仍携带净向外辐射，不能说近区没有辐射功率通过。",
+      "section": "近远区",
+      "prerequisites": [
+        "near-region"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "14": "p14-r1"
+      }
+    },
+    {
+      "id": "far-region",
+      "label": "远区只保留1/r横向辐射场",
+      "pages": [
+        15,
+        16
+      ],
+      "summary": "kr≫1且r远大于源尺寸时，Eθ与Hφ的1/r项主导并以介质实阻抗相连，平均能流径向向外。球面等相位和1/r幅度仍存在，只能局部近似平面波；120πΩ只用于自由空间。",
+      "section": "近远区",
+      "prerequisites": [
+        "distance-scales"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "15": "p15-r1",
+        "16": "p16-r1"
+      }
+    },
+    {
+      "id": "radiation-pattern",
+      "label": "同半径归一化的幅度方向图",
+      "pages": [
+        17,
+        18,
+        19
+      ],
+      "summary": "电流元远场幅度随sinθ/r变化，轴向首阶辐射为零、赤道最强；方向图去掉共同尺度只保留角向幅度sinθ，功率图用sin²θ。立体图半径不是波前位置，场线图也不是方向图。",
+      "section": "方向图与功率",
+      "prerequisites": [
+        "far-region"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "17": "p17-r1",
+        "18": "p18-r1",
+        "19": "p19-r1"
+      }
+    },
+    {
+      "id": "beamwidth",
+      "label": "半功率点对应幅度1/√2",
+      "pages": [
+        20
+      ],
+      "summary": "半功率宽度取同一主瓣两侧半功率方向之差，而不是把极角一概乘2。电流元含轴主面两点θ=45°与135°，宽度90°；相对主瓣中心的偏角与相对源轴的极角要区分。",
+      "section": "方向图与功率",
+      "prerequisites": [
+        "radiation-pattern"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "20": "p20-r1"
+      }
+    },
+    {
+      "id": "radiated-power",
+      "label": "球面积分消去观察半径",
+      "pages": [
+        21
+      ],
+      "summary": "远区平均功率密度按1/r²下降，与球面元r²相消，剩sin²方向图再乘面元sinθ的角积分。换成cosθ变量时同时改负号与积分限，总功率不应依赖所选包源球面半径。",
+      "section": "方向图与功率",
+      "prerequisites": [
+        "radiation-pattern"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "21": "p21-r1"
+      }
+    },
+    {
+      "id": "radiation-resistance",
+      "label": "辐射电阻与电流幅值约定",
+      "pages": [
+        22
+      ],
+      "summary": "用P=1/2|I峰值|²Rr定义辐射电阻，它表征送入空间的功率而非导线发热。自由空间均匀电流元Rr=80π²(l/λ)²，若用有效值则功率式去1/2但物理Rr不变。",
+      "section": "方向图与功率",
+      "prerequisites": [
+        "radiated-power"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "22": "p22-r1"
+      }
+    },
+    {
+      "id": "distance-angle-example",
+      "label": "远区距离、偏角与磁场换算",
+      "pages": [
+        23
+      ],
+      "summary": "同一源两远区点先按1/r缩放场幅，再按sinθ方向因子修正，最后除所在媒质阻抗得到H。题给相对最大辐射方向的偏角，不等同从电流轴量起的球坐标极角。",
+      "section": "方向图与功率",
+      "prerequisites": [
+        "radiation-pattern"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "23": "p23-r1"
+      }
+    },
+    {
+      "id": "power-example",
+      "label": "以功率与辐射电阻两路复算",
+      "pages": [
+        24
+      ],
+      "summary": "按本章峰值电流约定先算均匀电流元Rr，再用1/2|I|²Rr；与直接辐射功率式应相同。若题目改给有效值须相应换式，不可静默沿用峰值答案。",
+      "section": "方向图与功率",
+      "prerequisites": [
+        "radiation-resistance"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "24": "p24-r1"
+      }
+    },
+    {
+      "id": "equivalent-magnetic-sources",
+      "label": "等效磁源与广义方程",
+      "pages": [
+        25
+      ],
+      "summary": "磁荷与磁流是计算等效源，不是证明真实自由磁单极存在。本章磁流进入Faraday式带负号，连续性及界面条件随之对应；边界式必须同时声明法向与媒质编号。",
+      "section": "对偶与小环",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "25": "p25-r1"
+      }
+    },
+    {
+      "id": "duality",
+      "label": "对偶须连场、源、媒质和边界一起换",
+      "pages": [
+        26
+      ],
+      "summary": "按本章表将E、H及相应负号、ε与μ、电源与磁源一并替换，k保持而阻抗形式取倒数。它是两个数学问题的形式对应，不是同一点不同量纲场数值相等，不能只互换名称。",
+      "section": "对偶与小环",
+      "prerequisites": [
+        "equivalent-magnetic-sources"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "26": "p26-r1"
+      }
+    },
+    {
+      "id": "magnetic-element",
+      "label": "磁流元场的方向与阻抗",
+      "pages": [
+        27,
+        28
+      ],
+      "summary": "短均匀磁流元的源强单位与电流元不同，沿轴的远场为Eφ与Hθ。由完整对偶得到相应负号与阻抗位置，以E×H向外检查物理传播方向，负的有符号分量不代表向内辐射。",
+      "section": "对偶与小环",
+      "prerequisites": [
+        "duality",
+        "element-electric"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "27": "p27-r1",
+        "28": "p28-r1"
+      }
+    },
+    {
+      "id": "small-loop-potential",
+      "label": "小环零阶抵消与首阶源展开",
+      "pages": [
+        29
+      ],
+      "summary": "环上电流方向随位置转动，不能把所有线元当同向相加；零阶矢位抵消，保留传播核一阶变化后得到正比环面积的Aφ。要求电小环且观察距离远大于半径，球旋度的极角项负号不可省。",
+      "section": "对偶与小环",
+      "prerequisites": [
+        "retarded-vector-potential"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "29": "p29-r1"
+      }
+    },
+    {
+      "id": "small-loop-equivalence",
+      "label": "逐分量验证小环等效磁流矩",
+      "pages": [
+        30
+      ],
+      "summary": "在电小环、均匀电流且r≫环半径的模型内，小环场与磁流元同型，等效磁流矩为jωμIA。面积与jωμ同时补足量纲和相位，等效不表示紧贴有限线圈各处都可忽略几何。",
+      "section": "对偶与小环",
+      "prerequisites": [
+        "small-loop-potential",
+        "magnetic-element"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "30": "p30-r1"
+      }
+    },
+    {
+      "id": "small-loop-far",
+      "label": "小环远场的符号与相位",
+      "pages": [
+        31
+      ],
+      "summary": "进一步kr≫1只留Eφ与Hθ的1/r项，二者满足带球基方向的负阻抗关系而能流仍向外。扣除传播因子后Eφ与电流同相，但取正θ方向的Hθ含负号而反相，不能笼统说所有分量同相。",
+      "section": "对偶与小环",
+      "prerequisites": [
+        "small-loop-equivalence",
+        "far-region"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "31": "p31-r1"
+      }
+    },
+    {
+      "id": "combined-circular",
+      "label": "电流元加小环不自动处处圆极化",
+      "pages": [
+        32
+      ],
+      "summary": "同相馈电可使相应远场系数相差四分之一周期，但某观察方向形成圆极化还须两横向场正交、非零且等幅。源轴、环法向和不同源点传播路径均影响这些条件，不能只靠相差判断。",
+      "section": "对偶与小环",
+      "prerequisites": [
+        "small-loop-far",
+        "far-region"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "32": "p32-r1"
+      }
+    },
+    {
+      "id": "loop-pattern",
+      "label": "同形方向图但E/H主面互换",
+      "pages": [
+        33
+      ],
+      "summary": "小环幅度同样按sinθ，绕环法向轴呈赤道强、轴向零；因场极化方向互换，含轴面为H面、垂轴面为E面。图形相似不意味着所有场分量和主面名称都与电流元相同。",
+      "section": "对偶与小环",
+      "prerequisites": [
+        "small-loop-far",
+        "radiation-pattern"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "33": "p33-r1"
+      }
+    },
+    {
+      "id": "loop-power-turns",
+      "label": "小环面积平方与多匝N²规律",
+      "pages": [
+        34
+      ],
+      "summary": "自由空间电小环的功率和辐射电阻随环面积平方增长，球面积分仍须消去r并取正确极角范围。紧密同向同相、近同面积各匝以同一电流参考时增为N²；不是任意线圈结构都无条件有此增益。",
+      "section": "对偶与小环",
+      "prerequisites": [
+        "loop-pattern",
+        "radiated-power",
+        "radiation-resistance"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "34": "p34-r1"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "harmonic-potentials",
+      "to": "source-to-radiation",
+      "label": "路线：由位恢复完整物理场"
+    },
+    {
+      "from": "near-region",
+      "to": "far-region",
+      "label": "对比：高次倒幂与1/r辐射主导"
+    },
+    {
+      "from": "near-reactive",
+      "to": "radiated-power",
+      "label": "提醒：近区近似删去的小项仍载净功率"
+    },
+    {
+      "from": "radiation-pattern",
+      "to": "distance-angle-example",
+      "label": "应用：先分离径向与角向因子"
+    },
+    {
+      "from": "beamwidth",
+      "to": "loop-pattern",
+      "label": "复用：同sinθ幅度的半功率宽度"
+    },
+    {
+      "from": "radiation-resistance",
+      "to": "loop-power-turns",
+      "label": "对比：电长度平方与面积平方"
+    },
+    {
+      "from": "current-element",
+      "to": "small-loop-potential",
+      "label": "对比：同向线元叠加与绕环方向抵消"
+    },
+    {
+      "from": "duality",
+      "to": "magnetic-element",
+      "label": "验证：源与阻抗转换不能漏负号"
+    },
+    {
+      "from": "small-loop-far",
+      "to": "combined-circular",
+      "label": "限制：相位条件只是圆极化条件之一"
+    },
+    {
+      "from": "source-field-distance",
+      "to": "combined-circular",
+      "label": "补充：非共点源保留不同传播路径相位"
+    },
+    {
+      "from": "loop-power-turns",
+      "to": "source-to-radiation",
+      "label": "闭环：远区指标回到源与幅值约定"
+    }
+  ]
+}

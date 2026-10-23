@@ -1,0 +1,967 @@
+{
+  "version": 1,
+  "id": "em-ch2",
+  "title": "电磁场第2章 · 场方程、边界与能量",
+  "reader": "/study-site/ppt2.html",
+  "sourcePageCount": 57,
+  "displayPageCount": 57,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt2.html",
+    "readerSha256": "922be7ee0a843afe6bee3681d4de897083d387d06e902a6d8bf881e015e88b6d",
+    "readerGitBlob": "6217c6e3f0ddeaea3f4c349faa98ff2d1fa93c45",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "nodes": [
+    {
+      "id": "field-problem",
+      "label": "场问题的完整求解链",
+      "pages": [
+        1,
+        2,
+        57
+      ],
+      "summary": "从静态规律出发加入时变耦合，统一为Maxwell方程，再补材料、源、初值和边界。可直接求场或先求势，最后用能量守恒检查；目录中的各部分不是互不相干的公式表。",
+      "section": "基本量与静态",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "1": "p01-title",
+        "2": "p02-1",
+        "57": "p57-r1"
+      }
+    },
+    {
+      "id": "four-fields-sources",
+      "label": "四个场量与体、面源",
+      "pages": [
+        4
+      ],
+      "summary": "E、D、H、B的物理角色和单位不同，材料关系也有适用条件。体电流密度为A/m²、面电流密度为A/m，自由电荷体密度为C/m³；局部密度需按正确几何积分成总量。",
+      "section": "基本量与静态",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "4": "p04-fields-E"
+      }
+    },
+    {
+      "id": "static-laws",
+      "label": "静态四定律的积分与微分形式",
+      "pages": [
+        3
+      ],
+      "summary": "静电环量为零、高斯定律、稳恒安培定律和磁通连续性分别约束旋度或散度。积分关系需对任意合适区域成立才能推出局部式；有场不等于当地有源，D换E、B换H须检查媒质是否均匀简单。",
+      "section": "基本量与静态",
+      "prerequisites": [
+        "four-fields-sources"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "3": "p03-layout"
+      }
+    },
+    {
+      "id": "gauss-method",
+      "label": "高斯定律如何真正解出场",
+      "pages": [
+        7,
+        52
+      ],
+      "summary": "定律不依赖对称性，直接从通量解场却依赖方向与大小的对称性。先减未知量、选闭面、算各面通量和包围自由电荷；非零切向场可以不贡献通量，补面不能遗漏。",
+      "section": "基本量与静态",
+      "prerequisites": [
+        "static-laws"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "7": "p07-one",
+        "52": "p52-r1"
+      }
+    },
+    {
+      "id": "coax-electric",
+      "label": "同轴线介质层的径向电场",
+      "pages": [
+        5
+      ],
+      "summary": "在足够长、端部效应可忽略的同轴静电模型中，柱对称使D只剩径向函数。闭合柱面的端盖通量为零，侧面通量对应线电荷，再用均匀简单媒质关系恢复E。",
+      "section": "基本量与静态",
+      "prerequisites": [
+        "gauss-method"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "5": "p05-model"
+      }
+    },
+    {
+      "id": "coax-withstand",
+      "label": "同轴耐压：先找峰值再优化",
+      "pages": [
+        6
+      ],
+      "summary": "固定结构时电场峰值在内导体外表面；固定外半径与电压改变内半径时，应最小化这个峰值而非最大化。理想均匀介质击穿判据下最佳内半径a=b/e，驻点类型与倒数求导负号都要核对。",
+      "section": "基本量与静态",
+      "prerequisites": [
+        "coax-electric"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "6": "p06-goal"
+      }
+    },
+    {
+      "id": "coax-magnetostatic",
+      "label": "同轴直流磁场的分区计算",
+      "pages": [
+        8,
+        9,
+        44,
+        45
+      ],
+      "summary": "以均匀直流体电流和圆柱对称为模型，安培回路只计实际包围的有符号电流。内导体、介质、外导体和外部逐区计算；介质内有H但旋度为零，外部场零还依赖该对称模型。",
+      "section": "基本量与静态",
+      "prerequisites": [
+        "static-laws"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "8": "p08-ampere",
+        "9": "p09-r4",
+        "44": "p44-fullcurrent",
+        "45": "p45-r4"
+      }
+    },
+    {
+      "id": "faraday-fixed",
+      "label": "固定回路的感生电动势",
+      "pages": [
+        10,
+        11
+      ],
+      "summary": "固定回路电场环量等于有向磁通变化率的负值。回路绕向与张面法向右手一致，斯托克斯定理给局部旋度式；磁通随时间变化不意味着全部电场都来自这一旋转部分。",
+      "section": "时变修正与守恒",
+      "prerequisites": [
+        "static-laws"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "10": "p10-r3",
+        "11": "p11-r4"
+      }
+    },
+    {
+      "id": "motional-emf",
+      "label": "动生与感生不能混用",
+      "pages": [
+        11
+      ],
+      "summary": "回路运动时总电动势还含速度叉乘磁场的力项；固定点偏导与随运动路径的变化率不同。不能把固定张面公式不加说明地当作任意运动回路的总式。",
+      "section": "时变修正与守恒",
+      "prerequisites": [
+        "faraday-fixed"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "11": "p11-r2"
+      }
+    },
+    {
+      "id": "charge-continuity",
+      "label": "电荷连续性与源的相容性",
+      "pages": [
+        12,
+        20
+      ],
+      "summary": "固定体积的净电流流出等于内部自由电荷减少率，局部为div J+∂ρ/∂t=0。ρ与J不能任意独立给定，但只给ρ也不能唯一恢复J的全部矢量分布。",
+      "section": "时变修正与守恒",
+      "prerequisites": [
+        "four-fields-sources"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "12": "p12-r2",
+        "20": "p20-r2"
+      }
+    },
+    {
+      "id": "ampere-defect",
+      "label": "静磁安培式为何需要推广",
+      "pages": [
+        13
+      ],
+      "summary": "对curl H=J取散度会强制div J=0，与一般电荷积累不相容。电荷密度时间不变只是某种守恒条件，不等于所有电磁场都静止；检验应使用完整连续性关系。",
+      "section": "时变修正与守恒",
+      "prerequisites": [
+        "charge-continuity",
+        "static-laws"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "13": "p13-r1"
+      }
+    },
+    {
+      "id": "displacement-current",
+      "label": "位移电流及修正的逻辑边界",
+      "pages": [
+        14,
+        15
+      ],
+      "summary": "位移电流为∂D/∂t，方向取场的变化率而非场值方向；它不要求自由电荷穿过间隙。该项使安培式与守恒相容，但仅由散度相同不能数学上唯一推出完整矢量定律；无焦耳热的简述限理想无损响应。",
+      "section": "时变修正与守恒",
+      "prerequisites": [
+        "ampere-defect"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "14": "p14-r3",
+        "15": "p15-r1"
+      }
+    },
+    {
+      "id": "total-current",
+      "label": "全电流环路与无散性",
+      "pages": [
+        16,
+        17
+      ],
+      "summary": "以一致的回路/张面取向积分J+∂D/∂t得到磁场环量，取散度得到全电流闭面净通量零。传导、运流和位移项不可重复计数，闭面电流相加用代数符号，不是把三个正大小相加。",
+      "section": "时变修正与守恒",
+      "prerequisites": [
+        "displacement-current",
+        "charge-continuity"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "16": "p16-r1",
+        "17": "p17-r1"
+      }
+    },
+    {
+      "id": "capacitor-current",
+      "label": "平板电容的端口关系",
+      "pages": [
+        18
+      ],
+      "summary": "均匀无漏电介质、固定几何与电准静态近似下，D变化产生间隙位移电流，与导线电流由全电流连续性相接，得到i=C du/dt。若C随时间变，须从q=Cu整体求导。",
+      "section": "时变修正与守恒",
+      "prerequisites": [
+        "total-current"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "18": "p18-r6"
+      }
+    },
+    {
+      "id": "maxwell-constraints",
+      "label": "四方程、演化与初始约束",
+      "pages": [
+        19,
+        20
+      ],
+      "summary": "两条旋度方程描述耦合演化，两条散度式约束自由电荷与磁通。守恒成立且初始散度条件正确时，演化会保持它们；不能省略初值便宣称仅检验旋度两式已经足够。",
+      "section": "统一方程与建模",
+      "prerequisites": [
+        "faraday-fixed",
+        "total-current"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "19": "p19-r1",
+        "20": "p20-r5"
+      }
+    },
+    {
+      "id": "wave-evidence",
+      "label": "从波预言到实验与应用",
+      "pages": [
+        21
+      ],
+      "summary": "把方程预言、产生与接收、传播性质检验及无线通信应用分成不同证据层。装置出现响应不等于单凭一张照片已验证全部理论；重点是模型如何产生可检验预言。",
+      "section": "统一方程与建模",
+      "prerequisites": [
+        "maxwell-constraints"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "21": "p21-r2"
+      }
+    },
+    {
+      "id": "theory-scope",
+      "label": "源对称性与模型适用范围",
+      "pages": [
+        22
+      ],
+      "summary": "标准方程有电荷/电流源而不引入磁单极源，体现源项的不对称。宏观材料模型有适用范围，不等于Maxwell理论因涉及相对论便失效；判断限制须指出被近似的量和场景。",
+      "section": "统一方程与建模",
+      "prerequisites": [
+        "maxwell-constraints"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "22": "p22-r1"
+      }
+    },
+    {
+      "id": "research-claims",
+      "label": "研究主张、文献事实与评价",
+      "pages": [
+        23,
+        26,
+        27
+      ],
+      "summary": "课堂案例中的论文主张、新闻报道、评论和后续题名属于不同证据。标题或发布会不能替代推导，也不能由题名变化推断撤回、认错或争议终结；具体事实以本页所列原文核对，不作当前共识宣告。",
+      "section": "统一方程与建模",
+      "prerequisites": [
+        "theory-scope"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "23": "p23-r1",
+        "26": "p26-r1",
+        "27": "p27-r1"
+      }
+    },
+    {
+      "id": "moving-media",
+      "label": "运动媒质与随体导数",
+      "pages": [
+        24
+      ],
+      "summary": "沿运动点观察场会由链式法则增加速度点乘空间梯度项。它可能反映路径、参考系或场定义变化，不能单凭出现新项就把所有时间偏导机械替换，更不能据此认定新基本物理。",
+      "section": "统一方程与建模",
+      "prerequisites": [
+        "motional-emf",
+        "theory-scope"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "24": "p24-r2"
+      }
+    },
+    {
+      "id": "engineering-vs-laws",
+      "label": "工程有用不等于基本规律突破",
+      "pages": [
+        25,
+        26
+      ],
+      "summary": "器件有效、近似模型计算方便与产生超出既有理论的新可检验预测，是三个不同命题。评价技术路线要同时核查条件、守恒和数据，不能用应用价值替代理论一致性，也不能反向抹掉工程意义。",
+      "section": "统一方程与建模",
+      "prerequisites": [
+        "research-claims"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "25": "p25-r2",
+        "26": "p26-r2"
+      }
+    },
+    {
+      "id": "constitutive-model",
+      "label": "本构闭合与媒质分类",
+      "pages": [
+        28
+      ],
+      "summary": "Maxwell方程之外需要D、B、J与场的材料关系。均匀、线性、各向同性、无色散是不同条件：分别关系到空间微分、叠加、方向响应和频率依赖，不能相互替代。",
+      "section": "波动方程与势",
+      "prerequisites": [
+        "four-fields-sources",
+        "maxwell-constraints"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "28": "p28-r1"
+      }
+    },
+    {
+      "id": "sourcefree-wave",
+      "label": "无源均匀媒质的波动方程",
+      "pages": [
+        29
+      ],
+      "summary": "在均匀线性各向同性、相应无损无源模型中，对旋度式再取旋度并用散度约束可消去另一场，得到波速1/√(με)。无自由电荷不自动意味着无传导电流或无损，假设必须逐项写清。",
+      "section": "波动方程与势",
+      "prerequisites": [
+        "constitutive-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "29": "p29-model"
+      }
+    },
+    {
+      "id": "sourced-wave",
+      "label": "保留电荷与电流的波动方程",
+      "pages": [
+        30
+      ],
+      "summary": "保留源项时电场方程含电荷梯度与电流时间变化，磁场方程含电流旋度。消元不消除源的连续性条件；复杂源和边界可能使直接求场不便，引出位函数路线。",
+      "section": "波动方程与势",
+      "prerequisites": [
+        "sourcefree-wave",
+        "charge-continuity"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "30": "p30-E"
+      }
+    },
+    {
+      "id": "potential-fields",
+      "label": "矢量位与标量位恢复场",
+      "pages": [
+        31
+      ],
+      "summary": "由磁通无散可在合适区域引入B=curl A，再由法拉第定律得到E=−grad φ−∂A/∂t。时变电场不能只保留电位负梯度，位函数也不天然唯一。",
+      "section": "波动方程与势",
+      "prerequisites": [
+        "sourced-wave"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "31": "p31-map"
+      }
+    },
+    {
+      "id": "lorenz-gauge",
+      "label": "洛仑兹规范与位方程解耦",
+      "pages": [
+        32,
+        33
+      ],
+      "summary": "规范选择在不改变物理E、B的位表示中选取便利形式，将A与φ的源方程解耦并与电荷守恒相容。规范仍可有剩余自由，唯一确定势还须合适边界、初值或额外规范约束。",
+      "section": "波动方程与势",
+      "prerequisites": [
+        "potential-fields",
+        "charge-continuity"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "32": "p32-gauge",
+        "33": "p33-unique"
+      }
+    },
+    {
+      "id": "static-potential-limit",
+      "label": "静态极限是泊松而非自动无源",
+      "pages": [
+        33
+      ],
+      "summary": "选取时间无关位后去掉二阶时间导数，但电荷与稳恒电流仍可存在，因此一般得到有源泊松方程。只有相应源也为零的区域，才进一步成为拉普拉斯方程。",
+      "section": "波动方程与势",
+      "prerequisites": [
+        "lorenz-gauge"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "33": "p33-static"
+      }
+    },
+    {
+      "id": "field-circuit",
+      "label": "由场积分到RLC和KVL",
+      "pages": [
+        34,
+        35,
+        53
+      ],
+      "summary": "在适用的集中参数近似中，电压、电流和储能由场的积分得到R、L、C关系。电感磁链不能重复计数，电容积分须保留初始电压；相量代数只描述相应正弦稳态，不代替完整初值问题。",
+      "section": "场路联系",
+      "prerequisites": [
+        "capacitor-current",
+        "maxwell-constraints"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "34": "p34-loop",
+        "35": "p35-KVL",
+        "53": "p53-r1"
+      }
+    },
+    {
+      "id": "charge-relaxation",
+      "label": "导体自由体电荷的弛豫",
+      "pages": [
+        36
+      ],
+      "summary": "均匀简单欧姆媒质中用守恒、高斯与J=σE得到体电荷指数衰减，时间尺度τ=ε/σ。远大于τ时可近似忽略体电荷，不表示有限时刻严格消失，也不排除表面电荷。",
+      "section": "场路联系",
+      "prerequisites": [
+        "charge-continuity",
+        "constitutive-model"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "36": "p36-ODE"
+      }
+    },
+    {
+      "id": "interface-method",
+      "label": "跨界积分提取边界条件",
+      "pages": [
+        37
+      ],
+      "summary": "界面两侧材料不同，逐点光滑微分式不能直接跨跳变使用。薄矩形回路提取切向差，薄柱体提取法向差；界面源需保留而不是随几何厚度一起误删。",
+      "section": "边界与分区",
+      "prerequisites": [
+        "maxwell-constraints"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "37": "p37-regions"
+      }
+    },
+    {
+      "id": "tangential-boundary",
+      "label": "切向E与H的衔接",
+      "pages": [
+        38,
+        40
+      ],
+      "summary": "对普通静止界面和有界相应场作小回路极限，电场切向连续，磁场切向跳变由自由面电流给出。统一两侧法向和叉乘次序，H的矢量跳量不能直接当成与面电流同向。",
+      "section": "边界与分区",
+      "prerequisites": [
+        "interface-method"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "38": "p38-E",
+        "40": "p40-H"
+      }
+    },
+    {
+      "id": "normal-boundary",
+      "label": "法向D、B与自由面电荷",
+      "pages": [
+        39,
+        40
+      ],
+      "summary": "薄柱两底外法向相反，D的法向跳量由自由面电荷给出，B法向连续。D已包含极化响应，不能再把全部束缚电荷重复加入自由面源；连续的是指定分量而非整个矢量。",
+      "section": "边界与分区",
+      "prerequisites": [
+        "interface-method"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "39": "p39-D",
+        "40": "p40-normal"
+      }
+    },
+    {
+      "id": "boundary-compatibility",
+      "label": "切向条件何时保持法向约束",
+      "pages": [
+        41
+      ],
+      "summary": "结合两侧场方程及面源守恒，切向匹配使相应法向约束差的时间导数为零。还需正确初值，或限定非零频率相量才能消掉静态差；不能无条件删去法向检查。",
+      "section": "边界与分区",
+      "prerequisites": [
+        "tangential-boundary",
+        "normal-boundary",
+        "charge-continuity"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "41": "p41-B"
+      }
+    },
+    {
+      "id": "dielectric-interface",
+      "label": "无自由面源的介质界面",
+      "pages": [
+        42
+      ],
+      "summary": "理想介质与“没有自由面源”是两层假设。无自由面电荷/电流时Et、Ht、Dn、Bn连续，但材料参数不同可使其他分量跳变；不能笼统说所有场分量都连续。",
+      "section": "边界与分区",
+      "prerequisites": [
+        "tangential-boundary",
+        "normal-boundary",
+        "constitutive-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "42": "p42-model"
+      }
+    },
+    {
+      "id": "pec-interface",
+      "label": "理想导体外侧场的方向",
+      "pages": [
+        43
+      ],
+      "summary": "静止理想导体中E为零；B为零还需初始无磁场等条件，不能只靠无限电导率推出。该模型下外侧电场法向、磁场切向，分别与自由面电荷及面电流相接，口诀不适用于任意有限导体。",
+      "section": "边界与分区",
+      "prerequisites": [
+        "tangential-boundary",
+        "normal-boundary"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "43": "p43-model"
+      }
+    },
+    {
+      "id": "coax-boundary-check",
+      "label": "同轴四区解的界面核验",
+      "pages": [
+        44,
+        45,
+        46
+      ],
+      "summary": "使用有限电导率直流体电流模型所得分区场，在三个半径处逐侧取极限，检查无额外面电流时H切向相接。场为环向故B法向为零，磁导率不同不破坏这个法向条件。",
+      "section": "边界与分区",
+      "prerequisites": [
+        "coax-magnetostatic",
+        "tangential-boundary",
+        "normal-boundary"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "44": "p44-fullcurrent",
+        "45": "p45-r4",
+        "46": "p46-a"
+      }
+    },
+    {
+      "id": "poynting-derivation",
+      "label": "从旋度方程推导能量关系",
+      "pages": [
+        47
+      ],
+      "summary": "展开div(E×H)，分别代入两条旋度方程，得到能流散度、场对电流做功及场响应时间项。先建立一般功率平衡，再凭材料假设把相应项解释为储能或耗散。",
+      "section": "能量与唯一性",
+      "prerequisites": [
+        "maxwell-constraints"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "47": "p47-purpose"
+      }
+    },
+    {
+      "id": "storage-dissipation",
+      "label": "储能、耗散与流入功率",
+      "pages": [
+        48
+      ],
+      "summary": "固定实参数、线性无色散简单媒质中，储能含1/2 εE²与1/2 μH²；欧姆传导给σE²耗散。外法向定义流出，取负号才是流入；一般J·E不能不分来源一概叫焦耳热。",
+      "section": "能量与唯一性",
+      "prerequisites": [
+        "poynting-derivation",
+        "constitutive-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "48": "p48-electric"
+      }
+    },
+    {
+      "id": "poynting-vector",
+      "label": "能流密度与过面功率",
+      "pages": [
+        49
+      ],
+      "summary": "S=E×H的单位为W/m²，右手规则给瞬时能流方向。对有向面积取法向投影积分才得到功率，再对时间积分才是能量；不是所有曲面都能直接以S的模乘面积。",
+      "section": "能量与唯一性",
+      "prerequisites": [
+        "storage-dissipation"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "49": "p49-definition"
+      }
+    },
+    {
+      "id": "coax-power",
+      "label": "同轴介质中的轴向功率UI",
+      "pages": [
+        50
+      ],
+      "summary": "理想同轴模型中径向E与环向H给轴向能流，对整个介质环形截面积分得UI。实际导体因有限电导率出现轴向E，可另有径向能流进入金属形成损耗，不能把理想结论无限外推。",
+      "section": "能量与唯一性",
+      "prerequisites": [
+        "coax-electric",
+        "coax-magnetostatic",
+        "poynting-vector"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "50": "p50-setup"
+      }
+    },
+    {
+      "id": "wire-joule",
+      "label": "流入导线的场功率与I²R",
+      "pages": [
+        51
+      ],
+      "summary": "均匀稳恒体电流模型中，轴向电场与环向磁场使能流径向进入导体。侧面流入功率等于体内欧姆耗散积分及I²R；功率、能量和体功率密度的单位必须分开。",
+      "section": "能量与唯一性",
+      "prerequisites": [
+        "poynting-vector",
+        "constitutive-model"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "51": "p51-r1"
+      }
+    },
+    {
+      "id": "electric-method-choice",
+      "label": "按已知量选择求E的方法",
+      "pages": [
+        52
+      ],
+      "summary": "高斯定律先问对称性；电压先写路径积分，只有均匀合适方向才可用U/d；已知当地传导电流时再用适用欧姆本构反求E。三条关系不能脱离条件机械互换。",
+      "section": "场路联系",
+      "prerequisites": [
+        "gauss-method",
+        "field-circuit",
+        "constitutive-model"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "52": "p52-r4"
+      }
+    },
+    {
+      "id": "uniqueness-data",
+      "label": "唯一性先固定同一个问题",
+      "pages": [
+        54
+      ],
+      "summary": "比较两个解时必须同区域、同媒质、同外加源、同初始场及适当外边界数据。线性正储能、非负耗散模型下以差场构造无外加源问题；唯一性是至多一个解，不证明任意数据都有解。",
+      "section": "能量与唯一性",
+      "prerequisites": [
+        "storage-dissipation",
+        "boundary-compatibility"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "54": "p54-r1"
+      }
+    },
+    {
+      "id": "uniqueness-energy",
+      "label": "差场零初能量的积分证明",
+      "pages": [
+        55
+      ],
+      "summary": "相同切向边界数据使差场净能流为零，但能量导数并非非负，不能直接由导数加耗散为零令二者分别为零。须从零初始差能量积分，再用当前能量与累计耗散非负推出两场差都为零。",
+      "section": "能量与唯一性",
+      "prerequisites": [
+        "uniqueness-data"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "55": "p55-r1"
+      }
+    },
+    {
+      "id": "outer-interface-distinction",
+      "label": "外边界给定与材料界面匹配",
+      "pages": [
+        56
+      ],
+      "summary": "外边界可整体给Et、整体给Ht，或按覆盖全边界的分片各给完整切向投影。材料界面同时匹配E、H不等于任意独立指定两套外边界数据；单个任意标量切向分量也不自动足够。",
+      "section": "能量与唯一性",
+      "prerequisites": [
+        "uniqueness-energy",
+        "tangential-boundary"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "56": "p56-r1"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "coax-electric",
+      "to": "coax-power",
+      "label": "复用：电场分布进入功率积分"
+    },
+    {
+      "from": "coax-magnetostatic",
+      "to": "coax-boundary-check",
+      "label": "复核：局部分区解还须接上界面"
+    },
+    {
+      "from": "charge-continuity",
+      "to": "boundary-compatibility",
+      "label": "相容：面源也要守恒"
+    },
+    {
+      "from": "maxwell-constraints",
+      "to": "boundary-compatibility",
+      "label": "类比：演化保持约束需要初始正确"
+    },
+    {
+      "from": "capacitor-current",
+      "to": "field-circuit",
+      "label": "应用：位移电流得到集总电容"
+    },
+    {
+      "from": "motional-emf",
+      "to": "moving-media",
+      "label": "联系：路径运动与固定点描述须区分"
+    },
+    {
+      "from": "research-claims",
+      "to": "wave-evidence",
+      "label": "对照：主张须由可检验证据支持"
+    },
+    {
+      "from": "lorenz-gauge",
+      "to": "uniqueness-data",
+      "label": "限制：规范选择不代替完整定解数据"
+    },
+    {
+      "from": "pec-interface",
+      "to": "coax-boundary-check",
+      "label": "对比：理想零场与有限导体直流模型"
+    },
+    {
+      "from": "poynting-vector",
+      "to": "field-circuit",
+      "label": "联系：场积分得到端口功率与储能"
+    },
+    {
+      "from": "wire-joule",
+      "to": "storage-dissipation",
+      "label": "验证：表面流入等于体耗散"
+    },
+    {
+      "from": "coax-withstand",
+      "to": "electric-method-choice",
+      "label": "反例：同轴非均匀场不能套U/d"
+    },
+    {
+      "from": "constitutive-model",
+      "to": "charge-relaxation",
+      "label": "条件：均匀参数决定简单指数模型"
+    },
+    {
+      "from": "outer-interface-distinction",
+      "to": "field-problem",
+      "label": "闭环：定解数据补齐求场流程"
+    },
+    {
+      "from": "poynting-derivation",
+      "to": "uniqueness-energy",
+      "label": "工具：能量守恒同时支持唯一性证明"
+    }
+  ]
+}

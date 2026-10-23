@@ -1,0 +1,554 @@
+{
+  "version": 1,
+  "id": "communications-ch2",
+  "title": "通信原理 第2章：确知信号与频谱",
+  "pageCount": 64,
+  "reader": "communications-ch2-ppt.html",
+  "nodes": [
+    {
+      "id": "route",
+      "label": "信号分析的六组工具",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "summary": "本章用频谱、能量功率、卷积、相关、带宽及希尔伯特变换解释后续通信系统。",
+      "prerequisites": [],
+      "section": "章节路线",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "series",
+      "label": "周期信号与傅里叶级数",
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "summary": "周期波形以三角或复指数基展开，系数由一周期正交投影求得；系数与实际谐波振幅须区分。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "频谱基础",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "harmonics",
+      "label": "基波、谐波与离散谱线",
+      "pages": [
+        9
+      ],
+      "summary": "谐波位于基频整数倍，零频项是直流；谱线位置、幅度与相位共同描述周期波形。",
+      "prerequisites": [
+        "series"
+      ],
+      "section": "频谱基础",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "transform",
+      "label": "傅里叶变换的存在与正逆对",
+      "pages": [
+        10,
+        11,
+        12
+      ],
+      "summary": "非周期信号用连续频率描述；普通积分有存在条件，正反变换的角频率约定决定2π尺度。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "频谱基础",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "shift",
+      "label": "时移、频移与常用变换规则",
+      "pages": [
+        13
+      ],
+      "summary": "时移只改相位，乘复指数搬移频谱；微分和对偶等性质必须连同变量与适用条件使用。",
+      "prerequisites": [
+        "transform"
+      ],
+      "section": "频谱基础",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "operation",
+      "label": "卷积、相乘与积分性质",
+      "pages": [
+        14
+      ],
+      "summary": "时域卷积对应频域相乘，时域相乘对应带1/(2π)的频域卷积，积分还须处理零频条件。",
+      "prerequisites": [
+        "transform"
+      ],
+      "section": "频谱基础",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "pulse-train",
+      "label": "周期矩形的三种时间尺度",
+      "pages": [
+        15,
+        16,
+        17
+      ],
+      "summary": "周期T₀、脉宽τ和幅度A分别控制谐波间距、包络宽度和系数尺度；按一周期积分求系数。",
+      "prerequisites": [
+        "series"
+      ],
+      "section": "典型信号",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "duty-half",
+      "label": "半占空比与缺失谐波",
+      "pages": [
+        18,
+        19
+      ],
+      "summary": "τ/T₀=1/2时非零偶次谐波缺失，但直流项仍存在；图上包络不是连续谱。",
+      "prerequisites": [
+        "pulse-train",
+        "harmonics"
+      ],
+      "section": "典型信号",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "duty-fifth",
+      "label": "窄脉冲与谱展宽",
+      "pages": [
+        20,
+        21
+      ],
+      "summary": "占空比改为1/5后缺线位置和包络变动；固定周期时压窄脉冲使主瓣展宽。",
+      "prerequisites": [
+        "pulse-train"
+      ],
+      "section": "典型信号",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "periodic-delta",
+      "label": "周期信号的冲激傅里叶谱",
+      "pages": [
+        22,
+        23
+      ],
+      "summary": "每个谐波变成连续频率轴冲激，权重是2π乘级数系数；不可把冲激权重当普通函数高度。",
+      "prerequisites": [
+        "harmonics",
+        "transform"
+      ],
+      "section": "典型信号",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "single-pulse",
+      "label": "孤立矩形与第一零点",
+      "pages": [
+        24,
+        25,
+        26
+      ],
+      "summary": "单个宽τ矩形产生连续Sa频谱，第一正零点为1/τ Hz；单边带宽不是两零点总距离。",
+      "prerequisites": [
+        "transform"
+      ],
+      "section": "典型信号",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "delta",
+      "label": "单位冲激及平坦频谱",
+      "pages": [
+        27,
+        28
+      ],
+      "summary": "冲激由抽样作用与面积定义而非普通无限高函数；其频谱恒为1，不能把δ平方当有限能量。",
+      "prerequisites": [
+        "transform"
+      ],
+      "section": "典型信号",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "comb",
+      "label": "冲激列与频域冲激列",
+      "pages": [
+        29,
+        30,
+        31
+      ],
+      "summary": "时间间隔T₀对应角频率间隔2π/T₀，谱冲激权重同为2π/T₀，读图要分位置和面积。",
+      "prerequisites": [
+        "series",
+        "delta",
+        "periodic-delta"
+      ],
+      "section": "典型信号",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "energy",
+      "label": "能量信号定义",
+      "pages": [
+        32
+      ],
+      "summary": "总模平方积分非零且有限定义能量信号；非周期不自动意味着有限能量。",
+      "prerequisites": [
+        "route"
+      ],
+      "section": "能量与功率",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "power",
+      "label": "功率信号与长期平均",
+      "pages": [
+        33
+      ],
+      "summary": "非零有限长期平均模平方定义功率信号；不能把所有随机或周期对象无条件归入此类。",
+      "prerequisites": [
+        "energy"
+      ],
+      "section": "能量与功率",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "esd",
+      "label": "能量谱与Parseval",
+      "pages": [
+        34,
+        35,
+        36
+      ],
+      "summary": "能量谱密度为频谱模平方，角频率积分需1/(2π)，时域与频域是同一总量的两种计算。",
+      "prerequisites": [
+        "energy",
+        "transform"
+      ],
+      "section": "能量与功率",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "periodic-psd",
+      "label": "周期平均功率与线谱PSD",
+      "pages": [
+        37,
+        38
+      ],
+      "summary": "正交谐波使平均功率等于系数模平方和，PSD冲激的权重由2π和该模平方组成。",
+      "prerequisites": [
+        "power",
+        "series"
+      ],
+      "section": "能量与功率",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "aperiodic-psd",
+      "label": "截短极限与非周期PSD",
+      "pages": [
+        39
+      ],
+      "summary": "先截取有限记录取模平方，再除观察时长取适当谱极限；含线谱时不要求逐点有限极限。",
+      "prerequisites": [
+        "power",
+        "esd"
+      ],
+      "section": "能量与功率",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "convolution",
+      "label": "卷积积分与滤波系统",
+      "pages": [
+        40,
+        41
+      ],
+      "summary": "固定输出时刻，对翻转平移后的乘积积分；LTI系统可在频域逐点相乘计算输出。",
+      "prerequisites": [
+        "operation"
+      ],
+      "section": "卷积与相关",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "product",
+      "label": "时域相乘与频域卷积",
+      "pages": [
+        42
+      ],
+      "summary": "调制与加窗属于时域相乘，频域因此卷积并保留2π尺度，不与滤波相乘混用。",
+      "prerequisites": [
+        "operation"
+      ],
+      "section": "卷积与相关",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "impulse-shift",
+      "label": "卷积冲激与延时相加",
+      "pages": [
+        43
+      ],
+      "summary": "同延时冲激卷积把波形整体延后，多个延时相加；这不是对波形做相关匹配。",
+      "prerequisites": [
+        "delta",
+        "convolution"
+      ],
+      "section": "卷积与相关",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "crosscorr",
+      "label": "互相关：错位比较与共轭",
+      "pages": [
+        44,
+        45,
+        46
+      ],
+      "summary": "相关比较两份波形的相对错位；能量积分、功率平均及共同周期平均不同，交换对象需反号共轭。",
+      "prerequisites": [
+        "energy",
+        "power"
+      ],
+      "section": "卷积与相关",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "autocorr",
+      "label": "自相关、零错位和最大幅值",
+      "pages": [
+        47,
+        48,
+        49
+      ],
+      "summary": "自相关零错位等于能量或平均功率；幅值不超过零错位值，复信号满足共轭对称而不必实偶。",
+      "prerequisites": [
+        "crosscorr"
+      ],
+      "section": "卷积与相关",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "wiener",
+      "label": "相关与谱密度的变换关系",
+      "pages": [
+        50,
+        51
+      ],
+      "summary": "自相关对应能量谱或PSD而不是原信号幅度谱；模平方去掉相位，不能由自相关唯一还原波形。",
+      "prerequisites": [
+        "autocorr",
+        "esd",
+        "periodic-psd",
+        "aperiodic-psd"
+      ],
+      "section": "卷积与相关",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "fraction-band",
+      "label": "百分比能量或功率带宽",
+      "pages": [
+        52,
+        53
+      ],
+      "summary": "按保留总量比例选择频带，Hz和角频率换元须一致，离散线谱可能只能至少达到目标。",
+      "prerequisites": [
+        "esd",
+        "periodic-psd"
+      ],
+      "section": "带宽口径",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "half-power",
+      "label": "半功率与第一零点带宽",
+      "pages": [
+        54,
+        55
+      ],
+      "summary": "半功率看密度谱半高，不等于包含一半能量；第一零点取主瓣边界，数值依定义而异。",
+      "prerequisites": [
+        "single-pulse",
+        "fraction-band"
+      ],
+      "section": "带宽口径",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "equivalent",
+      "label": "等效矩形带宽",
+      "pages": [
+        56
+      ],
+      "summary": "用与原谱峰值等高、面积相同的矩形替代；本课单边基带宽度公式的2来自全矩形宽。",
+      "prerequisites": [
+        "fraction-band"
+      ],
+      "section": "带宽口径",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hilbert",
+      "label": "希尔伯特主值积分与系统核",
+      "pages": [
+        57,
+        58
+      ],
+      "summary": "变换核按主值理解，可视作冲激响应1/(πt)的理想系统；逆变换多负号且须保留可逆条件。",
+      "prerequisites": [
+        "convolution"
+      ],
+      "section": "希尔伯特变换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hilbert-phase",
+      "label": "正负频率的相反90°旋转",
+      "pages": [
+        59,
+        60
+      ],
+      "summary": "非零正频率乘−j、负频率乘+j，保持实信号共轭配对；固定相角不是全频率同一时间延迟。",
+      "prerequisites": [
+        "hilbert",
+        "shift"
+      ],
+      "section": "希尔伯特变换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hilbert-double",
+      "label": "两次变换反号及直流例外",
+      "pages": [
+        61
+      ],
+      "summary": "两次同向变换对可逆非直流部分等于反号；独立直流分量会被抑制，不能凭逆式找回。",
+      "prerequisites": [
+        "hilbert-phase"
+      ],
+      "section": "希尔伯特变换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hilbert-invariant",
+      "label": "能量和自相关保持的条件",
+      "pages": [
+        62
+      ],
+      "summary": "非零频率响应模为1，因此平方可积信号能量和自相关保持；含独立直流的功率信号须单独处理。",
+      "prerequisites": [
+        "hilbert-phase",
+        "wiener"
+      ],
+      "section": "希尔伯特变换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "hilbert-orthogonal",
+      "label": "实信号的整体正交",
+      "pages": [
+        63
+      ],
+      "summary": "实能量信号与希尔伯特变换的全时内积为零，不是逐点乘积为零，也不能推统计独立。",
+      "prerequisites": [
+        "hilbert-phase",
+        "esd"
+      ],
+      "section": "希尔伯特变换",
+      "type": "concept",
+      "source": "ppt"
+    },
+    {
+      "id": "synthesis",
+      "label": "把工具接到调制、滤波和噪声",
+      "pages": [
+        64
+      ],
+      "summary": "按通信问题选择搬频、滤波、功率积分或正交分量，避免把全部公式当作同一种频域操作。",
+      "prerequisites": [
+        "product",
+        "convolution",
+        "wiener",
+        "hilbert-orthogonal"
+      ],
+      "section": "章节回顾",
+      "type": "concept",
+      "source": "ppt"
+    }
+  ],
+  "edges": [
+    {
+      "from": "pulse-train",
+      "to": "single-pulse",
+      "label": "区分周期重复与孤立脉冲"
+    },
+    {
+      "from": "periodic-delta",
+      "to": "periodic-psd",
+      "label": "区分幅度谱与功率谱"
+    },
+    {
+      "from": "convolution",
+      "to": "crosscorr",
+      "label": "区分系统输出与相对匹配"
+    },
+    {
+      "from": "shift",
+      "to": "wiener",
+      "label": "延时说明自相关丢失绝对相位"
+    },
+    {
+      "from": "single-pulse",
+      "to": "equivalent",
+      "label": "同一波形比较不同带宽"
+    },
+    {
+      "from": "hilbert-invariant",
+      "to": "hilbert-orthogonal",
+      "label": "区分模平方保持与实内积正交"
+    }
+  ],
+  "sourcePdf": "courses/source-pages/6f58726e38bcaf315904/source.pdf",
+  "sourcePdfSha256": "6f58726e38bcaf31590441fc658d2a86fccf9e51091534526bbb1eda6eef7b6d"
+}

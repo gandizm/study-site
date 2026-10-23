@@ -1,0 +1,967 @@
+{
+  "version": 1,
+  "id": "em-ch6",
+  "title": "电磁场第6章 · 反射、折射、导波与全反射",
+  "reader": "/study-site/ppt6.html",
+  "sourcePageCount": 74,
+  "displayPageCount": 74,
+  "sourcePages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74
+  ],
+  "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+  "source": {
+    "kind": "existing-reader-embedded-images",
+    "reader": "/study-site/ppt6.html",
+    "readerSha256": "c457346783898f3b188145c8e106323c502a5da33f1879853f26d3bb053d87a8",
+    "readerGitBlob": "731270fb760b22a7da2e02247b6e6e1ac48d855d",
+    "pageNumbering": "现有阅读器 article[data-page] 与逐页嵌图对应，不作独立原始 PPT/PDF 页码鉴定",
+    "sourceStatus": "existing-reader-embedded-images-only; independent-original-ppt-pdf-not-recovered",
+    "verification": "逐页阅读现有讲义及对应嵌图，逐图解码记录 SHA-256；未独立找回或核验原始 PPT/PDF。",
+    "scope": "只增加图谱、来源映射和加载器；既有讲义、嵌图、阅读进度逻辑保持原字节。"
+  },
+  "nodes": [
+    {
+      "id": "interface-workflow",
+      "label": "相位定方向，边界定振幅",
+      "pages": [
+        1,
+        2,
+        74
+      ],
+      "summary": "先固定时间约定、坐标和极化基矢，用界面切向相位匹配求传播方向，再由切向场条件求振幅。实际场需叠加后才判断驻波、模式与能流，功率还须阻抗和法向投影。",
+      "section": "垂直入射",
+      "prerequisites": [],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "1": "p01-r1",
+        "2": "p02-r1",
+        "74": "p74-r1"
+      }
+    },
+    {
+      "id": "pec-normal-model",
+      "label": "理想导体约束总切向电场",
+      "pages": [
+        3
+      ],
+      "summary": "界面外侧入射与反射之和满足零切向E，而非入射E本身为零。H可由表面电流支撑，面电流方向须用导体指向外侧媒质的法向确定。",
+      "section": "垂直入射",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "3": "p03-r1"
+      }
+    },
+    {
+      "id": "reflected-h-sign",
+      "label": "反射磁场的传播方向负号",
+      "pages": [
+        4
+      ],
+      "summary": "exp(jωt)约定下正反向场分别含exp(−jkz)与exp(+jkz)。每一单波的H由传播单位向量叉乘E再除η得到，反射方向改变已带一个负号，不要和反射电场振幅负号混为一项。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "pec-normal-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "4": "p04-r1"
+      }
+    },
+    {
+      "id": "pec-standing-fields",
+      "label": "等幅反相电场合成纯驻波",
+      "pages": [
+        5
+      ],
+      "summary": "PEC界面电场反射系数为−1，两反向波叠加为电场正弦、磁场余弦空间包络。恢复时域后两场还差四分之一周期，不能只从相量包络判断瞬时场。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "reflected-h-sign"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "5": "p05-r1"
+      }
+    },
+    {
+      "id": "standing-nodes",
+      "label": "固定波节与电磁包络交错",
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "summary": "相邻E波节相距λ/2、相邻波节与波腹相距λ/4，H包络极值与E交错。界面E为零而H加倍；快照只改变固定空间函数的系数，驻波不整体平移，波腹也不是每一时刻最大。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "pec-standing-fields"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "6": "p06-r1",
+        "7": "p07-r1",
+        "8": "p08-r1",
+        "9": "p09-r1"
+      }
+    },
+    {
+      "id": "missing-animations",
+      "label": "两页动画只保留静态占位",
+      "pages": [
+        10,
+        19
+      ],
+      "summary": "现有嵌图仅有动画标题、坐标和界面框，不能据此声称看到了动态帧或把空白当零场。分别回到PEC纯驻波与介质行驻波公式，用时间序列推理而不伪造原动画。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "pec-standing-fields"
+      ],
+      "type": "method",
+      "source": "supplement",
+      "anchors": {
+        "10": "p10-r1",
+        "19": "p19-r1"
+      }
+    },
+    {
+      "id": "standing-power-current",
+      "label": "面电流与驻波瞬时能流",
+      "pages": [
+        11,
+        12
+      ],
+      "summary": "总表面H决定非零感应面电流。纯驻波周期平均能流为零，但瞬时E×H随位置和时间往复，含2ω变化，不能说任何时刻都没有能量运动。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "standing-nodes"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "11": "p11-r1",
+        "12": "p12-r1"
+      }
+    },
+    {
+      "id": "standing-energy",
+      "label": "驻波储能不能套行波逐点等分",
+      "pages": [
+        13
+      ],
+      "summary": "驻波电能与磁能随空间和时间分布交替，某个固定位置一般不相等。讨论一半电能一半磁能必须明确空间积分或时间平均范围，不能把无损单一行波的逐点关系直接移来。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "standing-power-current"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "13": "p13-r1"
+      }
+    },
+    {
+      "id": "normal-fresnel",
+      "label": "介质正入射的两条振幅方程",
+      "pages": [
+        14,
+        15
+      ],
+      "summary": "透射场使用第二媒质波数和阻抗，无自由面源时匹配总切向E与H。电场相加、磁场因反向传播相减，得到振幅反透射系数；T=1+R在此同基矢约定成立，不是功率关系。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "reflected-h-sign"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "14": "p14-r1",
+        "15": "p15-r1"
+      }
+    },
+    {
+      "id": "partial-standing",
+      "label": "部分反射的行驻波包络",
+      "pages": [
+        16,
+        17,
+        18
+      ],
+      "summary": "入射反射幅度不等时最小值通常非零，包络最大/最小为振幅和/差。原页节点位置沿用特定负实反射系数与媒质顺序；场可线性分解，功率却不能遗漏交叉项直接分块相加。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "normal-fresnel",
+        "standing-nodes"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "16": "p16-r1",
+        "17": "p17-r1",
+        "18": "p18-r1"
+      }
+    },
+    {
+      "id": "vswr",
+      "label": "驻波比只给反射系数的模",
+      "pages": [
+        20
+      ],
+      "summary": "VSWR=(1+|R|)/(1−|R|)，匹配时为1、完全反射趋无穷。它不确定R的相位或正负；测得幅度比也不能直接作为透射功率百分比。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "partial-standing"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "20": "p20-r1"
+      }
+    },
+    {
+      "id": "normal-power-balance",
+      "label": "正入射功率须加阻抗因子",
+      "pages": [
+        21,
+        22
+      ],
+      "summary": "媒质1净功率为入射减反射，正的反射比例为|R|²，透射比例含η1/η2乘|T|²。无耗界面相加为1是强验算条件，反射矢量方向与正的功率百分比要分开。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "normal-fresnel"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "21": "p21-r1",
+        "22": "p22-r1"
+      }
+    },
+    {
+      "id": "circular-normal-example",
+      "label": "圆极化正入射的反透射",
+      "pages": [
+        23,
+        24,
+        25
+      ],
+      "summary": "法向入射对两切向分量作用相同，例中反射场系数−1/2、透射1/2而功率为1/4与3/4。两波仍圆极化，反射手性须结合传播方向反转判断，透射幅度减半不等于功率剩四分之一。",
+      "section": "垂直入射",
+      "prerequisites": [
+        "normal-power-balance"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "23": "p23-r1",
+        "24": "p24-r1",
+        "25": "p25-r1"
+      }
+    },
+    {
+      "id": "wavevector",
+      "label": "任意方向的波矢与等相位面",
+      "pages": [
+        26,
+        27
+      ],
+      "summary": "传播指数用k·r，坐标系数即波矢分量，其模给角波数、归一化给传播方向。位置矢量不必平行波矢，电场方向又须满足横向性，不能把两种方向余弦混用。",
+      "section": "任意方向与斜入射",
+      "prerequisites": [],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "26": "p26-r1",
+        "27": "p27-r1"
+      }
+    },
+    {
+      "id": "plane-wave-algebra",
+      "label": "单平面波的Maxwell代数化",
+      "pages": [
+        28,
+        29
+      ],
+      "summary": "仅对共享平面波因子的场可把空间微分作用写成−jk，配合横向约束和阻抗求两场。无损单行波平均能流沿传播方向，场强平方须用共轭模平方和，圆/椭圆极化同样适用。",
+      "section": "任意方向与斜入射",
+      "prerequisites": [
+        "wavevector"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "28": "p28-r1",
+        "29": "p29-r1"
+      }
+    },
+    {
+      "id": "wavevector-example",
+      "label": "由磁场指数求方向、系数与E",
+      "pages": [
+        30,
+        31
+      ],
+      "summary": "先由指数读波矢、模与波长，再由k·H=0解未知分量，最后用叉乘恢复E。角度须对归一化方向取投影，单位从微安每米乘欧姆得到微伏每米，结果再核横向性。",
+      "section": "任意方向与斜入射",
+      "prerequisites": [
+        "plane-wave-algebra"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "30": "p30-r1",
+        "31": "p31-r1"
+      }
+    },
+    {
+      "id": "te-tm-definition",
+      "label": "入射面定义TE与TM",
+      "pages": [
+        32,
+        33
+      ],
+      "summary": "入射面由射线和法线张成，TE电场垂直该面、TM电场位于该面但仍垂直自己的传播方向。“垂直极化”不是“垂直入射”，任意入射极化先按这两基分解。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "wavevector"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "32": "p32-r1",
+        "33": "p33-r1"
+      }
+    },
+    {
+      "id": "pec-te-reflection",
+      "label": "TE的相位匹配与−1反射",
+      "pages": [
+        34,
+        46
+      ],
+      "summary": "PEC边界须对所有切向位置成立，使切向波矢保持、法向波矢反号并给反射定律；TE振幅系数−1再实现切向E相消。波矢、基矢、幅度三处符号不能混成所有分量一律变号。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "te-tm-definition",
+        "pec-normal-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "34": "p34-r1",
+        "46": "p46-r1"
+      }
+    },
+    {
+      "id": "te-composite",
+      "label": "TE合成场的法向驻波与切向行波",
+      "pages": [
+        35,
+        36
+      ],
+      "summary": "入射反射叠加后，共同切向相位推进，法向振幅按k cosθ的正弦/余弦固定分布。节点间距由法向波数决定，H含沿合成传播方向的纵向分量，不能删掉后套TEM公式。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "pec-te-reflection"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "35": "p35-r1",
+        "36": "p36-r1"
+      }
+    },
+    {
+      "id": "te-phase-speed",
+      "label": "切向相速度不是信息超速",
+      "pages": [
+        37
+      ],
+      "summary": "切向相位常数为k sinθ，沿界面相速为媒质波速除sinθ。它是相位交点的运动，不是能量/信息速度；超过媒质内波速不能不附条件改说超过真空c，法向入射也不代表真实无限速传播。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "te-composite"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "37": "p37-r1"
+      }
+    },
+    {
+      "id": "te-power-energy",
+      "label": "全分量储能与横向平均能速",
+      "pages": [
+        38,
+        39
+      ],
+      "summary": "复能流切向实部给净输运、法向虚部给往复交换。总储能须计入全部磁场分量，电场节点仍有磁能；仅横向积分或平均后才得到相应导波能速与相速的乘积关系，不能把它当逐点式。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "te-composite",
+        "standing-energy"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "38": "p38-r1",
+        "39": "p39-r1"
+      }
+    },
+    {
+      "id": "te-current-mode",
+      "label": "表面电流与TE/H模分类",
+      "pages": [
+        40
+      ],
+      "summary": "导体外法向叉总切向H得到面电流，其相位沿界面推进。相对合成传播方向，E无纵向而H有纵向，故为TE/H模；两个TEM入射/反射波叠加后不一定仍是TEM。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "te-composite"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "40": "p40-r1"
+      }
+    },
+    {
+      "id": "guide-from-nodes",
+      "label": "在电场波节加板得到导波",
+      "pages": [
+        41,
+        42
+      ],
+      "summary": "在已有零切向E面放置PEC可保持原解，板间距量化横向波数。双导体传输线、空心金属波导、微带及光纤边界不同，可支持的TEM、TE/TM或准TEM模式不能套一套公式。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "te-current-mode"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "41": "p41-r1",
+        "42": "p42-r1"
+      }
+    },
+    {
+      "id": "pec-tm-reflection",
+      "label": "TM的+1系数来自反射基矢",
+      "pages": [
+        43,
+        44,
+        47
+      ],
+      "summary": "本章TM反射电场基矢自身切向部分带负号，故标量R=+1仍使PEC切向E相消。必须比较完整矢量而非孤立系数，不能把TE的−1机械乘到TM上。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "te-tm-definition",
+        "pec-normal-model"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "43": "p43-r1",
+        "44": "p44-r1",
+        "47": "p47-r1"
+      }
+    },
+    {
+      "id": "tm-composite",
+      "label": "TM合成场允许法向电场",
+      "pages": [
+        45
+      ],
+      "summary": "相对沿界面传播，合成H只有横向分量，E有纵向和法向分量，故为TM/E模。PEC表面切向E为零而法向E可非零，这与TE不同但都满足同一物理边界条件。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "pec-tm-reflection"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "45": "p45-r1"
+      }
+    },
+    {
+      "id": "arbitrary-polarization-example",
+      "label": "任意极化导体反射须分基计算",
+      "pages": [
+        48,
+        49
+      ],
+      "summary": "由指数确定入射几何和角度，用横向性求未知分量，再分TE/TM分别采用其系数及反射基矢。重新相加后检边界和极化；手性判定同时使用实际反射方向。",
+      "section": "理想导体斜入射",
+      "prerequisites": [
+        "pec-te-reflection",
+        "pec-tm-reflection",
+        "wavevector-example"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "48": "p48-r1",
+        "49": "p49-r1"
+      }
+    },
+    {
+      "id": "phase-matching",
+      "label": "三列波切向相位匹配",
+      "pages": [
+        50,
+        51
+      ],
+      "summary": "界面条件对全部切向位置和时间成立，入射、反射、透射保留同频和相同切向波矢。法向波矢不必相同，其大小还受各媒质色散关系约束；先求几何再分极化求幅度。",
+      "section": "介质斜入射",
+      "prerequisites": [
+        "wavevector",
+        "normal-fresnel"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "50": "p50-r1",
+        "51": "p51-r1"
+      }
+    },
+    {
+      "id": "snell-law",
+      "label": "反射共面与斯涅尔定律",
+      "pages": [
+        52
+      ],
+      "summary": "切向波矢守恒使三条射线共面，反射波同媒质给入射角等于反射角，透射角由两侧波数比确定。角均从法线量起，改写成仅介电常数比还须相同磁导率条件。",
+      "section": "介质斜入射",
+      "prerequisites": [
+        "phase-matching"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "52": "p52-r1"
+      }
+    },
+    {
+      "id": "te-fresnel",
+      "label": "TE菲涅耳系数来自切向H投影",
+      "pages": [
+        53,
+        54,
+        55
+      ],
+      "summary": "写出三波后匹配TE切向E和H，H投影带各角余弦，不能先令总E为零或直接消去余弦。法向入射须回到正入射公式，折射率简式还取相同磁导率。",
+      "section": "介质斜入射",
+      "prerequisites": [
+        "snell-law",
+        "te-tm-definition"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "53": "p53-r1",
+        "54": "p54-r1",
+        "55": "p55-r1"
+      }
+    },
+    {
+      "id": "tm-fresnel",
+      "label": "TM振幅比与完整基矢绑定",
+      "pages": [
+        56,
+        57
+      ],
+      "summary": "TM匹配实际切向E和H，反射基矢的切向负号使电场条件含1−R，磁场条件含1+R。一般T不等于1+R，应回到两条带投影的边界式检验，不与另一基矢约定下系数直接比号。",
+      "section": "介质斜入射",
+      "prerequisites": [
+        "snell-law",
+        "pec-tm-reflection"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "56": "p56-r1",
+        "57": "p57-r1"
+      }
+    },
+    {
+      "id": "fresnel-lookup",
+      "label": "任意极化的三波公式使用顺序",
+      "pages": [
+        58,
+        59
+      ],
+      "summary": "先定TE/TM基，再选媒质与传播指数，最后代振幅系数。界面对两基的响应一般不同，混合极化反透射后幅比与相差可改变，射线几何图本身不能预测全部极化。",
+      "section": "介质斜入射",
+      "prerequisites": [
+        "te-fresnel",
+        "tm-fresnel"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "58": "p58-r1",
+        "59": "p59-r1"
+      }
+    },
+    {
+      "id": "oblique-power",
+      "label": "斜入射功率以法向通量归一化",
+      "pages": [
+        60,
+        61
+      ],
+      "summary": "正的反射比例仍为|R|²，传播性透射还乘阻抗比与cosθt/cosθi。无耗界面法向功率相加为1；不能把复折射余弦当实功率因子。空气到介质曲线的TM零点是Brewster角而非临界角。",
+      "section": "介质斜入射",
+      "prerequisites": [
+        "te-fresnel",
+        "tm-fresnel",
+        "normal-power-balance"
+      ],
+      "type": "method",
+      "source": "ppt",
+      "anchors": {
+        "60": "p60-r1",
+        "61": "p61-r1"
+      }
+    },
+    {
+      "id": "brewster",
+      "label": "全透射与TM布儒斯特角",
+      "pages": [
+        62,
+        63
+      ],
+      "summary": "本章全折射指R=0，无耗时全部入射法向功率进入第二媒质，不要求场幅比为1。相同磁导率正实介质中，TM零反射可得tanθB=n2/n1，含TE的任意极化一般不会全部消反射。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "tm-fresnel"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "62": "p62-r1",
+        "63": "p63-r1"
+      }
+    },
+    {
+      "id": "te-brewster-limit",
+      "label": "TE无零点结论的材料范围",
+      "pages": [
+        64
+      ],
+      "summary": "同磁导率且介电常数不同的正实理想介质中，TE不能靠选角度做到零反射；磁性反差可改变此结论。TM Brewster角下混合入射的反射只余TE，纯TM零反射时不能给零场定义极化。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "te-fresnel",
+        "brewster"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "64": "p64-r1"
+      }
+    },
+    {
+      "id": "tir-critical",
+      "label": "高折射率到低折射率的临界角",
+      "pages": [
+        65
+      ],
+      "summary": "n1>n2时sinθc=n2/n1，临界点透射沿界面掠行，严格超临界才出现法向指数衰减。全反射系数模为1但一般有相位，不等于固定取+1或−1。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "snell-law",
+        "tm-fresnel"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "65": "p65-r1"
+      }
+    },
+    {
+      "id": "tir-polarization-phase",
+      "label": "TE/TM全反射相位通常不同",
+      "pages": [
+        66
+      ],
+      "summary": "两极化临界角相同且反射模均为1，但相位延迟不同，可改变混合极化的椭圆参数。原页反正切式指反射半相位，不是新的入射角；临界与严格超临界的衰减条件要分开。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "tir-critical",
+        "te-fresnel"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "66": "p66-r1"
+      }
+    },
+    {
+      "id": "evanescent-branch",
+      "label": "复法向波数选远处衰减支",
+      "pages": [
+        67
+      ],
+      "summary": "超临界时复折射角只是波矢的记号，不是实空间虚角射线。在exp(jωt)、第二媒质向+z延伸且无远处激励条件下，选法向波数−jα使场exp(−αz)，排除无源增长支。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "tir-critical"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "67": "p67-r1"
+      }
+    },
+    {
+      "id": "tir-composite",
+      "label": "反射相位平移法向驻波",
+      "pages": [
+        68
+      ],
+      "summary": "全反射的入射反射等幅，但非固定PEC相位会平移法向节点。切向相位推进、法向幅度变化，合成场为非均匀平面波，不能当成单一均匀行波套阻抗与储能关系。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "tir-polarization-phase",
+        "te-composite"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "68": "p68-r1"
+      }
+    },
+    {
+      "id": "fiber-confinement",
+      "label": "全反射导光与切向相速范围",
+      "pages": [
+        69
+      ],
+      "summary": "切向传播常数在两侧波数之间，使相速介于两媒质波速。光纤由较高折射率纤芯与较低折射率包层约束，保护层主要机械保护；相对第二媒质慢波不应不加条件等同所有情形小于真空c。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "tir-critical",
+        "guide-from-nodes"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "69": "p69-r1"
+      }
+    },
+    {
+      "id": "evanescent-power",
+      "label": "无损倏逝不等于吸收",
+      "pages": [
+        70
+      ],
+      "summary": "第二媒质仍有非零倏逝场，沿界面可有平均实能流，法向只作无功交换。衰减是法向空间结构，不是焦耳吸收；本结论要求远处无第二界面或吸收体耦合，也不应把受驱倏逝场当独立束缚表面模。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "evanescent-branch",
+        "oblique-power"
+      ],
+      "type": "concept",
+      "source": "ppt",
+      "anchors": {
+        "70": "p70-r1"
+      }
+    },
+    {
+      "id": "fiber-acceptance-example",
+      "label": "光纤接收半角与数值孔径",
+      "pages": [
+        71
+      ],
+      "summary": "端面入射角相对轴线，侧壁全反射角相对侧壁法线，两者不能直接相等。对本例子午射线、垂直端面把端面Snell关系与侧壁临界角联立，得到数值孔径和最大接收半角。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "fiber-confinement",
+        "snell-law"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "71": "p71-r1"
+      }
+    },
+    {
+      "id": "water-selective-example",
+      "label": "水到空气：Brewster与临界角分开",
+      "pages": [
+        72,
+        73
+      ],
+      "summary": "先把入射E按相对入射面夹角分TE/TM。选TM Brewster角可使反射只余TE，但总反射比例还须乘原TE功率占比；要两极化全部法向功率反射则另用临界角条件，不能混为同一角。",
+      "section": "特殊角与全反射",
+      "prerequisites": [
+        "brewster",
+        "tir-critical",
+        "oblique-power"
+      ],
+      "type": "example",
+      "source": "ppt",
+      "anchors": {
+        "72": "p72-r1",
+        "73": "p73-r1"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "pec-standing-fields",
+      "to": "partial-standing",
+      "label": "对比：等幅完全相消与不等幅剩余"
+    },
+    {
+      "from": "standing-power-current",
+      "to": "te-power-energy",
+      "label": "区别：纯驻波零净流与沿界面输运"
+    },
+    {
+      "from": "normal-power-balance",
+      "to": "oblique-power",
+      "label": "推广：新增法向余弦投影比"
+    },
+    {
+      "from": "pec-te-reflection",
+      "to": "pec-tm-reflection",
+      "label": "对比：系数不同而切向E同为零"
+    },
+    {
+      "from": "te-composite",
+      "to": "tm-composite",
+      "label": "对比：纵向H与纵向E"
+    },
+    {
+      "from": "te-phase-speed",
+      "to": "te-power-energy",
+      "label": "核验：相位速度不可代替能速"
+    },
+    {
+      "from": "normal-fresnel",
+      "to": "te-fresnel",
+      "label": "极限检查：入射角趋零"
+    },
+    {
+      "from": "normal-fresnel",
+      "to": "tm-fresnel",
+      "label": "符号检查：先统一反射基矢"
+    },
+    {
+      "from": "fresnel-lookup",
+      "to": "arbitrary-polarization-example",
+      "label": "共同方法：分基、求系数、再叠加"
+    },
+    {
+      "from": "brewster",
+      "to": "tir-critical",
+      "label": "对比：R=0与|R|=1"
+    },
+    {
+      "from": "circular-normal-example",
+      "to": "tir-polarization-phase",
+      "label": "对比：共同反射响应与不同相位延迟"
+    },
+    {
+      "from": "evanescent-power",
+      "to": "te-power-energy",
+      "label": "联系：法向无功不等于场为零"
+    },
+    {
+      "from": "missing-animations",
+      "to": "partial-standing",
+      "label": "补读：由公式推断介质动态而非造帧"
+    },
+    {
+      "from": "vswr",
+      "to": "tir-critical",
+      "label": "限制：模为1不提供反射相位"
+    },
+    {
+      "from": "interface-workflow",
+      "to": "fresnel-lookup",
+      "label": "闭环：方向、相位与幅度同时核对"
+    }
+  ]
+}
