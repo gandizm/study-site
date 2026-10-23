@@ -1,0 +1,2925 @@
+{
+  "version": 1,
+  "courseId": "communications-ch5",
+  "title": "通信原理 第5章 模拟信号数字化",
+  "status": "reconstructed-candidate-awaiting-independent-review",
+  "renderingContract": "LaTeX retained in data; native MathML rendered in reader with no CDN dependency.",
+  "sourcePdfSha256": "5179d032fc037a6a5a47bb7a15894e2011a67ea4521eb0d051df63ab19042ec9",
+  "sourcePptSha256": "f332a88e33d72dae5ed9c51f7cfdafae8287c9ccc9314f05ee012cb58a2dfc19",
+  "pageCount": 141,
+  "pages": [
+    {
+      "page": 1,
+      "title": "模拟信号数字化：从波形到码字，再回到波形",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=1",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-1.webp",
+      "body": "原页是“第5章 模拟信号数字化”封面。学习主线不是把连续曲线简单画成台阶，而是分清三个不同操作：选取时刻、选择有限电平、给电平编号。抽样在条件满足时可以可逆；有限级量化通常不可逆；正确的编码只是表示方式改变。\n\n本章先说明哪些样值足以确定原波形，再计算量化引入多少均方误差，随后把样值变成PCM码流，并比较DPCM、增量调制和多路时分复用。阅读时始终追问：当前变量是时间、幅度、码字，还是传输速率？不要拿一个阶段的条件回答另一个阶段的问题。",
+      "question": "理想抽样满足定理后，有限位PCM能否保证精确恢复所有连续幅度？",
+      "answer": "不能。理想抽样可保留带限波形的信息，但有限级量化把许多不同幅度映到同一电平；无误码译码也只能恢复相应重建值。",
+      "teachingHtmlWithLatex": "<p>原页是“第5章 模拟信号数字化”封面。学习主线不是把连续曲线简单画成台阶，而是分清三个不同操作：选取时刻、选择有限电平、给电平编号。抽样在条件满足时可以可逆；有限级量化通常不可逆；正确的编码只是表示方式改变。</p><p>本章先说明哪些样值足以确定原波形，再计算量化引入多少均方误差，随后把样值变成PCM码流，并比较DPCM、增量调制和多路时分复用。阅读时始终追问：当前变量是时间、幅度、码字，还是传输速率？不要拿一个阶段的条件回答另一个阶段的问题。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "route"
+      ],
+      "references": []
+    },
+    {
+      "page": 2,
+      "title": "把课程要求变成可以检验的能力",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=2",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-2.webp",
+      "body": "原页要求掌握抽样、均匀与非均匀量化、PCM、增量调制、TDM，了解DPCM。可以把它们转成六项可做的检查，而不是只背定义。\n\n给出信号频带，能够算采样率并判断混叠；给出量化阈值，能够找到输出电平和误差；给出概率模型，能够由积分算量化噪声；给出PCM字段，能够编码并反向译码检查；给出增量台阶和输入斜率，能够判断跟踪是否过载；给出时隙数、每样值码长和帧率，能够算线路速率。\n\nDPCM的重点是解释为什么双方必须使用同样的重建历史预测。原课“参考8学时”是教学安排，不代表读完摘要就掌握这些推导。",
+      "question": "若能背出PCM三个步骤，却不会从阈值算码字，算掌握原页要求了吗？",
+      "answer": "还没有。至少还应能逐样值确定量化区间、重建值和编码，并能解释误差从哪里进入。",
+      "teachingHtmlWithLatex": "<p>原页要求掌握抽样、均匀与非均匀量化、PCM、增量调制、TDM，了解DPCM。可以把它们转成六项可做的检查，而不是只背定义。</p><p>给出信号频带，能够算采样率并判断混叠；给出量化阈值，能够找到输出电平和误差；给出概率模型，能够由积分算量化噪声；给出PCM字段，能够编码并反向译码检查；给出增量台阶和输入斜率，能够判断跟踪是否过载；给出时隙数、每样值码长和帧率，能够算线路速率。</p><p>DPCM的重点是解释为什么双方必须使用同样的重建历史预测。原课“参考8学时”是教学安排，不代表读完摘要就掌握这些推导。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "route"
+      ],
+      "references": []
+    },
+    {
+      "page": 3,
+      "title": "六个知识块的先修关系",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=3",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-3.webp",
+      "body": "本页列出抽样定理、量化、PCM、DPCM、增量调制和TDM。先修关系可沿两条线理解：抽样与量化构成普通PCM的基础；PCM理解后，再看如何利用相邻样值相关性减少要传的信息，以及怎样把多路PCM安排进同一时间轴。\n\nDPCM传预测残差，不是把原样值简单少写几位。增量调制是用一位决定重建值上升或下降的特殊递推思路，必须同时考虑采样速度与台阶大小。TDM处理的是多个信号的时间安排，不会自动提高每路量化精度。\n\n因此，同样说“每秒很多比特”，可能来自更密的抽样、更多量化位，或更多复用路数；计算前要先说明增加的是哪一项。",
+      "question": "把一路PCM改成十路TDM，是否相当于每一路多了十倍量化级？",
+      "answer": "不是。TDM增加总线路负荷；若每路码长保持N位，每样值仍只有最多2^N种表示。",
+      "teachingHtmlWithLatex": "<p>本页列出抽样定理、量化、PCM、DPCM、增量调制和TDM。先修关系可沿两条线理解：抽样与量化构成普通PCM的基础；PCM理解后，再看如何利用相邻样值相关性减少要传的信息，以及怎样把多路PCM安排进同一时间轴。</p><p>DPCM传预测残差，不是把原样值简单少写几位。增量调制是用一位决定重建值上升或下降的特殊递推思路，必须同时考虑采样速度与台阶大小。TDM处理的是多个信号的时间安排，不会自动提高每路量化精度。</p><p>因此，同样说“每秒很多比特”，可能来自更密的抽样、更多量化位，或更多复用路数；计算前要先说明增加的是哪一项。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "route"
+      ],
+      "references": []
+    },
+    {
+      "page": 4,
+      "title": "抽样、量化、编码分别改变哪一个对象",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=4",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-4.webp",
+      "body": "抽样把时间连续的$m(t)$变成离散时刻的数列$m[n]=m(nT_s)$，其中$T_s$是抽样间隔，$f_s=1/T_s$。此时每个数仍可取连续幅度，并未成为有限字长的数字。\n\n量化用有限集合中的$q_i$代替样值，记$m_q[n]=Q(m[n])$。同一区间内不同样值给出同一$q_i$，因而量化通常多对一。编码再把编号$i$映为二进制码字，固定$N$位可表示不超过$2^N$个不同级。\n\n三个操作可在同一芯片内完成，但逻辑上不能混淆。提高$f_s$增加单位时间的样本数；提高$N$增加单个样值可表示的级数。过采样可在适当滤波/噪声模型下改善带内误差，但它并不改变某个N位码字自身只有$2^N$种状态。",
+      "question": "8位ADC把采样率加倍后，每个样值的可表示级数变成多少？",
+      "answer": "仍为最多256级。样值数每秒加倍，因此未压缩固定码长的输出比特率加倍；不能把它说成每样值512级。",
+      "teachingHtmlWithLatex": "<p>抽样把时间连续的$m(t)$变成离散时刻的数列$m[n]=m(nT_s)$，其中$T_s$是抽样间隔，$f_s=1/T_s$。此时每个数仍可取连续幅度，并未成为有限字长的数字。</p><p>量化用有限集合中的$q_i$代替样值，记$m_q[n]=Q(m[n])$。同一区间内不同样值给出同一$q_i$，因而量化通常多对一。编码再把编号$i$映为二进制码字，固定$N$位可表示不超过$2^N$个不同级。</p><p>三个操作可在同一芯片内完成，但逻辑上不能混淆。提高$f_s$增加单位时间的样本数；提高$N$增加单个样值可表示的级数。过采样可在适当滤波/噪声模型下改善带内误差，但它并不改变某个N位码字自身只有$2^N$种状态。</p>",
+      "formulas": [
+        "m(t)",
+        "m[n]=m(nT_s)",
+        "T_s",
+        "f_s=1/T_s",
+        "q_i",
+        "m_q[n]=Q(m[n])",
+        "q_i",
+        "i",
+        "N",
+        "2^N",
+        "f_s",
+        "N",
+        "2^N"
+      ],
+      "knowledgeNodeIds": [
+        "stages"
+      ],
+      "references": []
+    },
+    {
+      "page": 5,
+      "title": "沿原图读出同一样值的三种表示",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=5",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-5.webp",
+      "body": "上图虚线是连续波形，竖箭头只在$-3T,-2T,\\ldots,3T$处取值；箭头之间的空白不表示真实信号为零，而表示那些时刻没有被单独记录。\n\n中图把原样值与有限重建电平对照：原值可以高于或低于被选电平，这个垂直差就是量化误差。下图再给量化电平加上码字标签。按可见原图从左到右，码组为011、100、100、011、011、100、100；这是图中的表示，不是由没有给出的绝对电压阈值重新推算出的唯一ADC规则。\n\n011与100的二进制编号相邻，却有三位不同。这提前提醒：数值接近与比特图样接近不是同一概念；研究误码失真时还要看采用什么码。",
+      "question": "图中两个不同的原样值都编码为100，是否说明编码器出错？",
+      "answer": "不一定。它们可能落在同一量化区间，先被量化为同一电平，随后正确得到同一码字；丢失幅度差别发生在量化阶段。",
+      "teachingHtmlWithLatex": "<p>上图虚线是连续波形，竖箭头只在$-3T,-2T,\\ldots,3T$处取值；箭头之间的空白不表示真实信号为零，而表示那些时刻没有被单独记录。</p><p>中图把原样值与有限重建电平对照：原值可以高于或低于被选电平，这个垂直差就是量化误差。下图再给量化电平加上码字标签。按可见原图从左到右，码组为011、100、100、011、011、100、100；这是图中的表示，不是由没有给出的绝对电压阈值重新推算出的唯一ADC规则。</p><p>011与100的二进制编号相邻，却有三位不同。这提前提醒：数值接近与比特图样接近不是同一概念；研究误码失真时还要看采用什么码。</p>",
+      "formulas": [
+        "-3T,-2T,\\ldots,3T"
+      ],
+      "knowledgeNodeIds": [
+        "stages"
+      ],
+      "references": []
+    },
+    {
+      "page": 6,
+      "title": "PCM系统：A/D与D/A各做了什么",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=6",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-6.webp",
+      "body": "按原框图从左到右，发送端先抽样，再量化，最后编码；信道传输的是码字对应的物理信号。接收端译码得到量化重建电平，再用低通重建连续时间波形。整体可记为$m(t)\\to m[n]\\to m_q[n]\\to\\text{bits}\\to\\hat m_q[n]\\to\\tilde m(t)$。\n\n这里“编码”是样值的二进制表示，不自动等于增加纠错冗余的信道编码。实际系统还需抗混叠滤波、时钟恢复、码组同步、判决等，本页框图为解释数字化而简化，不能因为图里没画就认定无需这些功能。\n\n无误码时$\\hat m_q[n]=m_q[n]$，仍一般不等于$m[n]$。接收低通能选取基带并抑制谱副本，却不能知道每个原样值在量化格内的精确位置。",
+      "question": "信道完全无噪声，图中输出就一定与输入相同吗？",
+      "answer": "仍不一定。若量化级数有限，量化误差已在发送端产生；此外还须满足采样与重建条件。无误码只消除传输判决错误。",
+      "teachingHtmlWithLatex": "<p>按原框图从左到右，发送端先抽样，再量化，最后编码；信道传输的是码字对应的物理信号。接收端译码得到量化重建电平，再用低通重建连续时间波形。整体可记为$m(t)\\to m[n]\\to m_q[n]\\to\\text{bits}\\to\\hat m_q[n]\\to\\tilde m(t)$。</p><p>这里“编码”是样值的二进制表示，不自动等于增加纠错冗余的信道编码。实际系统还需抗混叠滤波、时钟恢复、码组同步、判决等，本页框图为解释数字化而简化，不能因为图里没画就认定无需这些功能。</p><p>无误码时$\\hat m_q[n]=m_q[n]$，仍一般不等于$m[n]$。接收低通能选取基带并抑制谱副本，却不能知道每个原样值在量化格内的精确位置。</p>",
+      "formulas": [
+        "m(t)\\to m[n]\\to m_q[n]\\to\\text{bits}\\to\\hat m_q[n]\\to\\tilde m(t)",
+        "\\hat m_q[n]=m_q[n]",
+        "m[n]"
+      ],
+      "knowledgeNodeIds": [
+        "stages"
+      ],
+      "references": []
+    },
+    {
+      "page": 7,
+      "title": "为什么“有一串样值”还不足以确定原曲线",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=7",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-7.webp",
+      "body": "离散点之间可以画出无穷多条连续曲线。因此，唯一恢复不能只依赖样值，还必须限制信号类，例如预先知道它严格带限。\n\n一个直接的反例是频率相差整数倍采样率的复指数：在$t=nT_s$处，$e^{j2\\pi(f+kf_s)nT_s}=e^{j2\\pi fnT_s}$，因为$e^{j2\\pi kn}=1$。采样器仅凭这些值无法区分它们；限制允许频带才能排除这些别名。\n\n恢复问题应先问“原信号允许出现哪些频率”，再问采样间隔。实际信号通常不是严格带限，工程上用抗混叠滤波把超出允许带宽的能量压低，再留出采样与滤波的过渡裕量。",
+      "question": "以8kHz采样，1kHz与9kHz的同初相余弦样值有什么关系？",
+      "answer": "在所有整数采样点完全相同，因为9kHz比1kHz多一个采样率。若未先限制输入频带，单凭样值不能辨认是哪一个。",
+      "teachingHtmlWithLatex": "<p>离散点之间可以画出无穷多条连续曲线。因此，唯一恢复不能只依赖样值，还必须限制信号类，例如预先知道它严格带限。</p><p>一个直接的反例是频率相差整数倍采样率的复指数：在$t=nT_s$处，$e^{j2\\pi(f+kf_s)nT_s}=e^{j2\\pi fnT_s}$，因为$e^{j2\\pi kn}=1$。采样器仅凭这些值无法区分它们；限制允许频带才能排除这些别名。</p><p>恢复问题应先问“原信号允许出现哪些频率”，再问采样间隔。实际信号通常不是严格带限，工程上用抗混叠滤波把超出允许带宽的能量压低，再留出采样与滤波的过渡裕量。</p>",
+      "formulas": [
+        "t=nT_s",
+        "e^{j2\\pi(f+kf_s)nT_s}=e^{j2\\pi fnT_s}",
+        "e^{j2\\pi kn}=1"
+      ],
+      "knowledgeNodeIds": [
+        "uniqueness"
+      ],
+      "references": []
+    },
+    {
+      "page": 8,
+      "title": "低通采样定理与临界等号的条件",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=8",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-8.webp",
+      "body": "实低通信号若最高正频率为$f_H$，完整频谱通常分布在$[-f_H,f_H]$。本页给出$f_s\\ge2f_H$：频谱副本间距足够大时，可分离出原基带。这里的$f_H$是最高信号频率，不是搬到高频后的载频。\n\n理想等号要谨慎。若允许任意相位且在边界$f_H$存在谱线，$m(t)=\\sin(2\\pi f_Ht)$在$f_s=2f_H$时采到的全是零，与零信号无法区分。所以“含边界所有波形都在等号下可恢复”不是无条件正确。\n\n通常对边界无独立谱线的适当带限信号类，或另有边界约定时采用临界抽样表述；工程上选$f_s>2f_H$并预留抗混叠滤波过渡带。条件满足的是采样可逆性，不包括有限精度量化。",
+      "question": "为什么最高频率1kHz的纯正弦不能无条件保证用2kHz恢复？",
+      "answer": "若正弦恰好在采样点过零，所有样值都是零；临界边界谱线及相位必须另作限制。略提高采样率并满足带限条件可避开这个特定退化。",
+      "teachingHtmlWithLatex": "<p>实低通信号若最高正频率为$f_H$，完整频谱通常分布在$[-f_H,f_H]$。本页给出$f_s\\ge2f_H$：频谱副本间距足够大时，可分离出原基带。这里的$f_H$是最高信号频率，不是搬到高频后的载频。</p><p>理想等号要谨慎。若允许任意相位且在边界$f_H$存在谱线，$m(t)=\\sin(2\\pi f_Ht)$在$f_s=2f_H$时采到的全是零，与零信号无法区分。所以“含边界所有波形都在等号下可恢复”不是无条件正确。</p><p>通常对边界无独立谱线的适当带限信号类，或另有边界约定时采用临界抽样表述；工程上选$f_s&gt;2f_H$并预留抗混叠滤波过渡带。条件满足的是采样可逆性，不包括有限精度量化。</p>",
+      "formulas": [
+        "f_H",
+        "[-f_H,f_H]",
+        "f_s\\ge2f_H",
+        "f_H",
+        "f_H",
+        "m(t)=\\sin(2\\pi f_Ht)",
+        "f_s=2f_H",
+        "f_s>2f_H"
+      ],
+      "knowledgeNodeIds": [
+        "nyquist"
+      ],
+      "references": []
+    },
+    {
+      "page": 9,
+      "title": "奈奎斯特速率和奈奎斯特间隔互为倒数",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=9",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-9.webp",
+      "body": "低通模型的奈奎斯特速率是$2f_H$，对应最大临界抽样间隔$T_N=1/(2f_H)$。从“率”换到“间隔”时不等号反向：$f_s\\ge2f_H$对应$T_s\\le1/(2f_H)$，并继续保留上一页的临界条件。\n\n例如本讲解补充一个$f_H=3.4\\,\\mathrm{kHz}$的带限话音模型，临界率为$6.8\\,\\mathrm{ksample/s}$，间隔约$147.06\\,\\mu\\mathrm{s}$。若采用$8\\,\\mathrm{ksample/s}$，实际间隔为$125\\,\\mu\\mathrm{s}$，比临界间隔短。该数例用于说明量纲，不把一个模型的数值说成所有语音的普适上限。\n\n不要将这里“模拟波形采样的奈奎斯特率”与数字基带无码间干扰的码元率关系混作同一道公式；两者研究的对象与带宽约定不同。",
+      "question": "若fH翻倍，允许的最大采样间隔怎样变化？",
+      "answer": "减半，因为T_N=1/(2fH)。最高频率越高，时间变化越快，需要更密的采样。",
+      "teachingHtmlWithLatex": "<p>低通模型的奈奎斯特速率是$2f_H$，对应最大临界抽样间隔$T_N=1/(2f_H)$。从“率”换到“间隔”时不等号反向：$f_s\\ge2f_H$对应$T_s\\le1/(2f_H)$，并继续保留上一页的临界条件。</p><p>例如本讲解补充一个$f_H=3.4\\,\\mathrm{kHz}$的带限话音模型，临界率为$6.8\\,\\mathrm{ksample/s}$，间隔约$147.06\\,\\mu\\mathrm{s}$。若采用$8\\,\\mathrm{ksample/s}$，实际间隔为$125\\,\\mu\\mathrm{s}$，比临界间隔短。该数例用于说明量纲，不把一个模型的数值说成所有语音的普适上限。</p><p>不要将这里“模拟波形采样的奈奎斯特率”与数字基带无码间干扰的码元率关系混作同一道公式；两者研究的对象与带宽约定不同。</p>",
+      "formulas": [
+        "2f_H",
+        "T_N=1/(2f_H)",
+        "f_s\\ge2f_H",
+        "T_s\\le1/(2f_H)",
+        "f_H=3.4\\,\\mathrm{kHz}",
+        "6.8\\,\\mathrm{ksample/s}",
+        "147.06\\,\\mu\\mathrm{s}",
+        "8\\,\\mathrm{ksample/s}",
+        "125\\,\\mu\\mathrm{s}"
+      ],
+      "knowledgeNodeIds": [
+        "nyquist"
+      ],
+      "references": []
+    },
+    {
+      "page": 10,
+      "title": "冲激梳为什么会复制整个频谱",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=10",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-10.webp",
+      "body": "本页理想抽样模型是相乘：$m_s(t)=m(t)\\delta_T(t)$，其中$\\delta_T(t)=\\sum_{n=-\\infty}^{\\infty}\\delta(t-nT_s)$。冲激筛选性质同时给出$m_s(t)=\\sum_n m(nT_s)\\delta(t-nT_s)$：样值是冲激面积的权重，而不是有限脉宽矩形的高度。\n\n沿课件角频率傅里叶约定，冲激梳变换为$\\frac{2\\pi}{T_s}\\sum_k\\delta(\\omega-k\\omega_s)$，$\\omega_s=2\\pi/T_s$。时域乘积对应频域卷积且带因子$1/(2\\pi)$，故$M_s(\\omega)=\\frac1{T_s}\\sum_kM(\\omega-k\\omega_s)$。\n\n两处$2\\pi$相消，剩下$1/T_s$。每根频域冲激使原谱平移一次，因而复制的是整个$M$，不是只复制原信号的最高频率。",
+      "question": "若漏掉频域卷积前的1/(2π)，会造成什么错误？",
+      "answer": "会把频谱副本的增益多算2π，随后恢复滤波器增益也出错。应先固定傅里叶约定，再让冲激梳的2π与乘积定理的1/(2π)相消。",
+      "teachingHtmlWithLatex": "<p>本页理想抽样模型是相乘：$m_s(t)=m(t)\\delta_T(t)$，其中$\\delta_T(t)=\\sum_{n=-\\infty}^{\\infty}\\delta(t-nT_s)$。冲激筛选性质同时给出$m_s(t)=\\sum_n m(nT_s)\\delta(t-nT_s)$：样值是冲激面积的权重，而不是有限脉宽矩形的高度。</p><p>沿课件角频率傅里叶约定，冲激梳变换为$\\frac{2\\pi}{T_s}\\sum_k\\delta(\\omega-k\\omega_s)$，$\\omega_s=2\\pi/T_s$。时域乘积对应频域卷积且带因子$1/(2\\pi)$，故$M_s(\\omega)=\\frac1{T_s}\\sum_kM(\\omega-k\\omega_s)$。</p><p>两处$2\\pi$相消，剩下$1/T_s$。每根频域冲激使原谱平移一次，因而复制的是整个$M$，不是只复制原信号的最高频率。</p>",
+      "formulas": [
+        "m_s(t)=m(t)\\delta_T(t)",
+        "\\delta_T(t)=\\sum_{n=-\\infty}^{\\infty}\\delta(t-nT_s)",
+        "m_s(t)=\\sum_n m(nT_s)\\delta(t-nT_s)",
+        "\\frac{2\\pi}{T_s}\\sum_k\\delta(\\omega-k\\omega_s)",
+        "\\omega_s=2\\pi/T_s",
+        "1/(2\\pi)",
+        "M_s(\\omega)=\\frac1{T_s}\\sum_kM(\\omega-k\\omega_s)",
+        "2\\pi",
+        "1/T_s",
+        "M"
+      ],
+      "knowledgeNodeIds": [
+        "comb"
+      ],
+      "references": []
+    },
+    {
+      "page": 11,
+      "title": "混叠的边缘条件：看两份谱有没有重叠",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=11",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-11.webp",
+      "body": "基带副本范围为$[-f_H,f_H]$，右邻副本范围为$[f_s-f_H,f_s+f_H]$。二者不交叠要求$f_s-f_H\\ge f_H$，即$f_s\\ge2f_H$。这比机械记“采两倍”更重要，因为带通抽样随后仍要逐个检查搬移谱的边缘。\n\n若低于此率，不同副本在同一频率相加，普通低通只能取出相加后的结果，不能把两个未知原分量拆开。对本章一般低通信号类，抽样映射因此不再一一对应；这不排除某些另有特殊结构的已知信号可由额外先验识别。\n\n当采样率刚好临界，谱边缘相接，仍须遵守边界谱线限制。实际抗混叠滤波器有过渡带，因此工程设计通常不把通带边缘和相邻谱边缘挤到同一点。",
+      "question": "最高频率3kHz，若fs=5kHz，基带正端与右邻副本左端之间发生什么？",
+      "answer": "基带到3kHz，右邻副本从5−3=2kHz开始，在2–3kHz重叠；负频侧也有对应混叠。",
+      "teachingHtmlWithLatex": "<p>基带副本范围为$[-f_H,f_H]$，右邻副本范围为$[f_s-f_H,f_s+f_H]$。二者不交叠要求$f_s-f_H\\ge f_H$，即$f_s\\ge2f_H$。这比机械记“采两倍”更重要，因为带通抽样随后仍要逐个检查搬移谱的边缘。</p><p>若低于此率，不同副本在同一频率相加，普通低通只能取出相加后的结果，不能把两个未知原分量拆开。对本章一般低通信号类，抽样映射因此不再一一对应；这不排除某些另有特殊结构的已知信号可由额外先验识别。</p><p>当采样率刚好临界，谱边缘相接，仍须遵守边界谱线限制。实际抗混叠滤波器有过渡带，因此工程设计通常不把通带边缘和相邻谱边缘挤到同一点。</p>",
+      "formulas": [
+        "[-f_H,f_H]",
+        "[f_s-f_H,f_s+f_H]",
+        "f_s-f_H\\ge f_H",
+        "f_s\\ge2f_H"
+      ],
+      "knowledgeNodeIds": [
+        "comb"
+      ],
+      "references": []
+    },
+    {
+      "page": 12,
+      "title": "把三组时域与频域图逐行对应",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=12",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-12.webp",
+      "body": "第一行是连续信号及其带限频谱；第二行是时间冲激梳及频域冲激梳；第三行是相乘所得的加权冲激与周期复制的频谱。图的左右箭头表示傅里叶对应，不表示一个物理电路在两侧切换运行。\n\n时间梳间隔是$T_s$，频率梳间隔是$\\omega_s=2\\pi/T_s$。因此时间采样更密，频谱副本反而离得更远。第三行各谱副本均乘$1/T_s$；不要因图形为示意就忽略后续必须补偿的增益。\n\n图中原波形起伏、样值高度和每份谱轮廓分别服务不同检查：时间图看取到了哪一时刻；频域图看是否可分离。连接样点的虚线只是原波形提示，不是采样器新输出的一条连续曲线。",
+      "question": "采样间隔Ts减半，频谱副本间隔与比例因子各怎样变化？",
+      "answer": "副本间隔ωs加倍，前面的1/Ts也加倍。恢复滤波器应采用相应的Ts增益，不能只移动谱的位置而不管幅度。",
+      "teachingHtmlWithLatex": "<p>第一行是连续信号及其带限频谱；第二行是时间冲激梳及频域冲激梳；第三行是相乘所得的加权冲激与周期复制的频谱。图的左右箭头表示傅里叶对应，不表示一个物理电路在两侧切换运行。</p><p>时间梳间隔是$T_s$，频率梳间隔是$\\omega_s=2\\pi/T_s$。因此时间采样更密，频谱副本反而离得更远。第三行各谱副本均乘$1/T_s$；不要因图形为示意就忽略后续必须补偿的增益。</p><p>图中原波形起伏、样值高度和每份谱轮廓分别服务不同检查：时间图看取到了哪一时刻；频域图看是否可分离。连接样点的虚线只是原波形提示，不是采样器新输出的一条连续曲线。</p>",
+      "formulas": [
+        "T_s",
+        "\\omega_s=2\\pi/T_s",
+        "1/T_s"
+      ],
+      "knowledgeNodeIds": [
+        "comb"
+      ],
+      "references": []
+    },
+    {
+      "page": 13,
+      "title": "理想恢复低通为什么要有Ts增益",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=13",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-13.webp",
+      "body": "选取本页临界关系$\\omega_H=\\pi/T_s$并保留边界约定。基带副本为$M(\\omega)/T_s$，所以理想低通在$|\\omega|\\le\\omega_H$的增益应为$T_s$，带外为零；相乘后恰好还原$M(\\omega)$。\n\n反变换可直接验证：$h(t)=\\frac{T_s}{2\\pi}\\int_{-\\omega_H}^{\\omega_H}e^{j\\omega t}d\\omega=\\frac{T_s\\sin(\\omega_Ht)}{\\pi t}$。临界时$T_s\\omega_H=\\pi$，于是$h(t)=\\operatorname{Sa}(\\omega_Ht)$，其中$\\operatorname{Sa}(x)=\\sin x/x$，在零点取连续延拓值1。\n\n这说明课件的Sa核已用到临界采样关系。若取过采样且仍选截止$\\omega_H$，需保留前面的$T_s\\omega_H/\\pi$因子，不能把临界简式原封不动搬过去。",
+      "question": "只用单位增益低通截出基带，会恢复原来的振幅吗？",
+      "answer": "在本页单位冲激梳约定下不会，得到的是m(t)/Ts。低通通带乘Ts才能补掉抽样频谱中的1/Ts。",
+      "teachingHtmlWithLatex": "<p>选取本页临界关系$\\omega_H=\\pi/T_s$并保留边界约定。基带副本为$M(\\omega)/T_s$，所以理想低通在$|\\omega|\\le\\omega_H$的增益应为$T_s$，带外为零；相乘后恰好还原$M(\\omega)$。</p><p>反变换可直接验证：$h(t)=\\frac{T_s}{2\\pi}\\int_{-\\omega_H}^{\\omega_H}e^{j\\omega t}d\\omega=\\frac{T_s\\sin(\\omega_Ht)}{\\pi t}$。临界时$T_s\\omega_H=\\pi$，于是$h(t)=\\operatorname{Sa}(\\omega_Ht)$，其中$\\operatorname{Sa}(x)=\\sin x/x$，在零点取连续延拓值1。</p><p>这说明课件的Sa核已用到临界采样关系。若取过采样且仍选截止$\\omega_H$，需保留前面的$T_s\\omega_H/\\pi$因子，不能把临界简式原封不动搬过去。</p>",
+      "formulas": [
+        "\\omega_H=\\pi/T_s",
+        "M(\\omega)/T_s",
+        "|\\omega|\\le\\omega_H",
+        "T_s",
+        "M(\\omega)",
+        "h(t)=\\frac{T_s}{2\\pi}\\int_{-\\omega_H}^{\\omega_H}e^{j\\omega t}d\\omega=\\frac{T_s\\sin(\\omega_Ht)}{\\pi t}",
+        "T_s\\omega_H=\\pi",
+        "h(t)=\\operatorname{Sa}(\\omega_Ht)",
+        "\\operatorname{Sa}(x)=\\sin x/x",
+        "\\omega_H",
+        "T_s\\omega_H/\\pi"
+      ],
+      "knowledgeNodeIds": [
+        "sinc"
+      ],
+      "references": []
+    },
+    {
+      "page": 14,
+      "title": "由加权冲激卷积得到逐样值插值公式",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=14",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-14.webp",
+      "body": "将$m_s(t)=\\sum_n m_n\\delta(t-nT_s)$与恢复核卷积，利用$\\delta(t-a)*h(t)=h(t-a)$，便得$m(t)=\\sum_n m_n h(t-nT_s)$。临界时写成$\\sum_n m_n\\operatorname{Sa}[\\omega_H(t-nT_s)]$，也即$\\sum_n m_n\\operatorname{Sa}(\\omega_Ht-n\\pi)$。\n\n在采样点$t=kT_s$，第n项的核为$\\operatorname{Sa}[(k-n)\\pi]$：当$n=k$时为1，其他整数差时为0。因此所有插值核相加后正好通过每个样值，而不是由某一个样值单独决定整个区间。\n\n公式使用完整的双向无限样本序列和理想带限模型。实际有限记录、截断核和可实现滤波器会引入误差；不能因为理想式精确就认为任意有限点数可无误恢复整条无限时长信号。",
+      "question": "在第k个采样时刻，为什么其他样值对应的Sa波形都不影响结果？",
+      "answer": "因为它们的参数是非零整数倍π，sin[(k−n)π]=0；仅n=k的那项取Sa(0)=1，留下m_k。",
+      "teachingHtmlWithLatex": "<p>将$m_s(t)=\\sum_n m_n\\delta(t-nT_s)$与恢复核卷积，利用$\\delta(t-a)*h(t)=h(t-a)$，便得$m(t)=\\sum_n m_n h(t-nT_s)$。临界时写成$\\sum_n m_n\\operatorname{Sa}[\\omega_H(t-nT_s)]$，也即$\\sum_n m_n\\operatorname{Sa}(\\omega_Ht-n\\pi)$。</p><p>在采样点$t=kT_s$，第n项的核为$\\operatorname{Sa}[(k-n)\\pi]$：当$n=k$时为1，其他整数差时为0。因此所有插值核相加后正好通过每个样值，而不是由某一个样值单独决定整个区间。</p><p>公式使用完整的双向无限样本序列和理想带限模型。实际有限记录、截断核和可实现滤波器会引入误差；不能因为理想式精确就认为任意有限点数可无误恢复整条无限时长信号。</p>",
+      "formulas": [
+        "m_s(t)=\\sum_n m_n\\delta(t-nT_s)",
+        "\\delta(t-a)*h(t)=h(t-a)",
+        "m(t)=\\sum_n m_n h(t-nT_s)",
+        "\\sum_n m_n\\operatorname{Sa}[\\omega_H(t-nT_s)]",
+        "\\sum_n m_n\\operatorname{Sa}(\\omega_Ht-n\\pi)",
+        "t=kT_s",
+        "\\operatorname{Sa}[(k-n)\\pi]",
+        "n=k"
+      ],
+      "knowledgeNodeIds": [
+        "sinc"
+      ],
+      "references": []
+    },
+    {
+      "page": 15,
+      "title": "图中的许多Sa波形怎样共同拼回原曲线",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=15",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-15.webp",
+      "body": "原图展示每个样值乘一个平移后的Sa波形，再把它们叠加。某个样值为负时，整条核翻转；样值较大时，整条核按同一比例放大。每个核在自己的采样时刻达到1，在其他采样时刻为零，但在采样点之间一般都不为零。\n\n因此中间点的曲线值通常受所有样值共同影响。这与“最近一个样值保持不变”的阶梯波完全不同，也不等于用直线连接样点。理想Sa插值具有无限时间延伸，在实时电路中不能完全照搬，需要延迟、截断和带宽约束。\n\n检查自己的理解时可取某个样值改动$\\Delta m$：整个重建波形增加$\\Delta m\\operatorname{Sa}[\\omega_H(t-nT_s)]$，不只是该采样间隔内变高。",
+      "question": "改变一个样值，理想插值只会改变它左右两点之间的曲线吗？",
+      "answer": "不会。对应Sa核延伸到整个时间轴；其他采样点处影响为零，但一般非采样时刻仍受影响。",
+      "teachingHtmlWithLatex": "<p>原图展示每个样值乘一个平移后的Sa波形，再把它们叠加。某个样值为负时，整条核翻转；样值较大时，整条核按同一比例放大。每个核在自己的采样时刻达到1，在其他采样时刻为零，但在采样点之间一般都不为零。</p><p>因此中间点的曲线值通常受所有样值共同影响。这与“最近一个样值保持不变”的阶梯波完全不同，也不等于用直线连接样点。理想Sa插值具有无限时间延伸，在实时电路中不能完全照搬，需要延迟、截断和带宽约束。</p><p>检查自己的理解时可取某个样值改动$\\Delta m$：整个重建波形增加$\\Delta m\\operatorname{Sa}[\\omega_H(t-nT_s)]$，不只是该采样间隔内变高。</p>",
+      "formulas": [
+        "\\Delta m",
+        "\\Delta m\\operatorname{Sa}[\\omega_H(t-nT_s)]"
+      ],
+      "knowledgeNodeIds": [
+        "sinc"
+      ],
+      "references": []
+    },
+    {
+      "page": 16,
+      "title": "带通抽样：最低界限不代表所有更高采样率都可用",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=16",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-16.webp",
+      "body": "设实带通信号仅占正频区间$[f_L,f_H]$及其负频镜像，$B=f_H-f_L$。可以利用中间空频段安排复制谱，使采样率远低于$2f_H$，但必须让所有正负副本互不重叠。\n\n一种完整可行区间写法为$2f_H/n\\le f_s\\le2f_L/(n-1)$，其中$n=2,\\ldots,\\lfloor f_H/B\\rfloor$；另有$n=1$分支$f_s\\ge2f_H$。端点相接仍需处理边界谱线。区间非空来自$nB\\le f_H$。\n\n原页写$f_H=(n+k)B$并给$2B(1+k/n)=2f_H/n$作为最低界形式；$n=\\lfloor f_H/B\\rfloor$时得到最低允许区间的左端，且整倍数时应允许$k=0$。不能把原页“≥”误读为从这个最小值以上任意采样率都无混叠。带通前端滤波、实际频带漂移和采样器模拟输入带宽也必须满足。",
+      "question": "带通信号存在一个低采样率无混叠点，是否提高一点采样率就必然仍无混叠？",
+      "answer": "不是。带通允许率是若干区间的并集，区间之间可能有混叠禁区；必须重新检查上下端点，不能只比较是否高于最小值。",
+      "teachingHtmlWithLatex": "<p>设实带通信号仅占正频区间$[f_L,f_H]$及其负频镜像，$B=f_H-f_L$。可以利用中间空频段安排复制谱，使采样率远低于$2f_H$，但必须让所有正负副本互不重叠。</p><p>一种完整可行区间写法为$2f_H/n\\le f_s\\le2f_L/(n-1)$，其中$n=2,\\ldots,\\lfloor f_H/B\\rfloor$；另有$n=1$分支$f_s\\ge2f_H$。端点相接仍需处理边界谱线。区间非空来自$nB\\le f_H$。</p><p>原页写$f_H=(n+k)B$并给$2B(1+k/n)=2f_H/n$作为最低界形式；$n=\\lfloor f_H/B\\rfloor$时得到最低允许区间的左端，且整倍数时应允许$k=0$。不能把原页“≥”误读为从这个最小值以上任意采样率都无混叠。带通前端滤波、实际频带漂移和采样器模拟输入带宽也必须满足。</p>",
+      "formulas": [
+        "[f_L,f_H]",
+        "B=f_H-f_L",
+        "2f_H",
+        "2f_H/n\\le f_s\\le2f_L/(n-1)",
+        "n=2,\\ldots,\\lfloor f_H/B\\rfloor",
+        "n=1",
+        "f_s\\ge2f_H",
+        "nB\\le f_H",
+        "f_H=(n+k)B",
+        "2B(1+k/n)=2f_H/n",
+        "n=\\lfloor f_H/B\\rfloor",
+        "k=0"
+      ],
+      "knowledgeNodeIds": [
+        "bandpass"
+      ],
+      "references": []
+    },
+    {
+      "page": 17,
+      "title": "原图fH=4.5B的例子：逐个核对频谱端点",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=17",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-17.webp",
+      "body": "本页$f_H=4.5B$，故$f_L=3.5B$，取$n=4,k=0.5$得到最低左端$f_s=2.25B$。完整最低可行区间为$2.25B\\le f_s\\le(7/3)B$。例如$2.4B$虽高于$2.25B$，却已经越过该区间右端。\n\n以$f_s=2.25B$读图：原正频带$[3.5B,4.5B]$减去$2f_s=4.5B$后落在$[-B,0]$；原负频带$[-4.5B,-3.5B]$加上$2f_s$后落在$[0,B]$。这说明带通抽样可折到低频，且频谱方向可能翻转，恢复时必须知道原频带是哪一支。\n\n本例另有允许分支$[3B,3.5B]$、$[4.5B,7B]$和$[9B,\\infty)$。原图在一些边缘处只画相接；实际设计需留保护裕量，不把相接画法当对任意边界谱线的保证。",
+      "question": "本例fs=2.4B是否可按“高于2.25B”直接判为安全？",
+      "answer": "不能。2.4B高于最低区间右端7B/3≈2.333B，又小于下一分支左端3B，因此位于混叠区间。",
+      "teachingHtmlWithLatex": "<p>本页$f_H=4.5B$，故$f_L=3.5B$，取$n=4,k=0.5$得到最低左端$f_s=2.25B$。完整最低可行区间为$2.25B\\le f_s\\le(7/3)B$。例如$2.4B$虽高于$2.25B$，却已经越过该区间右端。</p><p>以$f_s=2.25B$读图：原正频带$[3.5B,4.5B]$减去$2f_s=4.5B$后落在$[-B,0]$；原负频带$[-4.5B,-3.5B]$加上$2f_s$后落在$[0,B]$。这说明带通抽样可折到低频，且频谱方向可能翻转，恢复时必须知道原频带是哪一支。</p><p>本例另有允许分支$[3B,3.5B]$、$[4.5B,7B]$和$[9B,\\infty)$。原图在一些边缘处只画相接；实际设计需留保护裕量，不把相接画法当对任意边界谱线的保证。</p>",
+      "formulas": [
+        "f_H=4.5B",
+        "f_L=3.5B",
+        "n=4,k=0.5",
+        "f_s=2.25B",
+        "2.25B\\le f_s\\le(7/3)B",
+        "2.4B",
+        "2.25B",
+        "f_s=2.25B",
+        "[3.5B,4.5B]",
+        "2f_s=4.5B",
+        "[-B,0]",
+        "[-4.5B,-3.5B]",
+        "2f_s",
+        "[0,B]",
+        "[3B,3.5B]",
+        "[4.5B,7B]",
+        "[9B,\\infty)"
+      ],
+      "knowledgeNodeIds": [
+        "bandpass"
+      ],
+      "references": []
+    },
+    {
+      "page": 18,
+      "title": "有限脉宽PAM与理想冲激抽样有什么不同",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=18",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-18.webp",
+      "body": "理想单位冲激在时间上无限窄，是分析模型而非可直接实现的电路波形。实际抽样脉冲持续有限时间，所以在脉冲打开期间必须说明输出到底怎样变化。\n\n自然抽样让脉冲顶部跟随输入波形；平顶抽样把某一采样时刻的值固定保持一段时间。二者都可称脉冲幅度调制PAM，但“脉冲幅度承载样值”不意味着幅度已量化，也不意味着输出是二进制码流。\n\n数学上，自然抽样通常是输入乘周期门函数；平顶抽样可建模为理想加权冲激与保持脉冲卷积。一个是时域乘法，一个是卷积，因而后面的频谱失真机制不同。",
+      "question": "看到等间隔的一串矩形脉冲，能否立即判定它是PCM？",
+      "answer": "不能。若矩形高度仍取连续样值，它可能只是平顶PAM；PCM还要求量化并把样值映为有限比特码字。",
+      "teachingHtmlWithLatex": "<p>理想单位冲激在时间上无限窄，是分析模型而非可直接实现的电路波形。实际抽样脉冲持续有限时间，所以在脉冲打开期间必须说明输出到底怎样变化。</p><p>自然抽样让脉冲顶部跟随输入波形；平顶抽样把某一采样时刻的值固定保持一段时间。二者都可称脉冲幅度调制PAM，但“脉冲幅度承载样值”不意味着幅度已量化，也不意味着输出是二进制码流。</p><p>数学上，自然抽样通常是输入乘周期门函数；平顶抽样可建模为理想加权冲激与保持脉冲卷积。一个是时域乘法，一个是卷积，因而后面的频谱失真机制不同。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "practical"
+      ],
+      "references": []
+    },
+    {
+      "page": 19,
+      "title": "自然抽样的顶部为什么仍然弯曲",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=19",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-19.webp",
+      "body": "自然抽样用周期门$s(t)$控制信号通断：门打开时$m_s(t)=A m(t)$，关闭时输出为零。只要输入在门宽内变化，输出顶部也跟着变化，所以称曲顶抽样。\n\n这里被保留的是一小段原波形，而不是仅将中心时刻的数复制到整个脉宽。若输入在脉宽内近似不变，自然与平顶看起来相近，但这只是小脉宽近似，并不改变两者模型差异。\n\n把周期门写成复指数级数后，每个门系数对应一份移位消息谱；第0阶门系数控制原基带副本。后续低通可选出这一副本，并通过常数增益恢复原消息。",
+      "question": "输入在一个采样脉冲持续期间明显上升，自然抽样的脉冲顶部应画平还是上升？",
+      "answer": "应随输入上升。只有平顶保持模型才将一个时刻的样值在整个保持期间固定不变。",
+      "teachingHtmlWithLatex": "<p>自然抽样用周期门$s(t)$控制信号通断：门打开时$m_s(t)=A m(t)$，关闭时输出为零。只要输入在门宽内变化，输出顶部也跟着变化，所以称曲顶抽样。</p><p>这里被保留的是一小段原波形，而不是仅将中心时刻的数复制到整个脉宽。若输入在脉宽内近似不变，自然与平顶看起来相近，但这只是小脉宽近似，并不改变两者模型差异。</p><p>把周期门写成复指数级数后，每个门系数对应一份移位消息谱；第0阶门系数控制原基带副本。后续低通可选出这一副本，并通过常数增益恢复原消息。</p>",
+      "formulas": [
+        "s(t)",
+        "m_s(t)=A m(t)"
+      ],
+      "knowledgeNodeIds": [
+        "natural"
+      ],
+      "references": []
+    },
+    {
+      "page": 20,
+      "title": "矩形门的傅里叶系数只按副本阶数加权",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=20",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-20.webp",
+      "body": "设门脉冲以每个$nT_s$为中心，幅度A、宽度$\\tau$，占空比$D=\\tau/T_s$。周期门的第k阶系数是$c_k=AD\\operatorname{Sa}(k\\omega_s\\tau/2)$，故$s(t)=\\sum_k c_ke^{jk\\omega_st}$。\n\n与$m(t)$相乘得到$M_s(\\omega)=\\sum_k c_kM(\\omega-k\\omega_s)$。每一份副本内部乘的是同一个常数$c_k$，而不是随该副本内部频率连续变化的Sa包络；这正是自然抽样与后面平顶保持的区别。\n\n第0阶$c_0=A\\tau/T_s=AD$，因此无混叠时，基带只是乘了门的平均值。若门不是以采样时刻为中心，系数还会多一个与阶数有关的相位因子；原页无此平移，不能随意添上。",
+      "question": "占空比D=1/4、门幅A=1，自然抽样的基带副本是原谱多少倍？怎样恢复？",
+      "answer": "基带系数c0=1/4；无混叠且只选基带时，用通带增益4的低通补偿即可。不能给每个基带频率再乘不同的孔径补偿系数。",
+      "teachingHtmlWithLatex": "<p>设门脉冲以每个$nT_s$为中心，幅度A、宽度$\\tau$，占空比$D=\\tau/T_s$。周期门的第k阶系数是$c_k=AD\\operatorname{Sa}(k\\omega_s\\tau/2)$，故$s(t)=\\sum_k c_ke^{jk\\omega_st}$。</p><p>与$m(t)$相乘得到$M_s(\\omega)=\\sum_k c_kM(\\omega-k\\omega_s)$。每一份副本内部乘的是同一个常数$c_k$，而不是随该副本内部频率连续变化的Sa包络；这正是自然抽样与后面平顶保持的区别。</p><p>第0阶$c_0=A\\tau/T_s=AD$，因此无混叠时，基带只是乘了门的平均值。若门不是以采样时刻为中心，系数还会多一个与阶数有关的相位因子；原页无此平移，不能随意添上。</p>",
+      "formulas": [
+        "nT_s",
+        "\\tau",
+        "D=\\tau/T_s",
+        "c_k=AD\\operatorname{Sa}(k\\omega_s\\tau/2)",
+        "s(t)=\\sum_k c_ke^{jk\\omega_st}",
+        "m(t)",
+        "M_s(\\omega)=\\sum_k c_kM(\\omega-k\\omega_s)",
+        "c_k",
+        "c_0=A\\tau/T_s=AD"
+      ],
+      "knowledgeNodeIds": [
+        "natural"
+      ],
+      "references": []
+    },
+    {
+      "page": 21,
+      "title": "自然抽样频谱：不要把虚线包络当成基带失真",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=21",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-21.webp",
+      "body": "原图上行是连续消息及其低通频谱，中行是周期矩形门和离散线谱，下行是门控输出与一组消息谱副本。时域脉冲顶部仍沿原消息弯曲，明确对应自然抽样。\n\n中间频域虚线连接门系数的Sa型外包络，只表示不同阶次的线谱高度变化。下行每个完整消息副本乘对应门系数；同一副本内部的频率成分并未被这条虚线逐点再削弱。因此原基带副本形状仍为$M(\\omega)$，只带$c_0$倍常数。\n\n若频谱副本不重叠，选取零频附近一份并补偿常数即可恢复。图上高阶副本较小，不表示可以在副本重叠时自动忽略混叠；是否可忽略还取决于误差要求，理想无失真结论不能用“小一点”替代。",
+      "question": "图中门谱Sa外包络下降，能否据此说自然抽样的每个基带高频分量都被额外衰减？",
+      "answer": "不能。Sa取值依赖副本阶数k，而基带对应固定k=0；该副本内部乘同一常数，不产生平顶保持那种连续频率下垂。",
+      "teachingHtmlWithLatex": "<p>原图上行是连续消息及其低通频谱，中行是周期矩形门和离散线谱，下行是门控输出与一组消息谱副本。时域脉冲顶部仍沿原消息弯曲，明确对应自然抽样。</p><p>中间频域虚线连接门系数的Sa型外包络，只表示不同阶次的线谱高度变化。下行每个完整消息副本乘对应门系数；同一副本内部的频率成分并未被这条虚线逐点再削弱。因此原基带副本形状仍为$M(\\omega)$，只带$c_0$倍常数。</p><p>若频谱副本不重叠，选取零频附近一份并补偿常数即可恢复。图上高阶副本较小，不表示可以在副本重叠时自动忽略混叠；是否可忽略还取决于误差要求，理想无失真结论不能用“小一点”替代。</p>",
+      "formulas": [
+        "M(\\omega)",
+        "c_0"
+      ],
+      "knowledgeNodeIds": [
+        "natural"
+      ],
+      "references": []
+    },
+    {
+      "page": 22,
+      "title": "自然抽样可以恢复，但必须补上条件与增益",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=22",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-22.webp",
+      "body": "原页两条结论是：自然抽样与理想抽样的各谱副本形状相似、幅度有别，并可用低通恢复。其条件是输入满足相应带限条件、副本无混叠、且基带门系数非零。\n\n零频门系数$c_0=A\\tau/T_s$，选取基带的低通宜有通带增益$1/c_0=T_s/(A\\tau)$，这样输出谱为$M(\\omega)$。若只取单位增益低通，得到的仍是原消息的缩放版，而非同幅度恢复。\n\n减小脉宽让门更接近短脉冲，但在固定A时会降低$c_0$；恢复需要更大增益，也会带来实际噪声、动态范围等代价。理想“能恢复”不意味着所有占空比都具有相同的工程抗噪性能。",
+      "question": "自然抽样占空比由1/2降到1/4，门高不变，原恢复增益不变，输出幅度怎样变化？",
+      "answer": "减半。因为基带门系数正比占空比；若仍要同幅恢复，低通通带增益应再加倍。",
+      "teachingHtmlWithLatex": "<p>原页两条结论是：自然抽样与理想抽样的各谱副本形状相似、幅度有别，并可用低通恢复。其条件是输入满足相应带限条件、副本无混叠、且基带门系数非零。</p><p>零频门系数$c_0=A\\tau/T_s$，选取基带的低通宜有通带增益$1/c_0=T_s/(A\\tau)$，这样输出谱为$M(\\omega)$。若只取单位增益低通，得到的仍是原消息的缩放版，而非同幅度恢复。</p><p>减小脉宽让门更接近短脉冲，但在固定A时会降低$c_0$；恢复需要更大增益，也会带来实际噪声、动态范围等代价。理想“能恢复”不意味着所有占空比都具有相同的工程抗噪性能。</p>",
+      "formulas": [
+        "c_0=A\\tau/T_s",
+        "1/c_0=T_s/(A\\tau)",
+        "M(\\omega)",
+        "c_0"
+      ],
+      "knowledgeNodeIds": [
+        "natural"
+      ],
+      "references": []
+    },
+    {
+      "page": 23,
+      "title": "平顶抽样：记录一个时刻，再把它保持一段时间",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=23",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-23.webp",
+      "body": "平顶抽样的第n个脉冲高度由$m(nT_s)$决定，在持续时间内保持不变。输入随后继续变化也不会改变这个已取得的样值，所以它不同于门一打开就实时跟踪输入的自然抽样。\n\n可将它写成$m_H(t)=\\sum_n m(nT_s)h(t-nT_s)$。这里$h$是单个保持脉冲：每个理想加权冲激经过同一脉冲形成电路，变成一个平顶脉冲。于是$m_H=m_s*h$，在频域为$M_H=M_sH$。\n\n“平顶”不是“量化”：高度仍可连续取值。也不是所有时刻都在保持，若脉宽小于$T_s$，相邻保持脉冲间有空隙；常见零阶保持则可持续到下一次更新。",
+      "question": "采样保持输出在脉宽内恒定，能据此断定幅度已经离散化了吗？",
+      "answer": "不能。恒定只是时间上的保持；脉冲高度仍可能为任意连续值，必须另经过有限级量化才会幅度离散。",
+      "teachingHtmlWithLatex": "<p>平顶抽样的第n个脉冲高度由$m(nT_s)$决定，在持续时间内保持不变。输入随后继续变化也不会改变这个已取得的样值，所以它不同于门一打开就实时跟踪输入的自然抽样。</p><p>可将它写成$m_H(t)=\\sum_n m(nT_s)h(t-nT_s)$。这里$h$是单个保持脉冲：每个理想加权冲激经过同一脉冲形成电路，变成一个平顶脉冲。于是$m_H=m_s*h$，在频域为$M_H=M_sH$。</p><p>“平顶”不是“量化”：高度仍可连续取值。也不是所有时刻都在保持，若脉宽小于$T_s$，相邻保持脉冲间有空隙；常见零阶保持则可持续到下一次更新。</p>",
+      "formulas": [
+        "m(nT_s)",
+        "m_H(t)=\\sum_n m(nT_s)h(t-nT_s)",
+        "h",
+        "m_H=m_s*h",
+        "M_H=M_sH",
+        "T_s"
+      ],
+      "knowledgeNodeIds": [
+        "flat"
+      ],
+      "references": []
+    },
+    {
+      "page": 24,
+      "title": "矩形保持脉冲的Sa频响与孔径下垂",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=24",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-24.webp",
+      "body": "原页取对称矩形保持核：$h(t)=A$在$|t|\\le\\tau/2$，该时间区间外为零。其傅里叶变换为$H(\\omega)=A\\int_{-\\tau/2}^{\\tau/2}e^{-j\\omega t}dt=A\\tau\\operatorname{Sa}(\\omega\\tau/2)$。\n\n与理想抽样谱相乘得$M_H(\\omega)=\\frac{A\\tau}{T_s}\\operatorname{Sa}(\\omega\\tau/2)\\sum_n M(\\omega-n\\omega_s)$。注意此处Sa参数是连续的观察频率$\\omega$，不再只是自然抽样门系数中的整数阶次$n\\omega_s$。因此同一基带副本内部也有幅度下垂。\n\n若实际保持从采样瞬间开始、持续到$\\tau$，核相对本页向右平移$\\tau/2$，会再乘$e^{-j\\omega\\tau/2}$；幅度下垂相同，但多出延迟。这个相位差来自时域起点约定，不是公式互相矛盾。",
+      "question": "为什么本页Sa(ωτ/2)会改变基带形状，而自然抽样的Sa(nωsτ/2)不会？",
+      "answer": "前者随同一基带内的观察频率ω连续变化；后者对一个副本固定n，乘的是整份谱共同的常数。",
+      "teachingHtmlWithLatex": "<p>原页取对称矩形保持核：$h(t)=A$在$|t|\\le\\tau/2$，该时间区间外为零。其傅里叶变换为$H(\\omega)=A\\int_{-\\tau/2}^{\\tau/2}e^{-j\\omega t}dt=A\\tau\\operatorname{Sa}(\\omega\\tau/2)$。</p><p>与理想抽样谱相乘得$M_H(\\omega)=\\frac{A\\tau}{T_s}\\operatorname{Sa}(\\omega\\tau/2)\\sum_n M(\\omega-n\\omega_s)$。注意此处Sa参数是连续的观察频率$\\omega$，不再只是自然抽样门系数中的整数阶次$n\\omega_s$。因此同一基带副本内部也有幅度下垂。</p><p>若实际保持从采样瞬间开始、持续到$\\tau$，核相对本页向右平移$\\tau/2$，会再乘$e^{-j\\omega\\tau/2}$；幅度下垂相同，但多出延迟。这个相位差来自时域起点约定，不是公式互相矛盾。</p>",
+      "formulas": [
+        "h(t)=A",
+        "|t|\\le\\tau/2",
+        "H(\\omega)=A\\int_{-\\tau/2}^{\\tau/2}e^{-j\\omega t}dt=A\\tau\\operatorname{Sa}(\\omega\\tau/2)",
+        "M_H(\\omega)=\\frac{A\\tau}{T_s}\\operatorname{Sa}(\\omega\\tau/2)\\sum_n M(\\omega-n\\omega_s)",
+        "\\omega",
+        "n\\omega_s",
+        "\\tau",
+        "\\tau/2",
+        "e^{-j\\omega\\tau/2}"
+      ],
+      "knowledgeNodeIds": [
+        "flat"
+      ],
+      "references": []
+    },
+    {
+      "page": 25,
+      "title": "保持失真怎样补偿，补偿又在哪里失效",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=25",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-25.webp",
+      "body": "无混叠时，平顶输出的基带是$H(\\omega)M(\\omega)/T_s$。原图先用频响$1/H(\\omega)$的网络补偿孔径响应，再以通带增益$T_s$的低通选基带；也可把两者合并成工作频带内$T_s/H(\\omega)$的总恢复响应。\n\n只用一个常数增益低通，通常不能抵消Sa在通带内的变化；若$\\tau$足够小使$|\\omega\\tau|\\ll1$，Sa近似1，才可在误差允许时省略精细补偿。补偿还会放大被衰减频率附近的噪声。\n\n若所选基带支路中$H(\\omega)=0$，普通逆滤波会要求无穷增益，不能在该支路稳定恢复对应分量。这个结论限定于所选支路及所用恢复方案，不能据此断言所有其他采样谱副本中的信息都必然消失。",
+      "question": "在保持频响接近零处强行大幅提升逆滤波增益，会带来什么问题？",
+      "answer": "噪声和建模误差也会被大幅放大；在精确零点普通逆滤波不存在有限增益解。应调整采样/保持参数或恢复频带，不能只盲目增益补偿。",
+      "teachingHtmlWithLatex": "<p>无混叠时，平顶输出的基带是$H(\\omega)M(\\omega)/T_s$。原图先用频响$1/H(\\omega)$的网络补偿孔径响应，再以通带增益$T_s$的低通选基带；也可把两者合并成工作频带内$T_s/H(\\omega)$的总恢复响应。</p><p>只用一个常数增益低通，通常不能抵消Sa在通带内的变化；若$\\tau$足够小使$|\\omega\\tau|\\ll1$，Sa近似1，才可在误差允许时省略精细补偿。补偿还会放大被衰减频率附近的噪声。</p><p>若所选基带支路中$H(\\omega)=0$，普通逆滤波会要求无穷增益，不能在该支路稳定恢复对应分量。这个结论限定于所选支路及所用恢复方案，不能据此断言所有其他采样谱副本中的信息都必然消失。</p>",
+      "formulas": [
+        "H(\\omega)M(\\omega)/T_s",
+        "1/H(\\omega)",
+        "T_s",
+        "T_s/H(\\omega)",
+        "\\tau",
+        "|\\omega\\tau|\\ll1",
+        "H(\\omega)=0"
+      ],
+      "knowledgeNodeIds": [
+        "flat"
+      ],
+      "references": []
+    },
+    {
+      "page": 26,
+      "title": "量化提高判决稳健性，不代表小噪声绝不会改码",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=26",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-26.webp",
+      "body": "量化用有限个预定电平代表连续幅度。同一区间内的小变化不会改变输出，这给后续数字判决提供离散结构；但它也永久丢失该格内部的精确差别。\n\n原页“小于量化间隔的噪声可以消除”需要修正为带条件的说法：只有加噪后仍落在原来的判决区间，量化输出才不变。若样值靠近阈值，即使噪声远小于整个格宽，也可能跨界。例：阈值为0，输入$-0.01\\Delta$叠加$+0.02\\Delta$便移到正侧。\n\n因此抗噪能力要结合离阈值的裕量、噪声分布与接收判决分析。量化误差和传输误码也要分开：前者即使信道无噪声也存在，后者来自传输后码字判决错误。",
+      "question": "噪声幅度只有量化间隔的1%，就能保证输出码字不变吗？",
+      "answer": "不能。只要原样值距某阈值小于这个扰动且方向朝向阈值，就可能跨格；必须比较到边界的距离，而不只是比较整格宽度。",
+      "teachingHtmlWithLatex": "<p>量化用有限个预定电平代表连续幅度。同一区间内的小变化不会改变输出，这给后续数字判决提供离散结构；但它也永久丢失该格内部的精确差别。</p><p>原页“小于量化间隔的噪声可以消除”需要修正为带条件的说法：只有加噪后仍落在原来的判决区间，量化输出才不变。若样值靠近阈值，即使噪声远小于整个格宽，也可能跨界。例：阈值为0，输入$-0.01\\Delta$叠加$+0.02\\Delta$便移到正侧。</p><p>因此抗噪能力要结合离阈值的裕量、噪声分布与接收判决分析。量化误差和传输误码也要分开：前者即使信道无噪声也存在，后者来自传输后码字判决错误。</p>",
+      "formulas": [
+        "-0.01\\Delta",
+        "+0.02\\Delta"
+      ],
+      "knowledgeNodeIds": [
+        "quantization"
+      ],
+      "references": []
+    },
+    {
+      "page": 27,
+      "title": "阈值与重建电平：为什么本页取区间中点",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=27",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-27.webp",
+      "body": "把输入区间用阈值$m_0,m_1,\\ldots,m_M$划分，第i格输出固定$q_i$。为了避免阈值同时属于相邻两格，可约定$m_{i-1}\\le x<m_i$，最大端点另归最后一格；原图两端都写“≤”是示意，实际判决必须给出唯一归属。\n\n本课选$q_i=(m_{i-1}+m_i)/2$。此时格内最坏绝对误差不超过格宽的一半，且正负误差范围对称。这是中点重建规则，不是从“任意概率分布”自动推出的通用均方最优结论。\n\n若要使第i格的均方误差最小，对$\\int_{m_{i-1}}^{m_i}(x-q_i)^2p(x)dx$求$q_i$导数，令其为零得到$q_i=E[X\\mid X\\text{在第i格}]$。当格内密度均匀或关于中点对称时，这个条件均值才等于中点。",
+      "question": "某格内样值大多靠近左端，均方误差最优重建值是否一定在几何中点？",
+      "answer": "不一定。均方最优值是该格条件均值，可能偏左；几何中点是本课采用的规则，在格内均匀或相应对称条件下才与均方最优一致。",
+      "teachingHtmlWithLatex": "<p>把输入区间用阈值$m_0,m_1,\\ldots,m_M$划分，第i格输出固定$q_i$。为了避免阈值同时属于相邻两格，可约定$m_{i-1}\\le x&lt;m_i$，最大端点另归最后一格；原图两端都写“≤”是示意，实际判决必须给出唯一归属。</p><p>本课选$q_i=(m_{i-1}+m_i)/2$。此时格内最坏绝对误差不超过格宽的一半，且正负误差范围对称。这是中点重建规则，不是从“任意概率分布”自动推出的通用均方最优结论。</p><p>若要使第i格的均方误差最小，对$\\int_{m_{i-1}}^{m_i}(x-q_i)^2p(x)dx$求$q_i$导数，令其为零得到$q_i=E[X\\mid X\\text{在第i格}]$。当格内密度均匀或关于中点对称时，这个条件均值才等于中点。</p>",
+      "formulas": [
+        "m_0,m_1,\\ldots,m_M",
+        "q_i",
+        "m_{i-1}\\le x<m_i",
+        "q_i=(m_{i-1}+m_i)/2",
+        "\\int_{m_{i-1}}^{m_i}(x-q_i)^2p(x)dx",
+        "q_i",
+        "q_i=E[X\\mid X\\text{在第i格}]"
+      ],
+      "knowledgeNodeIds": [
+        "quantization"
+      ],
+      "references": []
+    },
+    {
+      "page": 28,
+      "title": "量化误差符号与SQNR的分子是什么",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=28",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-28.webp",
+      "body": "按原页约定，误差为$e[n]=m[n]-m_q[n]$。若原值比重建值大则误差为正；求噪声功率时用$E[e^2]$，所以单个正负号不影响平方，但后面比较重建偏差时仍要保持约定一致。\n\n本节信号量化噪声功率比为$\\mathrm{SQNR}=E[m^2]/E[(m-m_q)^2]$。分子用输入信号均方，不是未经说明换成重建输出均方。若输入有非零均值，均方还包含直流功率；本节后面的对称零均值例中，均方与方差相同。\n\n量化误差由输入和量化器共同决定，本质上不是凭空加入的一份独立随机噪声。将它视为均匀、白、独立等，是额外统计模型，在后面噪声谱计算时应另行说明。",
+      "question": "若把所有量化误差符号反过来，SQNR会变化吗？",
+      "answer": "用相同输入均方时不变，因为误差平方相同；但误差定义、偏置与逐样值复核必须一致，不能在推导中途随意混换。",
+      "teachingHtmlWithLatex": "<p>按原页约定，误差为$e[n]=m[n]-m_q[n]$。若原值比重建值大则误差为正；求噪声功率时用$E[e^2]$，所以单个正负号不影响平方，但后面比较重建偏差时仍要保持约定一致。</p><p>本节信号量化噪声功率比为$\\mathrm{SQNR}=E[m^2]/E[(m-m_q)^2]$。分子用输入信号均方，不是未经说明换成重建输出均方。若输入有非零均值，均方还包含直流功率；本节后面的对称零均值例中，均方与方差相同。</p><p>量化误差由输入和量化器共同决定，本质上不是凭空加入的一份独立随机噪声。将它视为均匀、白、独立等，是额外统计模型，在后面噪声谱计算时应另行说明。</p>",
+      "formulas": [
+        "e[n]=m[n]-m_q[n]",
+        "E[e^2]",
+        "\\mathrm{SQNR}=E[m^2]/E[(m-m_q)^2]"
+      ],
+      "knowledgeNodeIds": [
+        "quantization"
+      ],
+      "references": []
+    },
+    {
+      "page": 29,
+      "title": "均匀量化指等格宽，不指样值等概率",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=29",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-29.webp",
+      "body": "原图把幅度取值范围等距离分割，黑色连续曲线在采样时刻得到样值，量化输出落在有限水平上。这里“均匀”描述阈值间距，而不是样值在时间上出现得是否均匀，也不要求每个量化级被选中的概率相同。\n\n均匀采样说的是时间间隔$T_s$相等，均匀量化说的是幅度格宽$\\Delta$相等，这两项可以独立选择。时间采样均匀的语音仍可能大部分幅度集中在零附近，于是中间量化级比大幅级更常用。\n\n读图时将误差视为同一采样时刻的原样值与输出水平的垂直差，不能把相邻时间点的差当作量化误差。后者还包含信号本身随时间变化。",
+      "question": "一个等间隔量化器有八级，就能说每级出现概率都是1/8吗？",
+      "answer": "不能。概率由输入分布与阈值共同决定，等格宽只规定几何划分。只有特定均匀输入等条件下，各等宽格才等概率。",
+      "teachingHtmlWithLatex": "<p>原图把幅度取值范围等距离分割，黑色连续曲线在采样时刻得到样值，量化输出落在有限水平上。这里“均匀”描述阈值间距，而不是样值在时间上出现得是否均匀，也不要求每个量化级被选中的概率相同。</p><p>均匀采样说的是时间间隔$T_s$相等，均匀量化说的是幅度格宽$\\Delta$相等，这两项可以独立选择。时间采样均匀的语音仍可能大部分幅度集中在零附近，于是中间量化级比大幅级更常用。</p><p>读图时将误差视为同一采样时刻的原样值与输出水平的垂直差，不能把相邻时间点的差当作量化误差。后者还包含信号本身随时间变化。</p>",
+      "formulas": [
+        "T_s",
+        "\\Delta"
+      ],
+      "knowledgeNodeIds": [
+        "quantization"
+      ],
+      "references": []
+    },
+    {
+      "page": 30,
+      "title": "用端点、阈值和中点建立完整均匀量化表",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=30",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-30.webp",
+      "body": "对输入范围$[a,b]$和M个区间，格宽为$\\Delta=(b-a)/M$。阈值$m_i=a+i\\Delta$，重建中点$q_i=a+(i-\\tfrac12)\\Delta$，其中$i=1,\\ldots,M$。M个重建电平对应M+1个阈值，不能混数。\n\n补充算例取$[0,4]$、M=4，则阈值为0、1、2、3、4，重建值为0.5、1.5、2.5、3.5。样值3.15在$[3,4]$格，重建为3.5，按前页定义误差为−0.35。这个算例明确采用中点规则，不代表其他PCM例图必须采用同样的电平编号。\n\n超出$[a,b]$后要另外规定饱和或过载处理；此时误差不再受$\\Delta/2$约束。仅记住格宽公式而忽略满量程，会在大信号下严重低估失真。",
+      "question": "[-1,1]分为8个均匀中点量化格，Δ与最靠近零的两个重建值是多少？",
+      "answer": "Δ=2/8=0.25，靠近零的重建值为−0.125和+0.125；这是偶数级中点量化，没有单独的零输出级。",
+      "teachingHtmlWithLatex": "<p>对输入范围$[a,b]$和M个区间，格宽为$\\Delta=(b-a)/M$。阈值$m_i=a+i\\Delta$，重建中点$q_i=a+(i-\\tfrac12)\\Delta$，其中$i=1,\\ldots,M$。M个重建电平对应M+1个阈值，不能混数。</p><p>补充算例取$[0,4]$、M=4，则阈值为0、1、2、3、4，重建值为0.5、1.5、2.5、3.5。样值3.15在$[3,4]$格，重建为3.5，按前页定义误差为−0.35。这个算例明确采用中点规则，不代表其他PCM例图必须采用同样的电平编号。</p><p>超出$[a,b]$后要另外规定饱和或过载处理；此时误差不再受$\\Delta/2$约束。仅记住格宽公式而忽略满量程，会在大信号下严重低估失真。</p>",
+      "formulas": [
+        "[a,b]",
+        "\\Delta=(b-a)/M",
+        "m_i=a+i\\Delta",
+        "q_i=a+(i-\\tfrac12)\\Delta",
+        "i=1,\\ldots,M",
+        "[0,4]",
+        "[3,4]",
+        "[a,b]",
+        "\\Delta/2"
+      ],
+      "knowledgeNodeIds": [
+        "uniform"
+      ],
+      "references": []
+    },
+    {
+      "page": 31,
+      "title": "量化噪声功率必须按输入概率逐格积分",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=31",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-31.webp",
+      "body": "设输入幅度密度为$p(x)$，第i格输出$q_i$。量化均方误差是$N_q=\\sum_{i=1}^M\\int_{m_{i-1}}^{m_i}(x-q_i)^2p(x)dx$；输入信号功率是$S=\\int_a^b x^2p(x)dx$。前式计算误差，后式计算原信号，不能共用同一个被平方的量。\n\n计算顺序是先给阈值/重建值，再写密度和支撑区间，最后积分。若密度在各格不同，不应未经论证把$p(x)$提成同一常数。原页写$[a,b]$积分默认输入落在量化范围内；若有尾部超出，需要追加饱和区间的误差积分。\n\n把量化误差近似成均匀分布能简化结果，但应放在概率模型之后，而不是先假设所有量化器都有相同噪声。下一页将给出一个可严格完成积分的均匀输入例子。",
+      "question": "为什么仅知道量化格宽相同，还不能断定噪声功率精确等于Δ²/12？",
+      "answer": "因为每格内误差出现的概率由p(x)决定；还需均匀输入或适用的高分辨近似等条件，且没有过载。",
+      "teachingHtmlWithLatex": "<p>设输入幅度密度为$p(x)$，第i格输出$q_i$。量化均方误差是$N_q=\\sum_{i=1}^M\\int_{m_{i-1}}^{m_i}(x-q_i)^2p(x)dx$；输入信号功率是$S=\\int_a^b x^2p(x)dx$。前式计算误差，后式计算原信号，不能共用同一个被平方的量。</p><p>计算顺序是先给阈值/重建值，再写密度和支撑区间，最后积分。若密度在各格不同，不应未经论证把$p(x)$提成同一常数。原页写$[a,b]$积分默认输入落在量化范围内；若有尾部超出，需要追加饱和区间的误差积分。</p><p>把量化误差近似成均匀分布能简化结果，但应放在概率模型之后，而不是先假设所有量化器都有相同噪声。下一页将给出一个可严格完成积分的均匀输入例子。</p>",
+      "formulas": [
+        "p(x)",
+        "q_i",
+        "N_q=\\sum_{i=1}^M\\int_{m_{i-1}}^{m_i}(x-q_i)^2p(x)dx",
+        "S=\\int_a^b x^2p(x)dx",
+        "p(x)",
+        "[a,b]"
+      ],
+      "knowledgeNodeIds": [
+        "uniform"
+      ],
+      "references": []
+    },
+    {
+      "page": 32,
+      "title": "例5-1：把“均匀输入”与“均匀量化”同时写出来",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=32",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-32.webp",
+      "body": "题给输入在$[-a,a]$均匀分布，a是正幅度上限，因此$p(x)=1/(2a)$；量化器把整个范围分为M个等宽格，$\\Delta=2a/M$。这里的a不要与前页一般区间$[a,b]$的左端点混用。\n\n第i格右端$m_i=-a+i\\Delta$，中点$q_i=-a+(i-\\tfrac12)\\Delta$。将$x=q_i+y$代入该格积分，$y$从$-\\Delta/2$到$+\\Delta/2$，每一格都变成相同的误差积分。\n\n题目不仅说量化器均匀，还额外说输入分布均匀，所以每格概率为$\\Delta/(2a)=1/M$。正是这些条件让下一页结果精确成立，而不是把一切语音或正弦输入都当成均匀密度。",
+      "question": "本例每格概率为1/M，是由“均匀量化器”一个条件推出的吗？",
+      "answer": "不是。它同时依赖输入在整个[-a,a]上均匀分布且各格等宽；若输入密度改变，等格宽一般不再等概率。",
+      "teachingHtmlWithLatex": "<p>题给输入在$[-a,a]$均匀分布，a是正幅度上限，因此$p(x)=1/(2a)$；量化器把整个范围分为M个等宽格，$\\Delta=2a/M$。这里的a不要与前页一般区间$[a,b]$的左端点混用。</p><p>第i格右端$m_i=-a+i\\Delta$，中点$q_i=-a+(i-\\tfrac12)\\Delta$。将$x=q_i+y$代入该格积分，$y$从$-\\Delta/2$到$+\\Delta/2$，每一格都变成相同的误差积分。</p><p>题目不仅说量化器均匀，还额外说输入分布均匀，所以每格概率为$\\Delta/(2a)=1/M$。正是这些条件让下一页结果精确成立，而不是把一切语音或正弦输入都当成均匀密度。</p>",
+      "formulas": [
+        "[-a,a]",
+        "p(x)=1/(2a)",
+        "\\Delta=2a/M",
+        "[a,b]",
+        "m_i=-a+i\\Delta",
+        "q_i=-a+(i-\\tfrac12)\\Delta",
+        "x=q_i+y",
+        "y",
+        "-\\Delta/2",
+        "+\\Delta/2",
+        "\\Delta/(2a)=1/M"
+      ],
+      "knowledgeNodeIds": [
+        "quant-snr"
+      ],
+      "references": []
+    },
+    {
+      "page": 33,
+      "title": "例5-1续：完整算出Δ²/12和a²/3",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=33",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-33.webp",
+      "body": "第i格噪声贡献为$\\frac1{2a}\\int_{-\\Delta/2}^{\\Delta/2}y^2dy$。原函数是$y^3/3$，上下限相减得$\\Delta^3/12$，再乘$1/(2a)$得到$\\Delta^3/(24a)$。\n\nM格相加，$N_q=M\\Delta^3/(24a)$。利用$M\\Delta=2a$，化成$N_q=\\Delta^2/12$。这一步先做一格积分、再用格数与满量程关系，最容易遗漏的是积分两侧的对称贡献。\n\n信号功率另算：$S=\\frac1{2a}\\int_{-a}^a x^2dx=a^2/3=M^2\\Delta^2/12$。它不是满幅正弦的$a^2/2$，因为本题是均匀幅度分布。这里“噪声只与格宽有关”是该模型的结果，不能无条件扩成任意小信号或任意概率分布定理。",
+      "question": "本例若a=1、M=8，S与Nq分别是多少？",
+      "answer": "Δ=1/4，S=1/3，Nq=(1/4)²/12=1/192，因此比值为64；注意信号功率不是正弦的1/2。",
+      "teachingHtmlWithLatex": "<p>第i格噪声贡献为$\\frac1{2a}\\int_{-\\Delta/2}^{\\Delta/2}y^2dy$。原函数是$y^3/3$，上下限相减得$\\Delta^3/12$，再乘$1/(2a)$得到$\\Delta^3/(24a)$。</p><p>M格相加，$N_q=M\\Delta^3/(24a)$。利用$M\\Delta=2a$，化成$N_q=\\Delta^2/12$。这一步先做一格积分、再用格数与满量程关系，最容易遗漏的是积分两侧的对称贡献。</p><p>信号功率另算：$S=\\frac1{2a}\\int_{-a}^a x^2dx=a^2/3=M^2\\Delta^2/12$。它不是满幅正弦的$a^2/2$，因为本题是均匀幅度分布。这里“噪声只与格宽有关”是该模型的结果，不能无条件扩成任意小信号或任意概率分布定理。</p>",
+      "formulas": [
+        "\\frac1{2a}\\int_{-\\Delta/2}^{\\Delta/2}y^2dy",
+        "y^3/3",
+        "\\Delta^3/12",
+        "1/(2a)",
+        "\\Delta^3/(24a)",
+        "N_q=M\\Delta^3/(24a)",
+        "M\\Delta=2a",
+        "N_q=\\Delta^2/12",
+        "S=\\frac1{2a}\\int_{-a}^a x^2dx=a^2/3=M^2\\Delta^2/12",
+        "a^2/2"
+      ],
+      "knowledgeNodeIds": [
+        "quant-snr"
+      ],
+      "references": []
+    },
+    {
+      "page": 34,
+      "title": "M²量噪比意味着每增加一位约提高6dB",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=34",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-34.webp",
+      "body": "由上一页同一个概率模型，$S/N_q=(M^2\\Delta^2/12)/(\\Delta^2/12)=M^2$。若用N位固定二进制码且充分使用全部级数，$M=2^N$，于是$\\mathrm{SQNR}_{dB}=10\\log_{10}M^2=20N\\log_{10}2\\approx6.02N$。\n\n增加一位使M加倍，固定满量程下格宽减半、噪声功率降为四分之一，所以约改善6.02dB。这不是从“比特数量增加一点”直接猜出来，而是格宽平方进入均方误差的结果。\n\n在采样率不变且未压缩时，单路码率为$R_b=Nf_s$，因此提高位数还增加传输负荷。常见满幅正弦的$6.02N+1.76$来自另一信号功率模型，不能把额外1.76dB加到本页均匀输入例中。",
+      "question": "本题从8位提高到9位，理想量噪比与未压缩码率分别变几倍？",
+      "answer": "量噪比变为4倍，约增加6.02dB；在相同采样率下码率由8fs变9fs，是9/8倍，不是2倍。",
+      "teachingHtmlWithLatex": "<p>由上一页同一个概率模型，$S/N_q=(M^2\\Delta^2/12)/(\\Delta^2/12)=M^2$。若用N位固定二进制码且充分使用全部级数，$M=2^N$，于是$\\mathrm{SQNR}_{dB}=10\\log_{10}M^2=20N\\log_{10}2\\approx6.02N$。</p><p>增加一位使M加倍，固定满量程下格宽减半、噪声功率降为四分之一，所以约改善6.02dB。这不是从“比特数量增加一点”直接猜出来，而是格宽平方进入均方误差的结果。</p><p>在采样率不变且未压缩时，单路码率为$R_b=Nf_s$，因此提高位数还增加传输负荷。常见满幅正弦的$6.02N+1.76$来自另一信号功率模型，不能把额外1.76dB加到本页均匀输入例中。</p>",
+      "formulas": [
+        "S/N_q=(M^2\\Delta^2/12)/(\\Delta^2/12)=M^2",
+        "M=2^N",
+        "\\mathrm{SQNR}_{dB}=10\\log_{10}M^2=20N\\log_{10}2\\approx6.02N",
+        "R_b=Nf_s",
+        "6.02N+1.76"
+      ],
+      "knowledgeNodeIds": [
+        "quant-snr"
+      ],
+      "references": []
+    },
+    {
+      "page": 35,
+      "title": "固定格宽为什么特别不利于小幅信号",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=35",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-35.webp",
+      "body": "在无过载且样值跨越足够多量化格、格内密度变化缓慢的近似下，量化误差功率约为$\\Delta^2/12$。若格宽固定而输入信号功率降低，分母近似不变，SQNR便下降，这就是原页所说的小信号弱点。\n\n例如信号幅度减半而统计形状近似不变，信号功率降为四分之一，若量化噪声近似保持原值，SQNR下降约6.02dB。这个推断不适用于任意极小输入：只占一两个格时，误差可能与输入强相关，甚至随输入位置呈确定性变化。\n\n因此原页“量化噪声功率不变”应在相应模型下理解。非均匀量化把更多分辨率分配给小幅区域，代价是大幅区域的格更宽，不能让所有幅度同时无成本变精细。",
+      "question": "输入已小到一直落在同一个量化格，还应机械使用恒定Δ²/12噪声吗？",
+      "answer": "不应。此时格内均匀误差近似可能失效，应按实际输入分布和重建值直接计算E[(X−Q(X))²]。",
+      "teachingHtmlWithLatex": "<p>在无过载且样值跨越足够多量化格、格内密度变化缓慢的近似下，量化误差功率约为$\\Delta^2/12$。若格宽固定而输入信号功率降低，分母近似不变，SQNR便下降，这就是原页所说的小信号弱点。</p><p>例如信号幅度减半而统计形状近似不变，信号功率降为四分之一，若量化噪声近似保持原值，SQNR下降约6.02dB。这个推断不适用于任意极小输入：只占一两个格时，误差可能与输入强相关，甚至随输入位置呈确定性变化。</p><p>因此原页“量化噪声功率不变”应在相应模型下理解。非均匀量化把更多分辨率分配给小幅区域，代价是大幅区域的格更宽，不能让所有幅度同时无成本变精细。</p>",
+      "formulas": [
+        "\\Delta^2/12"
+      ],
+      "knowledgeNodeIds": [
+        "small-signal"
+      ],
+      "references": []
+    },
+    {
+      "page": 36,
+      "title": "压缩后均匀量化，为什么等价于原幅度域非均匀划分",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=36",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-36.webp",
+      "body": "设压缩器是单调可逆函数$y=C(x)$，在y域均匀量化得到$y_q$，接收端用扩张器$x_q=C^{-1}(y_q)$。如果不量化，$C^{-1}(C(x))=x$；真正不可逆的信息损失仍发生在有限级量化。\n\n当某处压缩斜率$C'(x)$较大，同样的输出格宽$\\Delta_y$对应较小的输入格宽$\\Delta_x\\approx\\Delta_y/C'(x)$，所以小幅区可得到更细分辨率。大幅处斜率较小，等宽y格映回较宽x格。\n\n压扩不是简单把整个信号放大再缩小。线性倍增只会统一改变尺度；非线性曲线才会把有限量化级在不同幅度区重新分配。收发两端的曲线、归一化范围和编码表必须匹配，否则还会增加系统性失真。",
+      "question": "若压缩曲线在某处斜率为4，y域格宽固定，这里的输入等效格宽约是多少？",
+      "answer": "约为Δy/4。这个局部线性近似要求该格内斜率变化不大；对应均方误差约按格宽平方变化。",
+      "teachingHtmlWithLatex": "<p>设压缩器是单调可逆函数$y=C(x)$，在y域均匀量化得到$y_q$，接收端用扩张器$x_q=C^{-1}(y_q)$。如果不量化，$C^{-1}(C(x))=x$；真正不可逆的信息损失仍发生在有限级量化。</p><p>当某处压缩斜率$C&#x27;(x)$较大，同样的输出格宽$\\Delta_y$对应较小的输入格宽$\\Delta_x\\approx\\Delta_y/C&#x27;(x)$，所以小幅区可得到更细分辨率。大幅处斜率较小，等宽y格映回较宽x格。</p><p>压扩不是简单把整个信号放大再缩小。线性倍增只会统一改变尺度；非线性曲线才会把有限量化级在不同幅度区重新分配。收发两端的曲线、归一化范围和编码表必须匹配，否则还会增加系统性失真。</p>",
+      "formulas": [
+        "y=C(x)",
+        "y_q",
+        "x_q=C^{-1}(y_q)",
+        "C^{-1}(C(x))=x",
+        "C'(x)",
+        "\\Delta_y",
+        "\\Delta_x\\approx\\Delta_y/C'(x)"
+      ],
+      "knowledgeNodeIds": [
+        "companding"
+      ],
+      "references": []
+    },
+    {
+      "page": 37,
+      "title": "A律与μ律：先区分曲线，再看实现近似",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=37",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-37.webp",
+      "body": "原页把A律与μ律作为电话信号压扩的两类建议，并列出传统地区采用情况。这里按课件的历史教学语境理解，不把该地域表直接当作当下所有网络、终端或国际接口的唯一规定。\n\n本章真正需要掌握的是：连续压缩函数怎样给不同幅度分配分辨率；为什么用若干直线段近似对数曲线；以及8位码字怎样表示极性、段落和段内位置。13折线与15折线不是13位或15位编码，也不是只有13或15个量化电平。\n\n同一比特串若分别按不同压扩表解释，可能得到不同的重建幅度。因此跨系统互通不能只检查“都是8位PCM”，还要确认采用的压扩规则、码字约定与电平归一化。",
+      "question": "两端都采用8位PCM，是否足以保证译码后的幅度一致？",
+      "answer": "不够。还必须一致约定A律/μ律或其他量化表、极性与字段编码，以及满量程尺度。8位只说明码字状态数上限。",
+      "teachingHtmlWithLatex": "<p>原页把A律与μ律作为电话信号压扩的两类建议，并列出传统地区采用情况。这里按课件的历史教学语境理解，不把该地域表直接当作当下所有网络、终端或国际接口的唯一规定。</p><p>本章真正需要掌握的是：连续压缩函数怎样给不同幅度分配分辨率；为什么用若干直线段近似对数曲线；以及8位码字怎样表示极性、段落和段内位置。13折线与15折线不是13位或15位编码，也不是只有13或15个量化电平。</p><p>同一比特串若分别按不同压扩表解释，可能得到不同的重建幅度。因此跨系统互通不能只检查“都是8位PCM”，还要确认采用的压扩规则、码字约定与电平归一化。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "companding"
+      ],
+      "references": []
+    },
+    {
+      "page": 38,
+      "title": "μ律函数：归一化、端点和零压缩极限",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=38",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-38.webp",
+      "body": "原页对非负归一化输入$0\\le x\\le1$给出$y=\\ln(1+\\mu x)/\\ln(1+\\mu)$。x、y分别按各自满量程归一化，是无量纲数；$\\mu$控制曲线弯曲程度。\n\n端点可直接检查：x=0得y=0，x=1得y=1；导数为正，所以排序不改变。负幅度采用奇对称延拓$C(x)=\\operatorname{sgn}(x)\\ln(1+\\mu|x|)/\\ln(1+\\mu)$，不是把负数直接代入正半轴公式而忽略定义域。\n\n$\\mu=0$时原分式呈0/0，应取极限。利用$\\ln(1+\\mu x)\\sim\\mu x$、$\\ln(1+\\mu)\\sim\\mu$，得y=x。正半轴反函数为$x=((1+\\mu)^y-1)/\\mu$，可据此检查扩张器与压缩器互逆。",
+      "question": "把μ=0直接代入公式得0/0，是否说明没有“无压缩”情形？",
+      "answer": "不是。μ趋0时比值极限为x，因此连续定义可补为y=x；0/0表示需要取极限，而非输出不存在。",
+      "teachingHtmlWithLatex": "<p>原页对非负归一化输入$0\\le x\\le1$给出$y=\\ln(1+\\mu x)/\\ln(1+\\mu)$。x、y分别按各自满量程归一化，是无量纲数；$\\mu$控制曲线弯曲程度。</p><p>端点可直接检查：x=0得y=0，x=1得y=1；导数为正，所以排序不改变。负幅度采用奇对称延拓$C(x)=\\operatorname{sgn}(x)\\ln(1+\\mu|x|)/\\ln(1+\\mu)$，不是把负数直接代入正半轴公式而忽略定义域。</p><p>$\\mu=0$时原分式呈0/0，应取极限。利用$\\ln(1+\\mu x)\\sim\\mu x$、$\\ln(1+\\mu)\\sim\\mu$，得y=x。正半轴反函数为$x=((1+\\mu)^y-1)/\\mu$，可据此检查扩张器与压缩器互逆。</p>",
+      "formulas": [
+        "0\\le x\\le1",
+        "y=\\ln(1+\\mu x)/\\ln(1+\\mu)",
+        "\\mu",
+        "C(x)=\\operatorname{sgn}(x)\\ln(1+\\mu|x|)/\\ln(1+\\mu)",
+        "\\mu=0",
+        "\\ln(1+\\mu x)\\sim\\mu x",
+        "\\ln(1+\\mu)\\sim\\mu",
+        "x=((1+\\mu)^y-1)/\\mu"
+      ],
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "references": []
+    },
+    {
+      "page": 39,
+      "title": "从μ律曲线看局部斜率，不把归一化幅度误当能量",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=39",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-39.webp",
+      "body": "图中$\\mu=0$为对角线，较大的$\\mu$使正半轴曲线在小幅度区域更陡，并在接近满幅处更平。奇对称延拓使正负样值受到相同幅度规则、符号相反的处理。\n\n原课采用$\\mu=255$。此时$C'(0)=255/\\ln256\\approx45.99$，而$C'(1)=255/(256\\ln256)\\approx0.1796$。这说明小信号附近同样一小段输入变化，在压缩域被拉开；大幅附近相邻输入变化在压缩域被挤近。\n\n“放大/压缩”在这里说的是归一化映射和局部斜率，不应直接解释成电路凭空产生信号功率。即便正半轴多数点的y大于x，也不能推出这些点的局部斜率全部大于1，函数值与导数是不同量。",
+      "question": "若某处y>x，就能断言该处C′(x)>1吗？",
+      "answer": "不能。y>x比较从原点到该点的整体幅度比，C′比较局部增量；μ律靠近满幅时y仍可能大于x，但局部斜率已小于1。",
+      "teachingHtmlWithLatex": "<p>图中$\\mu=0$为对角线，较大的$\\mu$使正半轴曲线在小幅度区域更陡，并在接近满幅处更平。奇对称延拓使正负样值受到相同幅度规则、符号相反的处理。</p><p>原课采用$\\mu=255$。此时$C&#x27;(0)=255/\\ln256\\approx45.99$，而$C&#x27;(1)=255/(256\\ln256)\\approx0.1796$。这说明小信号附近同样一小段输入变化，在压缩域被拉开；大幅附近相邻输入变化在压缩域被挤近。</p><p>“放大/压缩”在这里说的是归一化映射和局部斜率，不应直接解释成电路凭空产生信号功率。即便正半轴多数点的y大于x，也不能推出这些点的局部斜率全部大于1，函数值与导数是不同量。</p>",
+      "formulas": [
+        "\\mu=0",
+        "\\mu",
+        "\\mu=255",
+        "C'(0)=255/\\ln256\\approx45.99",
+        "C'(1)=255/(256\\ln256)\\approx0.1796"
+      ],
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "references": []
+    },
+    {
+      "page": 40,
+      "title": "斜率怎样转换成局部量化误差和分贝改善",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=40",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-40.webp",
+      "body": "对正半轴μ律求导，$C'(x)=\\mu/[(1+\\mu x)\\ln(1+\\mu)]$。在一个足够小的格内，将曲线线性化为$\\Delta y\\approx C'(x)\\Delta x$，于是输入域半格误差上限近似为$\\Delta x/2\\approx\\Delta y/[2C'(x)]$。\n\n若比较相同归一化满量程下、相同压缩域格宽$\\Delta y$的均匀量化基准，输入域局部噪声功率约变为原来的$1/[C'(x)]^2$。对同一输入信号幅度，局部SQNR改善倍数为$[C'(x)]^2$，换成分贝是$20\\log_{10}|C'(x)|$，不是$10\\log_{10}|C'|$。\n\n这是局部高分辨近似，需要格内斜率变化小且无过载。若斜率小于1，所谓“改善”分贝为负，表示该幅度附近相较基准精度变差；压扩的收益是重新分配分辨率，不是所有区间都同时提高。",
+      "question": "某幅度附近压缩斜率为2，输入域量化噪声和局部SQNR分别怎样变？",
+      "answer": "输入等效格宽减半，噪声功率约降为1/4，局部SQNR约提高4倍，即20log10(2)≈6.02dB。不能把斜率2误写成只有2倍功率改善。",
+      "teachingHtmlWithLatex": "<p>对正半轴μ律求导，$C&#x27;(x)=\\mu/[(1+\\mu x)\\ln(1+\\mu)]$。在一个足够小的格内，将曲线线性化为$\\Delta y\\approx C&#x27;(x)\\Delta x$，于是输入域半格误差上限近似为$\\Delta x/2\\approx\\Delta y/[2C&#x27;(x)]$。</p><p>若比较相同归一化满量程下、相同压缩域格宽$\\Delta y$的均匀量化基准，输入域局部噪声功率约变为原来的$1/[C&#x27;(x)]^2$。对同一输入信号幅度，局部SQNR改善倍数为$[C&#x27;(x)]^2$，换成分贝是$20\\log_{10}|C&#x27;(x)|$，不是$10\\log_{10}|C&#x27;|$。</p><p>这是局部高分辨近似，需要格内斜率变化小且无过载。若斜率小于1，所谓“改善”分贝为负，表示该幅度附近相较基准精度变差；压扩的收益是重新分配分辨率，不是所有区间都同时提高。</p>",
+      "formulas": [
+        "C'(x)=\\mu/[(1+\\mu x)\\ln(1+\\mu)]",
+        "\\Delta y\\approx C'(x)\\Delta x",
+        "\\Delta x/2\\approx\\Delta y/[2C'(x)]",
+        "\\Delta y",
+        "1/[C'(x)]^2",
+        "[C'(x)]^2",
+        "20\\log_{10}|C'(x)|",
+        "10\\log_{10}|C'|"
+      ],
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "references": []
+    },
+    {
+      "page": 41,
+      "title": "μ=100：小信号改善与大信号损失必须一起计算",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=41",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-41.webp",
+      "body": "本页将$C'(x)=\\mu/[(1+\\mu x)\\ln(1+\\mu)]$代入局部高分辨率结果。取$\\mu=100$，当$x\\to0$，斜率为$100/\\ln101\\approx21.6679$，故相对均匀量化的量噪比增益为$20\\log_{10}21.6679\\approx26.7163\\,\\mathrm{dB}$。\n\n在$x=1$处，斜率变为$100/(101\\ln101)\\approx0.214534$，增益为$-13.3701\\,\\mathrm{dB}$。负号表示损失：同样的压缩域量化间隔，经扩张后在大幅度区域变得更宽。\n\n这两个数是相对于相同满量程、相同量化级数的局部比较，不是系统的绝对信噪比。特别在$x=0$处，信号功率本身可能为零，不能把“小信号极限增益26.72 dB”误读成零输入具有26.72 dB绝对量噪比。",
+      "question": "本页大信号增益为−13.37 dB，是否意味着量化噪声功率为负？",
+      "answer": "不是。它表示量噪比相对参考值下降；功率比仍为正，约为10^(−13.37/10)=0.046。负的是比值的对数。",
+      "teachingHtmlWithLatex": "<p>本页将$C&#x27;(x)=\\mu/[(1+\\mu x)\\ln(1+\\mu)]$代入局部高分辨率结果。取$\\mu=100$，当$x\\to0$，斜率为$100/\\ln101\\approx21.6679$，故相对均匀量化的量噪比增益为$20\\log_{10}21.6679\\approx26.7163\\,\\mathrm{dB}$。</p><p>在$x=1$处，斜率变为$100/(101\\ln101)\\approx0.214534$，增益为$-13.3701\\,\\mathrm{dB}$。负号表示损失：同样的压缩域量化间隔，经扩张后在大幅度区域变得更宽。</p><p>这两个数是相对于相同满量程、相同量化级数的局部比较，不是系统的绝对信噪比。特别在$x=0$处，信号功率本身可能为零，不能把“小信号极限增益26.72 dB”误读成零输入具有26.72 dB绝对量噪比。</p>",
+      "formulas": [
+        "C'(x)=\\mu/[(1+\\mu x)\\ln(1+\\mu)]",
+        "\\mu=100",
+        "x\\to0",
+        "100/\\ln101\\approx21.6679",
+        "20\\log_{10}21.6679\\approx26.7163\\,\\mathrm{dB}",
+        "x=1",
+        "100/(101\\ln101)\\approx0.214534",
+        "-13.3701\\,\\mathrm{dB}",
+        "x=0"
+      ],
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "references": []
+    },
+    {
+      "page": 42,
+      "title": "读压扩数值表：幅度dB与改善dB不是同一量",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=42",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-42.webp",
+      "body": "表中$x$是归一化输入幅度，电平应由$x_{\\mathrm{dB}}=20\\log_{10}x$换算；末行是$Q_{\\mathrm{dB}}=20\\log_{10}C'(x)$，表示量噪比相对改善。两行都写dB，却各有自己的分母，不能相互替代。\n\n继续采用$\\mu=100$。例如$x=0.1$对应$-20\\,\\mathrm{dB}$，斜率为$100/(11\\ln101)\\approx1.96981$，增益约$5.8885\\,\\mathrm{dB}$；$x=0.01$时增益约$20.6957\\,\\mathrm{dB}$。随着幅度下降，压缩曲线斜率增大，局部量化精度更好。\n\n原表采用近似数：例如0.0312并非严格的$10^{-30/20}=0.0316228$，0.003也并非严格的$10^{-50/20}=0.00316228$。按表内幅度算，二者的增益约14.4184与24.4375 dB；按精确−30与−50 dB幅度算则为14.3297与24.3297 dB。复算时应说明采用哪组输入，保留原表作为近似教学数据。",
+      "question": "若要精确计算−30 dB输入的增益，应直接用表中的0.0312吗？",
+      "answer": "不应。先用x=10^(−30/20)=0.0316228，再代μ=100斜率公式，得约14.3297 dB；0.0312给出的是另一个近似输入。",
+      "teachingHtmlWithLatex": "<p>表中$x$是归一化输入幅度，电平应由$x_{\\mathrm{dB}}=20\\log_{10}x$换算；末行是$Q_{\\mathrm{dB}}=20\\log_{10}C&#x27;(x)$，表示量噪比相对改善。两行都写dB，却各有自己的分母，不能相互替代。</p><p>继续采用$\\mu=100$。例如$x=0.1$对应$-20\\,\\mathrm{dB}$，斜率为$100/(11\\ln101)\\approx1.96981$，增益约$5.8885\\,\\mathrm{dB}$；$x=0.01$时增益约$20.6957\\,\\mathrm{dB}$。随着幅度下降，压缩曲线斜率增大，局部量化精度更好。</p><p>原表采用近似数：例如0.0312并非严格的$10^{-30/20}=0.0316228$，0.003也并非严格的$10^{-50/20}=0.00316228$。按表内幅度算，二者的增益约14.4184与24.4375 dB；按精确−30与−50 dB幅度算则为14.3297与24.3297 dB。复算时应说明采用哪组输入，保留原表作为近似教学数据。</p>",
+      "formulas": [
+        "x",
+        "x_{\\mathrm{dB}}=20\\log_{10}x",
+        "Q_{\\mathrm{dB}}=20\\log_{10}C'(x)",
+        "\\mu=100",
+        "x=0.1",
+        "-20\\,\\mathrm{dB}",
+        "100/(11\\ln101)\\approx1.96981",
+        "5.8885\\,\\mathrm{dB}",
+        "x=0.01",
+        "20.6957\\,\\mathrm{dB}",
+        "10^{-30/20}=0.0316228",
+        "10^{-50/20}=0.00316228"
+      ],
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "references": []
+    },
+    {
+      "page": 43,
+      "title": "压扩的收益体现为可用动态范围，而不是处处增益",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=43",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-43.webp",
+      "body": "原图横轴从左到右是越来越小的输入电平，纵轴是量化信噪比。无压扩曲线随输入降低而明显下降；$\\mu=100$曲线在较宽范围内较平坦。原因是大信号处牺牲部分精度，换取小信号处较小的输入等效量化间隔。\n\n图中以26 dB为示例门限，无压扩约要求输入高于−18 dB，而压扩后可延伸到约−36 dB。这里展示约18 dB的低电平可用范围扩展；这些交点依赖图采用的量化位数、参考电平及误差模型，并非所有μ律编码器的通用规格。\n\n读图时应作竖直比较：同一输入电平处两条曲线之差才是$Q_{\\mathrm{dB}}$。两曲线相交时改善为零；大幅度侧可能$Q<0$，小幅度侧可能$Q>0$。不能仅看压缩曲线高于$y=x$就断言量噪比始终增加。",
+      "question": "若只说“压扩使信噪比提高18 dB”，是否准确描述此图？",
+      "answer": "不准确。图中约18 dB是满足26 dB门限时可用输入下限的延伸；固定输入处的量噪比改善应比较两条曲线的纵坐标差。",
+      "teachingHtmlWithLatex": "<p>原图横轴从左到右是越来越小的输入电平，纵轴是量化信噪比。无压扩曲线随输入降低而明显下降；$\\mu=100$曲线在较宽范围内较平坦。原因是大信号处牺牲部分精度，换取小信号处较小的输入等效量化间隔。</p><p>图中以26 dB为示例门限，无压扩约要求输入高于−18 dB，而压扩后可延伸到约−36 dB。这里展示约18 dB的低电平可用范围扩展；这些交点依赖图采用的量化位数、参考电平及误差模型，并非所有μ律编码器的通用规格。</p><p>读图时应作竖直比较：同一输入电平处两条曲线之差才是$Q_{\\mathrm{dB}}$。两曲线相交时改善为零；大幅度侧可能$Q&lt;0$，小幅度侧可能$Q&gt;0$。不能仅看压缩曲线高于$y=x$就断言量噪比始终增加。</p>",
+      "formulas": [
+        "\\mu=100",
+        "Q_{\\mathrm{dB}}",
+        "Q<0",
+        "Q>0",
+        "y=x"
+      ],
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "references": []
+    },
+    {
+      "page": 44,
+      "title": "A律：线性小信号段与对数大信号段连续拼接",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=44",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-44.webp",
+      "body": "对$0\\le x\\le1$，A律写成$C(x)=Ax/(1+\\ln A)$（$0\\le x\\le1/A$），以及$C(x)=[1+\\ln(Ax)]/(1+\\ln A)$（$1/A<x\\le1$）。负半轴按$C(-x)=-C(x)$延伸；原页采用$A=87.6$。\n\n在接点$x=1/A$，两侧输出同为$1/(1+\\ln A)$，导数同为$A/(1+\\ln A)$，因此函数及一阶斜率连续。靠近零点保持有限且恒定的较大斜率，避免对数函数在零点的奇异性；外侧斜率为$1/[x(1+\\ln A)]$，随幅度变大而下降。\n\n当$A=1$，线性分支覆盖全部$[0,1]$且$C(x)=x$，于是退化为不压扩的均匀量化。A是控制压缩特性的参数，不是量化级数，也不是采样频率。",
+      "question": "A律在x=1/A处会不会由于切换公式产生幅度突跳？",
+      "answer": "不会。代入两侧公式都得1/(1+ln A)，两侧导数也相同；它是平滑衔接，不是量化台阶。",
+      "teachingHtmlWithLatex": "<p>对$0\\le x\\le1$，A律写成$C(x)=Ax/(1+\\ln A)$（$0\\le x\\le1/A$），以及$C(x)=[1+\\ln(Ax)]/(1+\\ln A)$（$1/A&lt;x\\le1$）。负半轴按$C(-x)=-C(x)$延伸；原页采用$A=87.6$。</p><p>在接点$x=1/A$，两侧输出同为$1/(1+\\ln A)$，导数同为$A/(1+\\ln A)$，因此函数及一阶斜率连续。靠近零点保持有限且恒定的较大斜率，避免对数函数在零点的奇异性；外侧斜率为$1/[x(1+\\ln A)]$，随幅度变大而下降。</p><p>当$A=1$，线性分支覆盖全部$[0,1]$且$C(x)=x$，于是退化为不压扩的均匀量化。A是控制压缩特性的参数，不是量化级数，也不是采样频率。</p>",
+      "formulas": [
+        "0\\le x\\le1",
+        "C(x)=Ax/(1+\\ln A)",
+        "0\\le x\\le1/A",
+        "C(x)=[1+\\ln(Ax)]/(1+\\ln A)",
+        "1/A<x\\le1",
+        "C(-x)=-C(x)",
+        "A=87.6",
+        "x=1/A",
+        "1/(1+\\ln A)",
+        "A/(1+\\ln A)",
+        "1/[x(1+\\ln A)]",
+        "A=1",
+        "[0,1]",
+        "C(x)=x"
+      ],
+      "knowledgeNodeIds": [
+        "a-law"
+      ],
+      "references": []
+    },
+    {
+      "page": 45,
+      "title": "用折线逼近对数：实现结构与逼近误差",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=45",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-45.webp",
+      "body": "原页提出用13折线逼近$A=87.6$的A律、用15折线逼近$\\mu=255$的μ律。平滑对数关系可由模拟电路近似，也可用数字查表实现；这里选折线，是为了把幅度范围分段后使用简单斜率和段内编号。\n\n每条线段仍表示连续的压缩映射；只有再把输出轴分成有限量化格，才成为数字量化器。因而“13折线”不等于13个量化级，更不等于13位编码。还要区分折线与理想对数曲线之间的逼近误差，以及有限量化格引起的量化误差。\n\n后面的编码使用正负对称结构：先判符号，再判幅度段，最后判段内位置。理解这种分层，可以从几何折线直接过渡到PCM码字字段，而不必逐个背所有重建值。",
+      "question": "为什么13折线压缩器不能直接称为13级量化器？",
+      "answer": "因为折线段内仍有连续输出，线段数只描述函数形状；量化级数取决于随后把输出轴分成多少离散格。",
+      "teachingHtmlWithLatex": "<p>原页提出用13折线逼近$A=87.6$的A律、用15折线逼近$\\mu=255$的μ律。平滑对数关系可由模拟电路近似，也可用数字查表实现；这里选折线，是为了把幅度范围分段后使用简单斜率和段内编号。</p><p>每条线段仍表示连续的压缩映射；只有再把输出轴分成有限量化格，才成为数字量化器。因而“13折线”不等于13个量化级，更不等于13位编码。还要区分折线与理想对数曲线之间的逼近误差，以及有限量化格引起的量化误差。</p><p>后面的编码使用正负对称结构：先判符号，再判幅度段，最后判段内位置。理解这种分层，可以从几何折线直接过渡到PCM码字字段，而不必逐个背所有重建值。</p>",
+      "formulas": [
+        "A=87.6",
+        "\\mu=255"
+      ],
+      "knowledgeNodeIds": [
+        "a-law"
+      ],
+      "references": []
+    },
+    {
+      "page": 46,
+      "title": "A律正半轴：八个幅度段怎样映到八个等高段",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=46",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-46.webp",
+      "body": "沿原图横轴由零向右，分界点依次为$0,1/128,1/64,1/32,1/16,1/8,1/4,1/2,1$；对应纵轴分界为$0,1/8,2/8,\\ldots,1$。输入幅度段越来越宽，而输出高度均为$1/8$。\n\n第$i$段可由端点直接构造：若输入端点为$x_{i-1},x_i$，则$C(x)=(i-1)/8+(x-x_{i-1})/[8(x_i-x_{i-1})]$。这条公式同时说明斜率由段宽决定，不必凭图的视觉倾角估计。\n\n第一、第二段的横向宽度都为$1/128$，所以斜率相同；后续输入段宽逐次加倍，斜率逐次减半。图把它们保留为八个“编码段”，即使几何上前两段可合并，后续段落码仍要区分它们。",
+      "question": "第6段x从1/8到1/4，输出从5/8到6/8，其直线表达式是什么？",
+      "answer": "斜率为(1/8)/(1/8)=1，所以C(x)=5/8+(x−1/8)=x+1/2。代入两端可以核对。",
+      "teachingHtmlWithLatex": "<p>沿原图横轴由零向右，分界点依次为$0,1/128,1/64,1/32,1/16,1/8,1/4,1/2,1$；对应纵轴分界为$0,1/8,2/8,\\ldots,1$。输入幅度段越来越宽，而输出高度均为$1/8$。</p><p>第$i$段可由端点直接构造：若输入端点为$x_{i-1},x_i$，则$C(x)=(i-1)/8+(x-x_{i-1})/[8(x_i-x_{i-1})]$。这条公式同时说明斜率由段宽决定，不必凭图的视觉倾角估计。</p><p>第一、第二段的横向宽度都为$1/128$，所以斜率相同；后续输入段宽逐次加倍，斜率逐次减半。图把它们保留为八个“编码段”，即使几何上前两段可合并，后续段落码仍要区分它们。</p>",
+      "formulas": [
+        "0,1/128,1/64,1/32,1/16,1/8,1/4,1/2,1",
+        "0,1/8,2/8,\\ldots,1",
+        "1/8",
+        "i",
+        "x_{i-1},x_i",
+        "C(x)=(i-1)/8+(x-x_{i-1})/[8(x_i-x_{i-1})]",
+        "1/128"
+      ],
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 47,
+      "title": "为什么八段正半轴最终称为13折线",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=47",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-47.webp",
+      "body": "构造顺序是先给正半轴八个编码段，每段输出高度$1/8$，再向负半轴奇对称扩展。正半轴前两段共线，合并后只有七条几何直线段；负半轴同样有七条。\n\n接着看跨过原点的中央部分：正、负半轴靠近零的线段斜率都为16，它们实际落在同一直线$y=16x$上，可以再合并一次。因此独立折线段总数为$7+7-1=13$。\n\n这里有三种计数，不能混用：每个符号方向有八个编码段；合并共线部分后全曲线有13条几何线段；每个编码段稍后再分16个量化格。编码字段按八段组织，不会因为名称是13折线就需要四位段落码。",
+      "question": "如果按13条几何线段直接设计段落码，会遗漏什么结构？",
+      "answer": "会打乱正负号和每半轴八段的编码组织。课件的段落码应区分同一半轴的八段，而不是给全曲线13条合并直线逐条编号。",
+      "teachingHtmlWithLatex": "<p>构造顺序是先给正半轴八个编码段，每段输出高度$1/8$，再向负半轴奇对称扩展。正半轴前两段共线，合并后只有七条几何直线段；负半轴同样有七条。</p><p>接着看跨过原点的中央部分：正、负半轴靠近零的线段斜率都为16，它们实际落在同一直线$y=16x$上，可以再合并一次。因此独立折线段总数为$7+7-1=13$。</p><p>这里有三种计数，不能混用：每个符号方向有八个编码段；合并共线部分后全曲线有13条几何线段；每个编码段稍后再分16个量化格。编码字段按八段组织，不会因为名称是13折线就需要四位段落码。</p>",
+      "formulas": [
+        "1/8",
+        "y=16x",
+        "7+7-1=13"
+      ],
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 48,
+      "title": "从A律分段表复算所有斜率",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=48",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-48.webp",
+      "body": "本表给出的八段斜率依次是$16,16,8,4,2,1,1/2,1/4$。统一计算方法为$s_i=\\Delta y/\\Delta x=(1/8)/(x_i-x_{i-1})$。例如第3段输入从$1/64$到$1/32$，宽度$1/64$，故斜率为8；第8段宽度$1/2$，故斜率为$1/4$。\n\n若压缩输出域每段再均匀分16格，则每格输出间隔$\\Delta y=1/128$。输入等效间隔为$\\Delta x_i=1/(128s_i)$，因此第一、二段都是$1/2048$，第3段$1/1024$，第8段$1/32$。\n\n这个表是后面PCM编码表的来源：段宽越大，段内步长越大，但每段的格数始终16。将某段斜率误当成段内格数，会同时算错量化误差和码字。",
+      "question": "第7段的每个量化格宽度是多少？",
+      "answer": "第7段斜率为1/2，输出格宽1/128，所以输入格宽为(1/128)/(1/2)=1/64；该段总宽1/4，恰好容纳16格。",
+      "teachingHtmlWithLatex": "<p>本表给出的八段斜率依次是$16,16,8,4,2,1,1/2,1/4$。统一计算方法为$s_i=\\Delta y/\\Delta x=(1/8)/(x_i-x_{i-1})$。例如第3段输入从$1/64$到$1/32$，宽度$1/64$，故斜率为8；第8段宽度$1/2$，故斜率为$1/4$。</p><p>若压缩输出域每段再均匀分16格，则每格输出间隔$\\Delta y=1/128$。输入等效间隔为$\\Delta x_i=1/(128s_i)$，因此第一、二段都是$1/2048$，第3段$1/1024$，第8段$1/32$。</p><p>这个表是后面PCM编码表的来源：段宽越大，段内步长越大，但每段的格数始终16。将某段斜率误当成段内格数，会同时算错量化误差和码字。</p>",
+      "formulas": [
+        "16,16,8,4,2,1,1/2,1/4",
+        "s_i=\\Delta y/\\Delta x=(1/8)/(x_i-x_{i-1})",
+        "1/64",
+        "1/32",
+        "1/64",
+        "1/2",
+        "1/4",
+        "\\Delta y=1/128",
+        "\\Delta x_i=1/(128s_i)",
+        "1/2048",
+        "1/1024",
+        "1/32"
+      ],
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 49,
+      "title": "完整双极性曲线：符号对称不等于补码表示",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=49",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-49.webp",
+      "body": "原图把正半轴折线向第三象限延伸，满足奇对称$C(-x)=-C(x)$。因此负输入与等幅正输入具有相同的局部斜率大小，量化区间宽度也对称；例如$C(1/4)=3/4$，便有$C(-1/4)=-3/4$。\n\n奇对称是一条模拟幅度映射性质，不能据此断定输出二进制使用二进制补码。后续课件采用单独极性位加幅度字段；改变符号主要改变极性位，不是把整个正数码字执行按位取反加一。\n\n本图还帮助检查译码：若正、负两个对称码字的重建幅度绝对值不同，就应检查段内中点或符号规则是否用错。零点附近的量化格和正负零码处理则取决于具体码表，不由曲线奇对称单独决定。",
+      "question": "已知正样值的压缩输出为0.75，等幅负样值的压缩输出是多少？是否已经确定8位码字？",
+      "answer": "压缩输出为−0.75，但尚未确定码字；还要知道量化格边界、端点归属、极性位和段内编码规则。",
+      "teachingHtmlWithLatex": "<p>原图把正半轴折线向第三象限延伸，满足奇对称$C(-x)=-C(x)$。因此负输入与等幅正输入具有相同的局部斜率大小，量化区间宽度也对称；例如$C(1/4)=3/4$，便有$C(-1/4)=-3/4$。</p><p>奇对称是一条模拟幅度映射性质，不能据此断定输出二进制使用二进制补码。后续课件采用单独极性位加幅度字段；改变符号主要改变极性位，不是把整个正数码字执行按位取反加一。</p><p>本图还帮助检查译码：若正、负两个对称码字的重建幅度绝对值不同，就应检查段内中点或符号规则是否用错。零点附近的量化格和正负零码处理则取决于具体码表，不由曲线奇对称单独决定。</p>",
+      "formulas": [
+        "C(-x)=-C(x)",
+        "C(1/4)=3/4",
+        "C(-1/4)=-3/4"
+      ],
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 50,
+      "title": "A≈87.6从哪里来：匹配零点附近的斜率",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=50",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-50.webp",
+      "body": "13折线在零点附近的斜率为$(1/8)/(1/128)=16$。连续A律的小信号斜率为$A/(1+\\ln A)$，令两者近似一致，得到方程$A/(1+\\ln A)=16$。\n\n这是含对数的超越方程，可数值求解；原页给出近似$A=87.6$。代回时$87.6/(1+\\ln87.6)\\approx16.0065$，与16非常接近，说明87.6是工程上采用的近似参数，而非代数恒等式。\n\n匹配一处斜率并不保证所有幅度处都完全重合。下一页会比较各输出分界对应的输入值，验证折线对整条连续曲线的逼近程度。因此不能拿零点的斜率一致，直接推出所有量化阈值都一样。",
+      "question": "代A=87.6得到16.0065而不是严格16，说明计算失败了吗？",
+      "answer": "没有。87.6本来就是近似参数。应把方程的数值解与工程选取的近似值区分；这点微小差异不意味着整张折线表有误。",
+      "teachingHtmlWithLatex": "<p>13折线在零点附近的斜率为$(1/8)/(1/128)=16$。连续A律的小信号斜率为$A/(1+\\ln A)$，令两者近似一致，得到方程$A/(1+\\ln A)=16$。</p><p>这是含对数的超越方程，可数值求解；原页给出近似$A=87.6$。代回时$87.6/(1+\\ln87.6)\\approx16.0065$，与16非常接近，说明87.6是工程上采用的近似参数，而非代数恒等式。</p><p>匹配一处斜率并不保证所有幅度处都完全重合。下一页会比较各输出分界对应的输入值，验证折线对整条连续曲线的逼近程度。因此不能拿零点的斜率一致，直接推出所有量化阈值都一样。</p>",
+      "formulas": [
+        "(1/8)/(1/128)=16",
+        "A/(1+\\ln A)",
+        "A/(1+\\ln A)=16",
+        "A=87.6",
+        "87.6/(1+\\ln87.6)\\approx16.0065"
+      ],
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 51,
+      "title": "比较相同输出分界下的输入位置",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=51",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-51.webp",
+      "body": "原表固定$y=0,1/8,\\ldots,1$，分别列出连续A律反函数与13折线端点。在线性段，$x=y(1+\\ln A)/A$；在对数段，$x=\\exp[y(1+\\ln A)-1]/A$。代$A=87.6$即可复算，而不是把y直接当作x。\n\n例如$y=2/8$时，连续曲线给$x\\approx0.0164969\\approx1/60.62$，折线端点为$1/64=0.015625$；$y=4/8$时，连续值约$1/15.4312$，折线为$1/16$。两者接近但并不相同，原表中的分母已经作了舍入。\n\n固定输出比较输入，反映相同压缩域分界在原幅度域的位置差异。这是逼近误差检查，不是量化噪声的直接计算；量化噪声还需每格重建值与输入概率密度。",
+      "question": "表中“1/60.6与1/64接近”是否说明这一区间量化误差恒等于两数之差？",
+      "answer": "不是。它们是两种压缩映射在同一输出分界下的位置差；真正量化误差是实际输入与选定重建值之差，随输入变化。",
+      "teachingHtmlWithLatex": "<p>原表固定$y=0,1/8,\\ldots,1$，分别列出连续A律反函数与13折线端点。在线性段，$x=y(1+\\ln A)/A$；在对数段，$x=\\exp[y(1+\\ln A)-1]/A$。代$A=87.6$即可复算，而不是把y直接当作x。</p><p>例如$y=2/8$时，连续曲线给$x\\approx0.0164969\\approx1/60.62$，折线端点为$1/64=0.015625$；$y=4/8$时，连续值约$1/15.4312$，折线为$1/16$。两者接近但并不相同，原表中的分母已经作了舍入。</p><p>固定输出比较输入，反映相同压缩域分界在原幅度域的位置差异。这是逼近误差检查，不是量化噪声的直接计算；量化噪声还需每格重建值与输入概率密度。</p>",
+      "formulas": [
+        "y=0,1/8,\\ldots,1",
+        "x=y(1+\\ln A)/A",
+        "x=\\exp[y(1+\\ln A)-1]/A",
+        "A=87.6",
+        "y=2/8",
+        "x\\approx0.0164969\\approx1/60.62",
+        "1/64=0.015625",
+        "y=4/8",
+        "1/15.4312",
+        "1/16"
+      ],
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 52,
+      "title": "μ律15折线：先由反函数确定端点",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=52",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-52.webp",
+      "body": "对$\\mu=255$，连续压缩律为$y=\\ln(1+255x)/\\ln256$。把纵轴分成八等份，令$y_i=i/8$，反解得到$x_i=(256^{i/8}-1)/255=(2^i-1)/255$，其中$i=0,1,\\ldots,8$。\n\n把相邻端点连起来，正半轴有八条不同斜率的线段。不同于A律，前两段输入宽度分别为$1/255$和$2/255$，不共线，所以正半轴不能先合并两段。\n\n向负半轴作奇对称扩展后，两边最靠近原点的第一段仍共线，可合并一次，故总数为$8+8-1=15$。这里的255是压缩参数，与纵轴八等份之间的关系来自$256=2^8$，不是说正半轴有255个编码段。",
+      "question": "μ律第3个正向转折点坐标是什么？",
+      "answer": "i=3，所以y=3/8，x=(2³−1)/255=7/255。它是第3段的右端点，不是第3段的输入宽度。",
+      "teachingHtmlWithLatex": "<p>对$\\mu=255$，连续压缩律为$y=\\ln(1+255x)/\\ln256$。把纵轴分成八等份，令$y_i=i/8$，反解得到$x_i=(256^{i/8}-1)/255=(2^i-1)/255$，其中$i=0,1,\\ldots,8$。</p><p>把相邻端点连起来，正半轴有八条不同斜率的线段。不同于A律，前两段输入宽度分别为$1/255$和$2/255$，不共线，所以正半轴不能先合并两段。</p><p>向负半轴作奇对称扩展后，两边最靠近原点的第一段仍共线，可合并一次，故总数为$8+8-1=15$。这里的255是压缩参数，与纵轴八等份之间的关系来自$256=2^8$，不是说正半轴有255个编码段。</p>",
+      "formulas": [
+        "\\mu=255",
+        "y=\\ln(1+255x)/\\ln256",
+        "y_i=i/8",
+        "x_i=(256^{i/8}-1)/255=(2^i-1)/255",
+        "i=0,1,\\ldots,8",
+        "1/255",
+        "2/255",
+        "8+8-1=15",
+        "256=2^8"
+      ],
+      "knowledgeNodeIds": [
+        "mu-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 53,
+      "title": "μ律斜率表最后一行含归一化因子",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=53",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-53.webp",
+      "body": "原表端点横坐标是$0,1/255,3/255,7/255,15/255,31/255,63/255,127/255,1$。第$i$段宽度为$\\Delta x_i=2^{i-1}/255$，纵向高度固定$1/8$，所以实际斜率为$s_i=255/(8\\cdot2^{i-1})$。\n\n表最后一行标的是$(8/255)(\\Delta y/\\Delta x)$，因此才列出$1,1/2,1/4,\\ldots,1/128$。不能把这一行数字直接当作原始斜率，否则会漏掉$255/8$的比例因子。\n\n实际第一段斜率为31.875，第二段15.9375，最后一段$255/1024\\approx0.249023$。按这些斜率将每个输出段再分16格，就能算相应输入等效量化间隔，并与A律表进行一致单位下的比较。",
+      "question": "表末行第4段写1/8，实际斜率是否为0.125？",
+      "answer": "不是。应乘回255/8，实际斜率为255/64=3.984375；1/8只是归一化斜率。",
+      "teachingHtmlWithLatex": "<p>原表端点横坐标是$0,1/255,3/255,7/255,15/255,31/255,63/255,127/255,1$。第$i$段宽度为$\\Delta x_i=2^{i-1}/255$，纵向高度固定$1/8$，所以实际斜率为$s_i=255/(8\\cdot2^{i-1})$。</p><p>表最后一行标的是$(8/255)(\\Delta y/\\Delta x)$，因此才列出$1,1/2,1/4,\\ldots,1/128$。不能把这一行数字直接当作原始斜率，否则会漏掉$255/8$的比例因子。</p><p>实际第一段斜率为31.875，第二段15.9375，最后一段$255/1024\\approx0.249023$。按这些斜率将每个输出段再分16格，就能算相应输入等效量化间隔，并与A律表进行一致单位下的比较。</p>",
+      "formulas": [
+        "0,1/255,3/255,7/255,15/255,31/255,63/255,127/255,1",
+        "i",
+        "\\Delta x_i=2^{i-1}/255",
+        "1/8",
+        "s_i=255/(8\\cdot2^{i-1})",
+        "(8/255)(\\Delta y/\\Delta x)",
+        "1,1/2,1/4,\\ldots,1/128",
+        "255/8",
+        "255/1024\\approx0.249023"
+      ],
+      "knowledgeNodeIds": [
+        "mu-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 54,
+      "title": "在μ律图上定位段内样值，而不只找最近端点",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=54",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-54.webp",
+      "body": "本图把平滑μ律与八段折线放在同一坐标中。端点严格来自反函数，但两端点之间用直线连接，所以除了端点外通常不与对数曲线完全重合。看图时要区分“连续压缩值”和“折线压缩值”。\n\n若$x$位于第$i$段，折线计算式为$y=(i-1)/8+s_i(x-x_{i-1})$。例如$x=20/255$位于$[15/255,31/255]$即第5段；斜率$255/128$，因此$y=4/8+(255/128)(5/255)=69/128=0.5390625$。\n\n这样的分段代入是在实现折线压缩器，而不是把样值吸附到最近转折点。若后续再量化，还应将得到的y落入对应输出量化格，压缩与量化是连续的两个逻辑步骤。",
+      "question": "把20/255直接改写成最近转折点15/255，是否正确实现本页折线压缩？",
+      "answer": "不正确。线段内部保留连续插值，应得y=69/128；直接选转折点相当于额外引入了很粗的量化。",
+      "teachingHtmlWithLatex": "<p>本图把平滑μ律与八段折线放在同一坐标中。端点严格来自反函数，但两端点之间用直线连接，所以除了端点外通常不与对数曲线完全重合。看图时要区分“连续压缩值”和“折线压缩值”。</p><p>若$x$位于第$i$段，折线计算式为$y=(i-1)/8+s_i(x-x_{i-1})$。例如$x=20/255$位于$[15/255,31/255]$即第5段；斜率$255/128$，因此$y=4/8+(255/128)(5/255)=69/128=0.5390625$。</p><p>这样的分段代入是在实现折线压缩器，而不是把样值吸附到最近转折点。若后续再量化，还应将得到的y落入对应输出量化格，压缩与量化是连续的两个逻辑步骤。</p>",
+      "formulas": [
+        "x",
+        "i",
+        "y=(i-1)/8+s_i(x-x_{i-1})",
+        "x=20/255",
+        "[15/255,31/255]",
+        "255/128",
+        "y=4/8+(255/128)(5/255)=69/128=0.5390625"
+      ],
+      "knowledgeNodeIds": [
+        "mu-segments"
+      ],
+      "references": []
+    },
+    {
+      "page": 55,
+      "title": "勘误：小信号斜率近两倍，功率量噪比约四倍",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=55",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-55.webp",
+      "body": "扩张是压缩的反过程，局部误差幅度按$1/C'(x)$缩放。在相同输出量化间隔、相同小信号幅度和高分辨率模型下，输入等效噪声功率按$1/[C'(x)]^2$变化。因此量噪比的比值等于压缩斜率比的平方。\n\nμ律15折线第一段斜率为$255/8$，A律13折线第一段为16，斜率比是$255/128\\approx1.99219$。相应功率量噪比约为$(255/128)^2\\approx3.96881$倍，即$20\\log_{10}(255/128)\\approx5.9866\\,\\mathrm{dB}$。\n\n原页把“小信号的信号量噪比约为两倍”写在斜率比较之后，按功率信噪比定义应更正为“约四倍，约6 dB”；约两倍对应的是误差幅度比的倒数。保留原图便于核对，不把源图的这句话当成正确结论。大信号区域μ律的斜率略小，可能付出略差精度，不能只比较零点。",
+      "question": "若某压扩器把误差幅度减半，信号不变，功率量噪比提高几倍、几dB？",
+      "answer": "噪声功率变为四分之一，所以功率量噪比提高4倍，10log10(4)≈6.02 dB，而不是2倍或3.01 dB。",
+      "teachingHtmlWithLatex": "<p>扩张是压缩的反过程，局部误差幅度按$1/C&#x27;(x)$缩放。在相同输出量化间隔、相同小信号幅度和高分辨率模型下，输入等效噪声功率按$1/[C&#x27;(x)]^2$变化。因此量噪比的比值等于压缩斜率比的平方。</p><p>μ律15折线第一段斜率为$255/8$，A律13折线第一段为16，斜率比是$255/128\\approx1.99219$。相应功率量噪比约为$(255/128)^2\\approx3.96881$倍，即$20\\log_{10}(255/128)\\approx5.9866\\,\\mathrm{dB}$。</p><p>原页把“小信号的信号量噪比约为两倍”写在斜率比较之后，按功率信噪比定义应更正为“约四倍，约6 dB”；约两倍对应的是误差幅度比的倒数。保留原图便于核对，不把源图的这句话当成正确结论。大信号区域μ律的斜率略小，可能付出略差精度，不能只比较零点。</p>",
+      "formulas": [
+        "1/C'(x)",
+        "1/[C'(x)]^2",
+        "255/8",
+        "255/128\\approx1.99219",
+        "(255/128)^2\\approx3.96881",
+        "20\\log_{10}(255/128)\\approx5.9866\\,\\mathrm{dB}"
+      ],
+      "knowledgeNodeIds": [
+        "law-compare"
+      ],
+      "references": []
+    },
+    {
+      "page": 56,
+      "title": "7位非均匀幅度码与11位均匀幅度码的比较条件",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=56",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-56.webp",
+      "body": "13折线每个正向编码段含16个量化格，共$8\\times16=128$个正幅度格，故幅度字段需要$\\log_2 128=7$位。最小输入格宽为$\\Delta=1/2048$，出现在第1、2段。\n\n若要求均匀量化具有相同正满量程1，并在全范围都使用这个最小格宽，则八段所容纳的最小格数依次为$16,16,32,64,128,256,512,1024$，总计2048，所以需要11位幅度码。\n\n因此7位与11位比较成立的条件是“相同满量程和相同最小间隔”，不是“所有输入幅度具有相同精度”。非均匀量化的大信号格更宽，正是节省位数的代价。如果另外计入一位极性位，则分别成为8位与12位的相应符号加幅度表示。",
+      "question": "能否据此说8位A律PCM对所有幅度都等价于12位线性PCM？",
+      "answer": "不能。它们仅在满量程和最小小信号间隔这两个条件上对应；A律大信号量化间隔明显更宽，误差并非处处等价。",
+      "teachingHtmlWithLatex": "<p>13折线每个正向编码段含16个量化格，共$8\\times16=128$个正幅度格，故幅度字段需要$\\log_2 128=7$位。最小输入格宽为$\\Delta=1/2048$，出现在第1、2段。</p><p>若要求均匀量化具有相同正满量程1，并在全范围都使用这个最小格宽，则八段所容纳的最小格数依次为$16,16,32,64,128,256,512,1024$，总计2048，所以需要11位幅度码。</p><p>因此7位与11位比较成立的条件是“相同满量程和相同最小间隔”，不是“所有输入幅度具有相同精度”。非均匀量化的大信号格更宽，正是节省位数的代价。如果另外计入一位极性位，则分别成为8位与12位的相应符号加幅度表示。</p>",
+      "formulas": [
+        "8\\times16=128",
+        "\\log_2 128=7",
+        "\\Delta=1/2048",
+        "16,16,32,64,128,256,512,1024"
+      ],
+      "knowledgeNodeIds": [
+        "precision"
+      ],
+      "references": []
+    },
+    {
+      "page": 57,
+      "title": "用最小格单位复核2048与128，防止少算符号位",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=57",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-57.webp",
+      "body": "把最小输入间隔记为$\\Delta$，正半轴八段宽度分别是$16\\Delta,16\\Delta,32\\Delta,64\\Delta,128\\Delta,256\\Delta,512\\Delta,1024\\Delta$。求和为$2048\\Delta$，最后一段就占正满量程的一半。\n\n非均匀方案并不传“跨过多少个最小格”，而是传“属于哪一段、该段的第几个格”：3位段落码加4位段内码正好7位。这种层次表示相当于把不同幅度处的分辨率分配得不同，而不是把2048种等精度幅度神奇地无损塞进128个码字。\n\n本页继续只比较幅度编码。处理有正有负的样值时，还需约定极性位；若试题问的是完整PCM码长，不能直接答7位。先说明编码对象，再谈码长，能避免容量计数中的常见混淆。",
+      "question": "3位段落码加4位段内码最多描述多少个正幅度区间？",
+      "answer": "描述8×16=128个正幅度区间；若增加一位极性位，形成256种码字状态，但正半轴仍只有128个幅度区间。",
+      "teachingHtmlWithLatex": "<p>把最小输入间隔记为$\\Delta$，正半轴八段宽度分别是$16\\Delta,16\\Delta,32\\Delta,64\\Delta,128\\Delta,256\\Delta,512\\Delta,1024\\Delta$。求和为$2048\\Delta$，最后一段就占正满量程的一半。</p><p>非均匀方案并不传“跨过多少个最小格”，而是传“属于哪一段、该段的第几个格”：3位段落码加4位段内码正好7位。这种层次表示相当于把不同幅度处的分辨率分配得不同，而不是把2048种等精度幅度神奇地无损塞进128个码字。</p><p>本页继续只比较幅度编码。处理有正有负的样值时，还需约定极性位；若试题问的是完整PCM码长，不能直接答7位。先说明编码对象，再谈码长，能避免容量计数中的常见混淆。</p>",
+      "formulas": [
+        "\\Delta",
+        "16\\Delta,16\\Delta,32\\Delta,64\\Delta,128\\Delta,256\\Delta,512\\Delta,1024\\Delta",
+        "2048\\Delta"
+      ],
+      "knowledgeNodeIds": [
+        "precision"
+      ],
+      "references": []
+    },
+    {
+      "page": 58,
+      "title": "标量、矢量与有记忆量化：区分一次处理对象和状态",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=58",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-58.webp",
+      "body": "普通均匀或非均匀量化把当前一个样值映到一个重建值，量化规则不依赖之前的样值，属于无记忆标量量化。是否非均匀只描述幅度格宽，并不意味着使用了时间相关性。\n\nDPCM或增量调制系统利用过去的重建值形成预测或当前状态，因此整体编码过程有记忆；内部对预测残差的量化器本身仍可以是无记忆的标量量化器。说“有记忆”时应说明是整个预测编码系统，而不要把每个内部模块都自动当成有状态。\n\n矢量量化一次把一组样值映到码本中的向量，能利用联合统计结构，在一定失真目标下有可能降低所需码率；代价包括码本设计、搜索复杂度和时延。原页注明它超出本课程范围，因此这里建立概念边界，不编造未讲授的具体算法。",
+      "question": "一个DPCM编码器内部使用普通均匀量化器，整个编码系统是否就无记忆？",
+      "answer": "不是。预测器和本地重建反馈保留历史状态；当前残差取决于该状态，即使残差量化器自身是无记忆标量映射。",
+      "teachingHtmlWithLatex": "<p>普通均匀或非均匀量化把当前一个样值映到一个重建值，量化规则不依赖之前的样值，属于无记忆标量量化。是否非均匀只描述幅度格宽，并不意味着使用了时间相关性。</p><p>DPCM或增量调制系统利用过去的重建值形成预测或当前状态，因此整体编码过程有记忆；内部对预测残差的量化器本身仍可以是无记忆的标量量化器。说“有记忆”时应说明是整个预测编码系统，而不要把每个内部模块都自动当成有状态。</p><p>矢量量化一次把一组样值映到码本中的向量，能利用联合统计结构，在一定失真目标下有可能降低所需码率；代价包括码本设计、搜索复杂度和时延。原页注明它超出本课程范围，因此这里建立概念边界，不编造未讲授的具体算法。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "memory"
+      ],
+      "references": []
+    },
+    {
+      "page": 59,
+      "title": "PCM数例：量化是有损的，编码只给量化值编号",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=59",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-59.webp",
+      "body": "原例六个样值依次为3.15、3.96、5.00、6.38、6.80、6.42，按本例规定的四舍五入量化成整数3、4、5、6、7、6。再用3位自然二进制表示，得到011、100、101、110、111、110。\n\n定义误差$e=m-q$，六次误差依次为$0.15,-0.04,0,0.38,-0.20,0.42$，都落在本例未过载舍入量化的半格范围内。第4与第6个原样值6.38与6.42虽然不同，却都编码110，接收端无法仅凭该码字区分它们。\n\n六个固定3位码字共18个编码比特；这描述输出长度，不等于说数据熵必然是18比特，后者还要知道概率与相关性。本例只用于说明PCM基本流程，不能把它的整数舍入规则套用到前面中点式13折线量化表。",
+      "question": "接收端看到码字110能恢复原来的6.38还是6.42？",
+      "answer": "只能按本例恢复量化整数6，不能判断原样值是哪一个。二者都在同一量化区间，信息损失发生在量化，不发生在准确的3位编号。",
+      "teachingHtmlWithLatex": "<p>原例六个样值依次为3.15、3.96、5.00、6.38、6.80、6.42，按本例规定的四舍五入量化成整数3、4、5、6、7、6。再用3位自然二进制表示，得到011、100、101、110、111、110。</p><p>定义误差$e=m-q$，六次误差依次为$0.15,-0.04,0,0.38,-0.20,0.42$，都落在本例未过载舍入量化的半格范围内。第4与第6个原样值6.38与6.42虽然不同，却都编码110，接收端无法仅凭该码字区分它们。</p><p>六个固定3位码字共18个编码比特；这描述输出长度，不等于说数据熵必然是18比特，后者还要知道概率与相关性。本例只用于说明PCM基本流程，不能把它的整数舍入规则套用到前面中点式13折线量化表。</p>",
+      "formulas": [
+        "e=m-q",
+        "0.15,-0.04,0,0.38,-0.20,0.42"
+      ],
+      "knowledgeNodeIds": [
+        "pcm"
+      ],
+      "references": []
+    },
+    {
+      "page": 60,
+      "title": "沿PCM表反向译码并检查误差，而不是凭波形猜码",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=60",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-60.webp",
+      "body": "本页用波形、量化值和码字对齐展示上一页的六个样值。验证时可逐列反向读：011转成3，100转成4，101转成5，110转成6，111转成7，110再转成6；再与原样值相减，检查每列所用量化规则一致。\n\n这六点的误差平方和为$0.15^2+(-0.04)^2+0^2+0.38^2+(-0.20)^2+0.42^2=0.3849$，样本均方误差为$0.3849/6=0.06415$。它只是这六个给定样值的经验误差，不能要求它必然等于连续均匀误差模型的$\\Delta^2/12=1/12$。\n\n码流可以串接为011100101110111110，但接收端必须知道每3位分组的边界。量化规则、码字规则和分组同步三个条件缺一不可；图中画出脉冲并不自动解决同步。",
+      "question": "六点实测均方误差0.06415不等于1/12，是否推翻均匀量化噪声公式？",
+      "answer": "没有。1/12需要相应概率模型或高分辨率近似；六个指定样值的经验平均不必正好等于理论期望。",
+      "teachingHtmlWithLatex": "<p>本页用波形、量化值和码字对齐展示上一页的六个样值。验证时可逐列反向读：011转成3，100转成4，101转成5，110转成6，111转成7，110再转成6；再与原样值相减，检查每列所用量化规则一致。</p><p>这六点的误差平方和为$0.15^2+(-0.04)^2+0^2+0.38^2+(-0.20)^2+0.42^2=0.3849$，样本均方误差为$0.3849/6=0.06415$。它只是这六个给定样值的经验误差，不能要求它必然等于连续均匀误差模型的$\\Delta^2/12=1/12$。</p><p>码流可以串接为011100101110111110，但接收端必须知道每3位分组的边界。量化规则、码字规则和分组同步三个条件缺一不可；图中画出脉冲并不自动解决同步。</p>",
+      "formulas": [
+        "0.15^2+(-0.04)^2+0^2+0.38^2+(-0.20)^2+0.42^2=0.3849",
+        "0.3849/6=0.06415",
+        "\\Delta^2/12=1/12"
+      ],
+      "knowledgeNodeIds": [
+        "pcm"
+      ],
+      "references": []
+    },
+    {
+      "page": 61,
+      "title": "PCM收发方框图：区分码字恢复与波形重建",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=61",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-61.webp",
+      "body": "发送端依次抽样保持、量化、编码。保持电路让一次转换期间的模拟样值稳定；量化决定有限重建级；编码将级编号变成码字。这三个功能即使在同一ADC中完成，分析时也应分开。\n\n接收端先按码字恢复离散幅度，再形成相应脉冲序列，经低通滤波得到模拟波形。低通滤波不是把错误码字自动改对，也不能恢复量化时丢失的格内幅度；它主要去掉抽样副本并完成带限重建。\n\n本页用理想冲激脉冲辅助描述。实际D/A若采用零阶保持，频响会带有孔径衰减和延迟，必要时需补偿。因而数学上“理想重建滤波器”与器件中“保持加模拟低通”不能无条件当成同一个传递函数。",
+      "question": "传输完全无误码时，接收低通滤波器是否必然恢复原连续波形？",
+      "answer": "不必然。量化误差仍存在，且实际保持与滤波器可能有幅相误差；无误码只保证接收到发送的码字。",
+      "teachingHtmlWithLatex": "<p>发送端依次抽样保持、量化、编码。保持电路让一次转换期间的模拟样值稳定；量化决定有限重建级；编码将级编号变成码字。这三个功能即使在同一ADC中完成，分析时也应分开。</p><p>接收端先按码字恢复离散幅度，再形成相应脉冲序列，经低通滤波得到模拟波形。低通滤波不是把错误码字自动改对，也不能恢复量化时丢失的格内幅度；它主要去掉抽样副本并完成带限重建。</p><p>本页用理想冲激脉冲辅助描述。实际D/A若采用零阶保持，频响会带有孔径衰减和延迟，必要时需补偿。因而数学上“理想重建滤波器”与器件中“保持加模拟低通”不能无条件当成同一个传递函数。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "pcm"
+      ],
+      "references": []
+    },
+    {
+      "page": 62,
+      "title": "8位A律PCM字段：1位极性、3位段落、4位段内",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=62",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-62.webp",
+      "body": "本页把完整码字写为$C_1C_2\\cdots C_8$。极性位$C_1$对正输入取1，对负输入取0；$C_2C_3C_4$表示八个幅度段；$C_5C_6C_7C_8$表示该段内16个量化格。\n\n状态数为$2\\times8\\times16=256$，因此固定码长为8位。段内编号使用自然二进制0至15。所谓折叠编码，是把正负幅度按镜像组织：同样幅度使用相同的七位幅度字段，由极性位区分正负，不是二进制补码。\n\n在课件码表中，段落1至8对应三位编号000至111。使用这些字段时应先按绝对幅度找段，不能把一个负模拟电压直接转成普通无符号整数。这里讨论的是教学码字；具体通信接口的位反转、线路码等还需要各自规范，不能凭这八位排列自行假定。",
+      "question": "码字10100110应如何分字段？",
+      "answer": "拆为1 | 010 | 0110：正极性，第3段，段内零起始编号6即第7个量化格。不能把整个10100110作为166个最小量化单位。",
+      "teachingHtmlWithLatex": "<p>本页把完整码字写为$C_1C_2\\cdots C_8$。极性位$C_1$对正输入取1，对负输入取0；$C_2C_3C_4$表示八个幅度段；$C_5C_6C_7C_8$表示该段内16个量化格。</p><p>状态数为$2\\times8\\times16=256$，因此固定码长为8位。段内编号使用自然二进制0至15。所谓折叠编码，是把正负幅度按镜像组织：同样幅度使用相同的七位幅度字段，由极性位区分正负，不是二进制补码。</p><p>在课件码表中，段落1至8对应三位编号000至111。使用这些字段时应先按绝对幅度找段，不能把一个负模拟电压直接转成普通无符号整数。这里讨论的是教学码字；具体通信接口的位反转、线路码等还需要各自规范，不能凭这八位排列自行假定。</p>",
+      "formulas": [
+        "C_1C_2\\cdots C_8",
+        "C_1",
+        "C_2C_3C_4",
+        "C_5C_6C_7C_8",
+        "2\\times8\\times16=256"
+      ],
+      "knowledgeNodeIds": [
+        "a-format"
+      ],
+      "references": []
+    },
+    {
+      "page": 63,
+      "title": "最大与最小量化间隔相差64倍",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=63",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-63.webp",
+      "body": "以正满量程1归一化，第一、二段的段宽都是$1/128$，各分16格，最小间隔为$\\Delta=(1/128)/16=1/2048$。第8段的段宽为$1/2$，每格宽$(1/2)/16=1/32=64\\Delta$。\n\n采用区间中点作重建值时，未过载的格内误差绝对值不超过半个当地格宽。因此小信号段的界限是$\\Delta/2$，第8段则为$32\\Delta$。这里的最大误差随所在段改变，不能把全系统误差一律限制为$\\Delta/2$。\n\n64倍是间隔比或最大误差幅度比；在相同局部均匀误差模型下，噪声功率比为$64^2=4096$。比较实际量噪比还要同时考虑信号功率与落入各段的概率。",
+      "question": "第8段格内误差为22Δ是否违背“量化误差不超过半格”？",
+      "answer": "不违背。第8段每格为64Δ，半格为32Δ；22Δ小于32Δ。Δ是最小格，不是所有段的格宽。",
+      "teachingHtmlWithLatex": "<p>以正满量程1归一化，第一、二段的段宽都是$1/128$，各分16格，最小间隔为$\\Delta=(1/128)/16=1/2048$。第8段的段宽为$1/2$，每格宽$(1/2)/16=1/32=64\\Delta$。</p><p>采用区间中点作重建值时，未过载的格内误差绝对值不超过半个当地格宽。因此小信号段的界限是$\\Delta/2$，第8段则为$32\\Delta$。这里的最大误差随所在段改变，不能把全系统误差一律限制为$\\Delta/2$。</p><p>64倍是间隔比或最大误差幅度比；在相同局部均匀误差模型下，噪声功率比为$64^2=4096$。比较实际量噪比还要同时考虑信号功率与落入各段的概率。</p>",
+      "formulas": [
+        "1/128",
+        "\\Delta=(1/128)/16=1/2048",
+        "1/2",
+        "(1/2)/16=1/32=64\\Delta",
+        "\\Delta/2",
+        "32\\Delta",
+        "\\Delta/2",
+        "64^2=4096"
+      ],
+      "knowledgeNodeIds": [
+        "a-format"
+      ],
+      "references": []
+    },
+    {
+      "page": 64,
+      "title": "按表核折叠码：负半轴的幅度顺序被镜像",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=64",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-64.webp",
+      "body": "原表用16个双极性量化位置说明4位编码：位置8至15属于正半轴，自然码与折叠码均为1000至1111；位置7至0属于负半轴，折叠码依次为0000至0111，呈现镜像关系。\n\n若把位置编号记为$j$，正半轴$j=8,\\ldots,15$的折叠幅度编号为$j-8$；负半轴$j=0,\\ldots,7$的幅度编号为$7-j$。所以位置8与7是一对靠近零的对称电平，编码1000与0000只差极性位；位置15与0是最外侧对称电平，编码1111与0111。\n\n表里的0至15是从负到正排列的位置序号，不是直接的有符号电压数值。必须先理解这一点，才能正确计算后续码字翻转对应的电平跳变。",
+      "question": "按原表，折叠码0010对应哪一个量化位置？",
+      "answer": "极性位0表示负半轴，幅度编号为2，因此位置j=7−2=5；不能按自然二进制把它当作位置2。",
+      "teachingHtmlWithLatex": "<p>原表用16个双极性量化位置说明4位编码：位置8至15属于正半轴，自然码与折叠码均为1000至1111；位置7至0属于负半轴，折叠码依次为0000至0111，呈现镜像关系。</p><p>若把位置编号记为$j$，正半轴$j=8,\\ldots,15$的折叠幅度编号为$j-8$；负半轴$j=0,\\ldots,7$的幅度编号为$7-j$。所以位置8与7是一对靠近零的对称电平，编码1000与0000只差极性位；位置15与0是最外侧对称电平，编码1111与0111。</p><p>表里的0至15是从负到正排列的位置序号，不是直接的有符号电压数值。必须先理解这一点，才能正确计算后续码字翻转对应的电平跳变。</p>",
+      "formulas": [
+        "j",
+        "j=8,\\ldots,15",
+        "j-8",
+        "j=0,\\ldots,7",
+        "7-j"
+      ],
+      "knowledgeNodeIds": [
+        "folded"
+      ],
+      "references": []
+    },
+    {
+      "page": 65,
+      "title": "折叠结构怎样简化双极性编码电路",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=65",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-65.webp",
+      "body": "正负对称量化时，先用极性判决器得到符号，再对输入取绝对值，便能让正负样值共用同一套单极性幅度比较电路。输出时将符号位与幅度字段拼合，这就是本页强调的硬件简化。\n\n这个结构的关键不是“所有码位都对称”，而是等幅正负样值的幅度字段相同。例如4位示意中1001与0001对应一对等幅电平。它们的最高位相反，其余三位相同。\n\n折叠码不等于格雷码：相邻幅度编号可能同时改变多个自然二进制位。它也不自动增加冗余，所以没有一般性的检错纠错能力。硬件简化、误码后的幅度影响和信道纠错能力是三个不同问题。",
+      "question": "折叠码在负正两侧有镜像关系，能否据此纠正任意一位传输错误？",
+      "answer": "不能。所有码字通常仍是有效量化状态，翻转后可能成为另一个合法码字；镜像关系没有提供足够冗余来识别或纠正错误。",
+      "teachingHtmlWithLatex": "<p>正负对称量化时，先用极性判决器得到符号，再对输入取绝对值，便能让正负样值共用同一套单极性幅度比较电路。输出时将符号位与幅度字段拼合，这就是本页强调的硬件简化。</p><p>这个结构的关键不是“所有码位都对称”，而是等幅正负样值的幅度字段相同。例如4位示意中1001与0001对应一对等幅电平。它们的最高位相反，其余三位相同。</p><p>折叠码不等于格雷码：相邻幅度编号可能同时改变多个自然二进制位。它也不自动增加冗余，所以没有一般性的检错纠错能力。硬件简化、误码后的幅度影响和信道纠错能力是三个不同问题。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "folded"
+      ],
+      "references": []
+    },
+    {
+      "page": 66,
+      "title": "折叠码改变的是误码失真，不是无误码量化误差",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=66",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-66.webp",
+      "body": "按上一表，1000若最高位翻转为0000，自然码位置由8变0，跳变8个位置；折叠码位置由8变7，仅跳变1个位置。这个小信号例子说明，符号位翻转未必造成很大的幅度变化。\n\n但1111变为0111时，自然码由15变7，仍跳变8；折叠码由15变0，跳变15。因此折叠码并非对每个幅度都更抗误码。对于小幅度出现概率较高的语音，平均误码失真可能较小，仍需结合样值分布和各位错误概率计算。\n\n原页结尾称“减小平均量化噪声”，按此处比较过程更准确应称“减小某些条件下的平均误码译码失真”。保持量化区间与重建值不变，仅重新给电平编号，不会改变无误码时的量化误差。",
+      "question": "如果信道从不出错，改用折叠码会使同一量化器的量化噪声下降吗？",
+      "answer": "不会。量化阈值和重建值没有改变，编号方式只影响出错码字被译成哪个电平，不影响无误码的格内误差。",
+      "teachingHtmlWithLatex": "<p>按上一表，1000若最高位翻转为0000，自然码位置由8变0，跳变8个位置；折叠码位置由8变7，仅跳变1个位置。这个小信号例子说明，符号位翻转未必造成很大的幅度变化。</p><p>但1111变为0111时，自然码由15变7，仍跳变8；折叠码由15变0，跳变15。因此折叠码并非对每个幅度都更抗误码。对于小幅度出现概率较高的语音，平均误码失真可能较小，仍需结合样值分布和各位错误概率计算。</p><p>原页结尾称“减小平均量化噪声”，按此处比较过程更准确应称“减小某些条件下的平均误码译码失真”。保持量化区间与重建值不变，仅重新给电平编号，不会改变无误码时的量化误差。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "folded"
+      ],
+      "references": []
+    },
+    {
+      "page": 67,
+      "title": "A律段落表：把范围、起点、间隔连成可计算规则",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=67",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-67.webp",
+      "body": "本表以最小单位$\\Delta$列出八段：起点$L_i/\\Delta$依次为$0,16,32,64,128,256,512,1024$；当地格宽$d_i/\\Delta$依次为$1,1,2,4,8,16,32,64$；段落码是$i-1$的3位自然二进制。\n\n每段上界等于$L_i+16d_i$，因而可直接验证表格内部一致。约定各内部区间左闭右开，给定幅度$u=|m|$后，先找$L_i\\le u<L_i+16d_i$，再求段内编号$j=\\lfloor(u-L_i)/d_i\\rfloor$。\n\n例如$u=100\\Delta$属于第4段：起点64，步长4，$j=(100-64)/4=9$，段落码011、段内码1001。100Δ恰为内部边界，按本讲义约定归较高幅度一侧的格。最顶端满量程需单独规定饱和处理，不可给出第17格。",
+      "question": "样值幅度512Δ落在第6段还是第7段？",
+      "answer": "按内部左闭右开约定归第7段，其起点512Δ、步长32Δ、段落码110；第6段只覆盖256Δ≤u<512Δ。",
+      "teachingHtmlWithLatex": "<p>本表以最小单位$\\Delta$列出八段：起点$L_i/\\Delta$依次为$0,16,32,64,128,256,512,1024$；当地格宽$d_i/\\Delta$依次为$1,1,2,4,8,16,32,64$；段落码是$i-1$的3位自然二进制。</p><p>每段上界等于$L_i+16d_i$，因而可直接验证表格内部一致。约定各内部区间左闭右开，给定幅度$u=|m|$后，先找$L_i\\le u&lt;L_i+16d_i$，再求段内编号$j=\\lfloor(u-L_i)/d_i\\rfloor$。</p><p>例如$u=100\\Delta$属于第4段：起点64，步长4，$j=(100-64)/4=9$，段落码011、段内码1001。100Δ恰为内部边界，按本讲义约定归较高幅度一侧的格。最顶端满量程需单独规定饱和处理，不可给出第17格。</p>",
+      "formulas": [
+        "\\Delta",
+        "L_i/\\Delta",
+        "0,16,32,64,128,256,512,1024",
+        "d_i/\\Delta",
+        "1,1,2,4,8,16,32,64",
+        "i-1",
+        "L_i+16d_i",
+        "u=|m|",
+        "L_i\\le u<L_i+16d_i",
+        "j=\\lfloor(u-L_i)/d_i\\rfloor",
+        "u=100\\Delta",
+        "j=(100-64)/4=9"
+      ],
+      "knowledgeNodeIds": [
+        "a-table"
+      ],
+      "references": []
+    },
+    {
+      "page": 68,
+      "title": "段内表从1开始编号，二进制码却从0开始",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=68",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-68.webp",
+      "body": "本页第1个量化格对应0000，第2个对应0001，一直到第16个对应1111。设自然语言中的格序号为$k=1,\\ldots,16$，实际编码的是$j=k-1=0,\\ldots,15$。\n\n若段起点为L、格宽为d，第k格覆盖$[L+(k-1)d,L+kd)$，其中点重建值为$q=L+(k-1/2)d$。也可用零起始编号写成$q=L+(j+1/2)d$，两种写法必须保持一致。\n\n最常见错误是算出第4格后直接编码0100；那实际上表示零起始编号4，即第5格。正确的第4格是0011。反向译码检查中点是否落在所选区间内，能迅速查出这种差一错误。",
+      "question": "段内码1010表示第几格，其重建位置距段起点多少个格宽？",
+      "answer": "1010的数值为10，所以是第11格；中点距起点10.5个格宽，重建值为L+10.5d。",
+      "teachingHtmlWithLatex": "<p>本页第1个量化格对应0000，第2个对应0001，一直到第16个对应1111。设自然语言中的格序号为$k=1,\\ldots,16$，实际编码的是$j=k-1=0,\\ldots,15$。</p><p>若段起点为L、格宽为d，第k格覆盖$[L+(k-1)d,L+kd)$，其中点重建值为$q=L+(k-1/2)d$。也可用零起始编号写成$q=L+(j+1/2)d$，两种写法必须保持一致。</p><p>最常见错误是算出第4格后直接编码0100；那实际上表示零起始编号4，即第5格。正确的第4格是0011。反向译码检查中点是否落在所选区间内，能迅速查出这种差一错误。</p>",
+      "formulas": [
+        "k=1,\\ldots,16",
+        "j=k-1=0,\\ldots,15",
+        "[L+(k-1)d,L+kd)",
+        "q=L+(k-1/2)d",
+        "q=L+(j+1/2)d"
+      ],
+      "knowledgeNodeIds": [
+        "a-table"
+      ],
+      "references": []
+    },
+    {
+      "page": 69,
+      "title": "非线性编码节省码长，是把精度向小信号分配",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=69",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-69.webp",
+      "body": "本页把分段几何再次转换成量化单位：第1、2段每格$1/2048=\\Delta$，第8段每格$1/32=64\\Delta$。虽然每段内都是均匀16等分，不同段之间的格宽却不同，所以整体是非均匀量化。\n\n若正满量程仍为1，使用统一$\\Delta$需要2048格、11位幅度码；分段方案只使用128格、7位幅度码。节省的4位来自大幅度区间的合并，不是对2048个同等分辨率状态做了无损压缩。\n\n把这种思路与信息论区分：码长缩短可以来自有损地降低分辨率，也可以来自利用概率的无损熵编码。本页属于前一种，不能仅因码长较短就宣称编码效率达到熵极限。",
+      "question": "为什么“每段都均匀量化”与“整个量化器非均匀”不矛盾？",
+      "answer": "每段各自的16格等宽，但第1段格宽Δ、第8段格宽64Δ等，不同段的格宽不同；均匀性取决于讨论的范围。",
+      "teachingHtmlWithLatex": "<p>本页把分段几何再次转换成量化单位：第1、2段每格$1/2048=\\Delta$，第8段每格$1/32=64\\Delta$。虽然每段内都是均匀16等分，不同段之间的格宽却不同，所以整体是非均匀量化。</p><p>若正满量程仍为1，使用统一$\\Delta$需要2048格、11位幅度码；分段方案只使用128格、7位幅度码。节省的4位来自大幅度区间的合并，不是对2048个同等分辨率状态做了无损压缩。</p><p>把这种思路与信息论区分：码长缩短可以来自有损地降低分辨率，也可以来自利用概率的无损熵编码。本页属于前一种，不能仅因码长较短就宣称编码效率达到熵极限。</p>",
+      "formulas": [
+        "1/2048=\\Delta",
+        "1/32=64\\Delta",
+        "\\Delta"
+      ],
+      "knowledgeNodeIds": [
+        "a-table"
+      ],
+      "references": []
+    },
+    {
+      "page": 70,
+      "title": "逐次比较编码器：本地译码器产生下一次试探门限",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=70",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-70.webp",
+      "body": "图中输入分成两路：极性判决直接形成$C_1$；整流后幅度进入保持电路，在一次转换期间作为固定的$I_s$。比较器把$I_s$与本地产生的试探电流$I_w$比较，逐步决定其余七位。\n\n反馈环节由记忆电路、7/11变换和恒流源组成。记忆电路保存已经确定或正在试探的码位，变换电路把非线性幅度编号转换成对应线性权值，恒流源据此产生下一门限。这里的本地译码器服务于编码搜索，不是远端接收器。\n\n七次比较相当于按二叉决策树把128个幅度格定位下来。由于量化区间非均匀，门限不能一律按满量程的线性二分值设定；必须结合段落表及当前已知码位。保持时间还必须覆盖这些比较及建立时间。",
+      "question": "为什么编码器里也要有译码器？",
+      "answer": "它把当前试探数字状态变成可与输入比较的模拟门限；逐次比较需要这种反馈，不能仅凭一个比较器一次决定128个幅度区间。",
+      "teachingHtmlWithLatex": "<p>图中输入分成两路：极性判决直接形成$C_1$；整流后幅度进入保持电路，在一次转换期间作为固定的$I_s$。比较器把$I_s$与本地产生的试探电流$I_w$比较，逐步决定其余七位。</p><p>反馈环节由记忆电路、7/11变换和恒流源组成。记忆电路保存已经确定或正在试探的码位，变换电路把非线性幅度编号转换成对应线性权值，恒流源据此产生下一门限。这里的本地译码器服务于编码搜索，不是远端接收器。</p><p>七次比较相当于按二叉决策树把128个幅度格定位下来。由于量化区间非均匀，门限不能一律按满量程的线性二分值设定；必须结合段落表及当前已知码位。保持时间还必须覆盖这些比较及建立时间。</p>",
+      "formulas": [
+        "C_1",
+        "I_s",
+        "I_s",
+        "I_w"
+      ],
+      "knowledgeNodeIds": [
+        "successive"
+      ],
+      "references": []
+    },
+    {
+      "page": 71,
+      "title": "比较规则必须补上相等时的边界约定",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=71",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-71.webp",
+      "body": "原页规定正样值极性码为1、负样值为0；全波整流把双极性幅度统一为非负电流。保持电路确保七次比较面对同一个样值，否则后面码位可能对应已经变化的输入。\n\n原页只写$I_s-I_w>0$出1、$<0$出0，没有定义恰好相等。本讲义为使分段表与段内表唯一一致，明确采用内部区间左闭右开，因此在比较一个下边界时，$I_s\\ge I_w$取较高幅度一侧，即判1；小于时判0。\n\n相等归属并不改变连续概率分布下的平均积分，但会影响精确落在边界的计算题和数字测试。零输入、满量程以及过载输入也应由实现另行定义，不能让比较器的“未说明”成为两个不同答案同时成立的理由。",
+      "question": "样值恰等于某个内部比较门限，应按本讲义归哪侧？",
+      "answer": "归较高幅度一侧（右侧）区间，即与左闭右开约定一致；这里是显式补充边界规则，不是假装原页已经写出了等号。",
+      "teachingHtmlWithLatex": "<p>原页规定正样值极性码为1、负样值为0；全波整流把双极性幅度统一为非负电流。保持电路确保七次比较面对同一个样值，否则后面码位可能对应已经变化的输入。</p><p>原页只写$I_s-I_w&gt;0$出1、$&lt;0$出0，没有定义恰好相等。本讲义为使分段表与段内表唯一一致，明确采用内部区间左闭右开，因此在比较一个下边界时，$I_s\\ge I_w$取较高幅度一侧，即判1；小于时判0。</p><p>相等归属并不改变连续概率分布下的平均积分，但会影响精确落在边界的计算题和数字测试。零输入、满量程以及过载输入也应由实现另行定义，不能让比较器的“未说明”成为两个不同答案同时成立的理由。</p>",
+      "formulas": [
+        "I_s-I_w>0",
+        "<0",
+        "I_s\\ge I_w"
+      ],
+      "knowledgeNodeIds": [
+        "successive"
+      ],
+      "references": []
+    },
+    {
+      "page": 72,
+      "title": "7/11变换不是增加信息，而是展开非线性权值",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=72",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-72.webp",
+      "body": "七位非线性幅度码只有128种输入状态，7/11变换把它们映射为对应的线性幅度控制字。输出有11根控制位，并不意味着凭空恢复2048种独立幅度信息；实际只使用与该码表相关的一部分控制组合。\n\n恒流源的11个二进制加权支路可组合产生不同的标准电流。逐次比较时，它输出试探门限；最终D/A重建时，还应按所选区间的重建电平设计偏置和权值。判决边界与区间中点不是同一个数。\n\n记忆电路的作用是保留当前转换的决策状态，下一次试探必须建立在先前已确定码位上。若把每次比较都独立从零开始，就不是逐次比较搜索，也不能保证七次定位128个幅度格。",
+      "question": "七位码经过7/11变换后，能否认为每个样值携带了11比特独立信息？",
+      "answer": "不能。确定性映射没有增加输入的状态数，128种输入最多仍产生128种相关输出组合；11位只是内部线性控制表示。",
+      "teachingHtmlWithLatex": "<p>七位非线性幅度码只有128种输入状态，7/11变换把它们映射为对应的线性幅度控制字。输出有11根控制位，并不意味着凭空恢复2048种独立幅度信息；实际只使用与该码表相关的一部分控制组合。</p><p>恒流源的11个二进制加权支路可组合产生不同的标准电流。逐次比较时，它输出试探门限；最终D/A重建时，还应按所选区间的重建电平设计偏置和权值。判决边界与区间中点不是同一个数。</p><p>记忆电路的作用是保留当前转换的决策状态，下一次试探必须建立在先前已确定码位上。若把每次比较都独立从零开始，就不是逐次比较搜索，也不能保证七次定位128个幅度格。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "successive"
+      ],
+      "references": []
+    },
+    {
+      "page": 73,
+      "title": "例5.1第一步：正1270Δ先判符号，再判段落上半区",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=73",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-73.webp",
+      "body": "题目要求把$+1270\\Delta$按13折线A律编成8位码，并求量化误差及对应线性11位码。先判输入为正，得$C_1=1$；后续七次比较只处理幅度1270Δ。\n\n第一段落比较门限为$128\\Delta$，它把八个幅度段分成1至4段与5至8段。因为$1270>128$，得$C_2=1$，候选范围缩小为第5至8段。下一门限为512Δ，用于继续区分第5至6段与第7至8段。\n\n这里128不是满量程2048的一半，却是八个段落编号的中间分界。这正体现搜索的是非线性段落编码，而不是一开始就按原幅度做等间隔线性二分。每一步应记录“比较门限、判决位、剩余范围”，以免只抄最终码字。",
+      "question": "为什么第一次段落比较不用1024Δ？",
+      "answer": "因为第一段落码位要把8个段分为前4段与后4段，其分界是128Δ；1024Δ只是第8段的起点，不是段落编号的中点。",
+      "teachingHtmlWithLatex": "<p>题目要求把$+1270\\Delta$按13折线A律编成8位码，并求量化误差及对应线性11位码。先判输入为正，得$C_1=1$；后续七次比较只处理幅度1270Δ。</p><p>第一段落比较门限为$128\\Delta$，它把八个幅度段分成1至4段与5至8段。因为$1270&gt;128$，得$C_2=1$，候选范围缩小为第5至8段。下一门限为512Δ，用于继续区分第5至6段与第7至8段。</p><p>这里128不是满量程2048的一半，却是八个段落编号的中间分界。这正体现搜索的是非线性段落编码，而不是一开始就按原幅度做等间隔线性二分。每一步应记录“比较门限、判决位、剩余范围”，以免只抄最终码字。</p>",
+      "formulas": [
+        "+1270\\Delta",
+        "C_1=1",
+        "128\\Delta",
+        "1270>128",
+        "C_2=1"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "references": []
+    },
+    {
+      "page": 74,
+      "title": "例5.1第二步：定位第8段，再试探其上半区",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=74",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-74.webp",
+      "body": "第二次比较$1270\\Delta>512\\Delta$，得$C_3=1$，范围为第7至8段；第三次比较$1270\\Delta>1024\\Delta$，得$C_4=1$，确定第8段。因此段落码为111，段起点$L=1024\\Delta$、格宽$d=64\\Delta$。\n\n段内有16格，先试探中间边界$L+8d=1536\\Delta$。由于$1270<1536$，段内最高位$C_5=0$，选前八格，即零起始编号0至7。\n\n此时已知的是范围，不是最终重建电平。1536Δ为判决门限，不能因为比较过它就把它当作输出样值；重建值要等段内四位全部确定后取所选格中点。",
+      "question": "前三位段落判决111以后，为何仍需四次比较？",
+      "answer": "111只定位到第8段的16个格之一；还需4位段内码区分16格，前三次比较并未确定该段内的量化位置。",
+      "teachingHtmlWithLatex": "<p>第二次比较$1270\\Delta&gt;512\\Delta$，得$C_3=1$，范围为第7至8段；第三次比较$1270\\Delta&gt;1024\\Delta$，得$C_4=1$，确定第8段。因此段落码为111，段起点$L=1024\\Delta$、格宽$d=64\\Delta$。</p><p>段内有16格，先试探中间边界$L+8d=1536\\Delta$。由于$1270&lt;1536$，段内最高位$C_5=0$，选前八格，即零起始编号0至7。</p><p>此时已知的是范围，不是最终重建电平。1536Δ为判决门限，不能因为比较过它就把它当作输出样值；重建值要等段内四位全部确定后取所选格中点。</p>",
+      "formulas": [
+        "1270\\Delta>512\\Delta",
+        "C_3=1",
+        "1270\\Delta>1024\\Delta",
+        "C_4=1",
+        "L=1024\\Delta",
+        "d=64\\Delta",
+        "L+8d=1536\\Delta",
+        "1270<1536",
+        "C_5=0"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "references": []
+    },
+    {
+      "page": 75,
+      "title": "例5.1第三步：段内四位按门限逐次保留或清零",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=75",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-75.webp",
+      "body": "已知第8段且$C_5=0$后，第五次比较门限为$1024+4\\times64=1280$个Δ。1270小于1280，所以$C_6=0$，只剩零起始编号0至3。\n\n第六次门限为$1024+2\\times64=1152$个Δ，1270大于1152，故$C_7=1$，只剩编号2或3。第七次门限为$1024+3\\times64=1216$个Δ，1270大于1216，故$C_8=1$。\n\n四位段内码最终为0011，即编号3、自然语言第4格，区间$[1216\\Delta,1280\\Delta)$。可以核验$1216\\le1270<1280$。若只记第4格而写成0100，会错到下一格；逐次比较与直接求商必须给出同一个零起始编号。",
+      "question": "若输入改为恰好1280Δ，在相同第8段中段内码应是多少？",
+      "answer": "按左闭右开，归下一格，j=(1280−1024)/64=4，段内码0100；原来的0011只覆盖1216Δ至小于1280Δ。",
+      "teachingHtmlWithLatex": "<p>已知第8段且$C_5=0$后，第五次比较门限为$1024+4\\times64=1280$个Δ。1270小于1280，所以$C_6=0$，只剩零起始编号0至3。</p><p>第六次门限为$1024+2\\times64=1152$个Δ，1270大于1152，故$C_7=1$，只剩编号2或3。第七次门限为$1024+3\\times64=1216$个Δ，1270大于1216，故$C_8=1$。</p><p>四位段内码最终为0011，即编号3、自然语言第4格，区间$[1216\\Delta,1280\\Delta)$。可以核验$1216\\le1270&lt;1280$。若只记第4格而写成0100，会错到下一格；逐次比较与直接求商必须给出同一个零起始编号。</p>",
+      "formulas": [
+        "C_5=0",
+        "1024+4\\times64=1280",
+        "C_6=0",
+        "1024+2\\times64=1152",
+        "C_7=1",
+        "1024+3\\times64=1216",
+        "C_8=1",
+        "[1216\\Delta,1280\\Delta)",
+        "1216\\le1270<1280"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "references": []
+    },
+    {
+      "page": 76,
+      "title": "例5.1第四步：11110011译回1248Δ，误差22Δ",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=76",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-76.webp",
+      "body": "拼接符号、段落、段内字段得到$1\\,111\\,0011$，即11110011。其区间起点为$1024+3\\times64=1216$个Δ，重建值取中点$q=(1216+1280)\\Delta/2=1248\\Delta$。\n\n按$e=m-q$定义，量化误差为$(1270-1248)\\Delta=22\\Delta$。本段半格为32Δ，因此误差界检查通过。若误把下边界1216作为重建值，会算出54Δ并违反中点重建误差界。\n\n本例1248是整数个Δ，二进制展开为$1248=1024+128+64+32$，对应11位线性幅度码10011100000。它表示量化后的1248，不是原输入1270；符号位单独处理，不混入这11位幅度码。",
+      "question": "为什么线性11位码不编码原来的1270？",
+      "answer": "因为7位非线性幅度码已只指向一个量化格，译码器应输出该格重建值1248；原样值1270的格内偏移22Δ已经不可由码字恢复。",
+      "teachingHtmlWithLatex": "<p>拼接符号、段落、段内字段得到$1\\,111\\,0011$，即11110011。其区间起点为$1024+3\\times64=1216$个Δ，重建值取中点$q=(1216+1280)\\Delta/2=1248\\Delta$。</p><p>按$e=m-q$定义，量化误差为$(1270-1248)\\Delta=22\\Delta$。本段半格为32Δ，因此误差界检查通过。若误把下边界1216作为重建值，会算出54Δ并违反中点重建误差界。</p><p>本例1248是整数个Δ，二进制展开为$1248=1024+128+64+32$，对应11位线性幅度码10011100000。它表示量化后的1248，不是原输入1270；符号位单独处理，不混入这11位幅度码。</p>",
+      "formulas": [
+        "1\\,111\\,0011",
+        "1024+3\\times64=1216",
+        "q=(1216+1280)\\Delta/2=1248\\Delta",
+        "e=m-q",
+        "(1270-1248)\\Delta=22\\Delta",
+        "1248=1024+128+64+32"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "references": []
+    },
+    {
+      "page": 77,
+      "title": "例5.1直接法：找段、向下取整、补半格",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=77",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-77.webp",
+      "body": "不逐次模拟电路时，可先由$1024\\le1270<2048$确定第8段，段落码111；再计算$(1270-1024)/64=3.84375$。向下取整得零起始编号$j=3$，所以段内码0011，完整码仍为11110011。\n\n注意这里应取下整定位区间，而不是四舍五入把3.84375变成4。选择最近重建电平已通过“区间编号加半格”实现：$q=1024+(3+1/2)64=1248$。把编号先四舍五入再补半格会把样值分配错格。\n\n直接法与逐次比较法是同一个量化映射的两种执行方式。最有效的自检是反向求区间，确认输入落在区间中，再检查重建误差小于当地半格；仅比较最终八位字符串可能漏掉编码和译码同时采用同一错误规则。",
+      "question": "商为3.84375，为什么不能按此前整数舍入例把它四舍五入为4？",
+      "answer": "因为这里的商用于确定区间索引，而不是直接重建幅度。应先floor得到3，再在格内取中点3.5；前面的整数舍入量化规则不能机械套用。",
+      "teachingHtmlWithLatex": "<p>不逐次模拟电路时，可先由$1024\\le1270&lt;2048$确定第8段，段落码111；再计算$(1270-1024)/64=3.84375$。向下取整得零起始编号$j=3$，所以段内码0011，完整码仍为11110011。</p><p>注意这里应取下整定位区间，而不是四舍五入把3.84375变成4。选择最近重建电平已通过“区间编号加半格”实现：$q=1024+(3+1/2)64=1248$。把编号先四舍五入再补半格会把样值分配错格。</p><p>直接法与逐次比较法是同一个量化映射的两种执行方式。最有效的自检是反向求区间，确认输入落在区间中，再检查重建误差小于当地半格；仅比较最终八位字符串可能漏掉编码和译码同时采用同一错误规则。</p>",
+      "formulas": [
+        "1024\\le1270<2048",
+        "(1270-1024)/64=3.84375",
+        "j=3",
+        "q=1024+(3+1/2)64=1248"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "references": []
+    },
+    {
+      "page": 78,
+      "title": "PCM译码器：完整码字同步读出，再控制幅度和极性",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=78",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-78.webp",
+      "body": "图中串行PCM先进入记忆电路，按码组收齐后交给7/11变换；幅度控制进入寄存读出和恒流源，极性控制决定输出正负。最终得到与各量化重建值对应的调幅脉冲，再交给后续重建滤波器。\n\n“写入”和“读出”分开很重要：串行码位陆续到达时，若立即用未收齐的混合字段更新D/A，可能产生不属于任何完整样值的瞬态幅度。寄存读出让一组幅度控制位在指定时刻一起生效。\n\n译码器仍依赖码组边界和采样时钟。若八位分组错开，即使每一位本身都接收正确，也可能把一个样值的末位与下一个样值的前位拼成错误幅度；这类同步问题不能靠低通滤波根治。",
+      "question": "为什么不能把串行到达的每一位直接立刻接到恒流源开关？",
+      "answer": "因为转换期间会出现未收齐的控制字和前后样值混合状态；应先收齐并寄存，在统一读出时刻更新完整幅度和极性。",
+      "teachingHtmlWithLatex": "<p>图中串行PCM先进入记忆电路，按码组收齐后交给7/11变换；幅度控制进入寄存读出和恒流源，极性控制决定输出正负。最终得到与各量化重建值对应的调幅脉冲，再交给后续重建滤波器。</p><p>“写入”和“读出”分开很重要：串行码位陆续到达时，若立即用未收齐的混合字段更新D/A，可能产生不属于任何完整样值的瞬态幅度。寄存读出让一组幅度控制位在指定时刻一起生效。</p><p>译码器仍依赖码组边界和采样时钟。若八位分组错开，即使每一位本身都接收正确，也可能把一个样值的末位与下一个样值的前位拼成错误幅度；这类同步问题不能靠低通滤波根治。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "decode"
+      ],
+      "references": []
+    },
+    {
+      "page": 79,
+      "title": "译码电平的精度：11位控制字不等于所有中点都是整数Δ",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=79",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-79.webp",
+      "body": "本页进一步说明串并转换、7/11幅度变换、定时寄存读出与D/A恒流源的分工。数字译码先决定应输出哪个重建电平，模拟权值网络再实现该电平，两者的尺度和偏置必须一致。\n\n对任一段，理想中点仍是$q=L+(j+1/2)d$。前两段$d=\\Delta$，所以重建值可为$0.5\\Delta,1.5\\Delta,\\ldots$等半整数；后面各段步长为偶数个Δ，中点才是整数个Δ。不能因课件框图标“11位线性码”，便把前两段中点无说明地截成整数。\n\n实现时可用相应权值尺度和半格偏置表达这些电平；本页未给出完整电路细节，不应自行宣称唯一的硬件方案。例5.1的1248Δ恰能直接写成11位整数码，只证明那个样值的表示，没有消除所有小信号中点的半格问题。",
+      "question": "第1段段内码0000的理想中点是多少，能否直接写成0Δ？",
+      "answer": "理想中点为0.5Δ，不能无说明改成0Δ。若具体D/A使用不同零点或偏置，必须明确其实现约定并保持编码、译码与误差计算一致。",
+      "teachingHtmlWithLatex": "<p>本页进一步说明串并转换、7/11幅度变换、定时寄存读出与D/A恒流源的分工。数字译码先决定应输出哪个重建电平，模拟权值网络再实现该电平，两者的尺度和偏置必须一致。</p><p>对任一段，理想中点仍是$q=L+(j+1/2)d$。前两段$d=\\Delta$，所以重建值可为$0.5\\Delta,1.5\\Delta,\\ldots$等半整数；后面各段步长为偶数个Δ，中点才是整数个Δ。不能因课件框图标“11位线性码”，便把前两段中点无说明地截成整数。</p><p>实现时可用相应权值尺度和半格偏置表达这些电平；本页未给出完整电路细节，不应自行宣称唯一的硬件方案。例5.1的1248Δ恰能直接写成11位整数码，只证明那个样值的表示，没有消除所有小信号中点的半格问题。</p>",
+      "formulas": [
+        "q=L+(j+1/2)d",
+        "d=\\Delta",
+        "0.5\\Delta,1.5\\Delta,\\ldots"
+      ],
+      "knowledgeNodeIds": [
+        "decode"
+      ],
+      "references": []
+    },
+    {
+      "page": 80,
+      "title": "PCM总噪声模型：量化误差与误码失真来自不同位置",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=80",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-80.webp",
+      "body": "本页把接收解码、低通重建后的误差分为$n_q(t)$与$n_e(t)$：前者来自有限级量化，后者来自信道噪声导致的错误判决及错误译码。输入信道的模拟噪声不是直接原样加到输出，它先经过判决和码字到电平的非线性映射。\n\n记$m_o(t)=m(t)+n_q(t)+n_e(t)$，这是把理想信号与两类等效输出误差分开。总误差功率一般包含交叉项$2E[n_qn_e]$；当交叉期望为零时，才可写为两类噪声功率之和；零均值且不相关，或采用独立假设并满足均值条件，是使交叉项为零的充分条件。\n\n原页使用互相统计独立的分析模型，后续公式应连同这一假设阅读。减少信道误码不能消除发送量化误差；增加量化位数也不一定在恶劣信道下无限改善最终输出，因为错误高权位可能产生较大译码偏差。",
+      "question": "只知道两种误差功率Nq和Ne，就能无条件写总误差功率Nq+Ne吗？",
+      "answer": "不能。还需确认交叉期望为零；一般应加2E[nq ne]。独立且均值为零是使交叉项为零的一组充分条件。",
+      "teachingHtmlWithLatex": "<p>本页把接收解码、低通重建后的误差分为$n_q(t)$与$n_e(t)$：前者来自有限级量化，后者来自信道噪声导致的错误判决及错误译码。输入信道的模拟噪声不是直接原样加到输出，它先经过判决和码字到电平的非线性映射。</p><p>记$m_o(t)=m(t)+n_q(t)+n_e(t)$，这是把理想信号与两类等效输出误差分开。总误差功率一般包含交叉项$2E[n_qn_e]$；当交叉期望为零时，才可写为两类噪声功率之和；零均值且不相关，或采用独立假设并满足均值条件，是使交叉项为零的充分条件。</p><p>原页使用互相统计独立的分析模型，后续公式应连同这一假设阅读。减少信道误码不能消除发送量化误差；增加量化位数也不一定在恶劣信道下无限改善最终输出，因为错误高权位可能产生较大译码偏差。</p>",
+      "formulas": [
+        "n_q(t)",
+        "n_e(t)",
+        "m_o(t)=m(t)+n_q(t)+n_e(t)",
+        "2E[n_qn_e]"
+      ],
+      "knowledgeNodeIds": [
+        "noise-model"
+      ],
+      "references": []
+    },
+    {
+      "page": 81,
+      "title": "总信噪比应先加噪声功率，再取对数",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=81",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-81.webp",
+      "body": "本页输出模型为$\\widetilde m_o(t)=m_o(t)+n_q(t)+n_e(t)$。在两类噪声零均值且不相关的模型下，输出信噪比为$S_o/(N_q+N_e)$，其中$S_o=E[m_o^2(t)]$。分子取理想有用信号功率，不是已经含噪的总输出功率。\n\n令量化信噪比为$\\gamma_q=S_o/N_q$，误码信噪比为$\\gamma_e=S_o/N_e$，则$1/\\gamma_o=1/\\gamma_q+1/\\gamma_e$。总信噪比总小于任意单独一项，并在其中一项明显较小时受其主导。\n\n不能把两个以dB表示的信噪比直接相加。例如两项都是30 dB，即线性值1000，则总值为500，约26.99 dB，比每一项低约3.01 dB。先在线性功率域完成运算，再转dB，是使用此式的必要步骤。",
+      "question": "量化信噪比与误码信噪比都为30 dB时，总信噪比是60 dB吗？",
+      "answer": "不是。两种相等噪声功率相加使总噪声加倍，总信噪比为1000/2=500，即约26.99 dB。",
+      "teachingHtmlWithLatex": "<p>本页输出模型为$\\widetilde m_o(t)=m_o(t)+n_q(t)+n_e(t)$。在两类噪声零均值且不相关的模型下，输出信噪比为$S_o/(N_q+N_e)$，其中$S_o=E[m_o^2(t)]$。分子取理想有用信号功率，不是已经含噪的总输出功率。</p><p>令量化信噪比为$\\gamma_q=S_o/N_q$，误码信噪比为$\\gamma_e=S_o/N_e$，则$1/\\gamma_o=1/\\gamma_q+1/\\gamma_e$。总信噪比总小于任意单独一项，并在其中一项明显较小时受其主导。</p><p>不能把两个以dB表示的信噪比直接相加。例如两项都是30 dB，即线性值1000，则总值为500，约26.99 dB，比每一项低约3.01 dB。先在线性功率域完成运算，再转dB，是使用此式的必要步骤。</p>",
+      "formulas": [
+        "\\widetilde m_o(t)=m_o(t)+n_q(t)+n_e(t)",
+        "S_o/(N_q+N_e)",
+        "S_o=E[m_o^2(t)]",
+        "\\gamma_q=S_o/N_q",
+        "\\gamma_e=S_o/N_e",
+        "1/\\gamma_o=1/\\gamma_q+1/\\gamma_e"
+      ],
+      "knowledgeNodeIds": [
+        "noise-model"
+      ],
+      "references": []
+    },
+    {
+      "page": 82,
+      "title": "量化信噪比推导的四项前提与接收增益约定",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=82",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-82.webp",
+      "body": "原页假设输入在$[-a,a]$上幅度均匀分布，最高频率$f_H$；理想冲激采样采用$f_s=2f_H=1/T_s$；M级均匀量化，间隔$\\Delta v=2a/M$；接收低通在$|f|\\le f_H$内增益为1，带外为0。\n\n注意这里的低通增益不是前面理想精确幅度恢复所用的$T_s$。因此无噪信号输出是$m_o(t)=m(t)/T_s$，信号与噪声功率都会带相同尺度，最后作比值时消去。混用两个增益约定会凭空多出或少掉$T_s^2$。\n\n临界采样仍沿用理想带限及边界条件，不能忘记任意带边正弦在不合适相位下的退化问题。后续将误差当作白噪声还需额外的样值间不相关近似，单凭幅度均匀并不能自动推出所有时间统计性质。",
+      "question": "若把接收通带增益统一从1改为Ts，量化信噪比会改变吗？",
+      "answer": "理想线性模型中不会。信号与同通带噪声幅度都乘Ts，功率同乘Ts²，比例不变；各自绝对功率的表达式会改变。",
+      "teachingHtmlWithLatex": "<p>原页假设输入在$[-a,a]$上幅度均匀分布，最高频率$f_H$；理想冲激采样采用$f_s=2f_H=1/T_s$；M级均匀量化，间隔$\\Delta v=2a/M$；接收低通在$|f|\\le f_H$内增益为1，带外为0。</p><p>注意这里的低通增益不是前面理想精确幅度恢复所用的$T_s$。因此无噪信号输出是$m_o(t)=m(t)/T_s$，信号与噪声功率都会带相同尺度，最后作比值时消去。混用两个增益约定会凭空多出或少掉$T_s^2$。</p><p>临界采样仍沿用理想带限及边界条件，不能忘记任意带边正弦在不合适相位下的退化问题。后续将误差当作白噪声还需额外的样值间不相关近似，单凭幅度均匀并不能自动推出所有时间统计性质。</p>",
+      "formulas": [
+        "[-a,a]",
+        "f_H",
+        "f_s=2f_H=1/T_s",
+        "\\Delta v=2a/M",
+        "|f|\\le f_H",
+        "T_s",
+        "m_o(t)=m(t)/T_s",
+        "T_s^2"
+      ],
+      "knowledgeNodeIds": [
+        "noise-model"
+      ],
+      "references": []
+    },
+    {
+      "page": 83,
+      "title": "从离散误差方差到连续脉冲列功率谱",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=83",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-83.webp",
+      "body": "均匀量化误差在相应模型下具有$\\sigma_q^2=(\\Delta v)^2/12$。再假设不同采样时刻的误差零均值且不相关，误差冲激列$e_q^*(t)=\\sum_k e_q[k]\\delta(t-kT_s)$的时间平均双边功率谱密度为$G_{e_q}(f)=\\sigma_q^2/T_s$。\n\n低通滤波后，$G_{n_q}(f)=G_{e_q}(f)|H_R(f)|^2$，所以在$|f|\\le f_H$内等于$(\\Delta v)^2/(12T_s)$，带外为零。这是双边频谱，下一页积分必须从$-f_H$到$f_H$，不能只积正频率却不调整谱密度。\n\n$\\Delta^2/12$给出单样值均方误差，$\\Delta^2/(12T_s)$是冲激列的谱密度，两者单位和对象不同。误差若与输入或邻近样值显著相关，谱可能出现结构或谱线，不能仅凭量化是均匀的就断言噪声必然白。",
+      "question": "原页谱密度中的1/Ts从哪里来？",
+      "answer": "来自单位时间约有1/Ts个误差冲激事件。在零均值且样值间不相关的脉冲列模型中，时间平均谱密度等于每样值方差乘事件率。",
+      "teachingHtmlWithLatex": "<p>均匀量化误差在相应模型下具有$\\sigma_q^2=(\\Delta v)^2/12$。再假设不同采样时刻的误差零均值且不相关，误差冲激列$e_q^*(t)=\\sum_k e_q[k]\\delta(t-kT_s)$的时间平均双边功率谱密度为$G_{e_q}(f)=\\sigma_q^2/T_s$。</p><p>低通滤波后，$G_{n_q}(f)=G_{e_q}(f)|H_R(f)|^2$，所以在$|f|\\le f_H$内等于$(\\Delta v)^2/(12T_s)$，带外为零。这是双边频谱，下一页积分必须从$-f_H$到$f_H$，不能只积正频率却不调整谱密度。</p><p>$\\Delta^2/12$给出单样值均方误差，$\\Delta^2/(12T_s)$是冲激列的谱密度，两者单位和对象不同。误差若与输入或邻近样值显著相关，谱可能出现结构或谱线，不能仅凭量化是均匀的就断言噪声必然白。</p>",
+      "formulas": [
+        "\\sigma_q^2=(\\Delta v)^2/12",
+        "e_q^*(t)=\\sum_k e_q[k]\\delta(t-kT_s)",
+        "G_{e_q}(f)=\\sigma_q^2/T_s",
+        "G_{n_q}(f)=G_{e_q}(f)|H_R(f)|^2",
+        "|f|\\le f_H",
+        "(\\Delta v)^2/(12T_s)",
+        "-f_H",
+        "f_H",
+        "\\Delta^2/12",
+        "\\Delta^2/(12T_s)"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-quant-noise"
+      ],
+      "references": []
+    },
+    {
+      "page": 84,
+      "title": "双边积分与信号缩放：两边都含1/Ts²",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=84",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-84.webp",
+      "body": "由上一页谱密度积分得$N_q=2f_H(\\Delta v)^2/(12T_s)$。利用临界采样$2f_H=1/T_s$，得$N_q=(\\Delta v)^2/(12T_s^2)$。这个$T_s^{-2}$来自谱密度的$T_s^{-1}$与通带总宽的$T_s^{-1}$。\n\n输入均匀分布在$[-a,a]$，所以$E[m^2]=a^2/3=M^2(\\Delta v)^2/12$。单位增益低通给出$m_o=m/T_s$，故$S_o=M^2(\\Delta v)^2/(12T_s^2)$。\n\n将信号、噪声都写到同一个接收输出位置后，二者共同的$(\\Delta v)^2/(12T_s^2)$才可约去。若分子误用原输入功率而分母用缩放后的输出噪声，就会得到依赖单位选择的错误比值。",
+      "question": "只把噪声功率乘上接收增益平方，却不处理信号，会造成什么问题？",
+      "answer": "计算的信噪比不再属于同一测量位置，可能错误依赖Ts或接收增益；必须把信号与噪声都映射到同一输出端。",
+      "teachingHtmlWithLatex": "<p>由上一页谱密度积分得$N_q=2f_H(\\Delta v)^2/(12T_s)$。利用临界采样$2f_H=1/T_s$，得$N_q=(\\Delta v)^2/(12T_s^2)$。这个$T_s^{-2}$来自谱密度的$T_s^{-1}$与通带总宽的$T_s^{-1}$。</p><p>输入均匀分布在$[-a,a]$，所以$E[m^2]=a^2/3=M^2(\\Delta v)^2/12$。单位增益低通给出$m_o=m/T_s$，故$S_o=M^2(\\Delta v)^2/(12T_s^2)$。</p><p>将信号、噪声都写到同一个接收输出位置后，二者共同的$(\\Delta v)^2/(12T_s^2)$才可约去。若分子误用原输入功率而分母用缩放后的输出噪声，就会得到依赖单位选择的错误比值。</p>",
+      "formulas": [
+        "N_q=2f_H(\\Delta v)^2/(12T_s)",
+        "2f_H=1/T_s",
+        "N_q=(\\Delta v)^2/(12T_s^2)",
+        "T_s^{-2}",
+        "T_s^{-1}",
+        "T_s^{-1}",
+        "[-a,a]",
+        "E[m^2]=a^2/3=M^2(\\Delta v)^2/12",
+        "m_o=m/T_s",
+        "S_o=M^2(\\Delta v)^2/(12T_s^2)",
+        "(\\Delta v)^2/(12T_s^2)"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-quant-noise"
+      ],
+      "references": []
+    },
+    {
+      "page": 85,
+      "title": "每加一位约增6.02 dB，代价是更高码率与带宽",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=85",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-85.webp",
+      "body": "在前述均匀输入、均匀量化模型下，$S_o/N_q=M^2$。二进制N位编码$M=2^N$，所以量化信噪比为$2^{2N}$，以dB表示是$20N\\log_{10}2\\approx6.02N$；此处不是满幅正弦模型，不能随意补上1.76 dB。\n\n临界采样$f_s=2f_H$时，串行PCM比特率$R_b=Nf_s=2Nf_H$。若采用理想二进制基带Nyquist传输且没有同步、纠错等额外开销，最小低通带宽为$B=R_b/2=Nf_H$，于是$S_o/N_q=2^{2B/f_H}$。\n\n这条指数关系是在具体理想PCM模型中用带宽换量化精度，不是香农容量公式，也不意味着无限带宽下总信噪比无限增加。实际信道误码、脉冲滚降、编码开销和硬件动态范围都可能改变最终结果。",
+      "question": "在其他条件不变时，N从8变9，量化信噪比与比特率各变多少？",
+      "answer": "量化信噪比乘4，约加6.02 dB；固定采样率下比特率只乘9/8。若含信道误码，总输出信噪比不必也恰好乘4。",
+      "teachingHtmlWithLatex": "<p>在前述均匀输入、均匀量化模型下，$S_o/N_q=M^2$。二进制N位编码$M=2^N$，所以量化信噪比为$2^{2N}$，以dB表示是$20N\\log_{10}2\\approx6.02N$；此处不是满幅正弦模型，不能随意补上1.76 dB。</p><p>临界采样$f_s=2f_H$时，串行PCM比特率$R_b=Nf_s=2Nf_H$。若采用理想二进制基带Nyquist传输且没有同步、纠错等额外开销，最小低通带宽为$B=R_b/2=Nf_H$，于是$S_o/N_q=2^{2B/f_H}$。</p><p>这条指数关系是在具体理想PCM模型中用带宽换量化精度，不是香农容量公式，也不意味着无限带宽下总信噪比无限增加。实际信道误码、脉冲滚降、编码开销和硬件动态范围都可能改变最终结果。</p>",
+      "formulas": [
+        "S_o/N_q=M^2",
+        "M=2^N",
+        "2^{2N}",
+        "20N\\log_{10}2\\approx6.02N",
+        "f_s=2f_H",
+        "R_b=Nf_s=2Nf_H",
+        "B=R_b/2=Nf_H",
+        "S_o/N_q=2^{2B/f_H}"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-quant-noise"
+      ],
+      "references": []
+    },
+    {
+      "page": 86,
+      "title": "误码信噪比推导不是对A律折叠码的直接结论",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=86",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-86.webp",
+      "body": "这里改用自然二进制、均匀量化间隔$\\Delta v$和N位码字。它不同于前面8位A律折叠码：自然二进制翻转某位的幅度影响固定为该位权值乘$\\Delta v$，A律各段格宽变化，不能照搬同一个权值公式。\n\n原页把各比特独立、相同误码率$P_e$与“一码组只错一位”用于简化分析。严格独立误码下，一组恰好错一位的概率是$NP_e(1-P_e)^{N-1}$，至少错一位为$1-(1-P_e)^N$。当$NP_e\\ll1$时，都可在一阶近似中写为$NP_e$，多位同时出错忽略。\n\n后续公式要同时保留这两个边界：均匀自然二进制编码，以及稀少单错近似。加性高斯白噪声是上游信道模型，输出噪声由判决误码形成，其幅度分布本身并不因此自动成为高斯。",
+      "question": "N=8且Pe=0.1时，还能把每码组只错一位当作可靠近似吗？",
+      "answer": "不能。NPe=0.8并不远小于1，多位出错不能忽略；应使用完整错误模式模型，而不是硬套稀少单错公式。",
+      "teachingHtmlWithLatex": "<p>这里改用自然二进制、均匀量化间隔$\\Delta v$和N位码字。它不同于前面8位A律折叠码：自然二进制翻转某位的幅度影响固定为该位权值乘$\\Delta v$，A律各段格宽变化，不能照搬同一个权值公式。</p><p>原页把各比特独立、相同误码率$P_e$与“一码组只错一位”用于简化分析。严格独立误码下，一组恰好错一位的概率是$NP_e(1-P_e)^{N-1}$，至少错一位为$1-(1-P_e)^N$。当$NP_e\\ll1$时，都可在一阶近似中写为$NP_e$，多位同时出错忽略。</p><p>后续公式要同时保留这两个边界：均匀自然二进制编码，以及稀少单错近似。加性高斯白噪声是上游信道模型，输出噪声由判决误码形成，其幅度分布本身并不因此自动成为高斯。</p>",
+      "formulas": [
+        "\\Delta v",
+        "\\Delta v",
+        "P_e",
+        "NP_e(1-P_e)^{N-1}",
+        "1-(1-P_e)^N",
+        "NP_e\\ll1",
+        "NP_e"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-bit-error"
+      ],
+      "references": []
+    },
+    {
+      "page": 87,
+      "title": "一次错误事件的均方幅度：先对位权平方求和",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=87",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-87.webp",
+      "body": "以最低位编号$i=1$，第i位翻转造成电平差$\\pm2^{i-1}\\Delta v$。条件于码组恰有一位出错，并假设各位置等可能，错误事件的均方幅度为$E[e_e^2\\mid\\text{一位错}]=(\\Delta v)^2\\sum_{i=1}^N4^{i-1}/N$。\n\n利用等比级数$\\sum_{i=1}^N4^{i-1}=(4^N-1)/3$，得$E[e_e^2\\mid\\text{一位错}]=(4^N-1)(\\Delta v)^2/(3N)$。原页大N近似略去分子中的1，写成$4^N(\\Delta v)^2/(3N)$；有限N时保留减1更精确。\n\n这是“已发生一次单错”条件下的误差大小，还没有乘发生概率。N位码组的最高位和最低位虽然出错机会相同，但功率影响相差$4^{N-1}$，因此不能用平均位权先求和再平方替代平均平方。",
+      "question": "N=2时条件单错均方幅度是多少？",
+      "answer": "两位误差幅度分别为Δv和2Δv，平均平方为(1+4)(Δv)²/2=2.5(Δv)²，与(4²−1)/(3×2)一致。",
+      "teachingHtmlWithLatex": "<p>以最低位编号$i=1$，第i位翻转造成电平差$\\pm2^{i-1}\\Delta v$。条件于码组恰有一位出错，并假设各位置等可能，错误事件的均方幅度为$E[e_e^2\\mid\\text{一位错}]=(\\Delta v)^2\\sum_{i=1}^N4^{i-1}/N$。</p><p>利用等比级数$\\sum_{i=1}^N4^{i-1}=(4^N-1)/3$，得$E[e_e^2\\mid\\text{一位错}]=(4^N-1)(\\Delta v)^2/(3N)$。原页大N近似略去分子中的1，写成$4^N(\\Delta v)^2/(3N)$；有限N时保留减1更精确。</p><p>这是“已发生一次单错”条件下的误差大小，还没有乘发生概率。N位码组的最高位和最低位虽然出错机会相同，但功率影响相差$4^{N-1}$，因此不能用平均位权先求和再平方替代平均平方。</p>",
+      "formulas": [
+        "i=1",
+        "\\pm2^{i-1}\\Delta v",
+        "E[e_e^2\\mid\\text{一位错}]=(\\Delta v)^2\\sum_{i=1}^N4^{i-1}/N",
+        "\\sum_{i=1}^N4^{i-1}=(4^N-1)/3",
+        "E[e_e^2\\mid\\text{一位错}]=(4^N-1)(\\Delta v)^2/(3N)",
+        "4^N(\\Delta v)^2/(3N)",
+        "4^{N-1}"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-bit-error"
+      ],
+      "references": []
+    },
+    {
+      "page": 88,
+      "title": "错误事件率与谱密度：概率和条件误差各用一次",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=88",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-88.webp",
+      "body": "每秒传输$N/T_s$个比特，独立比特错误平均事件率为$NP_e/T_s$。在稀少单错近似下，一个错误码组对应一个错误比特，所以错误码组平均时间间隔近似$T_a=T_s/(NP_e)$。\n\n若进一步把错误脉冲幅度视作零均值、事件间不相关，则冲激误差列的双边谱密度近似为事件率乘条件均方幅度：$G_{e_e}(f)\\approx[NP_e/T_s][(4^N-1)(\\Delta v)^2/(3N)]=P_e(4^N-1)(\\Delta v)^2/(3T_s)$。\n\n原页略去$4^N-1$中的1得到大N式。这里每码组的出错概率已经通过事件率计入，不能再额外乘一次$P_e$。若误码成串、译码误差有非零均值或明显相关，则白谱近似需重新检验。",
+      "question": "把本页谱密度再乘Pe才算考虑误码概率，对吗？",
+      "answer": "不对。事件率NPe/Ts已经包含Pe，再乘一次会错误地得到Pe²量级，严重低估噪声。",
+      "teachingHtmlWithLatex": "<p>每秒传输$N/T_s$个比特，独立比特错误平均事件率为$NP_e/T_s$。在稀少单错近似下，一个错误码组对应一个错误比特，所以错误码组平均时间间隔近似$T_a=T_s/(NP_e)$。</p><p>若进一步把错误脉冲幅度视作零均值、事件间不相关，则冲激误差列的双边谱密度近似为事件率乘条件均方幅度：$G_{e_e}(f)\\approx[NP_e/T_s][(4^N-1)(\\Delta v)^2/(3N)]=P_e(4^N-1)(\\Delta v)^2/(3T_s)$。</p><p>原页略去$4^N-1$中的1得到大N式。这里每码组的出错概率已经通过事件率计入，不能再额外乘一次$P_e$。若误码成串、译码误差有非零均值或明显相关，则白谱近似需重新检验。</p>",
+      "formulas": [
+        "N/T_s",
+        "NP_e/T_s",
+        "T_a=T_s/(NP_e)",
+        "G_{e_e}(f)\\approx[NP_e/T_s][(4^N-1)(\\Delta v)^2/(3N)]=P_e(4^N-1)(\\Delta v)^2/(3T_s)",
+        "4^N-1",
+        "P_e"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-bit-error"
+      ],
+      "references": []
+    },
+    {
+      "page": 89,
+      "title": "误码信噪比约1/(4Pe)：保留有限码长项看近似来源",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=89",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-89.webp",
+      "body": "单位增益低通的双边带宽为$2f_H=1/T_s$，所以积分得到$N_e\\approx P_e(4^N-1)(\\Delta v)^2/(3T_s^2)$。这里仍是上一页的稀少单错、白化近似，只是尚未忽略有限N的减1项。\n\n结合$S_o=4^N(\\Delta v)^2/(12T_s^2)$，得$S_o/N_e\\approx4^N/[4P_e(4^N-1)]$。当$4^N\\gg1$时，才进一步化为原页的$1/(4P_e)$。\n\n因此误码信噪比主要与误码率成反比：将$P_e$缩小10倍，误码信噪比约提高10 dB。但该结论不包含量化噪声，也不适用于任意非均匀折叠码或强多位误码情况。不要因为式中最后看不到N就认为码长和编码映射永远无关。",
+      "question": "只考虑本页大N误码模型，Pe从10⁻⁴降到10⁻⁵时，误码信噪比改善多少？",
+      "answer": "由1/(4Pe)可知线性比值增大10倍，即改善10 dB；总输出改善还受量化噪声限制。",
+      "teachingHtmlWithLatex": "<p>单位增益低通的双边带宽为$2f_H=1/T_s$，所以积分得到$N_e\\approx P_e(4^N-1)(\\Delta v)^2/(3T_s^2)$。这里仍是上一页的稀少单错、白化近似，只是尚未忽略有限N的减1项。</p><p>结合$S_o=4^N(\\Delta v)^2/(12T_s^2)$，得$S_o/N_e\\approx4^N/[4P_e(4^N-1)]$。当$4^N\\gg1$时，才进一步化为原页的$1/(4P_e)$。</p><p>因此误码信噪比主要与误码率成反比：将$P_e$缩小10倍，误码信噪比约提高10 dB。但该结论不包含量化噪声，也不适用于任意非均匀折叠码或强多位误码情况。不要因为式中最后看不到N就认为码长和编码映射永远无关。</p>",
+      "formulas": [
+        "2f_H=1/T_s",
+        "N_e\\approx P_e(4^N-1)(\\Delta v)^2/(3T_s^2)",
+        "S_o=4^N(\\Delta v)^2/(12T_s^2)",
+        "S_o/N_e\\approx4^N/[4P_e(4^N-1)]",
+        "4^N\\gg1",
+        "1/(4P_e)",
+        "P_e"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-floor"
+      ],
+      "references": []
+    },
+    {
+      "page": 90,
+      "title": "两类噪声竞争：增加位数何时不再明显改善输出",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=90",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-90.webp",
+      "body": "把量化噪声与误码噪声在不相关模型下相加，保留有限码长项得到$\\gamma_o\\approx4^N/[1+4P_e(4^N-1)]$。进一步使用大N近似就是课件的$4^N/(1+4P_e4^N)$。\n\n若$4P_e4^N\\ll1$，量化噪声主导，$\\gamma_o\\approx4^N$；若$4P_e4^N\\gg1$，误码噪声主导，$\\gamma_o\\approx1/(4P_e)$。后一个条件与$NP_e\\ll1$并不矛盾：即使比特误码很稀少，高权位造成的幅度损失也可能超过已经很小的量化误差。\n\n“接收输入信噪比高/低”通过检测器决定$P_e$，本页未给出具体调制与判决参数，不能直接把接收输入dB数代进$P_e$位置。若增加N同时提高线路码率，使实际$P_e$改变，还必须重新评估，不能把它强行视为常数。",
+      "question": "误码项与量化项大小相等时，总信噪比相对无误码量化值如何变化？",
+      "answer": "总噪声是原量化噪声的两倍，总信噪比减半，即下降约3.01 dB；这也是由量化主导转向误码主导的过渡位置。",
+      "teachingHtmlWithLatex": "<p>把量化噪声与误码噪声在不相关模型下相加，保留有限码长项得到$\\gamma_o\\approx4^N/[1+4P_e(4^N-1)]$。进一步使用大N近似就是课件的$4^N/(1+4P_e4^N)$。</p><p>若$4P_e4^N\\ll1$，量化噪声主导，$\\gamma_o\\approx4^N$；若$4P_e4^N\\gg1$，误码噪声主导，$\\gamma_o\\approx1/(4P_e)$。后一个条件与$NP_e\\ll1$并不矛盾：即使比特误码很稀少，高权位造成的幅度损失也可能超过已经很小的量化误差。</p><p>“接收输入信噪比高/低”通过检测器决定$P_e$，本页未给出具体调制与判决参数，不能直接把接收输入dB数代进$P_e$位置。若增加N同时提高线路码率，使实际$P_e$改变，还必须重新评估，不能把它强行视为常数。</p>",
+      "formulas": [
+        "\\gamma_o\\approx4^N/[1+4P_e(4^N-1)]",
+        "4^N/(1+4P_e4^N)",
+        "4P_e4^N\\ll1",
+        "\\gamma_o\\approx4^N",
+        "4P_e4^N\\gg1",
+        "\\gamma_o\\approx1/(4P_e)",
+        "NP_e\\ll1",
+        "P_e",
+        "P_e",
+        "P_e"
+      ],
+      "knowledgeNodeIds": [
+        "pcm-floor"
+      ],
+      "references": []
+    },
+    {
+      "page": 91,
+      "title": "DPCM为何能省位：利用相关性缩小要编码的残差",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=91",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-91.webp",
+      "body": "相邻样值存在相关性时，可以用过去信息预测当前样值，只传实际值与预测值之差。若预测有效，残差的典型幅度范围或方差小于原信号，在保持相近量化步长时，所需量化级数和固定码长可能减少。\n\n这项收益依赖信源统计与预测质量，不是所有信号都能压缩。对难以预测的白噪声样值，过去信息可能几乎无助；若残差偶发大幅跳变超过量化器范围，也会产生过载失真。比较码率时必须同时规定允许失真、过载概率与预测参数开销。\n\n真正可同步实现的预测必须以双方都拥有的重建历史为依据。发送端虽知道原样值，但若独自用原历史预测而接收端只能用重建历史，两个预测值就可能不一致，残差相加后无法得到相同输出。",
+      "question": "只要把原样值改成相邻样值差，就一定能无损降低固定码长吗？",
+      "answer": "不一定。残差可能仍很大，且固定有限量化有损；收益依赖相关性、预测方式、量化范围与容许失真，双方还必须保持一致状态。",
+      "teachingHtmlWithLatex": "<p>相邻样值存在相关性时，可以用过去信息预测当前样值，只传实际值与预测值之差。若预测有效，残差的典型幅度范围或方差小于原信号，在保持相近量化步长时，所需量化级数和固定码长可能减少。</p><p>这项收益依赖信源统计与预测质量，不是所有信号都能压缩。对难以预测的白噪声样值，过去信息可能几乎无助；若残差偶发大幅跳变超过量化器范围，也会产生过载失真。比较码率时必须同时规定允许失真、过载概率与预测参数开销。</p><p>真正可同步实现的预测必须以双方都拥有的重建历史为依据。发送端虽知道原样值，但若独自用原历史预测而接收端只能用重建历史，两个预测值就可能不一致，残差相加后无法得到相同输出。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "dpcm-loop"
+      ],
+      "references": []
+    },
+    {
+      "page": 92,
+      "title": "DPCM框图的两条反馈：发送端也要本地重建",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=92",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-92.webp",
+      "body": "发送端用预测值$\\widehat m_k$与当前样值$m_k$相减得残差$e_k$，量化成$\\widetilde e_k$后送往编码信道。同时，发送端将$\\widetilde e_k+\\widehat m_k$相加，形成自己的重建值$\\widetilde m_k$并反馈给预测器。\n\n接收端解码得到残差重建值，再与自身预测值相加，得到输出样值。若初始状态相同、预测规则相同且信道无误码，接收端可以逐步复制发送端的本地重建轨迹。\n\n图中最值得追踪的是量化器输出的分叉：它既向信道发送，也进入本地重建。若反馈取量化器之前的残差，发送端将使用比接收端更精确的历史，破坏闭环同步。",
+      "question": "发送端已知原样值，为什么还要计算一个较不精确的本地重建值？",
+      "answer": "因为接收端只有量化残差和重建历史。发送端用同样的重建历史预测，才能保证双方下一时刻的预测值一致。",
+      "teachingHtmlWithLatex": "<p>发送端用预测值$\\widehat m_k$与当前样值$m_k$相减得残差$e_k$，量化成$\\widetilde e_k$后送往编码信道。同时，发送端将$\\widetilde e_k+\\widehat m_k$相加，形成自己的重建值$\\widetilde m_k$并反馈给预测器。</p><p>接收端解码得到残差重建值，再与自身预测值相加，得到输出样值。若初始状态相同、预测规则相同且信道无误码，接收端可以逐步复制发送端的本地重建轨迹。</p><p>图中最值得追踪的是量化器输出的分叉：它既向信道发送，也进入本地重建。若反馈取量化器之前的残差，发送端将使用比接收端更精确的历史，破坏闭环同步。</p>",
+      "formulas": [
+        "\\widehat m_k",
+        "m_k",
+        "e_k",
+        "\\widetilde e_k",
+        "\\widetilde e_k+\\widehat m_k",
+        "\\widetilde m_k"
+      ],
+      "knowledgeNodeIds": [
+        "dpcm-loop"
+      ],
+      "references": []
+    },
+    {
+      "page": 93,
+      "title": "DPCM逐样值递推：残差量化后加回同一个预测值",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=93",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-93.webp",
+      "body": "本页两个核心式为$e_k=m_k-\\widehat m_k$与$\\widetilde m_k=\\widehat m_k+\\widetilde e_k$。前者确定量化器输入，后者确定双方共享的重建历史。不能把$e_k$与$\\widetilde e_k$混写，它们之间的差正是量化误差。\n\n用补充小例检查：若预测值为10，当前样值10.7，残差为0.7；量化器把它重建为0.5，则本地输出10.5，输入与输出之差0.2。下一时刻预测器应使用10.5，而不是10.7。\n\n这种反馈不会使量化误差凭空消失。它使当前误差保持为残差量化器的输入输出差，并让双方状态一致；预测降低残差动态范围，才为减少码长提供可能。",
+      "question": "例中接收端拿到量化残差0.5且预测值10，应输出多少？",
+      "answer": "输出10.5，与发送端本地重建一致。若发送端下一步使用10.7而接收端使用10.5，预测状态就会失配。",
+      "teachingHtmlWithLatex": "<p>本页两个核心式为$e_k=m_k-\\widehat m_k$与$\\widetilde m_k=\\widehat m_k+\\widetilde e_k$。前者确定量化器输入，后者确定双方共享的重建历史。不能把$e_k$与$\\widetilde e_k$混写，它们之间的差正是量化误差。</p><p>用补充小例检查：若预测值为10，当前样值10.7，残差为0.7；量化器把它重建为0.5，则本地输出10.5，输入与输出之差0.2。下一时刻预测器应使用10.5，而不是10.7。</p><p>这种反馈不会使量化误差凭空消失。它使当前误差保持为残差量化器的输入输出差，并让双方状态一致；预测降低残差动态范围，才为减少码长提供可能。</p>",
+      "formulas": [
+        "e_k=m_k-\\widehat m_k",
+        "\\widetilde m_k=\\widehat m_k+\\widetilde e_k",
+        "e_k",
+        "\\widetilde e_k"
+      ],
+      "knowledgeNodeIds": [
+        "dpcm-error"
+      ],
+      "references": []
+    },
+    {
+      "page": 94,
+      "title": "线性预测器：过去p个重建样值的加权和",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=94",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-94.webp",
+      "body": "预测器表达式为$\\widehat m_k=\\sum_{i=1}^{p}a_i\\widetilde m_{k-i}$。p为预测阶数，$a_i$为系数，输入是已经得到的重建样值而不是未来样值。固定预测器在本段分析中把这些系数视为常数。\n\n无误码时，若开始之前的p个重建状态一致，并使用同样系数，则可用归纳法证明同步：双方当前预测值相同；收到相同量化残差后当前重建值相同；于是下一轮仍拥有相同历史。\n\n“信道无误码”本身还不够，初始状态与算法也必须一致。若码流中发生一次错误，接收重建历史与发送端偏离，影响可能通过预测器延续；延续程度与预测系数、稳定性及恢复机制有关。",
+      "question": "为何不能只说“无误码时必然同步”，而完全不管初始状态？",
+      "answer": "不同初始历史会产生不同预测值；即使残差码字相同，相加后的输出也可能不同。同步结论需要相同初始状态和相同预测规则。",
+      "teachingHtmlWithLatex": "<p>预测器表达式为$\\widehat m_k=\\sum_{i=1}^{p}a_i\\widetilde m_{k-i}$。p为预测阶数，$a_i$为系数，输入是已经得到的重建样值而不是未来样值。固定预测器在本段分析中把这些系数视为常数。</p><p>无误码时，若开始之前的p个重建状态一致，并使用同样系数，则可用归纳法证明同步：双方当前预测值相同；收到相同量化残差后当前重建值相同；于是下一轮仍拥有相同历史。</p><p>“信道无误码”本身还不够，初始状态与算法也必须一致。若码流中发生一次错误，接收重建历史与发送端偏离，影响可能通过预测器延续；延续程度与预测系数、稳定性及恢复机制有关。</p>",
+      "formulas": [
+        "\\widehat m_k=\\sum_{i=1}^{p}a_i\\widetilde m_{k-i}",
+        "a_i"
+      ],
+      "knowledgeNodeIds": [
+        "dpcm-error"
+      ],
+      "references": []
+    },
+    {
+      "page": 95,
+      "title": "DPCM输出误差等于残差量化误差，收益来自残差统计",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=95",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-95.webp",
+      "body": "令输出误差$q_k=m_k-\\widetilde m_k$。代入$m_k=\\widehat m_k+e_k$及$\\widetilde m_k=\\widehat m_k+\\widetilde e_k$，可得$q_k=e_k-\\widetilde e_k$。在同步、无信道误码的前提下，预测值在相减时消去。\n\n所以输出量化信噪比为$E[m_k^2]/E[q_k^2]$，分子仍是原信号功率，不是残差功率。预测不会凭代数运算把量化噪声消除；若残差方差更小，就可用更窄量化范围在同样码长下获得更小步长，或在同样步长下减少码长。\n\n原页将预测系数随统计特性调整称为ADPCM方向。自适应系统还要明确两端如何得到相同参数；仅在发送端随意改变系数而不让接收端同步，不能构成正确的自适应编码。这里不把未给出的具体标准参数当作课程既有内容。",
+      "question": "DPCM信噪比分子应写E[e²]还是E[m²]？",
+      "answer": "若评价恢复出的原信号质量，应写E[m²]。E[e²]是预测残差功率，可用于分析预测收益，但不是原信号输出信噪比的分子。",
+      "teachingHtmlWithLatex": "<p>令输出误差$q_k=m_k-\\widetilde m_k$。代入$m_k=\\widehat m_k+e_k$及$\\widetilde m_k=\\widehat m_k+\\widetilde e_k$，可得$q_k=e_k-\\widetilde e_k$。在同步、无信道误码的前提下，预测值在相减时消去。</p><p>所以输出量化信噪比为$E[m_k^2]/E[q_k^2]$，分子仍是原信号功率，不是残差功率。预测不会凭代数运算把量化噪声消除；若残差方差更小，就可用更窄量化范围在同样码长下获得更小步长，或在同样步长下减少码长。</p><p>原页将预测系数随统计特性调整称为ADPCM方向。自适应系统还要明确两端如何得到相同参数；仅在发送端随意改变系数而不让接收端同步，不能构成正确的自适应编码。这里不把未给出的具体标准参数当作课程既有内容。</p>",
+      "formulas": [
+        "q_k=m_k-\\widetilde m_k",
+        "m_k=\\widehat m_k+e_k",
+        "\\widetilde m_k=\\widehat m_k+\\widetilde e_k",
+        "q_k=e_k-\\widetilde e_k",
+        "E[m_k^2]/E[q_k^2]"
+      ],
+      "knowledgeNodeIds": [
+        "dpcm-error"
+      ],
+      "references": []
+    },
+    {
+      "page": 96,
+      "title": "增量调制的“一位”表示相对重建状态的升降",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=96",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-96.webp",
+      "body": "原页把增量调制描述为用一位表示相邻抽样值的相对大小。结合随后框图，更准确的比较对象是当前原样值$m_k$与上一时刻重建值$\\widetilde m_{k-1}$，而不是两个相邻原始样值$m_k$与$m_{k-1}$。\n\n基本固定步长ΔM可视为DPCM的特殊情形：预测器为一个单位延迟，预测值等于前一个重建值；残差量化只有$+\\sigma$和$-\\sigma$两个输出。因此每次用一位告诉接收端上升还是下降一个台阶。\n\n仅把任意DPCM量化级数改成2还不够，若预测器仍是一般多阶加权结构，就不是这里的基本增量调制。它用更高采样率和递推状态换取每样值只有一位，必须同时分析跟踪速度与颗粒噪声。",
+      "question": "若当前原样值比上一原样值更高，ΔM一定发送“上升”吗？",
+      "answer": "不一定。它比较当前样值与上一重建值；如果重建值仍高于当前样值，仍应发送下降，原样值的相邻趋势不能替代实际判决。",
+      "teachingHtmlWithLatex": "<p>原页把增量调制描述为用一位表示相邻抽样值的相对大小。结合随后框图，更准确的比较对象是当前原样值$m_k$与上一时刻重建值$\\widetilde m_{k-1}$，而不是两个相邻原始样值$m_k$与$m_{k-1}$。</p><p>基本固定步长ΔM可视为DPCM的特殊情形：预测器为一个单位延迟，预测值等于前一个重建值；残差量化只有$+\\sigma$和$-\\sigma$两个输出。因此每次用一位告诉接收端上升还是下降一个台阶。</p><p>仅把任意DPCM量化级数改成2还不够，若预测器仍是一般多阶加权结构，就不是这里的基本增量调制。它用更高采样率和递推状态换取每样值只有一位，必须同时分析跟踪速度与颗粒噪声。</p>",
+      "formulas": [
+        "m_k",
+        "\\widetilde m_{k-1}",
+        "m_k",
+        "m_{k-1}",
+        "+\\sigma",
+        "-\\sigma"
+      ],
+      "knowledgeNodeIds": [
+        "delta"
+      ],
+      "references": []
+    },
+    {
+      "page": 97,
+      "title": "阶梯逼近规则：先比较旧状态，再更新一个台阶",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=97",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-97.webp",
+      "body": "把时间分成间隔$T_s$，固定幅度台阶为$\\sigma$。每次先算$e_k=m(kT_s)-\\widetilde m_{k-1}$；若$e_k>0$，量化输出$+\\sigma$并编码1；若$e_k<0$，输出$-\\sigma$并编码0。随后更新$\\widetilde m_k=\\widetilde m_{k-1}+\\widetilde e_k$。\n\n例如初始重建值0、$\\sigma=1$，样值依次为0.6、0.8、1.4：第一次向上到1；第二次0.8低于旧重建1，所以向下到0；第三次向上到1。码字是101，而不是仅按原样值一直上升写成111。\n\n样值恰好等于旧状态时需要明确零差判决规则；基本二电平量化没有“原地不动”第三输出。台阶大小、采样频率和初始状态都必须先说明，才能唯一复算阶梯波形。",
+      "question": "在上述例子第二步，原信号从0.6升到0.8，为什么仍发送0？",
+      "answer": "因为上一重建值是1，而当前0.8比1低；判决要求重建值下降一个台阶到0，不是描述相邻原样值的增减方向。",
+      "teachingHtmlWithLatex": "<p>把时间分成间隔$T_s$，固定幅度台阶为$\\sigma$。每次先算$e_k=m(kT_s)-\\widetilde m_{k-1}$；若$e_k&gt;0$，量化输出$+\\sigma$并编码1；若$e_k&lt;0$，输出$-\\sigma$并编码0。随后更新$\\widetilde m_k=\\widetilde m_{k-1}+\\widetilde e_k$。</p><p>例如初始重建值0、$\\sigma=1$，样值依次为0.6、0.8、1.4：第一次向上到1；第二次0.8低于旧重建1，所以向下到0；第三次向上到1。码字是101，而不是仅按原样值一直上升写成111。</p><p>样值恰好等于旧状态时需要明确零差判决规则；基本二电平量化没有“原地不动”第三输出。台阶大小、采样频率和初始状态都必须先说明，才能唯一复算阶梯波形。</p>",
+      "formulas": [
+        "T_s",
+        "\\sigma",
+        "e_k=m(kT_s)-\\widetilde m_{k-1}",
+        "e_k>0",
+        "+\\sigma",
+        "e_k<0",
+        "-\\sigma",
+        "\\widetilde m_k=\\widetilde m_{k-1}+\\widetilde e_k",
+        "\\sigma=1"
+      ],
+      "knowledgeNodeIds": [
+        "delta"
+      ],
+      "references": []
+    },
+    {
+      "page": 98,
+      "title": "ΔM框图：单位延迟把累加器状态送回比较器",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=98",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-98.webp",
+      "body": "图中$z^{-1}$表示延迟一个采样周期：本次重建值经过延迟后，成为下一次预测值。编码器和解码器都包含相同的延迟加法环路，量化器则把残差符号映到固定的$\\pm\\sigma$。\n\n若以比特$b_k\\in\\{0,1\\}$表示发送结果，台阶可写为$\\widetilde e_k=\\sigma(2b_k-1)$，递推为$\\widetilde m_k=\\widetilde m_{k-1}+\\sigma(2b_k-1)$。0对应$-\\sigma$，不是零幅度脉冲意义上的“不变”。\n\n原图右侧量化特性在零点跳变，输入残差幅度多大都只能输出相同大小的台阶。好处是每次只需一位；限制是剧烈变化时不能一次跳过很多台阶，慢变时又会在目标附近来回摆动。",
+      "question": "σ=0.2，连续收到001，重建状态相对初值改变多少？",
+      "answer": "三个台阶依次−0.2、−0.2、+0.2，净改变−0.2；不能把两个0当成保持不变。",
+      "teachingHtmlWithLatex": "<p>图中$z^{-1}$表示延迟一个采样周期：本次重建值经过延迟后，成为下一次预测值。编码器和解码器都包含相同的延迟加法环路，量化器则把残差符号映到固定的$\\pm\\sigma$。</p><p>若以比特$b_k\\in\\{0,1\\}$表示发送结果，台阶可写为$\\widetilde e_k=\\sigma(2b_k-1)$，递推为$\\widetilde m_k=\\widetilde m_{k-1}+\\sigma(2b_k-1)$。0对应$-\\sigma$，不是零幅度脉冲意义上的“不变”。</p><p>原图右侧量化特性在零点跳变，输入残差幅度多大都只能输出相同大小的台阶。好处是每次只需一位；限制是剧烈变化时不能一次跳过很多台阶，慢变时又会在目标附近来回摆动。</p>",
+      "formulas": [
+        "z^{-1}",
+        "\\pm\\sigma",
+        "b_k\\in\\{0,1\\}",
+        "\\widetilde e_k=\\sigma(2b_k-1)",
+        "\\widetilde m_k=\\widetilde m_{k-1}+\\sigma(2b_k-1)",
+        "-\\sigma"
+      ],
+      "knowledgeNodeIds": [
+        "delta"
+      ],
+      "references": []
+    },
+    {
+      "page": 99,
+      "title": "ΔM解码是累加：初值和误码会影响后续状态",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=99",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-99.webp",
+      "body": "接收端收到1就上升$\\sigma$，收到0就下降$\\sigma$。展开递推得$\\widetilde m_k=\\widetilde m_{-1}+\\sigma\\sum_{r=0}^{k}(2b_r-1)$，因此同一比特序列加上不同初值会形成整体不同的阶梯波形。\n\n无误码且两端初始状态相同，接收重建与编码器本地重建一致。若某一比特翻转，应该$+\\sigma$的地方执行$-\\sigma$，或反之，会立即造成$2\\sigma$的状态差；在理想无泄漏累加器中，之后相同的台阶不能自动消除这个差。\n\n这里说的是状态差，不是最终低通输出永远具有相同形式的误差。实际电路可能有泄漏、耦合、限幅或重新同步，需按具体结构分析；原页基本递推并未承诺自动纠错。",
+      "question": "若两个理想译码累加器初值相差σ，随后收到完全相同码流，它们会自动重合吗？",
+      "answer": "不会。每次加减相同台阶，状态差保持σ；需要统一初始状态或额外恢复机制。",
+      "teachingHtmlWithLatex": "<p>接收端收到1就上升$\\sigma$，收到0就下降$\\sigma$。展开递推得$\\widetilde m_k=\\widetilde m_{-1}+\\sigma\\sum_{r=0}^{k}(2b_r-1)$，因此同一比特序列加上不同初值会形成整体不同的阶梯波形。</p><p>无误码且两端初始状态相同，接收重建与编码器本地重建一致。若某一比特翻转，应该$+\\sigma$的地方执行$-\\sigma$，或反之，会立即造成$2\\sigma$的状态差；在理想无泄漏累加器中，之后相同的台阶不能自动消除这个差。</p><p>这里说的是状态差，不是最终低通输出永远具有相同形式的误差。实际电路可能有泄漏、耦合、限幅或重新同步，需按具体结构分析；原页基本递推并未承诺自动纠错。</p>",
+      "formulas": [
+        "\\sigma",
+        "\\sigma",
+        "\\widetilde m_k=\\widetilde m_{-1}+\\sigma\\sum_{r=0}^{k}(2b_r-1)",
+        "+\\sigma",
+        "-\\sigma",
+        "2\\sigma"
+      ],
+      "knowledgeNodeIds": [
+        "delta"
+      ],
+      "references": []
+    },
+    {
+      "page": 100,
+      "title": "积分器实现：脉冲面积决定每次台阶高度",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=100",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-100.webp",
+      "body": "原页把离散的延迟加法环路用积分器实现。每个判决比特触发正或负的脉冲，积分器把脉冲面积累积成阶梯状态；要产生$\\pm\\sigma$的更新，脉冲面积与积分器增益的乘积必须等于$\\pm\\sigma$。\n\n发送端在时刻$t_k$比较当前输入与更新前的本地积分输出，再决定本次脉冲符号。接收端用同样脉冲与积分器重建阶梯，最后低通滤波减弱采样脉冲与高频颗粒成分。\n\n因此“积分器替代累加器”需要正确的时间和幅度标定，不是任何积分电路直接接比特0/1即可。若把单极性0/1电压不经双极性映射就积分，输出只会上升或保持，无法实现本章的上下台阶。",
+      "question": "为什么ΔM硬件中的脉冲发生器必须区分正、负面积？",
+      "answer": "因为码1和码0分别要求+σ和−σ的状态增量。仅用0与正电压积分不能产生下降台阶，必须通过双极性脉冲或等效差分电路实现。",
+      "teachingHtmlWithLatex": "<p>原页把离散的延迟加法环路用积分器实现。每个判决比特触发正或负的脉冲，积分器把脉冲面积累积成阶梯状态；要产生$\\pm\\sigma$的更新，脉冲面积与积分器增益的乘积必须等于$\\pm\\sigma$。</p><p>发送端在时刻$t_k$比较当前输入与更新前的本地积分输出，再决定本次脉冲符号。接收端用同样脉冲与积分器重建阶梯，最后低通滤波减弱采样脉冲与高频颗粒成分。</p><p>因此“积分器替代累加器”需要正确的时间和幅度标定，不是任何积分电路直接接比特0/1即可。若把单极性0/1电压不经双极性映射就积分，输出只会上升或保持，无法实现本章的上下台阶。</p>",
+      "formulas": [
+        "\\pm\\sigma",
+        "\\pm\\sigma",
+        "t_k"
+      ],
+      "knowledgeNodeIds": [
+        "delta-circuit"
+      ],
+      "references": []
+    },
+    {
+      "page": 101,
+      "title": "ΔM接收链：双极性脉冲、积分、低通各做一件事",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=101",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-101.webp",
+      "body": "本页把接收过程拆成三个动作。脉冲发生器将码1与码0分别变成正、负脉冲；积分器把每个脉冲变成上升或下降一个$\\sigma$的状态变化；低通滤波器对重建波形进行平滑，抑制不需要的高频成分。\n\n积分并不是低通重建的同义词。积分器负责保存累计的幅度状态，若去掉它而只将双极性码流低通，通常得到的是增量趋势的低频成分，而不是原幅度轨迹。最终低通则不改变“每个码字代表一个台阶方向”的编码语义。\n\n实际脉冲宽度、面积和积分增益需要配套。相同峰值的窄脉冲与宽脉冲可能造成不同台阶；比较接收波形时，应看脉冲面积及状态更新量，不应只看示意图中脉冲的画高。",
+      "question": "如果译码器保留低通却删掉积分器，是否仍按原定义恢复信号幅度？",
+      "answer": "通常不能。码流表达的是增量方向，先累计才能恢复幅度状态；低通平滑本身不能替代这一累计关系。",
+      "teachingHtmlWithLatex": "<p>本页把接收过程拆成三个动作。脉冲发生器将码1与码0分别变成正、负脉冲；积分器把每个脉冲变成上升或下降一个$\\sigma$的状态变化；低通滤波器对重建波形进行平滑，抑制不需要的高频成分。</p><p>积分并不是低通重建的同义词。积分器负责保存累计的幅度状态，若去掉它而只将双极性码流低通，通常得到的是增量趋势的低频成分，而不是原幅度轨迹。最终低通则不改变“每个码字代表一个台阶方向”的编码语义。</p><p>实际脉冲宽度、面积和积分增益需要配套。相同峰值的窄脉冲与宽脉冲可能造成不同台阶；比较接收波形时，应看脉冲面积及状态更新量，不应只看示意图中脉冲的画高。</p>",
+      "formulas": [
+        "\\sigma"
+      ],
+      "knowledgeNodeIds": [
+        "delta-circuit"
+      ],
+      "references": []
+    },
+    {
+      "page": 102,
+      "title": "沿编码示意图检查：误差符号决定下一步阶梯",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=102",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-102.webp",
+      "body": "原图由上到下展示原波形、抽样时刻与样值、比较误差、阶梯近似和最终二进制输出。正确的阅读方向是每个抽样时刻先比较当前样值与旧阶梯状态，再根据误差正负改变一个台阶。\n\n图中连续的一串1对应阶梯连续上升，连续0对应阶梯下降；在转折附近，比特变化由比较误差决定，未必恰好发生在连续波形极大值所在时刻。原图是原理示意，未给出每个样值的精确坐标，不应据图形比例编造一份精确数值序列。\n\n自学时可以自定$\\sigma$、初值和一组样值进行独立模拟，但必须标为补充例，不能声称是图中未标出的原数据。每一步写出旧状态、当前样值、差值、比特、新状态五列，可核实是否错误使用了前一个原样值。",
+      "question": "在这张多行示意图中，验证某一位码最直接需要哪两个数？",
+      "answer": "需要该时刻原样值和更新前的重建状态；两者之差决定升降。只看原波形相邻两点的趋势不足以验证。",
+      "teachingHtmlWithLatex": "<p>原图由上到下展示原波形、抽样时刻与样值、比较误差、阶梯近似和最终二进制输出。正确的阅读方向是每个抽样时刻先比较当前样值与旧阶梯状态，再根据误差正负改变一个台阶。</p><p>图中连续的一串1对应阶梯连续上升，连续0对应阶梯下降；在转折附近，比特变化由比较误差决定，未必恰好发生在连续波形极大值所在时刻。原图是原理示意，未给出每个样值的精确坐标，不应据图形比例编造一份精确数值序列。</p><p>自学时可以自定$\\sigma$、初值和一组样值进行独立模拟，但必须标为补充例，不能声称是图中未标出的原数据。每一步写出旧状态、当前样值、差值、比特、新状态五列，可核实是否错误使用了前一个原样值。</p>",
+      "formulas": [
+        "\\sigma"
+      ],
+      "knowledgeNodeIds": [
+        "delta-circuit"
+      ],
+      "references": []
+    },
+    {
+      "page": 103,
+      "title": "译码图的折线与阶梯：脉冲形状决定区间内形状",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=103",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-103.webp",
+      "body": "本页先把0/1映射成正负驱动，经积分后得到上升、下降的折线，再经低通得到平滑曲线。前页画阶梯，本页画区间内线性斜坡，并不必然矛盾：窄脉冲积分近似瞬时跳阶，持续一个码元的矩形电平积分则在区间内形成斜坡。\n\n只要每个周期的积分增量都是$\\pm\\sigma$，在采样端点上可以对应相同的离散累加递推。连续时间区间内的波形、频谱和滤波需求仍受脉冲形状影响，不能说这两种实现所有时刻完全相同。\n\n最后的光滑曲线是带限重建示意，不代表所有量化误差都被清除。低通可压低带外颗粒成分，却保留落在信号通带内的误差；若存在斜率过载，单靠平滑更不能恢复从未跟上的幅度变化。",
+      "question": "本页积分器输出画成斜线，是否证明前页阶梯递推公式错误？",
+      "answer": "不是。持续矩形驱动积分会产生斜坡，窄脉冲积分近似阶梯；应比较每周期累计增量及采样端点，而不是把示意画法当成同一种连续脉冲实现。",
+      "teachingHtmlWithLatex": "<p>本页先把0/1映射成正负驱动，经积分后得到上升、下降的折线，再经低通得到平滑曲线。前页画阶梯，本页画区间内线性斜坡，并不必然矛盾：窄脉冲积分近似瞬时跳阶，持续一个码元的矩形电平积分则在区间内形成斜坡。</p><p>只要每个周期的积分增量都是$\\pm\\sigma$，在采样端点上可以对应相同的离散累加递推。连续时间区间内的波形、频谱和滤波需求仍受脉冲形状影响，不能说这两种实现所有时刻完全相同。</p><p>最后的光滑曲线是带限重建示意，不代表所有量化误差都被清除。低通可压低带外颗粒成分，却保留落在信号通带内的误差；若存在斜率过载，单靠平滑更不能恢复从未跟上的幅度变化。</p>",
+      "formulas": [
+        "\\pm\\sigma"
+      ],
+      "knowledgeNodeIds": [
+        "delta-circuit"
+      ],
+      "references": []
+    },
+    {
+      "page": 104,
+      "title": "两类ΔM失真：台阶过大与跟踪过慢",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=104",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-104.webp",
+      "body": "固定步长阶梯不能精确贴合任意模拟波形，慢变区域会在信号附近上下摆动，这类误差称一般量化噪声或颗粒噪声。即使码流传输完全正确，有限台阶也不会自动消失。\n\n当输入变化速度超过每周期最多一个台阶的跟踪能力时，阶梯会连续向一个方向移动却仍落后于信号，形成斜率过载失真。它不是普通PCM的“幅度超过满量程”同一概念：即使幅度不大，高频或陡峭变化也可能触发过载。\n\n两者的设计矛盾是，增大$\\sigma$提升可跟踪斜率，却增大细小变化附近的摆动；减小$\\sigma$改善颗粒精度，却更容易追不上。后续提高采样率是在保持较细台阶时提高每秒更新次数的一种办法。",
+      "question": "一个幅度很小但频率很高的正弦信号，能否发生ΔM过载？",
+      "answer": "能。过载看最大斜率2πfA，而不只看幅度A；频率足够高时，即使幅度不大也可能超过σfs。",
+      "teachingHtmlWithLatex": "<p>固定步长阶梯不能精确贴合任意模拟波形，慢变区域会在信号附近上下摆动，这类误差称一般量化噪声或颗粒噪声。即使码流传输完全正确，有限台阶也不会自动消失。</p><p>当输入变化速度超过每周期最多一个台阶的跟踪能力时，阶梯会连续向一个方向移动却仍落后于信号，形成斜率过载失真。它不是普通PCM的“幅度超过满量程”同一概念：即使幅度不大，高频或陡峭变化也可能触发过载。</p><p>两者的设计矛盾是，增大$\\sigma$提升可跟踪斜率，却增大细小变化附近的摆动；减小$\\sigma$改善颗粒精度，却更容易追不上。后续提高采样率是在保持较细台阶时提高每秒更新次数的一种办法。</p>",
+      "formulas": [
+        "\\sigma",
+        "\\sigma"
+      ],
+      "knowledgeNodeIds": [
+        "delta-distortion"
+      ],
+      "references": []
+    },
+    {
+      "page": 105,
+      "title": "从误差波形分辨颗粒噪声与斜率过载",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=105",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-105.webp",
+      "body": "左图阶梯基本围绕原波形运动，误差在零附近来回变化，展示一般量化噪声；右图在输入快速上升段，阶梯连续上升仍明显低于原波形，误差出现连续积累，展示过载。\n\n这里不能简单以“有连续1”判定过载，因为正常跟踪一个缓慢上升段也可能连续发送1。真正判据是输入变化速率是否超过可实现的平均上升速度，以及偏差是否持续扩大。\n\n对实际记录，可同时画输入、重建阶梯与二者差。只看码流可能看不到偏差大小；只看最终低通输出又可能把失真平滑得不明显。两幅图的作用正是把同样一位递推背后的不同误差机制分开。",
+      "question": "连续十个1足以单独证明发生斜率过载吗？",
+      "answer": "不足。还需知道输入斜率、σ与fs；如果输入上升速度不超过σfs，连续1也可能是正常跟踪的一部分。",
+      "teachingHtmlWithLatex": "<p>左图阶梯基本围绕原波形运动，误差在零附近来回变化，展示一般量化噪声；右图在输入快速上升段，阶梯连续上升仍明显低于原波形，误差出现连续积累，展示过载。</p><p>这里不能简单以“有连续1”判定过载，因为正常跟踪一个缓慢上升段也可能连续发送1。真正判据是输入变化速率是否超过可实现的平均上升速度，以及偏差是否持续扩大。</p><p>对实际记录，可同时画输入、重建阶梯与二者差。只看码流可能看不到偏差大小；只看最终低通输出又可能把失真平滑得不明显。两幅图的作用正是把同样一位递推背后的不同误差机制分开。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "delta-distortion"
+      ],
+      "references": []
+    },
+    {
+      "page": 106,
+      "title": "最大跟踪斜率是σfs，单位必须是幅度每秒",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=106",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-106.webp",
+      "body": "每个采样周期$T_s$最多向同一方向改变一个$\\sigma$，所以等效最大跟踪斜率为$K=\\sigma/T_s=\\sigma f_s$。避免斜率过载的基本条件为$\\max_t|dm(t)/dt|\\le\\sigma f_s$。\n\n这里的“斜率”是跨采样周期的平均跟踪能力，不是数学阶梯在跳变瞬间的无限导数。若输入在每个周期的幅度增量明显大于$\\sigma$，重建状态就算每次都朝正确方向移动也追不上。\n\n例如$\\sigma=0.01\\,\\mathrm{V}$、$f_s=32\\,\\mathrm{kHz}$，最大跟踪斜率为320 V/s。把0.01与32直接相乘而忘记kHz的千倍，会把允许斜率算小1000倍；单位检查是本式最直接的自检。",
+      "question": "若采样周期减半而σ不变，最大跟踪斜率怎样变化？",
+      "answer": "fs加倍，所以σfs加倍。每次台阶不变，但单位时间可更新的次数翻倍。",
+      "teachingHtmlWithLatex": "<p>每个采样周期$T_s$最多向同一方向改变一个$\\sigma$，所以等效最大跟踪斜率为$K=\\sigma/T_s=\\sigma f_s$。避免斜率过载的基本条件为$\\max_t|dm(t)/dt|\\le\\sigma f_s$。</p><p>这里的“斜率”是跨采样周期的平均跟踪能力，不是数学阶梯在跳变瞬间的无限导数。若输入在每个周期的幅度增量明显大于$\\sigma$，重建状态就算每次都朝正确方向移动也追不上。</p><p>例如$\\sigma=0.01\\,\\mathrm{V}$、$f_s=32\\,\\mathrm{kHz}$，最大跟踪斜率为320 V/s。把0.01与32直接相乘而忘记kHz的千倍，会把允许斜率算小1000倍；单位检查是本式最直接的自检。</p>",
+      "formulas": [
+        "T_s",
+        "\\sigma",
+        "K=\\sigma/T_s=\\sigma f_s",
+        "\\max_t|dm(t)/dt|\\le\\sigma f_s",
+        "\\sigma",
+        "\\sigma=0.01\\,\\mathrm{V}",
+        "f_s=32\\,\\mathrm{kHz}"
+      ],
+      "knowledgeNodeIds": [
+        "delta-slope"
+      ],
+      "references": []
+    },
+    {
+      "page": 107,
+      "title": "正弦的过载界：频率越高，允许振幅越低",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=107",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-107.webp",
+      "body": "对$m(t)=A\\sin\\omega_0t$，导数为$A\\omega_0\\cos\\omega_0t$，最大绝对斜率是$A\\omega_0=2\\pi f_0A$。因此无斜率过载要求$A\\omega_0\\le\\sigma f_s$，临界最大振幅为$A_{\\max}=\\sigma f_s/\\omega_0$。\n\n例如$\\sigma=0.01$ V、$f_s=32$ kHz、$f_0=1$ kHz时，$A_{\\max}=320/(2\\pi1000)\\approx0.05093$ V。频率加倍而其余不变，允许振幅减半。不要遗漏角频率与频率之间的$2\\pi$。\n\n增大台阶和提高采样率都能提高跟踪能力，但前者增加一般量化噪声，后者增加每秒传输比特数和硬件速度。原页提到语音ΔM采用较高抽样率，是这一折中背景，不是对所有ΔM设备给出统一采样率规范。",
+      "question": "σ=0.01 V、fs=32 kHz、f0=1 kHz时，峰值0.1 V是否满足本页无过载条件？",
+      "answer": "不满足。0.1 V超过约0.05093 V的临界值，最大输入斜率约628.3 V/s，大于可跟踪的320 V/s。",
+      "teachingHtmlWithLatex": "<p>对$m(t)=A\\sin\\omega_0t$，导数为$A\\omega_0\\cos\\omega_0t$，最大绝对斜率是$A\\omega_0=2\\pi f_0A$。因此无斜率过载要求$A\\omega_0\\le\\sigma f_s$，临界最大振幅为$A_{\\max}=\\sigma f_s/\\omega_0$。</p><p>例如$\\sigma=0.01$ V、$f_s=32$ kHz、$f_0=1$ kHz时，$A_{\\max}=320/(2\\pi1000)\\approx0.05093$ V。频率加倍而其余不变，允许振幅减半。不要遗漏角频率与频率之间的$2\\pi$。</p><p>增大台阶和提高采样率都能提高跟踪能力，但前者增加一般量化噪声，后者增加每秒传输比特数和硬件速度。原页提到语音ΔM采用较高抽样率，是这一折中背景，不是对所有ΔM设备给出统一采样率规范。</p>",
+      "formulas": [
+        "m(t)=A\\sin\\omega_0t",
+        "A\\omega_0\\cos\\omega_0t",
+        "A\\omega_0=2\\pi f_0A",
+        "A\\omega_0\\le\\sigma f_s",
+        "A_{\\max}=\\sigma f_s/\\omega_0",
+        "\\sigma=0.01",
+        "f_s=32",
+        "f_0=1",
+        "A_{\\max}=320/(2\\pi1000)\\approx0.05093",
+        "2\\pi"
+      ],
+      "knowledgeNodeIds": [
+        "delta-slope"
+      ],
+      "references": []
+    },
+    {
+      "page": 108,
+      "title": "σ/2起始电平是特定稳态摆动模型，不是普遍硬阈值",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=108",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-108.webp",
+      "body": "原页把起始编码峰值写为$A_{\\min}=\\sigma/2$。可以用以零为中心的两级稳态摆动解释：若重建状态在$-\\sigma/2$与$+\\sigma/2$之间交替，而输入始终严格位于这两值之间，那么低状态下一定向上、高状态下一定向下，码流固定交替，难以体现输入的小幅变化。\n\n在这个居中摆动模型中，输入峰峰值超过$\\sigma$，即正弦峰值超过$\\sigma/2$，才可能打破固定交替。它不是对任意初始状态、直流偏置、量化格对齐及波形都成立的绝对检测阈值。\n\n因此使用$A_{\\min}$算动态范围时，必须说明继承了该近似模型。若换成不同初始台阶位置或带直流偏置的输入，何时改变比特序列应直接由递推判决计算，而不能只比较交流峰值与$\\sigma/2$。",
+      "question": "任意小于σ/2的交流输入都一定产生完全相同码流吗？",
+      "answer": "不能这样泛化。固定交替结论依赖居中的两级稳态摆动和输入范围；初态、直流偏置或格点位置改变后，应重新按比较规则判断。",
+      "teachingHtmlWithLatex": "<p>原页把起始编码峰值写为$A_{\\min}=\\sigma/2$。可以用以零为中心的两级稳态摆动解释：若重建状态在$-\\sigma/2$与$+\\sigma/2$之间交替，而输入始终严格位于这两值之间，那么低状态下一定向上、高状态下一定向下，码流固定交替，难以体现输入的小幅变化。</p><p>在这个居中摆动模型中，输入峰峰值超过$\\sigma$，即正弦峰值超过$\\sigma/2$，才可能打破固定交替。它不是对任意初始状态、直流偏置、量化格对齐及波形都成立的绝对检测阈值。</p><p>因此使用$A_{\\min}$算动态范围时，必须说明继承了该近似模型。若换成不同初始台阶位置或带直流偏置的输入，何时改变比特序列应直接由递推判决计算，而不能只比较交流峰值与$\\sigma/2$。</p>",
+      "formulas": [
+        "A_{\\min}=\\sigma/2",
+        "-\\sigma/2",
+        "+\\sigma/2",
+        "\\sigma",
+        "\\sigma/2",
+        "A_{\\min}",
+        "\\sigma/2"
+      ],
+      "knowledgeNodeIds": [
+        "delta-threshold"
+      ],
+      "references": []
+    },
+    {
+      "page": 109,
+      "title": "抗噪声分析的边界：本段只算一般量化噪声",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=109",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-109.webp",
+      "body": "本页再次画出编码、传输、译码、低通系统，并明确后续只分析一般量化噪声。这意味着不把斜率过载、传输误码、初始状态失配及实际电路漂移等误差同时塞入同一个简单公式。\n\n使用后续结果前应先检查输入斜率不超出$\\sigma f_s$，接收脉冲与发送脉冲一致，且误差可近似为给定分布和谱形。只有在这些前提下，才有意义由量化台阶和滤波带宽估计输出噪声。\n\n如果实际输出远差于估计，首先应判断是否仍在模型适用范围内，而不是机械调整一个常数系数。一般量化噪声公式不是对过载失真的上界，更不包含码流错误经累加器造成的状态偏移。",
+      "question": "输入已明显斜率过载时，能否仍用后面的σ²fH/(3fs)代表总误差功率？",
+      "answer": "不能。该式只描述规定近似模型下的一般量化噪声，过载产生的额外系统性偏差必须另行分析。",
+      "teachingHtmlWithLatex": "<p>本页再次画出编码、传输、译码、低通系统，并明确后续只分析一般量化噪声。这意味着不把斜率过载、传输误码、初始状态失配及实际电路漂移等误差同时塞入同一个简单公式。</p><p>使用后续结果前应先检查输入斜率不超出$\\sigma f_s$，接收脉冲与发送脉冲一致，且误差可近似为给定分布和谱形。只有在这些前提下，才有意义由量化台阶和滤波带宽估计输出噪声。</p><p>如果实际输出远差于估计，首先应判断是否仍在模型适用范围内，而不是机械调整一个常数系数。一般量化噪声公式不是对过载失真的上界，更不包含码流错误经累加器造成的状态偏移。</p>",
+      "formulas": [
+        "\\sigma f_s"
+      ],
+      "knowledgeNodeIds": [
+        "delta-noise"
+      ],
+      "references": []
+    },
+    {
+      "page": 110,
+      "title": "误差在±σ均匀分布时，方差为σ²/3",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=110",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-110.webp",
+      "body": "本页采用$\\widetilde m(t)=m(t)+e(t)$，故这里e定义为重建减原信号，与前面有些页使用的输入减重建相反；误差均方不受符号翻转影响。模型假设e在$[-\\sigma,\\sigma]$均匀分布，密度为$1/(2\\sigma)$。\n\n于是$E[e]=0$，$E[e^2]=\\frac1{2\\sigma}\\int_{-\\sigma}^{\\sigma}e^2\\,de=\\sigma^2/3$。不能直接套PCM中宽度为$\\Delta$的误差区间$[-\\Delta/2,\\Delta/2]$而写成$\\sigma^2/12$；这里总区间宽度是$2\\sigma$。\n\n均匀分布仍是分析假设，不是固定步长递推对所有输入的精确统计定理。尤其稳态小幅周期信号可能产生相关或周期性误差，只有在适当条件下才能继续采用下一页的平坦频谱近似。",
+      "question": "为什么这里是σ²/3而不是σ²/12？",
+      "answer": "因为假定误差覆盖−σ至+σ，宽度为2σ。均匀分布方差为宽度平方除12，即(2σ)²/12=σ²/3。",
+      "teachingHtmlWithLatex": "<p>本页采用$\\widetilde m(t)=m(t)+e(t)$，故这里e定义为重建减原信号，与前面有些页使用的输入减重建相反；误差均方不受符号翻转影响。模型假设e在$[-\\sigma,\\sigma]$均匀分布，密度为$1/(2\\sigma)$。</p><p>于是$E[e]=0$，$E[e^2]=\\frac1{2\\sigma}\\int_{-\\sigma}^{\\sigma}e^2\\,de=\\sigma^2/3$。不能直接套PCM中宽度为$\\Delta$的误差区间$[-\\Delta/2,\\Delta/2]$而写成$\\sigma^2/12$；这里总区间宽度是$2\\sigma$。</p><p>均匀分布仍是分析假设，不是固定步长递推对所有输入的精确统计定理。尤其稳态小幅周期信号可能产生相关或周期性误差，只有在适当条件下才能继续采用下一页的平坦频谱近似。</p>",
+      "formulas": [
+        "\\widetilde m(t)=m(t)+e(t)",
+        "[-\\sigma,\\sigma]",
+        "1/(2\\sigma)",
+        "E[e]=0",
+        "E[e^2]=\\frac1{2\\sigma}\\int_{-\\sigma}^{\\sigma}e^2\\,de=\\sigma^2/3",
+        "\\Delta",
+        "[-\\Delta/2,\\Delta/2]",
+        "\\sigma^2/12",
+        "2\\sigma"
+      ],
+      "knowledgeNodeIds": [
+        "delta-noise"
+      ],
+      "references": []
+    },
+    {
+      "page": 111,
+      "title": "单边谱约定：0到fs积分已经是总噪声功率",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=111",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-111.webp",
+      "body": "原页近似把一般量化噪声功率均匀铺在$0<f<f_s$，写成$P_e(f)=\\sigma^2/(3f_s)$。为了与前页总功率$\\sigma^2/3$一致，这里必须按单边功率谱理解：积分$\\int_0^{f_s}P_e(f)df$已经包含全部功率。\n\n若理想低通只保留0至$f_H$的正频率部分，则输出噪声为$N_q=\\int_0^{f_H}P_e(f)df=\\sigma^2f_H/(3f_s)$。若改用双边谱，应在$|f|<f_s$内使用一半的谱密度，再从$-f_H$积到$f_H$；不能原密度左右再积一次。\n\n这是课件对连续重建误差的谱形近似，不是对任意离散序列都必然成立的精确谱定理。该模型下固定σ与$f_H$时，$f_s$加倍使带内噪声减半；“与输入幅度无关”也只在本模型适用范围内成立。",
+      "question": "若把σ²/(3fs)当作双边密度并在−fH到fH积分，会错多少？",
+      "answer": "会多算一倍。原页密度是与0至fs积分对应的单边口径；改为双边时密度应除以2。",
+      "teachingHtmlWithLatex": "<p>原页近似把一般量化噪声功率均匀铺在$0&lt;f&lt;f_s$，写成$P_e(f)=\\sigma^2/(3f_s)$。为了与前页总功率$\\sigma^2/3$一致，这里必须按单边功率谱理解：积分$\\int_0^{f_s}P_e(f)df$已经包含全部功率。</p><p>若理想低通只保留0至$f_H$的正频率部分，则输出噪声为$N_q=\\int_0^{f_H}P_e(f)df=\\sigma^2f_H/(3f_s)$。若改用双边谱，应在$|f|&lt;f_s$内使用一半的谱密度，再从$-f_H$积到$f_H$；不能原密度左右再积一次。</p><p>这是课件对连续重建误差的谱形近似，不是对任意离散序列都必然成立的精确谱定理。该模型下固定σ与$f_H$时，$f_s$加倍使带内噪声减半；“与输入幅度无关”也只在本模型适用范围内成立。</p>",
+      "formulas": [
+        "0<f<f_s",
+        "P_e(f)=\\sigma^2/(3f_s)",
+        "\\sigma^2/3",
+        "\\int_0^{f_s}P_e(f)df",
+        "f_H",
+        "N_q=\\int_0^{f_H}P_e(f)df=\\sigma^2f_H/(3f_s)",
+        "|f|<f_s",
+        "-f_H",
+        "f_H",
+        "f_H",
+        "f_s"
+      ],
+      "knowledgeNodeIds": [
+        "delta-noise"
+      ],
+      "references": []
+    },
+    {
+      "page": 112,
+      "title": "最大ΔM量噪比：代入临界振幅后σ才消去",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=112",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-112.webp",
+      "body": "对正弦输入，信号平均功率为$S=A^2/2$。在临界过载振幅$A_{\\max}=\\sigma f_s/(2\\pi f_0)$下，最大信号功率为$S_{\\max}=\\sigma^2f_s^2/(8\\pi^2f_0^2)$。\n\n除以一般量化噪声$N_q=\\sigma^2f_H/(3f_s)$，得到$\\gamma_{\\max}=3f_s^3/(8\\pi^2f_0^2f_H)$。σ消去，是因为允许最大信号振幅随σ同比变化，而噪声功率也随σ平方变化，不表示σ对任意固定输入都无关。\n\n若输入振幅A保持不变，不能代入$A_{\\max}$，此时量噪比应为$\\gamma=3A^2f_s/(2\\sigma^2f_H)$。这两个公式回答“最大可用振幅下的性能”与“给定信号的性能”，不能混为一谈。",
+      "question": "固定输入振幅时，把σ加倍且仍无过载，量噪比是否不变？",
+      "answer": "不变只属于临界振幅同时随σ变化的最大值比较。固定A时噪声功率增至4倍，量噪比降为1/4，约下降6.02 dB。",
+      "teachingHtmlWithLatex": "<p>对正弦输入，信号平均功率为$S=A^2/2$。在临界过载振幅$A_{\\max}=\\sigma f_s/(2\\pi f_0)$下，最大信号功率为$S_{\\max}=\\sigma^2f_s^2/(8\\pi^2f_0^2)$。</p><p>除以一般量化噪声$N_q=\\sigma^2f_H/(3f_s)$，得到$\\gamma_{\\max}=3f_s^3/(8\\pi^2f_0^2f_H)$。σ消去，是因为允许最大信号振幅随σ同比变化，而噪声功率也随σ平方变化，不表示σ对任意固定输入都无关。</p><p>若输入振幅A保持不变，不能代入$A_{\\max}$，此时量噪比应为$\\gamma=3A^2f_s/(2\\sigma^2f_H)$。这两个公式回答“最大可用振幅下的性能”与“给定信号的性能”，不能混为一谈。</p>",
+      "formulas": [
+        "S=A^2/2",
+        "A_{\\max}=\\sigma f_s/(2\\pi f_0)",
+        "S_{\\max}=\\sigma^2f_s^2/(8\\pi^2f_0^2)",
+        "N_q=\\sigma^2f_H/(3f_s)",
+        "\\gamma_{\\max}=3f_s^3/(8\\pi^2f_0^2f_H)",
+        "A_{\\max}",
+        "\\gamma=3A^2f_s/(2\\sigma^2f_H)"
+      ],
+      "knowledgeNodeIds": [
+        "delta-max-snr"
+      ],
+      "references": []
+    },
+    {
+      "page": 113,
+      "title": "每倍采样率9 dB还是3 dB，取决于比较时固定什么",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=113",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-113.webp",
+      "body": "课件最大量噪比$\\gamma_{\\max}=3f_s^3/(8\\pi^2f_0^2f_H)$随$f_s^3$增加。在$f_0,f_H$固定并让输入振幅每次取新的临界最大值时，采样率加倍带来8倍量噪比，即$10\\log_{10}8\\approx9.03$ dB。\n\n其中约3.01 dB来自同样σ下带内噪声减半，另外约6.02 dB来自允许振幅加倍、信号功率增至4倍。若同一个固定振幅输入不变，只剩前一个收益，即约3.01 dB，不能承诺所有信号都改善9 dB。\n\n同理，“信号频率加倍使最大量噪比下降约6.02 dB”要求$f_H$固定；若滤波上限也跟着$f_0$同比变化，公式还多一个$f_H$因子，应重新计算。每次用比例结论前，把保持不变的量列出来。",
+      "question": "实验中输入振幅、σ和低通带宽均不变，仅fs翻倍，应期待本模型的3 dB还是9 dB改善？",
+      "answer": "约3.01 dB。9.03 dB对应还把输入振幅提高到新的临界最大值，是不同的比较条件。",
+      "teachingHtmlWithLatex": "<p>课件最大量噪比$\\gamma_{\\max}=3f_s^3/(8\\pi^2f_0^2f_H)$随$f_s^3$增加。在$f_0,f_H$固定并让输入振幅每次取新的临界最大值时，采样率加倍带来8倍量噪比，即$10\\log_{10}8\\approx9.03$ dB。</p><p>其中约3.01 dB来自同样σ下带内噪声减半，另外约6.02 dB来自允许振幅加倍、信号功率增至4倍。若同一个固定振幅输入不变，只剩前一个收益，即约3.01 dB，不能承诺所有信号都改善9 dB。</p><p>同理，“信号频率加倍使最大量噪比下降约6.02 dB”要求$f_H$固定；若滤波上限也跟着$f_0$同比变化，公式还多一个$f_H$因子，应重新计算。每次用比例结论前，把保持不变的量列出来。</p>",
+      "formulas": [
+        "\\gamma_{\\max}=3f_s^3/(8\\pi^2f_0^2f_H)",
+        "f_s^3",
+        "f_0,f_H",
+        "10\\log_{10}8\\approx9.03",
+        "f_H",
+        "f_0",
+        "f_H"
+      ],
+      "knowledgeNodeIds": [
+        "delta-max-snr"
+      ],
+      "references": []
+    },
+    {
+      "page": 114,
+      "title": "时分与频分：资源分配维度不同，同步和隔离都必需",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=114",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-114.webp",
+      "body": "复用让多路信号共享同一传输系统。FDM给不同用户分配不同频带，TDM给不同用户分配周期帧中的不同时隙；二者都需要收发双方知道各自信号放在哪里。\n\n“互不干扰”是设计目标而非天然保证。FDM需要滤波与适当频带隔离，TDM需要定时、帧同步与脉冲间的足够隔离。若时钟错位，把一路的时隙划给另一路，即使频谱看起来正常也会串路。\n\n复用本身不创造无限信道容量。固定每路速率时，多路合并需要更高总传输速率；固定总资源时，新增一路必然占用已有时间或频率份额。不要把复用与压缩混同，后者才试图降低表达同一信号所需的码率。",
+      "question": "把10路相同速率信号做TDM，是否能在完全不增加资源的情况下每路都保持原传输占用？",
+      "answer": "不能无条件做到。总线路必须承载各路码率之和及开销；若总能力固定，就需减少每路份额或采用其他压缩、编码与调制策略。",
+      "teachingHtmlWithLatex": "<p>复用让多路信号共享同一传输系统。FDM给不同用户分配不同频带，TDM给不同用户分配周期帧中的不同时隙；二者都需要收发双方知道各自信号放在哪里。</p><p>“互不干扰”是设计目标而非天然保证。FDM需要滤波与适当频带隔离，TDM需要定时、帧同步与脉冲间的足够隔离。若时钟错位，把一路的时隙划给另一路，即使频谱看起来正常也会串路。</p><p>复用本身不创造无限信道容量。固定每路速率时，多路合并需要更高总传输速率；固定总资源时，新增一路必然占用已有时间或频率份额。不要把复用与压缩混同，后者才试图降低表达同一信号所需的码率。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "tdm"
+      ],
+      "references": []
+    },
+    {
+      "page": 115,
+      "title": "两路抽样脉冲交错，不是把两条波形幅度相加",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=115",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-115.webp",
+      "body": "原图用两种颜色画出两路波形及交替出现的抽样脉冲。同一条公共时间轴上，不同位置的脉冲分别代表不同通道的样值；每个脉冲幅度仍属于它自己的原信号，不是两路同一时刻幅度之和。\n\n如果每路每隔T取一个样值，两路错开$T/2$发送，则公共链路平均每T需要承载两个样值，事件率为$2/T$；但单独抽出某一路后，相邻该路样值间隔仍为T。两路各自必须满足相应抽样条件。\n\n分路时需要知道脉冲属于哪一路。若仅把交错样值当作同一条更密采样的单信号输入低通，一般无法恢复任意一条原波形；提高公共事件率并不等于两路信号合成了一个可直接插值的原信号。",
+      "question": "公共链路脉冲间隔T/2，是否说明每一路的抽样率都是2/T？",
+      "answer": "不是。两路交替占时隙，每一路仍每T出现一次，抽样率1/T；2/T是公共链路承载样值的总事件率。",
+      "teachingHtmlWithLatex": "<p>原图用两种颜色画出两路波形及交替出现的抽样脉冲。同一条公共时间轴上，不同位置的脉冲分别代表不同通道的样值；每个脉冲幅度仍属于它自己的原信号，不是两路同一时刻幅度之和。</p><p>如果每路每隔T取一个样值，两路错开$T/2$发送，则公共链路平均每T需要承载两个样值，事件率为$2/T$；但单独抽出某一路后，相邻该路样值间隔仍为T。两路各自必须满足相应抽样条件。</p><p>分路时需要知道脉冲属于哪一路。若仅把交错样值当作同一条更密采样的单信号输入低通，一般无法恢复任意一条原波形；提高公共事件率并不等于两路信号合成了一个可直接插值的原信号。</p>",
+      "formulas": [
+        "T/2",
+        "2/T"
+      ],
+      "knowledgeNodeIds": [
+        "tdm"
+      ],
+      "references": []
+    },
+    {
+      "page": 116,
+      "title": "旋转开关模型：输入防混叠、输出重建、两端对齐",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=116",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-116.webp",
+      "body": "本页用发送和接收旋转开关表示周期性复用与分路。发送开关轮流取各路样值；接收开关按相同次序和时刻把每个样值送回对应支路。实际系统可以用电子时序实现，并不需要机械开关。\n\n各输入前的低通限制带宽，帮助满足每一路自身采样率的防混叠条件；各输出后的低通完成该路重建。公共线路必须传送比单路更密集的时隙，因而所需传输带宽不能直接按单路模拟带宽照抄。\n\n图上的“同步”既包括共同周期，也包括正确相位与通道顺序。两个开关转速相同但错开一个时隙，仍会把第1路送到第2路等，属于稳定错路而不是正确同步。",
+      "question": "收发开关转速完全相同，却固定错开一个时隙，会怎样？",
+      "answer": "可能持续把每一路分配到错误的输出通道。频率一致不足以保证帧与时隙相位一致，仍需正确的分路定位。",
+      "teachingHtmlWithLatex": "<p>本页用发送和接收旋转开关表示周期性复用与分路。发送开关轮流取各路样值；接收开关按相同次序和时刻把每个样值送回对应支路。实际系统可以用电子时序实现，并不需要机械开关。</p><p>各输入前的低通限制带宽，帮助满足每一路自身采样率的防混叠条件；各输出后的低通完成该路重建。公共线路必须传送比单路更密集的时隙，因而所需传输带宽不能直接按单路模拟带宽照抄。</p><p>图上的“同步”既包括共同周期，也包括正确相位与通道顺序。两个开关转速相同但错开一个时隙，仍会把第1路送到第2路等，属于稳定错路而不是正确同步。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "tdm"
+      ],
+      "references": []
+    },
+    {
+      "page": 117,
+      "title": "每路8 kHz与开关每秒8000周是一回事，总事件率另算",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=117",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-117.webp",
+      "body": "原例每路语音以8 kHz抽样，发送开关每秒轮询8000周，每周得到每一路的一个样值。因此帧周期或轮询周期$T_s=1/8000=125\\,\\mu s$，并不随复用路数改变。\n\n若一周有n个等长路时隙且忽略额外开销，每路时隙为$T_c=T_s/n$，公共样值事件率为$nf_s$。例如n=32时，时隙长$125/32=3.90625\\,\\mu s$，公共链路每秒承载256000个时隙。\n\n此处样值脉冲本质上仍是PAM，可随后量化并编码为PCM。不要因为已有时隙就断定脉冲幅度已经数字化；时间位置离散与幅度离散是不同操作。",
+      "question": "增加到32个时隙后，每路语音的采样间隔是否缩短到3.90625μs？",
+      "answer": "没有。3.90625μs是一个路时隙的占用时间；同一路下一次出现仍要等完整125μs帧周期。",
+      "teachingHtmlWithLatex": "<p>原例每路语音以8 kHz抽样，发送开关每秒轮询8000周，每周得到每一路的一个样值。因此帧周期或轮询周期$T_s=1/8000=125\\,\\mu s$，并不随复用路数改变。</p><p>若一周有n个等长路时隙且忽略额外开销，每路时隙为$T_c=T_s/n$，公共样值事件率为$nf_s$。例如n=32时，时隙长$125/32=3.90625\\,\\mu s$，公共链路每秒承载256000个时隙。</p><p>此处样值脉冲本质上仍是PAM，可随后量化并编码为PCM。不要因为已有时隙就断定脉冲幅度已经数字化；时间位置离散与幅度离散是不同操作。</p>",
+      "formulas": [
+        "T_s=1/8000=125\\,\\mu s",
+        "T_c=T_s/n",
+        "nf_s",
+        "125/32=3.90625\\,\\mu s"
+      ],
+      "knowledgeNodeIds": [
+        "tdm-frame"
+      ],
+      "references": []
+    },
+    {
+      "page": 118,
+      "title": "沿帧边界追踪同一路：固定偏移不等于更高采样率",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=118",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-118.webp",
+      "body": "原图第1路在$0,T,2T,\\ldots$附近出现，第2路在$T/n,T+T/n,2T+T/n,\\ldots$附近出现。不同路在一帧内有不同相位偏移，但每一路自身的相邻样值间隔都为T。\n\n组合脉冲列在每帧依次装入1至n路样值。分接器要按“帧号加时隙号”识别样值，而不是仅按幅度高低判断来自哪一路；两路样值恰好同幅度也不影响识别，前提是同步正确。\n\n本图的不同路采样并非严格同时发生。若应用要求多通道同一时刻测量，可能需要同时采样保持后再串行发送；普通顺序轮询图本身不能证明所有通道采样时刻相同。",
+      "question": "图中第2路比第1路晚T/n，是否构成抽样定理失效？",
+      "answer": "不自动构成。每一路仍以间隔T均匀采样，只是时间原点不同；应分别检查该路带宽与1/T是否满足条件。",
+      "teachingHtmlWithLatex": "<p>原图第1路在$0,T,2T,\\ldots$附近出现，第2路在$T/n,T+T/n,2T+T/n,\\ldots$附近出现。不同路在一帧内有不同相位偏移，但每一路自身的相邻样值间隔都为T。</p><p>组合脉冲列在每帧依次装入1至n路样值。分接器要按“帧号加时隙号”识别样值，而不是仅按幅度高低判断来自哪一路；两路样值恰好同幅度也不影响识别，前提是同步正确。</p><p>本图的不同路采样并非严格同时发生。若应用要求多通道同一时刻测量，可能需要同时采样保持后再串行发送；普通顺序轮询图本身不能证明所有通道采样时刻相同。</p>",
+      "formulas": [
+        "0,T,2T,\\ldots",
+        "T/n,T+T/n,2T+T/n,\\ldots"
+      ],
+      "knowledgeNodeIds": [
+        "tdm-frame"
+      ],
+      "references": []
+    },
+    {
+      "page": 119,
+      "title": "帧、路时隙、位时隙：三层时间长度的换算",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=119",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-119.webp",
+      "body": "本页用n表示一帧路时隙数、N表示每个样值码长。若帧周期$T_F=1/f_s$，每个路时隙$T_c=T_F/n$，每个位时隙$T_b=T_c/N=T_F/(nN)$，故二进制串行比特率$R_b=1/T_b=nNf_s$。\n\n例如32个时隙、每隙8位、帧率8000 Hz，得到每帧256位，$R_b=32\\times8\\times8000=2.048$ Mbit/s；位周期约0.48828125 μs。若其中有时隙用于同步或信令，也必须算进总线路速率。\n\n原页把$R_B$称码元传输速率，在这里一位对应一个二进制码元时数值相同。若后续使用多电平调制，每码元承载多比特，比特率与波特率就必须分开，不能把此式无条件当成任意调制的符号速率。",
+      "question": "32个8位时隙中只有30个是话音，线路速率应乘30还是32？",
+      "answer": "线路速率乘32，包含同步和信令时隙；纯话音净码率才乘30。对应2.048 Mbit/s与1.920 Mbit/s是不同口径。",
+      "teachingHtmlWithLatex": "<p>本页用n表示一帧路时隙数、N表示每个样值码长。若帧周期$T_F=1/f_s$，每个路时隙$T_c=T_F/n$，每个位时隙$T_b=T_c/N=T_F/(nN)$，故二进制串行比特率$R_b=1/T_b=nNf_s$。</p><p>例如32个时隙、每隙8位、帧率8000 Hz，得到每帧256位，$R_b=32\\times8\\times8000=2.048$ Mbit/s；位周期约0.48828125 μs。若其中有时隙用于同步或信令，也必须算进总线路速率。</p><p>原页把$R_B$称码元传输速率，在这里一位对应一个二进制码元时数值相同。若后续使用多电平调制，每码元承载多比特，比特率与波特率就必须分开，不能把此式无条件当成任意调制的符号速率。</p>",
+      "formulas": [
+        "T_F=1/f_s",
+        "T_c=T_F/n",
+        "T_b=T_c/N=T_F/(nN)",
+        "R_b=1/T_b=nNf_s",
+        "R_b=32\\times8\\times8000=2.048",
+        "R_B"
+      ],
+      "knowledgeNodeIds": [
+        "tdm-rate"
+      ],
+      "references": []
+    },
+    {
+      "page": 120,
+      "title": "复接与分接：合并数字群，还要处理时钟与开销",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=120",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-120.webp",
+      "body": "复接把多个低次群组合成一个高次群，分接则从高次群中还原低次群。它比最初把几个模拟样值交错的示意更复杂，因为输入低次群已经各自带有帧结构、时钟与业务内容。\n\n高次群速率通常不仅是若干净业务速率简单相加，还包含成帧、维护以及必要的速率适配开销。不同输入时钟若存在微小差异，需要机制保证连续数据既不丢失也不重复，不能仅用理想同时轮询解释所有数字复接。\n\n原页引入PDH与SDH两类体系，后面应分别理解准同步下的速率适配，以及同步体系的标准化结构和管理。课件中“目前”属于成稿时的背景陈述，不能据此宣称当下所有大容量网络都只使用某一种电话复用方式。",
+      "question": "四路低次群相加后，高次群线路速率一定严格等于四倍吗？",
+      "answer": "不一定。还可能有帧同步、维护与速率适配等开销；应以具体群结构计算，而不是只乘路数。",
+      "teachingHtmlWithLatex": "<p>复接把多个低次群组合成一个高次群，分接则从高次群中还原低次群。它比最初把几个模拟样值交错的示意更复杂，因为输入低次群已经各自带有帧结构、时钟与业务内容。</p><p>高次群速率通常不仅是若干净业务速率简单相加，还包含成帧、维护以及必要的速率适配开销。不同输入时钟若存在微小差异，需要机制保证连续数据既不丢失也不重复，不能仅用理想同时轮询解释所有数字复接。</p><p>原页引入PDH与SDH两类体系，后面应分别理解准同步下的速率适配，以及同步体系的标准化结构和管理。课件中“目前”属于成稿时的背景陈述，不能据此宣称当下所有大容量网络都只使用某一种电话复用方式。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "multiplex"
+      ],
+      "references": []
+    },
+    {
+      "page": 121,
+      "title": "PDH的“准同步”：标称速率一致不等于时钟完全一致",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=121",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-121.webp",
+      "body": "原页介绍以2.048 Mbit/s一次群为起点的E体系，以及以1.544 Mbit/s等层级为背景的T体系，并按课件成稿背景说明地区使用情况。后面的日本与北美高次群速率并不相同，不能把“T体系”理解为所有地区共享完全一致的每一级参数。\n\n准同步的核心是各设备时钟标称接近，但允许小频差。复接器必须适配这些微小速率差，同时传递帧定位和控制信息；否则一条稍快的支路会使缓冲积累，稍慢的支路会造成读取不足。\n\n地区与体系名称是历史教学背景，不是当前网络部署清单。解题应使用明确给定的层级、速率与复接规则，并把标称码率、实际时钟偏差和有效业务速率分开。",
+      "question": "两路都标称2.048 Mbit/s，能否据此断定长期每秒到达的比特数绝对一致？",
+      "answer": "不能。准同步设备可有微小频差，长期累计会导致缓冲偏移，需要速率适配机制；相同标称数值不等于严格同频同相。",
+      "teachingHtmlWithLatex": "<p>原页介绍以2.048 Mbit/s一次群为起点的E体系，以及以1.544 Mbit/s等层级为背景的T体系，并按课件成稿背景说明地区使用情况。后面的日本与北美高次群速率并不相同，不能把“T体系”理解为所有地区共享完全一致的每一级参数。</p><p>准同步的核心是各设备时钟标称接近，但允许小频差。复接器必须适配这些微小速率差，同时传递帧定位和控制信息；否则一条稍快的支路会使缓冲积累，稍慢的支路会造成读取不足。</p><p>地区与体系名称是历史教学背景，不是当前网络部署清单。解题应使用明确给定的层级、速率与复接规则，并把标称码率、实际时钟偏差和有效业务速率分开。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "pdh"
+      ],
+      "references": []
+    },
+    {
+      "page": 122,
+      "title": "PDH速率表：线路码率、话路数与历史勘误",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=122",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-122.webp",
+      "body": "E体系前四级在原表为2.048、8.448、34.368、139.264 Mbit/s，对应30、120、480、1920路64 kbit/s话路。话路净码率分别为1.920、7.680、30.720、122.880 Mbit/s，均不能直接当作线路码率，因为存在成帧、信令和复接等开销。\n\n原表的T体系还分别列出日本与北美高层速率，例如第3级32.064与44.736 Mbit/s，对应480与672路；这说明路数不是按一个全球统一的“四倍”规则推到所有地区。这里保留它作为课件历史比较表，不宣称它是当下所有系统的完整清单。\n\n明确勘误：原表E-5写565.148 Mbit/s；CCITT G.954（1988）Annex B §B.2在PDF第106页、印刷页96给出的标称值为564 992 kbit/s，即564.992 Mbit/s。本讲义保留原图并标注差异，不静默替换；涉及该标准的计算应采用564.992，而不是重复原表数值。",
+      "question": "30路各64 kbit/s为什么不是E1的2.048 Mbit/s？",
+      "answer": "30×64=1.920 Mbit/s是话音净码率，2.048 Mbit/s还包含两个8位时隙的同步/信令等结构。不能把净业务和总线路口径混为一谈。",
+      "teachingHtmlWithLatex": "<p>E体系前四级在原表为2.048、8.448、34.368、139.264 Mbit/s，对应30、120、480、1920路64 kbit/s话路。话路净码率分别为1.920、7.680、30.720、122.880 Mbit/s，均不能直接当作线路码率，因为存在成帧、信令和复接等开销。</p><p>原表的T体系还分别列出日本与北美高层速率，例如第3级32.064与44.736 Mbit/s，对应480与672路；这说明路数不是按一个全球统一的“四倍”规则推到所有地区。这里保留它作为课件历史比较表，不宣称它是当下所有系统的完整清单。</p><p>明确勘误：原表E-5写565.148 Mbit/s；CCITT G.954（1988）Annex B §B.2在PDF第106页、印刷页96给出的标称值为564 992 kbit/s，即564.992 Mbit/s。本讲义保留原图并标注差异，不静默替换；涉及该标准的计算应采用564.992，而不是重复原表数值。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "pdh"
+      ],
+      "references": [
+        {
+          "title": "CCITT G.954（1988），Annex B §B.2，PDF第106页（印刷页96）：564 992 kbit/s",
+          "url": "https://search.itu.int/history/HistoryDigitalCollectionDocLibrary/4.260.43.en.1015.pdf#page=106"
+        }
+      ]
+    },
+    {
+      "page": 123,
+      "title": "沿E体系四路复接图复算每级新增开销",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=123",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-123.webp",
+      "body": "原图从30路64 kbit/s组成一次群开始，再逐层把四个低次群合成一个高次群。话路数可按30、120、480、1920、7680计算，但线路速率不严格等于前一级乘4。\n\n例如四个E1输入合计$4\\times2.048=8.192$ Mbit/s，而E2输出8.448，差0.256 Mbit/s；四个E2合计33.792，E3为34.368，差0.576；四个E3合计137.472，E4为139.264，差1.792。差值表示该层总结构相对四支路总码率的增加，不能全部简单称为用户信令。\n\n最上层原图再次写565.148 Mbit/s，应与上一页同样勘误。按G.954（1988）Annex B的564.992计算，四个139.264合计557.056，差为7.936 Mbit/s。复接比与新增开销分开算，可以避免把图中每个“×4”误读成线路码率精确四倍。",
+      "question": "E2速率8.448能否由2.048直接乘4得到？",
+      "answer": "不能。四个E1合计8.192 Mbit/s，与8.448相差0.256 Mbit/s；必须计入这一层复接结构的额外比特。",
+      "teachingHtmlWithLatex": "<p>原图从30路64 kbit/s组成一次群开始，再逐层把四个低次群合成一个高次群。话路数可按30、120、480、1920、7680计算，但线路速率不严格等于前一级乘4。</p><p>例如四个E1输入合计$4\\times2.048=8.192$ Mbit/s，而E2输出8.448，差0.256 Mbit/s；四个E2合计33.792，E3为34.368，差0.576；四个E3合计137.472，E4为139.264，差1.792。差值表示该层总结构相对四支路总码率的增加，不能全部简单称为用户信令。</p><p>最上层原图再次写565.148 Mbit/s，应与上一页同样勘误。按G.954（1988）Annex B的564.992计算，四个139.264合计557.056，差为7.936 Mbit/s。复接比与新增开销分开算，可以避免把图中每个“×4”误读成线路码率精确四倍。</p>",
+      "formulas": [
+        "4\\times2.048=8.192"
+      ],
+      "knowledgeNodeIds": [
+        "pdh"
+      ],
+      "references": [
+        {
+          "title": "CCITT G.954（1988），Annex B：四路139 264 kbit/s复接及564 992 kbit/s标称速率",
+          "url": "https://search.itu.int/history/HistoryDigitalCollectionDocLibrary/4.260.43.en.1015.pdf#page=105"
+        }
+      ]
+    },
+    {
+      "page": 124,
+      "title": "PCM30/32的三层结构：复帧、帧、时隙",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=124",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-124.webp",
+      "body": "原图最上层是F0至F15共16帧的复帧，每帧125 μs；中层把每帧分成TS0至TS31共32个时隙；最下层把时隙展开为8位。这三层的编号不能相互替换：F16不是TS16，TS16也不是一个完整复帧。\n\n在图示30路随路信令结构中，TS1至TS15放CH1至CH15，TS17至TS31放CH16至CH30；TS0用于帧同步及相关信息，TS16用于信令。一个语音通道每帧得到一个8位样值，因而每秒得到8000个样值。\n\n按可见原图，偶帧TS0为“* 0 0 1 1 0 1 1”，奇帧为“* 1 A 1 1 1 1 1”，与P126正文一致。PDF抽取文字的阅读顺序可能把这两组标签交错，判断应以实际图中标签和码位位置为准。",
+      "question": "CH16的话音样值在TS16吗？",
+      "answer": "在本图PCM30/32随路信令结构中不是。TS16留给信令，CH16的话音样值放在TS17；CH30在TS31。",
+      "teachingHtmlWithLatex": "<p>原图最上层是F0至F15共16帧的复帧，每帧125 μs；中层把每帧分成TS0至TS31共32个时隙；最下层把时隙展开为8位。这三层的编号不能相互替换：F16不是TS16，TS16也不是一个完整复帧。</p><p>在图示30路随路信令结构中，TS1至TS15放CH1至CH15，TS17至TS31放CH16至CH30；TS0用于帧同步及相关信息，TS16用于信令。一个语音通道每帧得到一个8位样值，因而每秒得到8000个样值。</p><p>按可见原图，偶帧TS0为“* 0 0 1 1 0 1 1”，奇帧为“* 1 A 1 1 1 1 1”，与P126正文一致。PDF抽取文字的阅读顺序可能把这两组标签交错，判断应以实际图中标签和码位位置为准。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "e1-frame"
+      ],
+      "references": []
+    },
+    {
+      "page": 125,
+      "title": "一帧为什么恰好125μs：每路每帧一个样值",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=125",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-125.webp",
+      "body": "每路以8000 Hz采样，采样周期为125 μs。PCM30/32将各路本次样值排进同一帧，因此帧周期也为125 μs；每个语音时隙装该路的一个8位样值，而不是连续125 μs的模拟波形本身。\n\n32个时隙中30个承载语音样值，另两个承担图示同步、信令等用途。一帧总长$32\\times8=256$位，语音净载荷$30\\times8=240$位。两者差16位每帧，折算线路开销128 kbit/s。\n\n同一路码率为$8\\times8000=64$ kbit/s，这是本例未压缩PCM的编码速率。不能把它与模拟语音的最高频率4 kHz左右混称为同一种“带宽”；前者是比特每秒，后者是频率范围。",
+      "question": "每帧240位语音样值之外的16位，折合每秒多少比特？",
+      "answer": "16×8000=128000 bit/s，即128 kbit/s。加上1.920 Mbit/s语音净码率得到2.048 Mbit/s。",
+      "teachingHtmlWithLatex": "<p>每路以8000 Hz采样，采样周期为125 μs。PCM30/32将各路本次样值排进同一帧，因此帧周期也为125 μs；每个语音时隙装该路的一个8位样值，而不是连续125 μs的模拟波形本身。</p><p>32个时隙中30个承载语音样值，另两个承担图示同步、信令等用途。一帧总长$32\\times8=256$位，语音净载荷$30\\times8=240$位。两者差16位每帧，折算线路开销128 kbit/s。</p><p>同一路码率为$8\\times8000=64$ kbit/s，这是本例未压缩PCM的编码速率。不能把它与模拟语音的最高频率4 kHz左右混称为同一种“带宽”；前者是比特每秒，后者是频率范围。</p>",
+      "formulas": [
+        "32\\times8=256",
+        "30\\times8=240",
+        "8\\times8000=64"
+      ],
+      "knowledgeNodeIds": [
+        "e1-frame"
+      ],
+      "references": []
+    },
+    {
+      "page": 126,
+      "title": "TS0交替角色：同步码与告警不是同时占同一组位",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=126",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-126.webp",
+      "body": "按本课件图示约定，偶数帧TS0的后7位为帧同步码0011011，首位记为*，用于另外规定的用途。奇数帧TS0的第2位为1，以区别帧同步模式，第3位A表示远端告警：正常0，告警1。\n\n因此检测帧同步时，不应要求每一帧TS0都出现同一7位码；接收器还要识别交替帧的角色。首位*不是固定为0或1的通用同步位，其用途依赖接口规定，不能把整个8位时隙不加区别地背成固定常量。\n\n原页还介绍其余保留位在该结构下的安排。这里沿用课件的基础帧示意，不把它扩张为所有含CRC、多帧或不同选项的E1接口唯一规则；实际设备必须按具体帧结构配置解析。",
+      "question": "奇数帧TS0没有出现0011011，能否立即判定失步？",
+      "answer": "不能。按图示交替结构，奇帧该位置承载非帧同步信息，第二位1还用于区分角色；须结合正确的帧同步判据判断。",
+      "teachingHtmlWithLatex": "<p>按本课件图示约定，偶数帧TS0的后7位为帧同步码0011011，首位记为*，用于另外规定的用途。奇数帧TS0的第2位为1，以区别帧同步模式，第3位A表示远端告警：正常0，告警1。</p><p>因此检测帧同步时，不应要求每一帧TS0都出现同一7位码；接收器还要识别交替帧的角色。首位*不是固定为0或1的通用同步位，其用途依赖接口规定，不能把整个8位时隙不加区别地背成固定常量。</p><p>原页还介绍其余保留位在该结构下的安排。这里沿用课件的基础帧示意，不把它扩张为所有含CRC、多帧或不同选项的E1接口唯一规则；实际设备必须按具体帧结构配置解析。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "ts0"
+      ],
+      "references": []
+    },
+    {
+      "page": 127,
+      "title": "TS16传信令：控制信息与话音内容是不同层次",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=127",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-127.webp",
+      "body": "电话信令用于建立、控制和释放业务，例如呼叫状态与号码相关控制。话音样值则是用户声音本身。TS16在图示PCM30/32结构中安排信令，不能因为它也传比特就把它当作第16路话音。\n\n随路信令CAS按各话路关联分配控制信息；共路信令CCS把多路业务的控制信息汇集到共同信令通道或网络。这里“随路”不要求信令必须与话音占同一个8位时隙，后面的CAS正是通过TS16分时承载与各路对应的控制位。\n\n若某系统无需保留TS16作这种信令，可按相应接口约定重新分配，包括课件所述承载话音的情况；不能在仍需CAS时擅自把TS16当作额外话路，也不能把所有E1线路一概固定为同一种30路布局。",
+      "question": "CAS的信令放在TS16，为什么仍称“随路”而不是必然属于CCS？",
+      "answer": "因为CAS强调信令与具体话路一一关联的组织方式，不等于必须与话音样值处于同一时隙。TS16内各控制位仍按对应话路分配。",
+      "teachingHtmlWithLatex": "<p>电话信令用于建立、控制和释放业务，例如呼叫状态与号码相关控制。话音样值则是用户声音本身。TS16在图示PCM30/32结构中安排信令，不能因为它也传比特就把它当作第16路话音。</p><p>随路信令CAS按各话路关联分配控制信息；共路信令CCS把多路业务的控制信息汇集到共同信令通道或网络。这里“随路”不要求信令必须与话音占同一个8位时隙，后面的CAS正是通过TS16分时承载与各路对应的控制位。</p><p>若某系统无需保留TS16作这种信令，可按相应接口约定重新分配，包括课件所述承载话音的情况；不能在仍需CAS时擅自把TS16当作额外话路，也不能把所有E1线路一概固定为同一种30路布局。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "signaling"
+      ],
+      "references": []
+    },
+    {
+      "page": 128,
+      "title": "16帧CAS复帧：每路4位、每秒500次更新",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=128",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-128.webp",
+      "body": "CAS使用16个帧组成一个复帧，周期$16\\times125\\,\\mu s=2$ ms，重复率500次每秒。F0的TS16用于复帧同步与告警等，其中前四位为0000，后四位按原图为x、y、x、x，y正常0、告警1。\n\nF1至F15各自的TS16有8位，可分成两组4位，分别给两路话路信令，15帧恰好覆盖30路。每路每个复帧得到4位，因此分配的信令位率为$4\\times500=2000$ bit/s。\n\n这2 kbit/s是位置容量，不意味着每秒必然有2000比特独立的新控制信息；信令状态可能重复。也不能误算成每路每帧4位，即32 kbit/s，因为一条话路只在16帧中的指定一帧获得这4位。",
+      "question": "为什么每路CAS信令速率不是4×8000=32 kbit/s？",
+      "answer": "因为每路4位在一个16帧复帧中才出现一次，更新率500次每秒，故为4×500=2 kbit/s。",
+      "teachingHtmlWithLatex": "<p>CAS使用16个帧组成一个复帧，周期$16\\times125\\,\\mu s=2$ ms，重复率500次每秒。F0的TS16用于复帧同步与告警等，其中前四位为0000，后四位按原图为x、y、x、x，y正常0、告警1。</p><p>F1至F15各自的TS16有8位，可分成两组4位，分别给两路话路信令，15帧恰好覆盖30路。每路每个复帧得到4位，因此分配的信令位率为$4\\times500=2000$ bit/s。</p><p>这2 kbit/s是位置容量，不意味着每秒必然有2000比特独立的新控制信息；信令状态可能重复。也不能误算成每路每帧4位，即32 kbit/s，因为一条话路只在16帧中的指定一帧获得这4位。</p>",
+      "formulas": [
+        "16\\times125\\,\\mu s=2",
+        "4\\times500=2000"
+      ],
+      "knowledgeNodeIds": [
+        "multiframe"
+      ],
+      "references": []
+    },
+    {
+      "page": 129,
+      "title": "CAS分配表：Fr对应CHr与CH(r+15)",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=129",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-129.webp",
+      "body": "表中F0的TS16前4位是复帧同步0000；F1的前后4位分别给CH1与CH16，F2给CH2与CH17，依次到F15给CH15与CH30。因此对$r=1,\\ldots,15$，Fr的TS16承载CHr和CH$(r+15)$两路控制位。\n\n例如CH22对应$r=22-15=7$，所以它的信令位在F7的TS16后四位；它的话音样值仍在每帧自己的话音时隙，不会每16帧才发送一次。必须区分“信令位出现的位置”和“话音样值出现的位置”。\n\n一个复帧中TS16总计$16\\times8=128$位，其中$15\\times8=120$位用于30路信令，其余8位用于F0的复帧相关信息。120位乘500为60 kbit/s，再加4 kbit/s的F0位置容量，合为TS16的64 kbit/s。",
+      "question": "CH30的信令位在什么位置，每秒分配多少位？",
+      "answer": "在F15的TS16后4位，每复帧出现一次，500复帧/秒，所以每秒分配2000位；话音样值则仍每帧传送。",
+      "teachingHtmlWithLatex": "<p>表中F0的TS16前4位是复帧同步0000；F1的前后4位分别给CH1与CH16，F2给CH2与CH17，依次到F15给CH15与CH30。因此对$r=1,\\ldots,15$，Fr的TS16承载CHr和CH$(r+15)$两路控制位。</p><p>例如CH22对应$r=22-15=7$，所以它的信令位在F7的TS16后四位；它的话音样值仍在每帧自己的话音时隙，不会每16帧才发送一次。必须区分“信令位出现的位置”和“话音样值出现的位置”。</p><p>一个复帧中TS16总计$16\\times8=128$位，其中$15\\times8=120$位用于30路信令，其余8位用于F0的复帧相关信息。120位乘500为60 kbit/s，再加4 kbit/s的F0位置容量，合为TS16的64 kbit/s。</p>",
+      "formulas": [
+        "r=1,\\ldots,15",
+        "(r+15)",
+        "r=22-15=7",
+        "16\\times8=128",
+        "15\\times8=120"
+      ],
+      "knowledgeNodeIds": [
+        "multiframe"
+      ],
+      "references": []
+    },
+    {
+      "page": 130,
+      "title": "从125μs逐层算出2ms、256位与3.90625μs",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=130",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-130.webp",
+      "body": "帧周期$T_F=125\\,\\mu s$，帧率8000帧/秒；16帧形成复帧，周期2 ms、复帧率500次/秒。一帧含32个时隙，每隙8位，总长256位；一个复帧总长$16\\times256=4096$位。\n\n路时隙长$T_c=T_F/32=3.90625\\,\\mu s$，原页写3.91 μs是舍入值。后续算位周期时应优先使用未舍入的3.90625，以免中间舍入累积成不一致。\n\n可用两条路线互检线路码率：256位/125 μs，或4096位/2 ms，都得到2.048 Mbit/s。若一条算式得到2.048而另一条不是，应检查是否混用了帧数、时隙数或微秒与毫秒单位。",
+      "question": "一个复帧4096位，能否除以125μs求线路速率？",
+      "answer": "不能。4096位对应完整2 ms复帧；125μs只对应256位的一帧。必须让分子和分母描述同一时间块。",
+      "teachingHtmlWithLatex": "<p>帧周期$T_F=125\\,\\mu s$，帧率8000帧/秒；16帧形成复帧，周期2 ms、复帧率500次/秒。一帧含32个时隙，每隙8位，总长256位；一个复帧总长$16\\times256=4096$位。</p><p>路时隙长$T_c=T_F/32=3.90625\\,\\mu s$，原页写3.91 μs是舍入值。后续算位周期时应优先使用未舍入的3.90625，以免中间舍入累积成不一致。</p><p>可用两条路线互检线路码率：256位/125 μs，或4096位/2 ms，都得到2.048 Mbit/s。若一条算式得到2.048而另一条不是，应检查是否混用了帧数、时隙数或微秒与毫秒单位。</p>",
+      "formulas": [
+        "T_F=125\\,\\mu s",
+        "16\\times256=4096",
+        "T_c=T_F/32=3.90625\\,\\mu s"
+      ],
+      "knowledgeNodeIds": [
+        "e1-numbers"
+      ],
+      "references": []
+    },
+    {
+      "page": 131,
+      "title": "关键单位勘误：最小理想基带带宽是1.024MHz",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=131",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-131.webp",
+      "body": "精确位周期为$T_b=125\\,\\mu s/(32\\times8)=0.48828125\\,\\mu s=488.28125$ ns。线路比特率$R_b=32\\times8\\times8000=2.048\\times10^6$ bit/s；若一比特对应一个二进制码元，码元率同为2.048 Mbaud，不能把课件中的MB当作兆字节。\n\n在理想二进制、零码间干扰、零滚降基带模型下，Nyquist最小低通带宽$B_{\\min}=R_b/2=1.024\\times10^6$ Hz，即1.024 MHz。原页写“1.024 KHZ”是千倍单位错误，必须明确更正，保留原图作为核对依据。\n\n这只是特定理想脉冲成形的带宽下限，不等于任何实际E1线路波形都严格只占1.024 MHz。若有滚降系数α的相应Nyquist成形，带宽为$(1+\\alpha)R_b/2$；实际线路编码与带宽定义还要另行说明。30路语音净码率1.920 Mbit/s也不能代替总线路2.048 Mbit/s。",
+      "question": "为什么用30×8×8000再除2不能得到本页系统最小线路带宽？",
+      "answer": "因为遗漏了两个结构时隙，只计算话音净载荷。线路实际发送32×8×8000位每秒，理想二进制下限才是1.024 MHz。",
+      "teachingHtmlWithLatex": "<p>精确位周期为$T_b=125\\,\\mu s/(32\\times8)=0.48828125\\,\\mu s=488.28125$ ns。线路比特率$R_b=32\\times8\\times8000=2.048\\times10^6$ bit/s；若一比特对应一个二进制码元，码元率同为2.048 Mbaud，不能把课件中的MB当作兆字节。</p><p>在理想二进制、零码间干扰、零滚降基带模型下，Nyquist最小低通带宽$B_{\\min}=R_b/2=1.024\\times10^6$ Hz，即1.024 MHz。原页写“1.024 KHZ”是千倍单位错误，必须明确更正，保留原图作为核对依据。</p><p>这只是特定理想脉冲成形的带宽下限，不等于任何实际E1线路波形都严格只占1.024 MHz。若有滚降系数α的相应Nyquist成形，带宽为$(1+\\alpha)R_b/2$；实际线路编码与带宽定义还要另行说明。30路语音净码率1.920 Mbit/s也不能代替总线路2.048 Mbit/s。</p>",
+      "formulas": [
+        "T_b=125\\,\\mu s/(32\\times8)=0.48828125\\,\\mu s=488.28125",
+        "R_b=32\\times8\\times8000=2.048\\times10^6",
+        "B_{\\min}=R_b/2=1.024\\times10^6",
+        "(1+\\alpha)R_b/2"
+      ],
+      "knowledgeNodeIds": [
+        "e1-numbers"
+      ],
+      "references": []
+    },
+    {
+      "page": 132,
+      "title": "SDH同步不等于没有相位差，也不等于不需要指针",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=132",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-132.webp",
+      "body": "SDH以统一的同步传送结构组织数字业务，基本帧周期125 μs。原页强调各设备时钟参考共同高精度标准，这解释了同步体系与准同步体系的设计区别，但“没有定时误差”应理解为理想化教学表述。\n\n实际同步网络仍可能有相位差、抖动、漂移和同步调整；后面的指针机制正用于定位虚容器相对于上层帧的位置，并适应规定条件下的差异。不能因名称是同步，就删掉缓存、指针与时钟恢复分析。\n\nSTM帧含有效负荷和管理开销。以STM-1的标准9行、270列字节结构为例，每帧$9\\times270\\times8=19440$位，8000帧/秒给出155.52 Mbit/s。帧周期与PCM基本采样周期相同，不表示两者帧结构或有效话路数相同。",
+      "question": "所有设备参考同一频率标准，是否就保证所有VC起点都与STM帧起点重合？",
+      "answer": "不保证。同频不等于同相，传输与适配也可带来相位关系变化；需要指针指出VC实际起点。",
+      "teachingHtmlWithLatex": "<p>SDH以统一的同步传送结构组织数字业务，基本帧周期125 μs。原页强调各设备时钟参考共同高精度标准，这解释了同步体系与准同步体系的设计区别，但“没有定时误差”应理解为理想化教学表述。</p><p>实际同步网络仍可能有相位差、抖动、漂移和同步调整；后面的指针机制正用于定位虚容器相对于上层帧的位置，并适应规定条件下的差异。不能因名称是同步，就删掉缓存、指针与时钟恢复分析。</p><p>STM帧含有效负荷和管理开销。以STM-1的标准9行、270列字节结构为例，每帧$9\\times270\\times8=19440$位，8000帧/秒给出155.52 Mbit/s。帧周期与PCM基本采样周期相同，不表示两者帧结构或有效话路数相同。</p>",
+      "formulas": [
+        "9\\times270\\times8=19440"
+      ],
+      "knowledgeNodeIds": [
+        "sdh"
+      ],
+      "references": [
+        {
+          "title": "ITU-T G.707/Y.1322（10/2000），§6.2及图6-6：STM-N帧与AU指针",
+          "url": "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.707-200010-S!!PDF-E&lang=f&type=items#page=21"
+        }
+      ]
+    },
+    {
+      "page": 133,
+      "title": "STM速率按倍数扩展，但“只有四级”不是完整标准清单",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=133",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-133.webp",
+      "body": "原页列出STM-1、STM-4、STM-16、STM-64，其线路速率依次为155.52、622.08、2488.32、9953.28 Mbit/s，满足$R_{\\mathrm{STM}-N}=N\\times155.52$ Mbit/s。表内每一级N增为4倍，所以速率也增为4倍。\n\n“各级间没有额外开销”应理解为这类复用层级的总线路速率按整数倍扩展，不是说SDH没有开销。每个结构本身仍包括段开销、路径开销及指针等位置，不能把全部线路码率都算作用户净业务。\n\n历史范围需明确：原页写“目前制定了4级”，但ITU-T G.707/Y.1322（10/2000）Table 6-2在PDF第26页、印刷页16还列出STM-256为39 813 120 kbit/s，即39 813.120 Mbit/s。故课件四行是本页教学选取，不是该已核对版本的穷尽列表；这里不据此推断所有现行版本或实际部署。",
+      "question": "STM-16的2488.32 Mbit/s能否全部当作用户净数据速率？",
+      "answer": "不能。它是包含结构开销的线路速率；按16倍STM-1扩展不等于去掉段开销、路径开销和指针。",
+      "teachingHtmlWithLatex": "<p>原页列出STM-1、STM-4、STM-16、STM-64，其线路速率依次为155.52、622.08、2488.32、9953.28 Mbit/s，满足$R_{\\mathrm{STM}-N}=N\\times155.52$ Mbit/s。表内每一级N增为4倍，所以速率也增为4倍。</p><p>“各级间没有额外开销”应理解为这类复用层级的总线路速率按整数倍扩展，不是说SDH没有开销。每个结构本身仍包括段开销、路径开销及指针等位置，不能把全部线路码率都算作用户净业务。</p><p>历史范围需明确：原页写“目前制定了4级”，但ITU-T G.707/Y.1322（10/2000）Table 6-2在PDF第26页、印刷页16还列出STM-256为39 813 120 kbit/s，即39 813.120 Mbit/s。故课件四行是本页教学选取，不是该已核对版本的穷尽列表；这里不据此推断所有现行版本或实际部署。</p>",
+      "formulas": [
+        "R_{\\mathrm{STM}-N}=N\\times155.52"
+      ],
+      "knowledgeNodeIds": [
+        "sdh"
+      ],
+      "references": [
+        {
+          "title": "ITU-T G.707/Y.1322（10/2000），Table 6-2，PDF第26页（印刷页16）：含STM-256",
+          "url": "https://www.itu.int/rec/dologin_pub.asp?id=T-REC-G.707-200010-S!!PDF-E&lang=f&type=items#page=26"
+        }
+      ]
+    },
+    {
+      "page": 134,
+      "title": "PDH接入STM-1：容量由映射层级决定，不是直接相除",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=134",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-134.webp",
+      "body": "本页给出STM-1可按规定结构承载63路E1、或3路E3、或1路E4的典型配置。这些配置通常作为不同的占用方案理解，不能不检查结构就把三种最大值同时叠加到一个STM-1。\n\n63路E1总输入线路码率为$63\\times2.048=129.024$ Mbit/s；3路E3合计103.104 Mbit/s；1路E4为139.264 Mbit/s。它们都小于155.52，但剩余差值不能任意切成更多支路，因为还受容器、虚容器、复用层级与开销布局约束。\n\n课件说“把速率调整到155.52”，应理解为经映射、适配和复用构成该速率的STM帧，不是把每一条E1业务本身都加速到155.52。实际业务比特顺序和原支路时序关系必须通过映射机制保留。",
+      "question": "直接算155.52/2.048约75.94，为什么不能据此说STM-1可装75路E1？",
+      "answer": "因为总比特率相除忽略了规定容器层级与开销。课件给出的E1映射路径按3×7×3组织，形成63路，而非任意连续填满线路。",
+      "teachingHtmlWithLatex": "<p>本页给出STM-1可按规定结构承载63路E1、或3路E3、或1路E4的典型配置。这些配置通常作为不同的占用方案理解，不能不检查结构就把三种最大值同时叠加到一个STM-1。</p><p>63路E1总输入线路码率为$63\\times2.048=129.024$ Mbit/s；3路E3合计103.104 Mbit/s；1路E4为139.264 Mbit/s。它们都小于155.52，但剩余差值不能任意切成更多支路，因为还受容器、虚容器、复用层级与开销布局约束。</p><p>课件说“把速率调整到155.52”，应理解为经映射、适配和复用构成该速率的STM帧，不是把每一条E1业务本身都加速到155.52。实际业务比特顺序和原支路时序关系必须通过映射机制保留。</p>",
+      "formulas": [
+        "63\\times2.048=129.024"
+      ],
+      "knowledgeNodeIds": [
+        "sdh-mapping"
+      ],
+      "references": []
+    },
+    {
+      "page": 135,
+      "title": "沿连接图走E1路径，复算3×7×3=63",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=135",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-135.webp",
+      "body": "从图右下方2.048 Mbit/s支路出发，路径是C-12、VC-12、TU-12，三路TU-12组成TUG-2，七个TUG-2组成TUG-3，三个TUG-3进入VC-4，再经AU-4、AUG进入STM-1。因此E1数为$3\\times7\\times3=63$。\n\n图中还有其他路线：34.368或44.736 Mbit/s可映射到C-3/VC-3；139.264 Mbit/s可映射到C-4/VC-4。VC-3既可沿TU-3支路进TUG-3，也可通过AU-3进入AUG，须按所选复用结构追踪，不能把所有箭头当作串联的唯一路径。\n\n图例把映射、定位调整、复用和指针处理区分开。读这张图时不仅要数倍数，还应说明在哪一步加入了哪一种适配：容器接纳业务，VC携带路径信息，TU/AU用指针定位，群结构负责组合。",
+      "question": "图中E1达到63路所用的三个倍率分别对应什么？",
+      "answer": "3路TU-12组成TUG-2，7个TUG-2组成TUG-3，3个TUG-3进入VC-4，乘积为63；不是把三个不同总速率直接相加。",
+      "teachingHtmlWithLatex": "<p>从图右下方2.048 Mbit/s支路出发，路径是C-12、VC-12、TU-12，三路TU-12组成TUG-2，七个TUG-2组成TUG-3，三个TUG-3进入VC-4，再经AU-4、AUG进入STM-1。因此E1数为$3\\times7\\times3=63$。</p><p>图中还有其他路线：34.368或44.736 Mbit/s可映射到C-3/VC-3；139.264 Mbit/s可映射到C-4/VC-4。VC-3既可沿TU-3支路进TUG-3，也可通过AU-3进入AUG，须按所选复用结构追踪，不能把所有箭头当作串联的唯一路径。</p><p>图例把映射、定位调整、复用和指针处理区分开。读这张图时不仅要数倍数，还应说明在哪一步加入了哪一种适配：容器接纳业务，VC携带路径信息，TU/AU用指针定位，群结构负责组合。</p>",
+      "formulas": [
+        "3\\times7\\times3=63"
+      ],
+      "knowledgeNodeIds": [
+        "sdh-mapping"
+      ],
+      "references": []
+    },
+    {
+      "page": 136,
+      "title": "容器与虚容器：有效负荷加上端到端路径信息",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=136",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-136.webp",
+      "body": "容器C-n是接纳支路业务的信息结构。映射是在网络边界使支路信号适配规定容器或虚容器结构的过程，可能涉及速率适配和填充位置；不是仅把业务标签改名。\n\n虚容器VC包含信息有效负荷及路径开销，用于在相应路径层承载和监测业务。路径开销与段开销作用范围不同，不能因两者都叫“开销”就互相替代。一个VC在网络中被传送时，应能保持其业务与路径管理的关联。\n\n原页提到VC帧周期可能为125或500 μs，须结合具体VC类型及组织结构理解，不能断言所有层级都使用同一个周期。名称中的n指结构类别而不是直接给出容量或路数，实际容量要回到标准结构和上一图的复用倍率。",
+      "question": "C和VC最关键的结构区别是什么？",
+      "answer": "VC在承载有效负荷的同时包含相应路径开销；C强调用于接纳和适配业务的容器结构。二者不是两个任意可互换的名称。",
+      "teachingHtmlWithLatex": "<p>容器C-n是接纳支路业务的信息结构。映射是在网络边界使支路信号适配规定容器或虚容器结构的过程，可能涉及速率适配和填充位置；不是仅把业务标签改名。</p><p>虚容器VC包含信息有效负荷及路径开销，用于在相应路径层承载和监测业务。路径开销与段开销作用范围不同，不能因两者都叫“开销”就互相替代。一个VC在网络中被传送时，应能保持其业务与路径管理的关联。</p><p>原页提到VC帧周期可能为125或500 μs，须结合具体VC类型及组织结构理解，不能断言所有层级都使用同一个周期。名称中的n指结构类别而不是直接给出容量或路数，实际容量要回到标准结构和上一图的复用倍率。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "container"
+      ],
+      "references": []
+    },
+    {
+      "page": 137,
+      "title": "TU指针定位低阶VC，VC-3的角色取决于所在层级",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=137",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-137.webp",
+      "body": "课件区分低阶VC与高阶VC：VC-11/12、VC-2通常在低阶路径中使用，VC-4在高阶路径中使用；VC-3在图示不同路径中可处于不同角色。因此不能仅凭编号3就永久贴上“只低阶”或“只高阶”标签。\n\n支路单元TU由低阶VC有效负荷与TU指针组成，负责低阶路径与高阶路径之间的适配。指针说明该低阶有效负荷帧起点相对于上层结构参考位置的偏移，使接收端不必假定两层起点处处重合。\n\n把低阶VC复用进高阶VC时，业务有效负荷、路径开销、指针是不同成分。指针服务于定位和调整，不是把信源残差压缩成更少比特的预测器，也不能代替传输错误检测。",
+      "question": "为什么同一张连接图里VC-3既能接TU-3，也能接AU-3？",
+      "answer": "因为它在不同复用路径中承担的层级角色不同：经TU-3作为支路进入更高结构，或经AU-3适配到STM侧；应沿实际路径判断。",
+      "teachingHtmlWithLatex": "<p>课件区分低阶VC与高阶VC：VC-11/12、VC-2通常在低阶路径中使用，VC-4在高阶路径中使用；VC-3在图示不同路径中可处于不同角色。因此不能仅凭编号3就永久贴上“只低阶”或“只高阶”标签。</p><p>支路单元TU由低阶VC有效负荷与TU指针组成，负责低阶路径与高阶路径之间的适配。指针说明该低阶有效负荷帧起点相对于上层结构参考位置的偏移，使接收端不必假定两层起点处处重合。</p><p>把低阶VC复用进高阶VC时，业务有效负荷、路径开销、指针是不同成分。指针服务于定位和调整，不是把信源残差压缩成更少比特的预测器，也不能代替传输错误检测。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "tu"
+      ],
+      "references": []
+    },
+    {
+      "page": 138,
+      "title": "TUG负责组合，AU负责高阶路径与复用段适配",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=138",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-138.webp",
+      "body": "TUG是一个或多个支路单元的组合，在高阶VC有效负荷中占据规定位置。例如课件图中一个TUG-2可以由三路TU-12、四路TU-11或一路TU-2按所选结构形成；一个TUG-3可由七个TUG-2或一路TU-3形成。\n\nAU则是另一层适配：由高阶VC和AU指针组成，将高阶路径接到复用段层。TU与AU都有指针，但参考的上层结构不同，不能只记“都带指针”而忽略它们服务的层级。\n\n“固定规定位置”主要描述群结构在上层帧中分配的区域，不等于其承载VC的起点永远不动。结构位置与指针所说明的有效负荷相位可以并存，这正是指针机制的作用。",
+      "question": "TUG与AU都含业务，能否省略其中一个而直接把低阶VC写进STM？",
+      "answer": "不能随意省略。它们分别承担规定的组合和高阶适配角色；必须遵循具体复用路径及相应指针、开销布局。",
+      "teachingHtmlWithLatex": "<p>TUG是一个或多个支路单元的组合，在高阶VC有效负荷中占据规定位置。例如课件图中一个TUG-2可以由三路TU-12、四路TU-11或一路TU-2按所选结构形成；一个TUG-3可由七个TUG-2或一路TU-3形成。</p><p>AU则是另一层适配：由高阶VC和AU指针组成，将高阶路径接到复用段层。TU与AU都有指针，但参考的上层结构不同，不能只记“都带指针”而忽略它们服务的层级。</p><p>“固定规定位置”主要描述群结构在上层帧中分配的区域，不等于其承载VC的起点永远不动。结构位置与指针所说明的有效负荷相位可以并存，这正是指针机制的作用。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "tug"
+      ],
+      "references": []
+    },
+    {
+      "page": 139,
+      "title": "AU指针的位置固定，指向的VC起点可以变化",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=139",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-139.webp",
+      "body": "AU-4由VC-4与管理单元指针构成，AU-3由VC-3与管理单元指针构成。指针字段在STM结构中的位置固定，接收端因此知道去哪里读取它；字段的数值则用于说明被承载VC的起点偏移。\n\n两句话并不矛盾：指针“存放位置”固定，不等于指针“指向目标”固定。若把二者混同，就无法解释为什么同步体系还需要相位定位调整。本页与P132的同步理想化说明应联起来理解。\n\n按本章基本路径，一个AUG可由一个AU-4或三个AU-3构成，再按相应数量形成STM-N。更高阶连接和特殊结构需遵循各版本规范；这里以原图的基础组织为学习对象，不把简图当作所有扩展功能的穷尽定义。",
+      "question": "若AU指针字段始终在帧中同一位置，为什么它仍有必要？",
+      "answer": "因为该字段的值告诉接收端VC起点在哪里；“能在固定位置读到指针”与“VC起点固定”是两回事。",
+      "teachingHtmlWithLatex": "<p>AU-4由VC-4与管理单元指针构成，AU-3由VC-3与管理单元指针构成。指针字段在STM结构中的位置固定，接收端因此知道去哪里读取它；字段的数值则用于说明被承载VC的起点偏移。</p><p>两句话并不矛盾：指针“存放位置”固定，不等于指针“指向目标”固定。若把二者混同，就无法解释为什么同步体系还需要相位定位调整。本页与P132的同步理想化说明应联起来理解。</p><p>按本章基本路径，一个AUG可由一个AU-4或三个AU-3构成，再按相应数量形成STM-N。更高阶连接和特殊结构需遵循各版本规范；这里以原图的基础组织为学习对象，不把简图当作所有扩展功能的穷尽定义。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "au"
+      ],
+      "references": []
+    },
+    {
+      "page": 140,
+      "title": "原页作业只有题号：不能据此编造教材原题或答案",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=140",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-140.webp",
+      "body": "原页只给出作业题号5-1、5-3、5-9、5-15、5-20、5-25，没有教材版本、完整题干、图形或参数。因此这页能忠实保留的是作业清单，而不是声称已经解答这些教材题。\n\n准备作业时，可先核实教材书名和版次，逐题抄清已知条件、所求量与单位，再定位本章相关概念。抽样题检查频带与允许采样区间；PCM题检查编码规则与边界；ΔM题检查过载条件；TDM题区分净业务与线路码率。这些是解题检查方向，不是对某一题号内容的猜测。\n\n本讲义各页的自测题均明确作为随页练习，可以帮助准备，但不能替代缺失的教材原题。得到完整题干后，才能逐步给出与该版本一致的推导和结果。",
+      "question": "只知道题号5-15，能否保证它一定是1270Δ的PCM编码题？",
+      "answer": "不能。题号取决于教材与版本，原页没有给出题干；不能把本章例题擅自冒充指定作业题。",
+      "teachingHtmlWithLatex": "<p>原页只给出作业题号5-1、5-3、5-9、5-15、5-20、5-25，没有教材版本、完整题干、图形或参数。因此这页能忠实保留的是作业清单，而不是声称已经解答这些教材题。</p><p>准备作业时，可先核实教材书名和版次，逐题抄清已知条件、所求量与单位，再定位本章相关概念。抽样题检查频带与允许采样区间；PCM题检查编码规则与边界；ΔM题检查过载条件；TDM题区分净业务与线路码率。这些是解题检查方向，不是对某一题号内容的猜测。</p><p>本讲义各页的自测题均明确作为随页练习，可以帮助准备，但不能替代缺失的教材原题。得到完整题干后，才能逐步给出与该版本一致的推导和结果。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "homework"
+      ],
+      "references": []
+    },
+    {
+      "page": 141,
+      "title": "章节结束：用完整收发链检验是否真正掌握",
+      "source": "/study-site/courses/communications-ch5/source/ch5.pdf#page=141",
+      "originalSlide": "/study-site/courses/communications-ch5/slides/page-141.webp",
+      "body": "原页是“Ch5 END”结束页，没有新增公式。完成自学的标准应是能从一个明确带宽和幅度范围的模拟输入，解释采样条件、量化误差、码字形成、数字传输、译码和带限重建，而不是只记住各小节名称。\n\n可以沿三条检查线回顾：信息在哪里丢失，编码与传输各增加什么限制；公式采用什么分布、带宽和增益约定；计算的单位究竟是Hz、样值/秒、bit/s、baud还是幅度。对同一个系统，前后各步的假设必须一致。\n\n本章关键勘误也应一起记住：P55小信号功率量噪比按斜率比平方；P66区分误码失真与量化噪声；P122/123的E-5速率对照明确版本标准；P131的理想带宽为MHz而非kHz；P133四行表不代表穷尽等级。保留原图与解释的差异，是为了能核证而不是背错。",
+      "question": "如果一道综合题同时用8位A律码字与自然二进制均匀量化误码公式，应先检查什么？",
+      "answer": "先检查两段分析是否采用了相容的编码和量化模型。A律非均匀折叠码不能无说明地套用自然二进制均匀权值公式；需要重新建模或明确只作近似比较。",
+      "teachingHtmlWithLatex": "<p>原页是“Ch5 END”结束页，没有新增公式。完成自学的标准应是能从一个明确带宽和幅度范围的模拟输入，解释采样条件、量化误差、码字形成、数字传输、译码和带限重建，而不是只记住各小节名称。</p><p>可以沿三条检查线回顾：信息在哪里丢失，编码与传输各增加什么限制；公式采用什么分布、带宽和增益约定；计算的单位究竟是Hz、样值/秒、bit/s、baud还是幅度。对同一个系统，前后各步的假设必须一致。</p><p>本章关键勘误也应一起记住：P55小信号功率量噪比按斜率比平方；P66区分误码失真与量化噪声；P122/123的E-5速率对照明确版本标准；P131的理想带宽为MHz而非kHz；P133四行表不代表穷尽等级。保留原图与解释的差异，是为了能核证而不是背错。</p>",
+      "formulas": [],
+      "knowledgeNodeIds": [
+        "review"
+      ],
+      "references": []
+    }
+  ]
+}

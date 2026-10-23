@@ -171,6 +171,15 @@
       "readerPageCount": 149,
       "nodeCount": 79,
       "startPage": 1
+    },
+    {
+      "chapterId": "communications-ch5",
+      "title": "通信原理 第5章：模拟信号数字化",
+      "readerPath": "communications-ch5-ppt.html",
+      "knowledgeMapPath": "courses/communications-ch5/knowledge-map.json",
+      "readerPageCount": 141,
+      "nodeCount": 60,
+      "startPage": 1
     }
   ]
 }

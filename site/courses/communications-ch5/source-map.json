@@ -1,0 +1,2974 @@
+{
+  "version": 1,
+  "id": "communications-ch5",
+  "pageCount": 141,
+  "reader": "communications-ch5-ppt.html",
+  "sourcePpt": "通信原理A_Chapt5.ppt",
+  "sourcePptSha256": "f332a88e33d72dae5ed9c51f7cfdafae8287c9ccc9314f05ee012cb58a2dfc19",
+  "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+  "sourcePdfSha256": "5179d032fc037a6a5a47bb7a15894e2011a67ea4521eb0d051df63ab19042ec9",
+  "sourceStatus": "依据用户原PPT重新转换，按物理页1–141对应。转换页脚自动更新时间已披露；不能沿用旧PDF或旧渲染图片hash。",
+  "pages": [
+    {
+      "page": 1,
+      "title": "模拟信号数字化：从波形到码字，再回到波形",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"1\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 1,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=1",
+      "image": "/study-site/courses/communications-ch5/slides/page-1.webp",
+      "imageSha256": "1241a5e917b758736694a9745826404269b5ce356db3581754b8fa5153eb4475",
+      "imageBytes": 465784,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "route"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p1"
+    },
+    {
+      "page": 2,
+      "title": "把课程要求变成可以检验的能力",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"2\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 2,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=2",
+      "image": "/study-site/courses/communications-ch5/slides/page-2.webp",
+      "imageSha256": "3ffc8d8b5d7805fc3d179800cf0a060a8dc427f0e8248d40ef1584c34127f373",
+      "imageBytes": 269872,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "route"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p2"
+    },
+    {
+      "page": 3,
+      "title": "六个知识块的先修关系",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"3\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 3,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=3",
+      "image": "/study-site/courses/communications-ch5/slides/page-3.webp",
+      "imageSha256": "9c8ac47a480fe349a19e9dde8061ec59784d780eed55aa9dbdadf98a13920b3b",
+      "imageBytes": 235278,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "route"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p3"
+    },
+    {
+      "page": 4,
+      "title": "抽样、量化、编码分别改变哪一个对象",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"4\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 4,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=4",
+      "image": "/study-site/courses/communications-ch5/slides/page-4.webp",
+      "imageSha256": "c2f4e295d08401a35bfee982e5b306dc73130a4069a40716501855ddd778674e",
+      "imageBytes": 240038,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "stages"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p4"
+    },
+    {
+      "page": 5,
+      "title": "沿原图读出同一样值的三种表示",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"5\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 5,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=5",
+      "image": "/study-site/courses/communications-ch5/slides/page-5.webp",
+      "imageSha256": "d9af43898dffda7252f0ac69d062cce85a9022280455743bd58ccdad8d252994",
+      "imageBytes": 254934,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "stages"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p5"
+    },
+    {
+      "page": 6,
+      "title": "PCM系统：A/D与D/A各做了什么",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"6\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 6,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=6",
+      "image": "/study-site/courses/communications-ch5/slides/page-6.webp",
+      "imageSha256": "7a45ab0380139d0e639c67ecffec2dca097a0bcaec97196f7d3f222045df1ce2",
+      "imageBytes": 240776,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "stages"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p6"
+    },
+    {
+      "page": 7,
+      "title": "为什么“有一串样值”还不足以确定原曲线",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"7\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 7,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=7",
+      "image": "/study-site/courses/communications-ch5/slides/page-7.webp",
+      "imageSha256": "ee427c75668ab097cfc03dca46b4541f449a557c203a8f4964777c398e427c68",
+      "imageBytes": 264268,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "uniqueness"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p7"
+    },
+    {
+      "page": 8,
+      "title": "低通采样定理与临界等号的条件",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"8\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 8,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=8",
+      "image": "/study-site/courses/communications-ch5/slides/page-8.webp",
+      "imageSha256": "d246a4db57f11997d8e1bc5ad5eaa10f8abaaf689701778f8cbcebf330bed932",
+      "imageBytes": 261208,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "nyquist"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p8"
+    },
+    {
+      "page": 9,
+      "title": "奈奎斯特速率和奈奎斯特间隔互为倒数",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"9\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 9,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=9",
+      "image": "/study-site/courses/communications-ch5/slides/page-9.webp",
+      "imageSha256": "ac89f1e2a5c868520c46b158d5b631d6dcf7b8db4ae5abbf62b43603495e8d10",
+      "imageBytes": 230414,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "nyquist"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p9"
+    },
+    {
+      "page": 10,
+      "title": "冲激梳为什么会复制整个频谱",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"10\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 10,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=10",
+      "image": "/study-site/courses/communications-ch5/slides/page-10.webp",
+      "imageSha256": "4c6310460e689a1b1e23ed4f178b810041b07620958ed1f0755143c850de5ed7",
+      "imageBytes": 265456,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "comb"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p10"
+    },
+    {
+      "page": 11,
+      "title": "混叠的边缘条件：看两份谱有没有重叠",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"11\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 11,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=11",
+      "image": "/study-site/courses/communications-ch5/slides/page-11.webp",
+      "imageSha256": "8918e3d0235b4a830d10ec4ea26143f640c7acf0bffcc77cfcd23e1fb3ef1bcb",
+      "imageBytes": 299406,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "comb"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p11"
+    },
+    {
+      "page": 12,
+      "title": "把三组时域与频域图逐行对应",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"12\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 12,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=12",
+      "image": "/study-site/courses/communications-ch5/slides/page-12.webp",
+      "imageSha256": "552a08802ed9a413498c68a163bbe315a29a6531a25c1a4aaf7734a3aad9dd21",
+      "imageBytes": 237212,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "comb"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p12"
+    },
+    {
+      "page": 13,
+      "title": "理想恢复低通为什么要有Ts增益",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"13\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 13,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=13",
+      "image": "/study-site/courses/communications-ch5/slides/page-13.webp",
+      "imageSha256": "b25ae78d1767e70bfdb5e42d54efa0e877608317d674ae9d577d4b4adbbb7a63",
+      "imageBytes": 264934,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "sinc"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p13"
+    },
+    {
+      "page": 14,
+      "title": "由加权冲激卷积得到逐样值插值公式",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"14\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 14,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=14",
+      "image": "/study-site/courses/communications-ch5/slides/page-14.webp",
+      "imageSha256": "842341b6e9c5fb9047e2076042afced269397d23868098c452470dd564b44e36",
+      "imageBytes": 284320,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "sinc"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p14"
+    },
+    {
+      "page": 15,
+      "title": "图中的许多Sa波形怎样共同拼回原曲线",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"15\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 15,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=15",
+      "image": "/study-site/courses/communications-ch5/slides/page-15.webp",
+      "imageSha256": "08a2fa69315c0129d254b27584ffa63fa65ff929f933ac782e2e4b806d596cf7",
+      "imageBytes": 273578,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "sinc"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p15"
+    },
+    {
+      "page": 16,
+      "title": "带通抽样：最低界限不代表所有更高采样率都可用",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"16\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 16,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=16",
+      "image": "/study-site/courses/communications-ch5/slides/page-16.webp",
+      "imageSha256": "146ffc5dc8ed50ba9b7ed278eb53b9c8e1bad179e5ab6808d028f5dd3ae62288",
+      "imageBytes": 235446,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "bandpass"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p16"
+    },
+    {
+      "page": 17,
+      "title": "原图fH=4.5B的例子：逐个核对频谱端点",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"17\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 17,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=17",
+      "image": "/study-site/courses/communications-ch5/slides/page-17.webp",
+      "imageSha256": "e038defd95b2dbe53be467a787fdb6d6f0841b1b66194c1548ecb17a2dc1192d",
+      "imageBytes": 249830,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "bandpass"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p17"
+    },
+    {
+      "page": 18,
+      "title": "有限脉宽PAM与理想冲激抽样有什么不同",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"18\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 18,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=18",
+      "image": "/study-site/courses/communications-ch5/slides/page-18.webp",
+      "imageSha256": "b67a321d78da5832b01f0b0844636d45d93a287a507f1966083a42c942048f53",
+      "imageBytes": 313682,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "practical"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p18"
+    },
+    {
+      "page": 19,
+      "title": "自然抽样的顶部为什么仍然弯曲",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"19\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 19,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=19",
+      "image": "/study-site/courses/communications-ch5/slides/page-19.webp",
+      "imageSha256": "ec8bc4b834e686965f8d6488853a34dff2af723082ee7a1613de9bd5f54cb4d5",
+      "imageBytes": 239194,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "natural"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p19"
+    },
+    {
+      "page": 20,
+      "title": "矩形门的傅里叶系数只按副本阶数加权",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"20\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 20,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=20",
+      "image": "/study-site/courses/communications-ch5/slides/page-20.webp",
+      "imageSha256": "ae46c76da99ee548174336e8c4f12411607c27cf29806cd143cb91e42c81359a",
+      "imageBytes": 251368,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "natural"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p20"
+    },
+    {
+      "page": 21,
+      "title": "自然抽样频谱：不要把虚线包络当成基带失真",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"21\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 21,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=21",
+      "image": "/study-site/courses/communications-ch5/slides/page-21.webp",
+      "imageSha256": "93948b5a652f5907cfea86b134459875b573ac6edc9271493b2b558212eb14b2",
+      "imageBytes": 264830,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "natural"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p21"
+    },
+    {
+      "page": 22,
+      "title": "自然抽样可以恢复，但必须补上条件与增益",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"22\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 22,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=22",
+      "image": "/study-site/courses/communications-ch5/slides/page-22.webp",
+      "imageSha256": "feebbf5d6a6e1a4c7af5f887525778c13648cc94c69110c35e0983f2f8b778c9",
+      "imageBytes": 236312,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "natural"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p22"
+    },
+    {
+      "page": 23,
+      "title": "平顶抽样：记录一个时刻，再把它保持一段时间",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"23\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 23,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=23",
+      "image": "/study-site/courses/communications-ch5/slides/page-23.webp",
+      "imageSha256": "6c8c721c51d5138b5f073358b1b9d88f6a1d1d4a1c839013c2886463ebd06591",
+      "imageBytes": 233808,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "flat"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p23"
+    },
+    {
+      "page": 24,
+      "title": "矩形保持脉冲的Sa频响与孔径下垂",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"24\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 24,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=24",
+      "image": "/study-site/courses/communications-ch5/slides/page-24.webp",
+      "imageSha256": "11f3f1b91682f60ed02e1af808df279a12b7bca9a3d4ee97d354510030585a0a",
+      "imageBytes": 262466,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "flat"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p24"
+    },
+    {
+      "page": 25,
+      "title": "保持失真怎样补偿，补偿又在哪里失效",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"25\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 25,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=25",
+      "image": "/study-site/courses/communications-ch5/slides/page-25.webp",
+      "imageSha256": "9ace4e08f20963f1f6dd3c79d15d40eadc34c18184c4bb528931c1d1097f3a25",
+      "imageBytes": 294252,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "flat"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p25"
+    },
+    {
+      "page": 26,
+      "title": "量化提高判决稳健性，不代表小噪声绝不会改码",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"26\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 26,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=26",
+      "image": "/study-site/courses/communications-ch5/slides/page-26.webp",
+      "imageSha256": "9f9e9c63b5007c2d1b8da2b9a48bf01c3f7810581386ad1195b30bcd35a01f35",
+      "imageBytes": 271206,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "quantization"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p26"
+    },
+    {
+      "page": 27,
+      "title": "阈值与重建电平：为什么本页取区间中点",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"27\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 27,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=27",
+      "image": "/study-site/courses/communications-ch5/slides/page-27.webp",
+      "imageSha256": "6a1bae498bdd92517fb60546de289a01de8b026d209c176ddee8dfad6e266484",
+      "imageBytes": 248400,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "quantization"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p27"
+    },
+    {
+      "page": 28,
+      "title": "量化误差符号与SQNR的分子是什么",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"28\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 28,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=28",
+      "image": "/study-site/courses/communications-ch5/slides/page-28.webp",
+      "imageSha256": "eb77b9d4b914dac06f170fbc1d8dca082e8239058554cf221aef186e24bb3d19",
+      "imageBytes": 249552,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "quantization"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p28"
+    },
+    {
+      "page": 29,
+      "title": "均匀量化指等格宽，不指样值等概率",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"29\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 29,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=29",
+      "image": "/study-site/courses/communications-ch5/slides/page-29.webp",
+      "imageSha256": "e5acafac0e32c772c727d9c76f4eda25f568afd528b8ef7748eb5bfdc6140b31",
+      "imageBytes": 310100,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "quantization"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p29"
+    },
+    {
+      "page": 30,
+      "title": "用端点、阈值和中点建立完整均匀量化表",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"30\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 30,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=30",
+      "image": "/study-site/courses/communications-ch5/slides/page-30.webp",
+      "imageSha256": "45f09f67b5dd18da5fb638d5e9dc6099dd0100085e2167113f203f6fda461271",
+      "imageBytes": 242970,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "uniform"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p30"
+    },
+    {
+      "page": 31,
+      "title": "量化噪声功率必须按输入概率逐格积分",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"31\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 31,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=31",
+      "image": "/study-site/courses/communications-ch5/slides/page-31.webp",
+      "imageSha256": "07e9803741d32f11f32418ad28b9d9309d96cdf53cd5743223d751e31ad3f1b4",
+      "imageBytes": 227514,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "uniform"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p31"
+    },
+    {
+      "page": 32,
+      "title": "例5-1：把“均匀输入”与“均匀量化”同时写出来",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"32\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 32,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=32",
+      "image": "/study-site/courses/communications-ch5/slides/page-32.webp",
+      "imageSha256": "4f155f9d08360ed7ef1b233d3c4c4c75f3f54aa2651c5aad19228af2aecf1d19",
+      "imageBytes": 252198,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "quant-snr"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p32"
+    },
+    {
+      "page": 33,
+      "title": "例5-1续：完整算出Δ²/12和a²/3",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"33\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 33,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=33",
+      "image": "/study-site/courses/communications-ch5/slides/page-33.webp",
+      "imageSha256": "404202ba6df13ebb4c8f478a2a9aac212392930085359f9807bdbf6d13ffc4b8",
+      "imageBytes": 275716,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "quant-snr"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p33"
+    },
+    {
+      "page": 34,
+      "title": "M²量噪比意味着每增加一位约提高6dB",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"34\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 34,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=34",
+      "image": "/study-site/courses/communications-ch5/slides/page-34.webp",
+      "imageSha256": "3f412aeb8074ebe2d05de3adbefb1973ea89af473347f4bd6462dd86e20ba794",
+      "imageBytes": 263276,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "quant-snr"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p34"
+    },
+    {
+      "page": 35,
+      "title": "固定格宽为什么特别不利于小幅信号",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"35\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 35,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=35",
+      "image": "/study-site/courses/communications-ch5/slides/page-35.webp",
+      "imageSha256": "9c05ec35d4aacc8526d5217a086a6bd7c4836211859e9487bf97c62d7833b4b0",
+      "imageBytes": 239896,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "small-signal"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p35"
+    },
+    {
+      "page": 36,
+      "title": "压缩后均匀量化，为什么等价于原幅度域非均匀划分",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"36\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 36,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=36",
+      "image": "/study-site/courses/communications-ch5/slides/page-36.webp",
+      "imageSha256": "0761048f43d2a0d12ac0b7b72ab57ccc966c0f3789513a00b4ffa1bd7c4c37ba",
+      "imageBytes": 298046,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "companding"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p36"
+    },
+    {
+      "page": 37,
+      "title": "A律与μ律：先区分曲线，再看实现近似",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"37\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 37,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=37",
+      "image": "/study-site/courses/communications-ch5/slides/page-37.webp",
+      "imageSha256": "fbecbd9e3510ae5f21b35c2156f9c12d620e9ff399bb37f3c28caa4e173c9e11",
+      "imageBytes": 277730,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "companding"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p37"
+    },
+    {
+      "page": 38,
+      "title": "μ律函数：归一化、端点和零压缩极限",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"38\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 38,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=38",
+      "image": "/study-site/courses/communications-ch5/slides/page-38.webp",
+      "imageSha256": "2c4c5a2b01c14d5d9ccffc260c58940fe380130cb7399843a8b9fbbe1f49b883",
+      "imageBytes": 263656,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p38"
+    },
+    {
+      "page": 39,
+      "title": "从μ律曲线看局部斜率，不把归一化幅度误当能量",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"39\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 39,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=39",
+      "image": "/study-site/courses/communications-ch5/slides/page-39.webp",
+      "imageSha256": "dc7242d1116646c46aa2c78af02880a930207561eebfcc0445d46f9e26c2d73d",
+      "imageBytes": 291772,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p39"
+    },
+    {
+      "page": 40,
+      "title": "斜率怎样转换成局部量化误差和分贝改善",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"40\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 40,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=40",
+      "image": "/study-site/courses/communications-ch5/slides/page-40.webp",
+      "imageSha256": "19638c745c5063a0755fd387fe5e8f042fd84d325f5a815b4af011ece26b00cb",
+      "imageBytes": 244234,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p40"
+    },
+    {
+      "page": 41,
+      "title": "μ=100：小信号改善与大信号损失必须一起计算",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"41\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 41,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=41",
+      "image": "/study-site/courses/communications-ch5/slides/page-41.webp",
+      "imageSha256": "c23e8d7595ba8f18d207e2a972862bdfd42c0e8da9016f8537c8423dd7d5919e",
+      "imageBytes": 247954,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p41"
+    },
+    {
+      "page": 42,
+      "title": "读压扩数值表：幅度dB与改善dB不是同一量",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"42\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 42,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=42",
+      "image": "/study-site/courses/communications-ch5/slides/page-42.webp",
+      "imageSha256": "de65d0b89b3212d72e84c027b4ac34bb6e9f87d959fdc64c5849561a40a3430e",
+      "imageBytes": 225034,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p42"
+    },
+    {
+      "page": 43,
+      "title": "压扩的收益体现为可用动态范围，而不是处处增益",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"43\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 43,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=43",
+      "image": "/study-site/courses/communications-ch5/slides/page-43.webp",
+      "imageSha256": "53410c85be927425a413be5a15cf8666989887abfdfee38ec268544515c5daef",
+      "imageBytes": 259828,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-law"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p43"
+    },
+    {
+      "page": 44,
+      "title": "A律：线性小信号段与对数大信号段连续拼接",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"44\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 44,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=44",
+      "image": "/study-site/courses/communications-ch5/slides/page-44.webp",
+      "imageSha256": "205865f8a15b7a27d7340c34d3d55dfdda9cef7a0391af4d676ec5d0e36b8427",
+      "imageBytes": 271150,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-law"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p44"
+    },
+    {
+      "page": 45,
+      "title": "用折线逼近对数：实现结构与逼近误差",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"45\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 45,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=45",
+      "image": "/study-site/courses/communications-ch5/slides/page-45.webp",
+      "imageSha256": "c8516f9ca0dba0dd8c1508ec0cb2e4a752662259909922d66b364dc4ecada369",
+      "imageBytes": 275758,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-law"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p45"
+    },
+    {
+      "page": 46,
+      "title": "A律正半轴：八个幅度段怎样映到八个等高段",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"46\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 46,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=46",
+      "image": "/study-site/courses/communications-ch5/slides/page-46.webp",
+      "imageSha256": "342ad993d95df58264af44673affd6ff45a799594c91f6dfb854b5156457ad2a",
+      "imageBytes": 269246,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p46"
+    },
+    {
+      "page": 47,
+      "title": "为什么八段正半轴最终称为13折线",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"47\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 47,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=47",
+      "image": "/study-site/courses/communications-ch5/slides/page-47.webp",
+      "imageSha256": "74ea4eea8b0567107d1be3f83f1c6bf2dae58fef8a2a5fdb03fafd1263979441",
+      "imageBytes": 270770,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p47"
+    },
+    {
+      "page": 48,
+      "title": "从A律分段表复算所有斜率",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"48\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 48,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=48",
+      "image": "/study-site/courses/communications-ch5/slides/page-48.webp",
+      "imageSha256": "3be56a2989e72e06e4fe840ad91b611777ee0b3cbdf02f57a611fe3ccdf28614",
+      "imageBytes": 235588,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p48"
+    },
+    {
+      "page": 49,
+      "title": "完整双极性曲线：符号对称不等于补码表示",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"49\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 49,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=49",
+      "image": "/study-site/courses/communications-ch5/slides/page-49.webp",
+      "imageSha256": "009af5ffe6229b3d7e104b57875fb3f30f50fa23467aa9959eb54ef2427abc6d",
+      "imageBytes": 298302,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p49"
+    },
+    {
+      "page": 50,
+      "title": "A≈87.6从哪里来：匹配零点附近的斜率",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"50\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 50,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=50",
+      "image": "/study-site/courses/communications-ch5/slides/page-50.webp",
+      "imageSha256": "cb8808b305928a16597ba8b6d738b23c1e7dfbf321d494db234d982dc9e29906",
+      "imageBytes": 225260,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p50"
+    },
+    {
+      "page": 51,
+      "title": "比较相同输出分界下的输入位置",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"51\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 51,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=51",
+      "image": "/study-site/courses/communications-ch5/slides/page-51.webp",
+      "imageSha256": "884e0576b5292832e255661d297e3d54be56740fa71a706b9cf29381136eb8f5",
+      "imageBytes": 223988,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p51"
+    },
+    {
+      "page": 52,
+      "title": "μ律15折线：先由反函数确定端点",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"52\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 52,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=52",
+      "image": "/study-site/courses/communications-ch5/slides/page-52.webp",
+      "imageSha256": "ea3f15875ff05642aecd0bc3f5e32977ae9327a1701f521e8406add7b85030bd",
+      "imageBytes": 301100,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p52"
+    },
+    {
+      "page": 53,
+      "title": "μ律斜率表最后一行含归一化因子",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"53\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 53,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=53",
+      "image": "/study-site/courses/communications-ch5/slides/page-53.webp",
+      "imageSha256": "8e429117df40e0f23046bba553f6c1c0bab78896c253b59dab55c9f254b108df",
+      "imageBytes": 308176,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p53"
+    },
+    {
+      "page": 54,
+      "title": "在μ律图上定位段内样值，而不只找最近端点",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"54\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 54,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=54",
+      "image": "/study-site/courses/communications-ch5/slides/page-54.webp",
+      "imageSha256": "cc6f6340b23fffddfa0754a2599cd59c4c1801bfa2f47cd998cd89f5bcb96327",
+      "imageBytes": 225678,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "mu-segments"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p54"
+    },
+    {
+      "page": 55,
+      "title": "勘误：小信号斜率近两倍，功率量噪比约四倍",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"55\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 55,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=55",
+      "image": "/study-site/courses/communications-ch5/slides/page-55.webp",
+      "imageSha256": "9316cfec846db6f3ffe823f791bae0b4e2113a1f276d89fc81537f577ef09e23",
+      "imageBytes": 275898,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "law-compare"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p55"
+    },
+    {
+      "page": 56,
+      "title": "7位非均匀幅度码与11位均匀幅度码的比较条件",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"56\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 56,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=56",
+      "image": "/study-site/courses/communications-ch5/slides/page-56.webp",
+      "imageSha256": "b8993a61487c28fc877d0bf1f1e3c03a273f55c3fcae71d1929a49f84aec6d1a",
+      "imageBytes": 265606,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "precision"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p56"
+    },
+    {
+      "page": 57,
+      "title": "用最小格单位复核2048与128，防止少算符号位",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"57\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 57,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=57",
+      "image": "/study-site/courses/communications-ch5/slides/page-57.webp",
+      "imageSha256": "4fb9ee564e6209f49138b739f8411c0db62fda2dad9f976f04dfb6eec29e1e2b",
+      "imageBytes": 251538,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "precision"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p57"
+    },
+    {
+      "page": 58,
+      "title": "标量、矢量与有记忆量化：区分一次处理对象和状态",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"58\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 58,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=58",
+      "image": "/study-site/courses/communications-ch5/slides/page-58.webp",
+      "imageSha256": "d6d4176b7326e043d93a929b7e4022ff8e6d2e9c7135787fe03ae1baf7cfab51",
+      "imageBytes": 243266,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "memory"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p58"
+    },
+    {
+      "page": 59,
+      "title": "PCM数例：量化是有损的，编码只给量化值编号",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"59\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 59,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=59",
+      "image": "/study-site/courses/communications-ch5/slides/page-59.webp",
+      "imageSha256": "f50d9e24f7f6ca1f5976174caea951c2aaa9c346f02e2f82626442e918006584",
+      "imageBytes": 276614,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p59"
+    },
+    {
+      "page": 60,
+      "title": "沿PCM表反向译码并检查误差，而不是凭波形猜码",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"60\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 60,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=60",
+      "image": "/study-site/courses/communications-ch5/slides/page-60.webp",
+      "imageSha256": "9cb0ef95eda7456e1e7a510bcf65be43483694fb80f0b40362893b0b73626299",
+      "imageBytes": 218916,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p60"
+    },
+    {
+      "page": 61,
+      "title": "PCM收发方框图：区分码字恢复与波形重建",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"61\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 61,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=61",
+      "image": "/study-site/courses/communications-ch5/slides/page-61.webp",
+      "imageSha256": "b5eca0cde9c9b723bd3bf0d1426bc8642c9ea62aceb49f9e7294e7d23352ade1",
+      "imageBytes": 231054,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p61"
+    },
+    {
+      "page": 62,
+      "title": "8位A律PCM字段：1位极性、3位段落、4位段内",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"62\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 62,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=62",
+      "image": "/study-site/courses/communications-ch5/slides/page-62.webp",
+      "imageSha256": "f6fcff3d2c18a4a4490e21fe9c091c7e945d18d5c3a737e9f001f174b014e6f7",
+      "imageBytes": 248338,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-format"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p62"
+    },
+    {
+      "page": 63,
+      "title": "最大与最小量化间隔相差64倍",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"63\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 63,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=63",
+      "image": "/study-site/courses/communications-ch5/slides/page-63.webp",
+      "imageSha256": "3d7dff2954017b9d35f5f9c7ae4bd941b7ddb828a79ed751f3b5c3905408e02d",
+      "imageBytes": 222546,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-format"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p63"
+    },
+    {
+      "page": 64,
+      "title": "按表核折叠码：负半轴的幅度顺序被镜像",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"64\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 64,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=64",
+      "image": "/study-site/courses/communications-ch5/slides/page-64.webp",
+      "imageSha256": "5ae399a190214eb992aabd9153ef7e4e439456928b78a42d11af3ec7c572710a",
+      "imageBytes": 218442,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "folded"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p64"
+    },
+    {
+      "page": 65,
+      "title": "折叠结构怎样简化双极性编码电路",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"65\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 65,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=65",
+      "image": "/study-site/courses/communications-ch5/slides/page-65.webp",
+      "imageSha256": "8417d8b49d3c3d0cf9b56f71f49ff6fe31b11f2ce6177761d6c9cf5652eb5666",
+      "imageBytes": 305564,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "folded"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p65"
+    },
+    {
+      "page": 66,
+      "title": "折叠码改变的是误码失真，不是无误码量化误差",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"66\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 66,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=66",
+      "image": "/study-site/courses/communications-ch5/slides/page-66.webp",
+      "imageSha256": "d3619f45a2b6706aad4dbeee978fa5e86eb80a0b4c8fd10523860ef541825a55",
+      "imageBytes": 295234,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "folded"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p66"
+    },
+    {
+      "page": 67,
+      "title": "A律段落表：把范围、起点、间隔连成可计算规则",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"67\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 67,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=67",
+      "image": "/study-site/courses/communications-ch5/slides/page-67.webp",
+      "imageSha256": "aa82b36f52d578495d178cbe4c4986c597341558600c2f08b71bba0b7b1bd3d0",
+      "imageBytes": 205342,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-table"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p67"
+    },
+    {
+      "page": 68,
+      "title": "段内表从1开始编号，二进制码却从0开始",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"68\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 68,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=68",
+      "image": "/study-site/courses/communications-ch5/slides/page-68.webp",
+      "imageSha256": "4892a4100043388504545a5a5995e62380312ca821090b5cf647ce8fe58a743b",
+      "imageBytes": 201726,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-table"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p68"
+    },
+    {
+      "page": 69,
+      "title": "非线性编码节省码长，是把精度向小信号分配",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"69\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 69,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=69",
+      "image": "/study-site/courses/communications-ch5/slides/page-69.webp",
+      "imageSha256": "4cd3467a5f593375abe5d8e1a56de6fc63ea3824bead43eebe394e77df2c9bd4",
+      "imageBytes": 360676,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "a-table"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p69"
+    },
+    {
+      "page": 70,
+      "title": "逐次比较编码器：本地译码器产生下一次试探门限",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"70\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 70,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=70",
+      "image": "/study-site/courses/communications-ch5/slides/page-70.webp",
+      "imageSha256": "870e348b2e93fb335f401267834a78ec5e2a41470eb7f2073c6e35d96ce042d5",
+      "imageBytes": 243616,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "successive"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p70"
+    },
+    {
+      "page": 71,
+      "title": "比较规则必须补上相等时的边界约定",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"71\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 71,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=71",
+      "image": "/study-site/courses/communications-ch5/slides/page-71.webp",
+      "imageSha256": "1de4cddb4b16a6454b170ac23d711d9f2c0ac84b61665a39f0d7fb2aaba6e137",
+      "imageBytes": 286264,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "successive"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p71"
+    },
+    {
+      "page": 72,
+      "title": "7/11变换不是增加信息，而是展开非线性权值",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"72\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 72,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=72",
+      "image": "/study-site/courses/communications-ch5/slides/page-72.webp",
+      "imageSha256": "db10fa45c4d8156d8aa7b28d97cfbb15c9d20a2e85d906edc6086627ad369c82",
+      "imageBytes": 250042,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "successive"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p72"
+    },
+    {
+      "page": 73,
+      "title": "例5.1第一步：正1270Δ先判符号，再判段落上半区",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"73\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 73,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=73",
+      "image": "/study-site/courses/communications-ch5/slides/page-73.webp",
+      "imageSha256": "2313767f8cb689702d1a7ab60f6d4cb1fee99607091203c7138ae1cd36b65f69",
+      "imageBytes": 277284,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p73"
+    },
+    {
+      "page": 74,
+      "title": "例5.1第二步：定位第8段，再试探其上半区",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"74\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 74,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=74",
+      "image": "/study-site/courses/communications-ch5/slides/page-74.webp",
+      "imageSha256": "073522bc8e962dba300c59bd3e18cf74b05af4b139d54adf015dcffebedb3871",
+      "imageBytes": 257382,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p74"
+    },
+    {
+      "page": 75,
+      "title": "例5.1第三步：段内四位按门限逐次保留或清零",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"75\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 75,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=75",
+      "image": "/study-site/courses/communications-ch5/slides/page-75.webp",
+      "imageSha256": "2d64ed4fb8fdc95c2bd10756ccf6d98b25ebdbd5d13d807b246d5380ad8fb0d6",
+      "imageBytes": 252344,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p75"
+    },
+    {
+      "page": 76,
+      "title": "例5.1第四步：11110011译回1248Δ，误差22Δ",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"76\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 76,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=76",
+      "image": "/study-site/courses/communications-ch5/slides/page-76.webp",
+      "imageSha256": "41b16cc2c1e694bd1027f170400951ea7426f7a5dc2b3cc4443662e85fffc6dc",
+      "imageBytes": 257500,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p76"
+    },
+    {
+      "page": 77,
+      "title": "例5.1直接法：找段、向下取整、补半格",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"77\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 77,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=77",
+      "image": "/study-site/courses/communications-ch5/slides/page-77.webp",
+      "imageSha256": "38bd635437a512679c949164f698ddb0b09b3f2c6821431194d6ef926b06dbcc",
+      "imageBytes": 230292,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-example"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p77"
+    },
+    {
+      "page": 78,
+      "title": "PCM译码器：完整码字同步读出，再控制幅度和极性",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"78\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 78,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=78",
+      "image": "/study-site/courses/communications-ch5/slides/page-78.webp",
+      "imageSha256": "b5ca65693360b3a56a8f7a538c4a2c9d0442a51ab5c802bb2c9535cf2378003d",
+      "imageBytes": 231972,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "decode"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p78"
+    },
+    {
+      "page": 79,
+      "title": "译码电平的精度：11位控制字不等于所有中点都是整数Δ",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"79\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 79,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=79",
+      "image": "/study-site/courses/communications-ch5/slides/page-79.webp",
+      "imageSha256": "247761fb6576c7f0e2df536f820ca7a3b1d1736bf039a25ff3ea5900a9bfca5b",
+      "imageBytes": 267076,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "decode"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p79"
+    },
+    {
+      "page": 80,
+      "title": "PCM总噪声模型：量化误差与误码失真来自不同位置",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"80\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 80,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=80",
+      "image": "/study-site/courses/communications-ch5/slides/page-80.webp",
+      "imageSha256": "470d4a3e1f403703c395bde2ed3d23fa99eebd4c5be8dd5f61c623039146429b",
+      "imageBytes": 249820,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "noise-model"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p80"
+    },
+    {
+      "page": 81,
+      "title": "总信噪比应先加噪声功率，再取对数",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"81\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 81,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=81",
+      "image": "/study-site/courses/communications-ch5/slides/page-81.webp",
+      "imageSha256": "7370445f1df0bd8348d43fcdda586420e078d0307a9536082f480c0035e28d06",
+      "imageBytes": 228074,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "noise-model"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p81"
+    },
+    {
+      "page": 82,
+      "title": "量化信噪比推导的四项前提与接收增益约定",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"82\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 82,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=82",
+      "image": "/study-site/courses/communications-ch5/slides/page-82.webp",
+      "imageSha256": "d407d45d794bcbe42137c4900a257844af1d70bca8a6a1b96a88b460ab28f63a",
+      "imageBytes": 269488,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "noise-model"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p82"
+    },
+    {
+      "page": 83,
+      "title": "从离散误差方差到连续脉冲列功率谱",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"83\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 83,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=83",
+      "image": "/study-site/courses/communications-ch5/slides/page-83.webp",
+      "imageSha256": "9744e816e5ef517a04302300fdf2a55d92a155000ebe2786fd572840d5b2ef76",
+      "imageBytes": 253656,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-quant-noise"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p83"
+    },
+    {
+      "page": 84,
+      "title": "双边积分与信号缩放：两边都含1/Ts²",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"84\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 84,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=84",
+      "image": "/study-site/courses/communications-ch5/slides/page-84.webp",
+      "imageSha256": "966ca702ddb1ada7534d73d29b158a707e39950de824346dbff73562d546b693",
+      "imageBytes": 243046,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-quant-noise"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p84"
+    },
+    {
+      "page": 85,
+      "title": "每加一位约增6.02 dB，代价是更高码率与带宽",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"85\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 85,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=85",
+      "image": "/study-site/courses/communications-ch5/slides/page-85.webp",
+      "imageSha256": "0fd01a4495d25a20394398ebf6765434295d2284adfce6d8c1c06f6cb2f458d3",
+      "imageBytes": 270698,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-quant-noise"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p85"
+    },
+    {
+      "page": 86,
+      "title": "误码信噪比推导不是对A律折叠码的直接结论",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"86\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 86,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=86",
+      "image": "/study-site/courses/communications-ch5/slides/page-86.webp",
+      "imageSha256": "20b5de1847813de0a710efccdbf36529f428a846370f4b304db2af8fd9870adc",
+      "imageBytes": 247748,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-bit-error"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p86"
+    },
+    {
+      "page": 87,
+      "title": "一次错误事件的均方幅度：先对位权平方求和",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"87\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 87,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=87",
+      "image": "/study-site/courses/communications-ch5/slides/page-87.webp",
+      "imageSha256": "ef7e6e8c81d2d2f8ac060442fd2ab6009e48274b25e50d00c218ff1274b337f3",
+      "imageBytes": 259766,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-bit-error"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p87"
+    },
+    {
+      "page": 88,
+      "title": "错误事件率与谱密度：概率和条件误差各用一次",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"88\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 88,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=88",
+      "image": "/study-site/courses/communications-ch5/slides/page-88.webp",
+      "imageSha256": "23e9243c5bbc11a5200c0a151419862fa8e036780f4458d6344341ad6dce2457",
+      "imageBytes": 253652,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-bit-error"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p88"
+    },
+    {
+      "page": 89,
+      "title": "误码信噪比约1/(4Pe)：保留有限码长项看近似来源",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"89\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 89,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=89",
+      "image": "/study-site/courses/communications-ch5/slides/page-89.webp",
+      "imageSha256": "bb75ae7666c75c15d5c6883d8a66bb82f1287b719ba4018ceef576257bd9c8f5",
+      "imageBytes": 249802,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-floor"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p89"
+    },
+    {
+      "page": 90,
+      "title": "两类噪声竞争：增加位数何时不再明显改善输出",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"90\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 90,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=90",
+      "image": "/study-site/courses/communications-ch5/slides/page-90.webp",
+      "imageSha256": "c6233789a69ff8e140cb99c83a3807cf8e883c04e1989cd358b728f1fe754ce9",
+      "imageBytes": 282184,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pcm-floor"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p90"
+    },
+    {
+      "page": 91,
+      "title": "DPCM为何能省位：利用相关性缩小要编码的残差",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"91\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 91,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=91",
+      "image": "/study-site/courses/communications-ch5/slides/page-91.webp",
+      "imageSha256": "05d2e30dc424b4b3db1f1ac8c4ac8ead6bc29e3c75117b18b26eaeb86939aeb8",
+      "imageBytes": 280850,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "dpcm-loop"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p91"
+    },
+    {
+      "page": 92,
+      "title": "DPCM框图的两条反馈：发送端也要本地重建",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"92\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 92,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=92",
+      "image": "/study-site/courses/communications-ch5/slides/page-92.webp",
+      "imageSha256": "4b1a2dd79fc454617041f094529b79fb66fb8afe4a9f13d4f6ce97794f402d65",
+      "imageBytes": 248556,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "dpcm-loop"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p92"
+    },
+    {
+      "page": 93,
+      "title": "DPCM逐样值递推：残差量化后加回同一个预测值",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"93\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 93,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=93",
+      "image": "/study-site/courses/communications-ch5/slides/page-93.webp",
+      "imageSha256": "fed8e6c6e47cc8d9875334f1322be43d40967a42581bf17894ee182b6f7f8cb9",
+      "imageBytes": 182724,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "dpcm-error"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p93"
+    },
+    {
+      "page": 94,
+      "title": "线性预测器：过去p个重建样值的加权和",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"94\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 94,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=94",
+      "image": "/study-site/courses/communications-ch5/slides/page-94.webp",
+      "imageSha256": "213e159443d3df1b3c6c70f26b67c447352994f01886b0c972f3ef517779a119",
+      "imageBytes": 189284,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "dpcm-error"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p94"
+    },
+    {
+      "page": 95,
+      "title": "DPCM输出误差等于残差量化误差，收益来自残差统计",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"95\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 95,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=95",
+      "image": "/study-site/courses/communications-ch5/slides/page-95.webp",
+      "imageSha256": "f30c481f3cc91a4f3b65cbf79ad36a3097cd3e83eb262920805b006b2d59d407",
+      "imageBytes": 179556,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "dpcm-error"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p95"
+    },
+    {
+      "page": 96,
+      "title": "增量调制的“一位”表示相对重建状态的升降",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"96\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 96,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=96",
+      "image": "/study-site/courses/communications-ch5/slides/page-96.webp",
+      "imageSha256": "28382d4519201f118dac75be18907e952ce1ddad458f703ff97fcfdee6a3fd00",
+      "imageBytes": 261416,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p96"
+    },
+    {
+      "page": 97,
+      "title": "阶梯逼近规则：先比较旧状态，再更新一个台阶",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"97\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 97,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=97",
+      "image": "/study-site/courses/communications-ch5/slides/page-97.webp",
+      "imageSha256": "85c828c369b6ce69c4d7471cbbd669d96255f847550fb19404a50eb872fbf281",
+      "imageBytes": 345874,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p97"
+    },
+    {
+      "page": 98,
+      "title": "ΔM框图：单位延迟把累加器状态送回比较器",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"98\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 98,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=98",
+      "image": "/study-site/courses/communications-ch5/slides/page-98.webp",
+      "imageSha256": "30034c18b62c0354f09cc214d77c098778d46a8bed9cb29fcfa97bd183677c4e",
+      "imageBytes": 289068,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p98"
+    },
+    {
+      "page": 99,
+      "title": "ΔM解码是累加：初值和误码会影响后续状态",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"99\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 99,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=99",
+      "image": "/study-site/courses/communications-ch5/slides/page-99.webp",
+      "imageSha256": "6d9667d67631bf6450e11323b944f1737a32bd45ad9ed9b4ad072a0d5173231f",
+      "imageBytes": 279790,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p99"
+    },
+    {
+      "page": 100,
+      "title": "积分器实现：脉冲面积决定每次台阶高度",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"100\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 100,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=100",
+      "image": "/study-site/courses/communications-ch5/slides/page-100.webp",
+      "imageSha256": "a79812b367956e466af691756bf1005685ae77d7496fb8d8ec220f43c05fca09",
+      "imageBytes": 271156,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-circuit"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p100"
+    },
+    {
+      "page": 101,
+      "title": "ΔM接收链：双极性脉冲、积分、低通各做一件事",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"101\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 101,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=101",
+      "image": "/study-site/courses/communications-ch5/slides/page-101.webp",
+      "imageSha256": "bebd1eaaa1ecff7c2fcf0217e97e1ab5a6e0e989e8f56e25ccfc2867be18f9b8",
+      "imageBytes": 258836,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-circuit"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p101"
+    },
+    {
+      "page": 102,
+      "title": "沿编码示意图检查：误差符号决定下一步阶梯",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"102\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 102,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=102",
+      "image": "/study-site/courses/communications-ch5/slides/page-102.webp",
+      "imageSha256": "eb2b4474f6dd7b4074251a6fa4a1af54becdf191d96ff4ac16e93674e8f886f4",
+      "imageBytes": 266804,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-circuit"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p102"
+    },
+    {
+      "page": 103,
+      "title": "译码图的折线与阶梯：脉冲形状决定区间内形状",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"103\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 103,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=103",
+      "image": "/study-site/courses/communications-ch5/slides/page-103.webp",
+      "imageSha256": "c930f55a78fd9dfa5b712c76b42abc75a4108f3c534791432ddb18e05f0a53d7",
+      "imageBytes": 244714,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-circuit"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p103"
+    },
+    {
+      "page": 104,
+      "title": "两类ΔM失真：台阶过大与跟踪过慢",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"104\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 104,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=104",
+      "image": "/study-site/courses/communications-ch5/slides/page-104.webp",
+      "imageSha256": "3b5eea37fdb82520aa2430d746288f42615141e52bebaec9262124470770d392",
+      "imageBytes": 305154,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-distortion"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p104"
+    },
+    {
+      "page": 105,
+      "title": "从误差波形分辨颗粒噪声与斜率过载",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"105\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 105,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=105",
+      "image": "/study-site/courses/communications-ch5/slides/page-105.webp",
+      "imageSha256": "07b9e5a2c322fb24c508c0d8df5e8dbb5abc7cf7338a126ed8e86f6ba470e5ad",
+      "imageBytes": 249226,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-distortion"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p105"
+    },
+    {
+      "page": 106,
+      "title": "最大跟踪斜率是σfs，单位必须是幅度每秒",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"106\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 106,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=106",
+      "image": "/study-site/courses/communications-ch5/slides/page-106.webp",
+      "imageSha256": "bb5a5ff8af87bce6b76d4d3edfdbe46f22edc1a072e532f72e7388e697b7555f",
+      "imageBytes": 291826,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-slope"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p106"
+    },
+    {
+      "page": 107,
+      "title": "正弦的过载界：频率越高，允许振幅越低",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"107\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 107,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=107",
+      "image": "/study-site/courses/communications-ch5/slides/page-107.webp",
+      "imageSha256": "80d90aaa68b081a47a491f82a6ac58a7c50e2f3c7a5ed2547bc08bb905c938af",
+      "imageBytes": 313742,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-slope"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p107"
+    },
+    {
+      "page": 108,
+      "title": "σ/2起始电平是特定稳态摆动模型，不是普遍硬阈值",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"108\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 108,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=108",
+      "image": "/study-site/courses/communications-ch5/slides/page-108.webp",
+      "imageSha256": "1418c3df3babcce4edee7c531d392c87cb3ee6adc0ed330283309e778d3c9c0d",
+      "imageBytes": 257022,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-threshold"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p108"
+    },
+    {
+      "page": 109,
+      "title": "抗噪声分析的边界：本段只算一般量化噪声",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"109\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 109,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=109",
+      "image": "/study-site/courses/communications-ch5/slides/page-109.webp",
+      "imageSha256": "111de9086f203b8894bb7a9890f370784248f28c5e96dff24f52045bd5ab32c8",
+      "imageBytes": 260784,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-noise"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p109"
+    },
+    {
+      "page": 110,
+      "title": "误差在±σ均匀分布时，方差为σ²/3",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"110\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 110,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=110",
+      "image": "/study-site/courses/communications-ch5/slides/page-110.webp",
+      "imageSha256": "da1cf497e9ddd56386de0374f67accb643a29bfc6d80ac376739ac704c918693",
+      "imageBytes": 270338,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-noise"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p110"
+    },
+    {
+      "page": 111,
+      "title": "单边谱约定：0到fs积分已经是总噪声功率",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"111\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 111,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=111",
+      "image": "/study-site/courses/communications-ch5/slides/page-111.webp",
+      "imageSha256": "4e90ba0517f5aaea6d9060c3c24b91b4fbba8476ac3755e3eb16b0fd9211977d",
+      "imageBytes": 265160,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-noise"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p111"
+    },
+    {
+      "page": 112,
+      "title": "最大ΔM量噪比：代入临界振幅后σ才消去",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"112\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 112,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=112",
+      "image": "/study-site/courses/communications-ch5/slides/page-112.webp",
+      "imageSha256": "d1e3dea81ce99cf16fcf23d721f866feaf1c68149ed991ec3cde7c3d8604fd05",
+      "imageBytes": 254668,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-max-snr"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p112"
+    },
+    {
+      "page": 113,
+      "title": "每倍采样率9 dB还是3 dB，取决于比较时固定什么",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"113\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 113,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=113",
+      "image": "/study-site/courses/communications-ch5/slides/page-113.webp",
+      "imageSha256": "51217cf0eb1b66453b8d8308cca7823c55906171571d816fc198e9b9bdad6182",
+      "imageBytes": 257610,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "delta-max-snr"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p113"
+    },
+    {
+      "page": 114,
+      "title": "时分与频分：资源分配维度不同，同步和隔离都必需",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"114\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 114,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=114",
+      "image": "/study-site/courses/communications-ch5/slides/page-114.webp",
+      "imageSha256": "a19d47bfbbfd3d31ea903d3033a0cf304c952d6b0a949e6cca5f9a586bd4d4a2",
+      "imageBytes": 257480,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "tdm"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p114"
+    },
+    {
+      "page": 115,
+      "title": "两路抽样脉冲交错，不是把两条波形幅度相加",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"115\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 115,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=115",
+      "image": "/study-site/courses/communications-ch5/slides/page-115.webp",
+      "imageSha256": "025b3366e1e1635921d491f16e9ea7165466a10c461be7f4d10d55961fdb9c94",
+      "imageBytes": 239316,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "tdm"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p115"
+    },
+    {
+      "page": 116,
+      "title": "旋转开关模型：输入防混叠、输出重建、两端对齐",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"116\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 116,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=116",
+      "image": "/study-site/courses/communications-ch5/slides/page-116.webp",
+      "imageSha256": "f574a807e378f444bcac9e7a1f955ade420695f67e3c1d7aabc99e67cd9c2a6c",
+      "imageBytes": 266536,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "tdm"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p116"
+    },
+    {
+      "page": 117,
+      "title": "每路8 kHz与开关每秒8000周是一回事，总事件率另算",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"117\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 117,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=117",
+      "image": "/study-site/courses/communications-ch5/slides/page-117.webp",
+      "imageSha256": "58ec84498c2694639bfafd83d21bcef0a1b8e6e7095bd06a5e652178ea281286",
+      "imageBytes": 275314,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "tdm-frame"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p117"
+    },
+    {
+      "page": 118,
+      "title": "沿帧边界追踪同一路：固定偏移不等于更高采样率",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"118\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 118,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=118",
+      "image": "/study-site/courses/communications-ch5/slides/page-118.webp",
+      "imageSha256": "2d12248ffdb371d0f5fada97bdb683913d8edc12ffe2dc9d3257e144d510763c",
+      "imageBytes": 269812,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "tdm-frame"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p118"
+    },
+    {
+      "page": 119,
+      "title": "帧、路时隙、位时隙：三层时间长度的换算",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"119\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 119,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=119",
+      "image": "/study-site/courses/communications-ch5/slides/page-119.webp",
+      "imageSha256": "976226ac1061795a3228885cbb518a556c03de7a67d0c77a4a9e4da806eab4d3",
+      "imageBytes": 236824,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "tdm-rate"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p119"
+    },
+    {
+      "page": 120,
+      "title": "复接与分接：合并数字群，还要处理时钟与开销",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"120\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 120,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=120",
+      "image": "/study-site/courses/communications-ch5/slides/page-120.webp",
+      "imageSha256": "8f86195edca3a840e7a0f81d19782179ca8d8a5612a1e61ad8d5034965a6fdb4",
+      "imageBytes": 281520,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "multiplex"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p120"
+    },
+    {
+      "page": 121,
+      "title": "PDH的“准同步”：标称速率一致不等于时钟完全一致",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"121\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 121,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=121",
+      "image": "/study-site/courses/communications-ch5/slides/page-121.webp",
+      "imageSha256": "71de5caef85c15a31304109509b0fe86928d37db6043ca2a22186688dc35ed3f",
+      "imageBytes": 240462,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pdh"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p121"
+    },
+    {
+      "page": 122,
+      "title": "PDH速率表：线路码率、话路数与历史勘误",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"122\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 122,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=122",
+      "image": "/study-site/courses/communications-ch5/slides/page-122.webp",
+      "imageSha256": "dbfe70d2728a109263e8338f4e9d871273f9cbd2da09f20eee3566dada237943",
+      "imageBytes": 237158,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pdh"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p122"
+    },
+    {
+      "page": 123,
+      "title": "沿E体系四路复接图复算每级新增开销",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"123\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 123,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=123",
+      "image": "/study-site/courses/communications-ch5/slides/page-123.webp",
+      "imageSha256": "0386ab2867236db52987bf48710a11bfefd4e230f214653a94565aec546c4c3e",
+      "imageBytes": 239074,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "pdh"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p123"
+    },
+    {
+      "page": 124,
+      "title": "PCM30/32的三层结构：复帧、帧、时隙",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"124\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 124,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=124",
+      "image": "/study-site/courses/communications-ch5/slides/page-124.webp",
+      "imageSha256": "83d08b64ea15f324119d50e48706f8edf5b8de62ddb07b14fb86595921406c8b",
+      "imageBytes": 245328,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "e1-frame"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p124"
+    },
+    {
+      "page": 125,
+      "title": "一帧为什么恰好125μs：每路每帧一个样值",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"125\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 125,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=125",
+      "image": "/study-site/courses/communications-ch5/slides/page-125.webp",
+      "imageSha256": "dcb872787ef3c2c9daa1b01dd0dc3eec8e2e3cb992b2e4892cdf97ac47a2e96c",
+      "imageBytes": 258658,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "e1-frame"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p125"
+    },
+    {
+      "page": 126,
+      "title": "TS0交替角色：同步码与告警不是同时占同一组位",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"126\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 126,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=126",
+      "image": "/study-site/courses/communications-ch5/slides/page-126.webp",
+      "imageSha256": "2d57d7efeba89c9cb6e1d23d99886505ec60d386bf0f0eb82e48599cc209d900",
+      "imageBytes": 317076,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "ts0"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p126"
+    },
+    {
+      "page": 127,
+      "title": "TS16传信令：控制信息与话音内容是不同层次",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"127\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 127,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=127",
+      "image": "/study-site/courses/communications-ch5/slides/page-127.webp",
+      "imageSha256": "0a5aea0883e5cbbd885c2b60219e91096bcc0ee02336e8e4b97332480a70fb94",
+      "imageBytes": 280326,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "signaling"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p127"
+    },
+    {
+      "page": 128,
+      "title": "16帧CAS复帧：每路4位、每秒500次更新",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"128\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 128,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=128",
+      "image": "/study-site/courses/communications-ch5/slides/page-128.webp",
+      "imageSha256": "83f5c5045c46e66e2f7ae15b76a980fef1afcafdfcf913b8249dc3697ea9fe32",
+      "imageBytes": 296266,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "multiframe"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p128"
+    },
+    {
+      "page": 129,
+      "title": "CAS分配表：Fr对应CHr与CH(r+15)",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"129\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 129,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=129",
+      "image": "/study-site/courses/communications-ch5/slides/page-129.webp",
+      "imageSha256": "d678598b8482ae283a5040efcabae721cf1968713bc511b701c6baf4dbddb84b",
+      "imageBytes": 209378,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "multiframe"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p129"
+    },
+    {
+      "page": 130,
+      "title": "从125μs逐层算出2ms、256位与3.90625μs",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"130\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 130,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=130",
+      "image": "/study-site/courses/communications-ch5/slides/page-130.webp",
+      "imageSha256": "bd4fa08fa67e444f3bbbab760dd06581ab0dc639c218a09db24eb672750852e9",
+      "imageBytes": 248250,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "e1-numbers"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p130"
+    },
+    {
+      "page": 131,
+      "title": "关键单位勘误：最小理想基带带宽是1.024MHz",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"131\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 131,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=131",
+      "image": "/study-site/courses/communications-ch5/slides/page-131.webp",
+      "imageSha256": "021d678c7f96446cfbe3501388baa84afb7a9d084c359803c5b1a35e4a574e3f",
+      "imageBytes": 252408,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "e1-numbers"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p131"
+    },
+    {
+      "page": 132,
+      "title": "SDH同步不等于没有相位差，也不等于不需要指针",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"132\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 132,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=132",
+      "image": "/study-site/courses/communications-ch5/slides/page-132.webp",
+      "imageSha256": "2c2e7e5bc7851794872461d1c796f9bf31e26fb2315b7663ed69c3850a49e07e",
+      "imageBytes": 313370,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "sdh"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p132"
+    },
+    {
+      "page": 133,
+      "title": "STM速率按倍数扩展，但“只有四级”不是完整标准清单",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"133\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 133,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=133",
+      "image": "/study-site/courses/communications-ch5/slides/page-133.webp",
+      "imageSha256": "cf852340abbd836c0c49ec8053bf9fbf97226e9d53ce9318cf5a289532fcd888",
+      "imageBytes": 276098,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "sdh"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p133"
+    },
+    {
+      "page": 134,
+      "title": "PDH接入STM-1：容量由映射层级决定，不是直接相除",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"134\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 134,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=134",
+      "image": "/study-site/courses/communications-ch5/slides/page-134.webp",
+      "imageSha256": "d73ec996cf8dcc52d1b73eb968b86b751f5a961f2070d904ad3d9e38436384ce",
+      "imageBytes": 269972,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "sdh-mapping"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p134"
+    },
+    {
+      "page": 135,
+      "title": "沿连接图走E1路径，复算3×7×3=63",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"135\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 135,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=135",
+      "image": "/study-site/courses/communications-ch5/slides/page-135.webp",
+      "imageSha256": "c3a8dfd5d263da47aab20cb3d9c1192d781d2f9ed12c346b1fed67d243c4d023",
+      "imageBytes": 251894,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "sdh-mapping"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p135"
+    },
+    {
+      "page": 136,
+      "title": "容器与虚容器：有效负荷加上端到端路径信息",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"136\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 136,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=136",
+      "image": "/study-site/courses/communications-ch5/slides/page-136.webp",
+      "imageSha256": "23e5df4a9c7a8d9b362624e3510314a024df57b9a850f6c1cd7cb94fb6fbeaac",
+      "imageBytes": 294684,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "container"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p136"
+    },
+    {
+      "page": 137,
+      "title": "TU指针定位低阶VC，VC-3的角色取决于所在层级",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"137\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 137,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=137",
+      "image": "/study-site/courses/communications-ch5/slides/page-137.webp",
+      "imageSha256": "0989ca55300e0627f22d12a9f915a3797d7cf8e782bbbe926bc7b13634334f18",
+      "imageBytes": 286382,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "tu"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p137"
+    },
+    {
+      "page": 138,
+      "title": "TUG负责组合，AU负责高阶路径与复用段适配",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"138\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 138,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=138",
+      "image": "/study-site/courses/communications-ch5/slides/page-138.webp",
+      "imageSha256": "dec7cea44e18b759c1b24a69daa184ceeeb0bf879418f6c4fab72a6784f8ab1d",
+      "imageBytes": 297788,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "tug"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p138"
+    },
+    {
+      "page": 139,
+      "title": "AU指针的位置固定，指向的VC起点可以变化",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"139\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 139,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=139",
+      "image": "/study-site/courses/communications-ch5/slides/page-139.webp",
+      "imageSha256": "1a2e5a32d1f8570d2085bdc000b56ba8cf4c3f0adfe6be9613eaaa6f99fa7b62",
+      "imageBytes": 261262,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "au"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p139"
+    },
+    {
+      "page": 140,
+      "title": "原页作业只有题号：不能据此编造教材原题或答案",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"140\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 140,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=140",
+      "image": "/study-site/courses/communications-ch5/slides/page-140.webp",
+      "imageSha256": "5322d5a41bd53c6b20f13b46c6c1d3fbe3ce9fa1c67ed3293694cf286a992e07",
+      "imageBytes": 201904,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "homework"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p140"
+    },
+    {
+      "page": 141,
+      "title": "章节结束：用完整收发链检验是否真正掌握",
+      "reader": "communications-ch5-ppt.html",
+      "selector": ".slide-page[data-page=\"141\"]",
+      "sourcePdf": "courses/communications-ch5/source/ch5.pdf",
+      "pdfPage": 141,
+      "sourceUrl": "/study-site/courses/communications-ch5/source/ch5.pdf#page=141",
+      "image": "/study-site/courses/communications-ch5/slides/page-141.webp",
+      "imageSha256": "7969eb68219fab3294c3c2735e662b6a93c54bdc95f5cf81f3a3a29fabf418fb",
+      "imageBytes": 296034,
+      "imageSize": [
+        1440,
+        1080
+      ],
+      "imageFormat": "WEBP",
+      "knowledgeNodeIds": [
+        "review"
+      ],
+      "teachingAnchor": "communications-ch5-deep-p141"
+    }
+  ]
+}
