@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="1140" viewBox="0 0 680 1140" role="img" aria-labelledby="title desc">
+<title id="title">四点 FFT：从奇偶拆分到四个输出</title>
+<desc id="desc">原创教学示意，严格对应正文的新编四点FFT例。输入x(n)为1、2、3、4，n从0开始。偶数位置x(0)=1和x(2)=3组成x₁(r)，奇数位置x(1)=2和x(3)=4组成x₂(r)，r只是各短序列内部的位置。两组两点DFT分别给出X₁(0)=1+3=4、X₁(1)=1−3=−2，以及X₂(0)=2+4=6、X₂(1)=2−4=−2。第二阶段按短频率k配对，k=0时A₀=X₁(0)=4、B₀=X₂(0)=6，乘W₄⁰=1得到t₀=6；k=1时A₁=X₁(1)=−2、B₁=X₂(1)=−2，乘W₄¹=−j得到t₁=2j。每对先算一次t，再复用到加、减两路。k=0给X(0)=4+6=10及X(2)=4−6=−2；k=1给X(1)=−2+2j及X(3)=−2−2j。最后仅按频率下标整理为X(0)、X(1)、X(2)、X(3)，即10、−2+2j、−2、−2−2j，不进行新的变换。圆内+表示将带符号的支路值相加。实线支路系数为+1，虚线支路已经乘−1，不再减第二次；线条交叉没有圆点时不表示相加。A、B、t是本图新增临时量，不是新序列的时刻索引。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8Z" fill="#46566b"/></marker></defs>
+<style>text{font-family:"Noto Sans CJK SC","Noto Sans CJK",sans-serif;fill:#172b43;font-size:16px} .heading{font-weight:700;font-size:20px} .small{font-size:14px;fill:#42536a} .math{font-family:"DejaVu Sans","Noto Sans CJK SC",sans-serif;font-size:17px} .wire{fill:none;stroke:#46566b;stroke-width:1.8;marker-end:url(#arrow)} .minus{stroke-dasharray:5 4} .even{fill:#075b75} .odd{fill:#923d0a}</style><rect width="680" height="1140" fill="white"/>
+<text x="24" y="34" class="heading" text-anchor="start">四点 FFT：沿每条线亲手算一次</text>
+<text x="24" y="61" class="small" text-anchor="start">新编例题配图 · 非原 PPT 图 · 正变换的旋转因子 W₄ = −j</text>
+<text x="24" y="90" class="math" text-anchor="start">原输入 x(n) = {1, 2, 3, 4}，首项 n = 0。</text>
+<path d="M24 110 H656" stroke="#cbd5df"/>
+<text x="24" y="141" class="heading" text-anchor="start">① 奇偶拆分，各做一次 2 点 DFT</text>
+<text x="180" y="172" class="even" text-anchor="middle">偶组 x₁(r) = x(2r)</text>
+<text x="500" y="172" class="odd" text-anchor="middle">奇组 x₂(r) = x(2r+1)</text>
+<text x="100" y="206" class="math" text-anchor="middle">x(0) = 1</text>
+<text x="260" y="206" class="math" text-anchor="middle">x(2) = 3</text>
+<text x="420" y="206" class="math" text-anchor="middle">x(1) = 2</text>
+<text x="580" y="206" class="math" text-anchor="middle">x(3) = 4</text>
+<path class="wire" d="M100 218 L100 284"/>
+<path class="wire" d="M260 218 L100 284"/>
+<path class="wire" d="M100 218 L260 284"/>
+<path class="wire minus" d="M260 218 L260 284"/>
+<circle cx="100" cy="301" r="11" fill="white" stroke="#46566b"/>
+<text x="100" y="307" class="math" text-anchor="middle">+</text>
+<circle cx="260" cy="301" r="11" fill="white" stroke="#46566b"/>
+<text x="260" y="307" class="math" text-anchor="middle">+</text>
+<path class="wire" d="M420 218 L420 284"/>
+<path class="wire" d="M580 218 L420 284"/>
+<path class="wire" d="M420 218 L580 284"/>
+<path class="wire minus" d="M580 218 L580 284"/>
+<circle cx="420" cy="301" r="11" fill="white" stroke="#46566b"/>
+<text x="420" y="307" class="math" text-anchor="middle">+</text>
+<circle cx="580" cy="301" r="11" fill="white" stroke="#46566b"/>
+<text x="580" y="307" class="math" text-anchor="middle">+</text>
+<text x="100" y="336" class="math" text-anchor="middle">X₁(0) = 4</text>
+<text x="260" y="336" class="math" text-anchor="middle">X₁(1) = −2</text>
+<text x="420" y="336" class="math" text-anchor="middle">X₂(0) = 6</text>
+<text x="580" y="336" class="math" text-anchor="middle">X₂(1) = −2</text>
+<text x="100" y="361" class="small" text-anchor="middle">1 + 3</text>
+<text x="260" y="361" class="small" text-anchor="middle">1 − 3</text>
+<text x="420" y="361" class="small" text-anchor="middle">2 + 4</text>
+<text x="580" y="361" class="small" text-anchor="middle">2 − 4</text>
+<text x="24" y="390" class="small" text-anchor="start">r = 0, 1 是短序列位置；上面输出的 0、1 是短频率位置。</text>
+<path d="M24 407 H656" stroke="#cbd5df"/>
+<text x="24" y="439" class="heading" text-anchor="start">② 按同一个短频率 k 配对，再旋转奇组</text>
+<text x="24" y="466" class="small" text-anchor="start">以下沿同名 X₁、X₂ 接续，只换摆放位置，没有重算。</text>
+<text x="180" y="500" class="heading" text-anchor="middle">k = 0</text>
+<text x="500" y="500" class="heading" text-anchor="middle">k = 1</text>
+<text x="100" y="533" class="math" text-anchor="middle">A₀ = X₁(0)</text>
+<text x="260" y="533" class="math" text-anchor="middle">B₀ = X₂(0)</text>
+<text x="420" y="533" class="math" text-anchor="middle">A₁ = X₁(1)</text>
+<text x="580" y="533" class="math" text-anchor="middle">B₁ = X₂(1)</text>
+<text x="100" y="560" class="math" text-anchor="middle">= 4</text>
+<text x="260" y="560" class="math" text-anchor="middle">= 6</text>
+<text x="420" y="560" class="math" text-anchor="middle">= −2</text>
+<text x="580" y="560" class="math" text-anchor="middle">= −2</text>
+<path class="wire" d="M100 576 L100 662"/>
+<path class="wire" d="M420 576 L420 662"/>
+<path class="wire" d="M260 576 L260 588"/>
+<path class="wire" d="M580 576 L580 588"/>
+<rect x="186" y="594" width="148" height="34" rx="4" fill="#fff4e5" stroke="#b57324"/>
+<text x="260" y="617" class="math" text-anchor="middle">× W₄⁰ = ×1</text>
+<path class="wire" d="M260 630 L260 662"/>
+<rect x="506" y="594" width="148" height="34" rx="4" fill="#fff4e5" stroke="#b57324"/>
+<text x="580" y="617" class="math" text-anchor="middle">× W₄¹ = ×(−j)</text>
+<path class="wire" d="M580 630 L580 662"/>
+<text x="100" y="692" class="math" text-anchor="middle">A₀ = 4</text>
+<text x="260" y="692" class="math" text-anchor="middle">t₀ = 6</text>
+<text x="420" y="692" class="math" text-anchor="middle">A₁ = −2</text>
+<text x="580" y="692" class="math" text-anchor="middle">t₁ = 2j</text>
+<text x="24" y="722" class="small" text-anchor="start">Aₖ 是偶组结果；Bₖ 是奇组结果；tₖ = W₄ᵏ Bₖ 只算一次。</text>
+<path d="M24 738 H656" stroke="#cbd5df"/>
+<text x="24" y="770" class="heading" text-anchor="start">③ 复用 t：一加一减，得到两对完整输出</text>
+<text x="100" y="802" class="math" text-anchor="middle">A₀ = 4</text>
+<text x="260" y="802" class="math" text-anchor="middle">t₀ = 6</text>
+<text x="420" y="802" class="math" text-anchor="middle">A₁ = −2</text>
+<text x="580" y="802" class="math" text-anchor="middle">t₁ = 2j</text>
+<path class="wire" d="M100 814 L100 880"/>
+<path class="wire" d="M260 814 L100 880"/>
+<path class="wire" d="M100 814 L260 880"/>
+<path class="wire minus" d="M260 814 L260 880"/>
+<circle cx="100" cy="897" r="11" fill="white" stroke="#46566b"/>
+<text x="100" y="903" class="math" text-anchor="middle">+</text>
+<circle cx="260" cy="897" r="11" fill="white" stroke="#46566b"/>
+<text x="260" y="903" class="math" text-anchor="middle">+</text>
+<path class="wire" d="M420 814 L420 880"/>
+<path class="wire" d="M580 814 L420 880"/>
+<path class="wire" d="M420 814 L580 880"/>
+<path class="wire minus" d="M580 814 L580 880"/>
+<circle cx="420" cy="897" r="11" fill="white" stroke="#46566b"/>
+<text x="420" y="903" class="math" text-anchor="middle">+</text>
+<circle cx="580" cy="897" r="11" fill="white" stroke="#46566b"/>
+<text x="580" y="903" class="math" text-anchor="middle">+</text>
+<text x="100" y="932" class="math" text-anchor="middle">X(0) = 10</text>
+<text x="260" y="932" class="math" text-anchor="middle">X(2) = −2</text>
+<text x="420" y="932" class="math" text-anchor="middle">X(1) = −2+2j</text>
+<text x="580" y="932" class="math" text-anchor="middle">X(3) = −2−2j</text>
+<text x="100" y="958" class="small" text-anchor="middle">4 + 6</text>
+<text x="260" y="958" class="small" text-anchor="middle">4 − 6</text>
+<text x="420" y="958" class="small" text-anchor="middle">−2 + 2j</text>
+<text x="580" y="958" class="small" text-anchor="middle">−2 − 2j</text>
+<text x="24" y="989" class="small" text-anchor="start">左/右输出对应 X(k) 与 X(k+2)，不是两个新的时刻。</text>
+<path d="M24 1004 H656" stroke="#cbd5df"/>
+<text x="24" y="1034" class="heading" text-anchor="start">④ 最后只按自然频率顺序整理</text>
+<text x="340" y="1066" class="math" text-anchor="middle">X(0), X(1), X(2), X(3) = {10, −2+2j, −2, −2−2j}</text>
+<text x="24" y="1095" class="small" text-anchor="start">读线：圆内 + 表示把支路值相加；虚线已乘 −1，不再减一次。</text>
+<text x="24" y="1122" class="small" text-anchor="start">实线系数 +1；交叉不连接。右输出仍是“左输入 − 右输入”。</text>
+</svg>

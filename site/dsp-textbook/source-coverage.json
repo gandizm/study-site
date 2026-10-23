@@ -3751,9 +3751,15 @@
       "originalExamples": [
         {
           "number": "2.6.1",
-          "printedPages": [],
-          "pdfPages": [],
-          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+          "printedPages": [
+            99,
+            100
+          ],
+          "pdfPages": [
+            116,
+            117
+          ],
+          "sourceNote": "已按第3版实际书页与原PPT题干核对；线性卷积及8、11、13点循环卷积。"
         }
       ],
       "boundaries": []
@@ -3779,9 +3785,15 @@
       "originalExamples": [
         {
           "number": "2.6.1",
-          "printedPages": [],
-          "pdfPages": [],
-          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+          "printedPages": [
+            99,
+            100
+          ],
+          "pdfPages": [
+            116,
+            117
+          ],
+          "sourceNote": "已按第3版实际书页与原PPT题干核对；线性卷积及8、11、13点循环卷积。"
         }
       ],
       "boundaries": []
@@ -3808,9 +3820,15 @@
       "originalExamples": [
         {
           "number": "2.6.1",
-          "printedPages": [],
-          "pdfPages": [],
-          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+          "printedPages": [
+            99,
+            100
+          ],
+          "pdfPages": [
+            116,
+            117
+          ],
+          "sourceNote": "已按第3版实际书页与原PPT题干核对；线性卷积及8、11、13点循环卷积。"
         }
       ],
       "boundaries": []
@@ -3943,9 +3961,13 @@
       "originalExamples": [
         {
           "number": "2.6.2",
-          "printedPages": [],
-          "pdfPages": [],
-          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+          "printedPages": [
+            102
+          ],
+          "pdfPages": [
+            119
+          ],
+          "sourceNote": "已按第3版实际书页与原PPT题干核对；重叠相加例题。"
         }
       ],
       "boundaries": []
@@ -4082,9 +4104,13 @@
       "originalExamples": [
         {
           "number": "2.6.5",
-          "printedPages": [],
-          "pdfPages": [],
-          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+          "printedPages": [
+            105
+          ],
+          "pdfPages": [
+            122
+          ],
+          "sourceNote": "已按第3版实际书页与原PPT题干核对；FFT频谱分析参数选择。"
         }
       ],
       "boundaries": []
@@ -4111,9 +4137,13 @@
       "originalExamples": [
         {
           "number": "2.6.5",
-          "printedPages": [],
-          "pdfPages": [],
-          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+          "printedPages": [
+            105
+          ],
+          "pdfPages": [
+            122
+          ],
+          "sourceNote": "已按第3版实际书页与原PPT题干核对；FFT频谱分析参数选择。"
         }
       ],
       "boundaries": []
