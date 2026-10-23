@@ -1,0 +1,4342 @@
+{
+  "schemaVersion": 1,
+  "title": "第二章原PPT逐页对照",
+  "summary": "六份原PPT共185页：160页核心内容逐项对应正文，24页目录/背景单列，1页研究延伸保留模型边界。“已解释”不等于每页都新增一套证明，也不等于原PPT排版已完全修复。",
+  "editionNote": "书例页码采用方勇《数字信号处理——原理与实践》第3版实际印刷页；PDF页是所核版本的物理页序号。旧课件标注的其他版次页码不直接沿用。原书扫描不在网站公开。",
+  "scopeCounts": {
+    "core": 160,
+    "context": 24,
+    "researchExtension": 1
+  },
+  "sections": [
+    {
+      "id": "2.1",
+      "title": "离散时间序列的傅里叶变换（DTFT）",
+      "pageCount": 35
+    },
+    {
+      "id": "2.2",
+      "title": "周期序列的离散傅里叶级数与频谱",
+      "pageCount": 24
+    },
+    {
+      "id": "2.3",
+      "title": "有限长序列的离散傅里叶变换（DFT）",
+      "pageCount": 53
+    },
+    {
+      "id": "2.4",
+      "title": "频域采样定理",
+      "pageCount": 11
+    },
+    {
+      "id": "2.5",
+      "title": "快速傅里叶变换（FFT）",
+      "pageCount": 31
+    },
+    {
+      "id": "2.6",
+      "title": "DFT的应用",
+      "pageCount": 31
+    }
+  ],
+  "pages": [
+    {
+      "section": "2.1",
+      "sourcePage": 1,
+      "anchor": "ppt-21-p01",
+      "knowledgePoints": [
+        "本章六部分的学习路线"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-03",
+          "title": "DTFT：从序列到连续的数字频谱"
+        },
+        {
+          "lessonId": "guide",
+          "title": "第二章先读这一页：我们到底要学会什么？"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 2,
+      "anchor": "ppt-21-p02",
+      "knowledgePoints": [
+        "2.1封面与授课信息（行政页）"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-03",
+          "title": "DTFT：从序列到连续的数字频谱"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 3,
+      "anchor": "ppt-21-p03",
+      "knowledgePoints": [
+        "DTFT定义与性质的提纲（导航）"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-03",
+          "title": "DTFT：从序列到连续的数字频谱"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 4,
+      "anchor": "ppt-21-p04",
+      "knowledgePoints": [
+        "Z变换与离散时间实频率分析的对象关系"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-03",
+          "title": "DTFT：从序列到连续的数字频谱"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 5,
+      "anchor": "ppt-21-p05",
+      "knowledgePoints": [
+        "DTFT定义、绝对可和充分条件、一般存在框架及周期序列冲激谱提示"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-03",
+          "title": "DTFT：从序列到连续的数字频谱"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "普通DTFT与广义冲激谱的存在含义不同，绝对可和是充分条件而非所有情形的必要条件。"
+      ]
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 6,
+      "anchor": "ppt-21-p06",
+      "knowledgePoints": [
+        "单位圆上的Z变换与收敛域条件"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-03",
+          "title": "DTFT：从序列到连续的数字频谱"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 7,
+      "anchor": "ppt-21-p07",
+      "knowledgePoints": [
+        "IDTFT由整周期指数正交积分推出",
+        "n/m作用域和1/(2π)"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-03",
+          "title": "DTFT：从序列到连续的数字频谱"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 8,
+      "anchor": "ppt-21-p08",
+      "knowledgePoints": [
+        "矩形R_N的有限等比和、半角形式及N4图例"
+      ],
+      "types": [
+        "推导/方法",
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-04",
+          "title": "DTFT正逆变换的完整算例：一串连续的1"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 9,
+      "anchor": "ppt-21-p09",
+      "knowledgePoints": [
+        "R4的时域、幅度与分段相位图",
+        "零点与可去奇点"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-04",
+          "title": "DTFT正逆变换的完整算例：一串连续的1"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 10,
+      "anchor": "ppt-21-p10",
+      "knowledgePoints": [
+        "正逆DTFT公式与计算举例提示（没有另一道完整题干）"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-04",
+          "title": "DTFT正逆变换的完整算例：一串连续的1"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 11,
+      "anchor": "ppt-21-p11",
+      "knowledgePoints": [
+        "九项性质的分类定位（本页仅目录）"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-05",
+          "title": "时移、频移与频谱运算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 12,
+      "anchor": "ppt-21-p12",
+      "knowledgePoints": [
+        "整数时间导致频域2π周期",
+        "整圈整数M"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-03",
+          "title": "DTFT：从序列到连续的数字频谱"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 13,
+      "anchor": "ppt-21-p13",
+      "knowledgePoints": [
+        "线性性质及常数a、b"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-05",
+          "title": "时移、频移与频谱运算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 14,
+      "anchor": "ppt-21-p14",
+      "knowledgePoints": [
+        "时移与频移两式、固定平移量与自变量",
+        "原式记号与角色回读"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-05",
+          "title": "时移、频移与频谱运算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 15,
+      "anchor": "ppt-21-p15",
+      "knowledgePoints": [
+        "时间翻转对应频率翻转"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-05",
+          "title": "时移、频移与频谱运算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 16,
+      "anchor": "ppt-21-p16",
+      "knowledgePoints": [
+        "频域微分对应时间加权",
+        "正负j和换序条件"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-05",
+          "title": "时移、频移与频谱运算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 17,
+      "anchor": "ppt-21-p17",
+      "knowledgePoints": [
+        "Parseval能量恒等式与1/(2π)"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-06",
+          "title": "同一能量的两种算法，以及两种卷积定理"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 18,
+      "anchor": "ppt-21-p18",
+      "knowledgePoints": [
+        "Parseval证明和一周期积分归一化"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-06",
+          "title": "同一能量的两种算法，以及两种卷积定理"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 19,
+      "anchor": "ppt-21-p19",
+      "knowledgePoints": [
+        "时域卷积定理、LTI输出两种求法"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-06",
+          "title": "同一能量的两种算法，以及两种卷积定理"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 20,
+      "anchor": "ppt-21-p20",
+      "knowledgePoints": [
+        "时域卷积证明、k=n−m的时间哑变量及举例提示"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-06",
+          "title": "同一能量的两种算法，以及两种卷积定理"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 21,
+      "anchor": "ppt-21-p21",
+      "knowledgePoints": [
+        "频域周期卷积定理：时间逐点乘积、1/(2π)"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-06",
+          "title": "同一能量的两种算法，以及两种卷积定理"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 22,
+      "anchor": "ppt-21-p22",
+      "knowledgePoints": [
+        "频域卷积证明、积分求和交换与一周期范围"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-06",
+          "title": "同一能量的两种算法，以及两种卷积定理"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 23,
+      "anchor": "ppt-21-p23",
+      "knowledgePoints": [
+        "共轭偶/奇的定义及实部、虚部普通奇偶性"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 24,
+      "anchor": "ppt-21-p24",
+      "knowledgePoints": [
+        "原复指数例的共轭对称性",
+        "固定角频率"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 25,
+      "anchor": "ppt-21-p25",
+      "knowledgePoints": [
+        "任意复序列共轭偶/奇分解"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 26,
+      "anchor": "ppt-21-p26",
+      "knowledgePoints": [
+        "共轭对称时间分量的DTFT推导"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 27,
+      "anchor": "ppt-21-p27",
+      "knowledgePoints": [
+        "x_e↔ReX、x_o↔jImX的结论"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 28,
+      "anchor": "ppt-21-p28",
+      "knowledgePoints": [
+        "时间实部/虚部的DTFT推导"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 29,
+      "anchor": "ppt-21-p29",
+      "knowledgePoints": [
+        "x_r↔X_e、jx_i↔X_o的结论，不能与上一组混用"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 30,
+      "anchor": "ppt-21-p30",
+      "knowledgePoints": [
+        "实因果序列普通奇偶分量的分段值"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 31,
+      "anchor": "ppt-21-p31",
+      "knowledgePoints": [
+        "u_+的2/1/0与两种恢复式，奇分量另需原点"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-07",
+          "title": "对称性怎样减少计算：先分清偶与共轭偶"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 32,
+      "anchor": "ppt-21-p32",
+      "knowledgePoints": [
+        "性质总表全条目（含三种共轭/翻转、两种乘积与移位）"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-08",
+          "title": "DTFT综合题与原表回读"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 33,
+      "anchor": "ppt-21-p33",
+      "knowledgePoints": [
+        "实序列限制、幅相对称性和两种分解总表"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-08",
+          "title": "DTFT综合题与原表回读"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 34,
+      "anchor": "ppt-21-p34",
+      "knowledgePoints": [
+        "书例2.1.7五个量及原样值图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "本页所列原题已补回并讲解",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-08",
+          "title": "DTFT综合题与原表回读"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.1.7",
+          "printedPages": [
+            43,
+            44
+          ],
+          "pdfPages": [
+            60,
+            61
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.1",
+      "sourcePage": 35,
+      "anchor": "ppt-21-p35",
+      "knowledgePoints": [
+        "书例2.1.11、2.1.12和PPT直接给出的六项余弦和实因果题"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "本页所列原题已补回并讲解",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-08",
+          "title": "DTFT综合题与原表回读"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.1.11",
+          "printedPages": [
+            48,
+            49
+          ],
+          "pdfPages": [
+            65,
+            66
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        },
+        {
+          "number": "2.1.12",
+          "printedPages": [
+            50,
+            51
+          ],
+          "pdfPages": [
+            67,
+            68
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 1,
+      "anchor": "ppt-22-p01",
+      "knowledgePoints": [
+        "2.2封面"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 2,
+      "anchor": "ppt-22-p02",
+      "knowledgePoints": [
+        "非绝对可和周期序列的DTFT为何转入冲激意义"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 3,
+      "anchor": "ppt-22-p03",
+      "knowledgePoints": [
+        "DFS、周期DTFT、模拟/离散谱关系提纲"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 4,
+      "anchor": "ppt-22-p04",
+      "knowledgePoints": [
+        "DFS定义、系数求解、正逆对的路线"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 5,
+      "anchor": "ppt-22-p05",
+      "knowledgePoints": [
+        "周期N只有N种不同离散谐波",
+        "级数系数定义"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        },
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "本页连续时间与离散时间的级数分工，由两篇正文共同解释；不能把无限项连续级数直接换字母写成离散合成。"
+      ]
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 6,
+      "anchor": "ppt-22-p06",
+      "knowledgePoints": [
+        "有限周期正交求系数及n/k周期性，模N条件"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 7,
+      "anchor": "ppt-22-p07",
+      "knowledgePoints": [
+        "DFS/IDFS变换对、1/N及主值Z变换单位圆采样"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 8,
+      "anchor": "ppt-22-p08",
+      "knowledgePoints": [
+        "原N8矩形周期延拓的DFS完整算例"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.2.1",
+          "printedPages": [
+            52,
+            53
+          ],
+          "pdfPages": [
+            69,
+            70
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 9,
+      "anchor": "ppt-22-p09",
+      "knowledgePoints": [
+        "周期DTFT及冲激引入的路线"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-10",
+          "title": "周期线谱：DFS系数与DTFT冲激权重"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 10,
+      "anchor": "ppt-22-p10",
+      "knowledgePoints": [
+        "连续与离散复指数的冲激谱、权重2π和数字周期性"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-10",
+          "title": "周期线谱：DFS系数与DTFT冲激权重"
+        },
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "连续复指数的一条线与数字复指数的周期冲激梳，由两篇正文共同对照。"
+      ]
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 11,
+      "anchor": "ppt-22-p11",
+      "knowledgePoints": [
+        "复指数DTFT图：一个2π基本区间内一条冲激"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-10",
+          "title": "周期线谱：DFS系数与DTFT冲激权重"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 12,
+      "anchor": "ppt-22-p12",
+      "knowledgePoints": [
+        "一般周期序列由DFS得到冲激DTFT，2π/N和整数副本索引"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-10",
+          "title": "周期线谱：DFS系数与DTFT冲激权重"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 13,
+      "anchor": "ppt-22-p13",
+      "knowledgePoints": [
+        "书例2.2.1与2.2.3同一矩形序列，DFS竖线与DTFT冲激权重区别"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "本页所列原题已补回并讲解",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        },
+        {
+          "lessonId": "dsp-front-10",
+          "title": "周期线谱：DFS系数与DTFT冲激权重"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.2.1",
+          "printedPages": [
+            52,
+            53
+          ],
+          "pdfPages": [
+            69,
+            70
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        },
+        {
+          "number": "2.2.3",
+          "printedPages": [
+            54,
+            55
+          ],
+          "pdfPages": [
+            71,
+            72
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        }
+      ],
+      "boundaries": [
+        "例2.2.1求DFS，例2.2.3求同一序列的DTFT；冲激权重不是普通函数的有限高度。"
+      ]
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 14,
+      "anchor": "ppt-22-p14",
+      "knowledgePoints": [
+        "模拟信号、采样冲激串信号、离散序列三对象"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 15,
+      "anchor": "ppt-22-p15",
+      "knowledgePoints": [
+        "抽样时域/频域示意与待求桥接关系"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 16,
+      "anchor": "ppt-22-p16",
+      "knowledgePoints": [
+        "连续逆FT取t=nT和DTFT逆式，积分域不同的问题"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 17,
+      "anchor": "ppt-22-p17",
+      "knowledgePoints": [
+        "分频率小区间、换元及指数整圈项=1"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 18,
+      "anchor": "ppt-22-p18",
+      "knowledgePoints": [
+        "频谱周期叠加公式及1/T尺度"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 19,
+      "anchor": "ppt-22-p19",
+      "knowledgePoints": [
+        "模拟频率/数字频率的定标、单位和周期"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-02",
+          "title": "为什么用复正弦描述序列"
+        },
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 20,
+      "anchor": "ppt-22-p20",
+      "knowledgePoints": [
+        "原例2.2.7的100Hz余弦、400Hz采样与三问"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.2.7",
+          "printedPages": [
+            58,
+            59,
+            60
+          ],
+          "pdfPages": [
+            75,
+            76,
+            77
+          ],
+          "sourceNote": "原100Hz余弦、400Hz采样题；书页与原课件题干相符。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 21,
+      "anchor": "ppt-22-p21",
+      "knowledgePoints": [
+        "例2.2.7连续FT、采样信号和离散样值式"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.2.7",
+          "printedPages": [
+            58,
+            59,
+            60
+          ],
+          "pdfPages": [
+            75,
+            76,
+            77
+          ],
+          "sourceNote": "原100Hz余弦、400Hz采样题；书页与原课件题干相符。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 22,
+      "anchor": "ppt-22-p22",
+      "knowledgePoints": [
+        "例2.2.7采样冲激串的FT"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.2.7",
+          "printedPages": [
+            58,
+            59,
+            60
+          ],
+          "pdfPages": [
+            75,
+            76,
+            77
+          ],
+          "sourceNote": "原100Hz余弦、400Hz采样题；书页与原课件题干相符。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 23,
+      "anchor": "ppt-22-p23",
+      "knowledgePoints": [
+        "例2.2.7离散序列DTFT及另一种等价表示"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.2.7",
+          "printedPages": [
+            58,
+            59,
+            60
+          ],
+          "pdfPages": [
+            75,
+            76,
+            77
+          ],
+          "sourceNote": "原100Hz余弦、400Hz采样题；书页与原课件题干相符。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.2",
+      "sourcePage": 24,
+      "anchor": "ppt-22-p24",
+      "knowledgePoints": [
+        "例2.2.7原多域图：Ω_s/ω周期与权重对应"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-11",
+          "title": "模拟与数字频率：100Hz采样原例慢解"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.2.7",
+          "printedPages": [
+            58,
+            59,
+            60
+          ],
+          "pdfPages": [
+            75,
+            76,
+            77
+          ],
+          "sourceNote": "原100Hz余弦、400Hz采样题；书页与原课件题干相符。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 1,
+      "anchor": "ppt-23-p01",
+      "knowledgePoints": [
+        "有限长DFT封面"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 2,
+      "anchor": "ppt-23-p02",
+      "knowledgePoints": [
+        "定义、Z关系、隐含周期性、性质提纲"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 3,
+      "anchor": "ppt-23-p03",
+      "knowledgePoints": [
+        "连续频率/无限范围运算为何转为有限数据DFT"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 4,
+      "anchor": "ppt-23-p04",
+      "knowledgePoints": [
+        "一般N点DFT/IDFT定义及W_N约定"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 5,
+      "anchor": "ppt-23-p05",
+      "knowledgePoints": [
+        "IDFT根单位正交证明，固定n与求和m/k作用域"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 6,
+      "anchor": "ppt-23-p06",
+      "knowledgePoints": [
+        "有限序列DFT与单位圆Z/DTFT采样关系"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 7,
+      "anchor": "ppt-23-p07",
+      "knowledgePoints": [
+        "原例R4(n)的DTFT等比/半角公式，为8点和16点DFT准备"
+      ],
+      "types": [
+        "推导/方法",
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 8,
+      "anchor": "ppt-23-p08",
+      "knowledgePoints": [
+        "原R4序列的8点DFT公式、幅度样点与DTFT对照"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 9,
+      "anchor": "ppt-23-p09",
+      "knowledgePoints": [
+        "同一R4序列16点DFT公式与幅度样点，补零不改变DTFT"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 10,
+      "anchor": "ppt-23-p10",
+      "knowledgePoints": [
+        "不同频率采样点数的DTFT/DFT对比图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 11,
+      "anchor": "ppt-23-p11",
+      "knowledgePoints": [
+        "时间/频率双向隐含周期性与主值"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 12,
+      "anchor": "ppt-23-p12",
+      "knowledgePoints": [
+        "原δ(n)的任意N点DFT为全1"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 13,
+      "anchor": "ppt-23-p13",
+      "knowledgePoints": [
+        "δ(n)及其DFT图与不依赖N的解释"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 14,
+      "anchor": "ppt-23-p14",
+      "knowledgePoints": [
+        "主值、移位、卷积、对称、相关五类概念（概念路线）"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-correlation",
+          "title": "相关与卷积：为什么频域要乘一个共轭"
+        },
+        {
+          "lessonId": "dsp-front-13",
+          "title": "主值、周期延拓与圆周移位"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 15,
+      "anchor": "ppt-23-p15",
+      "knowledgePoints": [
+        "主值区间0..N−1、主值序列、周期延拓"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-13",
+          "title": "主值、周期延拓与圆周移位"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 16,
+      "anchor": "ppt-23-p16",
+      "knowledgePoints": [
+        "线性移位与圆周移位、周期与窗口记号"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-13",
+          "title": "主值、周期延拓与圆周移位"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 17,
+      "anchor": "ppt-23-p17",
+      "knowledgePoints": [
+        "延拓→移位→取主值的实现步骤"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-13",
+          "title": "主值、周期延拓与圆周移位"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 18,
+      "anchor": "ppt-23-p18",
+      "knowledgePoints": [
+        "原[2,1,3,1,0.5]的N5延拓与N6补零延拓"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-13",
+          "title": "主值、周期延拓与圆周移位"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 19,
+      "anchor": "ppt-23-p19",
+      "knowledgePoints": [
+        "同一原数组左移1、右移2并取主值的数值图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-13",
+          "title": "主值、周期延拓与圆周移位"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 20,
+      "anchor": "ppt-23-p20",
+      "knowledgePoints": [
+        "线性/圆周卷积和性质比较路线"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-14",
+          "title": "线性卷积和圆周卷积如何区分"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 21,
+      "anchor": "ppt-23-p21",
+      "knowledgePoints": [
+        "线性卷积定义与结果长度"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-14",
+          "title": "线性卷积和圆周卷积如何区分"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 22,
+      "anchor": "ppt-23-p22",
+      "knowledgePoints": [
+        "N点圆周卷积定义及长度N"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-14",
+          "title": "线性卷积和圆周卷积如何区分"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 23,
+      "anchor": "ppt-23-p23",
+      "knowledgePoints": [
+        "圆周翻转/移动/相乘求和步骤"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-14",
+          "title": "线性卷积和圆周卷积如何区分"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 24,
+      "anchor": "ppt-23-p24",
+      "knowledgePoints": [
+        "原课堂数组[1,2,2,1]自卷积：线性及N4/6/7/8四种圆周结果"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-14",
+          "title": "线性卷积和圆周卷积如何区分"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 25,
+      "anchor": "ppt-23-p25",
+      "knowledgePoints": [
+        "两种卷积性质比较与原书例2.3.10"
+      ],
+      "types": [
+        "推导/方法",
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "本页所列原题已补回并讲解",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-14",
+          "title": "线性卷积和圆周卷积如何区分"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.3.10",
+          "printedPages": [
+            75,
+            76
+          ],
+          "pdfPages": [
+            92,
+            93
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        }
+      ],
+      "boundaries": [
+        "原题只能确定部分线性输出及其余配对和，未给条件不能补造各项值；固定卷积表示限定LTI零状态响应。"
+      ]
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 26,
+      "anchor": "ppt-23-p26",
+      "knowledgePoints": [
+        "DFT性质来自周期结构的动机和同长度假设"
+      ],
+      "types": [
+        "定义/前提回读"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-12",
+          "title": "有限序列的DFT与逆变换为什么成立"
+        },
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "本页属于已有定义和同N前提的回读，由DFT定义篇与性质篇联合承接，不算新增定理推导。"
+      ]
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 27,
+      "anchor": "ppt-23-p27",
+      "knowledgePoints": [
+        "线性、循环移位、卷积、共轭、Parseval、对称性提纲"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 28,
+      "anchor": "ppt-23-p28",
+      "knowledgePoints": [
+        "一般DFT线性及两序列长度不同时的补零条件"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 29,
+      "anchor": "ppt-23-p29",
+      "knowledgePoints": [
+        "时间圆周移位与频域线性相位（模N和符号）"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 30,
+      "anchor": "ppt-23-p30",
+      "knowledgePoints": [
+        "时移性质换元证明，任一整周期求和相同"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 31,
+      "anchor": "ppt-23-p31",
+      "knowledgePoints": [
+        "频移/时间调制性质及书例2.3.7、2.3.8"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法",
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "本页所列原题已补回并讲解",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.3.7",
+          "printedPages": [
+            71
+          ],
+          "pdfPages": [
+            88
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        },
+        {
+          "number": "2.3.8",
+          "printedPages": [
+            71,
+            72
+          ],
+          "pdfPages": [
+            88,
+            89
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 32,
+      "anchor": "ppt-23-p32",
+      "knowledgePoints": [
+        "时域圆周卷积定理"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 33,
+      "anchor": "ppt-23-p33",
+      "knowledgePoints": [
+        "时域圆周卷积定理换元证明"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 34,
+      "anchor": "ppt-23-p34",
+      "knowledgePoints": [
+        "频域圆周卷积定理，1/N不能遗漏"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 35,
+      "anchor": "ppt-23-p35",
+      "knowledgePoints": [
+        "复共轭序列的DFT与频率圆周反向"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 36,
+      "anchor": "ppt-23-p36",
+      "knowledgePoints": [
+        "共轭性质第一证明、隐含周期性"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 37,
+      "anchor": "ppt-23-p37",
+      "knowledgePoints": [
+        "第二证明与圆周翻转关系"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 38,
+      "anchor": "ppt-23-p38",
+      "knowledgePoints": [
+        "DFT Parseval公式与证明开始"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 39,
+      "anchor": "ppt-23-p39",
+      "knowledgePoints": [
+        "Parseval证明续页，1/N尺度"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-15",
+          "title": "DFT的性质：移位、卷积、共轭与能量"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 40,
+      "anchor": "ppt-23-p40",
+      "knowledgePoints": [
+        "非周期共轭偶/奇与有限圆周版本的联系"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 41,
+      "anchor": "ppt-23-p41",
+      "knowledgePoints": [
+        "任意周期序列分解及反向序列图"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 42,
+      "anchor": "ppt-23-p42",
+      "knowledgePoints": [
+        "周期共轭偶/奇分量显式公式"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 43,
+      "anchor": "ppt-23-p43",
+      "knowledgePoints": [
+        "取主值后的x_ep/x_op定义和任意有限序列分解"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 44,
+      "anchor": "ppt-23-p44",
+      "knowledgePoints": [
+        "圆周共轭偶的实偶/虚奇/模偶与非零相位关系"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 45,
+      "anchor": "ppt-23-p45",
+      "knowledgePoints": [
+        "圆周共轭奇的实奇/虚偶/模偶与相位条件"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "非零共轭反对称配对点有相位互补关系，不能误读成毫无规律；零点不定义相位。"
+      ]
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 46,
+      "anchor": "ppt-23-p46",
+      "knowledgePoints": [
+        "频域X_ep/X_op分解及举例提示"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 47,
+      "anchor": "ppt-23-p47",
+      "knowledgePoints": [
+        "时间实虚与频率共轭分量两组交叉对应总表"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 48,
+      "anchor": "ppt-23-p48",
+      "knowledgePoints": [
+        "DFT[x_r]和DFT[jx_i]的逐式推导"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 49,
+      "anchor": "ppt-23-p49",
+      "knowledgePoints": [
+        "X=X_ep+X_op结论及各自对应的时间分量"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 50,
+      "anchor": "ppt-23-p50",
+      "knowledgePoints": [
+        "DFT[x_ep]和DFT[x_op]的逐式推导"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 51,
+      "anchor": "ppt-23-p51",
+      "knowledgePoints": [
+        "X=ReX+jImX结论及各自对应的时间分量"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 52,
+      "anchor": "ppt-23-p52",
+      "knowledgePoints": [
+        "实数序列的完整圆周共轭对称对应"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.3",
+      "sourcePage": 53,
+      "anchor": "ppt-23-p53",
+      "knowledgePoints": [
+        "纯虚序列的完整对应与原书例2.3.13"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "本页所列原题已补回并讲解",
+      "lessons": [
+        {
+          "lessonId": "dsp-front-16",
+          "title": "DFT的对称性与两条实序列的分离"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.3.13",
+          "printedPages": [
+            81,
+            82
+          ],
+          "pdfPages": [
+            98,
+            99
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        }
+      ],
+      "boundaries": [
+        "两条实序列的频谱通常仍为复数；须共轭反向配对，不能逐点取实部/虚部代替分离。"
+      ]
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 1,
+      "anchor": "ppt-24-p01",
+      "knowledgePoints": [
+        "频域采样定理封面"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 2,
+      "anchor": "ppt-24-p02",
+      "knowledgePoints": [
+        "时域Nyquist采样类比与频率采样恢复问题（动机页）"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 3,
+      "anchor": "ppt-24-p03",
+      "knowledgePoints": [
+        "Z单位圆N点采样与DTFT存在条件"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 4,
+      "anchor": "ppt-24-p04",
+      "knowledgePoints": [
+        "IDFT得到周期叠加主值的推导，副本索引为整数"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 5,
+      "anchor": "ppt-24-p05",
+      "knowledgePoints": [
+        "有限长支持区间与N≥M无混叠条件"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 6,
+      "anchor": "ppt-24-p06",
+      "knowledgePoints": [
+        "频域采样定理及不满足长度条件的混叠"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 7,
+      "anchor": "ppt-24-p07",
+      "knowledgePoints": [
+        "可恢复示意/内插关系及恢复对象"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 8,
+      "anchor": "ppt-24-p08",
+      "knowledgePoints": [
+        "五点矩形的连续DTFT再取频率采样"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 9,
+      "anchor": "ppt-24-p09",
+      "knowledgePoints": [
+        "N5延拓无混叠",
+        "N是周期长度不是周期副本个数"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 10,
+      "anchor": "ppt-24-p10",
+      "knowledgePoints": [
+        "N4时原五点矩形折回的实际数值/图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-sampling",
+          "title": "频率只取 N 个点，时域会发生什么"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.4",
+      "sourcePage": 11,
+      "anchor": "ppt-24-p11",
+      "knowledgePoints": [
+        "原书例2.4.2与2.6.3两道题（必须分别闭合）"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "本页所列原题已补回并讲解",
+      "lessons": [
+        {
+          "lessonId": "dsp-frequency-book-example",
+          "title": "原书例 2.4.2：指数尾巴怎样折回前面"
+        },
+        {
+          "lessonId": "dsp-inverse-filter",
+          "title": "原书例 2.6.3：逆滤波为什么会坏掉第一个点"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.4.2",
+          "printedPages": [
+            86,
+            87
+          ],
+          "pdfPages": [
+            103,
+            104
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        },
+        {
+          "number": "2.6.3",
+          "printedPages": [
+            102,
+            103
+          ],
+          "pdfPages": [
+            119,
+            120
+          ],
+          "sourceNote": "按方勇《数字信号处理——原理与实践》第3版实际例号与页码对应；仅列所需原题，不代表同页其他题也已讲解。"
+        }
+      ],
+      "boundaries": [
+        "本页两道只列例号的题，已分别补回真实题干并讲解；教材版次页码以这里列出的实际第3版为准。"
+      ]
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 1,
+      "anchor": "ppt-25-p01",
+      "knowledgePoints": [
+        "FFT封面"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 2,
+      "anchor": "ppt-25-p02",
+      "knowledgePoints": [
+        "基本思想、DIT、DIF、IDFT路线"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 3,
+      "anchor": "ppt-25-p03",
+      "knowledgePoints": [
+        "FFT是DFT快速算法而不是新变换"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 4,
+      "anchor": "ppt-25-p04",
+      "knowledgePoints": [
+        "Cooley–Tukey等历史背景（不当数学定理）"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 5,
+      "anchor": "ppt-25-p05",
+      "knowledgePoints": [
+        "直接DFT复乘/复加次数"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 6,
+      "anchor": "ppt-25-p06",
+      "knowledgePoints": [
+        "N1024与24道地震数据原计数例，通道口径"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 7,
+      "anchor": "ppt-25-p07",
+      "knowledgePoints": [
+        "W_N周期/对称与分解短DFT的思想"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 8,
+      "anchor": "ppt-25-p08",
+      "knowledgePoints": [
+        "OFDM发送IFFT/接收FFT流程图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-applications",
+          "title": "频谱能告诉我们什么：声音、图像与 OFDM"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 9,
+      "anchor": "ppt-25-p09",
+      "knowledgePoints": [
+        "定点字长/削波、两条L_output_integer(v)公式、模型假设和46893/32949 LUT例"
+      ],
+      "types": [
+        "研究延伸"
+      ],
+      "scope": "research_extension",
+      "coverageStatus": "原式读法已解释，完整研究推导仍有明确边界",
+      "lessons": [
+        {
+          "lessonId": "dsp-applications",
+          "title": "频谱能告诉我们什么：声音、图像与 OFDM"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "两条PPT原式、上取整、对数运算和模型限制已回读；完整工程研究推导尚未闭合。",
+        "v的起点、结构、PAPR单位、输入缩放与符号位口径不能仅凭该页猜测；外部论文的文本差异尚未用原页视觉确认，不在此宣称勘误。",
+        "这是研究延伸，不作为学习DFT/FFT核心定义与算法的前置要求。"
+      ]
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 10,
+      "anchor": "ppt-25-p10",
+      "knowledgePoints": [
+        "DIT按原时间序号奇偶拆分"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 11,
+      "anchor": "ppt-25-p11",
+      "knowledgePoints": [
+        "DIT两半DFT的代入推导"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 12,
+      "anchor": "ppt-25-p12",
+      "knowledgePoints": [
+        "两个输出与旋转因子的蝶形"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 13,
+      "anchor": "ppt-25-p13",
+      "knowledgePoints": [
+        "N8第一次DIT分解图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 14,
+      "anchor": "ppt-25-p14",
+      "knowledgePoints": [
+        "一次分解后的乘/加运算量表"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 15,
+      "anchor": "ppt-25-p15",
+      "knowledgePoints": [
+        "N/2继续拆为N/4的第二次分解"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 16,
+      "anchor": "ppt-25-p16",
+      "knowledgePoints": [
+        "完整N点DIT流图、级次与连接"
+      ],
+      "types": [
+        "推导/方法",
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 17,
+      "anchor": "ppt-25-p17",
+      "knowledgePoints": [
+        "级数/蝶数/蝶距/旋转因子及总计数，原200倍口径"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 18,
+      "anchor": "ppt-25-p18",
+      "knowledgePoints": [
+        "FFT与直接DFT乘法次数曲线"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 19,
+      "anchor": "ppt-25-p19",
+      "knowledgePoints": [
+        "倒位序而非普通逆序",
+        "输入倒位序/输出自然序"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dit",
+          "title": "FFT 为什么快：奇偶拆分与四点手算"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 20,
+      "anchor": "ppt-25-p20",
+      "knowledgePoints": [
+        "DIF前后半拆分"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 21,
+      "anchor": "ppt-25-p21",
+      "knowledgePoints": [
+        "输出频率偶/奇分组与局部索引"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 22,
+      "anchor": "ppt-25-p22",
+      "knowledgePoints": [
+        "重新定义x1/x2并得到两个半长DFT"
+      ],
+      "types": [
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 23,
+      "anchor": "ppt-25-p23",
+      "knowledgePoints": [
+        "先加减、后旋转的DIF蝶形"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 24,
+      "anchor": "ppt-25-p24",
+      "knowledgePoints": [
+        "N8 DIF一次分解和完整图"
+      ],
+      "types": [
+        "推导/方法",
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 25,
+      "anchor": "ppt-25-p25",
+      "knowledgePoints": [
+        "完整DIF流图及输入输出次序"
+      ],
+      "types": [
+        "推导/方法",
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 26,
+      "anchor": "ppt-25-p26",
+      "knowledgePoints": [
+        "DIT/DIF计数相同但蝶距、因子、排序不同"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 27,
+      "anchor": "ppt-25-p27",
+      "knowledgePoints": [
+        "FFT算法作为离散数值方法的重要性（背景）"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 28,
+      "anchor": "ppt-25-p28",
+      "knowledgePoints": [
+        "共轭→FFT→共轭→除N的IDFT算法"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 29,
+      "anchor": "ppt-25-p29",
+      "knowledgePoints": [
+        "正交展开均方误差/完备性/Parseval及连续FT对，需限定条件"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "解释均方收敛、正交与Parseval所需条件；不声称已经证明抽象完备性定理。"
+      ]
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 30,
+      "anchor": "ppt-25-p30",
+      "knowledgePoints": [
+        "连续正负复指数与实正弦/余弦基组、有限谐波方波近似示意"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        },
+        {
+          "lessonId": "dsp-front-09",
+          "title": "周期序列的DFS：两套系数与八点原例"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "正负复指数与三角基成对对应；有限谐波拼方波是近似，不是处处精确的有限恒等式。"
+      ]
+    },
+    {
+      "section": "2.5",
+      "sourcePage": 31,
+      "anchor": "ppt-25-p31",
+      "knowledgePoints": [
+        "四域采样/频谱周期化/频率采样/时间周期化以及DFT/DFS/FFT关系"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-fft-dif-inverse",
+          "title": "另一种蝶形、位反转与逆变换"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 1,
+      "anchor": "ppt-26-p01",
+      "knowledgePoints": [
+        "DFT应用封面"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 2,
+      "anchor": "ppt-26-p02",
+      "knowledgePoints": [
+        "卷积、谱分析、实际应用路线"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 3,
+      "anchor": "ppt-26-p03",
+      "knowledgePoints": [
+        "FFT应用两大方向：线性卷积/相关与连续FT近似"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-linear-convolution",
+          "title": "用 DFT 算线性卷积：为什么必须先补零"
+        },
+        {
+          "lessonId": "dsp-correlation",
+          "title": "相关与卷积：为什么频域要乘一个共轭"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 4,
+      "anchor": "ppt-26-p04",
+      "knowledgePoints": [
+        "线性卷积与圆周卷积的定义和长度"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-linear-convolution",
+          "title": "用 DFT 算线性卷积：为什么必须先补零"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 5,
+      "anchor": "ppt-26-p05",
+      "knowledgePoints": [
+        "圆周结果等于线性结果按周期折叠"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-linear-convolution",
+          "title": "用 DFT 算线性卷积：为什么必须先补零"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 6,
+      "anchor": "ppt-26-p06",
+      "knowledgePoints": [
+        "原例2.6.1原序列及线性/多种循环卷积任务"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-linear-convolution",
+          "title": "用 DFT 算线性卷积：为什么必须先补零"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.6.1",
+          "printedPages": [],
+          "pdfPages": [],
+          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 7,
+      "anchor": "ppt-26-p07",
+      "knowledgePoints": [
+        "例2.6.1线性与L8原图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-linear-convolution",
+          "title": "用 DFT 算线性卷积：为什么必须先补零"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.6.1",
+          "printedPages": [],
+          "pdfPages": [],
+          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 8,
+      "anchor": "ppt-26-p08",
+      "knowledgePoints": [
+        "例2.6.1的L11/13结果与无混叠条件"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-linear-convolution",
+          "title": "用 DFT 算线性卷积：为什么必须先补零"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.6.1",
+          "printedPages": [],
+          "pdfPages": [],
+          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 9,
+      "anchor": "ppt-26-p09",
+      "knowledgePoints": [
+        "DFT补零→频域相乘→IDFT的框图"
+      ],
+      "types": [
+        "定义/公式"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-linear-convolution",
+          "title": "用 DFT 算线性卷积：为什么必须先补零"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 10,
+      "anchor": "ppt-26-p10",
+      "knowledgePoints": [
+        "长短序列差异、存储/实时性与分块动机"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-overlap-add",
+          "title": "长信号分段算：重叠相加为什么不能只拼接"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 11,
+      "anchor": "ppt-26-p11",
+      "knowledgePoints": [
+        "原全局x_k/y_k分段定义及线性叠加"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-overlap-add",
+          "title": "长信号分段算：重叠相加为什么不能只拼接"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 12,
+      "anchor": "ppt-26-p12",
+      "knowledgePoints": [
+        "全局块和输出重叠相加图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-overlap-add",
+          "title": "长信号分段算：重叠相加为什么不能只拼接"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 13,
+      "anchor": "ppt-26-p13",
+      "knowledgePoints": [
+        "块卷积后时移再相加的公式"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-overlap-add",
+          "title": "长信号分段算：重叠相加为什么不能只拼接"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 14,
+      "anchor": "ppt-26-p14",
+      "knowledgePoints": [
+        "原例2.6.2 N2/M3/L4全部块与尾部"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-overlap-add",
+          "title": "长信号分段算：重叠相加为什么不能只拼接"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.6.2",
+          "printedPages": [],
+          "pdfPages": [],
+          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 15,
+      "anchor": "ppt-26-p15",
+      "knowledgePoints": [
+        "计算机用DFT近似连续谱的对象区别"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 16,
+      "anchor": "ppt-26-p16",
+      "knowledgePoints": [
+        "采样、截断、DFT的处理链框图"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 17,
+      "anchor": "ppt-26-p17",
+      "knowledgePoints": [
+        "连续FT积分零阶近似与采样T尺度"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 18,
+      "anchor": "ppt-26-p18",
+      "knowledgePoints": [
+        "在频率网格采样与DFT形式的转换"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 19,
+      "anchor": "ppt-26-p19",
+      "knowledgePoints": [
+        "栅栏与有限记录",
+        "截断/混叠/泄漏区别"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 20,
+      "anchor": "ppt-26-p20",
+      "knowledgePoints": [
+        "原例2.6.5 F≤5Hz、fmax≤1.25kHz及N二次幂任务"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.6.5",
+          "printedPages": [],
+          "pdfPages": [],
+          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 21,
+      "anchor": "ppt-26-p21",
+      "knowledgePoints": [
+        "原例记录长度/采样间隔/N512理想边界及工程余量"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [
+        {
+          "number": "2.6.5",
+          "printedPages": [],
+          "pdfPages": [],
+          "sourceNote": "题干与数据已按原PPT完整讲解；本表尚未逐例定位该版教材的书页，不照抄旧版页码。"
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 22,
+      "anchor": "ppt-26-p22",
+      "knowledgePoints": [
+        "混叠条件、采样率实际余量"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 23,
+      "anchor": "ppt-26-p23",
+      "knowledgePoints": [
+        "补零加密谱格点减少栅栏，不增加真实分辨率"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 24,
+      "anchor": "ppt-26-p24",
+      "knowledgePoints": [
+        "截断乘窗与频谱卷积"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 25,
+      "anchor": "ppt-26-p25",
+      "knowledgePoints": [
+        "泄漏/主瓣/旁瓣/强弱谱干扰"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 26,
+      "anchor": "ppt-26-p26",
+      "knowledgePoints": [
+        "有效数据长度和窗形的主瓣/旁瓣权衡"
+      ],
+      "types": [
+        "定义/公式",
+        "推导/方法"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-spectrum-analysis",
+          "title": "DFT 看实际频谱：采样、泄漏与分辨率"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 27,
+      "anchor": "ppt-26-p27",
+      "knowledgePoints": [
+        "谱分析特征检测应用引入（背景）"
+      ],
+      "types": [
+        "目录/背景"
+      ],
+      "scope": "context",
+      "coverageStatus": "目录、背景或学习路线，单列而不充作公式推导",
+      "lessons": [
+        {
+          "lessonId": "dsp-applications",
+          "title": "频谱能告诉我们什么：声音、图像与 OFDM"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 28,
+      "anchor": "ppt-26-p28",
+      "knowledgePoints": [
+        "声音谱例及不能从单峰可靠推断身份/性别的限制"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-applications",
+          "title": "频谱能告诉我们什么：声音、图像与 OFDM"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 29,
+      "anchor": "ppt-26-p29",
+      "knowledgePoints": [
+        "高斯/椒盐图像去噪说明、算法未给的边界"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-applications",
+          "title": "频谱能告诉我们什么：声音、图像与 OFDM"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "图例说明噪声与处理结果；原课件未给的隐藏算法不补造。"
+      ]
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 30,
+      "anchor": "ppt-26-p30",
+      "knowledgePoints": [
+        "原噪声/处理对照图",
+        "无凭空追认隐藏算法"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-applications",
+          "title": "频谱能告诉我们什么：声音、图像与 OFDM"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": [
+        "不从图像对照反推未给出的完整滤波算法与参数。"
+      ]
+    },
+    {
+      "section": "2.6",
+      "sourcePage": 31,
+      "anchor": "ppt-26-p31",
+      "knowledgePoints": [
+        "OFDM收发框图、正交及IFFT/FFT角色"
+      ],
+      "types": [
+        "例题/应用"
+      ],
+      "scope": "core",
+      "coverageStatus": "定义、推导或例题已在对应正文解释",
+      "lessons": [
+        {
+          "lessonId": "dsp-applications",
+          "title": "频谱能告诉我们什么：声音、图像与 OFDM"
+        }
+      ],
+      "originalExamples": [],
+      "boundaries": []
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "id": "dsp-front-15",
+  "title": "DFT的性质：移位、卷积、共轭与能量",
+  "order": 16,
+  "goals": [
+    "按原符号证明各DFT性质并辨认变量角色",
+    "完整求解原例2.3.7与2.3.8",
+    "用非对称复数例检验共轭、反转与归一化"
+  ],
+  "prerequisites": [
+    "dsp-front-14"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        26,
+        27
+      ],
+      "kind": "foundation",
+      "note": "性质与DFS隐含周期性关系和分类，最后的共轭对称性明确移至下一单元。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "kind": "derivation",
+      "note": "同N线性、时间圆周移位及频率移位，逐式解释m/n/k/l角色与W底数负号。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        32,
+        33,
+        34
+      ],
+      "kind": "derivation",
+      "note": "两个循环卷积定理完整证明，长度与1/N条件分清，2点数例验算。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "kind": "derivation",
+      "note": "共轭的两个证明方向、共轭反转和Parseval全链，非对称复数例与周期能量边界。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        71,
+        72
+      ],
+      "kind": "example",
+      "note": "例2.3.7的6点数组和例2.3.8三问全部解完，不复制书中演示代码。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "example",
+      "note": "2点与4点复数核验及六道完整自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-23",
+      "title": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "kind": "ppt",
+      "section": "2.3",
+      "pages": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "note": "P26–39各页可读图实际目视。P31原EMF文本记录已由独立来源核查确认W上标nl无负号，与原书式2.3.15及正文一致；P33仅限可读展示式换元前后关系提示，不断言原生编辑对象。",
+      "sourceFilename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "sourceSha256": "80c4e87b080ddae66af7ed9ae83d35b058e60d7c0aef0765aa20cc32eaf881bc"
+    },
+    {
+      "id": "dsp-textbook-third-edition",
+      "title": "方勇《数字信号处理——原理与实践》第3版（2021），例2.3.7与2.3.8",
+      "kind": "textbook",
+      "section": "2.3",
+      "pages": [
+        71,
+        72
+      ],
+      "pdfPages": [
+        88,
+        89
+      ],
+      "pageNumbering": "printed book pages",
+      "note": "两页300dpi扫描实际目视，例2.3.7、2.3.8题干及原式2.3.15均核对。仅私有核题，不公开扫描或照录代码。课件旧P64与第三版印刷P71–72分开。",
+      "sourceFilename": "digital-signal-processing-third-edition.pdf",
+      "sourceSha256": "a03853467fa0cd0b6cb9da8a89147f219b807040b1b1213d7b81a4f3add8265c"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "性质逐步证明、短数组核验与自测",
+      "kind": "supplement",
+      "section": "补充讲解",
+      "pages": [],
+      "note": "新编例明确标识；原例条件保留并补足全部数组和变量作用域。"
+    }
+  ]
+}

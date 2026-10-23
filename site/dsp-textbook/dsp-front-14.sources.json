@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "id": "dsp-front-14",
+  "title": "线性卷积和圆周卷积如何区分",
+  "order": 15,
+  "goals": [
+    "从支持区间与取模定义分清线性和圆周卷积",
+    "证明折回相加并完成原课堂作业五问",
+    "解原例2.3.10，明确哪些结果不能唯一确定"
+  ],
+  "prerequisites": [
+    "dsp-front-13"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "kind": "derivation",
+      "note": "原目录/两定义/流程全部解释，明确最多非零范围、同周期补零、反转/输出位置/求和变量。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        24
+      ],
+      "kind": "example",
+      "note": "原自卷积五问全部算完：线性及N4/N6/N7/N8。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        25
+      ],
+      "kind": "example",
+      "note": "原例2.3.10实际题干已找回，完整解59支持与51确定/8仅配对。 补足原对照表系统输出句的LTI与零状态条件。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        75,
+        76
+      ],
+      "kind": "example",
+      "note": "原50/10长度、50点圆周12与线性前5点5条件全部保留并逐区间推算。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "derivation",
+      "note": "周期化线性卷积等于圆周卷积的显式证明与自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-23",
+      "title": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "kind": "ppt",
+      "section": "2.3",
+      "pages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "note": "P21/22公式、P23流程图、P24原[1,2,2,1]课堂题及P25例号均已核读/目视。长度N1/N2辅助桥接L/M后回读。",
+      "sourceFilename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "sourceSha256": "80c4e87b080ddae66af7ed9ae83d35b058e60d7c0aef0765aa20cc32eaf881bc"
+    },
+    {
+      "id": "dsp-textbook-third-edition",
+      "title": "方勇《数字信号处理——原理与实践》第3版（2021），例2.3.10",
+      "kind": "textbook",
+      "section": "2.3",
+      "pages": [
+        75,
+        76
+      ],
+      "pdfPages": [
+        92,
+        93
+      ],
+      "pageNumbering": "printed book pages",
+      "note": "两页300dpi原扫描实际目视，仅私有核题，不公开扫描；课件旧P68对应本版P75–76。",
+      "sourceFilename": "digital-signal-processing-third-edition.pdf",
+      "sourceSha256": "a03853467fa0cd0b6cb9da8a89147f219b807040b1b1213d7b81a4f3add8265c"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "折回关系证明、检查方法与自测",
+      "kind": "supplement",
+      "section": "补充讲解",
+      "pages": [],
+      "note": "原题条件保留，逐步推导、数值交叉检查与五道迁移题新编。"
+    }
+  ]
+}

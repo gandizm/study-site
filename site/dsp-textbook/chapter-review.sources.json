@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "chapter-review",
+  "title": "全章回读：先认对象，再选公式，最后验回原数据",
+  "order": 99,
+  "goals": [
+    "从输入对象与目标选择DTFT、DFS、DFT或FFT",
+    "区分归一化、索引作用域、记录外延拓与真实信号",
+    "独立检查相位、能量、采样混叠和补零卷积"
+  ],
+  "prerequisites": [
+    "dsp-front-08",
+    "dsp-front-16",
+    "dsp-overlap-add",
+    "dsp-applications",
+    "dsp-frequency-book-example",
+    "dsp-inverse-filter",
+    "dsp-correlation"
+  ],
+  "coverage": [
+    {
+      "sourceId": "ppt-2.5",
+      "pages": [
+        31
+      ],
+      "kind": "context",
+      "note": "引用四域关系图作回读线索，不用本复习节单独宣称P31整页覆盖。"
+    },
+    {
+      "sourceId": "review-supplement",
+      "pages": [],
+      "kind": "example",
+      "note": "新编有限序列三表达、尺度/能量/正负号、采样/补零和卷积例题。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ppt-2.5",
+      "title": "2.5快速傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.5",
+      "pages": [
+        31
+      ],
+      "note": "实际查看P31四域关系图作为回读背景；尺度条件和本节数值题为教学补充，不复制图中所有内容。",
+      "sourceFilename": "2.5快速傅里叶变换.pptx",
+      "sourceSha256": "3c4033aa0f78ad3905d26a2593aa67f001c6232a42c2ae00631b1f4051cef965"
+    },
+    {
+      "id": "review-supplement",
+      "title": "全章对象辨认、符号回忆与独立验算练习",
+      "kind": "supplement",
+      "section": "全章回顾",
+      "pages": [],
+      "note": "本节全部数值练习与检查路线为新编，不冒充原书例题。"
+    }
+  ]
+}

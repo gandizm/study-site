@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "id": "dsp-front-12",
+  "title": "有限序列的DFT与逆变换为什么成立",
+  "order": 13,
+  "goals": [
+    "按原W_N约定完整证明DFT/IDFT和1/N",
+    "区分有限数组、DTFT采样、Z单位圆采样与DFS归一化",
+    "完成原R4不同点数例及脉冲例，说明补零和隐含周期性边界"
+  ],
+  "prerequisites": [
+    "dsp-front-11"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        1,
+        2
+      ],
+      "kind": "rewritten",
+      "note": "封面和提纲作为路线context。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        3
+      ],
+      "kind": "rewritten",
+      "note": "一般无限处理动机加边界澄清：有限长DTFT给定频点可直接有限计算。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        4,
+        5
+      ],
+      "kind": "derivation",
+      "note": "原正逆式、有限正交和、m/n/k作用域与归一化完整证明。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        6,
+        11
+      ],
+      "kind": "derivation",
+      "note": "Z/DTFT/DFS四格关系、两种DFS系数归一化、频谱和逆式周期性。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "kind": "example",
+      "note": "R4 DTFT→8/16点全部复数系数，回读原幅度图，说明补零不新增观测。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        12,
+        13
+      ],
+      "kind": "example",
+      "note": "原单位脉冲例正变换完整、补逆变换检查并说明区间外延拓。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "foundation",
+      "note": "两点一般例、条件解释与自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-23",
+      "title": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "kind": "ppt",
+      "section": "2.3",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "note": "原P4/5/6–10公式/嵌入例图实际目视；P7原ppt/media/image25.png直接抽出放大确认题干为8点和16点。P1–3/P11–13文本与公式核读。保留原W_N及DFS Xtilde约定。",
+      "sourceFilename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "sourceSha256": "80c4e87b080ddae66af7ed9ae83d35b058e60d7c0aef0765aa20cc32eaf881bc"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "两点一般逆变换、完整系数表和零填充边界解释",
+      "kind": "supplement",
+      "section": "补充教学",
+      "pages": [],
+      "note": "原R4例完整算出8/16点；两点一般证明铺垫与五道题新编。"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "id": "dsp-front-09",
+  "title": "周期序列的DFS：两套系数与八点原例",
+  "order": 10,
+  "goals": [
+    "区分周期延拓和有限主值序列",
+    "保留原a_k与X̃(k)=Na_k两套归一化并逐式解释",
+    "用正交两支推导DFS，完整计算原例2.2.1",
+    "回读三角基与正负复指数及有限方波合成边界"
+  ],
+  "prerequisites": [
+    "dsp-front-08"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "kind": "foundation",
+      "note": "标题、目标与绝对可和边界，不冒称这些引言页含完整推导。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "kind": "derivation",
+      "note": "基的周期/两套归一化/有限正交/主值Z单位圆采样；明确无限k重复及同余条件。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        8
+      ],
+      "kind": "example",
+      "note": "N8矩形原题、几何和及8个复数频率样值，极限/逆合成检查。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        51,
+        52,
+        53
+      ],
+      "kind": "rewritten",
+      "note": "DFS公式及例2.2.1，印刷51合成上限N重复0/N需改N−1；不声称同页其它例均在本文完成。"
+    },
+    {
+      "sourceId": "dsp-original-25",
+      "pages": [
+        30
+      ],
+      "kind": "rewritten",
+      "note": "补三角基与成对复指数、零频只保常数、有限方波近似非逐点精确，与已审06合并覆盖。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "foundation",
+      "note": "角色就地解释、8点全值与自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-22",
+      "title": "2.2周期序列的离散傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.2",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "note": "Actual presentation-order OOXML inventory and isolated rendered equations inspected. Conversion is used for source reading, not a native-layout fidelity claim.",
+      "sourceFilename": "2.2周期序列的离散傅里叶变换.pptx",
+      "sourceSha256": "109bb258604a00d13d02d82934c5a34e0cf55945ba52e66902b3a848834042e8"
+    },
+    {
+      "id": "dsp-textbook-third-edition",
+      "title": "方勇《数字信号处理——原理与实践》第3版（2021）",
+      "kind": "textbook",
+      "section": "2.2",
+      "pages": [
+        51,
+        52,
+        53
+      ],
+      "pdfPages": [
+        68,
+        69,
+        70
+      ],
+      "pageNumbering": "printed book pages",
+      "note": "Actual printed-page labels and original examples visually verified. Private source scan is not a publication asset.",
+      "sourceFilename": "digital-signal-processing-third-edition.pdf",
+      "sourceSha256": "a03853467fa0cd0b6cb9da8a89147f219b807040b1b1213d7b81a4f3add8265c"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "新增符号桥、逐步算例和自测",
+      "kind": "supplement",
+      "section": "补充讲解",
+      "pages": [],
+      "note": "Original forms are preserved; role explanations, extra checks and exercises are newly written."
+    },
+    {
+      "id": "dsp-original-25",
+      "title": "2.5快速傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.5",
+      "pages": [
+        30
+      ],
+      "note": "实际目视三角/复指数基及近似方波图；这里只回读这些命题，不增加FFT先修。",
+      "sourceFilename": "2.5快速傅里叶变换.pptx",
+      "sourceSha256": "3c4033aa0f78ad3905d26a2593aa67f001c6232a42c2ae00631b1f4051cef965"
+    }
+  ]
+}

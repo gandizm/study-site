@@ -7,4 +7,9 @@
 .map-node .map-group{font-size:11px;font-weight:500;fill:#6b7b77}
 .teaching-figure{margin:28px 0}.figure-scroll{max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:white}.figure-scroll img{display:block;min-width:480px;width:100%;max-width:680px;height:auto;margin:auto}.teaching-figure figcaption{font-size:15px;line-height:1.8;color:var(--muted);padding:12px 4px}.lesson-toc .math-inline{font-size:1em;overflow:visible}
 /* Avoid inline anonymous-linebox baseline overflow without cropping MathML. */
-.math-inline{display:inline-flex;align-items:center;line-height:1.4;padding:.4em .12em;overflow:auto}.math-inline math{display:block;flex:0 0 auto}.lesson-toc .math-inline{overflow:auto;padding:.5em .12em;min-height:2.5em;line-height:1.6}
+.math-inline{display:inline-flex;align-items:center;line-height:1.4;padding:.4em .12em;min-height:2.5em;overflow:auto}.math-inline math{display:block;flex:0 0 auto}.lesson-toc .math-inline{overflow:auto;padding:.5em .12em;min-height:2.5em;line-height:1.6}
+
+/* Sequential reading is a teaching route, separate from prerequisite links. */
+.sequential-nav a{font-weight:700;background:#eaf2e9;border:1px solid var(--line);border-radius:9px;padding:12px 16px}.knowledge-next{margin-top:0;padding-top:8px;border-top:0;font-size:14px}
+
+.coverage-sections{display:flex;flex-wrap:wrap;gap:12px 20px;margin:24px 0}.coverage-section{margin-top:48px}.coverage-table{min-width:880px}.coverage-table th:first-child{white-space:nowrap}.coverage-table td{font-size:15px}.coverage-table td ul{padding-left:1.3em;margin-top:0}.coverage-table .coverage-boundary{border-left:3px solid #b47749;padding-left:10px;color:#614a36}

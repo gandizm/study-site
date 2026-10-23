@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "id": "dsp-front-13",
+  "title": "主值、周期延拓与圆周移位",
+  "order": 14,
+  "goals": [
+    "分清有限主值、周期延拓与主值窗口",
+    "按原加号移位约定逐位置计算左右移与负下标",
+    "理解补零改变所选周期，避免把数组倒排当圆周反转"
+  ],
+  "prerequisites": [
+    "dsp-front-12"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        14
+      ],
+      "kind": "rewritten",
+      "note": "概念目录定位，卷积/对称/相关均给实际后续落点，不把目录当已展开正文。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        15,
+        16,
+        17
+      ],
+      "kind": "derivation",
+      "note": "主值/周期延拓/窗口/移位定义与可执行步骤，明确固定m、求和副本号与输出n。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        18,
+        19
+      ],
+      "kind": "example",
+      "note": "真实[2,1,3,1,0.5]按N5/N6延拓与N5左1右2全部样值计算。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "foundation",
+      "note": "补余数计算、线性移位窗口对照和圆周反转，为后续卷积/对称铺垫。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-23",
+      "title": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "kind": "ppt",
+      "section": "2.3",
+      "pages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "note": "P15–19原公式/流程与实际样值图均已目视。保留x((n+m))_N R_N及m正为左移的原约定；P14目录中的相关明确交补充相关单元。",
+      "sourceFilename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "sourceSha256": "80c4e87b080ddae66af7ed9ae83d35b058e60d7c0aef0765aa20cc32eaf881bc"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "负余数、线性窗口对比、6点移位与圆周反转铺垫",
+      "kind": "supplement",
+      "section": "补充教学",
+      "pages": [],
+      "note": "原5点左右移完整展开；其余小例与5题为新编。"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "id": "dsp-front-16",
+  "title": "DFT的对称性与两条实序列的分离",
+  "order": 17,
+  "goals": [
+    "区分时间/频率两套实虚与共轭对称分解",
+    "说明共轭对称和反对称的实虚、模、相位及自配对边界",
+    "完整求解原例2.3.13并以四点数值核验分离"
+  ],
+  "prerequisites": [
+    "dsp-front-15"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "kind": "derivation",
+      "note": "普通到周期到圆周的定义、半和半差唯一性、原六点图逐值分解与自配对点。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        44,
+        45,
+        46
+      ],
+      "kind": "derivation",
+      "note": "两类实部/虚部/模/相位分别说明，非零与模2π条件；频域独立定义。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "kind": "derivation",
+      "note": "两套四行映射完整推导、同一复数4点例全部核验，避免Xep与ReX互换。"
+    },
+    {
+      "sourceId": "dsp-original-23",
+      "pages": [
+        52,
+        53
+      ],
+      "kind": "example",
+      "note": "实序列、纯虚序列分开回读，含自配对频点、全复数频谱与原例2.3.13。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        81,
+        82
+      ],
+      "kind": "example",
+      "note": "共轭反向分离、有限等比和、IDFT正交筛选全部推导，原数值参数意义说明。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "example",
+      "note": "新增四点分离算例与六道完整自测；不冒充原PPT基础页。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-23",
+      "title": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "kind": "ppt",
+      "section": "2.3",
+      "pages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "note": "P40–53全部逐页目视，包括P41六点图、两套映射与P52/53实值/纯虚特例。部分原缓存浅黄，但公式可读；相位条件以原定义推导补足。",
+      "sourceFilename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "sourceSha256": "80c4e87b080ddae66af7ed9ae83d35b058e60d7c0aef0765aa20cc32eaf881bc"
+    },
+    {
+      "id": "dsp-textbook-third-edition",
+      "title": "方勇《数字信号处理——原理与实践》第3版（2021），例2.3.13",
+      "kind": "textbook",
+      "section": "2.3",
+      "pages": [
+        81,
+        82
+      ],
+      "pdfPages": [
+        98,
+        99
+      ],
+      "pageNumbering": "printed book pages",
+      "note": "两页300dpi实际目视，真实题干/解/原演示参数0.8、0.6、32已核。私有核题，不发布扫描、不复制代码。课件旧P73与本版81–82分开。",
+      "sourceFilename": "digital-signal-processing-third-edition.pdf",
+      "sourceSha256": "a03853467fa0cd0b6cb9da8a89147f219b807040b1b1213d7b81a4f3add8265c"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "复数四点验证、相位边界说明与自测",
+      "kind": "supplement",
+      "section": "补充讲解",
+      "pages": [],
+      "note": "四点复数分解、有限和分母零点解释与N4参数核验为补充，明确区别于原例参数。"
+    }
+  ]
+}

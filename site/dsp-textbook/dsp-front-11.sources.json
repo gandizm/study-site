@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "id": "dsp-front-11",
+  "title": "模拟与数字频率：100Hz采样原例慢解",
+  "order": 12,
+  "goals": [
+    "区分模拟波形/冲激采样/数值序列三对象",
+    "逐式换元推导频谱复制与1/T",
+    "辨认Hz、rad/s、rad/sample与归一化撇号",
+    "完整完成原例2.2.7三问并解释冲激尺度/混叠边界"
+  ],
+  "prerequisites": [
+    "dsp-front-10"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "kind": "derivation",
+      "note": "三种对象与变换、逆积分分区换元、整数因子/微分尺度、频率复制的坐标限定及成立条件。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        19
+      ],
+      "kind": "rewritten",
+      "note": "原三轴与撇号归一化；显式区分P17局部积分变量Ω撇。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "kind": "example",
+      "note": "原100Hz/400Hz例完整三问、样值表、两频谱/两种DTFT解法及原图回读。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        10
+      ],
+      "kind": "rewritten",
+      "note": "补前篇模拟复指数连续变换只有单线与数字冲激梳之别。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "kind": "rewritten",
+      "note": "只覆盖2.2.3关系及例2.2.7/图2.2.7，不声称完成同页新增工程应用或例2.2.6。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        5
+      ],
+      "kind": "rewritten",
+      "note": "联合09补全连续周期定义/T0与Ω0/无限谐波级数，与有限N离散基对照；连续系数积分及收敛边界为补充。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "foundation",
+      "note": "交换条件、理想模型限定、临界采样反例、单位与角色桥及五道自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-22",
+      "title": "2.2周期序列的离散傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.2",
+      "pages": [
+        5,
+        10,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "note": "Actual presentation-order OOXML inventory and isolated rendered equations inspected. Conversion is used for source reading, not a native-layout fidelity claim.",
+      "sourceFilename": "2.2周期序列的离散傅里叶变换.pptx",
+      "sourceSha256": "109bb258604a00d13d02d82934c5a34e0cf55945ba52e66902b3a848834042e8"
+    },
+    {
+      "id": "dsp-textbook-third-edition",
+      "title": "方勇《数字信号处理——原理与实践》第3版（2021）",
+      "kind": "textbook",
+      "section": "2.2",
+      "pages": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "pdfPages": [
+        73,
+        74,
+        75,
+        76,
+        77
+      ],
+      "pageNumbering": "printed book pages",
+      "note": "Actual printed-page labels and original examples visually verified. Private source scan is not a publication asset.",
+      "sourceFilename": "digital-signal-processing-third-edition.pdf",
+      "sourceSha256": "a03853467fa0cd0b6cb9da8a89147f219b807040b1b1213d7b81a4f3add8265c"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "新增符号桥、逐步算例和自测",
+      "kind": "supplement",
+      "section": "补充讲解",
+      "pages": [],
+      "note": "Original forms are preserved; role explanations, extra checks and exercises are newly written."
+    }
+  ]
+}

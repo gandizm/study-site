@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "id": "dsp-front-10",
+  "title": "周期线谱：DFS系数与DTFT冲激权重",
+  "order": 11,
+  "goals": [
+    "分清离散脉冲与连续频率冲激及权重",
+    "从复指数变换与DFS推导2π/N",
+    "显式解释双编号压成无限k的换元",
+    "完成原例2.2.3并与2.2.1逐项对比"
+  ],
+  "prerequisites": [
+    "dsp-front-09"
+  ],
+  "coverage": [
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        9
+      ],
+      "kind": "foundation",
+      "note": "提纲和目标。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        10,
+        11,
+        12
+      ],
+      "kind": "derivation",
+      "note": "数字复指数冲激梳、广义意义、2π周期、半开端点与双和重编号；P10模拟复指数对在后继11具体展开。"
+    },
+    {
+      "sourceId": "dsp-original-22",
+      "pages": [
+        13
+      ],
+      "kind": "example",
+      "note": "原例2.2.1/3同一N8矩形的DFS和DTFT，用真书核题，不只展示任意图形。"
+    },
+    {
+      "sourceId": "dsp-textbook-third-edition",
+      "pages": [
+        53,
+        54,
+        55
+      ],
+      "kind": "rewritten",
+      "note": "只覆盖复指数线谱、一般周期DTFT及例2.2.3；不声称本节完整处理同页其他例。"
+    },
+    {
+      "sourceId": "dsp-front-foundation",
+      "pages": [],
+      "kind": "foundation",
+      "note": "冲激权重非函数高度、角色换元、完整表、迁移例与自测。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dsp-original-22",
+      "title": "2.2周期序列的离散傅里叶变换.pptx",
+      "kind": "ppt",
+      "section": "2.2",
+      "pages": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "note": "Actual presentation-order OOXML inventory and isolated rendered equations inspected. Conversion is used for source reading, not a native-layout fidelity claim.",
+      "sourceFilename": "2.2周期序列的离散傅里叶变换.pptx",
+      "sourceSha256": "109bb258604a00d13d02d82934c5a34e0cf55945ba52e66902b3a848834042e8"
+    },
+    {
+      "id": "dsp-textbook-third-edition",
+      "title": "方勇《数字信号处理——原理与实践》第3版（2021）",
+      "kind": "textbook",
+      "section": "2.2",
+      "pages": [
+        53,
+        54,
+        55
+      ],
+      "pdfPages": [
+        70,
+        71,
+        72
+      ],
+      "pageNumbering": "printed book pages",
+      "note": "Actual printed-page labels and original examples visually verified. Private source scan is not a publication asset.",
+      "sourceFilename": "digital-signal-processing-third-edition.pdf",
+      "sourceSha256": "a03853467fa0cd0b6cb9da8a89147f219b807040b1b1213d7b81a4f3add8265c"
+    },
+    {
+      "id": "dsp-front-foundation",
+      "title": "新增符号桥、逐步算例和自测",
+      "kind": "supplement",
+      "section": "补充讲解",
+      "pages": [],
+      "note": "Original forms are preserved; role explanations, extra checks and exercises are newly written."
+    }
+  ]
+}
