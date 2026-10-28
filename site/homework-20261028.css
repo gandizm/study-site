@@ -6,3 +6,17 @@
 .knowledge-chain{padding:14px 18px;background:#eef4ed;border-left:3px solid #649780;font-size:15px}.original-question{padding:12px;background:#fff;border:1px solid var(--line);border-radius:7px}.hw-content .original-question img{width:100%;height:auto}.hw-content .copy-solution{padding:0}.hw-content .problem-statement{border-bottom:1px solid var(--line);padding-bottom:8px}.hw-content .em-homework>.problem{margin:26px 0}
 
 .hw-content img.hw-diagram{width:100%;min-width:800px;max-width:960px}
+/* Print-only figure sizing; screen diagrams retain scrollable native widths. */
+@media print {
+  .hw-content img.waveform,
+  .hw-content img.hw-diagram {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  .hw-ask-open,
+  .hw-ask-dialog {
+    display: none !important;
+  }
+}

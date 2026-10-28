@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="以题目为根的课程作业详解：短答、知识依赖、原PPT精确页、多步推导与自检。"><title>计算机网络 · 物理层8题详解 · 课程伴学</title><link rel="stylesheet" href="/study-site/homework-20261028.css?v=7ed80f18e12b"></head><body><main><nav class="hw-nav" aria-label="课程导航"><a href="/study-site/courses.html">学习首页</a><a href="/study-site/network.html">计算机网络</a><a href="/study-site/ppt.html">电磁场与电磁波</a><a href="/study-site/em-ch2-homework.html">电磁场本次4题</a></nav><header class="hw-hero">
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="以题目为根的课程作业详解：短答、知识依赖、原PPT精确页、多步推导与自检。"><title>计算机网络 · 物理层8题详解 · 课程伴学</title><link rel="stylesheet" href="/study-site/homework-20261028.css?v=c65c3751f5e9"></head><body><main><nav class="hw-nav" aria-label="课程导航"><a href="/study-site/courses.html">学习首页</a><a href="/study-site/network.html">计算机网络</a><a href="/study-site/ppt.html">电磁场与电磁波</a><a href="/study-site/em-ch2-homework.html">电磁场本次4题</a></nav><header class="hw-hero">
   <p class="hw-eyebrow">计算机网络 · 第二章 物理层作业</p>
   <h1>先能填写，再把每一步弄懂</h1>
   <p>本页按你提供的 8 道题逐题作答。文字定义优先采用马秀丽老师《CH2_物理层-0316.pdf》原话；计算题从原课件公式推导，波形严格采用本课的编码方向。每题先给可填写答案，再提供可展开的完整解释。</p>
@@ -170,12 +170,13 @@
 <h2>8. 自同步编码与 10001001 的两种波形</h2>
 <p class="question-text">基带传输时为什么要采用曼彻斯特或差分曼彻斯特编码？对二进制序列 10001001，画出两种编码波形，设起始电平为高电平。</p>
 <div class="answer"><h3>可直接抄写：采用它们的原因</h3>
-<p>不归零编码在连续出现相同比特时可能长期没有电平跳变，难以从信号中提取时钟，存在发送方和接收方的同步问题。曼彻斯特编码和差分曼彻斯特编码在每个比特间隔的中点都发生一次电平跳变，可以携带时钟信息，使接收方实现位同步，因此适合需要自同步的基带传输。</p>
+<p>为了提取信号的时钟频率，实现自同步。曼彻斯特编码和差分曼彻斯特编码在每个比特间隔的中点都有电平跳变，可为接收方提供位同步的定时信息，避免不归零编码在长串相同比特下缺少跳变的同步困难。</p>
 <p class="course-convention"><strong>严格按本课 PPT P10 约定：</strong>曼彻斯特编码的位中点<strong>高到低表示 1，低到高表示 0</strong>；差分曼彻斯特编码的位起始处<strong>无跳变表示 1，有跳变表示 0</strong>，中点固定跳变。两图发送第一个比特之前均为高电平。</p>
 <figure><div class="hw-figure-scroll"><a href="/study-site/assets/homework-20261028/network/manchester-10001001.svg" target="_blank" rel="noopener" aria-label="打开完整波形图，支持放大"><img class="waveform" src="/study-site/assets/homework-20261028/network/manchester-10001001.svg" alt="10001001的曼彻斯特波形，按PPT高到低表示1。半位电平HL、LH、LH、LH、HL、LH、LH、HL。" width="1100" height="350"></a></div><p class="hw-figure-hint">手机可横向滑动；点击图像可打开原尺寸放大。</p><figcaption>曼彻斯特编码。每个比特占两个等长半位间隔，先左后右读取。</figcaption></figure>
 <figure><div class="hw-figure-scroll"><a href="/study-site/assets/homework-20261028/network/differential-manchester-10001001.svg" target="_blank" rel="noopener" aria-label="打开完整波形图，支持放大"><img class="waveform" src="/study-site/assets/homework-20261028/network/differential-manchester-10001001.svg" alt="10001001的差分曼彻斯特波形，初始高电平，位首无跳为1、有跳为0。半位电平HL、HL、HL、HL、LH、LH、LH、HL。" width="1100" height="350"></a></div><p class="hw-figure-hint">手机可横向滑动；点击图像可打开原尺寸放大。</p><figcaption>差分曼彻斯特编码。判断数据时看位起始边界，中点跳变用于同步。</figcaption></figure>
 </div>
-<p class="source"><a href="/study-site/network-ch2-ppt.html#p09">查原 PPT P9：不归零编码的同步问题</a> · <a href="/study-site/network-ch2-ppt.html#p10">P10：两种编码约定及初始高电平</a></p>
+<p class="source"><a href="/study-site/network-ch2-ppt.html#p09">查原 PPT P9：不归零编码的同步问题</a> · <a href="/study-site/network-ch2-ppt.html#p10">P10：两种编码约定及初始高电平</a> · <a href="/study-site/network-ch2-ppt.html#p48">P48（原页脚58）：短答首句的自同步原话</a></p>
+<p class="notice"><strong>不要照搬课件的示例波形：</strong>P10 示例是 <code>11001001</code>，P48 练习是 <code>10011001</code>；本题是 <code>10001001</code>。这里沿用课程规则，两张图按本题序列重新绘制。</p>
 <details class="explanation"><summary>手把手画图：每一位怎样定高低？</summary>
 <p class="knowledge-chain"><strong>本题回溯：</strong><a href="/study-site/network-ch2-ppt.html#p09">P9 不归零编码的定时困难</a>解释为什么需要改变波形；<a href="/study-site/network-ch2-ppt.html#p10">P10 的两套跳变规则</a>给出怎样改变。中点跳变解决同步，方向或位首跳变承载数据，作图时必须分别检查这两项。</p>
 <p class="optional-connection"><strong>与第 7 题的知识连接：</strong><a href="/study-site/network-ch2-ppt.html#p08">P8 将基带编码解释为“对基带信号的波形进行变换”</a>，变换后仍为基带信号。本题改变脉冲波形来承载数据与定时信息；第 7 题的 ADSL 则把信息调制到各个子信道的载波上。两者都处理信号，但不是同一种调制方式。这里“仍为基带”不表示频谱或所需带宽不变。</p>
