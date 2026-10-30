@@ -1,0 +1,162 @@
+{
+  "id": "dsp-fourier-supplement",
+  "number": "补充",
+  "title": "傅里叶表示的对象与条件",
+  "brief": "只作选学总览：补齐连续时间FS，不把“时间是否周期”的口诀当成无条件定理。",
+  "firstPassMinutes": 5,
+  "deepPassMinutes": 10,
+  "firstPass": [
+    "看输入输出总图，不要求第一遍重新通读所有变换证明。",
+    "用一个余弦对照连续FS与本课DFS的系数。",
+    "存在性、广义谱与历史背景放第二遍。"
+  ],
+  "source": {
+    "title": "傅里叶性质.ppt",
+    "pageCount": 7,
+    "sha256": "4c6d1c134aaa084a06797ad267d2a94b63244fc9c7ceed7c5ecc754fdf62bf30",
+    "editionNote": "独立补充课件，无原章号；不强造为新的课程必学小节。"
+  },
+  "cards": [
+    {
+      "id": "objects",
+      "title": "1 · 四种形式的表，不等于无条件转换表",
+      "level": "essential",
+      "sourcePages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "bodyHtml": "<p>原《傅里叶性质.ppt》把连续/离散时间与连续/离散频率配成四类。它适合做对象导航，但还必须区分<strong>周期函数、有限数组、普通函数谱与冲激谱</strong>。</p><p>本图另列出本课2.2的DFS。连续时间FS需要对一个时间周期积分；DFS只对N个离散样值求和。它们不是同一条公式的两个名字。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/fourier-forms.svg",
+        "alt": "CTFT、连续时间FS、DTFT、DFS、DFT分别列输入输出和条件",
+        "caption": "重绘原补充P2–7；新增DFS对照行已明确，未改原课件为五种形式。"
+      },
+      "check": {
+        "question": "“离散频率”是否足以判断是DFT？",
+        "answerHtml": "<p>不足。连续时间周期信号也有离散编号的傅里叶级数系数，必须先看时间对象和定义。</p>"
+      }
+    },
+    {
+      "id": "continuous-series",
+      "title": "2 · 补齐连续时间FS：系数不是冲激高度",
+      "level": "essential",
+      "sourcePages": [
+        5,
+        7
+      ],
+      "bodyHtml": "<p>设xₐ(t)以T₀为周期，Ω₀=2π/T₀；采用标准复指数系数aₖ。积分跨任意完整一周期：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"连续时间傅里叶级数系数\"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>=</mo><mfrac><mn>1</mn><msub><mi>T</mi><mn>0</mn></msub></mfrac><msubsup><mo>∫</mo><msub><mi>t</mi><mn>0</mn></msub><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>+</mo><msub><mi>T</mi><mn>0</mn></msub></mrow></msubsup><msub><mi>x</mi><mi>a</mi></msub><mo>(</mo><mi>t</mi><mo>)</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>k</mi><msub><mi>Ω</mi><mn>0</mn></msub><mi>t</mi></mrow></msup><mi>d</mi><mi>t</mi></mrow></math></div><p>合成式为 xₐ(t)=Σ<sub>k∈ℤ</sub>aₖe<sup>jkΩ₀t</sup>，其成立方式需配合收敛条件；在常用分段光滑情形，跳跃处按左右极限平均值理解。</p><p>同一周期信号的<strong>广义CTFT</strong>是 2πΣ<sub>k∈ℤ</sub>aₖδ(Ω−kΩ₀)。aₖ是级数系数，2πaₖ是冲激权重，冲激没有普通有限“高度”。原P5写X(jkΩ₀)表示系数，本稿改记aₖ以免误读成普通CTFT的点值。</p><p>这与离散时间DFS的“2π/N乘本课未归一化系数”对应，但两个频率变量的单位不同：Ω为rad/s，ω为rad/sample。</p>"
+    },
+    {
+      "id": "continuous-transform",
+      "title": "第二遍 · CTFT的积分变量和尺度",
+      "level": "deep",
+      "sourcePages": [
+        3
+      ],
+      "bodyHtml": "<p>采用角频率Ω（rad/s）的约定，原P3的正逆变换对为：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"连续时间傅里叶正变换\"><mrow><msub><mi>X</mi><mi>a</mi></msub><mo>(</mo><mi>j</mi><mi>Ω</mi><mo>)</mo><mo>=</mo><munderover><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mi>∞</mi></munderover><msub><mi>x</mi><mi>a</mi></msub><mo>(</mo><mi>t</mi><mo>)</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>Ω</mi><mi>t</mi></mrow></msup><mi>d</mi><mi>t</mi></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"连续时间傅里叶逆变换\"><mrow><msub><mi>x</mi><mi>a</mi></msub><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><munderover><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mi>∞</mi></munderover><msub><mi>X</mi><mi>a</mi></msub><mo>(</mo><mi>j</mi><mi>Ω</mi><mo>)</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>Ω</mi><mi>t</mi></mrow></msup><mi>d</mi><mi>Ω</mi></mrow></math></div><p>正向对所有时间积分；逆向对所有角频率积分并乘1/(2π)。这不同于DTFT反变换只跨一个2π周期。</p><p>若改用Hz变量f，并在指数中写2πft，则逆式的尺度约定也随之改变。不要混用Xₐ(jΩ)与以f为自变量的谱。普通函数情形须有相应存在与反演条件；例如xₐ与Xₐ都绝对可积时可在连续点使用上述反演。非零周期信号通常转用级数或广义冲激谱处理。</p>"
+    },
+    {
+      "id": "conditions",
+      "title": "第二遍 · 哪些口诀必须加条件",
+      "level": "deep",
+      "sourcePages": [
+        3,
+        4,
+        6,
+        7
+      ],
+      "bodyHtml": "<p><strong>普通变换存在性：</strong>绝对可积的连续时间信号有连续CTFT；绝对可和的离散序列有连续且2π周期的DTFT。这些都是充分条件，不能把“非周期”本身当存在性证明。</p><p><strong>反例：</strong>xₐ(t)=cos t+cos(√2 t)没有共同有限周期，却有位于±1、±√2 rad/s的冲激线谱（广义意义）。因此原P3、4、7“非周期必对应连续谱”的口诀不能当无条件定理。</p><p><strong>DFT边界：</strong>原P6写时域频域都周期，应理解为N点数组按N延拓后的代数表示；不要求原真实信号在观测窗口之外重复。取DFT样本、有限窗截取与模拟采样不是可随意互换的操作。</p><p>原P3、4、5的积分界在转换图中有负号不可见现象；本稿重新排版正确上下限，不把排版损失冒称源作者的数学错误。完整DTFT、DFS和DFT推导回到第二章相应小节。</p>"
+    },
+    {
+      "id": "historical-background",
+      "title": "背景页 · 不把人物生平当先修",
+      "level": "deep",
+      "sourcePages": [
+        1
+      ],
+      "bodyHtml": "<p>原P1是傅里叶人物肖像与生平介绍，属于历史背景，没有算法或例题。本补充不重述未逐条查证的生平年份；学会识别变换对象不以背诵此页为前提。</p>"
+    }
+  ],
+  "example": {
+    "title": "新编对照 · 同一个余弦，两种级数归一化",
+    "sourcePages": [
+      5,
+      6,
+      7
+    ],
+    "problemHtml": "<p>连续信号xₐ(t)=2cos(Ω₀t)，以T₀=2π/Ω₀为周期（Ω₀&gt;0）。再取离散序列x[n]=2cos(πn/2)，以N=4表示。分别写连续时间FS系数和本课DFS系数。</p>",
+    "stepsHtml": "<ol><li>欧拉展开：2cos(Ω₀t)=e<sup>jΩ₀t</sup>+e<sup>−jΩ₀t</sup>，故a₁=a₋₁=1，其余为0。</li><li>离散序列一周期为[2,0,−2,0]，按本课正向不除N的定义，X̃(1)=X̃(3)=4，其余为0。</li><li>连续CTFT每条冲激权重2πa=2π；离散DTFT每条权重(2π/N)X̃=2π。</li></ol>",
+    "answerHtml": "<p>两个谱都可以出现2π的冲激权重，但对应频率轴分别为Ω与ω。连续FS系数为1，未归一化DFS系数为4，不能因图形相似就照搬数值。</p>",
+    "checkHtml": "<p>连续合成直接相加两个指数；离散合成先除4再相加，两者都回到幅值2的余弦。本例为补充教学新编，不冒称原7页已有数值题。</p>"
+  },
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "historical-background"
+      ]
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "objects"
+      ]
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "objects",
+        "continuous-transform",
+        "conditions"
+      ]
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "objects",
+        "conditions"
+      ]
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "objects",
+        "continuous-series"
+      ]
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "objects",
+        "conditions"
+      ]
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "objects",
+        "continuous-series",
+        "conditions"
+      ]
+    }
+  ],
+  "deepLinks": [
+    {
+      "href": "dsp-ch2-redraw.html#dsp-21",
+      "label": "DTFT定义与条件"
+    },
+    {
+      "href": "dsp-ch2-redraw.html#dsp-22",
+      "label": "DFS系数与冲激谱"
+    },
+    {
+      "href": "dsp-ch2-redraw.html#dsp-23",
+      "label": "有限数组的DFT"
+    }
+  ],
+  "sourceNote": "7原页已逐页视觉核对。人物页仅记覆盖状态；不复印原肖像、旧图或整套原稿。"
+}

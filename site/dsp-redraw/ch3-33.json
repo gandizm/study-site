@@ -1,0 +1,661 @@
+{
+  "id": "dsp-33",
+  "number": "3.3",
+  "title": "IIR 型滤波器的设计",
+  "brief": "先把指标变成稳定原型，再区分冲激不变的混叠与双线性的频率扭曲。55页按10块知识重绘，原题和错式订正保留来源。",
+  "firstPassMinutes": 30,
+  "deepPassMinutes": 40,
+  "source": {
+    "title": "课件3.3.pptx",
+    "pageCount": 55,
+    "sha256": "62ca4391e9d745b61b683642d015141d25d76c3ae96bc60dcf60cabdde3512e1"
+  },
+  "sourceNote": "已逐页核原PPT，按题干与公式对照方勇第3版；PPT旧版例题与第3版不同处显式分开。源教材扫描不作为网页资源发布。",
+  "firstPass": [
+    "先分清Ω(rad/s)、ω(rad/sample)、Hz，以及通带边缘与3 dB频率。",
+    "Butterworth阶数下界向上取整，截止频率在通带/阻带共同允许的区间内选。",
+    "幅度平方的2N个根只取左半平面N个构成稳定模拟Hₐ(s)。",
+    "高通/带通/带阻先映射全部指标，再转换低通原型；带型通常阶数翻倍。",
+    "冲激不变保留时间样值却可能混叠；双线性不混叠但要先预畸变每个频率边缘。"
+  ],
+  "cards": [
+    {
+      "id": "specification",
+      "title": "规格先写对：边缘、容限与单位",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "bodyHtml": "<p>IIR设计要从通带和阻带指标走到稳定的H(z)，再选择有限精度实现。理想砖墙只用于说明低通、高通、带通、带阻类型；实际需要过渡带与允许误差。数字频率ω单位rad/sample，模拟频率Ω单位rad/s，普通频率f单位Hz。</p><p>低通指定ωp&lt;ωs、通带最大衰减αp、阻带最小衰减αs。若直流增益归一为1，衰减α(ω)=−20log₁₀|H(eʲω)| dB。通常所称的3 dB点对应幅度1/√2（精确衰减约3.0103 dB），<strong>不一定等于通带指标边缘</strong>。</p><p>第一遍路线：指标 → 模拟原型 → 选稳定极点 → 必要的频率变换 → 数字化 → 检查原数字指标。P2的FIR/IIR对比只作选型提示，精度与稳定性不能靠一句“FIR常稳定”全部代替。</p><p><small>核对：PPT3.3 P1–14；教材印刷140–142页 / PDF157–159。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/33-filter-types.svg",
+        "alt": "四类理想数字幅度模板，正频率0到π",
+        "caption": "重绘P4–5的类型图；实际容限、过渡带按正文另行规定。"
+      }
+    },
+    {
+      "id": "butterworth-order",
+      "title": "Butterworth：先定阶数，再定3 dB频率",
+      "level": "essential",
+      "sourcePages": [
+        15,
+        16,
+        17,
+        22,
+        23
+      ],
+      "bodyHtml": "<p>本板假定低通指标0&lt;Ωp&lt;Ωs且0&lt;αp&lt;αs，直流幅度归一为1。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"巴特沃斯幅度平方等于1除以1加(Ω/Ωc)的2N次方\"><mrow><msup><mrow><mrow><mo>|</mo><msub><mrow><mi>H</mi></mrow><mrow><mi>a</mi></mrow></msub><mo>(</mo><mrow><mi>j</mi><mi>Ω</mi></mrow><mo>)</mo><mo>|</mo></mrow></mrow><mrow><mn>2</mn></mrow></msup><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo>(</mo><mfrac><mrow><mi>Ω</mi></mrow><mrow><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub></mrow></mfrac><mo>)</mo></mrow><mrow><mrow><mn>2</mn><mi>N</mi></mrow></mrow></msup></mrow></mrow></mfrac></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"N不小于log10[(10^(αs/10)-1)/(10^(αp/10)-1)]除以2log10(Ωs/Ωp)\"><mrow><mi>N</mi><mo>≥</mo><mfrac><mrow><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mo>(</mo><mfrac><mrow><mrow><msup><mrow><mn>10</mn></mrow><mrow><mfrac><mrow><msub><mrow><mi>α</mi></mrow><mrow><mi>s</mi></mrow></msub></mrow><mrow><mn>10</mn></mrow></mfrac></mrow></msup><mo>−</mo><mn>1</mn></mrow></mrow><mrow><mrow><msup><mrow><mn>10</mn></mrow><mrow><mfrac><mrow><msub><mrow><mi>α</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow><mrow><mn>10</mn></mrow></mfrac></mrow></msup><mo>−</mo><mn>1</mn></mrow></mrow></mfrac><mo>)</mo></mrow><mrow><mn>2</mn><msub><mrow><mi>log</mi></mrow><mrow><mn>10</mn></mrow></msub><mo>(</mo><mfrac><mrow><msub><mrow><mi>Ω</mi></mrow><mrow><mi>s</mi></mrow></msub></mrow><mrow><msub><mrow><mi>Ω</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow></mfrac><mo>)</mo></mrow></mfrac></mrow></math></div><p>先按下界<strong>向上取整</strong>，不能四舍五入。取N后，允许的截止频率区间是：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Ωc在通带给出的下界和阻带给出的上界之间\"><mrow><mfrac><mrow><msub><mrow><mi>Ω</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow><mrow><msup><mrow><mo>(</mo><mrow><msup><mrow><mn>10</mn></mrow><mrow><mfrac><mrow><msub><mrow><mi>α</mi></mrow><mrow><mi>p</mi></mrow></msub></mrow><mrow><mn>10</mn></mrow></mfrac></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mn>2</mn><mi>N</mi></mrow></mrow></mfrac></mrow></msup></mrow></mfrac><mo>≤</mo><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub><mo>≤</mo><mfrac><mrow><msub><mrow><mi>Ω</mi></mrow><mrow><mi>s</mi></mrow></msub></mrow><mrow><msup><mrow><mo>(</mo><mrow><msup><mrow><mn>10</mn></mrow><mrow><mfrac><mrow><msub><mrow><mi>α</mi></mrow><mrow><mi>s</mi></mrow></msub></mrow><mrow><mn>10</mn></mrow></mfrac></mrow></msup><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mrow><mn>2</mn><mi>N</mi></mrow></mrow></mfrac></mrow></msup></mrow></mfrac></mrow></math></div><p>取左端让通带边缘刚好满足αp，阻带通常有余量；取右端则阻带边缘刚好满足αs。N越大过渡越陡，但计算量和有限精度敏感性也会上升。</p><p><small>核对：PPT3.3 P15–17、22–23；教材印刷142–144页 / PDF159–161。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/33-butterworth-magnitude.svg",
+        "alt": "阶数2、4、8的巴特沃斯幅度曲线均通过同一3dB点",
+        "caption": "按原P16–17公式数值重绘；明确Ωp和Ωc不是同义词。"
+      }
+    },
+    {
+      "id": "stable-poles",
+      "title": "只留下左半平面：从幅度平方到稳定系统",
+      "level": "essential",
+      "sourcePages": [
+        18,
+        19,
+        20,
+        21,
+        25,
+        26
+      ],
+      "bodyHtml": "<p>幅度平方延拓成Hₐ(s)Hₐ(−s)会有2N个对称根。要构造因果稳定的模拟滤波器，只选实部小于0的N个极点；不能把2N个根全部放进Hₐ(s)的分母。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"稳定极点s_k=Ωc exp(j[π/2+(2k+1)π/(2N)])\"><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi>k</mi></mrow></msub><mo>=</mo><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>j</mi><mo>(</mo><mfrac><mrow><mi>π</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>+</mo><mfrac><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo><mi>π</mi></mrow></mrow><mrow><mrow><mn>2</mn><mi>N</mi></mrow></mrow></mfrac><mo>)</mo></mrow></mrow></msup></mrow></math></div><p>k=0,…,N−1。归一化极点p_k=s_k/Ωc，G₀(p)=1/∏(p−p_k)；去归一化Hₐ(s)=G₀(s/Ωc)。共轭极点成对可组合成实系数二阶因子。这里G₀以3 dB频率归一；下张图映射通带指标时的变量尺度需重新写明。</p><p><small>核对：PPT3.3 P18–21、25–26；教材印刷144–146页 / PDF161–163。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/33-stable-poles.svg",
+        "alt": "五阶原型选左半平面的五个极点，排除右半平面五根",
+        "caption": "按原P19–21和五阶原例重绘；图中的10根不等于稳定滤波器有10个极点。"
+      }
+    },
+    {
+      "id": "analog-frequency-transform",
+      "title": "同一个低通原型，变成高通、带通、带阻",
+      "level": "essential",
+      "sourcePages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "bodyHtml": "<p>先选频率尺度，把目标滤波器各通带/阻带边缘映射成低通原型的指标，再设计该原型G(p)。下式中的G<strong>已按这些映射后的指标设计</strong>，不能直接把上张图的单位3 dB原型拿来而不校准尺度。</p><ul><li>高通：p=Ωr/s。Ωr是选定参考边缘；正频率上的幅度映射为|λ|=Ωr/Ω，边缘顺序会倒过来。</li><li>带通：p=(s²+Ω₀²)/(B s)。取通带参考边缘Ω₁、Ω₂，Ω₀²=Ω₁Ω₂，B=Ω₂−Ω₁；这两边缘映到λ=−1、+1。</li><li>带阻：p=B s/(s²+Ω₀²)，同样定义Ω₀、B；带中心映到无穷大，两侧远端映到低通的0附近。</li></ul><p>带通/带阻两侧阻带映射一般不等距，应取更苛刻的那侧（|λs|较小者）设计。N阶低通原型转换后，带通/带阻通常为2N阶。</p><p><strong>原P35订正：</strong>q=jη代入后应为p=(q²<strong>+</strong>η₀²)/q；本页中间式写成减号，最终s式又写回加号。教材印刷152页的中间式为正确加号。P29的λ=1/η只应用于正频率幅度对应；复变量替换p=1/q实际给λ=−1/η，不得据幅度图丢掉相位符号。</p><p><small>核对：PPT3.3 P28–39；教材印刷149–154页 / PDF166–171。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/33-analog-transforms.svg",
+        "alt": "低通、高通、带通、带阻的幅度响应与四种s替换",
+        "caption": "用一阶原型重新计算示意曲线；带通/带阻使用Ω₀²=3、B=2，非原课件未给的实验数据。"
+      }
+    },
+    {
+      "id": "impulse-invariant",
+      "title": "冲激响应不变：保留时间采样，接受频率混叠",
+      "level": "essential",
+      "sourcePages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        48
+      ],
+      "bodyHtml": "<p>按本课件与教材约定：h(n)=hₐ(nT)，不额外乘T。对严格真分式且只有单极点的模拟系统：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Ha(s)=Σ A_k/(s-s_k)\"><mrow><msub><mrow><mi>H</mi></mrow><mrow><mi>a</mi></mrow></msub><mo>(</mo><mi>s</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><mrow><msub><mrow><mi>A</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow><mrow><mrow><mi>s</mi><mo>−</mo><msub><mrow><mi>s</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow></mrow></mfrac></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"H(z)=Σ A_k/[1-exp(s_k T) z^-1]\"><mrow><mi>H</mi><mo>(</mo><mi>z</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><mrow><msub><mrow><mi>A</mi></mrow><mrow><mi>k</mi></mrow></msub></mrow><mrow><mrow><mn>1</mn><mo>−</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><msub><mrow><mi>s</mi></mrow><mrow><mi>k</mi></mrow></msub><mi>T</mi></mrow></mrow></msup><msup><mrow><mi>z</mi></mrow><mrow><mn>−1</mn></mrow></msup></mrow></mrow></mfrac></mrow></math></div><p>极点映射z_k=e^(s_kT)，所以左半平面仍进入单位圆内。可是Ω与Ω+2π/T映到同一ω，模拟频谱副本会相加；适合高频已充分衰减的低通/部分带通设计，不能指望把一般模拟高通无混叠地直接搬过来。</p><p>有些写法取h(n)=T hₐ(nT)，那会让上式所有分子再乘T。先核约定再比较增益，不可一会儿保留留数、一会儿又补T。多重极点和带δ(t)直通项需另行处理，不能机械套本页单极点式。</p><p><small>核对：PPT3.3 P40–44、48；教材印刷154–156页 / PDF171–173。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/33-impulse-map.svg",
+        "alt": "稳定左半平面映入单位圆，但相隔2π/T的频率重合",
+        "caption": "按原P43重绘；单位圆内稳定与频率无混叠是两件不同的事。"
+      }
+    },
+    {
+      "id": "bilinear-prewarp",
+      "title": "双线性：先预畸变全部边缘，再代入Hₐ(s)",
+      "level": "essential",
+      "sourcePages": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        55
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"s=c(1-z^-1)/(1+z^-1)\"><mrow><mi>s</mi><mo>=</mo><mi>c</mi><mfrac><mrow><mrow><mn>1</mn><mo>−</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>−1</mn></mrow></msup></mrow></mrow><mrow><mrow><mn>1</mn><mo>+</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>−1</mn></mrow></msup></mrow></mrow></mfrac></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Ω=c tan(ω/2)\"><mrow><mi>Ω</mi><mo>=</mo><mi>c</mi><mi>tan</mi><mo>(</mo><mfrac><mrow><mi>ω</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow></math></div><p>取c&gt;0、T&gt;0，通常c=2/T。整个模拟频率轴一一映到−π&lt;ω&lt;π，不像冲激不变那样折回混叠；代价是频率非线性扭曲。<strong>设计前每个数字边缘ωᵢ都预畸变成Ωᵢ=(2/T)tan(ωᵢ/2)</strong>，然后做模拟原型和类型变换，最后用同一个c代入。</p><p>若只要求某一个模拟频率Ω₀对应指定数字频率ω₀，可选c=Ω₀/tan(ω₀/2)。它只精确锁定选中的点，不能让整条轴都线性。低频处tan(ω/2)≈ω/2才近似有Ω≈ω/T。双线性保留左半平面到单位圆内的稳定性，但不保留hₐ(t)的逐点采样。</p><p><small>核对：PPT3.3 P48–52、55；教材印刷156–160页 / PDF173–177。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/33-bilinear-warp.svg",
+        "alt": "Ω/c等于tan(ω/2)的非线性映射与低频直线比较",
+        "caption": "按P49–52重绘；横轴ω/π不再与模拟Ω混写。"
+      },
+      "check": {
+        "question": "数字截止ω=π/2，用c=2/T时，预畸变的模拟截止是多少？",
+        "answerHtml": "<p>Ω=(2/T)tan(π/4)=2/T，不是π/(2T)。</p>"
+      }
+    },
+    {
+      "id": "original-butterworth",
+      "title": "第二遍原题：5 kHz / 12 kHz 的五阶 Butterworth",
+      "level": "deep",
+      "sourcePages": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "bodyHtml": "<p><strong>真实题干：</strong>fp=5kHz，αp=2dB，fs=12kHz，αs=30dB。这里fs是阻带边缘频率，<em>不是采样率</em>。PPT P24–27对应教材例3.3.1，印刷145–146页 / PDF162–163。</p><ol><li>频率比Ωs/Ωp=12/5=2.4。阶数下界约4.251，向上取整N=5。</li><li>按通带边缘刚好满足2dB选择截止：fc=5000/(10^0.2−1)^(1/10)≈5275.484Hz，Ωc=2πfc。</li><li>归一化五阶因子为(p+1)(p²+0.618034p+1)(p²+1.618034p+1)。把p=s/Ωc代入即可，不必先展开大系数五阶多项式。</li></ol><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"五阶Butterworth的实二阶因子表达式\"><mrow><msub><mrow><mi>H</mi></mrow><mrow><mi>a</mi></mrow></msub><mo>(</mo><mi>s</mi><mo>)</mo><mo>=</mo><mfrac><mrow><msup><mrow><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub></mrow><mrow><mn>5</mn></mrow></msup></mrow><mrow><mrow><mo>(</mo><mrow><mi>s</mi><mo>+</mo><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub></mrow><mo>)</mo><mo>(</mo><mrow><msup><mrow><mi>s</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>0.618034</mn><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub><mi>s</mi><mo>+</mo><msup><mrow><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo>)</mo><mo>(</mo><mrow><msup><mrow><mi>s</mi></mrow><mrow><mn>2</mn></mrow></msup><mo>+</mo><mn>1.618034</mn><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub><mi>s</mi><mo>+</mo><msup><mrow><msub><mrow><mi>Ω</mi></mrow><mrow><mi>c</mi></mrow></msub></mrow><mrow><mn>2</mn></mrow></msup></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math></div><p>检查：5kHz处衰减2dB，12kHz处约35.693dB≥30dB，所有极点实部为负，直流增益为1。达到30dB的频率约10.525kHz，小于规定12kHz，表示阻带有余量；不要把它误称设计3dB截止。课件小数截断会略改末位。</p><p><small>核对：PPT3.3 P24–27；教材印刷145–146页 / PDF162–163；数值由原题重新计算。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    },
+    {
+      "id": "conversion-derivations",
+      "title": "第二遍：混叠公式、稳定性与预畸变的来由",
+      "level": "deep",
+      "sourcePages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        49,
+        50,
+        51,
+        52,
+        55
+      ],
+      "bodyHtml": "<p>冲激不变的频率关系（本课h(n)=hₐ(nT)尺度约定）如下。它要求傅里叶反演与采样的端点约定一致；hₐ连续、频谱副本绝对可和时可直接套用，本节二阶原例满足这些条件。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"H(e^jω)=(1/T)Σ Ha(j(ω-2πm)/T)\"><mrow><mi>H</mi><mo>(</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>j</mi><mi>ω</mi></mrow></mrow></msup><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>T</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mo>−∞</mo></mrow><mo>∞</mo></munderover><msub><mrow><mi>H</mi></mrow><mrow><mi>a</mi></mrow></msub><mo>(</mo><mrow><mi>j</mi><mfrac><mrow><mrow><mi>ω</mi><mo>−</mo><mn>2</mn><mi>π</mi><mi>m</mi></mrow></mrow><mrow><mi>T</mi></mrow></mfrac></mrow><mo>)</mo></mrow></math></div><p>RC的hₐ在t=0有跳变：标准对称频谱求和给跳变两侧平均值α/2，而本课原例采样取h(0)=α。若用该和式核RC例，应再补α/2，不能忽略端点约定。这是深挖边界，不改变按已声明采样值直接做Z变换的答案。</p><p>因此减小T会拉开模拟频谱副本，但不能让非严格带限的模拟低通在有限T下自动完全无混叠。单纯把数字增益乘T只校正尺度，不消除副本相加。</p><p>双线性把z=eʲω代入s=c(1−z⁻¹)/(1+z⁻¹)，利用半角恒等式得s=jc tan(ω/2)。反变换z=(c+s)/(c−s)，c&gt;0时若Re(s)&lt;0，就有|c+s|&lt;|c−s|，所以|z|&lt;1。ω接近π时Ω趋于无穷，这正是一一映射与频率压缩的来源。</p><p>高通/带通/带阻的完整次序（P55）：数字指标 → 全部边缘预畸变 → 模拟目标类型指标 → 低通原型指标 → 设计原型 → 模拟类型转换 → 同一c的双线性变换 → 回到原数字边缘检查。不要只预畸变中心频率而漏掉两侧边缘。</p><p><small>核对：PPT3.3所列页；教材印刷154–157、159–160页 / PDF171–174、176–177。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    },
+    {
+      "id": "corrected-impulse-example",
+      "title": "第二遍原题勘误：二阶冲激不变例要重算",
+      "level": "deep",
+      "sourcePages": [
+        45,
+        46,
+        47
+      ],
+      "bodyHtml": "<p>P45给Hₐ(s)=0.5012/(s²+0.6449s+0.7079)。令a=0.32245，b=√(0.7079−a²)≈0.777126758，K=0.5012/b≈0.644939831，则hₐ(t)=K e^(−at)sin(bt)u(t)。这是由题给函数直接反拉普拉斯得到的。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"正确二阶数字系统分子K exp(-aT)sin(bT) z^-1，分母1-2 exp(-aT)cos(bT)z^-1+exp(-2aT)z^-2\"><mrow><mi>H</mi><mo>(</mo><mi>z</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mrow><mi>K</mi><msup><mrow><mi>e</mi></mrow><mrow><mrow><mo>−</mo><mi>a</mi><mi>T</mi></mrow></mrow></msup><mi>sin</mi><mo>(</mo><mrow><mi>b</mi><mi>T</mi></mrow><mo>)</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>−1</mn></mrow></msup></mrow></mrow><mrow><mrow><mn>1</mn><mo>−</mo><mn>2</mn><msup><mrow><mi>e</mi></mrow><mrow><mrow><mo>−</mo><mi>a</mi><mi>T</mi></mrow></mrow></msup><mi>cos</mi><mo>(</mo><mrow><mi>b</mi><mi>T</mi></mrow><mo>)</mo><msup><mrow><mi>z</mi></mrow><mrow><mn>−1</mn></mrow></msup><mo>+</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><mo>−</mo><mn>2</mn><mi>a</mi><mi>T</mi></mrow></mrow></msup><msup><mrow><mi>z</mi></mrow><mrow><mn>−2</mn></mrow></msup></mrow></mrow></mfrac></mrow></math></div><p><strong>T=1：</strong>H(z)≈0.327600z⁻¹/(1−1.032855z⁻¹+0.524715z⁻²)。<br><strong>T=0.1：</strong>H(z)≈0.0484808z⁻¹/(1−1.930694z⁻¹+0.937545z⁻²)。两者均沿用原课h=hₐ采样约定。</p><p><strong>逐处订正：</strong>P45部分分式两项留数符号颠倒，合并会给负的模拟分子；正确在(s+a+jb)分母上为+jK/2，在(s+a−jb)上为−jK/2。P46一般式分子前的负号应去掉，z⁻²系数指数必须有T；T=1结果写成0.247也不符原系统，应约0.5247。T=0.1的原页数值大体正确，但不能反过来证明前面的错式成立。</p><p>当前第3版教材例3.3.3用的是另一题Hₐ(s)=1/(s²+s+1)、T=0.05和0.3（印刷154–156页），不能把它冒充P45这道题的原答案。核对这里依靠原PPT题给函数、教材一般转换式和直接数值重算。</p><p><small>核对：PPT3.3 P45–47；教材一般式(3.3.27)–(3.3.30)，印刷154页 / PDF171；两版例题明确分开。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/33-original-second-order.svg",
+        "alt": "原二阶模拟系统与纠正后的两个采样间隔数字响应",
+        "caption": "由真实题给函数重新数值计算；不是照描P47的原曲线。"
+      }
+    },
+    {
+      "id": "implementation-boundaries",
+      "title": "第二遍：FIR/IIR对比表的适用边界",
+      "level": "deep",
+      "sourcePages": [
+        2,
+        6,
+        7,
+        8,
+        11,
+        19,
+        20,
+        38,
+        39
+      ],
+      "bodyHtml": "<ul><li>有限系数的有限长FIR冲激响应绝对可和，因而BIBO稳定；但FIR也可用含反馈的等价结构实现，不能以图中有没有反馈线独自定义FIR/IIR。</li><li>固定实系数IIR的稳定性要看极点与ROC；本课因果有理系统要求全部极点在单位圆内，系数量化后也要重新检查。FIR仍有系数量化、舍入、溢出与幅频误差，P2“不必考虑量化误差扩大”不能读成完全没有量化问题。</li><li>同样幅度指标下IIR往往阶数较小，但“截止特性好/差”取决于指标、阶数和逼近法；线性相位要求可能使FIR更合适。全通相位校正也不能保证任何IIR都以有限低阶代价得到精确线性相位。</li><li>P38–39内容是带阻的设计步骤，转换后标题却残留“带通”字样，应按其带阻公式和边缘含义识别。归一化变量p、q、Ω、ω需要在每段重新说明，不能把不同单位的边缘直接相除或代入tan。</li></ul><p>实现前的最小检查：原指标点与稠密频率网格的幅度、极点位置、直流/高频端增益、二阶节结构、最终量化系数下的稳定性与动态范围。这里是核查清单，不额外要求第一遍完成工程定点实现。</p><p><small>核对：PPT3.3所列页；教材印刷140–144、153–154页 / PDF157–161、170–171；实现边界为明确补充。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    }
+  ],
+  "example": {
+    "title": "代表题：原 RC 低通，分别做冲激不变与双线性",
+    "sourcePages": [
+      53,
+      54
+    ],
+    "problemHtml": "<p>P53–54给RC低通，Hₐ(s)=α/(s+α)，α=1/(RC)&gt;0。采样间隔T&gt;0。按课件h(n)=hₐ(nT)约定求冲激不变系统，再用c=2/T求双线性系统。第3版教材例3.3.4只展开其中双线性部分，印刷159页 / PDF176。</p>",
+    "stepsHtml": "<ol><li>反拉普拉斯：hₐ(t)=αe^(−αt)u(t)。采样得h₁(n)=αe^(−αnT)u(n)，几何级数求Z变换得H₁(z)=α/[1−e^(−αT)z⁻¹]。</li><li>双线性把s=(2/T)(1−z⁻¹)/(1+z⁻¹)代入α/(s+α)，分子分母乘T(1+z⁻¹)：H₂(z)=αT(1+z⁻¹)/[(2+αT)+(αT−2)z⁻¹]。</li><li>除以常数2+αT。令b=αT/(2+αT)，a=(αT−2)/(αT+2)，便得到H₂(z)=b(1+z⁻¹)/(1+a z⁻¹)。</li></ol>",
+    "answerHtml": "<p><strong>冲激不变：</strong>y(n)=αx(n)+e^(−αT)y(n−1)。<br><strong>双线性：</strong>y(n)=b x(n)+b x(n−1)−a y(n−1)。</p>",
+    "checkHtml": "<p>冲激不变极点e^(−αT)在0与1之间；双线性极点−a=(2−αT)/(2+αT)在−1与1之间。双线性直流H₂(1)=1、奈奎斯特端H₂(−1)=0。原课未乘T的冲激不变H₁(1)=α/(1−e^(−αT))一般不等于1，这是定义尺度差异，不能误判为式子一定算错。</p>",
+    "figure": {
+      "src": "dsp-redraw/assets/33-rc-structures.svg",
+      "alt": "RC原题两种方法对应的正确延迟与反馈网络",
+      "caption": "按原P54重新布局。反馈系数是带符号的−a，不能与分母中的+a混淆。"
+    }
+  },
+  "pitfalls": [
+    "Butterworth的Ωc不是任意αp下的Ωp；N也不能向下取整。",
+    "冲激不变h=hₐ(nT)与h=T hₐ(nT)差一个T，增益比较前先写清约定。",
+    "双线性预畸变要覆盖每个数字边缘，并在最后使用同一个c；不能把ω直接当Ω。"
+  ],
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "specification",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "specification",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "specification",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "specification",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "specification",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "specification"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "butterworth-order"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "butterworth-order"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "butterworth-order"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "stable-poles"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "stable-poles",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "stable-poles",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "stable-poles"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "butterworth-order"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "butterworth-order"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "original-butterworth"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 25,
+      "cardIds": [
+        "stable-poles",
+        "original-butterworth"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 26,
+      "cardIds": [
+        "stable-poles",
+        "original-butterworth"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 27,
+      "cardIds": [
+        "original-butterworth"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 28,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 29,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 30,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 31,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 32,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 33,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 34,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 35,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 36,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 37,
+      "cardIds": [
+        "analog-frequency-transform"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 38,
+      "cardIds": [
+        "analog-frequency-transform",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 39,
+      "cardIds": [
+        "analog-frequency-transform",
+        "implementation-boundaries"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 40,
+      "cardIds": [
+        "impulse-invariant",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 41,
+      "cardIds": [
+        "impulse-invariant",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 42,
+      "cardIds": [
+        "impulse-invariant",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 43,
+      "cardIds": [
+        "impulse-invariant",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 44,
+      "cardIds": [
+        "impulse-invariant",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 45,
+      "cardIds": [
+        "corrected-impulse-example"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 46,
+      "cardIds": [
+        "corrected-impulse-example"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 47,
+      "cardIds": [
+        "corrected-impulse-example"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 48,
+      "cardIds": [
+        "impulse-invariant",
+        "bilinear-prewarp"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 49,
+      "cardIds": [
+        "bilinear-prewarp",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 50,
+      "cardIds": [
+        "bilinear-prewarp",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 51,
+      "cardIds": [
+        "bilinear-prewarp",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 52,
+      "cardIds": [
+        "bilinear-prewarp",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 53,
+      "cardIds": [
+        "representative-example"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 54,
+      "cardIds": [
+        "representative-example"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    },
+    {
+      "page": 55,
+      "cardIds": [
+        "bilinear-prewarp",
+        "conversion-derivations"
+      ],
+      "note": "原页按知识过程合并重绘；原例和订正见所列板。"
+    }
+  ],
+  "corrections": [
+    {
+      "sourcePage": 35,
+      "text": "归一化带通中间式p=(q²−η₀²)/q应为p=(q²+η₀²)/q，教材第3版印刷152页和本页最终s式均可交叉核对。"
+    },
+    {
+      "sourcePage": 45,
+      "text": "题给正分子系统的部分分式留数符号颠倒，P46一般式负分子也应订正。"
+    },
+    {
+      "sourcePage": 46,
+      "text": "二阶分母末项应e^(−0.6449T)z⁻²；T=1系数由原系统重算为约0.524715，不是0.247。"
+    }
+  ]
+}

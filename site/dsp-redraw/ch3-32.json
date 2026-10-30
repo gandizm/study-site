@@ -1,0 +1,676 @@
+{
+  "id": "dsp-32",
+  "number": "3.2",
+  "title": "数字滤波系统的基本网络结构",
+  "brief": "沿用课件节号；对应第3版教材3.1。用方程、状态与因子检查流图，不照抄图中的错误符号。",
+  "firstPassMinutes": 25,
+  "deepPassMinutes": 35,
+  "firstPass": [
+    "读7张必学卡，知道直接I/II、级联/并联以及FIR对称折叠的区别。",
+    "跟算原P46一题，所有图都能用系数卷积或短输入核验。",
+    "一般证明、三道更长的原题及有限字长边界按需展开。"
+  ],
+  "source": {
+    "title": "3.1数字滤波器概述.pptx",
+    "pageCount": 64,
+    "sha256": "f0d621e494a14cd4b2b1944fc3c8af625259bf2d6935dc8451b7bbba2e809fbb",
+    "editionNote": "按课件编号：3.1基本概念→第3版教材3.2；3.2网络结构→第3版教材3.1。原物理页不重编号。",
+    "includedPages": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  },
+  "cards": [
+    {
+      "id": "difference-equation",
+      "title": "先统一符号：分母与反馈增益差一个负号",
+      "level": "essential",
+      "sourcePages": [
+        18,
+        19,
+        20
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(y(n), Sum(x(-i + n)*b[i], (i, 0, M)) + Sum(y(-i + n)*a[i], (i, 1, N)))\"><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>M</mi></munderover><mrow><mo>(</mo><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mrow><mo>-</mo><mi>i</mi></mrow><mo>+</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msub><mi>b</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mrow><mo>(</mo><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mrow><mrow><mo>-</mo><mi>i</mi></mrow><mo>+</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msub><mi>a</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(H(z), Sum(b[i]/z**i, (i, 0, M))/(1 - Sum(a[i]/z**i, (i, 1, N))))\"><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>M</mi></munderover><mrow><mo>(</mo><mrow><mfrac><msub><mi>b</mi><mi>i</mi></msub><msup><mi>z</mi><mi>i</mi></msup></mfrac></mrow><mo>)</mo></mrow></mrow><mrow><mn>1</mn><mo>-</mo><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mrow><mo>(</mo><mrow><mfrac><msub><mi>a</mi><mi>i</mi></msub><msup><mi>z</mi><mi>i</mi></msup></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mfrac></mrow></mrow></math></div><p>课件把aᵢ定义成带符号反馈增益，因此分母写1−Σaᵢz⁻ⁱ。归一化后反馈求和从i=1开始，不含当前y(n)自身。因果、约去公共因子后的有理IIR若所有极点严格位于单位圆内，就BIBO稳定。</p>",
+      "pitfall": "原P19反馈和下限i=0与归一化分母不符；此处改为1。稳定性结论要连同因果ROC与内部实现边界使用。"
+    },
+    {
+      "id": "direct-forms",
+      "title": "直接 I 与直接 II：区别在存储哪条序列",
+      "level": "essential",
+      "sourcePages": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "bodyHtml": "<p>直接I分别保存过去输入和过去输出，共M+N个延时。直接II先算中间序列w，再用同一条w延时链做前馈，只需max(M,N)个延时：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(w(n), x(n) + Sum(w(-i + n)*a[i], (i, 1, N)))\"><mrow><mrow><mi>w</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>+</mo><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mrow><mo>(</mo><mrow><mrow><mi>w</mi><mrow><mo>(</mo><mrow><mrow><mo>-</mo><mi>i</mi></mrow><mo>+</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msub><mi>a</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(y(n), Sum(w(-i + n)*b[i], (i, 0, M)))\"><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>M</mi></munderover><mrow><mo>(</mo><mrow><mrow><mi>w</mi><mrow><mo>(</mo><mrow><mrow><mo>-</mo><mi>i</mi></mrow><mo>+</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msub><mi>b</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math></div><p>交换级联次序并合并相同状态链，得到的是精确输入输出等价；内部幅度和量化误差不会因此相同。原三阶例见图，直接I需6个状态，直接II需3个。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/32-direct-ii-example.svg",
+        "alt": "原P27三阶IIR的正确直接II型",
+        "caption": "绿色前馈8、−4、11、−2；蓝色反馈5/4、−3/4、1/8。"
+      }
+    },
+    {
+      "id": "cascade-parallel",
+      "title": "级联与并联：先对 H(z) 做代数",
+      "level": "essential",
+      "sourcePages": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "bodyHtml": "<p>因式分解得到乘积，用一阶/二阶节级联；部分分式得到和，用各支路并联。实系数系统把共轭复根配成二阶实系数节。</p><p>级联的一节可局部控制一对零点和极点；并联的一节直接控制该支路极点，但总系统的零点来自所有支路相加。零极点配对、节顺序和缩放都影响有限精度表现。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/32-cascade-parallel.svg",
+        "alt": "级联系统相乘和并联系统相加的清晰结构",
+        "caption": "重复极点的部分分式需带更高幂；不能把原P35简单根形式无条件套到所有系统。"
+      },
+      "pitfall": "并联不保证“误差总最小”，实数一阶节也完全合法。原P38的绝对断言不能当定理。"
+    },
+    {
+      "id": "fir-direct",
+      "title": "FIR：L个抽头，对应L−1阶",
+      "level": "essential",
+      "sourcePages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(y(n), Sum(h(m)*x(-m + n), (m, 0, L - 1)))\"><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>L</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mo>(</mo><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>m</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mrow><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(H(z), Sum(h(m)/z**m, (m, 0, L - 1)))\"><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>L</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mo>(</mo><mrow><mfrac><mrow><mi>h</mi><mrow><mo>(</mo><mi>m</mi><mo>)</mo></mrow></mrow><msup><mi>z</mi><mi>m</mi></msup></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></math></div><p>用L表示冲激响应长度，避免与IIR分母阶数N混淆。直接型有L个抽头、L−1个延时；若首尾为0，实际阶数还可能降低。有限系数的FIR冲激响应绝对可和，所以输入输出稳定。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/32-original-fir-structures.svg",
+        "alt": "原P46直接型与级联型，系数展开一致",
+        "caption": "先跟着延时线读每个抽头，再把两节系数卷积；下方代表例给出数值核验。"
+      },
+      "pitfall": "原P40卷积项写h(n)应为h(m)；原P42说长度N却画到h(N)，这里统一末抽头为h(L−1)。"
+    },
+    {
+      "id": "linear-phase-fold",
+      "title": "实对称系数：相同抽头可以共用乘法",
+      "level": "essential",
+      "sourcePages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "bodyHtml": "<p>实FIR若h(n)=±h(L−1−n)，可获得广义线性相位，群延时为(L−1)/2样本（频谱非零处）。成对样值先相加/相减，再乘一个系数，就能减少乘法。</p><p>奇数长度有中心抽头；对称时单独保留，反对称时必须为0。频率零点会使相位跳变，不能把整个软件主值相位图硬连成一根直线。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/32-symmetric-fold.svg",
+        "alt": "四抽头对称FIR将四次乘法化为两次",
+        "caption": "减少的是乘法数，不是把时间延时状态全部减半。"
+      }
+    },
+    {
+      "id": "sampling-structure",
+      "title": "频率采样结构：有反馈，不一定就是 IIR",
+      "level": "essential",
+      "sourcePages": [
+        47,
+        48,
+        49,
+        50
+      ],
+      "bodyHtml": "<p>长度不超过N的因果FIR，可由单位圆上N个频率样值H(k)精确确定。H(k)=H(exp(j2πk/N))，k=0…N−1。把IDFT代回Z变换：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(H(z), (1 - 1/z**N)*Sum(H(k)/(1 - exp(2*I*pi*k/N)/z), (k, 0, N - 1))/N)\"><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mrow><mo>-</mo><mi>N</mi></mrow></msup></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mo>(</mo><mrow><mfrac><mrow><mi>h</mi><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mfrac><msup><mi>ⅇ</mi><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>ⅈ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>k</mi></mrow><mi>N</mi></mfrac></mrow></msup><mi>z</mi></mfrac></mrow></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow><mi>N</mi></mfrac></mrow></mrow></math></div><p>梳状器的零点抵消各并联支路在单位圆上的极点，理想外部传递函数仍为FIR。但内部共振状态可能积累舍入误差；零状态传递函数的抵消不等于有限字长内部绝对安全。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/32-frequency-sampling.svg",
+        "alt": "梳状器与N个并联共振支路",
+        "caption": "修复原P48可读展示中的连乘号、漏掉k=0及梳状器指数排版。"
+      }
+    },
+    {
+      "id": "zero-orbits",
+      "title": "线性相位零点要成组出现",
+      "level": "essential",
+      "sourcePages": [
+        59,
+        60,
+        61,
+        62
+      ],
+      "bodyHtml": "<p>实对称/反对称FIR满足H(z)=±z⁻⁽ᴸ⁻¹⁾H(z⁻¹)。非零零点z₀必须带上共轭与倒数：z₀*、1/z₀、1/z₀*；有时这些位置重合。</p><div class=\"table-scroll\"><table><thead><tr><th scope=\"col\">系数形式</th><th scope=\"col\">长度</th><th scope=\"col\">必有的单位圆零点</th></tr></thead><tbody><tr><td>对称</td><td>奇数</td><td>无固定要求</td></tr><tr><td>对称</td><td>偶数</td><td>z=−1（ω=π）</td></tr><tr><td>反对称</td><td>奇数</td><td>z=1及−1</td></tr><tr><td>反对称</td><td>偶数</td><td>z=1（ω=0）</td></tr></tbody></table></div><p>保持成对系数相等/互为相反数的量化，可以保持线性相位结构；仍要检查幅度误差、溢出与舍入。FIR无需担心外部极点漂到单位圆外，不等于“不用考虑量化误差”。</p>",
+      "pitfall": "单位圆上的一般非实零点也成共轭对，不只限纯虚零点。原P60的措辞范围过窄。"
+    },
+    {
+      "id": "original-iir-numbers",
+      "title": "原P27完整例：用冲激响应核验图上每个符号",
+      "level": "deep",
+      "sourcePages": [
+        27
+      ],
+      "bodyHtml": "<p>原系统（第3版例3.1.1，印刷126页/PDF143）：分子8−4z⁻¹+11z⁻²−2z⁻³，分母1−(5/4)z⁻¹+(3/4)z⁻²−(1/8)z⁻³。</p><p>因此前馈b=[8,−4,11,−2]，反馈a=[5/4,−3/4,1/8]。从静止状态输入单位脉冲，依次得到h=[8,6,12.5,10.125,…]；两种直接型必须给同样结果。</p><p>分母因子为(1−z⁻¹/4)(1−z⁻¹+z⁻²/2)，极点为1/4及(1±j)/2，模分别为1/4和1/√2，因果实现稳定。原PPT两个图末输入抽头+2均应改−2，教材本例图与差分式为−2。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/32-original-direct-i.svg",
+        "alt": "原P27直接I型的两条三状态链",
+        "caption": "同一输入与相同静止初态下，须与必学卡的直接II型输出一致。"
+      }
+    },
+    {
+      "id": "original-cascade-parallel",
+      "title": "原P33/P39：同一系统的两种分解",
+      "level": "deep",
+      "sourcePages": [
+        33,
+        35,
+        36,
+        37,
+        39
+      ],
+      "bodyHtml": "<p>令q=z⁻¹，原系统H=(1+2q+2q²+q³)/(1−2q+q³)。级联分解为：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(H, (q + 1)*(q**2 + q + 1)/((1 - q)*(-q**2 - q + 1)))\"><mrow><mi>H</mi><mo>=</mo><mrow><mfrac><mrow><mrow><mo>(</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>+</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mo>-</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>-</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></mrow></math></div><p>并联分解为：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(H, (4*q + 6)/(-q**2 - q + 1) + 1 - 6/(1 - q))\"><mrow><mi>H</mi><mo>=</mo><mrow><mrow><mfrac><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mn>6</mn></mrow><mrow><mrow><mo>-</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>-</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><mo>+</mo><mn>1</mn><mo>-</mo><mrow><mfrac><mn>6</mn><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow></mfrac></mrow></mrow></mrow></math></div><p>原P39两个常数符号颠倒，应为第一支路−6、二阶支路+6。取q=0.5，原函数与此分解均为21，PPT误式为−3。并联二阶分子为β₀+β₁q，不是β₀q+β₁q。分母1−q−q²对应正反馈增益1、1；原图末反馈−1也不符分母。</p><p>这只是结构代数例，并不是稳定滤波器设计：因果实现含极点1及(1+√5)/2&gt;1。不能看到“H(z)叫滤波器”就略过稳定性检查。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/32-original-parallel.svg",
+        "alt": "原P39按正确部分分式重建的并联网络",
+        "caption": "保留直接支路1；两动态支路常数项−6、+6，不是原页的+6、−6。"
+      }
+    },
+    {
+      "id": "phase-derivation",
+      "title": "第二遍：为什么对称性带来固定群延时",
+      "level": "deep",
+      "sourcePages": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "bodyHtml": "<p>把n与L−1−n配对，令c=(L−1)/2。对称时，每对产生2h(n)e⁻ʲωᶜcos[ω(c−n)]；反对称时产生2jh(n)e⁻ʲωᶜsin[ω(c−n)]。括号总和为实数。</p><p>因此公共线性相位因子为e⁻ʲωᶜ；实幅度函数变号时还要加π。反对称另有固定π/2项。对非零谱区间求−dφ/dω得到c。</p><p>偶数L：成对求和n=0…L/2−1。奇数L：成对n=0…(L−3)/2，中心n=(L−1)/2单列；反对称中心为0。原P53换元后倒置求和限不能直接当空和，原P57奇长中心项也必须说明为0。</p>"
+    },
+    {
+      "id": "original-seven-zeros",
+      "title": "原P63/P64：完整因子与7个零点",
+      "level": "deep",
+      "sourcePages": [
+        63,
+        64
+      ],
+      "bodyHtml": "<p>原题h=[1,−2.05,3.2025,−1.05,−1.05,3.2025,−2.05,1]（第3版例3.1.6，印刷132页/PDF149）。长度8、阶数7且对称，故先抽出1+q，再分成一阶、二阶和四阶线性相位节：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(H, (q + 1)*(q**2 - q + 1)*(q**4 - 41*q**3/20 + 1281*q**2/400 - 41*q/20 + 1))\"><mrow><mi>H</mi><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>q</mi><mn>2</mn></msup><mo>-</mo><mi>q</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>q</mi><mn>4</mn></msup><mo>-</mo><mrow><mfrac><mrow><mn>41</mn><mo>⁢</mo><msup><mi>q</mi><mn>3</mn></msup></mrow><mn>20</mn></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mn>1281</mn><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mn>400</mn></mfrac></mrow><mo>-</mo><mrow><mfrac><mrow><mn>41</mn><mo>⁢</mo><mi>q</mi></mrow><mn>20</mn></mfrac></mrow><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow></math></div><p>四阶节又可写成(1−0.8q+0.64q²)(1−1.25q+1.5625q²)。全部零点是−1、e±ʲπ⁄³、0.8e±ʲπ⁄³、1.25e±ʲπ⁄³。</p><p>原P64称“极点”应为“零点”，并且所附末流图与本多项式不一致；这里按因子重建。教材中间步骤c印成4.2025也不符展开，正确值是3.2025，与最终多项式和零点一致。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/32-original-zero-orbits.svg",
+        "alt": "按正确多项式重新计算的七零点分布",
+        "caption": "倒数配对不意味着稳定性问题：这些是FIR的零点，不是因果系统的极点。"
+      }
+    },
+    {
+      "id": "quantization-boundary",
+      "title": "第二遍：结构优劣不能靠一张绝对排名表",
+      "level": "deep",
+      "sourcePages": [
+        22,
+        26,
+        34,
+        38,
+        41,
+        45,
+        49,
+        61,
+        62
+      ],
+      "bodyHtml": "<p>直接II节省延时，但内部动态范围、溢出及量化噪声可能更敏感。二阶节级联通常便于局部控制，仍须考虑零极点配对、排列与缩放。并联支路误差在输出相加，也可能因大数抵消放大相对误差，不能宣称无条件最优。</p><p>有限冲激响应保证数学上的外部BIBO稳定；递归实现内部的极零抵消可能对误差敏感。IIR外部稳定还要说明因果性与ROC。系数对称性保持可保存广义线性相位，但不保证幅度指标也保持。</p><p>阶数、计算量及截止性能必须在相同通阻带指标、精度与实现平台下比较；FIR不是“截止特性总差”，IIR也不只用于分段常数目标。</p>"
+    }
+  ],
+  "example": {
+    "title": "原P46：直接型与级联型，系数必须展开一致",
+    "sourcePages": [
+      46
+    ],
+    "problemHtml": "<p>给定H(z)=0.96+2z⁻¹+2.8z⁻²+1.5z⁻³，画出直接与级联结构并核验。</p>",
+    "stepsHtml": "<ul><li>直接型：4个抽头[0.96,2,2.8,1.5]，3个单位延时。</li><li>原分解：(0.6+0.5z⁻¹)(1.6+2z⁻¹+3z⁻²)。前节1个延时、后节2个延时。</li><li>卷积两节系数：[0.6×1.6,0.6×2+0.5×1.6,0.6×3+0.5×2,0.5×3]。</li></ul>",
+    "answerHtml": "<p>得到[0.96,2,2.8,1.5]，与原式逐项一致。总延时仍3个；朴素计乘法直接型4次、这组未归一化两节5次，并不因“分成小块”就一定省乘法。</p>",
+    "checkHtml": "<p>直流H(1)=0.96+2+2.8+1.5=7.26；分节直流(0.6+0.5)(1.6+2+3)=1.1×6.6=7.26。两种实现对同一输入、相同零初态应产生相同输出。</p>"
+  },
+  "pitfalls": [
+    "长度L的FIR通常是L−1阶，不能多画一个抽头。",
+    "反馈增益的符号取决于分母写法，先统一1−Σaᵢz⁻ⁱ。",
+    "FIR/IIR看冲激响应，不直接按流图是否存在反馈分类。",
+    "线性相位看成对系数、零点结构与非零谱区间；不要把零点误称极点。"
+  ],
+  "deepLinks": [],
+  "textbook": {
+    "printedPages": [
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134
+    ],
+    "pdfPages": [
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151
+    ]
+  },
+  "sourceNote": "课件3.2对应第3版教材3.1。原64页文件中的P18–64全部保留映射；教材程序及扫描不作为公开资源。",
+  "pageMap": [
+    {
+      "page": 18,
+      "cardIds": [
+        "difference-equation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "difference-equation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "difference-equation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "direct-forms"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "direct-forms",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "direct-forms"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "direct-forms"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 25,
+      "cardIds": [
+        "direct-forms"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 26,
+      "cardIds": [
+        "direct-forms",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 27,
+      "cardIds": [
+        "direct-forms",
+        "original-iir-numbers"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 28,
+      "cardIds": [
+        "cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 29,
+      "cardIds": [
+        "cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 30,
+      "cardIds": [
+        "cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 31,
+      "cardIds": [
+        "cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 32,
+      "cardIds": [
+        "cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 33,
+      "cardIds": [
+        "cascade-parallel",
+        "original-cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 34,
+      "cardIds": [
+        "cascade-parallel",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 35,
+      "cardIds": [
+        "cascade-parallel",
+        "original-cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 36,
+      "cardIds": [
+        "cascade-parallel",
+        "original-cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 37,
+      "cardIds": [
+        "cascade-parallel",
+        "original-cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 38,
+      "cardIds": [
+        "cascade-parallel",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 39,
+      "cardIds": [
+        "cascade-parallel",
+        "original-cascade-parallel"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 40,
+      "cardIds": [
+        "fir-direct"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 41,
+      "cardIds": [
+        "fir-direct",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 42,
+      "cardIds": [
+        "fir-direct"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 43,
+      "cardIds": [
+        "fir-direct"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 44,
+      "cardIds": [
+        "fir-direct"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 45,
+      "cardIds": [
+        "fir-direct",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 46,
+      "cardIds": [
+        "fir-direct"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 47,
+      "cardIds": [
+        "sampling-structure"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 48,
+      "cardIds": [
+        "sampling-structure"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 49,
+      "cardIds": [
+        "sampling-structure",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 50,
+      "cardIds": [
+        "sampling-structure"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 51,
+      "cardIds": [
+        "linear-phase-fold"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 52,
+      "cardIds": [
+        "linear-phase-fold"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 53,
+      "cardIds": [
+        "linear-phase-fold",
+        "phase-derivation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 54,
+      "cardIds": [
+        "linear-phase-fold",
+        "phase-derivation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 55,
+      "cardIds": [
+        "linear-phase-fold",
+        "phase-derivation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 56,
+      "cardIds": [
+        "linear-phase-fold",
+        "phase-derivation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 57,
+      "cardIds": [
+        "linear-phase-fold",
+        "phase-derivation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 58,
+      "cardIds": [
+        "linear-phase-fold",
+        "phase-derivation"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 59,
+      "cardIds": [
+        "zero-orbits"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 60,
+      "cardIds": [
+        "zero-orbits"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 61,
+      "cardIds": [
+        "zero-orbits",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 62,
+      "cardIds": [
+        "zero-orbits",
+        "quantization-boundary"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 63,
+      "cardIds": [
+        "original-seven-zeros"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 64,
+      "cardIds": [
+        "original-seven-zeros"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    }
+  ]
+}

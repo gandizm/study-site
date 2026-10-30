@@ -1,0 +1,292 @@
+{
+  "id": "dsp-31",
+  "number": "3.1",
+  "title": "数字滤波器的基本概念",
+  "brief": "沿用老师课件节号；第3版教材中本主题是3.2，先建立工作原理与读图方法。",
+  "firstPassMinutes": 20,
+  "deepPassMinutes": 15,
+  "firstPass": [
+    "先读5张必学卡，分清频率选择、输入输出关系与结构。",
+    "跟算二阶流图的简化数例；本节不背设计公式。"
+  ],
+  "source": {
+    "title": "3.1数字滤波器概述.pptx",
+    "pageCount": 64,
+    "sha256": "f0d621e494a14cd4b2b1944fc3c8af625259bf2d6935dc8451b7bbba2e809fbb",
+    "editionNote": "按课件编号：3.1基本概念→第3版教材3.2；3.2网络结构→第3版教材3.1。原物理页不重编号。",
+    "includedPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ]
+  },
+  "cards": [
+    {
+      "id": "filter-purpose",
+      "title": "滤波就是选择信号怎样通过",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bodyHtml": "<p>本章从“频谱怎么表示”转到“怎样改变它”。对零状态LTI系统，时域是线性卷积，频域是逐频率相乘：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(y(n), Sum(h(m)*x(-m + n), (m, -oo, oo)))\"><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mrow><mo>-</mo><mi>∞</mi></mrow></mrow><mi>∞</mi></munderover><mrow><mo>(</mo><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>m</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mrow><mo>-</mo><mi>m</mi></mrow><mo>+</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(Y(z), H(z)*X(z))\"><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><mrow><mi>x</mi><mrow><mo>(</mo><mi>z</mi><mo>)</mo></mrow></mrow></mrow></mrow></math></div><p>H改变每个频率分量的幅度与相位。设计先说清想保留什么、抑制什么，再决定系数和结构；不只是“画出一条平滑曲线”。</p>",
+      "check": {
+        "question": "低通滤波一定能去除所有噪声吗？",
+        "answerHtml": "<p>不能。若噪声也占据有用信号通带，仅靠频率选择不能无损分开二者。</p>"
+      }
+    },
+    {
+      "id": "four-passbands",
+      "title": "低通、高通、带通、带阻",
+      "level": "essential",
+      "sourcePages": [
+        11,
+        14,
+        15,
+        16
+      ],
+      "bodyHtml": "<p>名称描述保留哪段频率，不描述实现方法。数字滤波器的频谱以2π重复；实系数时幅度关于0对称，所以常只看0…π。模拟频率用Ω（rad/s），数字频率用ω（rad/sample）。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/31-passband-types.svg",
+        "alt": "四种数字滤波器的理想幅度形状",
+        "caption": "理想砖墙仅是目标图；实际设计要允许过渡带和有限阻带误差。"
+      },
+      "pitfall": "FIR/IIR、低通/高通、Butterworth/Chebyshev是不同分类维度，不是互斥的同一张分类表。"
+    },
+    {
+      "id": "read-filter-example",
+      "title": "先看滤波效果，再看延时与起始暂态",
+      "level": "essential",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "bodyHtml": "<p>第3版印刷135–136页给出原图参数：有用分量为80Hz和幅度2的140Hz正弦，干扰为300Hz，采样率1000Hz。按原频带规格重算101抽头最小二乘FIR，保留前两段、压低300Hz。</p><p>因果FIR会有延时与起始暂态。本例群延时50样本，恰为80Hz和140Hz的整数个周期，所以稳态形状接近原信号；但通带增益约1.064，仍有约6.4%的幅度偏差。不能据此说所有滤波都无相移或完全无失真。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/31-textbook-filter.svg",
+        "alt": "原频率参数与滤波器频带重算的波形和幅频图",
+        "caption": "明确参数重算：101抽头、100阶；80/140Hz增益约1.064，300Hz约0.00215，并非精确无失真。"
+      }
+    },
+    {
+      "id": "three-operators",
+      "title": "读流图，只认延时、乘系数和相加",
+      "level": "essential",
+      "sourcePages": [
+        8,
+        9,
+        10
+      ],
+      "bodyHtml": "<p>z⁻¹是延时一拍，不是数值倒数。乘常数对应一条加权支路；箭头交会时要区分相加节点和单纯交叉。原二阶例的含义是：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Eq(y(n), x(n)*b[0] + y(n - 2)*a[2] + y(n - 1)*a[1])\"><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>⁢</mo><msub><mi>b</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msub><mi>a</mi><mn>1</mn></msub></mrow></mrow></mrow></math></div><p>算当前y(n)，只读取已经存好的y(n−1)、y(n−2)，随后再更新状态。反馈系数正负号必须从差分方程读，不能只抄分母上的符号。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/31-basic-operators.svg",
+        "alt": "三种基本运算的明确输入输出",
+        "caption": "本节以线性常系数网络为对象；非线性滤波或自适应更新不受这句话完整概括。"
+      }
+    },
+    {
+      "id": "why-structures",
+      "title": "同一个 H(z)，为什么还要选结构",
+      "level": "essential",
+      "sourcePages": [
+        17
+      ],
+      "bodyHtml": "<p>精确算术、匹配初始条件时，不同结构可实现同一输入输出关系，但资源和数值行为不同。下一节主要比较三件事：</p><ul><li>存多少个延时状态，做多少次乘加。</li><li>系数能否局部控制零点或极点。</li><li>有限字长下的舍入、溢出、内部动态范围及稳定性。</li></ul><p>FIR/IIR由冲激响应是否有限长定义，不简单等同于“图中无反馈/有反馈”。</p>"
+    },
+    {
+      "id": "classical-modern",
+      "title": "扩展：频率重叠时，统计模型能提供什么",
+      "level": "deep",
+      "sourcePages": [
+        12,
+        13
+      ],
+      "bodyHtml": "<p>频率选择型滤波依赖有用与无用成分的频带差异。两者完全重叠时，单靠确定性选频一般不能无失真分离，但不等于所有滤波方法“完全无能为力”。</p><p>维纳、卡尔曼、线性预测、自适应滤波等还利用统计模型、动态模型或参考信号；结果取决于模型与数据，不保证任一估计都会提高信噪比。本课主线仍是经典滤波器设计，不在第一遍展开这些方法。</p>"
+    },
+    {
+      "id": "reproduction-details",
+      "title": "扩展：原示例怎样复算，哪些地方不是普遍结论",
+      "level": "deep",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "bodyHtml": "<p>本图采用原书的归一化频带端点[0,.13,.15,.17,.19,.25,.27,.29,.31,1]（1对应Nyquist频率），目标幅度[0,0,1,1,0,0,1,1,0,0]。实对称FIR取101抽头，因此阶数100、群延时50样本。</p><p>原图只是特定信号的例子：若更换频率、滤波器或边界，必须重新检查群延时、过渡带与暂态。比较误差要说明是否对齐延时；原有三种频率在50样本内恰走整数周期，是本例的特殊性。</p>"
+    }
+  ],
+  "example": {
+    "title": "把原二阶流图变成逐拍计算",
+    "sourcePages": [
+      10
+    ],
+    "problemHtml": "<p>原P10的一般式取新编易算参数a₁=1/2、a₂=0、b₀=1。初始静止，输入单位脉冲δ(n)。求前4个输出并判断冲激响应是否有限长。</p>",
+    "stepsHtml": "<ul><li>n=0：y(0)=0.5×0+1=1。</li><li>n=1：y(1)=0.5×1+0=0.5。</li><li>继续使用上一拍，y(2)=0.25，y(3)=0.125。</li></ul>",
+    "answerHtml": "<p>h(n)=(1/2)ⁿu(n)，前4点为[1,0.5,0.25,0.125]。尾巴虽越来越小，却不在有限时刻截断，因此是IIR。</p>",
+    "checkHtml": "<p>零状态H(z)=1/(1−0.5z⁻¹)，因果ROC为|z|&gt;0.5，包含单位圆；极点0.5在单位圆内，因此BIBO稳定。原P10只给一般式，本数值题明确是教学补充。</p>"
+  },
+  "pitfalls": [
+    "模拟Ω与数字ω的单位不同，数字响应按2π周期重复。",
+    "滤波会引入相位与暂态；特殊例的重合不等于一般无延时。",
+    "分类名称描述不同维度；FIR/IIR的定义看冲激响应。"
+  ],
+  "deepLinks": [],
+  "textbook": {
+    "printedPages": [
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
+    ],
+    "pdfPages": [
+      152,
+      153,
+      154,
+      155,
+      156,
+      157
+    ]
+  },
+  "sourceNote": "课件3.1对应第3版教材3.2；课件3.2对应第3版教材3.1。按原64页文件物理页追溯，本节仅含P1–17。",
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "filter-purpose"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "filter-purpose"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "filter-purpose"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "filter-purpose"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "filter-purpose"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "read-filter-example",
+        "reproduction-details"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "read-filter-example",
+        "reproduction-details"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "three-operators"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "three-operators"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "three-operators"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "four-passbands"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "classical-modern"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "classical-modern"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "four-passbands"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "four-passbands"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "four-passbands"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "why-structures"
+      ],
+      "note": "按逻辑合并重复原页；长推导及额外原题在第二遍。"
+    }
+  ]
+}

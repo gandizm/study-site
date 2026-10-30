@@ -1,0 +1,332 @@
+{
+  "id": "dsp-11",
+  "number": "1.1",
+  "title": "课程导论：学什么，怎样验证",
+  "brief": "先分清算法与处理器，建立全课三问；旧招聘与课程行政信息不挤进第一遍。",
+  "firstPassMinutes": 10,
+  "deepPassMinutes": 8,
+  "firstPass": [
+    "读3张必学卡：DSP两义、三章目标、数学到实现。",
+    "完成三项任务分类，能说明“有输出不等于正确”。",
+    "教材版次和历史招聘集中在第二遍，不必背。"
+  ],
+  "source": {
+    "title": "课件1.1.pptx",
+    "pageCount": 23,
+    "sha256": "7b4d34872eb719377aa566570e4a94835917adbf61137f9bcc48f8690235bea1",
+    "editionNote": "按文件编号导航；源PPT采用第二版，实际核对教材为第三版。原PPT与教材扫描仅私有核对。"
+  },
+  "cards": [
+    {
+      "id": "two-meanings",
+      "title": "1 · 先分开 DSP 的两个意思",
+      "level": "essential",
+      "sourcePages": [
+        3
+      ],
+      "bodyHtml": "<p><strong>Digital Signal Processing</strong>是数字信号处理：研究表示、变换、滤波等方法和算法。<strong>Digital Signal Processor</strong>是数字信号处理器：执行算法的一类硬件。</p><p>本课先学数学关系和适用条件，再讨论怎样实现。通用计算机或FPGA也能执行数字处理任务，所以“用了DSP算法”不等于“用了DSP芯片”。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/11-two-meanings.svg",
+        "alt": "数字信号处理方法与执行它的处理器分为两层",
+        "caption": "重绘原P3的概念区别；不作芯片选型推荐。"
+      },
+      "check": {
+        "question": "在普通计算机上算FFT，是数字信号处理吗？",
+        "answerHtml": "<p>是。FFT是计算DFT的算法，不要求必须用专用DSP芯片。</p>"
+      },
+      "textbook": {
+        "edition": "方勇第3版",
+        "printedPages": [
+          8,
+          9
+        ],
+        "pdfPages": [
+          25,
+          26
+        ]
+      }
+    },
+    {
+      "id": "course-route",
+      "title": "2 · 全课三问，第二章先学到哪里",
+      "level": "essential",
+      "sourcePages": [
+        4,
+        17,
+        18,
+        20
+      ],
+      "bodyHtml": "<p>第1章建立信号、采样、序列与系统语言；第2章研究傅里叶变换与分析；第3章设计数字滤波器。</p><p><strong>第2章第一遍目标：</strong>分清DTFT、DFS、DFT的对象；会做一个小DFT，知道FFT不改变DFT结果；懂补零、防止循环折回和频谱分析的基本边界。证明与长原题放第二遍。</p><p>原P20列4、20、16学时，是课件原安排，不是本网站自学耗时。学习时用“能解释、会算、能检查”判断掌握，不按浏览页数判断。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/11-course-map.svg",
+        "alt": "三章分别回答表示、分析和滤波的问题",
+        "caption": "以原P4、18、20重组学习路线；不是改写原章结构。"
+      },
+      "check": {
+        "question": "频率分析和滤波设计是同一个问题吗？",
+        "answerHtml": "<p>不是。分析问“含有什么成分”，设计问“按什么要求改变成分”；两者常结合使用。</p>"
+      }
+    },
+    {
+      "id": "model-and-build",
+      "title": "3 · 一个结果，要同时过数学和实现两关",
+      "level": "essential",
+      "sourcePages": [
+        8,
+        9,
+        10,
+        11,
+        17
+      ],
+      "bodyHtml": "<p>原P17强调两层：建立算法和误差模型；再通过软件或硬件执行。原P8–11的开发板、软件架构和IDE只是实现示例。</p><ul><li>数学层：写清输入、输出、公式、条件和边界。</li><li>仿真层：用小例子检查数值，并观察误差。</li><li>实现层：考虑字长、舍入、运算量、存储和延迟。</li></ul><p>原图中的历史平台与界面不作为当前安装步骤，也不要求先购买开发板。先把手算例和程序输出互相核对。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/11-model-to-implementation.svg",
+        "alt": "数学关系、数据核验、平台实现依次进行",
+        "caption": "按原P8–11、17重绘一般工作流，不复刻过时IDE截图。"
+      },
+      "check": {
+        "question": "两个平台执行同一算法，数值和耗时必然完全一样吗？",
+        "answerHtml": "<p>不必。有限字长、舍入、并行方式与边界实现可能不同，必须分别检查。</p>"
+      },
+      "textbook": {
+        "edition": "方勇第3版",
+        "printedPages": [
+          8,
+          9,
+          10
+        ],
+        "pdfPages": [
+          25,
+          26,
+          27
+        ]
+      }
+    },
+    {
+      "id": "source-and-admin",
+      "title": "资料说明 · 教材版次与课程背景，不用背",
+      "level": "deep",
+      "sourcePages": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        19,
+        21,
+        22,
+        23
+      ],
+      "bodyHtml": "<p><strong>源文件：</strong>《课件1.1.pptx》共23页，是课程导论；这里的“1.1”沿用文件编号，不把它冒称为教材同名节。课程由上海大学通信与信息工程学院张倩武授课。</p><p>原P2指定方勇《数字信号处理——原理与实践》<strong>第二版</strong>、2016年2月印制；目前实际核对的是<strong>第三版</strong>扫描教材。第二版引用页数不能机械套到第三版。</p><p>P5–7、19说明基础课定位与后续通信、语音、图像、视频课程；P21–22列Oppenheim、Schafer、Mitra、程佩青等参考书，属于原书目，不是新增阅读任务。P23仅列平时成绩、课程项目、考试，未给权重；当前考核要求须看本学期通知。</p><p>P5、7、23在PDF转换中部分正文遮蔽，本稿已对照原PPT文字层补读。行政信息合并在此，不计入第一遍必学。</p>"
+    },
+    {
+      "id": "historical-jobs",
+      "title": "历史材料 · 招聘页说明应用，不代表当前岗位",
+      "level": "deep",
+      "sourcePages": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "bodyHtml": "<p>原P12–16是标注2017、2018年的招聘公告与DSP相关岗位截图，用来说明课程与算法、通信、嵌入式开发的联系。</p><p>它们不是当前职位列表、薪资证据或求职承诺；无需记公司宣传数字、岗位名称或旧工具要求。此组没有可推导的DSP公式，也不额外编造“原例题”。</p>"
+    }
+  ],
+  "example": {
+    "title": "新编检查 · 把任务分到正确层次",
+    "sourcePages": [
+      3,
+      17,
+      18
+    ],
+    "problemHtml": "<p>某系统要分析一段声音：①从记录中计算各频点系数；②决定使用哪种精度表示数值；③把算法放到开发板运行。分别属于什么层次？为什么只看到程序有输出还不够？</p>",
+    "stepsHtml": "<ol><li>①先确定变换对象、采样率、记录长度和DFT定义，是数学模型与算法问题。</li><li>②是数值实现问题，可能引入舍入、量化或溢出。</li><li>③是部署问题，还涉及存储、运算量和延迟。</li></ol>",
+    "answerHtml": "<p>算法、数值与平台三个层次要分别检查。输出图“看起来像频谱”不能证明单位、归一化或边界正确。</p>",
+    "checkHtml": "<p>本题为根据原P3、17、18编写的学习检查，不是原PPT或教材中的现成例题。会说明三层区别即可进入下一节。</p>"
+  },
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "two-meanings",
+        "representative-example"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "course-route"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "model-and-build"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "model-and-build"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "model-and-build"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "model-and-build"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "historical-jobs"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "historical-jobs"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "historical-jobs"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "historical-jobs"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "historical-jobs"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "course-route",
+        "model-and-build",
+        "representative-example"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "course-route",
+        "representative-example"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "course-route"
+      ],
+      "note": "核心概念或新编检查明确区分原来源。"
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "source-and-admin"
+      ],
+      "note": "原应用/行政页按教学目的合并；非逐张复制原照片。"
+    }
+  ],
+  "deepLinks": [],
+  "textbook": {
+    "edition": "方勇第3版",
+    "printedPages": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "pdfPages": [
+      25,
+      26,
+      27,
+      28
+    ]
+  },
+  "sourceNote": "已实际看完本文件每一原页；图像应用以操作/流程重绘，未提供算法的截图不伪称实验复现。历史与行政页明确合并非必学。"
+}

@@ -1,0 +1,672 @@
+{
+  "id": "dsp-34",
+  "number": "3.4",
+  "title": "FIR 型滤波器的设计",
+  "brief": "先用四型端点限制选结构，再区分窗法与频率采样法。53页按10板重绘，保留所有六道原题并公开订正错图与漏系数。",
+  "firstPassMinutes": 30,
+  "deepPassMinutes": 45,
+  "source": {
+    "title": "课件3.4.pptx",
+    "pageCount": 53,
+    "sha256": "61c77b8fb977514a297b8e338401b5573d3b3d1b526229e0f14c666a56ce0ff0"
+  },
+  "sourceNote": "已逐页核原53页PPT及第三版教材对应页；教材另有PPT未涉及的例3.4.3–3.4.5、例3.4.10，以及最优等波纹章节，不冒称本次53页覆盖这些增补内容。教材扫描不发布。",
+  "firstPass": [
+    "有限长保证FIR稳定；实系数的偶/奇对称才带来本课线性相位，时延(N−1)/2。",
+    "先看四型的0/π强制零点，尤其II型不能做π端非零的高通。",
+    "窗法先算延时理想响应，再截断；中心可去奇点必须用极限。",
+    "增加N主要缩窄过渡；换窗降低旁瓣要付出更宽主瓣，深谷不是全阻带保证。",
+    "频率采样要同时写幅度与相位；样点正确不代表点间正确，修改设计与补零显示不同。"
+  ],
+  "cards": [
+    {
+      "id": "fir-and-phase",
+      "title": "有限长与线性相位：是两条不同的条件",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"FIR系统函数H(z)=Σ从n0到N−1的h(n)z^-n\"><mrow><mi>H</mi><mo>(</mo><mi>z</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>h</mi><mo>(</mo><mi>n</mi><mo>)</mo><msup><mrow><mi>z</mi></mrow><mrow><mrow><mo>−</mo><mi>n</mi></mrow></mrow></msup></mrow></math></div><p>本节以0≤n&lt;N的有限实系数h(n)为对象，长度N、阶数至多N−1。有限绝对和保证BIBO稳定；但<strong>不是每个FIR都自动线性相位</strong>。要得到本课的广义线性相位，还需h(n)=h(N−1−n)或h(n)=−h(N−1−n)。</p><p>对称中心α=(N−1)/2就是群时延（单位：采样点）。偶对称可写H(eʲω)=e^(−jαω)A(ω)，奇对称可写H(eʲω)=j e^(−jαω)B(ω)，A、B都是实的<strong>有符号幅度函数</strong>，不是必定非负的|H|。变号会产生π相位跳变；H=0处相位不定义。</p><p>FIR通常用更多系数换取严格线性相位；可借FFT做分块卷积，但必须按线性卷积规则补零。IIR/FIR的阶数、量化和实现代价仍需按同一指标比较，不能只靠P2–4的概括判断。</p><p><small>核对：PPT3.4 P1–6；教材印刷172–174页 / PDF189–191。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/34-linear-phase.svg",
+        "alt": "五点对称序列配对得到线性相位因子和实幅度函数",
+        "caption": "示意序列为重新选取的配对演示，不冒充原课件数值题。"
+      }
+    },
+    {
+      "id": "four-linear-phase-types",
+      "title": "四型先筛选：端点被强制为零吗？",
+      "level": "essential",
+      "sourcePages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "bodyHtml": "<ul><li>I：偶对称、N奇数，没有强制的0/π端点零；可实现四种通常幅度选择类型。</li><li>II：偶对称、N偶数，必有H(π)=0；不能实现要求π端非零的高通/带阻。</li><li>III：奇对称、N奇数，必有H(0)=H(π)=0；通常用于带通，也可用于微分/Hilbert等特殊响应。</li><li>IV：奇对称、N偶数，必有H(0)=0，但π端可非零；可实现高通/带通。</li></ul><p>这里I–IV表示四种情况。原书“第一类线性相位”有时合指偶对称的I、II型，“第二类”合指奇对称的III、IV型。因此后面的N=128低通是<strong>II型</strong>，并不是“第一类”就意味着N必须奇数。实际幅度仍由系数决定，表格只是必要端点约束。</p><p><small>核对：PPT3.4 P7–10；教材表3.4.1，印刷173–174页 / PDF190–191。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/34-four-types.svg",
+        "alt": "四种长度与对称组合对应的强制零点及可选频段",
+        "caption": "按原表重排为四条宽行，避免在窄表格内叠放四套公式。"
+      }
+    },
+    {
+      "id": "window-design",
+      "title": "窗函数法：理想响应 → 延时 → 截断",
+      "level": "essential",
+      "sourcePages": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        26,
+        27
+      ],
+      "bodyHtml": "<p>理想低通在|ω|≤ωc取1、其余取0，零相位冲激响应无限长且非因果。加入α=(N−1)/2的线性相位后，直接在整数n处计算：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"延时后的理想低通g(n)=sin[ωc(n−α)]/[π(n−α)]\"><mrow><mi>g</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi>sin</mi><mo>(</mo><mrow><msub><mrow><mi>ω</mi></mrow><mrow><mi>c</mi></mrow></msub><mo>(</mo><mrow><mi>n</mi><mo>−</mo><mi>α</mi></mrow><mo>)</mo></mrow><mo>)</mo></mrow><mrow><mrow><mi>π</mi><mo>(</mo><mrow><mi>n</mi><mo>−</mo><mi>α</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math></div><p>若α是整数，n=α时用极限<strong>g(α)=ωc/π</strong>；若α为半整数，不存在这个整数采样点，不能把半整数当数组下标。取关于α偶对称的有限窗w(n)，令h(n)=g(n)w(n)，0≤n&lt;N，外部为0。</p><p>设计顺序：定理想响应 → 依衰减选窗、依过渡宽度估N → 检查长度奇偶 → 算系数 → 在原通带/阻带上验算。课件中的ωc是<strong>理想阶跃边缘</strong>，不自动等于截断后实际3 dB点或合格通带边缘。</p><p><small>核对：PPT3.4 P11–15、26–27；教材印刷174–176、182页 / PDF191–193、199。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/34-window-construction.svg",
+        "alt": "延时无限sinc乘13点矩形窗，得到因果有限序列",
+        "caption": "使用原例3.4.1参数；下方代表题给出完整系数和检查。"
+      }
+    },
+    {
+      "id": "window-tradeoff",
+      "title": "长度控制过渡，窗形控制波纹",
+      "level": "essential",
+      "sourcePages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "bodyHtml": "<p>时域相乘对应频域<strong>周期卷积</strong>，理想硬边缘被窗谱展开。固定矩形窗，加大N主要使过渡更窄；跳变附近的Gibbs过冲并不会随N增大一致趋于0，极限相对阶跃约9%。</p><p>窗两端收得更平缓，通常降低旁瓣，却扩大主瓣和滤波器过渡带。原课的估算：矩形约4π/N，Hann/Hamming约8π/N；它们是选N的起点，不是任意容限下的精确过渡带定义。Kaiser可用β调节；固定N时增大β一般降旁瓣、宽主瓣。</p><p>窗谱旁瓣电平与<strong>滤波器全阻带最坏衰减</strong>不是同一量。P32及教材印刷184页的“最大衰减大于100dB”不能当作最小阻带衰减保证；谱零点附近再深，也不能掩盖别处更高的波纹。三窗原例与六种窗公式放在第二遍。</p><p><small>核对：PPT3.4 P16–25、32；教材印刷176–182、184–186页 / PDF193–199、201–203。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/34-window-tradeoff.svg",
+        "alt": "上图比较增加N，下图比较相同N的三种窗",
+        "caption": "均按实际有限和重算。上图是有符号零相位响应，下图才是幅度dB；两个纵轴不可混读。"
+      }
+    },
+    {
+      "id": "frequency-sampling",
+      "title": "频率采样法：指定的是复数，不只是高度",
+      "level": "essential",
+      "sourcePages": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "bodyHtml": "<p>在ωk=2πk/N处指定复数H(k)，再做N点IDFT得到有限h(n)。重新算出的H(eʲω)在采样点精确等于H(k)，采样点之间并不自动满足目标。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"h(n)=(1/N)Σ H(k) exp(j2πkn/N)\"><mrow><mi>h</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>N</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>H</mi><mo>(</mo><mi>k</mi><mo>)</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>j</mi><mfrac><mrow><mrow><mn>2</mn><mi>π</mi><mi>k</mi><mi>n</mi></mrow></mrow><mrow><mi>N</mi></mrow></mfrac></mrow></mrow></msup></mrow></math></div><p>实系数要求H(N−k)=H*(k)，k=1,…,N−1；H(0)以及偶N时的H(N/2)单独取实数。若要偶对称线性相位，用H(k)=A(k)e^(−j2πkα/N)：N奇数时A(N−k)=A(k)，N偶数时A(N−k)=−A(k)。<strong>这里A是有符号量</strong>；偶N低通的DC不能被镜像规则错误地改成负值，π点必须为0。</p><p>通带包含边界时，最后一个低频采样编号kc=floor[Nωc/(2π)]。P39写“小于”不适合恰好落在网格上的闭区间：原N=128例ωc=π/16明明包含k=4。</p><p><small>核对：PPT3.4 P33–39；教材印刷189–191页 / PDF206–208。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/34-frequency-sampling.svg",
+        "alt": "N21原例的复数采样、IDFT流程及连续幅度",
+        "caption": "采样点画成空心圆；曲线由实际IDFT系数重新计算，不连接采样点冒充响应。"
+      }
+    },
+    {
+      "id": "between-samples",
+      "title": "点间误差：用过渡样本改善，而非只加密展示",
+      "level": "essential",
+      "sourcePages": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "bodyHtml": "<p>频域等间隔采样会使理想无限h_d(n)按N发生时域周期叠加；取一周期作为FIR系数，就有点间逼近误差。增加N改变的是设计长度与采样自由度，<strong>不是给现有h补零画更密的FFT</strong>。</p><p>在边缘放入一个或多个过渡幅度，可减小波纹，但过渡带会加宽。原课估式Δω≈(m+1)2π/N中m是过渡采样点数。P42给出的约20–39/40–59/60–70dB只是经验范围，不是“放m点就必定满足”的定理；要用实际复样本和连续频率网格核验。</p><p>第一遍记住两件事：只检查H(k)会漏掉点间峰值；优化后的0.3904等数值只属于特定原题，不是通用固定常数。</p><p><small>核对：PPT3.4 P40–43；教材印刷191–193页 / PDF208–210。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/34-transition-samples.svg",
+        "alt": "N128原例加入0.3904过渡采样点前后的连续响应",
+        "caption": "原例完整复样本和复算结果在第二遍；此处只看“改设计”与“只加密频率显示”的区别。"
+      },
+      "check": {
+        "question": "已有N点h(n)，补零到8N再FFT，能消除这个FIR采样点之间的波纹吗？",
+        "answerHtml": "<p>不能。它只把同一个连续DTFT显示得更密；要改变响应，必须改变系数、设计长度或过渡采样值。</p>"
+      }
+    },
+    {
+      "id": "window-bank-and-original",
+      "title": "第二遍：六种窗的精确定义与原三窗题",
+      "level": "deep",
+      "sourcePages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        30,
+        31,
+        32
+      ],
+      "bodyHtml": "<p>以下均为长度N≥2的<strong>对称窗</strong>，0≤n&lt;N，外部为0。令v=2n/(N−1)−1，δ=2π/(N−1)：</p><ul><li>矩形：w(n)=1。</li><li>Bartlett：w(n)=1−|v|。</li><li>Hann（课件称Hanning/汉宁）：w(n)=0.5−0.5cos(δn)。</li><li>Hamming：w(n)=0.54−0.46cos(δn)。</li><li>Blackman：w(n)=0.42−0.5cos(δn)+0.08cos(2δn)。</li><li>Kaiser：w(n)=I₀[β√(1−v²)]/I₀(β)，β≥0，I₀为第一类修正零阶贝塞尔函数。β=0退化为矩形。</li></ul><p>严格频谱总能直接计算W(ω)=Σw(n)e^(−jωn)。若R(ω)是矩形窗的<strong>复DTFT</strong>，则Hann精确为0.5R(ω)−0.25[R(ω−δ)+R(ω+δ)]；Hamming把系数换为0.54、−0.23，Blackman再加0.04[R(ω−2δ)+R(ω+2δ)]。去掉线性相位后，移位项的符号会随相位因子改变，不能混用两种W。P20–22里的2π/N只适合作大N近似，有限N应保留N−1。</p><p>P19三角窗谱也标有N≫1。奇长度N=2M+1时精确式为W(ω)=e^(−jMω)[sin(Mω/2)/sin(ω/2)]²/M；可由两个M点矩形序列卷积得到。通用实现直接用上面的Bartlett样值求有限和，避免把近似谱当精确式。</p><p>P25参数表给的是近似经验量：矩形窗旁瓣约−13dB、滤波器衰减约21dB；Bartlett约−25/25；Hann约−31/44；Hamming约−41/53；Kaiser β=7.865约−57/80。前后两列不是同一个测量，衰减这里写正数。选窗后必须回到实际指标测最坏点。</p><h4>原例3.4.2：N=21，ωc=π/4</h4><p>α=10，g(n)=sin[π(n−10)/4]/[π(n−10)]，g(10)=1/4。分别乘矩形、Hann、Hamming三窗即可得到h_R、h_Hann、h_Hamming；三者中心窗值均为1，所以中心系数均为1/4，且都关于n=10偶对称。上一张三窗幅频图已经按这三个真实系数重算。</p><p>具体反例：以未重新归一化的原题系数计算，在明确选择的核验区间ω≥0.5π内，Hamming最大幅度约0.003225，即最坏衰减约49.83dB，显然不是全区间都超过100dB。这不是重新给题目指定阻带，而是用可复核区间反驳“深谷代表保证”的读法；原题没有给完整通带/阻带容限。</p><p><small>核对：PPT3.4所列页；教材印刷177–186页 / PDF194–203；Blackman公式按原P22，谱曲线直接数值重算。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/34-window-family.svg",
+        "alt": "六种窗的样值和按直流归一的频谱",
+        "caption": "统一N=51，Kaiser β=7.865；频谱截到−100dB只是绘图地板，不是实际响应在此截断。"
+      }
+    },
+    {
+      "id": "paired-and-interpolation-proof",
+      "title": "第二遍推导：配对求和、周期卷积与插值核",
+      "level": "deep",
+      "sourcePages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "bodyHtml": "<p>令α=(N−1)/2。偶对称时，左、右样值配对给2h(n)e^(−jαω)cos[(α−n)ω]；N奇数时另加中心h(α)。奇对称时，配对给2j h(n)e^(−jαω)sin[(α−n)ω]；N奇数的中心系数必为0。令ω=0或π，便可直接证明四型表中的强制零点。</p><p>窗法中h(n)=g(n)w(n)，所以H(eʲω)=(1/2π)∫从−π到π的G(eʲθ)W(eʲ(ω−θ))dθ，这是2π周期卷积。矩形窗W(eʲω)=e^(−jαω)sin(Nω/2)/sin(ω/2)，ω=2π整数倍处按极限处理，不能直接做0/0。</p><p>把IDFT代入H(z)=Σh(n)z⁻ⁿ，几何级数得到H(z)=[(1−z⁻ᴺ)/N]Σ H(k)/[1−e^(j2πk/N)z⁻¹]。这些表面上的单位圆分母会被组合中的零点消去，最终仍是有限长FIR多项式；不得把插值写法误判为不稳定IIR。令z=eʲω：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"H(e^jω)=Σ H(k) Φ(ω−2πk/N)\"><mrow><mi>H</mi><mo>(</mo><msup><mrow><mi>e</mi></mrow><mrow><mrow><mi>j</mi><mi>ω</mi></mrow></mrow></msup><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>H</mi><mo>(</mo><mi>k</mi><mo>)</mo><mi>Φ</mi><mo>(</mo><mrow><mi>ω</mi><mo>−</mo><mfrac><mrow><mrow><mn>2</mn><mi>π</mi><mi>k</mi></mrow></mrow><mrow><mi>N</mi></mrow></mfrac></mrow><mo>)</mo></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Φ(θ)=exp(-jαθ)sin(Nθ/2)/[N sin(θ/2)]\"><mrow><mi>Φ</mi><mo>(</mo><mi>θ</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>N</mi></mrow></mfrac><msup><mrow><mi>e</mi></mrow><mrow><mrow><mo>−</mo><mi>j</mi><mi>α</mi><mi>θ</mi></mrow></mrow></msup><mfrac><mrow><mi>sin</mi><mo>(</mo><mfrac><mrow><mrow><mi>N</mi><mi>θ</mi></mrow></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow><mrow><mi>sin</mi><mo>(</mo><mfrac><mrow><mi>θ</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mo>)</mo></mrow></mfrac></mrow></math></div><p>在离散网格上，这个核只留下对应的H(k)，其余为0；可去奇点处取连续极限。网格之间却是所有核的叠加，因此会出现峰值与波纹。时间解释h(n)=[Σ_r h_d(n+rN)]R_N(n)适用时还需相应收敛/跳变端点约定；理想阶跃边缘的采样值要事先声明。</p><p>对奇对称系统用H=j e^(−jαω)B，配对关系为B(N−k)=−B(k)（N奇数）或B(N−k)=B(k)（N偶数），k=1,…,N−1。用−j代替j只相当于把有符号B整体取负；不能只改相位却不改幅度符号。</p><p><small>核对：PPT3.4所列页；教材印刷173–176、190–192页 / PDF190–193、207–209；极点消去/端点范围为显式补充。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    },
+    {
+      "id": "original-lowpass-sampling",
+      "title": "第二遍原题：N=128过渡点与N=21三点低通",
+      "level": "deep",
+      "sourcePages": [
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "bodyHtml": "<h4>原例3.4.6：ωc=π/16，Δω=π/32，αs≥30dB</h4><p>按原经验方案取一个过渡点m=1，N≈2π(m+1)/Δω=128，α=63.5。这是四型中的II型（偶对称、偶长度）。写H(k)=A(k)e^(−j127πk/128)：</p><ul><li>A(k)=1，k=0,1,2,3,4；A(5)=0.3904。</li><li>A(k)=0，k=6,…,122；A(123)=−0.3904；A(k)=−1，k=124,…,127。</li><li>h(n)=IDFT₁₂₈{H(k)}；用实部前必须先确认计算虚部仅为舍入残差，不能靠强取real掩盖错误相位。</li></ul><p>检查得到实偶对称h(n)=h(127−n)，H(0)=1、H(π)=0；在原过渡区之后ω≥3π/32的密集数值网格，最坏幅度约0.0073464、衰减约42.68dB，满足≥30dB但不应声称“恰好30dB”。0.3904是原题程序优化给出的值，本页不虚构优化过程。</p><h4>原例3.4.7：N=21，ωc=0.15π</h4><p>α=10，kc=floor(21×0.15/2)=1。仅k=0,1,20非零，分别为1、e^(−j20π/21)、其共轭。配对IDFT得到h(n)={1+2cos[2π(n−10)/21]}/21，0≤n≤20。中心h(10)=1/7，对称、直流为1；各采样点正确，但图中点间仍有波纹。</p><p>P46标题里“0.15rad”漏了π：同页分段目标和后续采样明确使用0.15π，教材印刷193页也如此。若真取0.15rad，kc会变为0，答案不再是这道三点例题。改善需重新选过渡采样值或增加设计N，不能只补零画图。</p><p><small>核对：PPT3.4 P44–48；教材例3.4.6/.7，印刷192–195页 / PDF209–212；数值由原复样本独立重算。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    },
+    {
+      "id": "original-highpass-bandpass",
+      "title": "第二遍原题：N=12高通与N=33带通，订正原图/代码",
+      "level": "deep",
+      "sourcePages": [
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "bodyHtml": "<h4>原例3.4.8：ωc=3π/4，采样间隔π/6，过渡幅度0.39</h4><p>N=2π/(π/6)=12。高通需要H(π)非零，而偶长度的II型不允许，所以选IV型奇对称，α=5.5。令A(4)=A(8)=0.39，A(5)=A(6)=A(7)=1，其余0；正确复样本为H(k)=A(k)exp{−j[11πk/12+π/2]}。整个括号都在−j之后。</p><p>h(n)=IDFT₁₂{H(k)}。约为[−.021363,.034518,−.016095,−.070178,.201184,−.300613,.300613,−.201184,.070178,.016095,−.034518,.021363]。检查h(n)=−h(11−n)、H(0)=0、H(π)=1。</p><p><strong>图/代码订正：</strong>P50解析式正确，但P51沿用的图与第三版教材印刷195–196页代码把中心写a=N/2=6，并漏掉相应IV型相位，所得序列不满足围绕5.5的奇对称。下图完全按正确P50复样本重算，不照描原P51。</p><h4>原例3.4.9：N=33，0.4π至0.5π带通</h4><p>α=16，非零有符号幅度样本A(7)=A(8)=A(25)=A(26)=1；复样本H(k)=A(k)e^(−j2πk16/33)。两组共轭项合并：h(n)=(2/33){cos[14π(n−16)/33]+cos[16π(n−16)/33]}，0≤n≤32。中心h(16)=4/33，通带采样幅度确为1。</p><p><strong>记号/代码订正：</strong>P52把采样高度写成H_d(k)=1，实际上应理解为A(k)=1，不能漏掉P53已使用的相位。P53解析式的2/33正确；第三版教材印刷197页MATLAB代码漏了因子2，不能以其代码输出覆盖正确解析式。</p><p><small>核对：PPT3.4 P49–53；教材例3.4.8/.9，印刷195–197页 / PDF212–214；原解析、原代码与重算图明确区分。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figures": [
+        {
+          "src": "dsp-redraw/assets/34-type4-highpass.svg",
+          "alt": "N12高通正确奇对称冲激响应与幅度",
+          "caption": "纠正P51/教材代码错中心；与P50正确复样本一致。"
+        },
+        {
+          "src": "dsp-redraw/assets/34-bandpass.svg",
+          "alt": "N33带通的33点冲激响应及采样/连续幅度",
+          "caption": "保留P53正确2/33系数；按真实复样本重算。"
+        }
+      ]
+    }
+  ],
+  "example": {
+    "title": "代表题：原例3.4.1，α=6的矩形窗低通",
+    "sourcePages": [
+      28,
+      29
+    ],
+    "problemHtml": "<p>理想频响在|ω|≤π/2时为e^(−j6ω)，π/2&lt;|ω|≤π时为0。按课件的中心α=(N−1)/2设计，求长度N、矩形窗系数h(n)及过渡带宽估计。</p>",
+    "stepsHtml": "<ol><li>由α=6，N=2α+1=13。偶对称、奇长度，属于I型；ωc=π/2。</li><li>理想延时响应为sin[π(n−6)/2]/[π(n−6)]，在n=6处取极限1/2。乘R₁₃(n)后只保留n=0,…,12，其余为0。</li><li>按原课矩形窗主瓣宽度估计Δω≈4π/N=4π/13≈0.967rad/sample；这是近似估算，不是给定通阻带容限下测得的精确宽度。</li></ol>",
+    "answerHtml": "<p>h=[0,1/(5π),0,−1/(3π),0,1/π,1/2,1/π,0,−1/(3π),0,1/(5π),0]，设计长度13。端点碰巧为0，并不改变本题按中心约定得到的N。</p>",
+    "checkHtml": "<p>三步自检：①h(n)=h(12−n)；②h(6)=1/2而非NaN，h(5)=h(7)=1/π；③群时延6，有限h绝对可和而稳定。矩形截断后直流不必恰为1，本例Σh≈1.05174；若另加直流归一化，必须说明系数和实际指标均已改变。</p>"
+  },
+  "pitfalls": [
+    "把N当阶数，或把“第一类偶对称组”误当四型I。长度N的阶数至多N−1。",
+    "把有符号A(k)当|H(k)|，漏掉相位、偶N负频镜像符号或独立DC/π约束。",
+    "把主瓣宽度近似当精确指标、把最深零点当最坏阻带衰减；设计后仍要连续频率核验。"
+  ],
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "fir-and-phase"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "fir-and-phase"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "fir-and-phase"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "fir-and-phase"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "fir-and-phase"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "fir-and-phase",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "four-linear-phase-types",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "four-linear-phase-types",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "four-linear-phase-types",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "four-linear-phase-types",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "window-design",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "window-design",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "window-design",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "window-design",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "window-design",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "window-tradeoff"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "window-tradeoff"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "window-tradeoff",
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "window-tradeoff",
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "window-tradeoff",
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "window-tradeoff",
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "window-tradeoff",
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "window-tradeoff",
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "window-tradeoff",
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 25,
+      "cardIds": [
+        "window-tradeoff",
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 26,
+      "cardIds": [
+        "window-design"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 27,
+      "cardIds": [
+        "window-design"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 28,
+      "cardIds": [
+        "representative-example"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 29,
+      "cardIds": [
+        "representative-example"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 30,
+      "cardIds": [
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 31,
+      "cardIds": [
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 32,
+      "cardIds": [
+        "window-bank-and-original"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 33,
+      "cardIds": [
+        "frequency-sampling"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 34,
+      "cardIds": [
+        "frequency-sampling",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 35,
+      "cardIds": [
+        "frequency-sampling",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 36,
+      "cardIds": [
+        "frequency-sampling",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 37,
+      "cardIds": [
+        "frequency-sampling",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 38,
+      "cardIds": [
+        "frequency-sampling",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 39,
+      "cardIds": [
+        "frequency-sampling",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 40,
+      "cardIds": [
+        "between-samples",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 41,
+      "cardIds": [
+        "between-samples",
+        "paired-and-interpolation-proof"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 42,
+      "cardIds": [
+        "between-samples"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 43,
+      "cardIds": [
+        "between-samples"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 44,
+      "cardIds": [
+        "original-lowpass-sampling"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 45,
+      "cardIds": [
+        "original-lowpass-sampling"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 46,
+      "cardIds": [
+        "original-lowpass-sampling"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 47,
+      "cardIds": [
+        "original-lowpass-sampling"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 48,
+      "cardIds": [
+        "original-lowpass-sampling"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 49,
+      "cardIds": [
+        "original-highpass-bandpass"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 50,
+      "cardIds": [
+        "original-highpass-bandpass"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 51,
+      "cardIds": [
+        "original-highpass-bandpass"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 52,
+      "cardIds": [
+        "original-highpass-bandpass"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    },
+    {
+      "page": 53,
+      "cardIds": [
+        "original-highpass-bandpass"
+      ],
+      "note": "按完整知识过程合并重绘；原题与纠错映射保留。"
+    }
+  ],
+  "corrections": [
+    {
+      "sourcePage": 32,
+      "text": "大于100dB的深谷/最大衰减不能当全阻带最小衰减保证；原三窗响应重算。"
+    },
+    {
+      "sourcePage": 38,
+      "text": "偶N的负频配对范围不包括DC；k0独立，kN/2必须零。"
+    },
+    {
+      "sourcePage": 39,
+      "text": "通带包含边界时kc取floor；严格小于会错误漏掉N128原题的k4。"
+    },
+    {
+      "sourcePage": 46,
+      "text": "题头0.15rad漏π，同页目标与后续采样及教材均为0.15π。"
+    },
+    {
+      "sourcePage": 51,
+      "text": "原图/教材代码中心N/2=6不符P50 IV型α5.5，按正确复样本重绘。"
+    },
+    {
+      "sourcePage": 52,
+      "text": "高度1是幅度A(k)，复样本需相位；P53解析2/33正确，教材同题代码漏因子2。"
+    }
+  ]
+}

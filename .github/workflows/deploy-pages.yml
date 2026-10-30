@@ -38,6 +38,8 @@ jobs:
       - name: Validate DSP redraw coverage and mathematical examples
         run: |
           python3 scripts/validate-dsp-redraw.py
+          python3 scripts/validate-dsp-course-redraw.py
+          python3 tests/dsp-course-math.test.py
           python3 tests/dsp-redraw-math.test.py
           node tests/dsp-progress-preservation.test.cjs
       - uses: actions/upload-pages-artifact@v4

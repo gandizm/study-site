@@ -1,0 +1,679 @@
+{
+  "id": "dsp-13",
+  "number": "1.3",
+  "title": "数字信号与离散序列",
+  "brief": "从样本、移位和周期性出发，完整做对一次卷积。",
+  "firstPassMinutes": 25,
+  "deepPassMinutes": 40,
+  "firstPass": [
+    "分清采样、量化与三种频率单位",
+    "会用冲激、阶跃和矩形表示序列",
+    "判断移位、周期，区分逐点积与卷积",
+    "完整算一次有限序列卷积并检查能量"
+  ],
+  "source": {
+    "title": "序列1.3.ppt",
+    "pageCount": 46,
+    "sha256": "b2cf2da0399eef83d97fa691c7877261b414767d79d60c18c8ad40262de6268c"
+  },
+  "sourceNote": "学习路线编号为 1.3；原文件名为“序列1.3.ppt”，但其第 1 页标题实际为“1.2 数字信号”，第 7 页又写“1.3 数字信号处理的特点”。此处保留真实文件与页号，不改写原编号。教材第 3 版按主题对照，不声称同名同号章节。 本阶段保留文件名与真实页号，原件在已授权私有材料目录；未新增公开原 PPT 原图。",
+  "cards": [
+    {
+      "id": "samples-and-units",
+      "title": "1 · 先分清时间、幅度和频率单位",
+      "level": "essential",
+      "sourcePages": [
+        3,
+        4,
+        6,
+        16,
+        36
+      ],
+      "bodyHtml": "<p>序列 x[n] 只在整数 n 上取值。把模拟信号每隔 T 秒读一次，得到离散时间样本；再量化、编码，才得到数字表示。连续时间不等于曲线处处连续，离散时间也不等于幅度只能取有限级。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x[n]=x_a(nT),\\quad f_s=\\frac{1}{T},\\quad \\omega_0=\\Omega_0T=\\frac{2\\pi f_0}{f_s}\"><mrow><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><msub><mi>x</mi><mi>a</mi></msub><mo>(</mo><mi>n</mi><mi>T</mi><mo>)</mo><mo>,</mo><mspace width=\"1em\"/><msub><mi>f</mi><mi>s</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>T</mi></mrow></mfrac><mo>,</mo><mspace width=\"1em\"/><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><msub><mi>Ω</mi><mn>0</mn></msub><mi>T</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>π</mi><msub><mi>f</mi><mn>0</mn></msub></mrow><mrow><msub><mi>f</mi><mi>s</mi></msub></mrow></mfrac></mrow></math></div><p>记单位：f₀、fₛ 用 Hz；Ω₀ 用 rad/s；ω₀ 用 rad/sample。第一遍先不研究采样能否无失真恢复，下一节再闭环。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/13-sampling-quantization.svg",
+        "alt": "模拟信号经过采样和量化编码的三阶段图",
+        "caption": "对照原 PPT 第 6、16、36 页，分开时间离散与幅度量化。"
+      },
+      "textbook": {
+        "edition": "方勇第3版（2021）；按主题对照，非同编号章节",
+        "printedPages": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "pdfPages": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      },
+      "check": {
+        "question": "1 kHz 正弦以 4 kHz 采样，数字角频率是多少？",
+        "answerHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"\\omega_0=2\\pi\\frac{1000}{4000}=\\frac{\\pi}{2}\\ \\text{rad/sample}\"><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mn>2</mn><mi>π</mi><mfrac><mrow><mn>1000</mn></mrow><mrow><mn>4000</mn></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>π</mi></mrow><mrow><mn>2</mn></mrow></mfrac><mspace width=\"0.25em\"/><mtext>rad/sample</mtext></mrow></math></div>"
+      }
+    },
+    {
+      "id": "sequence-building-blocks",
+      "title": "2 · 三种积木：冲激、阶跃、矩形",
+      "level": "essential",
+      "sourcePages": [
+        31,
+        32,
+        33,
+        37
+      ],
+      "bodyHtml": "<ul><li>δ[n]：n=0 时为 1，其余为 0。</li><li>u[n]：n≥0 时为 1，n&lt;0 时为 0。</li><li>R_N[n] 表示从 0 到 N−1 的 N 个 1。</li></ul><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"\\delta[n]=u[n]-u[n-1],\\quad R_N[n]=u[n]-u[n-N]\"><mrow><mi>δ</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><mi>u</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>−</mo><mi>u</mi><mo>[</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>,</mo><mspace width=\"1em\"/><msub><mi>R</mi><mi>N</mi></msub><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><mi>u</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>−</mo><mi>u</mi><mo>[</mo><mi>n</mi><mo>−</mo><mi>N</mi><mo>]</mo></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x[n]=\\sum_{m=-\\infty}^{\\infty}x[m]\\delta[n-m]\"><mrow><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mo>−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mi>x</mi><mo>[</mo><mi>m</mi><mo>]</mo><mi>δ</mi><mo>[</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo>]</mo></mrow></math></div><p>最后一式说：每个样本都是一个移位冲激的权重。它是下一节由冲激响应推出卷积的起点。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/13-building-blocks.svg",
+        "alt": "单位冲激、单位阶跃与四点矩形的整数样本",
+        "caption": "三张图均重新绘制；冲激 δ[n] 是普通离散序列，别与连续时间 δ(t) 的冲激面积混淆。"
+      },
+      "check": {
+        "question": "R₄[n] 一共几个非零点？最后一个在 n=几？",
+        "answerHtml": "<p>4 个；位置 0、1、2、3，最后是 n=3，而不是 4。</p>"
+      }
+    },
+    {
+      "id": "sequence-operations",
+      "title": "3 · 先对齐 n，再做运算",
+      "level": "essential",
+      "sourcePages": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "bodyHtml": "<div class=\"table-scroll\"><table><thead><tr><th>写法</th><th>动作</th></tr></thead><tbody><tr><td>x[n−m]，m&gt;0</td><td>向右移 m 点；x[n+m] 向左移</td></tr><tr><td>x[−n]</td><td>关于 n=0 翻转</td></tr><tr><td>x₁[n]+x₂[n]；x₁[n]x₂[n]</td><td>同一个 n 的样本逐点相加／相乘</td></tr><tr><td>累加 ∑x[k]（k≤n）；x[n]−x[n−1]</td><td>累加；后向差分</td></tr><tr><td>x[Mn]，M 为正整数</td><td>只保留原来每 M 点中的一个</td></tr></tbody></table></div><p>插零上采样必须另下定义：n 是 M 的整数倍时取 x[n/M]，否则取 0。不能在没有定义时向离散序列询问 x[1/2]。完整原例图放在第二遍。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/13-shift-flip.svg",
+        "alt": "原序列的右移两点及翻转对照",
+        "caption": "原 PPT 第 18–19 页同一组样本；图中每个非零点均标明数值。"
+      },
+      "check": {
+        "question": "x[−1]=2，y[n]=x[n−2]。这个值在 y 的哪一位置？",
+        "answerHtml": "<p>解 n−2=−1，得到 n=1；所以 y[1]=2。</p>"
+      },
+      "corrections": [
+        {
+          "sourcePage": 24,
+          "text": "x(n/m) 对非整数索引未定义；重绘明确区分插零上采样与之后的插值滤波。"
+        }
+      ]
+    },
+    {
+      "id": "periodic-sequences",
+      "title": "4 · 离散周期必须是正整数",
+      "level": "essential",
+      "sourcePages": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x[n+N]=x[n],\\quad N\\in\\text{正整数}\"><mrow><mi>x</mi><mo>[</mo><mi>n</mi><mo>+</mo><mi>N</mi><mo>]</mo><mo>=</mo><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>,</mo><mspace width=\"1em\"/><mi>N</mi><mo>∈</mo><mtext>正整数</mtext></mrow></math></div><p>对复指数 e^(jω₀n)，周期存在当且仅当 ω₀/(2π) 是有理数。化为最简分数 p/q 后，基本周期为 q；加初相不改变这个条件。非退化正弦／余弦同样如此，恒零或常数等退化情形单独判断。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"\\omega_0N=2\\pi k,\\quad \\frac{\\omega_0}{2\\pi}=\\frac{p}{q}\\ \\text{（最简）}\\ \\Rightarrow N_0=q\"><mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>N</mi><mo>=</mo><mn>2</mn><mi>π</mi><mi>k</mi><mo>,</mo><mspace width=\"1em\"/><mfrac><mrow><msub><mi>ω</mi><mn>0</mn></msub></mrow><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>p</mi></mrow><mrow><mi>q</mi></mrow></mfrac><mspace width=\"0.25em\"/><mtext>（最简）</mtext><mspace width=\"0.25em\"/><mo>⇒</mo><msub><mi>N</mi><mn>0</mn></msub><mo>=</mo><mi>q</mi></mrow></math></div><div class=\"table-scroll\"><table><thead><tr><th>原 PPT 例子</th><th>结果</th></tr></thead><tbody><tr><td>sin(πn/4)</td><td>1/8 → 基本周期 8</td></tr><tr><td>sin(4πn/5)</td><td>2/5 → 基本周期 5</td></tr><tr><td>sin(n/4)</td><td>1/(8π) 无理 → 非周期</td></tr><tr><td>exp[j(n/6−π)]</td><td>1/(12π) 无理 → 非周期</td></tr></tbody></table></div>",
+      "figure": {
+        "src": "dsp-redraw/assets/13-periodicity.svg",
+        "alt": "三种正弦序列周期性对比",
+        "caption": "前两行会在整数点重复；第三行即使外形相似，也没有严格整数周期。"
+      },
+      "textbook": {
+        "edition": "方勇第3版（2021）；按主题对照，非同编号章节",
+        "printedPages": [
+          7
+        ],
+        "pdfPages": [
+          24
+        ]
+      },
+      "pitfall": "不要把连续正弦的 2π/ω₀ 直接当成离散基本周期；它未必是整数。"
+    },
+    {
+      "id": "convolution-recipe",
+      "title": "5 · 卷积不是逐点相乘",
+      "level": "essential",
+      "sourcePages": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"y[n]=(x*h)[n]=\\sum_{m=-\\infty}^{\\infty}x[m]h[n-m]\"><mrow><mi>y</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><mo>(</mo><mi>x</mi><mo>*</mo><mi>h</mi><mo>)</mo><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mo>−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mi>x</mi><mo>[</mo><mi>m</mi><mo>]</mo><mi>h</mi><mo>[</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo>]</mo></mrow></math></div><p>固定输出位置 n，把 h[m] 翻转为 h[−m]，再平移成 h[n−m]；与 x[m] 对齐相乘，把所有重叠乘积相加。对每个 n 重做一次，就得到整个输出。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x*h=h*x,\\quad x*\\delta=x\"><mrow><mi>x</mi><mo>*</mo><mi>h</mi><mo>=</mo><mi>h</mi><mo>*</mo><mi>x</mi><mo>,</mo><mspace width=\"1em\"/><mi>x</mi><mo>*</mo><mi>δ</mi><mo>=</mo><mi>x</mi></mrow></math></div><p>有限序列的非零范围先相加：若 x 在 a…b、h 在 c…d，则卷积只可能在 a+c…b+d 非零。内部仍可能恰好抵消成 0。下面用原 PPT 的完整数字例子走一遍。</p>",
+      "textbook": {
+        "edition": "方勇第3版（2021）；按主题对照，非同编号章节",
+        "printedPages": [
+          20,
+          21
+        ],
+        "pdfPages": [
+          37,
+          38
+        ]
+      },
+      "check": {
+        "question": "长度 5 与长度 4 的连续支撑序列，线性卷积最多有多少点？",
+        "answerHtml": "<p>5+4−1=8 点；具体索引从两个起点之和开始。</p>"
+      }
+    },
+    {
+      "id": "sequence-energy",
+      "title": "6 · 能量要先取模，再平方",
+      "level": "essential",
+      "sourcePages": [
+        46
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"E=\\sum_{n=-\\infty}^{\\infty}|x[n]|^2\"><mrow><mi>E</mi><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mo>−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mo>|</mo><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><msup><mo>|</mo><mn>2</mn></msup></mrow></math></div><p>E 有限称有限能量序列。复数样本必须用 |x[n]|²=x[n]x*[n]，不能直接用 x[n]²。一个非零周期序列不断重复同样的非零能量，因此总能量无限。</p><p>本节反复使用的 5 个样本，能量为 2²+1²+1.5²+(−1)²+0.5²=8.5。</p>",
+      "check": {
+        "question": "x[0]=j，其余为 0，能量是 −1 还是 1？",
+        "answerHtml": "<p>1，因为 |j|²=1；能量不会是负数。</p>"
+      }
+    },
+    {
+      "id": "operations-full-gallery",
+      "title": "深挖 A · 把原运算图全部算清",
+      "level": "deep",
+      "sourcePages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        30,
+        31,
+        32,
+        33,
+        37
+      ],
+      "bodyHtml": "<p>统一原样本：x[−1]=2，x[0]=1，x[1]=1.5，x[2]=−1，x[3]=0.5，其余为 0。第二序列在 n=0、1、2、4 分别为 1.5、2、1、−1。每次先对齐位置，不能只对齐数组的第一个数。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"\\Delta x[n]=x[n+1]-x[n]=\\nabla x[n+1]\"><mrow><mi>Δ</mi><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><mi>x</mi><mo>[</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>]</mo><mo>−</mo><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><mi>∇</mi><mi>x</mi><mo>[</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>]</mo></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"\\nabla x[n]=x[n]-x[n-1]=\\Delta x[n-1]\"><mrow><mi>∇</mi><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>−</mo><mi>x</mi><mo>[</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>=</mo><mi>Δ</mi><mi>x</mi><mo>[</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>]</mo></mrow></math></div><p>冲激是所有序列的积木；阶跃和矩形也能直接堆出来：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"u[n]=\\sum_{m=0}^{\\infty}\\delta[n-m]=\\sum_{k=-\\infty}^{n}\\delta[k]\"><mrow><mi>u</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>∞</mi></mrow></msubsup><mi>δ</mi><mo>[</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mo>−</mo><mi>∞</mi></mrow><mrow><mi>n</mi></mrow></msubsup><mi>δ</mi><mo>[</mo><mi>k</mi><mo>]</mo></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"R_N[n]=\\sum_{m=0}^{N-1}\\delta[n-m]\"><mrow><msub><mi>R</mi><mi>N</mi></msub><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mi>δ</mi><mo>[</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo>]</mo></mrow></math></div><p>原样本的冲激展开：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x[n]=2\\delta[n+1]+\\delta[n]+1.5\\delta[n-1]-\\delta[n-2]+0.5\\delta[n-3]\"><mrow><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><mn>2</mn><mi>δ</mi><mo>[</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>]</mo><mo>+</mo><mi>δ</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>+</mo><mn>1.5</mn><mi>δ</mi><mo>[</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>]</mo><mo>−</mo><mi>δ</mi><mo>[</mo><mi>n</mi><mo>−</mo><mn>2</mn><mo>]</mo><mo>+</mo><mn>0.5</mn><mi>δ</mi><mo>[</mo><mi>n</mi><mo>−</mo><mn>3</mn><mo>]</mo></mrow></math></div><p>卷积交换律只需换求和变量 k=n−m：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"\\sum_{m=-\\infty}^{\\infty}x[m]h[n-m]=\\sum_{k=-\\infty}^{\\infty}h[k]x[n-k]\"><mrow><msubsup><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mo>−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mi>x</mi><mo>[</mo><mi>m</mi><mo>]</mo><mi>h</mi><mo>[</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo>]</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mo>−</mo><mi>∞</mi></mrow><mrow><mi>∞</mi></mrow></msubsup><mi>h</mi><mo>[</mo><mi>k</mi><mo>]</mo><mi>x</mi><mo>[</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo>]</mo></mrow></math></div><p>二倍抽取会丢掉奇数位置样本；二倍插零保持原样本数值，不会自动生成平滑的中间值。累加在 n≥3 后保持 4；后向差分在 n=4 仍有 −0.5，不能漏掉回到 0 的边沿。</p>",
+      "figures": [
+        {
+          "src": "dsp-redraw/assets/13-point-operations.svg",
+          "alt": "原两序列、逐点和与逐点积",
+          "caption": "原第 20–21 页：逐点积非零值为 1.5、3、−1。"
+        },
+        {
+          "src": "dsp-redraw/assets/13-accumulate-difference.svg",
+          "alt": "原序列累加以及前向后向差分",
+          "caption": "原第 22–23 页：前向差分是后向差分向左移一格。"
+        },
+        {
+          "src": "dsp-redraw/assets/13-rate-change.svg",
+          "alt": "原序列二倍抽取和二倍插零",
+          "caption": "原第 24 页补齐整数索引规则。"
+        }
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）；按主题对照，非同编号章节",
+        "printedPages": [
+          19,
+          20
+        ],
+        "pdfPages": [
+          36,
+          37
+        ]
+      }
+    },
+    {
+      "id": "exponential-gallery",
+      "title": "深挖 B · 实指数、复指数和主相位",
+      "level": "deep",
+      "sourcePages": [
+        34,
+        35,
+        36
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x[n]=a^nu[n]\"><mrow><mi>x</mi><mo>[</mo><mi>n</mi><mo>]</mo><mo>=</mo><msup><mi>a</mi><mi>n</mi></msup><mi>u</mi><mo>[</mo><mi>n</mi><mo>]</mo></mrow></math></div><p>0&lt;a&lt;1 衰减；−1&lt;a&lt;0 交替衰减；a&gt;1 增长；a&lt;−1 交替增长。a=1 为阶跃，a=−1 为交替符号，a=0 按 x[0]=1、之后为 0 定义即冲激。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"e^{(\\sigma+j\\omega_0)n}=e^{\\sigma n}\\cos(\\omega_0n)+je^{\\sigma n}\\sin(\\omega_0n)\"><mrow><msup><mi>e</mi><mrow><mo>(</mo><mi>σ</mi><mo>+</mo><mi>j</mi><msub><mi>ω</mi><mn>0</mn></msub><mo>)</mo><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mi>σ</mi><mi>n</mi></mrow></msup><mi mathvariant=\"normal\">cos</mi><mo>(</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>n</mi><mo>)</mo><mo>+</mo><mi>j</mi><msup><mi>e</mi><mrow><mi>σ</mi><mi>n</mi></mrow></msup><mi mathvariant=\"normal\">sin</mi><mo>(</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>n</mi><mo>)</mo></mrow></math></div><p>原例 x[n]=0.9ⁿe^(jπn/3)：模为 0.9ⁿ，展开相位是 πn/3；主相位把它按 2π 折回一个约定区间。相位图的跳变不是信号突然跳变，也不说明幅度周期。</p>",
+      "figures": [
+        {
+          "src": "dsp-redraw/assets/13-real-exponential.svg",
+          "alt": "四种实指数序列形状",
+          "caption": "原第 34 页的四种情况，明确选 a=±0.7、±1.12 作示意。"
+        },
+        {
+          "src": "dsp-redraw/assets/13-complex-exponential.svg",
+          "alt": "原复指数的实部虚部模和主相位",
+          "caption": "原第 35 页参数 0.9、π/3；主相位采用 [−π,π)，纵向单位为弧度。"
+        }
+      ]
+    },
+    {
+      "id": "signal-models-and-dsp",
+      "title": "深挖 C · 信号模型与 DSP 的工程取舍",
+      "level": "deep",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "bodyHtml": "<p>信号是承载信息、随一个或多个自变量变化的物理量或数学表示，不必是随机量。传感器把声音等物理量变为电信号，扬声器等执行器再把结果变回物理输出。确定性与随机性是建模选择：前者由已知规则确定，后者用概率描述不确定性；不要把所有语音、图像一概定义为随机信号。</p><ul><li>连续／离散时间：自变量的取值集合不同。模拟／数字：还要看幅度是否量化。</li><li>图像可写为 x[m,n]，是二维序列；二维不是更高的采样频率。</li><li>数字系数容易修改、复制和集成，且可用时间复用共享硬件；二进制判决抗扰但不是完全免疫噪声。</li><li>位数、舍入、饱和、ADC 和时钟都影响精度。17 位只意味着理想量化间隔约为满量程的 2⁻¹⁷≈7.63×10⁻⁶，不保证系统总误差如此。</li><li>长时间观测可细化频率分辨；不能把旧课件的模拟 10 Hz／数字 10⁻³ Hz 当作通用硬件极限。</li><li>有限冲激响应 FIR 在满足对称等条件时可有严格线性相位，并非所有 FIR 自动如此。</li><li>是否足够快、便宜取决于采样率、运算量、存储、功耗与延迟预算；原课件的历史评价不是今天的普遍结论。</li></ul><p>原第 2 页把声学频段与无线电频段放在一起，重绘分开：次声约低于 20 Hz、可听声约 20 Hz–20 kHz、超声约高于 20 kHz；下表则是电磁无线电频段名称，不是声学分类。</p><div class=\"table-scroll\"><table><thead><tr><th>无线电频段</th><th>频率范围</th></tr></thead><tbody><tr><td>VLF</td><td>3–30 kHz</td></tr><tr><td>LF</td><td>30–300 kHz</td></tr><tr><td>MF</td><td>300–3000 kHz</td></tr><tr><td>HF</td><td>3–30 MHz</td></tr><tr><td>VHF</td><td>30–300 MHz</td></tr><tr><td>UHF</td><td>300–3000 MHz，即 0.3–3 GHz</td></tr></tbody></table></div><p>频段范围核对：<a href=\"https://www.itu.int/rec/R-REC-V.431-9-202510-I/en\" target=\"_blank\" rel=\"noopener\">ITU-R V.431-9（2025）</a>。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/13-time-multiplex.svg",
+        "alt": "多路输入时间复用共享数字处理器",
+        "caption": "原第 12 页重绘；时间复用仍需同步与足够总吞吐量。"
+      },
+      "corrections": [
+        {
+          "sourcePage": 1,
+          "text": "“信号都是随机量”不成立；改为物理／数学表示，再独立区分确定性与随机模型。"
+        },
+        {
+          "sourcePage": 2,
+          "text": "UHF 应为 0.3–3 GHz；声学次声／超声不能套用电磁 VLF/LF 等频段名称。"
+        },
+        {
+          "sourcePage": 8,
+          "text": "原模拟与数字精度对比是历史性概括；量化位数不等同于整机精度。"
+        },
+        {
+          "sourcePage": 13,
+          "text": "频率下限与线性相位论断补充观测长度和 FIR 对称等条件。"
+        }
+      ]
+    }
+  ],
+  "example": {
+    "title": "原例 · 完整算出 5 点与 4 点序列的卷积",
+    "sourcePages": [
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "problemHtml": "<p>x[−1…3]={2,1,1.5,−1,0.5}；h[0…3]={4,3,2,1}，其余为 0。求 y=x*h。注意两个数组的起点不同。</p>",
+    "stepsHtml": "<ul><li>先定范围：输出只可能在 n=−1…6，共 8 个位置。</li><li>n=−1：仅 x[−1]h[0]=2×4=8。</li><li>n=0：x[−1]h[1]+x[0]h[0]=2×3+1×4=10。</li><li>n=1：2×2+1×3+1.5×4=13。</li><li>中间 n=2：2×1+1×2+1.5×3−1×4=4.5；n=3：1×1+1.5×2−1×3+0.5×4=3。</li><li>尾端 n=4：1.5×1−1×2+0.5×3=1；n=5：−1×1+0.5×2=0；n=6：0.5×1=0.5。</li></ul>",
+    "answerHtml": "<div class=\"table-scroll\"><table><thead><tr><th>n</th><th>−1</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>y[n]</td><td>8</td><td>10</td><td>13</td><td>4.5</td><td>3</td><td>1</td><td>0</td><td>0.5</td></tr></tbody></table></div>",
+    "checkHtml": "<p>自检：总和应满足 ∑y=(∑x)(∑h)=4×10=40；表中结果相加恰为 40。n=5 的零来自抵消，不是没有重叠。</p>",
+    "figures": [
+      {
+        "src": "dsp-redraw/assets/13-convolution-input-output.svg",
+        "alt": "原卷积输入和完整8点输出",
+        "caption": "原第 25–29 页，所有非零数值均已重算。"
+      },
+      {
+        "src": "dsp-redraw/assets/13-convolution-sliding.svg",
+        "alt": "n等于负1、0、1时的翻转平移和重叠乘积",
+        "caption": "固定 n，横轴 m；h[n−m] 的位置随 n 移动。"
+      }
+    ]
+  },
+  "pitfalls": [
+    "n 是整数；插零不是向原序列查询分数索引。",
+    "周期必须是正整数；初相不把非周期频率变成周期。",
+    "卷积先翻转再平移；数组起点和末端抵消都要检查。"
+  ],
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "samples-and-units",
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "samples-and-units",
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "samples-and-units",
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "signal-models-and-dsp"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "samples-and-units"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "sequence-operations"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "sequence-operations",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "sequence-operations",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "sequence-operations",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "sequence-operations",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "sequence-operations",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "sequence-operations",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "sequence-operations",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 25,
+      "cardIds": [
+        "convolution-recipe",
+        "representative-example"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 26,
+      "cardIds": [
+        "convolution-recipe",
+        "representative-example"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 27,
+      "cardIds": [
+        "convolution-recipe",
+        "representative-example"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 28,
+      "cardIds": [
+        "convolution-recipe",
+        "representative-example"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 29,
+      "cardIds": [
+        "convolution-recipe",
+        "representative-example"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 30,
+      "cardIds": [
+        "convolution-recipe",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 31,
+      "cardIds": [
+        "sequence-building-blocks",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 32,
+      "cardIds": [
+        "sequence-building-blocks",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 33,
+      "cardIds": [
+        "sequence-building-blocks",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 34,
+      "cardIds": [
+        "exponential-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 35,
+      "cardIds": [
+        "exponential-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 36,
+      "cardIds": [
+        "samples-and-units",
+        "exponential-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 37,
+      "cardIds": [
+        "sequence-building-blocks",
+        "operations-full-gallery"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 38,
+      "cardIds": [
+        "periodic-sequences"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 39,
+      "cardIds": [
+        "periodic-sequences"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 40,
+      "cardIds": [
+        "periodic-sequences"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 41,
+      "cardIds": [
+        "periodic-sequences"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 42,
+      "cardIds": [
+        "periodic-sequences"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 43,
+      "cardIds": [
+        "periodic-sequences"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 44,
+      "cardIds": [
+        "periodic-sequences"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 45,
+      "cardIds": [
+        "periodic-sequences"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    },
+    {
+      "page": 46,
+      "cardIds": [
+        "sequence-energy"
+      ],
+      "note": "同一主题的定义、图解与推导合并重绘；原页用于出处对照。"
+    }
+  ]
+}
