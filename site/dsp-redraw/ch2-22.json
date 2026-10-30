@@ -1,0 +1,473 @@
+{
+  "id": "dsp-22",
+  "number": "2.2",
+  "title": "周期序列：DFS、冲激谱与采样",
+  "brief": "一周期N个数，N个谐波；再看它们怎样成为频域冲激。",
+  "firstPassMinutes": 25,
+  "deepPassMinutes": 35,
+  "firstPass": [
+    "分清周期序列的DFS和有限长DFT",
+    "记住正变换不除N、反变换除N",
+    "会从DFS系数得到冲激位置与权重",
+    "用ω=2πf/fₛ算对单位，并完成原采样例题"
+  ],
+  "source": {
+    "title": "2.2周期序列的离散傅里叶变换.pptx",
+    "pageCount": 24,
+    "readerUrl": "dsp-22-ppt.html",
+    "imagePattern": "courses/dsp-22/slides/page-{page}.webp"
+  },
+  "cards": [
+    {
+      "id": "periodic-object",
+      "title": "1 · 输入是无限周期序列，不是有限长记录",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          51
+        ],
+        "pdfPages": [
+          68
+        ]
+      },
+      "bodyHtml": "<p>本节对象是x̃(n+N)=x̃(n)的序列。只要一周期N个样值有限，就能求DFS系数；不需要整条序列绝对可和。N可取基本周期的整数倍。</p><ul><li>n：整数时间序号；k：整数谐波序号。</li><li>N：选用的周期长度；相邻谐波间隔2π/N rad/sample。</li><li>x̃(n)、X̃(k)都以N为周期；真正独立的值各只有N个。</li></ul><p><strong>本节用词：</strong>DFS是周期序列的离散傅里叶级数。有限长DFT要到2.3才定义；公式相似，不代表输入对象相同。</p>",
+      "check": {
+        "question": "一个周期长8、仅前4点为1的周期序列，时间上有多少个非零点？",
+        "answerHtml": "<p>无限多个，因为这4个1每8点重复。不要把它当成只有4个非零点的有限长R₄。</p>"
+      }
+    },
+    {
+      "id": "dfs-pair",
+      "title": "2 · 一周期求系数，N个谐波重建全序列",
+      "level": "essential",
+      "sourcePages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          51,
+          52
+        ],
+        "pdfPages": [
+          68,
+          69
+        ]
+      },
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"DFS analysis: X tilde(k) = sum n=0 to N−1 of x tilde(n)e^{−j2πkn/N}\"><mrow><mrow><mover accent=\"true\"><mi>X</mi><mo>~</mo></mover><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><mrow><mover accent=\"true\"><mi>x</mi><mo>~</mo></mover><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mfrac><mrow><mn>2</mn><mi>π</mi><mi>k</mi><mi>n</mi></mrow><mi>N</mi></mfrac></mrow></msup></mrow></mrow></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"DFS synthesis: x tilde(n) = 1/N sum k=0 to N−1 of X tilde(k)e^{j2πkn/N}\"><mrow><mrow><mover accent=\"true\"><mi>x</mi><mo>~</mo></mover><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><mrow><mover accent=\"true\"><mi>X</mi><mo>~</mo></mover><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><msup><mi>e</mi><mrow><mi>j</mi><mfrac><mrow><mn>2</mn><mi>π</mi><mi>k</mi><mi>n</mi></mrow><mi>N</mi></mfrac></mrow></msup></mrow></mrow></mrow></math></div><p>本教材把X̃(k)=N a<sub>k</sub>称为DFS系数；展开式中的复指数幅值是a<sub>k</sub>=X̃(k)/N。因此<strong>正变换不除N，反变换除N</strong>。</p><p>只求k=0,…,N−1即可，其余按N周期重复。每个频率只算一次；合成上限不是N，也不是无穷。</p>",
+      "check": {
+        "question": "若x̃(n)=1，X̃(0)是多少？其余独立系数呢？",
+        "answerHtml": "<p>X̃(0)=N，k=1,…,N−1的系数都是0。反变换的1/N正好把常数还原为1。</p>"
+      },
+      "corrections": [
+        {
+          "sourcePage": 5,
+          "text": "第3版式(2.2.1)合成求和上限应为N−1；若写到N会重复零频率。"
+        },
+        {
+          "sourcePage": 6,
+          "text": "N个离散基函数只取一个完整周期；正交性的一般条件是k−m为N的整数倍，不只是字面k=m。"
+        }
+      ]
+    },
+    {
+      "id": "line-spectrum",
+      "title": "3 · DFS是系数，DTFT是带权冲激",
+      "level": "essential",
+      "sourcePages": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          53,
+          54,
+          55
+        ],
+        "pdfPages": [
+          70,
+          71,
+          72
+        ]
+      },
+      "bodyHtml": "<p>单个复指数e<sup>jω₀n</sup>的广义DTFT，是ω=ω₀+2πr处权重为2π的冲激列。把N个谐波叠加，得到：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Periodic-sequence DTFT: (2π/N) sum over all integer k of X tilde(k) delta(ω−2πk/N)\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>N</mi></mfrac><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mo>∞</mo></munderover><mrow><mrow><mover accent=\"true\"><mi>X</mi><mo>~</mo></mover><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mrow><mi>δ</mi><mrow><mo>(</mo><mrow><mi>ω</mi><mo>−</mo><mfrac><mrow><mn>2</mn><mi>π</mi><mi>k</mi></mrow><mi>N</mi></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></math></div><ul><li>横坐标换了：DFS看整数k，DTFT看连续ω；位置对应ω=2πk/N。</li><li>纵坐标也要换：每条冲激权重是(2π/N)X̃(k)，不是直接照搬X̃(k)。</li><li>箭头表示Dirac冲激的权重，不是有限的“函数高度”。复权重必须同时保留相位。</li></ul><p>判断e<sup>jω₀n</sup>在时间上周期，要看ω₀/(2π)是否有理；<strong>冲激列DTFT公式本身不要求它有理</strong>。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/22-dfs-vs-impulse.svg",
+        "alt": "以N=4的序列2cos(πn/2)为例，DFS仅k=1、3为4，DTFT在±π/2处冲激权重为2π",
+        "caption": "重绘PPT第11–13页的对应关系；用精确N=4检验归一化，非原矩形题的替代。"
+      },
+      "check": {
+        "question": "N=4时，DFS系数4对应的冲激权重是多少？",
+        "answerHtml": "<p>(2π/4)×4=2π；这是权重，不是高度。</p>"
+      }
+    },
+    {
+      "id": "sampling-map",
+      "title": "4 · 连续信号、冲激采样、样值序列要分开",
+      "level": "essential",
+      "sourcePages": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          56,
+          57,
+          58
+        ],
+        "pdfPages": [
+          73,
+          74,
+          75
+        ]
+      },
+      "bodyHtml": "<ul><li>x<sub>a</sub>(t)：连续时间信号，傅里叶频率变量Ω，单位rad/s。</li><li>x̂<sub>a</sub>(t)=∑x<sub>a</sub>(nT)δ(t−nT)：带权冲激串，仍是连续时间对象。</li><li>x(n)=x<sub>a</sub>(nT)：只留下样值与整数编号；它的频率变量是ω。</li></ul><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Sampled sequence DTFT equals 1/T sum over integer r of Xa(j(ω−2πr)/T)\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mi>T</mi></mfrac><mrow><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mo>∞</mo></munderover><mrow><msub><mi>X</mi><mi>a</mi></msub><mrow><mo>(</mo><mrow><mi>j</mi><mrow><mo>(</mo><mfrac><mrow><mi>ω</mi><mo>−</mo><mn>2</mn><mi>π</mi><mi>r</mi></mrow><mi>T</mi></mfrac><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></div><p>T=1/f<sub>s</sub>，且ω=ΩT。先以Ω<sub>s</sub>=2π/T为间隔复制模拟频谱、乘1/T，再把Ω轴换成ω轴。副本若重叠，它们会相加，不能“只挑一份”。</p><p>这条关系描述采样，即使发生混叠仍成立；无混叠才有可能从样值唯一重建原连续信号。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/22-sampling-chain.svg",
+        "alt": "连续信号分成冲激采样信号和整数索引序列；分别标注傅里叶频率变量和换轴关系",
+        "caption": "重绘PPT第14–18页。把样值序列与冲激串分开，补齐ω=ΩT及1/T。"
+      },
+      "check": {
+        "question": "冲激采样信号x̂ₐ(t)与样值序列x(n)是同一个数学对象吗？",
+        "answerHtml": "<p>不是。前者在连续时间上是冲激串，后者是整数索引的数列；傅里叶变换的变量与冲激尺度必须对应。</p>"
+      }
+    },
+    {
+      "id": "frequency-scale",
+      "title": "5 · Hz、rad/s、rad/sample，一次换清",
+      "level": "essential",
+      "sourcePages": [
+        19
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          58
+        ],
+        "pdfPages": [
+          75
+        ]
+      },
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"ω = ΩT = 2π f/f_s\"><mrow><mi>ω</mi><mo>=</mo><mi>Ω</mi><mi>T</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>π</mi><mi>f</mi></mrow><msub><mi>f</mi><mi>s</mi></msub></mfrac></mrow></math></div><p>f是Hz，Ω=2πf是rad/s，ω是rad/sample。f/f<sub>s</sub>则是cycles/sample，不要把这个归一化频率误当成ω。</p><p>f=f<sub>s</sub>/2 ↔ Ω=Ω<sub>s</sub>/2 ↔ ω=π。数字频率相差2π无法区分；模拟频率相差f<sub>s</sub>采样后可能得到同一序列。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/22-frequency-scale.svg",
+        "alt": "三条对齐频率轴：f从负fs到fs，Ω从负Ωs到Ωs，ω从负2π到2π",
+        "caption": "按PPT第19页及教材第3版印刷58页图2.2.6重绘；各轴单位明确。"
+      },
+      "check": {
+        "question": "f=100 Hz、fₛ=400 Hz时，ω是多少？",
+        "answerHtml": "<p>ω=2π×100/400=π/2 rad/sample，不是100，也不是1/4 rad/sample。</p>"
+      }
+    },
+    {
+      "id": "orthogonality",
+      "title": "深挖 · 为什么只需N个谐波",
+      "level": "deep",
+      "sourcePages": [
+        5,
+        6,
+        7
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          51,
+          52
+        ],
+        "pdfPages": [
+          68,
+          69
+        ]
+      },
+      "bodyHtml": "<p>把展开式乘e<sup>−j2πmn/N</sup>，再对一周期n求和。正交性留下对应的一个系数：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Discrete orthogonality: sum n=0 to N−1 e^{j2π(k−m)n/N} equals N if k−m is a multiple of N, otherwise 0\"><mrow><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><msup><mi>e</mi><mrow><mi>j</mi><mfrac><mrow><mn>2</mn><mi>π</mi><mrow><mo>(</mo><mrow><mi>k</mi><mo>−</mo><mi>m</mi></mrow><mo>)</mo></mrow><mi>n</mi></mrow><mi>N</mi></mfrac></mrow></msup></mrow><mo>=</mo><mo>{</mo><mtext>N：k−m是N的整数倍；0：其他</mtext></mrow></math></div><p>当k、m都只取0,…,N−1时，“同余”才简化为k=m。这也解释了为何不能把k=N再算一遍。</p><p>与连续时间周期信号对照：连续傅里叶级数一般需要无限多个谐波；但离散时间的n是整数，k与k+N对应同一条基序列，因此这里只留N个独立谐波。PPT第5页出现的连续时间级数不能直接当成离散DFS的无限重复求和。<a href=\"dsp-textbook/dsp-front-11.html#section-4\">两种级数的原式对照（单栏深讲）</a>。</p><p><a href=\"dsp-textbook/dsp-front-09.html#section-5\">完整等比和推导（单栏深讲）</a>；<a href=\"dsp-textbook/dsp-front-09.html#section-3\">由正交性推导DFS/IDFS（单栏深讲）</a>。</p>"
+    },
+    {
+      "id": "rectangle-dfs",
+      "title": "深挖 · 原PPT矩形周期序列：DFS和冲激谱",
+      "level": "deep",
+      "sourcePages": [
+        8,
+        13
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          52,
+          53,
+          54,
+          55
+        ],
+        "pdfPages": [
+          69,
+          70,
+          71,
+          72
+        ]
+      },
+      "bodyHtml": "<p>原题：将有限长R₄(n)以N=8延拓，得到一周期[1,1,1,1,0,0,0,0]。从DFS定义只需相加n=0,…,3的四项：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"N=8 periodic rectangular example: X tilde(k)=e^{−j3πk/8}sin(πk/2)/sin(πk/8)\"><mrow><mrow><mover accent=\"true\"><mi>X</mi><mo>~</mo></mover><mrow><mo>(</mo><mi>k</mi><mo>)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mfrac><mrow><mn>3</mn><mi>π</mi><mi>k</mi></mrow><mn>8</mn></mfrac></mrow></msup><mfrac><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mi>π</mi><mi>k</mi></mrow><mn>2</mn></mfrac><mo>)</mo></mrow></mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mi>π</mi><mi>k</mi></mrow><mn>8</mn></mfrac><mo>)</mo></mrow></mrow></mfrac></mrow></math></div><p>k=8r时回到原和，X̃=4；k=2,4,6时X̃=0，系数以8为周期。对应DTFT冲激在ω=πk/4，权重乘π/4；零频率的权重为π。</p><p><a href=\"dsp-textbook/dsp-front-09.html#section-6\">四项求和与完整系数（单栏深讲）</a>；<a href=\"dsp-textbook/dsp-front-10.html#section-6\">同一原题的DTFT表示（单栏深讲）</a>。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/22-rectangle-dfs.svg",
+        "alt": "原题N=8周期矩形，显示一个周期的8个样值及8个DFS幅值，k=0为4，k=2、4、6为0",
+        "caption": "重绘PPT第8、13页；圆点是DFS系数幅值，不用冲激箭头冒充有限数值。"
+      }
+    },
+    {
+      "id": "sampling-derivation",
+      "title": "深挖 · 采样公式中的尺度因子",
+      "level": "deep",
+      "sourcePages": [
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          57,
+          58,
+          59
+        ],
+        "pdfPages": [
+          74,
+          75,
+          76
+        ]
+      },
+      "bodyHtml": "<p>模拟频谱先以2π/T为周期复制，并乘1/T；再换ω=ΩT。若频谱包含冲激，换轴时还必须使用δ(aξ)=δ(ξ)/|a|。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"The impulse-sampled continuous-time spectrum X-hat-a(jΩ) equals the sequence DTFT evaluated at ω=ΩT\"><mrow><mover><msub><mi>X</mi><mi>a</mi></msub><mo>^</mo></mover><mrow><mo>(</mo><mrow><mi>j</mi><mi>Ω</mi></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>Ω</mi><mi>T</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"For T positive, (1/T)δ((ω−ω₀)/T)=δ(ω−ω₀)\"><mrow><mfrac><mn>1</mn><mi>T</mi></mfrac><mrow><mi>δ</mi><mrow><mo>(</mo><mfrac><mrow><mi>ω</mi><mo>−</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><mi>T</mi></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>δ</mi><mrow><mo>(</mo><mrow><mi>ω</mi><mo>−</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow></math></div><p>所以不能看到采样公式外有1/T，就断定离散频谱冲激权重也扩大1/T。下方代表例中，连续冲激采样谱的权重为800π，换为ω轴后是2π。</p><p><a href=\"dsp-textbook/dsp-front-11.html#section-7\">把整条Ω轴分段后换元（单栏深讲）</a>；<a href=\"dsp-textbook/dsp-front-11.html#section-13\">原题用冲激尺度再次验算（单栏深讲）</a>。</p>"
+    }
+  ],
+  "example": {
+    "title": "代表例 · 100 Hz余弦，以400 Hz采样",
+    "sourcePages": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "textbook": {
+      "edition": "方勇第3版（2021）",
+      "printedPages": [
+        58,
+        59
+      ],
+      "pdfPages": [
+        75,
+        76
+      ]
+    },
+    "problemHtml": "<p>原题：x<sub>a</sub>(t)=2cos(2π·100t)，以f<sub>s</sub>=400 Hz采样。写出模拟频谱、冲激采样信号、样值序列及各自的频谱。</p>",
+    "stepsHtml": "<ol><li><strong>先换单位：</strong>T=1/400 s=2.5 ms，Ω₀=200π rad/s，Ω<sub>s</sub>=800π rad/s，ω₀=Ω₀T=π/2 rad/sample。</li><li><strong>模拟频谱：</strong>X<sub>a</sub>(jΩ)=2π[δ(Ω−200π)+δ(Ω+200π)]。</li><li><strong>两个采样对象：</strong>x̂<sub>a</sub>(t)=∑<sub>n</sub>2cos(πn/2)δ(t−nT)；x(n)=2cos(πn/2)，一周期为[2,0,−2,0]。</li><li><strong>冲激采样谱：</strong>在Ω=±200π+800πr rad/s处放权重800π的冲激。它以800π rad/s重复。</li><li><strong>序列DTFT：</strong>在ω=±π/2+2πr rad/sample处放权重2π的冲激。它以2π重复。</li></ol>",
+    "answerHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"X(e^{jω})=2π sum over r [δ(ω−π/2−2πr)+δ(ω+π/2−2πr)]\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mn>2</mn><mi>π</mi><mrow><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mo>∞</mo></munderover><mrow><mo>[</mo><mrow><mrow><mi>δ</mi><mrow><mo>(</mo><mrow><mi>ω</mi><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>−</mo><mn>2</mn><mi>π</mi><mi>r</mi></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mi>δ</mi><mrow><mo>(</mo><mrow><mi>ω</mi><mo>+</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>−</mo><mn>2</mn><mi>π</mi><mi>r</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></math></div>",
+    "checkHtml": "<p>用DFS独立检查：N=4时，X̃(1)=X̃(3)=4，其余为0。IDFS给出e<sup>jπn/2</sup>+e<sup>−jπn/2</sup>=2cos(πn/2)；冲激权重(2π/4)×4=2π，与上式一致。</p>",
+    "figure": {
+      "src": "dsp-redraw/assets/22-cosine-spectra.svg",
+      "alt": "100Hz余弦以400Hz采样：模拟频谱两根权重2π冲激，冲激采样谱每800π重复且权重800π，样值序列DTFT每2π重复且权重2π",
+      "caption": "按PPT第20–24页及教材第3版例2.2.7重绘；三种频谱的横轴与权重分别标注。"
+    }
+  },
+  "pitfalls": [
+    "DFS系数X̃(k)、展开幅值aₖ与DTFT冲激权重是三个不同量。",
+    "冲激箭头标的是权重，不是普通函数高度；频谱副本重叠时要相加。",
+    "Hz、rad/s、rad/sample不要混写；冲激换轴时使用δ(aξ)=δ(ξ)/|a|。"
+  ],
+  "deepLinks": [
+    {
+      "label": "DFS系数与八点原例：单栏深讲",
+      "href": "dsp-textbook/dsp-front-09.html"
+    },
+    {
+      "label": "模拟与数字频率原例：单栏深讲",
+      "href": "dsp-textbook/dsp-front-11.html"
+    }
+  ],
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "periodic-object"
+      ],
+      "note": "原封面/提纲合并到学习目标，不增添重复学习量。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "periodic-object"
+      ]
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "periodic-object"
+      ],
+      "note": "原封面/提纲合并到学习目标，不增添重复学习量。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "periodic-object",
+        "dfs-pair"
+      ],
+      "note": "原封面/提纲合并到学习目标，不增添重复学习量。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "periodic-object",
+        "dfs-pair",
+        "orthogonality"
+      ]
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "dfs-pair",
+        "orthogonality"
+      ]
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "dfs-pair",
+        "orthogonality"
+      ]
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "rectangle-dfs"
+      ]
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "line-spectrum"
+      ],
+      "note": "原封面/提纲合并到学习目标，不增添重复学习量。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "line-spectrum"
+      ]
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "line-spectrum"
+      ]
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "line-spectrum"
+      ]
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "line-spectrum",
+        "rectangle-dfs"
+      ]
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "sampling-map"
+      ]
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "sampling-map"
+      ]
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "sampling-map",
+        "sampling-derivation"
+      ]
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "sampling-map",
+        "sampling-derivation"
+      ]
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "sampling-map",
+        "sampling-derivation"
+      ]
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "frequency-scale"
+      ]
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "sampling-derivation",
+        "representative-example"
+      ]
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "sampling-derivation",
+        "representative-example"
+      ]
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "sampling-derivation",
+        "representative-example"
+      ]
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "sampling-derivation",
+        "representative-example"
+      ]
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "sampling-derivation",
+        "representative-example"
+      ]
+    }
+  ],
+  "sourceNote": "原PPT保留物理页号；教材另标方勇第3版印刷页/PDF文件页。PPT旧版页码不直接套用。图和公式重绘用于学习，原PPT仍可逐页核对。"
+}

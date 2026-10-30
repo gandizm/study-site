@@ -1,0 +1,17 @@
+'use strict';
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const context={window:{}};vm.runInNewContext(fs.readFileSync('site/dsp-progress-core.js','utf8'),context);
+const C=context.window.CourseProgressCore;
+assert.equal(C.KEY,'course-reading-dsp-fourier-v1');
+assert.equal(C.COURSE,'dsp-fourier');
+assert.deepEqual(Array.from(C.CHAPTERS,x=>[x.id,x.pages]),[['dsp-21',35],['dsp-22',24]]);
+const old=C.fresh(),now=Date.UTC(2026,9,20,12);C.credit(old,'dsp-21',4,45000,now);C.mark(old,'dsp-21',4,true,now);C.chapter(old,'dsp-21').lastPage=4;old.lastChapter='dsp-21';
+C.credit(old,'dsp-22',2,20000,now);C.chapter(old,'dsp-22').lastPage=2;
+const bytes=JSON.stringify(old),reloaded=C.validate(JSON.parse(bytes));
+assert.equal(JSON.stringify(reloaded),bytes);
+assert.equal(C.stats(reloaded).done,1);assert.equal(C.stats(reloaded).ms,65000);
+const before=JSON.stringify(reloaded);C.stats(reloaded);assert.equal(JSON.stringify(reloaded),before);
+assert.throws(()=>C.validate({...JSON.parse(bytes),course:'communications'}));
+assert.throws(()=>C.validate({...JSON.parse(bytes),chapters:{'dsp-23':{lastPage:1,pages:{}}}}));
+const newReader=fs.readFileSync('site/dsp-redraw.js','utf8');assert(!/localStorage\.(setItem|removeItem|clear)\s*\(/.test(newReader));
+console.log('PASS: legacy DSP key, chapter IDs, saved time, completion and last page preserved; new redraw never writes learning records.');

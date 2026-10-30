@@ -1,0 +1,449 @@
+{
+  "id": "dsp-25",
+  "number": "2.5",
+  "title": "快速傅里叶变换 FFT",
+  "brief": "先算懂一次蝶形，再区分DIT、DIF和位反转。原课件31页归并为9块，推导与工程扩展折叠。",
+  "firstPassMinutes": 25,
+  "deepPassMinutes": 30,
+  "source": {
+    "title": "2.5快速傅里叶变换.pptx",
+    "pageCount": 31,
+    "sha256": "3c4033aa0f78ad3905d26a2593aa67f001c6232a42c2ae00631b1f4051cef965",
+    "textbook": "方勇《数字信号处理——原理与实践》第3版，印刷88–97页；PPT旧版页码不直接沿用"
+  },
+  "firstPass": [
+    "FFT仍计算DFT；本节基2流程N=2ᴹ，完整分解到两点。",
+    "DIT先乘后加减；DIF先和差再乘。",
+    "位反转是二进制位倒序，不是把数组整体倒放。",
+    "基2共log₂N级，每级N/2蝶形；乘法和加法计数口径分开。",
+    "IDFT可用“共轭→FFT→共轭→除N”。"
+  ],
+  "cards": [
+    {
+      "id": "fft-cost",
+      "title": "FFT 的目标和运算量",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        14,
+        17,
+        18
+      ],
+      "bodyHtml": "<p>FFT 计算的还是同一组 DFT 值，只是重复利用中间结果。本节的<strong>基2算法要求 N=2ᴹ</strong>，M 是级数；别把这条条件扩大成“所有 FFT 都只接受2的幂”。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"X(k)等于从n0到N减1求和x(n)乘W_N的nk次方\"><mrow><mi>X</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>x</mi><mo>(</mo><mi>n</mi><mo>)</mo><msup><msub><mi>W</mi><mi>N</mi></msub><mrow><mi>n</mi><mi>k</mi></mrow></msup></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"W_N等于exp负j2π除N\"><mrow><msub><mi>W</mi><mi>N</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>N</mi></mfrac></mrow></msup></mrow></math></div><p>朴素直接法：N² 次复乘、N(N−1) 次复加。完整基2 FFT：每级 N/2 个蝶形，共 log₂N 级，所以复乘 (N/2)log₂N、复加 Nlog₂N。乘以1等特殊项仍按一次复乘计，这是课堂比较口径。</p><p><strong>N=1024：</strong>复乘 1,048,576 → 5,120；复加 1,047,552 → 10,240。次数不等于实测运行秒数。</p><p><small>核对：PPT 2.5 P1–3、5–7、14、17–18；教材印刷88–91页 / PDF105–108。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "check": {
+        "question": "256点基2FFT有几级、每级几个蝶形？",
+        "answerHtml": "<p>8级，每级128个蝶形；通用复乘计数128×8=1024次。</p>"
+      }
+    },
+    {
+      "id": "dit-butterfly",
+      "title": "DIT：奇偶时间位置，变成一加一减",
+      "level": "essential",
+      "sourcePages": [
+        10,
+        11,
+        12
+      ],
+      "bodyHtml": "<p>把原时间下标拆成 n=2r 与 n=2r+1。偶组 x₁(r)=x(2r)，奇组 x₂(r)=x(2r+1)；分别算 N/2 点 DFT，得到 X₁(k)、X₂(k)。两组都保留，没有丢掉一半数据。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"DIT上输出X(k)=X1(k)+W_N^k X2(k)\"><mrow><mi>X</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>=</mo><mi>X₁</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>+</mo><msup><msub><mi>W</mi><mi>N</mi></msub><mi>k</mi></msup><mi>X₂</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"DIT下输出X(k+N/2)=X1(k)-W_N^k X2(k)\"><mrow><mi>X</mi><mo>(</mo><mrow><mi>k</mi><mo>+</mo><mfrac><mi>N</mi><mn>2</mn></mfrac></mrow><mo>)</mo><mo>=</mo><mi>X₁</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>−</mo><msup><msub><mi>W</mi><mi>N</mi></msub><mi>k</mi></msup><mi>X₂</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow></math></div><p>范围 0≤k&lt;N/2。先算一次旋转后的量 t=W_NᵏX₂(k)，两个输出共用 t；W_N 已含负指数。</p><p><small>核对：PPT 2.5 P10–12；教材印刷89–90页 / PDF106–107。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/25-dit-butterfly.svg",
+        "alt": "先算t=W_N^k B，再输出A+t与A-t的DIT蝶形",
+        "caption": "按原P12的数学关系重绘；A、B、t是辅助记号。"
+      },
+      "pitfall": "旋转因子已经含负号；不要把正变换再写成 W_N 的负指数。"
+    },
+    {
+      "id": "dit-flow",
+      "title": "八点流图与位反转",
+      "level": "essential",
+      "sourcePages": [
+        13,
+        15,
+        16,
+        19
+      ],
+      "bodyHtml": "<p>反复把短序列继续按奇偶位置拆分，直到只剩两点和差。标准原位 DIT 流图采用<strong>位反转输入、自然序输出</strong>；这是一种实现排列，不要求所有软件FFT接口都让你手动重排。</p><p>八点输入顺序是 x(0), x(4), x(2), x(6), x(1), x(5), x(3), x(7)。第 L 级蝶距为 2ᴸ⁻¹：三级依次1、2、4。W_N 的指数为 J·2ᴹ⁻ᴸ，块内 J 从0到 2ᴸ⁻¹−1。</p><p><small>核对：PPT 2.5 P13、15–16、19；教材印刷90–92页 / PDF107–109。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/25-bit-reversal.svg",
+        "alt": "八点DIT三层蝶形，左侧位反转输入，右侧自然序输出",
+        "caption": "重绘原P16的标准八点结构；每对节点按图顶端公式计算。"
+      },
+      "check": {
+        "question": "下标3在八点位反转中对应哪里？",
+        "answerHtml": "<p>3=011₂，倒转二进制位为110₂=6。普通倒放得到4，是另一回事。</p>"
+      }
+    },
+    {
+      "id": "dif-butterfly",
+      "title": "DIF：前后半段先做和差",
+      "level": "essential",
+      "sourcePages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "bodyHtml": "<p>DIF 先把时间数组分成前后两半。对 0≤n&lt;N/2，做 x₁(n)=x(n)+x(n+N/2)，以及 x₂(n)=[x(n)−x(n+N/2)]W_Nⁿ。再对这两组做 N/2 点 DFT。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"X(2r)=DFT[x1](r)\"><mrow><mi>X</mi><mo>(</mo><mrow><mn>2</mn><mi>r</mi></mrow><mo>)</mo><mo>=</mo><mi>DFT</mi><mo>(</mo><mi>x₁</mi><mo>)</mo><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"X(2r+1)=DFT[x2](r)\"><mrow><mi>X</mi><mo>(</mo><mrow><mn>2</mn><mi>r</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo><mo>=</mo><mi>DFT</mi><mo>(</mo><mi>x₂</mi><mo>)</mo><mo>(</mo><mi>r</mi><mo>)</mo></mrow></math></div><p>第一组给<strong>偶频率</strong>，第二组给<strong>奇频率</strong>。标准原位 DIF 自然序输入、位反转输出，最后按频率编号整理。与 DIT 的总蝶形数相同；DIF 蝶距逐级减半。</p><p><small>核对：PPT 2.5 P20–26；教材印刷93–95页 / PDF110–112。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/25-dif-butterfly.svg",
+        "alt": "DIF蝶形先算A+B及A-B，再把差乘W_N^n",
+        "caption": "按原P23重绘；与DIT相比，乘法在差支路的后面。"
+      }
+    },
+    {
+      "id": "inverse-fft",
+      "title": "用正向 FFT 实现 IDFT",
+      "level": "essential",
+      "sourcePages": [
+        28
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x(n)=共轭FFT共轭X的结果再除N\"><mrow><mi>x</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><msup><mrow><mo>[</mo><mi>FFT</mi><mo>(</mo><msup><mi>X</mi><mo>*</mo></msup><mo>)</mo><mo>]</mo></mrow><mo>*</mo></msup><mo>(</mo><mi>n</mi><mo>)</mo></mrow></math></div><p>星号表示复共轭，不表示卷积。按“输入共轭 → 正向FFT → 输出共轭 → 除以N”执行。直接 IFFT 函数通常已处理方向和尺度，具体约定应看接口，不能无条件再除一次N。</p><p><small>核对：PPT 2.5 P28；教材印刷96–97页 / PDF113–114。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/25-inverse-flow.svg",
+        "alt": "两次共轭和最后除以N的逆变换流程",
+        "caption": "按原P28重绘；四个步骤缺一不可。"
+      }
+    },
+    {
+      "id": "fft-derivations",
+      "title": "第二遍：拆分公式为什么成立",
+      "level": "deep",
+      "sourcePages": [
+        11,
+        12,
+        14,
+        15,
+        17,
+        20,
+        21,
+        22,
+        26
+      ],
+      "bodyHtml": "<p><strong>DIT 的两次复用：</strong>W_N²ʳᵏ=W_(N/2)ʳᵏ，把长DFT变成两条短DFT；Xᵢ(k+N/2)=Xᵢ(k)且 W_N^(k+N/2)=−W_Nᵏ，同一对短频谱给出一加一减。只拆一次复乘约降至N²/2+N/2；必须拆完log₂N级才得到NlogN量级。</p><p><strong>DIF 的筛选：</strong>把后半段换元为 n+N/2，提取 W_N^(kN/2)=(−1)ᵏ。k为偶数两半相加，k为奇数两半相减；令k=2r或2r+1后，再辨认短DFT。</p><p>标准流程的级号 L=1,…,M：DIT 蝶距2ᴸ⁻¹、旋转指数J·2ᴹ⁻ᴸ；DIF 蝶距2ᴹ⁻ᴸ、旋转指数J·2ᴸ⁻¹。J分别在当前半块范围内取值，不能把两套范围混用。</p><p>想追每次换元：<a href=\"dsp-textbook/dsp-fft-dit.html\">DIT完整推导</a>；<a href=\"dsp-textbook/dsp-fft-dif-inverse.html\">DIF与逆变换完整推导</a>。第一遍无需再通读两篇。</p><p><small>核对：PPT 2.5所列页；教材印刷89–97页 / PDF106–114。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/25-dif-full-flow.svg",
+        "alt": "自然序输入到位反转输出的完整八点DIF流图",
+        "caption": "按原P25重绘。为减少拥挤，将“先差后乘”的旋转指数标在每个下输出节点旁。"
+      }
+    },
+    {
+      "id": "count-corrections",
+      "title": "第二遍：原课件和教材的计数订正",
+      "level": "deep",
+      "sourcePages": [
+        4,
+        6,
+        17,
+        18,
+        27
+      ],
+      "bodyHtml": "<p><strong>P6的24道记录：</strong>每道2500点，若逐道独立做DFT，复乘总数是24×2500²=150,000,000。原页把24道拼成60000点再平方，算的是另一个60000点变换；不能把运算次数叫运行时间。</p><p><strong>P17及教材印刷91页式(2.5.9)：</strong>把复乘复加等权相加，N=1024时比值为(1,048,576+1,047,552)/(5,120+10,240)=136.47，不是约200。只比较复乘时才是204.8倍。这里教材与PPT同处有口径错误，不能互相作为免责依据。</p><p>P4介绍1965年Cooley–Tukey工作的背景，P27强调FFT对数字处理发展的意义，均为扩展阅读；历史叙述不替代蝶形推导，也不列入第一遍背诵。</p><p><small>核对：PPT 2.5 P4、6、17–18、27；教材印刷88–91、96页 / PDF105–108、113。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    },
+    {
+      "id": "basis-and-transform",
+      "title": "第二遍：正交基、四类变换和归一化",
+      "level": "deep",
+      "sourcePages": [
+        29,
+        30,
+        31
+      ],
+      "bodyHtml": "<p>有限N点DFT使用N个复指数基。根单位正交和在编号同余时为N，否则为0，所以正变换不带1/N，逆变换带1/N。本约定的能量关系为：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Parseval：时间能量等于频率能量除以N\"><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><msup><mrow><mo>|</mo><mi>x</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>|</mo></mrow><mn>2</mn></msup><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><msup><mrow><mo>|</mo><mi>X</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>|</mo></mrow><mn>2</mn></msup></mrow></math></div><p>P29把连续区间上的均方误差分母印成 t₁−t₂；若积分区间t₁&lt;t₂，分母应为 t₂−t₁，且复函数误差要取模平方。写“积分等于系数平方和”还需要说明正交归一化；一般基需带范数权重。</p><p>P30的三角基与复指数基通过欧拉关系相连；n=0的sin项恒为0，不能作为独立基。P31把时间采样、频率采样与周期化放在一图中，但这些步骤的条件分别是带宽、支持区间与收敛性，不能只凭箭头互换。</p><p>展开原式与四点能量核验：<a href=\"dsp-textbook/dsp-fft-dif-inverse.html\">正交关系与归一化回读</a>。</p><p><small>核对：PPT 2.5 P29–31；有限DFT关系按本章定义核算，连续正交条件为明确补充。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/25-transform-map.svg",
+        "alt": "CTFT、DTFT、DFS、DFT的输入输出对象与FFT定位",
+        "caption": "按原P29–31重新组织为对象图；不表示四者无条件相等。"
+      }
+    },
+    {
+      "id": "hardware-extension",
+      "title": "扩展：OFDM 与字长优化，不作为先修",
+      "level": "deep",
+      "sourcePages": [
+        8,
+        9
+      ],
+      "bodyHtml": "<p>P8的OFDM框图中，发送端已有子载波系数，需要IFFT合成时间波形，接收端FFT取回系数。实际信道还需要同步、边界处理与均衡，框图没有给出的条件不能自动假定成立。</p><p>P9的定点字长是另一层工程问题：位数影响资源、量化、动态范围与削波。原表LUT 46,893→32,949，按表直接算降低<strong>29.74%</strong>，不能由这两个数推出严格“大于30%”。中间级近似正态和截取噪声不相关是模型假设，不是任意FFT输入的恒等性质。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"原页第一字长式L(v)=ceil(0.5v-PAPR/6+3)\"><mrow><msub><mi>L</mi><mtext>output_integer</mtext></msub><mo>(</mo><mi>v</mi><mo>)</mo><mo>=</mo><mo>⌈</mo><mn>0.5</mn><mi>v</mi><mo>−</mo><mfrac><mi>PAPR</mi><mn>6</mn></mfrac><mo>+</mo><mn>3</mn><mo>⌉</mo></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"原页第二字长式L(v)=ceil(0.5log2(2^(v-1)+1)-PAPR/6+2.5)\"><mrow><msub><mi>L</mi><mtext>output_integer</mtext></msub><mo>(</mo><mi>v</mi><mo>)</mo><mo>=</mo><mo>⌈</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>log</mi><mn>2</mn></msub><mo>(</mo><msup><mn>2</mn><mrow><mi>v</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>+</mo><mn>1</mn><mo>)</mo><mo>−</mo><mfrac><mi>PAPR</mi><mn>6</mn></mfrac><mo>+</mo><mn>2.5</mn><mo>⌉</mo></mrow></math></div><p>保留这两条原式供识读，不把它们当通用配置公式：课件未给全v的级号起点、PAPR代入单位、输入缩放、符号位计数和容许削波概率。⌈·⌉是向上取整，不是四舍五入。<a href=\"dsp-textbook/dsp-applications.html\">原式逐项说明与应用边界</a>。</p><p><small>核对：PPT 2.5 P8–9，原生公式和原表；本页只做识读与证据边界，不伪造研究推导。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/26-ofdm.svg",
+        "alt": "OFDM发送IFFT合成、接收FFT分析的核心链路",
+        "caption": "按P8核心数学角色重绘；完整射频系统未在此展开。"
+      }
+    }
+  ],
+  "example": {
+    "title": "代表题：四点 DIF，从输入一直算到检查",
+    "sourcePages": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "problemHtml": "<p>用DIF计算 x={1,−2,0,2} 的四点DFT，首项对应n=0。<strong>题干来自第3版教材例2.5.4，印刷96页 / PDF113；PPT P20–26给的是方法，不含此题干。</strong></p>",
+    "stepsHtml": "<ol><li>先对前后半做和差：x₁={1+0,−2+2}={1,0}。下支路先差后乘，W₄=−j：x₂={(1−0)·1,(−2−2)(−j)}={1,4j}。</li><li>两点DFT就是和与差：DFT(x₁)={1,1}，填入X(0)、X(2)；DFT(x₂)={1+4j,1−4j}，填入X(1)、X(3)。</li><li>原位DIF输出槽序是0、2、1、3；最后按频率编号重排。</li></ol>",
+    "answerHtml": "<p><strong>X={1, 1+4j, 1, 1−4j}</strong>。</p>",
+    "checkHtml": "<p>直流检查：四个输入相加=1=X(0)。实序列共轭检查：X(3)=X*(1)。能量检查：1²+(−2)²+0²+2²=9，而(1+17+1+17)/4=9。</p>"
+  },
+  "pitfalls": [
+    "“约200倍”只近似对应复乘比；按课件写出的复乘加复加总量，1024点实际比值约136.47。",
+    "DIT、DIF流图的上下槽位不总是频率自然顺序，要先看编号。",
+    "补零后做更长FFT会改变频率网格；它不是原来短DFT的原样结果。"
+  ],
+  "deepLinks": [
+    {
+      "label": "DIT完整逐步推导",
+      "href": "dsp-textbook/dsp-fft-dit.html"
+    },
+    {
+      "label": "DIF、逆变换与原式回读",
+      "href": "dsp-textbook/dsp-fft-dif-inverse.html"
+    },
+    {
+      "label": "OFDM与字长公式边界",
+      "href": "dsp-textbook/dsp-applications.html"
+    }
+  ],
+  "sourceNote": "依据真实PPT逐页核对后按知识合并重绘，不是原版式逐像素复刻。原PPT旧教材页码与现有第3版不同，已按公式与题干匹配。研究成果、照片对比与历史页归入扩展，不据缺失实验参数伪造复现。",
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "fft-cost"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "fft-cost"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "fft-cost"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "count-corrections"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "fft-cost"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "fft-cost",
+        "count-corrections"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "fft-cost"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "hardware-extension"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "hardware-extension"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "dit-butterfly"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "dit-butterfly",
+        "fft-derivations"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "dit-butterfly",
+        "fft-derivations"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "dit-flow"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "fft-cost",
+        "fft-derivations"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "dit-flow",
+        "fft-derivations"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "dit-flow"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "fft-cost",
+        "fft-derivations",
+        "count-corrections"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "fft-cost",
+        "count-corrections"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "dit-flow"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "dif-butterfly",
+        "fft-derivations"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "dif-butterfly",
+        "fft-derivations"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "dif-butterfly",
+        "fft-derivations"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "dif-butterfly"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "dif-butterfly"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 25,
+      "cardIds": [
+        "dif-butterfly"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 26,
+      "cardIds": [
+        "dif-butterfly",
+        "fft-derivations"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 27,
+      "cardIds": [
+        "count-corrections"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 28,
+      "cardIds": [
+        "inverse-fft"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 29,
+      "cardIds": [
+        "basis-and-transform"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 30,
+      "cardIds": [
+        "basis-and-transform"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 31,
+      "cardIds": [
+        "basis-and-transform"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    }
+  ]
+}

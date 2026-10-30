@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="数字信号处理第二章：清晰重绘、先必学速通，再展开推导与例题深挖；每块内容对应原PPT页码。">
+<title>DSP 第二章 · 清晰重绘与两遍辅导</title>
+<link rel="stylesheet" href="dsp-redraw.css?v=1">
+<script defer src="dsp-redraw.js?v=1"></script>
+</head>
+<body class="dsp-redraw-page">
+<a class="dr-skip" href="#lesson">跳到本节内容</a>
+<header class="dr-header">
+  <a class="dr-brand" href="dsp.html"><span class="dr-brand-symbol" aria-hidden="true">∿</span><span>DSP <small>第二章重绘辅导</small></span></a>
+  <nav aria-label="课程导航"><a href="dsp.html">DSP 目录</a><a href="courses.html">全部课程</a></nav>
+</header>
+<main class="dr-main">
+  <section class="dr-intro" aria-labelledby="course-title">
+    <p class="dr-eyebrow">信号的傅里叶变换与分析 · CHAPTER 02</p>
+    <h1 id="course-title">先读懂，再算透。</h1>
+    <p class="dr-lede">第一遍抓住主线、看清重绘图、做一道代表题。第二遍再展开推导、条件与易错点。不再把讲解挤在原图旁边。</p>
+    <div class="dr-route-note"><strong>两遍学习，不是两倍负担</strong><span id="course-time">各节时间为建议安排，不是实测完成时间。</span></div>
+  </section>
+  <nav class="dr-section-nav" aria-label="第二章小节" id="section-nav">
+    <a href="#dsp-21">2.1 · DTFT</a><a href="#dsp-22">2.2 · DFS</a><a href="#dsp-23">2.3 · DFT</a><a href="#dsp-24">2.4 · 频域采样</a><a href="#dsp-25">2.5 · FFT</a><a href="#dsp-26">2.6 · 应用</a>
+  </nav>
+  <div class="dr-workbar" aria-label="阅读控制">
+    <div class="dr-pass-switch" role="group" aria-label="选择学习遍数"><button type="button" data-pass="first" aria-pressed="true" aria-label="第一遍 · 必学速通"><span class="dr-pass-full">第一遍 · 必学速通</span><span class="dr-pass-short" aria-hidden="true">一遍 · 必学</span></button><button type="button" data-pass="deep" aria-pressed="false" aria-label="第二遍 · 展开深挖"><span class="dr-pass-full">第二遍 · 展开深挖</span><span class="dr-pass-short" aria-hidden="true">二遍 · 深挖</span></button></div>
+    <button type="button" id="open-contents" aria-haspopup="dialog">本节目录 <span aria-hidden="true">☷</span></button>
+  </div>
+  <p class="dr-mode-hint" id="mode-hint">先读必学和代表例题；“扩展 · 第二遍”保持折叠，需要时再打开。</p>
+  <div id="lesson" class="dr-lesson" aria-busy="true" tabindex="-1"><div class="dr-loading" role="status">正在载入本节辅导…</div></div>
+  <nav class="dr-bottom-nav" aria-label="切换小节"><a id="previous-section" href="#dsp-21">上一节</a><a href="#course-title">回到顶部 ↑</a><a id="next-section" href="#dsp-22">下一节</a></nav>
+  <aside class="dr-record-note"><strong>原有记录完整保留。</strong>新辅导不改写原PPT的完成标记、计时或本机存储。需要原逐页进度与计时，请回到 <a href="dsp.html">DSP 目录与原阅读器</a>；阅读重绘内容不会自动算作原页读完。</aside>
+</main>
+<footer class="dr-footer">公式用原生 MathML，图用矢量 SVG。长公式可横滑，图可全屏放大。原页只是对照，不再占走主阅读区。</footer>
+<dialog id="contents-dialog" class="dr-contents-dialog" aria-labelledby="contents-title"><header><h2 id="contents-title">本节目录</h2><button type="button" data-close-contents>关闭</button></header><nav class="dr-dialog-sections" aria-label="快速切换小节"><a href="#dsp-21">2.1 · DTFT</a><a href="#dsp-22">2.2 · DFS</a><a href="#dsp-23">2.3 · DFT</a><a href="#dsp-24">2.4 · 频域采样</a><a href="#dsp-25">2.5 · FFT</a><a href="#dsp-26">2.6 · 应用</a></nav><nav id="contents-list" aria-label="本节知识板"></nav></dialog>
+<dialog id="figure-dialog" class="dr-figure-dialog" aria-labelledby="figure-dialog-title">
+  <header class="dr-viewer-head"><h2 id="figure-dialog-title">清晰大图</h2><button type="button" id="close-figure" aria-label="关闭大图">关闭 ✕</button></header>
+  <div class="dr-viewer-controls" role="group" aria-label="大图缩放"><button type="button" id="zoom-out" aria-label="缩小大图">−</button><output id="zoom-value" aria-live="polite">100%</output><button type="button" id="zoom-in" aria-label="放大大图">＋</button><button type="button" id="zoom-fit">适合窗口</button><button type="button" id="zoom-readable">清晰尺寸</button><a id="open-figure-file" target="_blank" rel="noopener">单独打开 ↗</a></div>
+  <p class="dr-viewer-hint">可横向、纵向滑动；用 ＋ / − 缩放，Esc 关闭。手机横屏可看得更完整。</p>
+  <div class="dr-viewer-canvas" id="figure-canvas" tabindex="0" aria-label="大图阅读区，可横向与纵向滚动"><img id="figure-image" alt=""></div>
+  <p id="figure-caption" class="dr-viewer-caption"></p>
+</dialog>
+<noscript><p class="dr-noscript">本页需要 JavaScript 载入重绘辅导。原逐页内容仍可从 <a href="dsp.html">DSP目录</a> 进入。</p></noscript>
+</body>
+</html>

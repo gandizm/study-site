@@ -35,6 +35,11 @@ jobs:
           test -z "$(find site -type l -print -quit)"
       - name: Validate graph page links and assets
         run: python3 scripts/validate-knowledge-maps.py
+      - name: Validate DSP redraw coverage and mathematical examples
+        run: |
+          python3 scripts/validate-dsp-redraw.py
+          python3 tests/dsp-redraw-math.test.py
+          node tests/dsp-progress-preservation.test.cjs
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site

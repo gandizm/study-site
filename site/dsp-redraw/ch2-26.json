@@ -1,0 +1,442 @@
+{
+  "id": "dsp-26",
+  "number": "2.6",
+  "title": "DFT 应用：卷积与频谱分析",
+  "brief": "一条补零规则解决快速卷积；M个真实样本与N点FFT分开，便能辨清混叠、泄漏和栅栏。",
+  "firstPassMinutes": 25,
+  "deepPassMinutes": 30,
+  "source": {
+    "title": "2.6DFT应用.pptx",
+    "pageCount": 31,
+    "sha256": "1aea29d97f81e7ea9d685f78649659d3b1cc598ce03d09d79d9273f88a3f1cd5",
+    "textbook": "方勇《数字信号处理——原理与实践》第3版，印刷99–109、113–115页；按相同题干核对，不机械沿用PPT旧页码"
+  },
+  "firstPass": [
+    "快速线性卷积：两输入补到同一个L，且L≥Nₓ+Nₕ−1。",
+    "分块输出先平移回全局位置，重叠的Nₕ−1项要相加。",
+    "M个真实样本决定观测时长；N点FFT决定频率网格。",
+    "频率轴fₖ=kfₛ/N，连续谱近似值需乘采样间隔T。",
+    "补零只能加密格点，不能消除混叠或替代更长的真实观测。"
+  ],
+  "cards": [
+    {
+      "id": "linear-convolution",
+      "title": "用 FFT 算线性卷积：补零条件先写出",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        9
+      ],
+      "bodyHtml": "<p>本节两条主线：快速算卷积，以及分析实际信号频谱。FFT只负责快速执行DFT，边界条件仍由DFT理论决定。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"L不小于输入长度Nx加滤波器长度Nh减1\"><mrow><mi>L</mi><mo>≥</mo><msub><mi>N</mi><mi>x</mi></msub><mo>+</mo><msub><mi>N</mi><mi>h</mi></msub><mo>−</mo><mn>1</mn></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"两个输入补零到同一L后，IFFT它们FFT的逐点乘积\"><mrow><msub><mi>y</mi><mi>L</mi></msub><mo>=</mo><mi>IFFT</mi><mo>(</mo><mi>FFT</mi><mo>(</mo><mi>x_L</mi><mo>)</mo><mo>·</mo><mi>FFT</mi><mo>(</mo><mi>h_L</mi><mo>)</mo><mo>)</mo></mrow></math></div><p>x、h的非零支持分别从n=0开始、长Nₓ和Nₕ，x_L、h_L都补零到同一L。取输出前Nₓ+Nₕ−1项，就是线性卷积；若L较大，后面只是零。长度不够时，结果尾巴会按模L折回开头。</p><p><small>核对：PPT 2.6 P1–5、9；教材印刷99–100页 / PDF116–117。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/26-convolution-flow.svg",
+        "alt": "两条输入先补零、FFT相乘、IFFT得到线性卷积",
+        "caption": "按原P9重绘。L是计算点数，Nₓ、Nₕ是真实输入长度。"
+      },
+      "check": {
+        "question": "长度4与8的序列至少要几点评估循环卷积，才能保证等于线性卷积？",
+        "answerHtml": "<p>至少11点；若使用基2FFT可补到16点。8点不够，13点也可以但不属于本节基2长度。</p>"
+      }
+    },
+    {
+      "id": "original-folding",
+      "title": "原例图重绘：8点为什么会绕回去",
+      "level": "essential",
+      "sourcePages": [
+        6,
+        7,
+        8
+      ],
+      "bodyHtml": "<p>原例2.6.1：x₁={1,1,1,1}，x₂={0,3,6,5,4,3,2,1}。下方先看完整11点线性卷积，再按L=8把下标8、9、10分别加到0、1、2。完整算法在本节代表题中，第一遍只需跟算这一次。</p><p>L=11恰好容纳全部结果；L=13在同一结果后附两个零。比较时必须固定相同的两个输入，不要把补零当作新增真实信号。</p><p><small>核对：PPT 2.6 P6–8；教材例2.6.1印刷99–100页 / PDF116–117。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/26-folding-example.svg",
+        "alt": "原11点线性卷积与8点折叠结果的茎状图",
+        "caption": "依照原P7–8的真实数组重算重绘；所有数值均可由卷积和复核。"
+      }
+    },
+    {
+      "id": "overlap-add",
+      "title": "长信号分块：重叠区要相加",
+      "level": "essential",
+      "sourcePages": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "bodyHtml": "<p>把长输入切成每块M个真实样本。若滤波器h长Nₕ，每块卷积有M+Nₕ−1项，所以块FFT长度L≥M+Nₕ−1。把第q块结果放回全局起点qM，再把重叠的Nₕ−1项相加。</p><p>原例2.6.2：h={1,2}，输入从n=0起全1，取M=3。每块{1,1,1}卷积成{1,3,3,2}；下一块从全局n=3开始，因此该处2+1=3，最终输出{1,3,3,3,…}。有限输入的最后块需要补零，输出尾巴也要保留。</p><p><small>核对：PPT 2.6 P10–14；教材印刷101–102页 / PDF118–119。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/26-overlap-add.svg",
+        "alt": "每块四项输出按三项步长移动，边界2加1为3",
+        "caption": "按原P12与例2.6.2重绘；本图输入为无限全1序列，不暗示有限记录尾部仍为3。"
+      },
+      "pitfall": "块之间移动的是M，而输出长度是M+Nₕ−1；直接拼接会重复时间位置并产生错误的边界。"
+    },
+    {
+      "id": "spectrum-units",
+      "title": "实际频谱：真实记录长和 FFT 点数分开",
+      "level": "essential",
+      "sourcePages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        22
+      ],
+      "bodyHtml": "<p>记采样间隔T、采样率fₛ=1/T，真实记录M点，补零后FFT点数N≥M。频率编号k对应fₖ=kfₛ/N，数字角频率ωₖ=2πk/N。有效记录窗长Tobs=M/fₛ，频率格距Δf=fₛ/N。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"连续谱在fk的值近似为采样间隔T乘N点DFT值\"><mrow><msub><mi>X</mi><mi>a</mi></msub><mo>(</mo><msub><mi>f</mi><mi>k</mi></msub><mo>)</mo><mo>≈</mo><mi>T</mi><mi>X_N</mi><mo>(</mo><mi>k</mi><mo>)</mo></mrow></math></div><p>这个近似来自连续傅里叶积分的离散求和，普通DFT定义本身不多带T。实际还受采样、有限记录和加窗误差影响。一般低通信号应先抗混叠滤波，并取fₛ&gt;2fmax及可实现的过渡带余量；课件等号是理想边界，不能保证未知相位的奈奎斯特点正弦被保留。</p><p>原P17的“有限持续时间、最高频率”须按有效时长、有效带宽的工程近似理解：非零连续信号不能同时严格限时又严格带限。</p><p><small>核对：PPT 2.6 P15–19、22；教材印刷103–107页 / PDF120–124。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/26-spectrum-chain.svg",
+        "alt": "采样率、观测时长、窗口和FFT点数的不同职责",
+        "caption": "按原P16、22框图重绘并拆开M和N，避免把补零当成延长观测。"
+      }
+    },
+    {
+      "id": "three-errors",
+      "title": "混叠、泄漏、栅栏：三种问题，三种处理",
+      "level": "essential",
+      "sourcePages": [
+        19,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "bodyHtml": "<ul><li><strong>混叠：</strong>采样前带宽未限制，或采样率不足。不同连续频率落成同一组样本；后补零救不回来。</li><li><strong>泄漏与旁瓣：</strong>有限截断等于乘窗，原谱线被窗频谱展开。加长真实记录可收窄主瓣，换低旁瓣窗可减弱强分量对弱分量的遮盖，但常以主瓣变宽为代价。</li><li><strong>栅栏效应：</strong>只看到DFT格点，峰可能在两点间。补零增加同一条DTFT上的取点数，改善峰形观察，不增加分开近邻分量的独立信息。</li></ul><p><strong>例：</strong>fₛ=1000Hz，M=100个真样本，窗长0.1s。补零到N=1000，格距从10Hz变1Hz，但矩形窗主瓣中心到第一零点仍约10Hz。</p><p>订正原P19：欠采样造成的频域混叠与截断加窗造成的泄漏是不同机制，不能都归因于“持续过长而截断”。</p><p><small>核对：PPT 2.6 P19、22–26；教材印刷104–109页 / PDF121–126。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/26-zero-padding.svg",
+        "alt": "同一矩形截断复正弦，16点和补零64点采样落在相同DTFT曲线上",
+        "caption": "新编数值图用于解释原P23–26；不是教材或课件的实验原图。"
+      },
+      "check": {
+        "question": "1000Hz采样下的700Hz余弦会落成哪个0–500Hz内的余弦？补零能纠正吗？",
+        "answerHtml": "<p>300Hz。两者样本相同，补零不能区分原来的来源。</p>"
+      }
+    },
+    {
+      "id": "spectrum-original-example",
+      "title": "第二遍原例2.6.5：怎样同时选时长、采样率和点数",
+      "level": "deep",
+      "sourcePages": [
+        20,
+        21
+      ],
+      "bodyHtml": "<p><strong>原题：</strong>频率格距指标F≤5Hz，最高频率fmax≤1.25kHz，FFT点数为2的整数次幂。原课件和第3版教材都给出这一题，教材印刷105页 / PDF122。</p><ol><li>按教材的理想边界取fₛ=2500Hz，T=0.4ms。</li><li>需要N≥fₛ/F=500，取不小于500的2次幂：N=512。</li><li>不补零、512点都为真实记录时，Tobs=512×0.4ms=204.8ms；实际格距2500/512=4.8828125Hz，满足≤5Hz。</li></ol><p><strong>边界说明：</strong>这复现的是原题理想取值，不推荐把抗混叠滤波过渡带压成零。一个留余量的新编可行方案是fₛ=4000Hz、N=M=1024，T=0.25ms、窗长256ms、格距3.90625Hz；仍须合适的前置滤波器。</p><p><a href=\"dsp-textbook/dsp-spectrum-analysis.html\">原题逐步解与三种谱误差的深入说明</a></p><p><small>核对：PPT 2.6 P20–21；教材例2.6.5印刷105页 / PDF122。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    },
+    {
+      "id": "folding-proof",
+      "title": "第二遍：循环卷积为什么是线性结果的折叠",
+      "level": "deep",
+      "sourcePages": [
+        4,
+        5,
+        10,
+        11,
+        12,
+        13
+      ],
+      "bodyHtml": "<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"L点循环卷积主值等于线性卷积在相隔L的位置求和\"><mrow><msub><mi>y</mi><mi>c</mi></msub><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>q</mi><mo>=</mo><mo>−∞</mo></mrow><mo>∞</mo></munderover><msub><mi>y</mi><mi>l</mi></msub><mo>(</mo><mrow><mi>n</mi><mo>+</mo><mi>q</mi><mi>L</mi></mrow><mo>)</mo></mrow></math></div><p>式子只读0≤n&lt;L的主值。先把输入按L周期延拓，再带入卷积定义，把有限卷积求和与周期副本求和交换，就得到这条折叠式。线性结果的最大下标为Nₓ+Nₕ−2，所以L≥Nₓ+Nₕ−1时不同副本在主值区间不相撞。</p><p>重叠相加则来自线性性：把x分成全局位置不变的块x_q，h*x=Σ_q(h*x_q)。局部块的输出先平移回qM位置，才允许求和；这一步解释了为什么不能只拼接数组。</p><p><a href=\"dsp-textbook/dsp-linear-convolution.html\">完整卷积和、DFT乘法推导</a>；<a href=\"dsp-textbook/dsp-overlap-add.html\">局部/全局下标与原例2.6.2</a></p><p><small>核对：PPT 2.6 P4–5、10–13；教材印刷99–102页 / PDF116–119。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    },
+    {
+      "id": "window-proof",
+      "title": "第二遍：窗函数怎样把一条谱线展开",
+      "level": "deep",
+      "sourcePages": [
+        24,
+        25,
+        26
+      ],
+      "bodyHtml": "<p>令w_M(n)在0≤n&lt;M为1，其余为0。它的DTFT是有限几何和：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"矩形窗DTFT等于exp(-jω(M-1)/2)乘sin(Mω/2)除sin(ω/2)\"><mrow><msub><mi>W</mi><mi>M</mi></msub><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><mfrac><mrow><mi>M</mi><mo>−</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mrow></msup><mfrac><mrow><mi>sin</mi><mo>(</mo><mfrac><mrow><mi>M</mi><mi>ω</mi></mrow><mn>2</mn></mfrac><mo>)</mo></mrow><mrow><mi>sin</mi><mo>(</mo><mfrac><mi>ω</mi><mn>2</mn></mfrac><mo>)</mo></mrow></mfrac></mrow></math></div><p>分母为0时用原有限和或极限，ω=2πr处等于M。截断余弦cos(ω₀n)后，频谱是两份平移窗谱的一半：Y(eʲω)=½W_M(eʲ⁽ω−ω₀⁾)+½W_M(eʲ⁽ω+ω₀⁾)。原来正负ω₀处的冲激线谱因而有了主瓣和旁瓣。</p><p>矩形窗中心到第一零点为2π/M rad/sample，即fₛ/M Hz。相干采样时其他DFT格点可恰好落在窗谱零点上；这不等于两格之间的连续DTFT没有旁瓣。窗函数比较要固定真实记录长度，幅度估计还需考虑窗增益。</p><p><a href=\"dsp-textbook/dsp-spectrum-analysis.html\">完整窗谱推导、相干记录与补零例</a></p><p><small>核对：PPT 2.6 P24–26；教材印刷108–109页 / PDF125–126。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>"
+    },
+    {
+      "id": "applications",
+      "title": "扩展：声音、图像与 OFDM 的实际边界",
+      "level": "deep",
+      "sourcePages": [
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "bodyHtml": "<ul><li><strong>声音：</strong>P28展示两段声音的频谱。最高峰不必是基频，单凭频谱不能可靠确定人的性别；截图也没有给全采样、窗长、归一化和分类验证参数。把它学成“读频谱特征”，不要背成确定性判别定理。</li><li><strong>图像：</strong>P29–30展示高斯噪声、椒盐噪声及处理图。FFT再原样IFFT只会回到原图；去噪需要选择频域滤波或其他处理，低通也可能抹掉边缘。课件没给全滤波器和参数，不能据图宣称复现了原算法。</li><li><strong>OFDM：</strong>P31中发送端以子载波系数为输入，用IFFT合成时域；接收端FFT再提取。理想链路下两者互逆。多径时要有足够循环前缀、正确同步和可用信道估计，才能按每个子载波均衡。</li></ul><p>补充四点例：只令A(1)=1，其余为0，IFFT得到s={1,j,−1,−j}/4，再FFT恢复{0,1,0,0}。这仅验证数学合成/分析，不证明真实信道无干扰。</p><p><a href=\"dsp-textbook/dsp-applications.html\">二维DFT、OFDM条件与应用图的证据边界</a></p><p><small>核对：PPT 2.6 P27–31；声音/图像教材印刷113–115页 / PDF130–132；循环前缀与四点例明确为补充。教材页均指方勇第3版印刷页，PDF文件页另列；PPT采用原物理页序。</small></p>",
+      "figure": {
+        "src": "dsp-redraw/assets/26-ofdm.svg",
+        "alt": "OFDM发送IFFT、接收FFT的数学作用",
+        "caption": "按原P31的关键链路重绘；射频、编码调制和边界机制在扩展说明中区别处理。"
+      }
+    }
+  ],
+  "example": {
+    "title": "代表题：原例 2.6.1，算完线性卷积再比较三个 L",
+    "sourcePages": [
+      6,
+      7,
+      8
+    ],
+    "problemHtml": "<p>x₁={1,1,1,1}，x₂={0,3,6,5,4,3,2,1}，均从n=0起。求线性卷积，以及L=8、11、13的循环卷积。来源：PPT 2.6 P6–8；第3版教材例2.6.1，印刷99–100页 / PDF116–117。</p>",
+    "stepsHtml": "<ol><li>线性结果长度4+8−1=11。因x₁的四项全1，每个输出是x₂中相邻最多四项的和，区间外按零。</li><li>逐项得到：y(0)=0；y(1)=0+3=3；y(2)=0+3+6=9；y(3)=0+3+6+5=14；y(4)=3+6+5+4=18；y(5)=6+5+4+3=18；y(6)=5+4+3+2=14；y(7)=4+3+2+1=10；y(8)=3+2+1=6；y(9)=2+1=3；y(10)=1。</li><li>L=8时折叠：位置8并到0，9并到1，10并到2，所以前三项变成0+6、3+3、9+1，其他项不变。</li><li>L=11无重叠；L=13再加两个尾零。用DFT核验时两输入补到相同L，再做FFT相乘及IFFT。</li></ol>",
+    "answerHtml": "<p><strong>线性 / L=11：</strong>{0,3,9,14,18,18,14,10,6,3,1}。</p><p><strong>L=8：</strong>{6,6,10,14,18,18,14,10}。</p><p><strong>L=13：</strong>{0,3,9,14,18,18,14,10,6,3,1,0,0}。</p>",
+    "checkHtml": "<p>总和应为(Σx₁)(Σx₂)=4×24=96，以上四个结果总和都为96。循环折叠改变位置分配，不改变总和。</p>"
+  },
+  "pitfalls": [
+    "FFT逐点相乘直接对应循环卷积；补零条件漏写，尾部就会绕回开头。",
+    "把补零后N/fₛ当成有效记录时长，会错误宣称分辨能力提高。",
+    "课件fₛ=2fmax是理想边界，实际采样必须考虑最高频率端点、相位和抗混叠滤波余量。"
+  ],
+  "deepLinks": [
+    {
+      "label": "线性卷积与原例2.6.1",
+      "href": "dsp-textbook/dsp-linear-convolution.html"
+    },
+    {
+      "label": "重叠相加完整解释",
+      "href": "dsp-textbook/dsp-overlap-add.html"
+    },
+    {
+      "label": "谱分析、原例2.6.5与窗口",
+      "href": "dsp-textbook/dsp-spectrum-analysis.html"
+    },
+    {
+      "label": "声音、图像和OFDM",
+      "href": "dsp-textbook/dsp-applications.html"
+    }
+  ],
+  "sourceNote": "依据真实PPT逐页核对后按知识合并重绘，不是原版式逐像素复刻。原PPT旧教材页码与现有第3版不同，已按公式与题干匹配。研究成果、照片对比与历史页归入扩展，不据缺失实验参数伪造复现。",
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "linear-convolution"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "linear-convolution"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "linear-convolution"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "linear-convolution",
+        "folding-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "linear-convolution",
+        "folding-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "original-folding"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "original-folding"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "original-folding"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "linear-convolution"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "overlap-add",
+        "folding-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "overlap-add",
+        "folding-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "overlap-add",
+        "folding-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "overlap-add",
+        "folding-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "overlap-add"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "spectrum-units"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "spectrum-units"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "spectrum-units"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "spectrum-units"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "spectrum-units",
+        "three-errors"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "spectrum-original-example"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "spectrum-original-example"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "spectrum-units",
+        "three-errors"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "three-errors"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "three-errors",
+        "window-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 25,
+      "cardIds": [
+        "three-errors",
+        "window-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 26,
+      "cardIds": [
+        "three-errors",
+        "window-proof"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 27,
+      "cardIds": [
+        "applications"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 28,
+      "cardIds": [
+        "applications"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 29,
+      "cardIds": [
+        "applications"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 30,
+      "cardIds": [
+        "applications"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    },
+    {
+      "page": 31,
+      "cardIds": [
+        "applications"
+      ],
+      "note": "与相邻页按同一知识过程合并重绘；公式与条件见所列知识板。"
+    }
+  ]
+}

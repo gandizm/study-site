@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "title": "第二章重绘来源与合并规则",
+  "textbook": {
+    "title": "方勇《数字信号处理——原理与实践》第3版",
+    "isbn": "978-7-302-58243-4",
+    "editionNote": "原课件引用第二版页码；第三版对应页按真实内容核对。教材扫描不公开。"
+  },
+  "totalSourcePages": 185,
+  "method": "公式用可缩放MathML、核心图用SVG重新表达；按知识合并铺垫/重复页，不逐张复刻杂乱版式。完整推导和更多原题按需展开或转入已有单栏数学正文；不能把页码映射本身当作重绘完成证据。",
+  "sections": [
+    {
+      "section": "2.1",
+      "sourceFilename": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+      "sha256": "c9dcdf9667b3a6c4ff4363ad0dbef4a25011d2759d7ea6aa43ff9ad7495f394a",
+      "sourcePageCount": 35,
+      "redrawData": "ch2-21.json",
+      "coverage": "pageMap preserves every physical slide; knowledge-first redraw combines repetitions and background; source raster images are comparison only"
+    },
+    {
+      "section": "2.2",
+      "sourceFilename": "2.2周期序列的离散傅里叶变换.pptx",
+      "sha256": "109bb258604a00d13d02d82934c5a34e0cf55945ba52e66902b3a848834042e8",
+      "sourcePageCount": 24,
+      "redrawData": "ch2-22.json",
+      "coverage": "pageMap preserves every physical slide; knowledge-first redraw combines repetitions and background; source raster images are comparison only"
+    },
+    {
+      "section": "2.3",
+      "sourceFilename": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+      "sha256": "80c4e87b080ddae66af7ed9ae83d35b058e60d7c0aef0765aa20cc32eaf881bc",
+      "sourcePageCount": 53,
+      "redrawData": "ch2-23.json",
+      "coverage": "pageMap preserves every physical slide; knowledge-first redraw combines repetitions and background; source raster images are comparison only"
+    },
+    {
+      "section": "2.4",
+      "sourceFilename": "2.4频域采样定理.pptx",
+      "sha256": "53d6a04b132c0ed66d5feef880e99555033ac6eba57c999f32d94ec1c8377c5e",
+      "sourcePageCount": 11,
+      "redrawData": "ch2-24.json",
+      "coverage": "pageMap preserves every physical slide; knowledge-first redraw combines repetitions and background; source raster images are comparison only"
+    },
+    {
+      "section": "2.5",
+      "sourceFilename": "2.5快速傅里叶变换.pptx",
+      "sha256": "3c4033aa0f78ad3905d26a2593aa67f001c6232a42c2ae00631b1f4051cef965",
+      "sourcePageCount": 31,
+      "redrawData": "ch2-25.json",
+      "coverage": "pageMap preserves every physical slide; knowledge-first redraw combines repetitions and background; source raster images are comparison only"
+    },
+    {
+      "section": "2.6",
+      "sourceFilename": "2.6DFT应用.pptx",
+      "sha256": "1aea29d97f81e7ea9d685f78649659d3b1cc598ce03d09d79d9273f88a3f1cd5",
+      "sourcePageCount": 31,
+      "redrawData": "ch2-26.json",
+      "coverage": "pageMap preserves every physical slide; knowledge-first redraw combines repetitions and background; source raster images are comparison only"
+    }
+  ]
+}

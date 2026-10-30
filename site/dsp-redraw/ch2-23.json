@@ -1,0 +1,763 @@
+{
+  "id": "dsp-23",
+  "number": "2.3",
+  "title": "有限长序列的 DFT",
+  "brief": "先会选频点、识别圆周边界，再用性质少算几步。原53页合并重复证明，不丢页。",
+  "firstPassMinutes": 25,
+  "deepPassMinutes": 35,
+  "firstPass": [
+    "读8张必学卡，重点看大图与正逆变换的符号。",
+    "做原课堂卷积例；能判断补零长度与频谱共轭配对即可继续。",
+    "证明、完整对称分解与3组教材原题按需要展开；不要求第一遍读旧长正文。"
+  ],
+  "source": {
+    "title": "2.3有限长序列的离散傅里叶变换DFT.pptx",
+    "pageCount": 53,
+    "sha256": "80c4e87b080ddae66af7ed9ae83d35b058e60d7c0aef0765aa20cc32eaf881bc",
+    "editionNote": "课件旧引页与方勇第3版不同；原题按实际题干核对，书页另列。",
+    "textbook": {
+      "title": "方勇《数字信号处理——原理与实践》第3版（2021）",
+      "printedPages": [
+        63,
+        84
+      ],
+      "pdfPageOffset": 17,
+      "note": "核对材料不公开；课件旧引页另列。"
+    }
+  },
+  "cards": [
+    {
+      "id": "dft-definition",
+      "title": "DFT：N 个时间值，换成 N 个频率值",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bodyHtml": "<p>DFT 处理有限数组，不要求真实信号周期重复。先选点数 N；不足 N 点就在末尾补零。n 是时间位置，k 是频点编号，都取 0 到 N−1。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"W_N = exp(−j 2π/N)\"><mrow><msub><mi>W</mi><mi>N</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mn>2</mn><mi>π</mi><mo>/</mo><mi>N</mi></mrow></msup></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"X(k) = sum from n=0 to N−1 of x(n) W_N^(kn)\"><mrow><mi>X</mi><mo>(</mo><mi>k</mi><mo>)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>x</mi><mo>(</mo><mi>n</mi><mo>)</mo><msubsup><mi>W</mi><mi>N</mi><mrow><mi>k</mi><mi>n</mi></mrow></msubsup></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x(n) = 1/N times sum from k=0 to N−1 of X(k) W_N^(−kn)\"><mrow><mi>x</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>X</mi><mo>(</mo><mi>k</mi><mo>)</mo><msubsup><mi>W</mi><mi>N</mi><mrow><mo>−</mo><mi>k</mi><mi>n</mi></mrow></msubsup></mrow></math></div><p>正变换的指数为负；逆变换为正，并除以 N。两式可互相恢复，前提是保留完整复数值，不只留幅度。</p>",
+      "check": {
+        "question": "两点数组 [a,b] 的 DFT 是什么？",
+        "answerHtml": "<p>[a+b, a−b]；相加与相减后各除以2，便恢复 a、b。</p>"
+      }
+    },
+    {
+      "id": "sampling-relations",
+      "title": "DFT 采的是 DTFT 上的哪些点",
+      "level": "essential",
+      "sourcePages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "bodyHtml": "<p>把数组区间外设为零，就有一条连续的 DTFT 曲线；DFT 每隔 2π/N 取一个复数值。</p><div class=\"formula\"><math aria-label=\"X(k)=X(e^{j\\omega})\\big|_{\\omega=2\\pi k/N}.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>X</mi><mo stretchy=\"false\">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy=\"false\">)</mo><msub><mo minsize=\"1.2em\" maxsize=\"1.2em\">|</mo><mrow><mi>ω</mi><mo>=</mo><mn>2</mn><mi>π</mi><mi>k</mi><mo>/</mo><mi>N</mi></mrow></msub><mo>.</mo></mrow></math></div><p>原例 x=R₄(n)=[1,1,1,1]：8点与16点DFT采同一条曲线，直流值都是4。补零只加密频率网格，不新增观测，也不自动提高分辨能力。</p><p>Z 变换取样位置是正指数 z=eʲ²πᵏ⁄ᴺ。若将数组周期延拓，课件的未归一化 DFS 系数等于 X(k)；若合成式不带1/N，其系数则是 X(k)/N。单位脉冲的任意 N 点DFT均为 N 个1。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/23-rectangle-samples.svg",
+        "alt": "四个1的DTFT幅度曲线及8点、16点DFT样点",
+        "caption": "线是连续频率曲线，点是有限频率样本；横轴是 ω，不是 k。"
+      },
+      "pitfall": "DFT数组在 n、k 上的隐含周期是 N；DTFT对 ω 的周期是2π，不能混用单位。"
+    },
+    {
+      "id": "circular-index",
+      "title": "圆周移位：从一端出去，从另一端回来",
+      "level": "essential",
+      "sourcePages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "bodyHtml": "<p>主值区间选0…N−1。下标 mod N 是“取余数”，不是对样值取模。课件用加号表示左移：</p><div class=\"formula\"><math aria-label=\"y[n]=x[(n+m)\\bmod N].\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>y</mi><mo stretchy=\"false\">[</mo><mi>n</mi><mo stretchy=\"false\">]</mo><mo>=</mo><mi>x</mi><mo stretchy=\"false\">[</mo><mo stretchy=\"false\">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy=\"false\">)</mo><mo>mod</mo><mi>N</mi><mo stretchy=\"false\">]</mo><mo>.</mo></mrow></math></div><p>原数组 [2,1,3,1,0.5] 先选 N=5。左移1得到 [1,3,1,0.5,2]；右移2得到 [1,0.5,2,1,3]。若 N=6，应先补0再移，不能最后随便加0。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/23-circular-shift.svg",
+        "alt": "五点原数组、左移一格、右移两格的重绘",
+        "caption": "圆周翻转的下标顺序是0,N−1,…,1，不是把整个数组倒排。"
+      },
+      "pitfall": "原P15的自由索引混写。这里统一用 n 作时间位置、r 作周期副本编号。"
+    },
+    {
+      "id": "two-convolutions",
+      "title": "线性卷积与圆周卷积，差在边界",
+      "level": "essential",
+      "sourcePages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "bodyHtml": "<p>线性卷积不绕回。长 L、M 的两段序列，结果最多占 L+M−1 个位置。N 点圆周卷积则把下标绕回同一个 N 点环：</p><div class=\"formula\"><math aria-label=\"y_N[n]=\\sum_{m=0}^{N-1}x_1[m]x_2[(n-m)\\bmod N].\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>y</mi><mi>N</mi></msub><mo stretchy=\"false\">[</mo><mi>n</mi><mo stretchy=\"false\">]</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><msub><mi>x</mi><mn>1</mn></msub><mo stretchy=\"false\">[</mo><mi>m</mi><mo stretchy=\"false\">]</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=\"false\">[</mo><mo stretchy=\"false\">(</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo stretchy=\"false\">)</mo><mo>mod</mo><mi>N</mi><mo stretchy=\"false\">]</mo><mo>.</mo></mrow></math></div><p>手算按“圆周翻转→移到输出位置→逐点乘→相加”。也可先算线性结果，再把相隔 N 的项相加。若要用圆周卷积获得完整线性结果，先将两输入补零至 N≥L+M−1。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/23-convolution-fold.svg",
+        "alt": "原四点课堂例的线性结果与四点圆周折回",
+        "caption": "两条输入都必须使用同一个 N；仅 N≥max(L,M) 不保证没有时域混叠。"
+      }
+    },
+    {
+      "id": "shift-properties",
+      "title": "移位看指数正负号，不靠口诀",
+      "level": "essential",
+      "sourcePages": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "bodyHtml": "<p>性质都针对同一个 N。线性：输入加权相加，DFT也加权相加。时间左移 m，与频率左移 l 分别是：</p><div class=\"formula\"><math aria-label=\"x_m(n)=x((n+m))_N R_N(n),\\qquad\nX_m(k)=W_N^{-mk}X(k).\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>x</mi><mi>m</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>x</mi><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub><msub><mi>R</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>,</mo><mspace width=\"2em\"></mspace><msub><mi>X</mi><mi>m</mi></msub><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msubsup><mi>W</mi><mi>N</mi><mrow><mo>−</mo><mi>m</mi><mi>k</mi></mrow></msubsup><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>.</mo></mrow></math></div><div class=\"formula\"><math aria-label=\"y(n)=W_N^{ln}x(n)=e^{-j2\\pi ln/N}x(n).\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>y</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msubsup><mi>W</mi><mi>N</mi><mrow><mi>l</mi><mi>n</mi></mrow></msubsup><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mn>2</mn><mi>π</mi><mi>l</mi><mi>n</mi><mo>/</mo><mi>N</mi></mrow></msup><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>.</mo></mrow></math></div><p>第一式：时间左移，频谱乘正指数，相位改变但幅度不变。第二式：时间乘负指数，频谱变为 X((k+l))<sub>N</sub>。判断方向时，问“原第0点会跑到哪里”。</p>",
+      "check": {
+        "question": "右移 n₀ 点时，频谱乘什么？",
+        "answerHtml": "<p>乘 exp(−j2πkn₀/N)=W_N^(kn₀)。右移的下标是 n−n₀，不是 n+n₀。</p>"
+      }
+    },
+    {
+      "id": "multiplication-convolution",
+      "title": "频谱相乘，得到的是圆周卷积",
+      "level": "essential",
+      "sourcePages": [
+        32,
+        33,
+        34
+      ],
+      "bodyHtml": "<div class=\"formula\"><math aria-label=\"y(n)=\\sum_{m=0}^{N-1}x_1(m)x_2((n-m))_N\n\\quad\\longleftrightarrow\\quad\nY(k)=X_1(k)X_2(k).\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>y</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><msub><mi>x</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>m</mi><mo stretchy=\"false\">)</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub><mspace width=\"1em\"></mspace><mi>⟷</mi><mspace width=\"1em\"></mspace><mi>Y</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msub><mi>X</mi><mn>1</mn></msub><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><msub><mi>X</mi><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>.</mo></mrow></math></div><p>这就是“DFT→频谱逐点乘→IDFT”的计算链。要算线性卷积，先按上一卡补足零。反过来，时间逐点相乘，对应频率 N 点圆周卷积再除以 N。</p>",
+      "pitfall": "两个方向尺度不同：时间圆周卷积↔频率乘；时间乘↔频率圆周卷积/N。"
+    },
+    {
+      "id": "conjugate-energy",
+      "title": "共轭与能量：两条快速验算规则",
+      "level": "essential",
+      "sourcePages": [
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "bodyHtml": "<div class=\"formula\"><math aria-label=\"\\operatorname{DFT}\\{x^*(n)\\}=X^*((-k))_N\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mo>DFT</mo><mo stretchy=\"false\">{</mo><msup><mi>x</mi><mo>*</mo></msup><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">}</mo><mo>=</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mo>−</mo><mi>k</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub></mrow></math></div><div class=\"formula\"><math aria-label=\"\\sum_{n=0}^{N-1}|x(n)|^2=\\frac1N\\sum_{k=0}^{N-1}|X(k)|^2.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mo stretchy=\"false\">|</mo><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><msup><mo stretchy=\"false\">|</mo><mn>2</mn></msup><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mo stretchy=\"false\">|</mo><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><msup><mo stretchy=\"false\">|</mo><mn>2</mn></msup><mo>.</mo></mrow></math></div><p>星号表示复共轭；−k 按 N 取模，k=0仍回到0。原P39的首个求和指标与项中变量混写，这里统一用n。能量用平方模；正变换不归一化时，频域平方模之和必须除以 N。</p>",
+      "check": {
+        "question": "x=[1,1,1,1]，X=[4,0,0,0]，能量是否吻合？",
+        "answerHtml": "<p>时间能量4；频率能量16除以N=4，也为4。</p>"
+      }
+    },
+    {
+      "id": "real-symmetry",
+      "title": "实信号的频谱为什么只需看一半",
+      "level": "essential",
+      "sourcePages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "bodyHtml": "<p>实数组满足 X(k)=X*((−k) mod N)：成对频点互为共轭。于是实部偶对称、虚部奇对称、幅度偶对称；非零点的相位在模2π意义下反号。</p><p>0点自配对；N为偶数时N/2点也自配对，所以这些频点为实数。一般实数组的其他频点仍可为复数。纯虚数组则满足 X(k)=−X*((−k) mod N)，不要照抄实数组结论。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/23-real-symmetry.svg",
+        "alt": "实数组四点DFT共轭配对示意",
+        "caption": "完整的共轭偶/奇分解与两条实序列分离，放在第二遍。"
+      },
+      "pitfall": "零点没有确定相位；π与−π是同一角度，不能把显示分支跳变当成数学关系失效。"
+    },
+    {
+      "id": "inverse-proof",
+      "title": "为什么 IDFT 能恢复每个样值",
+      "level": "deep",
+      "sourcePages": [
+        5
+      ],
+      "bodyHtml": "<p>固定要恢复的位置 n，另用 m 遍历输入；k 遍历频点。把DFT代入IDFT，关键只剩单位根的有限和：</p><div class=\"formula\"><math aria-label=\"\\sum_{k=0}^{N-1}W_N^{k(m-n)}\n=\\begin{cases}N,&amp;m\\equiv n\\pmod N,\\\\0,&amp;\\text{其他情况}.\\end{cases}\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><msubsup><mi>W</mi><mi>N</mi><mrow><mi>k</mi><mo stretchy=\"false\">(</mo><mi>m</mi><mo>−</mo><mi>n</mi><mo stretchy=\"false\">)</mo></mrow></msubsup><mo>=</mo><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">{</mo><mtable><mtr><mtd columnalign=\"left\"><mi>N</mi><mo>,</mo></mtd><mtd columnalign=\"left\"><mi>m</mi><mo>≡</mo><mi>n</mi><mspace width=\"1em\"></mspace><mo>(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mi>N</mi><mo>)</mo><mo>,</mo></mtd></mtr><mtr><mtd columnalign=\"left\"><mn>0</mn><mo>,</mo></mtd><mtd columnalign=\"left\"><mtext>其他情况</mtext><mo>.</mo></mtd></mtr></mtable></mrow></mrow></math></div><p>m、n都在同一主值区间时，同余就是相等。只有 m=n 留下 N·x(n)，再除以N即得x(n)。其他情况用等比和：(1−qᴺ)/(1−q)=0。</p>"
+    },
+    {
+      "id": "rectangle-details",
+      "title": "原 R₄ 例：8点、16点与可去奇点",
+      "level": "deep",
+      "sourcePages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "bodyHtml": "<div class=\"formula\"><math aria-label=\"X(e^{j\\omega})=\\sum_{n=0}^{3}e^{-j\\omega n}\n=e^{-j3\\omega/2}\\frac{\\sin(2\\omega)}{\\sin(\\omega/2)}.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>X</mi><mo stretchy=\"false\">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mn>3</mn></mrow></munderover><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mn>3</mn><mi>ω</mi><mo>/</mo><mn>2</mn></mrow></msup><mfrac><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mn>2</mn><mi>ω</mi><mo stretchy=\"false\">)</mo></mrow><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mi>ω</mi><mo>/</mo><mn>2</mn><mo stretchy=\"false\">)</mo></mrow></mfrac><mo>.</mo></mrow></math></div><p>先有限求和，再代 ω=2πk/N。ω为2π的整数倍时，回到四项相加，值为4，不计算0/0。</p><div class=\"formula\"><math aria-label=\"X_8(k)=e^{-j3\\pi k/8}\\frac{\\sin(\\pi k/2)}{\\sin(\\pi k/8)},\n\\qquad k=1,\\ldots,7,\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>X</mi><mn>8</mn></msub><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mn>3</mn><mi>π</mi><mi>k</mi><mo>/</mo><mn>8</mn></mrow></msup><mfrac><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mi>π</mi><mi>k</mi><mo>/</mo><mn>2</mn><mo stretchy=\"false\">)</mo></mrow><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mi>π</mi><mi>k</mi><mo>/</mo><mn>8</mn><mo stretchy=\"false\">)</mo></mrow></mfrac><mo>,</mo><mspace width=\"2em\"></mspace><mi>k</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mn>7</mn><mo>,</mo></mrow></math></div><div class=\"formula\"><math aria-label=\"X_{16}(k)=e^{-j3\\pi k/16}\\frac{\\sin(\\pi k/4)}{\\sin(\\pi k/16)},\n\\qquad k=1,\\ldots,15,\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>X</mi><mrow><mn>16</mn></mrow></msub><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mn>3</mn><mi>π</mi><mi>k</mi><mo>/</mo><mn>16</mn></mrow></msup><mfrac><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mi>π</mi><mi>k</mi><mo>/</mo><mn>4</mn><mo stretchy=\"false\">)</mo></mrow><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mi>π</mi><mi>k</mi><mo>/</mo><mn>16</mn><mo stretchy=\"false\">)</mo></mrow></mfrac><mo>,</mo><mspace width=\"2em\"></mspace><mi>k</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mn>15</mn><mo>,</mo></mrow></math></div><p>8点完整结果为 [4,1−j(1+√2),0,1−j(√2−1),0,1+j(√2−1),0,1+j(1+√2)]。16点结果满足 X₁₆(2k)=X₈(k)，其余点代同一有限和；不另背16个数。</p><div class=\"formula\"><math aria-label=\"X(k+N)=\\sum_{n=0}^{N-1}x(n)e^{-j2\\pi(k+N)n/N}\n=\\sum_{n=0}^{N-1}x(n)e^{-j2\\pi kn/N}e^{-j2\\pi n}=X(k).\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo>+</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mn>2</mn><mi>π</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo>+</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mi>n</mi><mo>/</mo><mi>N</mi></mrow></msup><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mn>2</mn><mi>π</mi><mi>k</mi><mi>n</mi><mo>/</mo><mi>N</mi></mrow></msup><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mn>2</mn><mi>π</mi><mi>n</mi></mrow></msup><mo>=</mo><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>.</mo></mrow></math></div><p>逆式延到所有整数n也按N重复，但这不是区间外补零的原有限序列。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/23-unit-circle.svg",
+        "alt": "八个Z平面采样点以及正负指数区别",
+        "caption": "正指数选取样位置；z的负幂产生DFT的负指数。"
+      }
+    },
+    {
+      "id": "periodization-correlation",
+      "title": "主值、周期延拓及相关目录的落点",
+      "level": "deep",
+      "sourcePages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "bodyHtml": "<div class=\"formula\"><math aria-label=\"\\widetilde x(n)=\\sum_{r=-\\infty}^{\\infty}x(n+rN)=x((n))_N.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mover><mi>x</mi><mo>~</mo></mover><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mrow><mo>∞</mo></mrow></munderover><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo>+</mo><mi>r</mi><mi>N</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>x</mi><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub><mo>.</mo></mrow></math></div><div class=\"formula\"><math aria-label=\"x(n)=\\widetilde x(n)R_N(n).\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mover><mi>x</mi><mo>~</mo></mover><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><msub><mi>R</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>.</mo></mrow></math></div><p>R<sub>N</sub>(n)在0…N−1内为1，其余为0。先把有限序列按N周期延拓，再移位，再截取主值，与直接模N索引相同。线性移位不绕回，窗口外的值仍存在。</p><p>原P14还列“相关”，但并无相关推导页。相关比较信号与延迟版本的相似程度，通常涉及共轭；不把它与卷积的翻转规则混同。完整相关定义见本节末可选链接。</p>"
+    },
+    {
+      "id": "convolution-proof",
+      "title": "折回关系与原书例2.3.10",
+      "level": "deep",
+      "sourcePages": [
+        23,
+        25,
+        32,
+        33,
+        34
+      ],
+      "bodyHtml": "<div class=\"formula\"><math aria-label=\"y_N(n)=\\sum_{r=-\\infty}^{\\infty}y_l(n+rN),\n\\qquad0\\leq n&lt;N.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>y</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mrow><mo>∞</mo></mrow></munderover><msub><mi>y</mi><mi>l</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo>+</mo><mi>r</mi><mi>N</mi><mo stretchy=\"false\">)</mo><mo>,</mo><mspace width=\"2em\"></mspace><mn>0</mn><mo>≤</mo><mi>n</mi><mo>&lt;</mo><mi>N</mi><mo>.</mo></mrow></math></div><p>将圆周取值写成周期副本之和，交换有限的 m 求和与 r 求和，内层恰是线性卷积。频谱乘法的证明令 r=n−m，指数分成 W<sub>N</sub>ᵏᵐ·W<sub>N</sub>ᵏʳ；任取完整N点求和均相同。原P33显示的“m−n”与后续式不一致，这里统一为 n−m。</p><p><strong>原书例2.3.10</strong>（第3版印刷75–76页；课件旧引P68）：输入支持0…49与0…9；50点圆周卷积处处为12，线性卷积前5点为5，求尽可能多的线性输出。</p><p>线性结果最多59点。由 y₅₀(n)=yₗ(n)+yₗ(n+50)，得到0…4为5，9…49为12，50…54为7；5…8与55…58各自不定，但每对相加为12。共确定51点，另8点不能凭现有条件拆开。</p>"
+    },
+    {
+      "id": "book-shifts",
+      "title": "原书例2.3.7、2.3.8：把性质真正用一次",
+      "level": "deep",
+      "sourcePages": [
+        31
+      ],
+      "bodyHtml": "<p><strong>例2.3.7</strong>（第3版印刷71页；课件旧引P64）：x=[4,3,2,1]作6点DFT，给 Y(k)=W₆⁴ᵏX(k)，求y。先补成[4,3,2,1,0,0]，负指数表示右移4，得到 <strong>[2,1,0,0,4,3]</strong>。</p><p><strong>例2.3.8</strong>：x(n)=δ(n)+2δ(n−5)，求10点DFT、乘频域移位因子后的y、以及时域调制后的DFT。</p><ul><li>原DFT：X(k)=1+2(−1)ᵏ，即[3,−1,3,−1,3,−1,3,−1,3,−1]。</li><li>Y(k)=exp(−j2π·3k/10)X(k)：右移3，y(n)=δ(n−3)+2δ(n−8)。</li><li>y(n)=exp(−j2π·3n/10)x(n)：只在0、5有值，分别为1、−2，所以Y(k)=1−2(−1)ᵏ=[−1,3,−1,3,−1,3,−1,3,−1,3]。</li></ul><p>课件频移式与书中式(2.3.15)一致；不要把第2问的时移和第3问的调制混为一题。</p>"
+    },
+    {
+      "id": "symmetry-decomposition",
+      "title": "两种拆分不能混成“实部对应实部”",
+      "level": "deep",
+      "sourcePages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "bodyHtml": "<div class=\"formula\"><math aria-label=\"x_{ep}(n)=\\frac12[x(n)+x^*((-n))_N],\\qquad\nx_{op}(n)=\\frac12[x(n)-x^*((-n))_N].\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>x</mi><mrow><mi>e</mi><mi>p</mi></mrow></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>+</mo><msup><mi>x</mi><mo>*</mo></msup><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mo>−</mo><mi>n</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub><mo stretchy=\"false\">]</mo><mo>,</mo><mspace width=\"2em\"></mspace><msub><mi>x</mi><mrow><mi>o</mi><mi>p</mi></mrow></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>−</mo><msup><mi>x</mi><mo>*</mo></msup><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mo>−</mo><mi>n</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub><mo stretchy=\"false\">]</mo><mo>.</mo></mrow></math></div><div class=\"formula\"><math aria-label=\"X_{ep}(k)=\\frac12[X(k)+X^*((-k))_N],\\qquad\nX_{op}(k)=\\frac12[X(k)-X^*((-k))_N].\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>X</mi><mrow><mi>e</mi><mi>p</mi></mrow></msub><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy=\"false\">[</mo><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>+</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mo>−</mo><mi>k</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub><mo stretchy=\"false\">]</mo><mo>,</mo><mspace width=\"2em\"></mspace><msub><mi>X</mi><mrow><mi>o</mi><mi>p</mi></mrow></msub><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy=\"false\">[</mo><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>−</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mo>−</mo><mi>k</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub><mo stretchy=\"false\">]</mo><mo>.</mo></mrow></math></div><p>ep是圆周共轭对称，op是圆周共轭反对称；时间和频率各自定义，不能凭同名下标猜DFT对应。</p><div class=\"table-wrap\"><table><thead><tr><th scope=\"col\">时间侧</th><th scope=\"col\">DFT频率侧</th></tr></thead><tbody><tr><td>Re x</td><td>X_ep</td></tr><tr><td>j Im x</td><td>X_op</td></tr><tr><td>x_ep</td><td>Re X</td></tr><tr><td>x_op</td><td>j Im X</td></tr></tbody></table></div><p>证明只需对半和/半差用线性性，并用“取共轭↔共轭后频率反转”“共轭反转↔同频点共轭”两条性质。</p><p>原六点数组[1,2,3,4,5,6]圆周反转为[1,6,5,4,3,2]，分解得ep=[1,4,4,4,4,4]、op=[0,−2,−1,0,1,2]。</p><p>ep的实部偶、虚部奇；op的实部奇、虚部偶。两者模均偶；非零op配对点的相位之和为π（模2π），不是完全无关系。自配对点：ep值为实数，op值为纯虚数；后者不必为0。</p>"
+    },
+    {
+      "id": "two-real-sequences",
+      "title": "原书例2.3.13：一次DFT分离两条实序列",
+      "level": "deep",
+      "sourcePages": [
+        53
+      ],
+      "bodyHtml": "<p>第3版印刷81–82页（课件旧引P73）。已知f=x+jy，x、y为N点实数组，且F为下式；求X、Y、x、y。按原解a、b为实数：</p><div class=\"formula\"><math aria-label=\"F(k)=\\frac{1-a^N}{1-aW_N^k}\n+j\\frac{1-b^N}{1-bW_N^k}.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>F</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mi>a</mi><mi>N</mi></msup></mrow><mrow><mn>1</mn><mo>−</mo><mi>a</mi><msubsup><mi>W</mi><mi>N</mi><mi>k</mi></msubsup></mrow></mfrac><mo>+</mo><mi>j</mi><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mi>b</mi><mi>N</mi></msup></mrow><mrow><mn>1</mn><mo>−</mo><mi>b</mi><msubsup><mi>W</mi><mi>N</mi><mi>k</mi></msubsup></mrow></mfrac><mo>.</mo></mrow></math></div><p>由实数组共轭对称，F*((−k) mod N)=X(k)−jY(k)。联立后：</p><div class=\"formula\"><math aria-label=\"X(k)=\\frac{F(k)+F^*((-k))_N}{2}=F_{ep}(k),\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mrow><mi>F</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>+</mo><msup><mi>F</mi><mo>*</mo></msup><mo stretchy=\"false\">(</mo><mo stretchy=\"false\">(</mo><mo>−</mo><mi>k</mi><mo stretchy=\"false\">)</mo><msub><mo stretchy=\"false\">)</mo><mi>N</mi></msub></mrow><mrow><mn>2</mn></mrow></mfrac><mo>=</mo><msub><mi>F</mi><mrow><mi>e</mi><mi>p</mi></mrow></msub><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>,</mo></mrow></math></div><p>因此X=(1−aᴺ)/(1−aW<sub>N</sub>ᵏ)，Y=(1−bᴺ)/(1−bW<sub>N</sub>ᵏ)。各式展开为N项有限等比和，再作IDFT，得到 x(n)=aⁿ、y(n)=bⁿ（0≤n&lt;N，区间外为0）。</p><p>分母为0时回到有限和取N，不把有限数组误判成发散。原书演示a=0.8、b=0.6、N=32；不额外要求有限幂序列必须|a|&lt;1。这里不能直接取Re F当X、Im F当Y，因为X、Y本身一般是复数。</p>"
+    }
+  ],
+  "example": {
+    "title": "原课堂例：同一个输入，五种卷积结果",
+    "sourcePages": [
+      24
+    ],
+    "problemHtml": "<p>原P24给 x=[1,2,2,1]，从n=0开始。求线性自卷积，以及N=4、6、7、8的圆周自卷积。</p>",
+    "stepsHtml": "<ul><li>先按线性卷积逐项乘加：第0项1；第1项1×2+2×1=4；第2项1×2+2×2+2×1=8；第3项1+4+4+1=10，后面由对称性得8、4、1。</li><li>圆周结果把线性结果按下标 mod N分盒。N=4时，0号盒=1+8，1号盒=4+4，2号盒=8+1；N=6时只把末尾1加到首项。</li></ul>",
+    "answerHtml": "<div class=\"table-wrap\"><table><thead><tr><th scope=\"col\">运算</th><th scope=\"col\">结果</th></tr></thead><tbody><tr><td>线性</td><td>[1,4,8,10,8,4,1]</td></tr><tr><td>N=4</td><td>[9,8,9,10]</td></tr><tr><td>N=6</td><td>[2,4,8,10,8,4]</td></tr><tr><td>N=7</td><td>[1,4,8,10,8,4,1]</td></tr><tr><td>N=8</td><td>[1,4,8,10,8,4,1,0]</td></tr></tbody></table></div>",
+    "checkHtml": "<p>各结果的样值和都为(1+2+2+1)²=36；N≥7时才完整保留线性结果。这同时检查乘加数值与补零长度。</p>"
+  },
+  "pitfalls": [
+    "N、n、k各有角色；不能把频点编号k直接当数字角频率。",
+    "圆周卷积不是线性卷积；先看是否已补到L+M−1。",
+    "频域圆周卷积前的1/N、相位的正负号、共轭后的模N反转都不能漏。"
+  ],
+  "deepLinks": [
+    {
+      "label": "原例完整系数与逐步证明（第二遍查阅）",
+      "href": "dsp-textbook/dsp-front-12.html"
+    },
+    {
+      "label": "相关：原目录中提及的可选补充",
+      "href": "dsp-textbook/dsp-correlation.html"
+    }
+  ],
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "dft-definition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "dft-definition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "dft-definition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "dft-definition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "dft-definition",
+        "inverse-proof"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "sampling-relations"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "sampling-relations",
+        "rectangle-details"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "sampling-relations",
+        "rectangle-details"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "sampling-relations",
+        "rectangle-details"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "sampling-relations",
+        "rectangle-details"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "sampling-relations",
+        "rectangle-details"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "sampling-relations",
+        "rectangle-details"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "sampling-relations",
+        "rectangle-details"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "circular-index",
+        "periodization-correlation"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "circular-index",
+        "periodization-correlation"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "circular-index",
+        "periodization-correlation"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "circular-index",
+        "periodization-correlation"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "circular-index",
+        "periodization-correlation"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "circular-index",
+        "periodization-correlation"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "two-convolutions"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "two-convolutions"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "two-convolutions"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "two-convolutions",
+        "convolution-proof"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "two-convolutions"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 25,
+      "cardIds": [
+        "two-convolutions",
+        "convolution-proof"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 26,
+      "cardIds": [
+        "shift-properties"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 27,
+      "cardIds": [
+        "shift-properties"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 28,
+      "cardIds": [
+        "shift-properties"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 29,
+      "cardIds": [
+        "shift-properties"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 30,
+      "cardIds": [
+        "shift-properties"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 31,
+      "cardIds": [
+        "shift-properties",
+        "book-shifts"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 32,
+      "cardIds": [
+        "multiplication-convolution",
+        "convolution-proof"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 33,
+      "cardIds": [
+        "multiplication-convolution",
+        "convolution-proof"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 34,
+      "cardIds": [
+        "multiplication-convolution",
+        "convolution-proof"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 35,
+      "cardIds": [
+        "conjugate-energy"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 36,
+      "cardIds": [
+        "conjugate-energy"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 37,
+      "cardIds": [
+        "conjugate-energy"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 38,
+      "cardIds": [
+        "conjugate-energy"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 39,
+      "cardIds": [
+        "conjugate-energy"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 40,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 41,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 42,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 43,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 44,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 45,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 46,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 47,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 48,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 49,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 50,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 51,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 52,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 53,
+      "cardIds": [
+        "real-symmetry",
+        "symmetry-decomposition",
+        "two-real-sequences"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    }
+  ],
+  "textbook": {
+    "printedPages": [
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84
+    ],
+    "pdfPages": [
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101
+    ]
+  },
+  "sourceNote": "课件引用旧版教材页码；本稿按方勇第3版实际题干核对，旧引页与现书页分列。原书扫描仅作私有核对，不公开。"
+}

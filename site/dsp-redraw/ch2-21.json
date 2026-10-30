@@ -1,0 +1,597 @@
+{
+  "id": "dsp-21",
+  "number": "2.1",
+  "title": "离散时间傅里叶变换 DTFT",
+  "brief": "先把序列、频率和正逆变换连起来，再用性质少算一点。",
+  "firstPassMinutes": 25,
+  "deepPassMinutes": 35,
+  "firstPass": [
+    "看懂n离散、ω连续且频谱2π周期",
+    "会写DTFT/IDTFT，并检查条件",
+    "能辨认时移、调制、卷积、能量与实序列对称性",
+    "独立完成四点矩形序列这一题"
+  ],
+  "source": {
+    "title": "2.1离散时间序列的傅里叶变换DTFT.pptx",
+    "pageCount": 35,
+    "readerUrl": "dsp-21-ppt.html",
+    "imagePattern": "courses/dsp-21/slides/page-{page}.webp"
+  },
+  "cards": [
+    {
+      "id": "dtft-pair",
+      "title": "1 · 时间是整数，频率仍连续",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        12
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          37,
+          38,
+          39,
+          40,
+          44
+        ],
+        "pdfPages": [
+          54,
+          55,
+          56,
+          57,
+          61
+        ]
+      },
+      "bodyHtml": "<p>DTFT把离散序列变成连续频率上的复数函数。n是整数样本序号；ω是数字角频率，单位rad/sample。正变换把所有样本相加；反变换只积分一个完整的2π周期。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"X(e^{jω}) = sum over all integer n of x(n)e^{−jωn}\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mo>∞</mo></munderover><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><mi>n</mi></mrow></msup></mrow></mrow></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"x(n) = 1/(2π) integral from −π to π of X(e^{jω})e^{jωn} dω\"><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>π</mi></mrow><mi>π</mi></msubsup><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>n</mi></mrow></msup></mrow><mo>d</mo><mi>ω</mi></mrow></mrow></math></div><p><strong>存在条件：</strong>绝对可和保证普通DTFT存在，是<strong>充分条件，不是必要条件</strong>。若由Z变换代入z=e<sup>jω</sup>，先确认收敛域包含单位圆。非零周期序列的冲激形式留到2.2。</p><p>为什么频谱重复？n是整数，所以e<sup>−j2πn</sup>=1。因而X(e<sup>j(ω+2π)</sup>)=X(e<sup>jω</sup>)；这不要求时间序列也周期。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/21-unit-circle.svg",
+        "alt": "复平面单位圆：z=e的jω次方；仅当单位圆位于收敛域内可取普通DTFT",
+        "caption": "重绘PPT第6页：把“取单位圆”与“先查收敛域”放在一起。"
+      },
+      "check": {
+        "question": "x(n)不周期，它的DTFT还以2π为周期吗？",
+        "answerHtml": "<p>是。2π周期来自n取整数，而不是x(n)是否周期。</p>"
+      },
+      "corrections": [
+        {
+          "sourcePage": 5,
+          "text": "“绝对可和是充分必要条件”改为“充分条件”；教材第3版印刷38页式(2.1.2)可核对。"
+        },
+        {
+          "sourcePage": 7,
+          "text": "积分下限统一清晰写为−π，保留反变换的1/(2π)。"
+        }
+      ]
+    },
+    {
+      "id": "read-spectrum",
+      "title": "2 · 读幅度和相位，先认三个边界",
+      "level": "essential",
+      "sourcePages": [
+        8,
+        9,
+        10
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          38,
+          39,
+          40
+        ],
+        "pdfPages": [
+          55,
+          56,
+          57
+        ]
+      },
+      "bodyHtml": "<p>用从n=0开始、连续N点为1的矩形R<sub>N</sub>(n)观察频谱。它不是关于原点对称的矩形，因此一般带相位。</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Rectangular sequence DTFT: exponential phase times sin(Nω/2)/sin(ω/2)\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><mfrac><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow><mn>2</mn></mfrac></mrow></msup><mfrac><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mrow><mi>N</mi><mi>ω</mi></mrow><mn>2</mn></mfrac><mo>)</mo></mrow></mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mi>ω</mi><mn>2</mn></mfrac><mo>)</mo></mrow></mrow></mfrac></mrow></math></div><ul><li>ω=0及其2π整数倍处，直接用有限和求得X=N；不是0/0，也不是无穷大。</li><li>幅度取正弦比的绝对值；正弦比变负时，相位还要补π（模2π）。</li><li>频谱零点处相位没有定义。图中的断点不是遗漏数据，也不应连成假直线。</li></ul><p>下方代表例只算N=4。指数序列正变换和90°移相器反变换，放在本页折叠的“正逆变换各算一次”；<a href=\"dsp-textbook/dsp-front-04.html#section-8\">矩形序列的反变换推导（单栏深讲）</a>可按需读。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/21-rectangle-spectrum.svg",
+        "alt": "R4的四个非零样本、2π周期幅度谱、排除零点后的主值相位谱",
+        "caption": "重绘PPT第9页；数值由四项复指数之和直接计算，零点相位不连线。"
+      },
+      "check": {
+        "question": "R₄在ω=π时，X等于多少？",
+        "answerHtml": "<p>1−1+1−1=0，所以幅度为0，相位未定义。</p>"
+      }
+    },
+    {
+      "id": "operations",
+      "title": "3 · 先辨认操作，再选性质",
+      "level": "essential",
+      "sourcePages": [
+        11,
+        13,
+        14,
+        15,
+        16,
+        32
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          41,
+          42,
+          43,
+          50
+        ],
+        "pdfPages": [
+          58,
+          59,
+          60,
+          67
+        ]
+      },
+      "bodyHtml": "<p>以下都以x(n) ↔ X(e<sup>jω</sup>)为原变换对。常数线性组合直接逐项变换：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Linearity: a x(n) + b h(n) corresponds to a X(e^{jω}) + b H(e^{jω})\"><mrow><mi>a</mi><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>+</mo><mi>b</mi><mrow><mi>h</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>↔</mo><mi>a</mi><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>+</mo><mi>b</mi><mrow><mi>H</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></math></div><p>再记住这四个方向：</p><h4>延迟：改相位，不改幅度</h4><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Time shift: x(n−n₀) corresponds to e^{−jωn₀}X(e^{jω})\"><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mi>n</mi><mo>−</mo><msub><mi>n</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow><mo>↔</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><msub><mi>n</mi><mn>0</mn></msub></mrow></msup><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></math></div><h4>调制：把频谱沿ω轴平移</h4><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Modulation: e^{jω₀n}x(n) corresponds to X(e^{j(ω−ω₀)})\"><mrow><msup><mi>e</mi><mrow><mi>j</mi><msub><mi>ω</mi><mn>0</mn></msub><mi>n</mi></mrow></msup><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>↔</mo><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mrow><mo>(</mo><mrow><mi>ω</mi><mo>−</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow></msup><mo>)</mo></mrow></mrow></mrow></math></div><h4>时间翻转：频率也翻转</h4><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Time reversal: x(−n) corresponds to X(e^{−jω})\"><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mo>−</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow><mo>↔</mo><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></math></div><h4>乘n：对频率求导</h4><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Multiplication by n corresponds to j dX/dω\"><mrow><mi>n</mi><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>↔</mo><mi>j</mi><mfrac><mrow><mo>d</mo><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow><mrow><mo>d</mo><mi>ω</mi></mrow></mfrac></mrow></math></div><p>微分可用的充分条件是∑|nx(n)|有限；有限长序列自动满足。翻转不等于取共轭，只有实序列才进一步满足X(e<sup>−jω</sup>)=X*(e<sup>jω</sup>)。</p>",
+      "pitfall": "PPT第14页把频移式中的ω₀n错排成ωn₀。左边应是固定频率ω₀乘时间变量n。",
+      "check": {
+        "question": "δ(n−2)的DTFT是e^{+j2ω}还是e^{−j2ω}？",
+        "answerHtml": "<p>e<sup>−j2ω</sup>。把n=2代入正变换的负指数即可检查。</p>"
+      }
+    },
+    {
+      "id": "convolution",
+      "title": "4 · 卷积与相乘，不要互换",
+      "level": "essential",
+      "sourcePages": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          42
+        ],
+        "pdfPages": [
+          59
+        ]
+      },
+      "bodyHtml": "<h4>时域卷积 → 频域相乘</h4><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Time convolution corresponds to multiplication of DTFTs\"><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>∗</mo><mrow><mi>h</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>↔</mo><mrow><mi>Y</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mrow><mi>H</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></math></div><p>LTI系统里h是单位脉冲响应，H是频率响应；输出可先求Y=XH，再做IDTFT。</p><h4>时域逐点相乘 y(n)=x(n)h(n)</h4><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Pointwise product in time gives 1/(2π) times a 2π-periodic frequency convolution\"><mrow><mrow><mi>Y</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>π</mi></mrow><mi>π</mi></msubsup><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>θ</mi></mrow></msup><mo>)</mo></mrow></mrow><mrow><mi>H</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mrow><mo>(</mo><mrow><mi>ω</mi><mo>−</mo><mi>θ</mi></mrow><mo>)</mo></mrow></mrow></msup><mo>)</mo></mrow></mrow></mrow><mo>d</mo><mi>θ</mi></mrow></mrow></math></div><p>这里是<strong>2π周期卷积</strong>，积分只跨一周期，外面保留1/(2π)。例如给序列加窗，是时域相乘，不是时域卷积。</p><p>第二遍再看<a href=\"dsp-textbook/dsp-front-06.html#section-8\">时域卷积换元证明和计算例（单栏深讲）</a>、<a href=\"dsp-textbook/dsp-front-06.html#section-11\">周期卷积的推导（单栏深讲）</a>。</p>",
+      "check": {
+        "question": "若h(n)=δ(n)，逐点相乘x(n)h(n)的DTFT是什么？",
+        "answerHtml": "<p>是常数x(0)，不是X(e<sup>jω</sup>)。逐点相乘只保留原点样本。</p>"
+      }
+    },
+    {
+      "id": "energy",
+      "title": "5 · 不求全谱，也能算频域积分",
+      "level": "essential",
+      "sourcePages": [
+        17,
+        18
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          43
+        ],
+        "pdfPages": [
+          60
+        ]
+      },
+      "bodyHtml": "<p>对有限能量序列，Parseval把频域积分换成时域的平方和。有限长序列可以直接使用：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Parseval: energy in time equals 1/(2π) times the integral of squared spectral magnitude\"><mrow><mi>E</mi><mo>=</mo><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mo>∞</mo></munderover><msup><mrow><mo>|</mo><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>|</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>π</mi></mrow><mi>π</mi></msubsup><msup><mrow><mo>|</mo><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>|</mo></mrow><mn>2</mn></msup><mo>d</mo><mi>ω</mi></mrow></mrow></math></div><p>若题目求的是积分本身，答案是<strong>2πE</strong>。例如R₄有4个1，E=4，故一周期内|X|²的积分为8π。</p><p>只看原点也很有用：X(e<sup>j0</sup>)=∑x(n)，而一周期内X的积分=2πx(0)。注意后者没有绝对值平方。</p>",
+      "check": {
+        "question": "R₄的∫|X|²dω和∫Xdω分别是多少？",
+        "answerHtml": "<p>积分范围都取−π到π：前者8π，后者2π，因为R₄(0)=1。</p>"
+      }
+    },
+    {
+      "id": "symmetry",
+      "title": "6 · 实序列不等于实频谱",
+      "level": "essential",
+      "sourcePages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        33
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          44,
+          45,
+          46,
+          47,
+          48,
+          50
+        ],
+        "pdfPages": [
+          61,
+          62,
+          63,
+          64,
+          65,
+          67
+        ]
+      },
+      "bodyHtml": "<p>若x(n)是实数序列，频谱满足共轭对称：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"For real x(n), X(e^{−jω}) = X*(e^{jω})\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><msup><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>*</mo></msup></mrow></math></div><ul><li>频谱实部是偶函数、虚部是奇函数，幅度是偶函数。</li><li>若时间序列还关于原点偶对称，频谱才是实且偶。</li><li>频谱非零处的相位按模2π判断奇对称；零点不定义相位。</li></ul><h4>只需知道这条分解的去向</h4><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Conjugate-symmetric time component transforms to the real part of X\"><mrow><msub><mi>x</mi><mi>e</mi></msub><mo>=</mo><mfrac><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>+</mo><msup><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mo>−</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow><mo>*</mo></msup></mrow><mn>2</mn></mfrac><mo>↔</mo><mrow><mi>Re</mi><mrow><mo>(</mo><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></div><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Conjugate-antisymmetric time component transforms to j times the imaginary part of X\"><mrow><msub><mi>x</mi><mi>o</mi></msub><mo>=</mo><mfrac><mrow><mrow><mi>x</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>−</mo><msup><mrow><mi>x</mi><mrow><mo>(</mo><mrow><mo>−</mo><mi>n</mi></mrow><mo>)</mo></mrow></mrow><mo>*</mo></msup></mrow><mn>2</mn></mfrac><mo>↔</mo><mi>j</mi><mrow><mi>Im</mi><mrow><mo>(</mo><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></div><p>一般复序列的e/o指<strong>共轭</strong>对称/反对称，不是简单的偶/奇。第二遍再看<a href=\"dsp-textbook/dsp-front-07.html#section-10\">时间实虚分解与频域共轭对称分解的交叉关系（单栏深讲）</a>。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/21-symmetry.svg",
+        "alt": "实序列频谱实偶虚奇；时间共轭对称部分对应频谱实部，反对称部分对应j乘虚部",
+        "caption": "重绘PPT第23、27、29页；把“时域条件”和“频域结论”分开标注。"
+      },
+      "check": {
+        "question": "δ(n−1)是实序列，它的频谱一定是实数吗？",
+        "answerHtml": "<p>不是。X=e<sup>−jω</sup>=cosω−j sinω。它满足实偶、虚奇，却一般不为实数。</p>"
+      }
+    },
+    {
+      "id": "causal-recovery",
+      "title": "深挖 · 用实部恢复实因果序列",
+      "level": "deep",
+      "sourcePages": [
+        30,
+        31,
+        35
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          48,
+          49
+        ],
+        "pdfPages": [
+          65,
+          66
+        ]
+      },
+      "bodyHtml": "<p>额外知道h(n)实且因果后，负时间为0，正时间的偶分量h<sub>e</sub>(n)恰好是h(n)的一半。恢复时原点不能翻倍：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Causal recovery: zero for n&lt;0; h_e(0) at n=0; twice h_e(n) for n&gt;0\"><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mo>{</mo><mtext>0（n&lt;0）；hₑ(0)（n=0）；2hₑ(n)（n&gt;0）</mtext></mrow></math></div><p>若只知道奇分量h<sub>o</sub>，它在原点恒为0，还必须另给h(0)。课件的u<sub>+</sub>(n)取值为0、1、2，不是普通阶跃。</p><p>教材例2.1.11已知h(0)=1、Im H=−sinω，恢复得到h(n)=δ(n)+δ(n−1)。<a href=\"dsp-textbook/dsp-front-08.html#section-6\">完整推导及另外两道原题（单栏深讲）</a>。</p>",
+      "pitfall": "没有因果条件，频谱实部只能确定时间共轭对称部分，不能唯一恢复整个序列。"
+    },
+    {
+      "id": "transform-examples",
+      "title": "深挖 · 正逆变换各算一次",
+      "level": "deep",
+      "sourcePages": [
+        6,
+        10
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          38,
+          39,
+          40,
+          41
+        ],
+        "pdfPages": [
+          55,
+          56,
+          57,
+          58
+        ]
+      },
+      "bodyHtml": "<h4>教材例2.1.1：右边指数序列</h4><p>已知x(n)=0.5ⁿu(n)。它绝对可和，所以可把DTFT写成等比级数：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Geometric-series DTFT of 0.5^n u(n)\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mo>∞</mo></munderover><msup><mrow><mo>(</mo><mrow><mn>0.5</mn><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi></mrow></msup></mrow><mo>)</mo></mrow><mi>n</mi></msup></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mn>0.5</mn><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi></mrow></msup></mrow></mfrac></mrow></math></div><p>检查X(0)=2，X(e<sup>jπ</sup>)=2/3。其Z变换收敛域|z|&gt;0.5包含单位圆；若改为2ⁿu(n)，该收敛条件不再成立，不能只代入同一代数式。</p><h4>教材例2.1.2：90°移相器</h4><p>已知一周期内H=+j（−π&lt;ω&lt;0），H=−j（0&lt;ω&lt;π）。先分段做IDTFT：</p><div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Split inverse DTFT for the 90-degree phase shifter\"><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><mrow><mo>[</mo><mrow><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>π</mi></mrow><mn>0</mn></msubsup><mrow><mi>j</mi><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>n</mi></mrow></msup></mrow><mo>d</mo><mi>ω</mi></mrow><mo>−</mo><mrow><msubsup><mo>∫</mo><mn>0</mn><mi>π</mi></msubsup><mrow><mi>j</mi><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>n</mi></mrow></msup></mrow><mo>d</mo><mi>ω</mi></mrow></mrow><mo>]</mo></mrow></mrow></math></div><p>n≠0时，积分得[1−(−1)ⁿ]/(πn)；n=0必须直接相加两段，得0。因此奇数n时h(n)=2/(πn)，偶数n（含0）时h(n)=0。</p><p>检查：h是实奇序列，与H的纯虚奇对称一致；h在负时间不为0，所以不是因果系统。这两道是教材补充计算例；PPT第10页只写“计算举例”，并未给出完整题干。</p>"
+    },
+    {
+      "id": "full-source-problems",
+      "title": "深挖 · 把原PPT综合题补成可解的题",
+      "level": "deep",
+      "sourcePages": [
+        18,
+        20,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        32,
+        33,
+        34,
+        35
+      ],
+      "textbook": {
+        "edition": "方勇第3版（2021）",
+        "printedPages": [
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "pdfPages": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68
+        ]
+      },
+      "bodyHtml": "<p>这里不把长题挤进第一遍。原PPT只写教材页码或例号的地方，已用第3版真实题干对齐；以下保留完整解题入口：</p><ul><li><a href=\"dsp-textbook/dsp-front-07.html#section-5\">复指数的共轭对称性（单栏深讲）</a></li><li><a href=\"dsp-textbook/dsp-front-07.html#section-6\">任意复序列的对称分解推导（单栏深讲）</a></li><li><a href=\"dsp-textbook/dsp-front-08.html#section-5\">例2.1.7：不求X的五个量（单栏深讲）</a></li><li><a href=\"dsp-textbook/dsp-front-08.html#section-6\">例2.1.11：虚部与原点恢复h（单栏深讲）</a></li><li><a href=\"dsp-textbook/dsp-front-08.html#section-7\">例2.1.12：时间实部与半圆频谱约束（单栏深讲）</a></li><li><a href=\"dsp-textbook/dsp-front-08.html#section-8\">PPT自带例3：给定频谱实部恢复实因果h（单栏深讲）</a></li></ul><p>例2.1.7的八个非零样本在n=−3,−1,0,1,3,4,5,7处依次为−1,1,2,1,1,2,1,−1。五问答案依次为6、4π、2、28π、316π；最后一问用∑n²|x(n)|²=158。</p><p><strong>PPT第35页例3的关键闭环：</strong>已知Re H=∑<sub>m=0</sub><sup>5</sup>0.5<sup>m</sup>cos(mω)，先反变换为偶分量；正时间翻倍、负时间清零、原点保留，得h在n=0,…,5依次为1,1/2,1/4,1/8,1/16,1/32，其他为0。把H=∑<sub>m=0</sub><sup>5</sup>0.5<sup>m</sup>e<sup>−jmω</sup>取实部即可复核。</p><p>页码必须区分：课件旧“P38”例2.1.7，在本次第3版是<strong>印刷43–44页／PDF60–61页</strong>；旧P43/P45两例对应第3版印刷48–51页。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/21-example-samples.svg",
+        "alt": "教材例2.1.7的离散样本：负三与七为负一，零和四为二，其余标示为一",
+        "caption": "按教材第3版印刷43页图2.1.2重绘；未把图示样本替换成另一道题。"
+      }
+    }
+  ],
+  "example": {
+    "title": "代表例 · 四个连续的1，怎样变成一条频谱？",
+    "sourcePages": [
+      8,
+      9
+    ],
+    "textbook": {
+      "edition": "方勇第3版（2021）",
+      "printedPages": [
+        40
+      ],
+      "pdfPages": [
+        57
+      ]
+    },
+    "problemHtml": "<p>已知x(n)=1（n=0,1,2,3），其他位置为0。求DTFT，找出一周期内的零点，并用能量检验。</p>",
+    "stepsHtml": "<ol><li>只有四个非零项，所以不用无穷求和：<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Four-term DTFT of R4\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi></mrow></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mn>2</mn><mi>j</mi><mi>ω</mi></mrow></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mn>3</mn><mi>j</mi><mi>ω</mi></mrow></msup></mrow></math></div></li><li>等比求和，再提出一半相位：<div class=\"formula\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\" aria-label=\"Closed form of the R4 DTFT\"><mrow><mrow><mi>X</mi><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo>)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mfrac><mrow><mn>3</mn><mi>ω</mi></mrow><mn>2</mn></mfrac></mrow></msup><mfrac><mrow><mi>sin</mi><mrow><mo>(</mo><mrow><mn>2</mn><mi>ω</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>sin</mi><mrow><mo>(</mo><mfrac><mi>ω</mi><mn>2</mn></mfrac><mo>)</mo></mrow></mrow></mfrac></mrow></math></div></li><li>在0≤ω&lt;2π内，分子为0且分母非零的位置是π/2、π、3π/2。ω=0必须回到四项和，得到4。</li></ol>",
+    "answerHtml": "<p><strong>结果：</strong>幅度取上式的模；频谱以2π重复，三个零点处不标相位。相位并非全程只有−3ω/2，还要考虑正弦比的正负。</p>",
+    "checkHtml": "<p>两项独立检查：X(0)=1+1+1+1=4；时域能量E=4，故∫<sub>−π</sub><sup>π</sup>|X|²dω=8π。</p>"
+  },
+  "pitfalls": [
+    "绝对可和是充分条件，不要写成“充分必要”。",
+    "频移用e^{jω₀n}；时移用e^{−jωn₀}，下标不能调换。",
+    "幅度零点没有相位；反变换与频域周期卷积都不能漏1/(2π)。"
+  ],
+  "deepLinks": [
+    {
+      "label": "DTFT单栏深讲：定义与反变换",
+      "href": "dsp-textbook/dsp-front-03.html"
+    },
+    {
+      "label": "原表与全部综合题：单栏MathML版",
+      "href": "dsp-textbook/dsp-front-08.html"
+    }
+  ],
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "dtft-pair"
+      ],
+      "note": "原封面/提纲合并到学习目标，不增添重复学习量。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "dtft-pair"
+      ],
+      "note": "原封面/提纲合并到学习目标，不增添重复学习量。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "dtft-pair"
+      ],
+      "note": "原封面/提纲合并到学习目标，不增添重复学习量。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "dtft-pair"
+      ]
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "dtft-pair"
+      ]
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "dtft-pair",
+        "transform-examples"
+      ]
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "dtft-pair"
+      ]
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "read-spectrum",
+        "representative-example"
+      ]
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "read-spectrum",
+        "representative-example"
+      ]
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "read-spectrum",
+        "transform-examples"
+      ]
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "operations"
+      ]
+    },
+    {
+      "page": 12,
+      "cardIds": [
+        "dtft-pair"
+      ]
+    },
+    {
+      "page": 13,
+      "cardIds": [
+        "operations"
+      ]
+    },
+    {
+      "page": 14,
+      "cardIds": [
+        "operations"
+      ]
+    },
+    {
+      "page": 15,
+      "cardIds": [
+        "operations"
+      ]
+    },
+    {
+      "page": 16,
+      "cardIds": [
+        "operations"
+      ]
+    },
+    {
+      "page": 17,
+      "cardIds": [
+        "energy"
+      ]
+    },
+    {
+      "page": 18,
+      "cardIds": [
+        "energy",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 19,
+      "cardIds": [
+        "convolution"
+      ]
+    },
+    {
+      "page": 20,
+      "cardIds": [
+        "convolution",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 21,
+      "cardIds": [
+        "convolution"
+      ]
+    },
+    {
+      "page": 22,
+      "cardIds": [
+        "convolution",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 23,
+      "cardIds": [
+        "symmetry"
+      ]
+    },
+    {
+      "page": 24,
+      "cardIds": [
+        "symmetry",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 25,
+      "cardIds": [
+        "symmetry",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 26,
+      "cardIds": [
+        "symmetry",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 27,
+      "cardIds": [
+        "symmetry",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 28,
+      "cardIds": [
+        "symmetry",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 29,
+      "cardIds": [
+        "symmetry"
+      ]
+    },
+    {
+      "page": 30,
+      "cardIds": [
+        "causal-recovery"
+      ]
+    },
+    {
+      "page": 31,
+      "cardIds": [
+        "causal-recovery"
+      ]
+    },
+    {
+      "page": 32,
+      "cardIds": [
+        "operations",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 33,
+      "cardIds": [
+        "symmetry",
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 34,
+      "cardIds": [
+        "full-source-problems"
+      ]
+    },
+    {
+      "page": 35,
+      "cardIds": [
+        "causal-recovery",
+        "full-source-problems"
+      ]
+    }
+  ],
+  "sourceNote": "原PPT保留物理页号；教材另标方勇第3版印刷页/PDF文件页。PPT旧版页码不直接套用。图和公式重绘用于学习，原PPT仍可逐页核对。"
+}

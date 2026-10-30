@@ -22,3 +22,15 @@ const pathDialog=document.querySelector('#learningPathDialog');
 if(pathDialog){const open=document.querySelector('#openLearningPath');open.addEventListener('click',()=>pathDialog.showModal());pathDialog.querySelector('[data-close]').addEventListener('click',()=>pathDialog.close());pathDialog.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(a){pathDialog.close();return;}if(e.target===pathDialog){const r=pathDialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)pathDialog.close();}});}
 })();
 
+
+/* Keep the legacy source reader reachable without forcing it as the main study view. */
+(() => {
+  const nav = document.querySelector('nav.course-links');
+  const chapter = document.body.dataset.courseChapter;
+  if (!nav || !/^dsp-2[12]$/.test(chapter || '') || nav.querySelector('[data-dsp-redraw-entry]')) return;
+  const link = document.createElement('a');
+  link.href = '/study-site/dsp-ch2-redraw.html#' + chapter;
+  link.textContent = '大幅重绘 · 精简速通';
+  link.dataset.dspRedrawEntry = '';
+  nav.prepend(link);
+})();

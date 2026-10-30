@@ -1,0 +1,276 @@
+{
+  "id": "dsp-24",
+  "number": "2.4",
+  "title": "频域采样定理",
+  "brief": "频率只取有限点，时间就按 N 折回。先看折回发生在哪里，再判断能否恢复。",
+  "firstPassMinutes": 20,
+  "deepPassMinutes": 20,
+  "firstPass": [
+    "读5张必学卡，能解释“按余数分盒相加”。",
+    "做四频点恢复五样值的例题，核对N≥M还需要已知支持位置。",
+    "内插证明、无限指数原题及逆滤波首项留到第二遍。"
+  ],
+  "source": {
+    "title": "2.4频域采样定理.pptx",
+    "pageCount": 11,
+    "sha256": "53d6a04b132c0ed66d5feef880e99555033ac6eba57c999f32d94ec1c8377c5e",
+    "editionNote": "本稿核对第3版印刷85–87页；原例2.4.2实核86–87页。旧版P79/P95不可直接套用。",
+    "textbook": {
+      "title": "方勇《数字信号处理——原理与实践》第3版（2021）",
+      "printedPages": [
+        85,
+        87
+      ],
+      "pdfPageOffset": 17,
+      "note": "核对材料不公开；课件旧引页另列。"
+    }
+  },
+  "cards": [
+    {
+      "id": "sampling-question",
+      "title": "只留 N 个频谱值，能恢复什么",
+      "level": "essential",
+      "sourcePages": [
+        1,
+        2,
+        3
+      ],
+      "bodyHtml": "<p>2.3从有限数组算DFT；这里反过来问：对任意长序列的DTFT只取N个等间隔点，再作IDFT，会得到原序列吗？先把输出另记为 x<sub>N</sub>，不能提前当成x。</p><div class=\"formula\"><math aria-label=\"\\omega_k=\\frac{2\\pi k}{N},\\qquad\nX(k)=X(e^{j\\omega_k}),\\qquad k=0,\\ldots,N-1.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>ω</mi><mi>k</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mi>π</mi><mi>k</mi></mrow><mrow><mi>N</mi></mrow></mfrac><mo>,</mo><mspace width=\"2em\"></mspace><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>X</mi><mo stretchy=\"false\">(</mo><msup><mi>e</mi><mrow><mi>j</mi><msub><mi>ω</mi><mi>k</mi></msub></mrow></msup><mo stretchy=\"false\">)</mo><mo>,</mo><mspace width=\"2em\"></mspace><mi>k</mi><mo>=</mo><mn>0</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo>.</mo></mrow></math></div><div class=\"formula\"><math aria-label=\"x_N(n)=\\frac1N\\sum_{k=0}^{N-1}X(k)e^{j2\\pi kn/N},\n\\qquad 0\\le n&lt;N.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>x</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><msup><mi>e</mi><mrow><mi>j</mi><mn>2</mn><mi>π</mi><mi>k</mi><mi>n</mi><mo>/</mo><mi>N</mi></mrow></msup><mo>,</mo><mspace width=\"2em\"></mspace><mn>0</mn><mo>≤</mo><mi>n</mi><mo>&lt;</mo><mi>N</mi><mo>.</mo></mrow></math></div><p>普通函数情形可先假设x绝对可和；用Z变换说明时，要求单位圆属于收敛域。N个频谱值应是复数值，包含相位。</p>",
+      "pitfall": "这是频域采样，不是再次对连续时间信号采样；它对应的混叠发生在时间上。"
+    },
+    {
+      "id": "alias-identity",
+      "title": "关键等式：相隔 N 的样值折到一起",
+      "level": "essential",
+      "sourcePages": [
+        4
+      ],
+      "bodyHtml": "<div class=\"formula\"><math aria-label=\"x_N(n)=\\sum_{r=-\\infty}^{\\infty}x(n+rN),\\qquad 0\\le n&lt;N.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>x</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mrow><mo>∞</mo></mrow></munderover><mi>x</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo>+</mo><mi>r</mi><mi>N</mi><mo stretchy=\"false\">)</mo><mo>,</mo><mspace width=\"2em\"></mspace><mn>0</mn><mo>≤</mo><mi>n</mi><mo>&lt;</mo><mi>N</mi><mo>.</mo></mrow></math></div><p>r遍历整数，表示前后所有周期副本。固定一个n，原序列n、n±N、n±2N…位置的值都会相加。IDFT只保留0…N−1这一段，段外若延拓则按N重复。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/24-residue-fold.svg",
+        "alt": "五点矩形按四个余数盒折回",
+        "caption": "N=4时，原第4点进入第0盒；不是丢掉第4点。"
+      },
+      "pitfall": "原P4写“r为实数”是错误；这里必须为整数。"
+    },
+    {
+      "id": "recover-condition",
+      "title": "何时没有时域混叠",
+      "level": "essential",
+      "sourcePages": [
+        5,
+        6,
+        7
+      ],
+      "bodyHtml": "<p>若已知原序列只在0…M−1有值，且N≥M，主值区间内没有两个非零样值落入同一余数盒；于是x<sub>N</sub>(n)=x(n)，其余位置为0。</p><p>N≥M保证这段内任意序列都不折叠。若N&lt;M，一般只能得到折回后的和，不能唯一分开原样值；特殊零值或抵消不改变一般结论。若原支持区间不从0开始，须知道它的位置并重标索引；“非零点有M个”不等于任意分散的M点都不碰撞。</p><p>无限长序列通常无法用有限N精确恢复；衰减尾部可使混叠误差变小，但不能不加条件地说“点越多必然无误差”。</p>",
+      "check": {
+        "question": "两个脉冲分别在n=0、n=N，N点采样能区分它们吗？",
+        "answerHtml": "<p>不能：它们在全部采样频点的相位相同，IDFT只在第0盒看到两者之和。</p>"
+      }
+    },
+    {
+      "id": "rectangle-recovery",
+      "title": "原图重绘：五点矩形，N 改变了什么",
+      "level": "essential",
+      "sourcePages": [
+        6,
+        8,
+        9,
+        10
+      ],
+      "bodyHtml": "<p>原P8–P10用五个等高样值。按单位高度写成x=[1,1,1,1,1]。N=5时恰好不重叠；N=4时首尾两个1叠为2。书例2.4.1另用N=3和6，也放在同一图里比较。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/24-rectangle-fold.svg",
+        "alt": "五点矩形按N=3、4、5、6折回的主值结果",
+        "caption": "所有小图的横轴都是主值时间位置 n；频率采样越密，时域副本间隔N越大。"
+      },
+      "pitfall": "原P9“周期个数等于N”应改为“周期长度等于N”；副本数仍是无限多个。"
+    },
+    {
+      "id": "recover-spectrum",
+      "title": "恢复整条频谱，先恢复有限数组",
+      "level": "essential",
+      "sourcePages": [
+        2,
+        7
+      ],
+      "bodyHtml": "<p>知道序列确实只占0…N−1时，先由IDFT找回这N个样值，再代回DTFT，就能算任意ω处的频谱。这是精确重构，不是把频谱采样点用直线连起来。</p><p>若原序列已经混叠，下面的内插只能恢复折回数组的频谱，不能自动分开原来相差N的样值。补零同样不会产生新的观测信息。</p>",
+      "check": {
+        "question": "五点矩形补到8点再做DFT，能恢复原五点吗？",
+        "answerHtml": "<p>可以，IDFT恢复五个1和三个0；频谱更密，但原信息没有增加。</p>"
+      }
+    },
+    {
+      "id": "alias-proof",
+      "title": "第二遍：为什么单位根只留下整数倍 N",
+      "level": "deep",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "bodyHtml": "<div class=\"formula\"><math aria-label=\"x_N(n)=\\sum_{m=-\\infty}^{\\infty}x(m)\n\\left[\\frac1N\\sum_{k=0}^{N-1}e^{j2\\pi k(n-m)/N}\\right].\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>x</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mo>−</mo><mo>∞</mo></mrow><mrow><mo>∞</mo></mrow></munderover><mi>x</mi><mo stretchy=\"false\">(</mo><mi>m</mi><mo stretchy=\"false\">)</mo><mrow><mo stretchy=\"true\" fence=\"true\" form=\"prefix\">[</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msubsup><msup><mi>e</mi><mrow><mi>j</mi><mn>2</mn><mi>π</mi><mi>k</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo stretchy=\"false\">)</mo><mo>/</mo><mi>N</mi></mrow></msup><mo stretchy=\"true\" fence=\"true\" form=\"postfix\">]</mo></mrow><mo>.</mo></mrow></math></div><p>括号中是N个单位根的平均。m−n是N的整数倍时每项为1；否则有限等比和为0。被留下的输入位置只能写成m=n+rN，其中r∈ℤ，于是得到折回等式。</p><p>本推导可在绝对可和假设下交换有限频点求和与时间求和；周期序列的冲激DTFT不能不加说明地当作普通点值函数套用。</p>"
+    },
+    {
+      "id": "interpolation",
+      "title": "第二遍：内插核与它的零分母",
+      "level": "deep",
+      "sourcePages": [
+        2,
+        7
+      ],
+      "bodyHtml": "<p>时域支持在0…N−1时，把IDFT代入DTFT，得到：</p><div class=\"formula\"><math aria-label=\"X(e^{j\\omega})=\\frac1N\\sum_{k=0}^{N-1}X(k)D_N(\\omega-2\\pi k/N).\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>X</mi><mo stretchy=\"false\">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><msub><mi>D</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>ω</mi><mo>−</mo><mn>2</mn><mi>π</mi><mi>k</mi><mo>/</mo><mi>N</mi><mo stretchy=\"false\">)</mo><mo>.</mo></mrow></math></div><div class=\"formula\"><math aria-label=\"D_N(\\theta)=\\sum_{n=0}^{N-1}e^{-j\\theta n}\n=e^{-j\\theta(N-1)/2}\\frac{\\sin(N\\theta/2)}{\\sin(\\theta/2)}.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>D</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>θ</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>θ</mi><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>θ</mi><mo stretchy=\"false\">(</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>/</mo><mn>2</mn></mrow></msup><mfrac><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mi>N</mi><mi>θ</mi><mo>/</mo><mn>2</mn><mo stretchy=\"false\">)</mo></mrow><mrow><mi>sin</mi><mo stretchy=\"false\">(</mo><mi>θ</mi><mo>/</mo><mn>2</mn><mo stretchy=\"false\">)</mo></mrow></mfrac><mo>.</mo></mrow></math></div><p>分母为0时回到有限和：θ=2πr时D<sub>N</sub>=N。放回某个采样频率，只对应的核留下N，乘1/N恰好恢复该X(k)。若支持条件不满足，这个公式只重构折回数组的DTFT。</p>"
+    },
+    {
+      "id": "infinite-example",
+      "title": "原书例2.4.2：指数尾巴仍会折回",
+      "level": "deep",
+      "sourcePages": [
+        7,
+        11
+      ],
+      "bodyHtml": "<p>第3版印刷86–87页，课件旧引P79。原题x(n)=aⁿu(n)，0&lt;a&lt;1；在单位圆等距采N点，求x<sub>N</sub>=IDFT[X]。</p><div class=\"formula\"><math aria-label=\"X(z)=\\sum_{n=0}^{\\infty}a^nz^{-n}=\\frac1{1-az^{-1}},\\qquad |z|&gt;a.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>X</mi><mo stretchy=\"false\">(</mo><mi>z</mi><mo stretchy=\"false\">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mo>∞</mo></mrow></munderover><msup><mi>a</mi><mi>n</mi></msup><msup><mi>z</mi><mrow><mo>−</mo><mi>n</mi></mrow></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi>a</mi><msup><mi>z</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></mfrac><mo>,</mo><mspace width=\"2em\"></mspace><mo stretchy=\"false\">|</mo><mi>z</mi><mo stretchy=\"false\">|</mo><mo>&gt;</mo><mi>a</mi><mo>.</mo></mrow></math></div><div class=\"formula\"><math aria-label=\"X(k)=\\frac1{1-aW_N^k}.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><mi>X</mi><mo stretchy=\"false\">(</mo><mi>k</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi>a</mi><msubsup><mi>W</mi><mi>N</mi><mi>k</mi></msubsup></mrow></mfrac><mo>.</mo></mrow></math></div><p>0≤n&lt;N时，只有r≥0的副本有值，按等比和：</p><div class=\"formula\"><math aria-label=\"x_N(n)=a^n+a^{n+N}+a^{n+2N}+\\cdots=\\frac{a^n}{1-a^N}.\" xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><mrow><msub><mi>x</mi><mi>N</mi></msub><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>a</mi><mi>n</mi></msup><mo>+</mo><msup><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mi>N</mi></mrow></msup><mo>+</mo><msup><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>2</mn><mi>N</mi></mrow></msup><mo>+</mo><mo>⋯</mo><mo>=</mo><mfrac><mrow><msup><mi>a</mi><mi>n</mi></msup></mrow><mrow><mn>1</mn><mo>−</mo><msup><mi>a</mi><mi>N</mi></msup></mrow></mfrac><mo>.</mo></mrow></math></div><p>主值区间相对误差为aᴺ/(1−aᴺ)。按原参数a=0.8：N=10约12.03%，N=40约0.0133%。原书N=10图延画了4个周期；IDFT本身仍只返回10点，不能把图上40点当成40点逆变换。</p>",
+      "figure": {
+        "src": "dsp-redraw/assets/24-exponential-fold.svg",
+        "alt": "无限长指数原值与N10、N40折回值的比较",
+        "caption": "曲线均按解析式计算；只比较共同的前10个主值点，不把周期延拓当作原指数继续衰减。"
+      }
+    },
+    {
+      "id": "inverse-filter-reference",
+      "title": "原P11的另一道题：逆滤波边界",
+      "level": "deep",
+      "sourcePages": [
+        11
+      ],
+      "bodyHtml": "<p>原P11同时列例2.6.3（旧引P95），不是第二个“指数尾巴题”。第3版原题在印刷102–103页，讨论H(z)=β/(1−αz⁻¹)，β≠0；N点DFT处理输出后再乘(1−αW<sub>N</sub>ᵏ)/β恢复输入。</p><p>其IDFT实际是除以β的圆周差分：第1到N−1点使用窗口内前一点；第0点却使用第N−1点绕回，而不是线性系统窗口外的y(−1)。因此首项可能不等于原输入首项。完整原题与边界条件见下方可选原例链接，不把课件只列出的例号当作已给题干。</p>"
+    }
+  ],
+  "example": {
+    "title": "用四个频率样本，手算五点矩形的恢复结果",
+    "sourcePages": [
+      8,
+      9,
+      10
+    ],
+    "problemHtml": "<p>x(n)在n=0…4均为1，其余为0。取DTFT在ω=0、π/2、π、3π/2的四个样本，再作4点IDFT。</p>",
+    "stepsHtml": "<ul><li>直接相加五个复指数：四个连续样值在非零频点相消，第五项每次都为1，因此X=[5,1,1,1]。</li><li>IDFT第0项：(5+1+1+1)/4=2。其余三项中，四个单位根相加为0，只留下额外的4/4=1。</li><li>从时域复核：n=0与4折进同一盒，另外三盒各有一个1。</li></ul>",
+    "answerHtml": "<p><strong>x₄=[2,1,1,1]</strong>。这是原序列按4折回的主值，不是原五点数组。若改N=5，可得到[1,1,1,1,1]。</p>",
+    "checkHtml": "<p>结果和仍为5，与频谱直流值X(0)=5一致；第0盒的2不能唯一拆成原来两个样值，说明N&lt;M的恢复障碍。</p>"
+  },
+  "pitfalls": [
+    "频率采样导致时域周期叠加；不要写成时域采样导致的频谱混叠。",
+    "N是时域周期长度，不是周期副本个数；副本索引r必须是整数。",
+    "N≥M针对已知连续支持区间；只留幅度、支持位置未知或无限尾部时不能照搬结论。"
+  ],
+  "deepLinks": [
+    {
+      "label": "原例2.4.2完整慢推导（可选）",
+      "href": "dsp-textbook/dsp-frequency-book-example.html"
+    },
+    {
+      "label": "原例2.6.3：DFT逆滤波与首项边界（可选）",
+      "href": "dsp-textbook/dsp-inverse-filter.html"
+    }
+  ],
+  "pageMap": [
+    {
+      "page": 1,
+      "cardIds": [
+        "sampling-question"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 2,
+      "cardIds": [
+        "sampling-question",
+        "recover-spectrum",
+        "interpolation"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 3,
+      "cardIds": [
+        "sampling-question",
+        "alias-proof"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 4,
+      "cardIds": [
+        "alias-identity",
+        "alias-proof"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 5,
+      "cardIds": [
+        "recover-condition"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 6,
+      "cardIds": [
+        "recover-condition",
+        "rectangle-recovery"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 7,
+      "cardIds": [
+        "recover-condition",
+        "recover-spectrum",
+        "interpolation",
+        "infinite-example"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 8,
+      "cardIds": [
+        "rectangle-recovery"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 9,
+      "cardIds": [
+        "rectangle-recovery"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 10,
+      "cardIds": [
+        "rectangle-recovery"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    },
+    {
+      "page": 11,
+      "cardIds": [
+        "infinite-example",
+        "inverse-filter-reference"
+      ],
+      "note": "重复原页合并到同一知识卡；证明保留在折叠的第二遍。"
+    }
+  ],
+  "textbook": {
+    "printedPages": [
+      85,
+      86,
+      87
+    ],
+    "pdfPages": [
+      102,
+      103,
+      104
+    ]
+  },
+  "sourceNote": "课件引用旧版教材页码；本稿按方勇第3版实际题干核对，旧引页与现书页分列。原书扫描仅作私有核对，不公开。"
+}
