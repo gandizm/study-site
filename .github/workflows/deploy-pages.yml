@@ -42,6 +42,8 @@ jobs:
           python3 tests/dsp-course-math.test.py
           python3 tests/dsp-redraw-math.test.py
           node tests/dsp-progress-preservation.test.cjs
+      - name: Validate closed-surface integral SVGs
+        run: python3 tests/em-closed-integrals.test.py
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
