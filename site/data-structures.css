@@ -4,3 +4,4 @@
 
 .stack-figure>a{display:block;overflow:auto}.stack-figure img{display:block;width:100%;min-width:800px}
 @media print{.stack-figure img{min-width:0}}
+@media print{#q4 .q4-grid{display:block}#q4 .q4-table-scroll{overflow:visible}#q4 th,#q4 td{white-space:normal;font-size:10pt;padding:4px}#q4 .q4-result{break-inside:avoid}.source-note,.q4-source{font-size:9pt}}
