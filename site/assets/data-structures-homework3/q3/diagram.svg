@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="760" viewBox="0 0 1080 760" role="img" aria-labelledby="title desc">
+<title id="title">二维数组按列优先存储：A[1,4]的地址为1120</title>
+<desc id="desc">六行数组的前四列地址表，已知A[3,2]地址1110和A[2,3]地址1115，所求A[1,4]地址1120。每次行号减一、列号加一，地址增加五。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9" fill="none" stroke="#718096" stroke-width="1.5"/></marker></defs>
+<style>text{font-family:'Noto Sans CJK SC','Microsoft YaHei',sans-serif;fill:#15243e}.muted{fill:#5e6d82}.small{font-size:15px}.cell-label{font-size:12px;fill:#5e6d82}.addr{font-size:23px;font-weight:600}.given{fill:#087d72}.target{fill:#6541be}</style>
+<rect width="1080" height="760" rx="20" fill="#f6f8fc"/>
+<text x="54" y="60" font-size="30" font-weight="700">第3题 · 一次向右上，地址增加5</text>
+<text x="54" y="96" font-size="17" class="muted">列优先存储：每列6行；先向下读完一列，再进入下一列。</text>
+
+<text x="143.0" y="145" font-size="16" text-anchor="middle" class="muted">第1列</text>
+<text x="269.0" y="145" font-size="16" text-anchor="middle" class="muted">第2列</text>
+<text x="395.0" y="145" font-size="16" text-anchor="middle" class="muted">第3列</text>
+<text x="521.0" y="145" font-size="16" text-anchor="middle" class="muted">第4列</text>
+<text x="60" y="199" font-size="15" text-anchor="end" class="muted">1</text>
+<text x="60" y="263" font-size="15" text-anchor="end" class="muted">2</text>
+<text x="60" y="327" font-size="15" text-anchor="end" class="muted">3</text>
+<text x="60" y="391" font-size="15" text-anchor="end" class="muted">4</text>
+<text x="60" y="455" font-size="15" text-anchor="end" class="muted">5</text>
+<text x="60" y="519" font-size="15" text-anchor="end" class="muted">6</text>
+<rect x="82" y="162" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="143.0" y="181" text-anchor="middle" class="cell-label">A[1,1]</text>
+<text x="143.0" y="209" text-anchor="middle" class="addr context">1102</text>
+<rect x="208" y="162" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="269.0" y="181" text-anchor="middle" class="cell-label">A[1,2]</text>
+<text x="269.0" y="209" text-anchor="middle" class="addr context">1108</text>
+<rect x="334" y="162" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="395.0" y="181" text-anchor="middle" class="cell-label">A[1,3]</text>
+<text x="395.0" y="209" text-anchor="middle" class="addr context">1114</text>
+<rect x="460" y="162" width="122" height="60" rx="8" fill="#ede6ff" stroke="#9f84dd"/>
+<text x="521.0" y="181" text-anchor="middle" class="cell-label">A[1,4]</text>
+<text x="521.0" y="209" text-anchor="middle" class="addr target">1120</text>
+<rect x="82" y="226" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="143.0" y="245" text-anchor="middle" class="cell-label">A[2,1]</text>
+<text x="143.0" y="273" text-anchor="middle" class="addr context">1103</text>
+<rect x="208" y="226" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="269.0" y="245" text-anchor="middle" class="cell-label">A[2,2]</text>
+<text x="269.0" y="273" text-anchor="middle" class="addr context">1109</text>
+<rect x="334" y="226" width="122" height="60" rx="8" fill="#dcf3ee" stroke="#77bdb2"/>
+<text x="395.0" y="245" text-anchor="middle" class="cell-label">A[2,3]</text>
+<text x="395.0" y="273" text-anchor="middle" class="addr given">1115</text>
+<rect x="460" y="226" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="521.0" y="245" text-anchor="middle" class="cell-label">A[2,4]</text>
+<text x="521.0" y="273" text-anchor="middle" class="addr context">1121</text>
+<rect x="82" y="290" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="143.0" y="309" text-anchor="middle" class="cell-label">A[3,1]</text>
+<text x="143.0" y="337" text-anchor="middle" class="addr context">1104</text>
+<rect x="208" y="290" width="122" height="60" rx="8" fill="#dcf3ee" stroke="#77bdb2"/>
+<text x="269.0" y="309" text-anchor="middle" class="cell-label">A[3,2]</text>
+<text x="269.0" y="337" text-anchor="middle" class="addr given">1110</text>
+<rect x="334" y="290" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="395.0" y="309" text-anchor="middle" class="cell-label">A[3,3]</text>
+<text x="395.0" y="337" text-anchor="middle" class="addr context">1116</text>
+<rect x="460" y="290" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="521.0" y="309" text-anchor="middle" class="cell-label">A[3,4]</text>
+<text x="521.0" y="337" text-anchor="middle" class="addr context">1122</text>
+<rect x="82" y="354" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="143.0" y="373" text-anchor="middle" class="cell-label">A[4,1]</text>
+<text x="143.0" y="401" text-anchor="middle" class="addr context">1105</text>
+<rect x="208" y="354" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="269.0" y="373" text-anchor="middle" class="cell-label">A[4,2]</text>
+<text x="269.0" y="401" text-anchor="middle" class="addr context">1111</text>
+<rect x="334" y="354" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="395.0" y="373" text-anchor="middle" class="cell-label">A[4,3]</text>
+<text x="395.0" y="401" text-anchor="middle" class="addr context">1117</text>
+<rect x="460" y="354" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="521.0" y="373" text-anchor="middle" class="cell-label">A[4,4]</text>
+<text x="521.0" y="401" text-anchor="middle" class="addr context">1123</text>
+<rect x="82" y="418" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="143.0" y="437" text-anchor="middle" class="cell-label">A[5,1]</text>
+<text x="143.0" y="465" text-anchor="middle" class="addr context">1106</text>
+<rect x="208" y="418" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="269.0" y="437" text-anchor="middle" class="cell-label">A[5,2]</text>
+<text x="269.0" y="465" text-anchor="middle" class="addr context">1112</text>
+<rect x="334" y="418" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="395.0" y="437" text-anchor="middle" class="cell-label">A[5,3]</text>
+<text x="395.0" y="465" text-anchor="middle" class="addr context">1118</text>
+<rect x="460" y="418" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="521.0" y="437" text-anchor="middle" class="cell-label">A[5,4]</text>
+<text x="521.0" y="465" text-anchor="middle" class="addr context">1124</text>
+<rect x="82" y="482" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="143.0" y="501" text-anchor="middle" class="cell-label">A[6,1]</text>
+<text x="143.0" y="529" text-anchor="middle" class="addr context">1107</text>
+<rect x="208" y="482" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="269.0" y="501" text-anchor="middle" class="cell-label">A[6,2]</text>
+<text x="269.0" y="529" text-anchor="middle" class="addr context">1113</text>
+<rect x="334" y="482" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="395.0" y="501" text-anchor="middle" class="cell-label">A[6,3]</text>
+<text x="395.0" y="529" text-anchor="middle" class="addr context">1119</text>
+<rect x="460" y="482" width="122" height="60" rx="8" fill="#ffffff" stroke="#dce3ee"/>
+<text x="521.0" y="501" text-anchor="middle" class="cell-label">A[6,4]</text>
+<text x="521.0" y="529" text-anchor="middle" class="addr context">1125</text>
+<line x1="610" y1="174" x2="610" y2="528" stroke="#718096" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="650" y="160" width="376" height="384" rx="16" fill="#ffffff" stroke="#dce3ee"/>
+<text x="674" y="199" font-size="20" font-weight="700">两个已知地址，先求行数</text>
+<text x="674" y="238" font-size="17">1115 − 1110 = m − 1 = 5</text>
+<text x="674" y="273" font-size="24" font-weight="700" class="given">m = 6</text>
+<line x1="674" y1="297" x2="1002" y2="297" stroke="#e3e8f1"/>
+<text x="674" y="333" font-size="18">再向右一列：+6</text>
+<text x="674" y="367" font-size="18">同时向上一行：−1</text>
+<text x="674" y="408" font-size="23" font-weight="700" class="target">1115 + 6 − 1 = 1120</text>
+<text x="674" y="464" font-size="15" class="muted">行优先会得到n = −4，故不成立。</text>
+<text x="674" y="493" font-size="15" class="muted">图中只展示前4列，并非断言n = 4。</text>
+<text x="674" y="520" font-size="15" class="muted">所求元素存在需n ≥ 4。</text>
+<text x="80" y="578" class="small muted">表中数字是地址；绿色为已知，紫色为所求。</text>
+
+<rect x="80" y="606" width="230" height="86" rx="14" fill="#dcf3ee"/><text x="195" y="636" text-anchor="middle" font-size="17">A[3,2]</text><text x="195" y="674" text-anchor="middle" font-size="27" font-weight="700" style="fill:#087d72">1110</text>
+<rect x="397" y="606" width="230" height="86" rx="14" fill="#dcf3ee"/><text x="512" y="636" text-anchor="middle" font-size="17">A[2,3]</text><text x="512" y="674" text-anchor="middle" font-size="27" font-weight="700" style="fill:#087d72">1115</text>
+<rect x="714" y="606" width="230" height="86" rx="14" fill="#ede6ff"/><text x="829" y="636" text-anchor="middle" font-size="17">A[1,4]</text><text x="829" y="674" text-anchor="middle" font-size="27" font-weight="700" style="fill:#6541be">1120</text>
+<text x="351" y="631" text-anchor="middle" class="small muted">+5</text><line x1="324" y1="651" x2="380" y2="651" stroke="#718096" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="668" y="631" text-anchor="middle" class="small muted">+5</text><line x1="641" y1="651" x2="697" y2="651" stroke="#718096" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="80" y="727" font-size="15" class="muted">两次都做同一件事：行号−1、列号+1 ⇒ 地址增加m−1 = 5。</text></svg>

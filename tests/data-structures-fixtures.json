@@ -1,0 +1,1049 @@
+{
+  "q1": [
+    {
+      "step": 0,
+      "label": "初态",
+      "front": 1,
+      "rear": 1,
+      "length": 0,
+      "array": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "logical_queue": [],
+      "occupied_indices": [],
+      "empty_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "full": false,
+      "events": []
+    },
+    {
+      "step": 1,
+      "label": "（1）d、e、b、g、h 入队",
+      "front": 1,
+      "rear": 6,
+      "length": 5,
+      "array": [
+        null,
+        "d",
+        "e",
+        "b",
+        "g",
+        "h",
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "logical_queue": [
+        "d",
+        "e",
+        "b",
+        "g",
+        "h"
+      ],
+      "occupied_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "empty_indices": [
+        0,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "full": false,
+      "events": [
+        {
+          "operation": "enqueue",
+          "value": "d",
+          "index": 1,
+          "status": "accepted",
+          "front_after": 1,
+          "rear_after": 2
+        },
+        {
+          "operation": "enqueue",
+          "value": "e",
+          "index": 2,
+          "status": "accepted",
+          "front_after": 1,
+          "rear_after": 3
+        },
+        {
+          "operation": "enqueue",
+          "value": "b",
+          "index": 3,
+          "status": "accepted",
+          "front_after": 1,
+          "rear_after": 4
+        },
+        {
+          "operation": "enqueue",
+          "value": "g",
+          "index": 4,
+          "status": "accepted",
+          "front_after": 1,
+          "rear_after": 5
+        },
+        {
+          "operation": "enqueue",
+          "value": "h",
+          "index": 5,
+          "status": "accepted",
+          "front_after": 1,
+          "rear_after": 6
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "label": "（2）d、e 出队",
+      "front": 3,
+      "rear": 6,
+      "length": 3,
+      "array": [
+        null,
+        null,
+        null,
+        "b",
+        "g",
+        "h",
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "logical_queue": [
+        "b",
+        "g",
+        "h"
+      ],
+      "occupied_indices": [
+        3,
+        4,
+        5
+      ],
+      "empty_indices": [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "full": false,
+      "events": [
+        {
+          "operation": "dequeue",
+          "value": "d",
+          "index": 1,
+          "status": "removed",
+          "front_after": 2,
+          "rear_after": 6
+        },
+        {
+          "operation": "dequeue",
+          "value": "e",
+          "index": 2,
+          "status": "removed",
+          "front_after": 3,
+          "rear_after": 6
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "label": "（3）i、j、k、l、m 入队",
+      "front": 3,
+      "rear": 0,
+      "length": 8,
+      "array": [
+        null,
+        null,
+        null,
+        "b",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+      ],
+      "logical_queue": [
+        "b",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+      ],
+      "occupied_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "empty_indices": [
+        0,
+        1,
+        2
+      ],
+      "full": false,
+      "events": [
+        {
+          "operation": "enqueue",
+          "value": "i",
+          "index": 6,
+          "status": "accepted",
+          "front_after": 3,
+          "rear_after": 7
+        },
+        {
+          "operation": "enqueue",
+          "value": "j",
+          "index": 7,
+          "status": "accepted",
+          "front_after": 3,
+          "rear_after": 8
+        },
+        {
+          "operation": "enqueue",
+          "value": "k",
+          "index": 8,
+          "status": "accepted",
+          "front_after": 3,
+          "rear_after": 9
+        },
+        {
+          "operation": "enqueue",
+          "value": "l",
+          "index": 9,
+          "status": "accepted",
+          "front_after": 3,
+          "rear_after": 10
+        },
+        {
+          "operation": "enqueue",
+          "value": "m",
+          "index": 10,
+          "status": "accepted",
+          "front_after": 3,
+          "rear_after": 0
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "label": "（4）b 出队",
+      "front": 4,
+      "rear": 0,
+      "length": 7,
+      "array": [
+        null,
+        null,
+        null,
+        null,
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+      ],
+      "logical_queue": [
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+      ],
+      "occupied_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "empty_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "full": false,
+      "events": [
+        {
+          "operation": "dequeue",
+          "value": "b",
+          "index": 3,
+          "status": "removed",
+          "front_after": 4,
+          "rear_after": 0
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "label": "（5）n、o、p 入队，q、r 不能入队",
+      "front": 4,
+      "rear": 3,
+      "length": 10,
+      "array": [
+        "n",
+        "o",
+        "p",
+        null,
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m"
+      ],
+      "logical_queue": [
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p"
+      ],
+      "occupied_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        0,
+        1,
+        2
+      ],
+      "empty_indices": [
+        3
+      ],
+      "full": true,
+      "events": [
+        {
+          "operation": "enqueue",
+          "value": "n",
+          "index": 0,
+          "status": "accepted",
+          "front_after": 4,
+          "rear_after": 1
+        },
+        {
+          "operation": "enqueue",
+          "value": "o",
+          "index": 1,
+          "status": "accepted",
+          "front_after": 4,
+          "rear_after": 2
+        },
+        {
+          "operation": "enqueue",
+          "value": "p",
+          "index": 2,
+          "status": "accepted",
+          "front_after": 4,
+          "rear_after": 3
+        },
+        {
+          "operation": "enqueue",
+          "value": "q",
+          "index": null,
+          "status": "overflow",
+          "front_after": 4,
+          "rear_after": 3
+        },
+        {
+          "operation": "enqueue",
+          "value": "r",
+          "index": null,
+          "status": "overflow",
+          "front_after": 4,
+          "rear_after": 3
+        }
+      ]
+    }
+  ],
+  "q2": {
+    "postfix": [
+      "A",
+      "B",
+      "C",
+      "*",
+      "D",
+      "/",
+      "-",
+      "E",
+      "F",
+      "**",
+      "+"
+    ],
+    "steps": [
+      {
+        "step": 0,
+        "token": "—",
+        "action": "初始化：NS 置空，OS 压入栈底标记 #",
+        "NS": [],
+        "OS": [
+          "#"
+        ],
+        "kind": "init"
+      },
+      {
+        "step": 1,
+        "token": "A",
+        "action": "操作数 A 入 NS",
+        "NS": [
+          "A"
+        ],
+        "OS": [
+          "#"
+        ],
+        "kind": "push_operand"
+      },
+      {
+        "step": 2,
+        "token": "-",
+        "action": "- 的优先级高于 #，- 入 OS",
+        "NS": [
+          "A"
+        ],
+        "OS": [
+          "#",
+          "-"
+        ],
+        "kind": "push_operator"
+      },
+      {
+        "step": 3,
+        "token": "B",
+        "action": "操作数 B 入 NS",
+        "NS": [
+          "A",
+          "B"
+        ],
+        "OS": [
+          "#",
+          "-"
+        ],
+        "kind": "push_operand"
+      },
+      {
+        "step": 4,
+        "token": "*",
+        "action": "* 的优先级高于 -，* 入 OS",
+        "NS": [
+          "A",
+          "B"
+        ],
+        "OS": [
+          "#",
+          "-",
+          "*"
+        ],
+        "kind": "push_operator"
+      },
+      {
+        "step": 5,
+        "token": "C",
+        "action": "操作数 C 入 NS",
+        "NS": [
+          "A",
+          "B",
+          "C"
+        ],
+        "OS": [
+          "#",
+          "-",
+          "*"
+        ],
+        "kind": "push_operand"
+      },
+      {
+        "step": 6,
+        "token": "/",
+        "action": "/ 与栈顶 * 同级，先弹出 *，计算 B*C → T1；/ 暂不入栈",
+        "NS": [
+          "A",
+          "T1"
+        ],
+        "OS": [
+          "#",
+          "-"
+        ],
+        "kind": "reduce"
+      },
+      {
+        "step": 7,
+        "token": "/（仍为当前符号）",
+        "action": "/ 的优先级高于 -，/ 入 OS",
+        "NS": [
+          "A",
+          "T1"
+        ],
+        "OS": [
+          "#",
+          "-",
+          "/"
+        ],
+        "kind": "push_operator"
+      },
+      {
+        "step": 8,
+        "token": "D",
+        "action": "操作数 D 入 NS",
+        "NS": [
+          "A",
+          "T1",
+          "D"
+        ],
+        "OS": [
+          "#",
+          "-",
+          "/"
+        ],
+        "kind": "push_operand"
+      },
+      {
+        "step": 9,
+        "token": "+",
+        "action": "+ 的优先级低于 /，先计算 T1/D → T2；+ 暂不入栈",
+        "NS": [
+          "A",
+          "T2"
+        ],
+        "OS": [
+          "#",
+          "-"
+        ],
+        "kind": "reduce"
+      },
+      {
+        "step": 10,
+        "token": "+（仍为当前符号）",
+        "action": "+ 与栈顶 - 同级，再计算 A-T2 → T3；+ 仍不入栈",
+        "NS": [
+          "T3"
+        ],
+        "OS": [
+          "#"
+        ],
+        "kind": "reduce"
+      },
+      {
+        "step": 11,
+        "token": "+（仍为当前符号）",
+        "action": "+ 的优先级高于 #，+ 入 OS",
+        "NS": [
+          "T3"
+        ],
+        "OS": [
+          "#",
+          "+"
+        ],
+        "kind": "push_operator"
+      },
+      {
+        "step": 12,
+        "token": "E",
+        "action": "操作数 E 入 NS",
+        "NS": [
+          "T3",
+          "E"
+        ],
+        "OS": [
+          "#",
+          "+"
+        ],
+        "kind": "push_operand"
+      },
+      {
+        "step": 13,
+        "token": "**",
+        "action": "** 的优先级高于 +，** 整体入 OS",
+        "NS": [
+          "T3",
+          "E"
+        ],
+        "OS": [
+          "#",
+          "+",
+          "**"
+        ],
+        "kind": "push_operator"
+      },
+      {
+        "step": 14,
+        "token": "F",
+        "action": "操作数 F 入 NS",
+        "NS": [
+          "T3",
+          "E",
+          "F"
+        ],
+        "OS": [
+          "#",
+          "+",
+          "**"
+        ],
+        "kind": "push_operand"
+      },
+      {
+        "step": 15,
+        "token": "#",
+        "action": "# 的优先级低于 **，先计算 E**F → T4",
+        "NS": [
+          "T3",
+          "T4"
+        ],
+        "OS": [
+          "#",
+          "+"
+        ],
+        "kind": "reduce"
+      },
+      {
+        "step": 16,
+        "token": "#（仍为当前符号）",
+        "action": "# 的优先级低于 +，再计算 T3+T4 → T5",
+        "NS": [
+          "T5"
+        ],
+        "OS": [
+          "#"
+        ],
+        "kind": "reduce"
+      },
+      {
+        "step": 17,
+        "token": "#（仍为当前符号）",
+        "action": "输入 # 与栈底 # 相遇，停止；NS 栈顶 T5 为结果",
+        "NS": [
+          "T5"
+        ],
+        "OS": [
+          "#"
+        ],
+        "kind": "stop"
+      }
+    ],
+    "reductions": [
+      {
+        "name": "T1",
+        "left": "B",
+        "operator": "*",
+        "right": "C",
+        "value": "B*C"
+      },
+      {
+        "name": "T2",
+        "left": "T1",
+        "operator": "/",
+        "right": "D",
+        "value": "(B*C)/D"
+      },
+      {
+        "name": "T3",
+        "left": "A",
+        "operator": "-",
+        "right": "T2",
+        "value": "A-(B*C)/D"
+      },
+      {
+        "name": "T4",
+        "left": "E",
+        "operator": "**",
+        "right": "F",
+        "value": "E**F"
+      },
+      {
+        "name": "T5",
+        "left": "T3",
+        "operator": "+",
+        "right": "T4",
+        "value": "A-(B*C)/D+E**F"
+      }
+    ]
+  },
+  "q4": {
+    "A": {
+      "mu": 6,
+      "nu": 6,
+      "tu": 8,
+      "matrix": [
+        [
+          15,
+          0,
+          0,
+          22,
+          0,
+          -15
+        ],
+        [
+          0,
+          11,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          91,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          28,
+          0,
+          0,
+          0
+        ]
+      ],
+      "triples": [
+        [
+          1,
+          1,
+          15
+        ],
+        [
+          1,
+          4,
+          22
+        ],
+        [
+          1,
+          6,
+          -15
+        ],
+        [
+          2,
+          2,
+          11
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          -6
+        ],
+        [
+          5,
+          1,
+          91
+        ],
+        [
+          6,
+          3,
+          28
+        ]
+      ],
+      "num": [
+        3,
+        2,
+        1,
+        0,
+        1,
+        1
+      ],
+      "cpot": [
+        1,
+        4,
+        6,
+        7,
+        7,
+        8
+      ]
+    },
+    "B": {
+      "mu": 9,
+      "nu": 9,
+      "tu": 17,
+      "matrix": [
+        [
+          8,
+          0,
+          0,
+          0,
+          -13,
+          0,
+          0,
+          0,
+          26
+        ],
+        [
+          15,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          -3,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          -12,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          30
+        ]
+      ],
+      "triples": [
+        [
+          1,
+          1,
+          8
+        ],
+        [
+          1,
+          5,
+          -13
+        ],
+        [
+          1,
+          9,
+          26
+        ],
+        [
+          2,
+          1,
+          15
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          2,
+          8,
+          5
+        ],
+        [
+          3,
+          2,
+          -3
+        ],
+        [
+          3,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          4,
+          8,
+          4
+        ],
+        [
+          5,
+          3,
+          -12
+        ],
+        [
+          6,
+          2,
+          2
+        ],
+        [
+          7,
+          4,
+          4
+        ],
+        [
+          8,
+          1,
+          7
+        ],
+        [
+          9,
+          1,
+          12
+        ],
+        [
+          9,
+          4,
+          2
+        ],
+        [
+          9,
+          9,
+          30
+        ]
+      ],
+      "num": [
+        3,
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "cpot": [
+        1,
+        4,
+        7,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  }
+}

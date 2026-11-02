@@ -1,0 +1,173 @@
+{
+  "course": "数据结构与算法基础",
+  "term": "2026–2027年度秋季学期",
+  "source_date": "2026-11-02",
+  "page_numbering": "PDF物理页；一页可能包含多张课件",
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "第一章绪论",
+      "original_filename": "第一章绪论.pdf",
+      "pdf_pages": 11,
+      "sha256": "119d67725cd1a7e5f9b1eb199ac41c7d9360639cd2e3724f3135d9fd1d62b824",
+      "bytes": 1457567,
+      "source_pdf": "courses/data-structures/ch1/source.pdf",
+      "reader": "data-structures-ch1.html",
+      "page_images": [
+        "courses/data-structures/ch1/pages/p01.webp",
+        "courses/data-structures/ch1/pages/p02.webp",
+        "courses/data-structures/ch1/pages/p03.webp",
+        "courses/data-structures/ch1/pages/p04.webp",
+        "courses/data-structures/ch1/pages/p05.webp",
+        "courses/data-structures/ch1/pages/p06.webp",
+        "courses/data-structures/ch1/pages/p07.webp",
+        "courses/data-structures/ch1/pages/p08.webp",
+        "courses/data-structures/ch1/pages/p09.webp",
+        "courses/data-structures/ch1/pages/p10.webp",
+        "courses/data-structures/ch1/pages/p11.webp"
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "第二章线性表",
+      "original_filename": "第二章线性表(2).pdf",
+      "pdf_pages": 10,
+      "sha256": "32fc49eaae28dc86e4551cf69d40dee3b94a8b12eb3e180844a108e6fca37d96",
+      "bytes": 624349,
+      "source_pdf": "courses/data-structures/ch2/source.pdf",
+      "reader": "data-structures-ch2.html",
+      "page_images": [
+        "courses/data-structures/ch2/pages/p01.webp",
+        "courses/data-structures/ch2/pages/p02.webp",
+        "courses/data-structures/ch2/pages/p03.webp",
+        "courses/data-structures/ch2/pages/p04.webp",
+        "courses/data-structures/ch2/pages/p05.webp",
+        "courses/data-structures/ch2/pages/p06.webp",
+        "courses/data-structures/ch2/pages/p07.webp",
+        "courses/data-structures/ch2/pages/p08.webp",
+        "courses/data-structures/ch2/pages/p09.webp",
+        "courses/data-structures/ch2/pages/p10.webp"
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "第三章栈和队列",
+      "original_filename": "第三章栈和队列(2).pdf",
+      "pdf_pages": 7,
+      "sha256": "64a1af50f24e129889bbcafb775f4579abafd94a4152551b4e64b88ab61345cc",
+      "bytes": 570499,
+      "source_pdf": "courses/data-structures/ch3/source.pdf",
+      "reader": "data-structures-ch3.html",
+      "page_images": [
+        "courses/data-structures/ch3/pages/p01.webp",
+        "courses/data-structures/ch3/pages/p02.webp",
+        "courses/data-structures/ch3/pages/p03.webp",
+        "courses/data-structures/ch3/pages/p04.webp",
+        "courses/data-structures/ch3/pages/p05.webp",
+        "courses/data-structures/ch3/pages/p06.webp",
+        "courses/data-structures/ch3/pages/p07.webp"
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "第四章数组",
+      "original_filename": "第四章数组(1).pdf",
+      "pdf_pages": 5,
+      "sha256": "65b6e806ce22009ed38675f3f4260b2af6e68ccc5c862887280a044461ef7d5c",
+      "bytes": 453039,
+      "source_pdf": "courses/data-structures/ch4/source.pdf",
+      "reader": "data-structures-ch4.html",
+      "page_images": [
+        "courses/data-structures/ch4/pages/p01.webp",
+        "courses/data-structures/ch4/pages/p02.webp",
+        "courses/data-structures/ch4/pages/p03.webp",
+        "courses/data-structures/ch4/pages/p04.webp",
+        "courses/data-structures/ch4/pages/p05.webp"
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "第五章树和二叉树（不含线索树）",
+      "original_filename": "第五章树和二叉树（不含线索树）(2).pdf",
+      "pdf_pages": 9,
+      "sha256": "f793d81fbc2e70eae16a5c4063d9a116e24f19f31468d0ab74179cbbc1f584d6",
+      "bytes": 1661406,
+      "source_pdf": "courses/data-structures/ch5/source.pdf",
+      "reader": "data-structures-ch5.html",
+      "page_images": [
+        "courses/data-structures/ch5/pages/p01.webp",
+        "courses/data-structures/ch5/pages/p02.webp",
+        "courses/data-structures/ch5/pages/p03.webp",
+        "courses/data-structures/ch5/pages/p04.webp",
+        "courses/data-structures/ch5/pages/p05.webp",
+        "courses/data-structures/ch5/pages/p06.webp",
+        "courses/data-structures/ch5/pages/p07.webp",
+        "courses/data-structures/ch5/pages/p08.webp",
+        "courses/data-structures/ch5/pages/p09.webp"
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "第六章图",
+      "original_filename": "第六章图(2).pdf",
+      "pdf_pages": 10,
+      "sha256": "0b596c4ff455fdd500204c82793ecac839939cc5758ac7238e55b198e89c692f",
+      "bytes": 1521458,
+      "source_pdf": "courses/data-structures/ch6/source.pdf",
+      "reader": "data-structures-ch6.html",
+      "page_images": [
+        "courses/data-structures/ch6/pages/p01.webp",
+        "courses/data-structures/ch6/pages/p02.webp",
+        "courses/data-structures/ch6/pages/p03.webp",
+        "courses/data-structures/ch6/pages/p04.webp",
+        "courses/data-structures/ch6/pages/p05.webp",
+        "courses/data-structures/ch6/pages/p06.webp",
+        "courses/data-structures/ch6/pages/p07.webp",
+        "courses/data-structures/ch6/pages/p08.webp",
+        "courses/data-structures/ch6/pages/p09.webp",
+        "courses/data-structures/ch6/pages/p10.webp"
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "第七章查找（不含B-树）",
+      "original_filename": "第七章查找（不含B-树）(2).pdf",
+      "pdf_pages": 10,
+      "sha256": "dd5e74eeca0d7dfa06662b08bac673629f88a7bbaa5b30b3bc3e4857dffa7858",
+      "bytes": 1935045,
+      "source_pdf": "courses/data-structures/ch7/source.pdf",
+      "reader": "data-structures-ch7.html",
+      "page_images": [
+        "courses/data-structures/ch7/pages/p01.webp",
+        "courses/data-structures/ch7/pages/p02.webp",
+        "courses/data-structures/ch7/pages/p03.webp",
+        "courses/data-structures/ch7/pages/p04.webp",
+        "courses/data-structures/ch7/pages/p05.webp",
+        "courses/data-structures/ch7/pages/p06.webp",
+        "courses/data-structures/ch7/pages/p07.webp",
+        "courses/data-structures/ch7/pages/p08.webp",
+        "courses/data-structures/ch7/pages/p09.webp",
+        "courses/data-structures/ch7/pages/p10.webp"
+      ]
+    },
+    {
+      "chapter": 8,
+      "title": "第八章排序",
+      "original_filename": "第八章排序(2).pdf",
+      "pdf_pages": 7,
+      "sha256": "002a537f36f77c1f7f5bde7972de87ee3918d331e63eed3016714ce6736958a8",
+      "bytes": 2047088,
+      "source_pdf": "courses/data-structures/ch8/source.pdf",
+      "reader": "data-structures-ch8.html",
+      "page_images": [
+        "courses/data-structures/ch8/pages/p01.webp",
+        "courses/data-structures/ch8/pages/p02.webp",
+        "courses/data-structures/ch8/pages/p03.webp",
+        "courses/data-structures/ch8/pages/p04.webp",
+        "courses/data-structures/ch8/pages/p05.webp",
+        "courses/data-structures/ch8/pages/p06.webp",
+        "courses/data-structures/ch8/pages/p07.webp"
+      ]
+    }
+  ]
+}

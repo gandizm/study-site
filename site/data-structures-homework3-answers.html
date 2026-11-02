@@ -1,0 +1,191 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>作业3 · 独立答案 · 数据结构伴学</title><link rel="stylesheet" href="/study-site/course-hub.css"><link rel="stylesheet" href="/study-site/data-structures.css?v=20261102"></head><body class="answer-sheet"><a class="skip-link" href="#main">跳到正文</a><main id="main"><nav class="course-nav"><a href="/study-site/courses.html">学习首页</a><a href="/study-site/data-structures.html">数据结构课程</a><a href="/study-site/data-structures-homework3.html">作业3 · 逐题讲解</a></nav><header><p class="eyebrow">HOMEWORK 03 · ANSWER SHEET</p><h1>数据结构与算法基础 · 作业3</h1><p class="identity-line">姓名：____________　学号：____________　班级：____________</p><p class="no-print">这是独立答案页，包含必要约定、完整状态表与矩阵结果；不会自动提交。</p></header><div class="actions no-print"><button type="button" data-print>打印 / 另存为 PDF</button><a class="button" href="/study-site/data-structures-homework3-answers.txt" download>下载答案 TXT</a><a href="/study-site/data-structures-homework3.html">返回图解教学</a></div><section id="q1" class="homework-question">
+<h2>作业3 · 题1：循环队列</h2>
+<p>CQ[0:10]为一循环队列，初态front＝rear＝1，画出下列操作后队的头、尾指示器状态。（1）d,e,b,g,h入队；（2）d, e出队；（3）i,j,k,l,m入队；（4）b出队；（5）n,o,p,q,r入队</p>
+<p>采用课件约定：front指队头元素，rear指队尾下一位置；11格留空1格，最多存10个元素。</p>
+<div class="table-scroll"><table><thead><tr><th>操作后</th><th>front</th><th>rear</th><th>长度</th><th>队头 → 队尾</th></tr></thead><tbody><tr><th scope="row">（1）</th><td>1</td><td>6</td><td>5</td><td>d, e, b, g, h</td></tr><tr><th scope="row">（2）</th><td>3</td><td>6</td><td>3</td><td>b, g, h</td></tr><tr><th scope="row">（3）</th><td>3</td><td>0</td><td>8</td><td>b, g, h, i, j, k, l, m</td></tr><tr><th scope="row">（4）</th><td>4</td><td>0</td><td>7</td><td>g, h, i, j, k, l, m</td></tr><tr><th scope="row">（5）</th><td>4</td><td>3</td><td>10</td><td>g, h, i, j, k, l, m, n, o, p</td></tr></tbody></table></div>
+<p>各步11格位置如下；F标出front，R标出rear，—表示不在当前有效队列中。</p>
+<div class="table-scroll"><table class="queue-array-table"><thead><tr><th>操作后 / 下标</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr></thead><tbody><tr><th scope="row">（1）</th><td>—</td><td>d <small>F</small></td><td>e</td><td>b</td><td>g</td><td>h</td><td>— <small>R</small></td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><th scope="row">（2）</th><td>—</td><td>—</td><td>—</td><td>b <small>F</small></td><td>g</td><td>h</td><td>— <small>R</small></td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><th scope="row">（3）</th><td>— <small>R</small></td><td>—</td><td>—</td><td>b <small>F</small></td><td>g</td><td>h</td><td>i</td><td>j</td><td>k</td><td>l</td><td>m</td></tr><tr><th scope="row">（4）</th><td>— <small>R</small></td><td>—</td><td>—</td><td>—</td><td>g <small>F</small></td><td>h</td><td>i</td><td>j</td><td>k</td><td>l</td><td>m</td></tr><tr><th scope="row">（5）</th><td>n</td><td>o</td><td>p</td><td>— <small>R</small></td><td>g <small>F</small></td><td>h</td><td>i</td><td>j</td><td>k</td><td>l</td><td>m</td></tr></tbody></table></div>
+<p>第（5）步n、o、p入队成功后，front=4、rear=3，满足(rear+1)%11=front，队满。q上溢，r也不能入队（若遇错即停止，则r未执行）；指针和队列不再改变。</p>
+</section><section id="q2" class="homework-question"><h2>第2题 · 表达式双栈</h2><p>表达式：<code>A-B*C/D+E**F</code>。画NS、OS的变化并给出后缀式。</p><p>NS为操作数及运算结果栈，OS为运算符栈。按课件算法在表达式末尾补#：A-B*C/D+E**F#。初始NS为空，OS中只有#。
+以下所有横排栈内容均按“栈底→栈顶”书写。</p>
+<p>T1=B*C；T2=T1/D；T3=A-T2；T4=E**F；T5=T3+T4。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr class="header">
+<th>步</th>
+<th>当前符号</th>
+<th>操作</th>
+<th>NS（底→顶）</th>
+<th>OS（底→顶）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td><code>—</code></td>
+<td>初始化：NS 置空，OS 压入栈底标记 #</td>
+<td><code>∅</code></td>
+<td><code>[ # ]</code></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td><code>A</code></td>
+<td>操作数 A 入 NS</td>
+<td><code>[ A ]</code></td>
+<td><code>[ # ]</code></td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td><code>-</code></td>
+<td>- 的优先级高于 #，- 入 OS</td>
+<td><code>[ A ]</code></td>
+<td><code>[ #, - ]</code></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><code>B</code></td>
+<td>操作数 B 入 NS</td>
+<td><code>[ A, B ]</code></td>
+<td><code>[ #, - ]</code></td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td><code>*</code></td>
+<td>* 的优先级高于 -，* 入 OS</td>
+<td><code>[ A, B ]</code></td>
+<td><code>[ #, -, * ]</code></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td><code>C</code></td>
+<td>操作数 C 入 NS</td>
+<td><code>[ A, B, C ]</code></td>
+<td><code>[ #, -, * ]</code></td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td><code>/</code></td>
+<td>/ 与栈顶 * 同级，先弹出 *，计算 B*C → T1；/ 暂不入栈</td>
+<td><code>[ A, T1 ]</code></td>
+<td><code>[ #, - ]</code></td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td><code>/（仍为当前符号）</code></td>
+<td>/ 的优先级高于 -，/ 入 OS</td>
+<td><code>[ A, T1 ]</code></td>
+<td><code>[ #, -, / ]</code></td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td><code>D</code></td>
+<td>操作数 D 入 NS</td>
+<td><code>[ A, T1, D ]</code></td>
+<td><code>[ #, -, / ]</code></td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td><code>+</code></td>
+<td>+ 的优先级低于 /，先计算 T1/D → T2；+ 暂不入栈</td>
+<td><code>[ A, T2 ]</code></td>
+<td><code>[ #, - ]</code></td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td><code>+（仍为当前符号）</code></td>
+<td>+ 与栈顶 - 同级，再计算 A-T2 → T3；+ 仍不入栈</td>
+<td><code>[ T3 ]</code></td>
+<td><code>[ # ]</code></td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td><code>+（仍为当前符号）</code></td>
+<td>+ 的优先级高于 #，+ 入 OS</td>
+<td><code>[ T3 ]</code></td>
+<td><code>[ #, + ]</code></td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td><code>E</code></td>
+<td>操作数 E 入 NS</td>
+<td><code>[ T3, E ]</code></td>
+<td><code>[ #, + ]</code></td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td><code>**</code></td>
+<td>** 的优先级高于 +，** 整体入 OS</td>
+<td><code>[ T3, E ]</code></td>
+<td><code>[ #, +, ** ]</code></td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td><code>F</code></td>
+<td>操作数 F 入 NS</td>
+<td><code>[ T3, E, F ]</code></td>
+<td><code>[ #, +, ** ]</code></td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td><code>#</code></td>
+<td># 的优先级低于 **，先计算 E**F → T4</td>
+<td><code>[ T3, T4 ]</code></td>
+<td><code>[ #, + ]</code></td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td><code>#（仍为当前符号）</code></td>
+<td># 的优先级低于 +，再计算 T3+T4 → T5</td>
+<td><code>[ T5 ]</code></td>
+<td><code>[ # ]</code></td>
+</tr>
+<tr class="even">
+<td>17</td>
+<td><code>#（仍为当前符号）</code></td>
+<td>输入 # 与栈底 # 相遇，停止；NS 栈顶 T5 为结果</td>
+<td><code>[ T5 ]</code></td>
+<td><code>[ # ]</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>最终NS=[T5]、OS=[#]，输入#与栈底#相遇，求值结束。</p>
+<p><strong>相应后缀表达式：</strong>
+<code>A B C * D / - E F ** +</code></p>
+<p><strong>课程依据：</strong>《第三章栈和队列(2).pdf》第3页“3.2.2
+表达式的计算”，已核对原文与栈图。</p>
+<figure class="diagram-scroll"><img src="/study-site/assets/data-structures-homework3/q2/stack-steps.svg" alt="18个NS/OS双栈状态，与本题表格逐行对应。"><figcaption>栈图上端为栈顶，顺序从左到右、从上到下。</figcaption></figure></section><section id="q3" class="homework-question"><h2>第3题 · 二维数组地址</h2><p>有一个二维数组A[1:m,1:n]，假设A[3,2]地址为1110，A[2,3]地址为1115，若每个单元占一个空间，问A[1,4]的地址是多少？</p>
+<p>设B=LOC(A[1,1])。若按行优先存储，则</p>
+<p>1115−1110=(B+n+2)−(B+2n+1)=1−n，</p>
+<p>得n=−4，不符合数组列数为正整数的条件，所以本题应按列优先存储。</p>
+<p>按列优先且每个元素占1个存储单元，有</p>
+<p>LOC(A[i,j])=B+(j−1)m+(i−1)。</p>
+<p>由已知条件：</p>
+<p>B+m+2=1110，B+2m+1=1115。</p>
+<p>两式相减得m−1=5，即m=6，进而B=1102。因此</p>
+<p>LOC(A[1,4])=1102+(4−1)×6+(1−1)=<strong>1120</strong>。</p>
+<p>答：A[1,4]的地址为
+<strong>1120</strong>。（所求元素存在需n≥4；n的具体值不影响结果。）</p>
+</section><style>
+#q4 .q4-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:1.3rem;margin:1rem 0}
+#q4 .q4-table-scroll{max-width:100%;overflow-x:auto;margin:.8rem 0}
+#q4 table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+#q4 caption{text-align:left;font-weight:700;margin:0 0 .5rem}
+#q4 th,#q4 td{text-align:center;border:1px solid #cbd5e1;padding:.4rem .55rem;white-space:nowrap}
+#q4 th{background:#edf5ff;color:#18344f}
+#q4 .q4-zero{color:#8292a6}#q4 .q4-nonzero{color:#075985;font-weight:700;background:#ecfeff}
+#q4 .q4-matrix td{min-width:2rem}
+#q4 .q4-note{border-left:4px solid #0e7490;background:#eefaff;padding:1rem 1.2rem;border-radius:4px;color:#17344b;margin:1rem 0}
+#q4 .q4-warning{border-left-color:#b7791f;background:#fff9e8}
+#q4 pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102938;color:#eff9ff;padding:1rem;border-radius:10px;line-height:1.7}
+#q4 .q4-figure{width:100%;height:auto;display:block}#q4 .q4-source{font-size:.87rem;color:#526577}
+</style>
+<section id="q4" class="homework-question" aria-labelledby="q4-title">
+<h2 id="q4-title">第4题｜把稀疏矩阵变成三元组</h2>
+<p><strong>原题（简答题，2分）：</strong>采用三元组和带行辅助向量形式，表示下列稀疏矩阵：</p>
+<div class="q4-grid"><div class="q4-table-scroll"><table class="q4-matrix"><caption>A（6×6）</caption><tbody><tr><td class="q4-nonzero">15</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">22</td><td class="q4-zero">0</td><td class="q4-nonzero">-15</td></tr><tr><td class="q4-zero">0</td><td class="q4-nonzero">11</td><td class="q4-nonzero">3</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">-6</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-nonzero">91</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">28</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr></tbody></table></div><div class="q4-table-scroll"><table class="q4-matrix"><caption>B（9×9）</caption><tbody><tr><td class="q4-nonzero">8</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">-13</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">26</td></tr><tr><td class="q4-nonzero">15</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">6</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">5</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-nonzero">-3</td><td class="q4-zero">0</td><td class="q4-nonzero">4</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">2</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">4</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">-12</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-nonzero">2</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">4</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-nonzero">7</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-nonzero">12</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">2</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">30</td></tr></tbody></table></div></div>
+<div class="q4-note"><strong>先统一课件约定：</strong>把左矩阵称为 A、右矩阵称为 B；行、列与三元组序号均从 <strong>1</strong> 开始，<code>data[0]</code> 未用。只记录非零元素，按“先行后列”排列。课件的行辅助向量包括 <code>num</code> 与 <code>cpot</code> 两行。</div>
+<div class="q4-grid"><article class="q4-result"><h3>A：6×6，共 8 个非零元素</h3>
+<div class="q4-table-scroll"><table><caption>矩阵 A 的三元组表</caption><thead><tr><th>序号 k</th><th>row</th><th>col</th><th>e</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td><td>15</td></tr><tr><td>2</td><td>1</td><td>4</td><td>22</td></tr><tr><td>3</td><td>1</td><td>6</td><td>-15</td></tr><tr><td>4</td><td>2</td><td>2</td><td>11</td></tr><tr><td>5</td><td>2</td><td>3</td><td>3</td></tr><tr><td>6</td><td>3</td><td>4</td><td>-6</td></tr><tr><td>7</td><td>5</td><td>1</td><td>91</td></tr><tr><td>8</td><td>6</td><td>3</td><td>28</td></tr></tbody></table></div><div class="q4-table-scroll"><table><caption>矩阵 A 的行辅助向量</caption><thead><tr><th>row</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><th>num</th><td>3</td><td>2</td><td>1</td><td>0</td><td>1</td><td>1</td></tr><tr><th>cpot</th><td>1</td><td>4</td><td>6</td><td>7</td><td>7</td><td>8</td></tr></tbody></table></div><p><strong>元信息：</strong><code>mu=6, nu=6, tu=8</code>。元信息不计入非零元素三元组。</p></article><article class="q4-result"><h3>B：9×9，共 17 个非零元素</h3>
+<div class="q4-table-scroll"><table><caption>矩阵 B 的三元组表</caption><thead><tr><th>序号 k</th><th>row</th><th>col</th><th>e</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td><td>8</td></tr><tr><td>2</td><td>1</td><td>5</td><td>-13</td></tr><tr><td>3</td><td>1</td><td>9</td><td>26</td></tr><tr><td>4</td><td>2</td><td>1</td><td>15</td></tr><tr><td>5</td><td>2</td><td>4</td><td>6</td></tr><tr><td>6</td><td>2</td><td>8</td><td>5</td></tr><tr><td>7</td><td>3</td><td>2</td><td>-3</td></tr><tr><td>8</td><td>3</td><td>4</td><td>4</td></tr><tr><td>9</td><td>4</td><td>4</td><td>2</td></tr><tr><td>10</td><td>4</td><td>8</td><td>4</td></tr><tr><td>11</td><td>5</td><td>3</td><td>-12</td></tr><tr><td>12</td><td>6</td><td>2</td><td>2</td></tr><tr><td>13</td><td>7</td><td>4</td><td>4</td></tr><tr><td>14</td><td>8</td><td>1</td><td>7</td></tr><tr><td>15</td><td>9</td><td>1</td><td>12</td></tr><tr><td>16</td><td>9</td><td>4</td><td>2</td></tr><tr><td>17</td><td>9</td><td>9</td><td>30</td></tr></tbody></table></div><div class="q4-table-scroll"><table><caption>矩阵 B 的行辅助向量</caption><thead><tr><th>row</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><th>num</th><td>3</td><td>3</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>3</td></tr><tr><th>cpot</th><td>1</td><td>4</td><td>7</td><td>9</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr></tbody></table></div><p><strong>元信息：</strong><code>mu=9, nu=9, tu=17</code>。元信息不计入非零元素三元组。</p></article></div>
+<div class="q4-note q4-warning"><strong>本题最容易错的地方：</strong>A 的第4行是空行，<code>num[4]=0</code>，但 <code>cpot[4]=7</code>，<strong>不是0</strong>。于是 <code>cpot[5]=7+0=7</code>。两个起始边界相同，恰好说明中间这一行没有任何三元组。</div>
+</section><footer>本页是作业答案暂存，不代表已提交到课程平台。<br>原题按用户给出的题干与矩阵图整理；公式和存储约定按对应原课件核对。</footer></main><script src="/study-site/data-structures-homework.js?v=20261102"></script></body></html>

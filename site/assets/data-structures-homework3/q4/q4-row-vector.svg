@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+<title id="title">矩阵 A 的行辅助向量</title>
+<desc id="desc">第4行是空行，num等于0，cpot与第5行同为7。各行按顺序指向三元组表中的连续区间。</desc>
+<style>text{font-family:Arial,"Noto Sans CJK SC",sans-serif;fill:#17364c}.title{font-size:25px;font-weight:700}.small{font-size:17px}.head{font-size:18px;font-weight:700}.body{font-size:19px}.mono{font-family:monospace;font-size:19px}</style>
+<rect width="960" height="520" rx="20" fill="#f1f8fb"/>
+<text x="30" y="42" class="title">A：每行只占一段，空行占 0 项</text>
+<text x="30" y="72" class="small">cpot 是位置边界；num 决定从这里取多少项。</text>
+<text x="40" y="112" class="head">row</text>
+<text x="125" y="112" class="head">num</text>
+<text x="220" y="112" class="head">cpot</text>
+<text x="340" y="112" class="head">对应三元组序号与内容</text>
+<rect x="24" y="130" width="912" height="44" rx="7" fill="#e6f1f6"/>
+<text x="40" y="159" class="body">1</text>
+<text x="125" y="159" class="body">3</text>
+<text x="220" y="159" class="body">1</text>
+<text x="340" y="159" class="mono">#1 (1,1,15)   #2 (1,4,22)   #3 (1,6,−15)</text>
+<rect x="24" y="180" width="912" height="44" rx="7" fill="#ffffff"/>
+<text x="40" y="209" class="body">2</text>
+<text x="125" y="209" class="body">2</text>
+<text x="220" y="209" class="body">4</text>
+<text x="340" y="209" class="mono">#4 (2,2,11)   #5 (2,3,3)</text>
+<rect x="24" y="230" width="912" height="44" rx="7" fill="#e6f1f6"/>
+<text x="40" y="259" class="body">3</text>
+<text x="125" y="259" class="body">1</text>
+<text x="220" y="259" class="body">6</text>
+<text x="340" y="259" class="mono">#6 (3,4,−6)</text>
+<rect x="24" y="280" width="912" height="44" rx="7" fill="#fff1ce"/>
+<text x="40" y="309" class="body">4</text>
+<text x="125" y="309" class="body">0</text>
+<text x="220" y="309" class="body">7</text>
+<text x="340" y="309" class="body">空：从位置 7 开始，取 0 项</text>
+<rect x="24" y="330" width="912" height="44" rx="7" fill="#e6f1f6"/>
+<text x="40" y="359" class="body">5</text>
+<text x="125" y="359" class="body">1</text>
+<text x="220" y="359" class="body">7</text>
+<text x="340" y="359" class="mono">#7 (5,1,91)</text>
+<rect x="24" y="380" width="912" height="44" rx="7" fill="#ffffff"/>
+<text x="40" y="409" class="body">6</text>
+<text x="125" y="409" class="body">1</text>
+<text x="220" y="409" class="body">8</text>
+<text x="340" y="409" class="mono">#8 (6,3,28)</text>
+<text x="30" y="470" class="head">第4行与第5行 cpot 都是 7，不会冲突：</text>
+<text x="30" y="499" class="small">第4行取 0 项；第5行才读取第7号三元组 (5,1,91)。</text>
+</svg>

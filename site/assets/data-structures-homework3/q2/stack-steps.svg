@@ -1,0 +1,457 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1510" viewBox="0 0 1200 1510" role="img" aria-labelledby="title desc">
+<title id="title">A-B*C/D+E**F 的 NS / OS 双栈全过程</title>
+<desc id="desc">18个状态，按编号从左到右逐行阅读。NS存操作数和运算结果，OS存运算符。竖排栈的顶在上方，底在下方。完整文字版见同页表格。</desc>
+<style>text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#14363b}.heading{font-size:30px;font-weight:700}.note{font-size:18px;fill:#3e5f63}.cardtitle{font-size:20px;font-weight:600}.value{font-size:21px;font-family:ui-monospace,Consolas,monospace}.label{font-size:17px;font-weight:700}.small{font-size:14px;fill:#657e82}.stack{fill:none;stroke:#52747b;stroke-width:2}.cell{fill:#e4f3ef}.opcell{fill:#edf1fc}.reduction{fill:#fff6e7}.card{fill:#fff;stroke:#d8e5e7;stroke-width:1.5}</style>
+<rect width="1200" height="1510" fill="#f4f8f8" />
+<text x="30" y="43" class="heading" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="30px" font-weight="700">NS / OS 双栈全过程</text>
+<text x="30" y="76" class="note" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#3e5f63" font-size="18px">扫描 A-B*C/D+E**F#　｜　编号从左到右、逐行阅读　｜　每个图均为本步完成后的状态</text>
+<text x="30" y="104" class="note" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#3e5f63" font-size="18px">NS：操作数与结果　　OS：运算符　　竖排栈：上方为顶，下方为底</text>
+
+<g transform="translate(30,126)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">00　初始化</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<text x="109.5" y="133" text-anchor="middle" class="small" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#657e82" font-size="14px">空</text>
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 160.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 156.0 L 217 160.0 L 212 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(420,126)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">01　A 入 NS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 160.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 156.0 L 73 160.0 L 68 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 160.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 156.0 L 217 160.0 L 212 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(810,126)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">02　- 入 OS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 160.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 156.0 L 73 160.0 L 68 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">-</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 130.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 126.0 L 217 130.0 L 212 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(30,344)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">03　B 入 NS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">B</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 130.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 126.0 L 73 130.0 L 68 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">-</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 130.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 126.0 L 217 130.0 L 212 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(420,344)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">04　* 入 OS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">B</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 130.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 126.0 L 73 130.0 L 68 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">-</text>
+<rect class="opcell" x="221" y="85" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">*</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 100.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 96.0 L 217 100.0 L 212 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(810,344)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">05　C 入 NS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">B</text>
+<rect class="cell" x="77" y="85" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">C</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 100.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 96.0 L 73 100.0 L 68 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">-</text>
+<rect class="opcell" x="221" y="85" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">*</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 100.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 96.0 L 217 100.0 L 212 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(30,562)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<rect class="reduction" x="1" y="1" rx="12" width="358" height="39" fill="#fff6e7" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">06　读 /：B*C → T1</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T1</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 130.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 126.0 L 73 130.0 L 68 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">-</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 130.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 126.0 L 217 130.0 L 212 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(420,562)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">07　/ 入 OS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T1</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 130.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 126.0 L 73 130.0 L 68 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">-</text>
+<rect class="opcell" x="221" y="85" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">/</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 100.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 96.0 L 217 100.0 L 212 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(810,562)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">08　D 入 NS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T1</text>
+<rect class="cell" x="77" y="85" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">D</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 100.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 96.0 L 73 100.0 L 68 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">-</text>
+<rect class="opcell" x="221" y="85" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">/</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 100.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 96.0 L 217 100.0 L 212 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(30,780)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<rect class="reduction" x="1" y="1" rx="12" width="358" height="39" fill="#fff6e7" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">09　读 +：T1/D → T2</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">A</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T2</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 130.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 126.0 L 73 130.0 L 68 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">-</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 130.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 126.0 L 217 130.0 L 212 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(420,780)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<rect class="reduction" x="1" y="1" rx="12" width="358" height="39" fill="#fff6e7" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">10　仍读 +：A-T2 → T3</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T3</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 160.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 156.0 L 73 160.0 L 68 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 160.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 156.0 L 217 160.0 L 212 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(810,780)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">11　+ 入 OS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T3</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 160.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 156.0 L 73 160.0 L 68 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">+</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 130.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 126.0 L 217 130.0 L 212 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(30,998)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">12　E 入 NS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T3</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">E</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 130.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 126.0 L 73 130.0 L 68 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">+</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 130.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 126.0 L 217 130.0 L 212 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(420,998)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">13　** 入 OS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T3</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">E</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 130.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 126.0 L 73 130.0 L 68 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">+</text>
+<rect class="opcell" x="221" y="85" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">**</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 100.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 96.0 L 217 100.0 L 212 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(810,998)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">14　F 入 NS</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T3</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">E</text>
+<rect class="cell" x="77" y="85" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">F</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 100.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 96.0 L 73 100.0 L 68 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">+</text>
+<rect class="opcell" x="221" y="85" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="107" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">**</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 100.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 96.0 L 217 100.0 L 212 104.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(30,1216)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<rect class="reduction" x="1" y="1" rx="12" width="358" height="39" fill="#fff6e7" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">15　读 #：E**F → T4</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T3</text>
+<rect class="cell" x="77" y="115" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T4</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 130.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 126.0 L 73 130.0 L 68 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<rect class="opcell" x="221" y="115" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="137" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">+</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 130.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 126.0 L 217 130.0 L 212 134.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(420,1216)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<rect class="reduction" x="1" y="1" rx="12" width="358" height="39" fill="#fff6e7" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">16　仍读 #：T3+T4 → T5</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T5</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 160.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 156.0 L 73 160.0 L 68 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 160.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 156.0 L 217 160.0 L 212 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<g transform="translate(810,1216)"><rect class="card" rx="13" width="360" height="204" fill="#fff" stroke="#d8e5e7" stroke-width="1.5" />
+<text x="15" y="28" class="cardtitle" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="20px" font-weight="600">17　# 与 # 相遇：结束</text>
+<text x="109.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">NS</text>
+<rect class="cell" x="77" y="145" width="65" height="30" fill="#e4f3ef" />
+<text x="109.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">T5</text>
+<path class="stack" d="M 76 55 V 175 H 143 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 85 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 115 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 76 145 H 143" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 61 160.0 H 73" stroke="#17876e" stroke-width="2" />
+<path d="M 68 156.0 L 73 160.0 L 68 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+<text x="253.5" y="190" text-anchor="middle" class="label" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#14363b" font-size="17px" font-weight="700">OS</text>
+<rect class="opcell" x="221" y="145" width="65" height="30" fill="#edf1fc" />
+<text x="253.5" y="167" text-anchor="middle" class="value" font-family="monospace" fill="#14363b" font-size="21px">#</text>
+<path class="stack" d="M 220 55 V 175 H 287 V 55" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 85 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 115 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path class="stack" d="M 220 145 H 287" fill="none" stroke="#52747b" stroke-width="2" />
+<path d="M 205 160.0 H 217" stroke="#17876e" stroke-width="2" />
+<path d="M 212 156.0 L 217 160.0 L 212 164.0" stroke="#17876e" fill="none" stroke-width="2" />
+</g>
+<text x="30" y="1464" class="note" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#3e5f63" font-size="18px">T1=B*C　 T2=T1/D　 T3=A-T2　 T4=E**F　 T5=T3+T4</text>
+<text x="30" y="1493" class="note" font-family="Arial,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#3e5f63" font-size="18px">后缀表达式：A B C * D / - E F ** +　　（** 是一个运算符；# 不属于后缀表达式本体）</text></svg>

@@ -1,0 +1,261 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>作业3 · 四题图解 · 数据结构伴学</title><link rel="stylesheet" href="/study-site/course-hub.css"><link rel="stylesheet" href="/study-site/data-structures.css?v=20261102"></head><body class=""><a class="skip-link" href="#main">跳到正文</a><main id="main"><nav class="course-nav"><a href="/study-site/courses.html">学习首页</a><a href="/study-site/data-structures.html">数据结构课程</a><a href="/study-site/data-structures-homework3.html">作业3 · 逐题讲解</a></nav><header><p class="eyebrow">HOMEWORK 03 · WALKTHROUGH</p><h1>栈、队列与数组：<br>四道题，逐步图解。</h1><p>先确认课件约定，再画状态、列公式、代回检查。</p></header><div class="actions"><a class="primary" href="/study-site/data-structures-homework3-answers.html">打开独立答案页</a><a class="button" href="/study-site/data-structures-homework3-answers.txt" download>下载可复制答案 TXT</a><span class="status-pill">暂存网站 · 未提交课程平台</span></div><aside class="note"><strong>本次已核对的关键约定：</strong>循环队列留一空位；NS存操作数与结果、OS以#作栈底；二维数组按题设判定为列优先；稀疏矩阵使用从1开始的三元组序号以及num、cpot行辅助向量。原题未明说的数组存储次序，在题3中完整推导，不默认猜测。</aside><nav class="toc" aria-label="作业题目"><a href="#q1">01 · 循环队列</a><a href="#q2">02 · NS / OS 双栈</a><a href="#q3">03 · 数组地址</a><a href="#q4">04 · 稀疏矩阵</a></nav><section id="q1" class="homework-question">
+<header><p class="eyebrow">作业3 · 题1 · 2分</p><h2>循环队列：先看指针定义，再判断队满</h2></header>
+<div class="question-original"><h3>原题</h3><p>CQ[0:10]为一循环队列，初态front＝rear＝1，画出下列操作后队的头、尾指示器状态。（1）d,e,b,g,h入队；（2）d, e出队；（3）i,j,k,l,m入队；（4）b出队；（5）n,o,p,q,r入队</p></div>
+<div class="course-convention"><strong>已按课程PPT核实</strong><p>front指队头元素；rear指队尾下一位置。CQ[0:10]有11格，但采用留空一格法，最多存10个元素。</p><p>判空：<code>front == rear</code>；判满：<code>(rear + 1) % 11 == front</code>。</p></div>
+<h3>可直接提交的答案</h3>
+<div class="table-scroll"><table><thead><tr><th>操作后</th><th>front</th><th>rear</th><th>长度</th><th>队头 → 队尾</th></tr></thead><tbody><tr><th scope="row">（1）</th><td>1</td><td>6</td><td>5</td><td>d, e, b, g, h</td></tr><tr><th scope="row">（2）</th><td>3</td><td>6</td><td>3</td><td>b, g, h</td></tr><tr><th scope="row">（3）</th><td>3</td><td>0</td><td>8</td><td>b, g, h, i, j, k, l, m</td></tr><tr><th scope="row">（4）</th><td>4</td><td>0</td><td>7</td><td>g, h, i, j, k, l, m</td></tr><tr><th scope="row">（5）</th><td>4</td><td>3</td><td>10</td><td>g, h, i, j, k, l, m, n, o, p</td></tr></tbody></table></div>
+<p class="callout"><strong>第（5）步只有n、o、p成功入队。</strong>此时front=4、rear=3，满足<code>(3+1)%11=4</code>，队满。q上溢，r也不能入队；若遇错即停止，则r未执行。无论哪种解释，最终有效状态不变。</p>
+<h3>完整11格指针图</h3><p>绿色箭头是front，紫色箭头是rear。短横线表示不在当前有效队列中，不代表出队时必须清空内存。</p>
+<div class="queue-diagrams" style="overflow-x:auto"><figure><img src="/study-site/assets/data-structures-homework3/q1/queue-step-0.svg" alt="初态：front=1，rear=1，队列为空" loading="lazy" style="display:block;width:100%;min-width:720px"/><figcaption>初态</figcaption></figure><figure><img src="/study-site/assets/data-structures-homework3/q1/queue-step-1.svg" alt="（1）d、e、b、g、h 入队：front=1，rear=6，队列为d, e, b, g, h" loading="lazy" style="display:block;width:100%;min-width:720px"/><figcaption>（1）d、e、b、g、h 入队</figcaption></figure><figure><img src="/study-site/assets/data-structures-homework3/q1/queue-step-2.svg" alt="（2）d、e 出队：front=3，rear=6，队列为b, g, h" loading="lazy" style="display:block;width:100%;min-width:720px"/><figcaption>（2）d、e 出队</figcaption></figure><figure><img src="/study-site/assets/data-structures-homework3/q1/queue-step-3.svg" alt="（3）i、j、k、l、m 入队：front=3，rear=0，队列为b, g, h, i, j, k, l, m" loading="lazy" style="display:block;width:100%;min-width:720px"/><figcaption>（3）i、j、k、l、m 入队</figcaption></figure><figure><img src="/study-site/assets/data-structures-homework3/q1/queue-step-4.svg" alt="（4）b 出队：front=4，rear=0，队列为g, h, i, j, k, l, m" loading="lazy" style="display:block;width:100%;min-width:720px"/><figcaption>（4）b 出队</figcaption></figure><figure><img src="/study-site/assets/data-structures-homework3/q1/queue-step-5.svg" alt="（5）n、o、p 入队，q、r 不能入队：front=4，rear=3，队列为g, h, i, j, k, l, m, n, o, p" loading="lazy" style="display:block;width:100%;min-width:720px"/><figcaption>（5）n、o、p 入队，q、r 不能入队</figcaption></figure></div>
+<h3>一步一步推导</h3>
+<ol><li><strong>（1）先存后移尾：</strong>d、e、b、g、h写入下标1到5，rear到6，front仍为1。</li><li><strong>（2）出队只移头：</strong>删除d、e后，front从1到3；rear仍为6。</li><li><strong>（3）从10绕回0：</strong>i到m依次写入6到10。rear变成(10+1)%11=0，front仍为3。</li><li><strong>（4）移走下标3的b：</strong>front到4、rear仍为0。长度为7，还能放10−7=3个。</li><li><strong>（5）到满就停：</strong>n、o、p写入0、1、2，rear到3。下标3必须留空；再写q就会把满队和空队混淆，随后还可能覆盖有效元素。</li></ol>
+<details><summary>自检与常见错误</summary><ul><li>长度公式：<code>(rear-front+11)%11</code>；五步长度为5、3、8、7、10。</li><li>rear不是最后一个实际元素的位置；最终p在下标2，rear在下标3。</li><li>不能把第（5）步写成rear=(0+5)%11=5：失败的入队不能移动rear。</li><li>不可把本课的front误当成队头前一位置，否则格内元素会整体错一格。</li></ul></details>
+<p class="source-note">课程依据：《第三章栈和队列(2).pdf》PDF第5页右中、下排及第6页上排，已逐页核验。题干依据用户提供的原始作业内容。</p>
+<p class="source-note"><a href="/study-site/data-structures-ch3.html#p05">原课件 PDF第5页：指针定义</a> · <a href="/study-site/data-structures-ch3.html#p06">第6页：队空、队满</a></p></section><section id="q2" class="homework-question">
+  <header><p class="eyebrow">第 2 题 · 栈的应用</p><h2>表达式求值：跟踪 NS / OS 双栈</h2></header>
+  <blockquote class="original-question"><p>试画出表达式A－B*C/D＋E**F;执行过程中NS，OS栈的变化情况;并给出相应的后缀表达式结果。</p></blockquote>
+  <p class="source-note">依据：第三章课件第 3 页，3.2.2「表达式的计算」。NS、OS、# 约定已核对原 PDF，并非猜测。</p>
+  <div class="answer-highlight"><strong>后缀表达式</strong><p><code>A B C * D / - E F ** +</code></p></div>
+  <h3>先看懂两只栈</h3>
+  <ul>
+    <li><strong>NS：</strong>存操作数和运算结果。例如计算 <code>B*C</code> 后，B、C 出栈，结果 T1 入栈。</li>
+    <li><strong>OS：</strong>存运算符，初始为 <code>[#]</code>；<code>#</code> 是栈底及输入结束标记。</li>
+    <li>优先级：<code>** &gt; (*, /) &gt; (+, -) &gt; #</code>。<code>**</code> 是一个幂运算符。</li>
+    <li>操作数直接进 NS；当前运算符优先级高于 OS 栈顶才入栈，否则先归约栈顶，再用<strong>同一个当前符号</strong>继续比较。<code>#</code> 与栈底 <code>#</code> 相遇时结束。</li>
+    <li>每次归约先弹出<strong>右操作数</strong>，再弹出<strong>左操作数</strong>，计算后把结果压回 NS。</li>
+  </ul>
+  <p>题面分号不参与运算。按课件算法，实际扫描序列写成 <code>A-B*C/D+E**F#</code>。变量未给数值，故用 T1～T5 表示中间结果。</p>
+  <h3>中间结果：按实际归约顺序编号</h3>
+  <ol class="reduction-list"><li><code>T1 = B * C</code></li>
+<li><code>T2 = T1 / D</code></li>
+<li><code>T3 = A - T2</code></li>
+<li><code>T4 = E ** F</code></li>
+<li><code>T5 = T3 + T4</code></li></ol>
+  <p>最终 <code>T5 = A - (B*C)/D + E**F</code>。</p>
+  <h3>完整逐步栈变化</h3>
+  <p id="q2-orientation"><strong>读表方向：栈底 → 栈顶（左 → 右）。</strong>每行显示该步执行后的栈；∅ 表示空栈。一个符号可能触发多次动作，所以同一符号会出现多行。</p>
+  <div class="table-scroll"><table aria-describedby="q2-orientation"><thead><tr><th scope="col">步</th><th scope="col">当前符号</th><th scope="col">执行动作</th><th scope="col">NS（底 → 顶）</th><th scope="col">OS（底 → 顶）</th></tr></thead><tbody><tr class="q2-step q2-init"><th scope="row">0</th><td><code>—</code></td><td>初始化：NS 置空，OS 压入栈底标记 #</td><td><code>∅</code></td><td><code>[ # ]</code></td></tr>
+<tr class="q2-step q2-push_operand"><th scope="row">1</th><td><code>A</code></td><td>操作数 A 入 NS</td><td><code>[ A ]</code></td><td><code>[ # ]</code></td></tr>
+<tr class="q2-step q2-push_operator"><th scope="row">2</th><td><code>-</code></td><td>- 的优先级高于 #，- 入 OS</td><td><code>[ A ]</code></td><td><code>[ #, - ]</code></td></tr>
+<tr class="q2-step q2-push_operand"><th scope="row">3</th><td><code>B</code></td><td>操作数 B 入 NS</td><td><code>[ A, B ]</code></td><td><code>[ #, - ]</code></td></tr>
+<tr class="q2-step q2-push_operator"><th scope="row">4</th><td><code>*</code></td><td>* 的优先级高于 -，* 入 OS</td><td><code>[ A, B ]</code></td><td><code>[ #, -, * ]</code></td></tr>
+<tr class="q2-step q2-push_operand"><th scope="row">5</th><td><code>C</code></td><td>操作数 C 入 NS</td><td><code>[ A, B, C ]</code></td><td><code>[ #, -, * ]</code></td></tr>
+<tr class="q2-step q2-reduce"><th scope="row">6</th><td><code>/</code></td><td>/ 与栈顶 * 同级，先弹出 *，计算 B*C → T1；/ 暂不入栈</td><td><code>[ A, T1 ]</code></td><td><code>[ #, - ]</code></td></tr>
+<tr class="q2-step q2-push_operator"><th scope="row">7</th><td><code>/（仍为当前符号）</code></td><td>/ 的优先级高于 -，/ 入 OS</td><td><code>[ A, T1 ]</code></td><td><code>[ #, -, / ]</code></td></tr>
+<tr class="q2-step q2-push_operand"><th scope="row">8</th><td><code>D</code></td><td>操作数 D 入 NS</td><td><code>[ A, T1, D ]</code></td><td><code>[ #, -, / ]</code></td></tr>
+<tr class="q2-step q2-reduce"><th scope="row">9</th><td><code>+</code></td><td>+ 的优先级低于 /，先计算 T1/D → T2；+ 暂不入栈</td><td><code>[ A, T2 ]</code></td><td><code>[ #, - ]</code></td></tr>
+<tr class="q2-step q2-reduce"><th scope="row">10</th><td><code>+（仍为当前符号）</code></td><td>+ 与栈顶 - 同级，再计算 A-T2 → T3；+ 仍不入栈</td><td><code>[ T3 ]</code></td><td><code>[ # ]</code></td></tr>
+<tr class="q2-step q2-push_operator"><th scope="row">11</th><td><code>+（仍为当前符号）</code></td><td>+ 的优先级高于 #，+ 入 OS</td><td><code>[ T3 ]</code></td><td><code>[ #, + ]</code></td></tr>
+<tr class="q2-step q2-push_operand"><th scope="row">12</th><td><code>E</code></td><td>操作数 E 入 NS</td><td><code>[ T3, E ]</code></td><td><code>[ #, + ]</code></td></tr>
+<tr class="q2-step q2-push_operator"><th scope="row">13</th><td><code>**</code></td><td>** 的优先级高于 +，** 整体入 OS</td><td><code>[ T3, E ]</code></td><td><code>[ #, +, ** ]</code></td></tr>
+<tr class="q2-step q2-push_operand"><th scope="row">14</th><td><code>F</code></td><td>操作数 F 入 NS</td><td><code>[ T3, E, F ]</code></td><td><code>[ #, +, ** ]</code></td></tr>
+<tr class="q2-step q2-reduce"><th scope="row">15</th><td><code>#</code></td><td># 的优先级低于 **，先计算 E**F → T4</td><td><code>[ T3, T4 ]</code></td><td><code>[ #, + ]</code></td></tr>
+<tr class="q2-step q2-reduce"><th scope="row">16</th><td><code>#（仍为当前符号）</code></td><td># 的优先级低于 +，再计算 T3+T4 → T5</td><td><code>[ T5 ]</code></td><td><code>[ # ]</code></td></tr>
+<tr class="q2-step q2-stop"><th scope="row">17</th><td><code>#（仍为当前符号）</code></td><td>输入 # 与栈底 # 相遇，停止；NS 栈顶 T5 为结果</td><td><code>[ T5 ]</code></td><td><code>[ # ]</code></td></tr></tbody></table></div>
+  <details class="stack-figure"><summary>展开看 18 个状态的双栈图</summary><p>每个小图都是该步结束后的状态；上端为栈顶。可打开图片放大查看。</p><a href="/study-site/assets/data-structures-homework3/q2/stack-steps.svg" target="_blank" rel="noopener"><img src="/study-site/assets/data-structures-homework3/q2/stack-steps.svg" alt="18个状态的NS和OS双栈变化图；完整内容亦在前方表格中逐行提供" loading="lazy"></a></details>
+  <h3>为什么后缀表达式是这个顺序？</h3>
+  <p>操作数顺序仍为 A、B、C、D、E、F；运算符按实际归约顺序写到对应操作数后面：</p>
+  <p><code>B C * → B C * D / → A B C * D / -</code>；另一部分为 <code>E F **</code>，最后再加 <code>+</code>。</p>
+  <p>因此后缀式为 <strong><code>A B C * D / - E F ** +</code></strong>，不包含结束标记 <code>#</code>。</p>
+  <h3>容易失分的地方</h3><ul><li>NS 是操作数与运算结果栈，不是后缀表达式输出区。</li>
+<li>扫描到 / 时必须先归约 B*C；不能让同级的 *、/ 同时继续压栈。</li>
+<li>扫描到 + 时必须连续归约 / 和 -，然后才能把 + 压栈。</li>
+<li>归约时先弹出右操作数，再弹出左操作数，按“左 操作符 右”计算，尤其不能把减法、除法反过来。</li>
+<li>当前运算符触发归约后仍是当前符号，必须继续比较，不能直接读取下一个符号。</li>
+<li>后缀式中的 ** 须作为一个完整运算符；空格用于防止与 * 混淆。</li>
+<li># 仅为算法结束标记，不属于后缀表达式本体。</li></ul>
+  <details class="submission-answer"><summary>展开可直接整理提交的答案</summary>
+    <p>设 NS 为操作数及运算结果栈，OS 为运算符栈；初始 NS=∅，OS=[#]。令 T1=B*C，T2=T1/D，T3=A-T2，T4=E**F，T5=T3+T4。将表达式末尾补 #，按上表给出的 0～17 步绘制双栈状态，所有横排栈均从栈底写到栈顶。最后 NS=[T5]，OS=[#]，# 与 # 相遇结束。</p>
+    <p>相应后缀表达式：<code>A B C * D / - E F ** +</code>。</p>
+  </details>
+<p class="source-note"><a href="/study-site/data-structures-ch3.html#p03">原课件 PDF第3页：NS/OS与结束标记</a></p></section>
+<section id="q3" class="homework-question"><p class="eyebrow">作业3 · 题3 · 数组寻址</p><h2 id="第3题为什么答案是1120">第3题：为什么答案是1120？</h2>
+<h3 id="原题">原题</h3>
+<p>有一个二维数组A[1:m,1:n]，假设A[3,2]地址为1110，A[2,3]地址为1115，若每个单元占一个空间，问A[1,4]的地址是多少？</p>
+<h3 id="一先认清下标和存储方式">一、先认清下标和存储方式</h3>
+<p><code>A[1:m,1:n]</code>
+表示下标从1开始的m行、n列数组。第一个下标i是行号，第二个下标j是列号；m为行数，n为列数。本题每个元素占1个存储单元。</p>
+<p>二维数组在内存中仍然要排成一条线，课程给出两种顺序存储方法：</p>
+<ul>
+<li><strong>行优先</strong>：先放完第1行，再放第2行；同一行相邻元素地址相差1。</li>
+<li><strong>列优先</strong>：先放完第1列，再放第2列；同一列相邻元素地址相差1。</li>
+</ul>
+<p>设首地址为B=LOC(A[1,1])，则两种公式分别为：</p>
+<ul>
+<li>行优先：LOC(A[i,j])=B+(i−1)n+(j−1)。</li>
+<li>列优先：LOC(A[i,j])=B+(j−1)m+(i−1)。</li>
+</ul>
+<p><strong>课程依据已核实：</strong>《第四章数组(1).pdf》PDF第1页左下角“1.二维数组Amn的顺序存储结构”同时列出上述两种公式；该页并未指定所有二维数组题一律按行优先。本题没有明说存储顺序，应由地址条件判断，而不是凭语言习惯默认行优先。</p>
+<h3 id="二先排除行优先">二、先排除行优先</h3>
+<p>如果按行优先：</p>
+<p>LOC(A[3,2])=B+2n+1=1110，</p>
+<p>LOC(A[2,3])=B+n+2=1115。</p>
+<p>第二式减第一式：</p>
+<p>5=(B+n+2)−(B+2n+1)=1−n，故n=−4。</p>
+<p>但n是正整数列数，而且题中A[2,3]存在已经要求n≥3。因此n=−4不合法，题设不可能采用课程所述的标准行优先连续存储。</p>
+<h3 id="三用列优先求行数m">三、用列优先求行数m</h3>
+<p>按列优先：</p>
+<p>LOC(A[3,2])=B+m+2=1110，</p>
+<p>LOC(A[2,3])=B+2m+1=1115。</p>
+<p>第二式减第一式，B被消去：</p>
+<p>1115−1110=(2m+1)−(m+2)=m−1。</p>
+<p>所以m−1=5，得到 <strong>m=6</strong>。代入可得首地址
+<strong>B=1110−6−2=1102</strong>。</p>
+<p>这里解出的是“每列有6行”，不是“每行有6列”。列优先公式中的整列步长是m。</p>
+<h3 id="四求a14的地址">四、求A[1,4]的地址</h3>
+<p>直接代入列优先公式：</p>
+<p>LOC(A[1,4])=1102+(4−1)×6+(1−1)=1102+18=<strong>1120</strong>。</p>
+<p>也可以不求首地址：从A[2,3]到A[1,4]，列号增加1使地址增加6，行号减少1使地址减少1，净增加5。因此：</p>
+<p>LOC(A[1,4])=1115+6−1=<strong>1120</strong>。</p>
+<h3 id="五配图怎么看">五、配图怎么看</h3>
+<p>图中只画前4列，<strong>不表示n恰好等于4</strong>。列优先时从同一列上方往下读，地址每次增加1；第1列放完才接第2列。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr class="header">
+<th>行号i</th>
+<th style="text-align: right;">第1列j=1</th>
+<th style="text-align: right;">第2列j=2</th>
+<th style="text-align: right;">第3列j=3</th>
+<th style="text-align: right;">第4列j=4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">1102</td>
+<td style="text-align: right;">1108</td>
+<td style="text-align: right;">1114</td>
+<td style="text-align: right;"><strong>1120（所求）</strong></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">1103</td>
+<td style="text-align: right;">1109</td>
+<td style="text-align: right;"><strong>1115（已知）</strong></td>
+<td style="text-align: right;">1121</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">1104</td>
+<td style="text-align: right;"><strong>1110（已知）</strong></td>
+<td style="text-align: right;">1116</td>
+<td style="text-align: right;">1122</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td style="text-align: right;">1105</td>
+<td style="text-align: right;">1111</td>
+<td style="text-align: right;">1117</td>
+<td style="text-align: right;">1123</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td style="text-align: right;">1106</td>
+<td style="text-align: right;">1112</td>
+<td style="text-align: right;">1118</td>
+<td style="text-align: right;">1124</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td style="text-align: right;">1107</td>
+<td style="text-align: right;">1113</td>
+<td style="text-align: right;">1119</td>
+<td style="text-align: right;">1125</td>
+</tr>
+</tbody>
+</table></div>
+<p>特别注意：A[3,2]、A[2,3]、A[1,4]不是三个相邻存储单元。每次下标变化都是“行号−1、列号+1”，因此在本题存储模型下地址均增加m−1=5。</p>
+<h3 id="六维数和题设边界">六、维数和题设边界</h3>
+<ul>
+<li>已知A[3,2]和A[2,3]存在，只能先得到m≥3、n≥3。</li>
+<li>地址条件再推出m=6；<strong>不能由本题算出n的具体数值</strong>。</li>
+<li>要使所求A[1,4]存在，必须有
+<strong>n≥4</strong>。这是题目询问该元素时隐含的有效下标条件。</li>
+<li>结论依赖课程讨论的标准连续顺序存储模型。如果额外明确要求“行优先”，则原题的两个已知地址互相矛盾，不应强行报告一个合法的行优先数组。</li>
+</ul>
+<p><strong>最终答案：A[1,4]的地址是1120。</strong></p>
+<figure class="diagram-scroll"><img src="/study-site/assets/data-structures-homework3/q3/diagram.svg" alt="列优先地址网格：A[3,2]=1110，A[2,3]=1115，A[1,4]=1120；每列6行。"><figcaption>只显示前4列，不表示n等于4；手机可横向滚动查看。</figcaption></figure><p class="source-note"><a href="/study-site/data-structures-ch4.html#p01">原课件 PDF第1页：二维数组两种顺序存储</a></p></section><style>
+#q4 .q4-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:1.3rem;margin:1rem 0}
+#q4 .q4-table-scroll{max-width:100%;overflow-x:auto;margin:.8rem 0}
+#q4 table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+#q4 caption{text-align:left;font-weight:700;margin:0 0 .5rem}
+#q4 th,#q4 td{text-align:center;border:1px solid #cbd5e1;padding:.4rem .55rem;white-space:nowrap}
+#q4 th{background:#edf5ff;color:#18344f}
+#q4 .q4-zero{color:#8292a6}#q4 .q4-nonzero{color:#075985;font-weight:700;background:#ecfeff}
+#q4 .q4-matrix td{min-width:2rem}
+#q4 .q4-note{border-left:4px solid #0e7490;background:#eefaff;padding:1rem 1.2rem;border-radius:4px;color:#17344b;margin:1rem 0}
+#q4 .q4-warning{border-left-color:#b7791f;background:#fff9e8}
+#q4 pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#102938;color:#eff9ff;padding:1rem;border-radius:10px;line-height:1.7}
+#q4 .q4-figure{width:100%;height:auto;display:block}#q4 .q4-source{font-size:.87rem;color:#526577}
+</style>
+<section id="q4" class="homework-question" aria-labelledby="q4-title">
+<h2 id="q4-title">第4题｜把稀疏矩阵变成三元组</h2>
+<p><strong>原题（简答题，2分）：</strong>采用三元组和带行辅助向量形式，表示下列稀疏矩阵：</p>
+<div class="q4-grid"><div class="q4-table-scroll"><table class="q4-matrix"><caption>A（6×6）</caption><tbody><tr><td class="q4-nonzero">15</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">22</td><td class="q4-zero">0</td><td class="q4-nonzero">-15</td></tr><tr><td class="q4-zero">0</td><td class="q4-nonzero">11</td><td class="q4-nonzero">3</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">-6</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-nonzero">91</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">28</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr></tbody></table></div><div class="q4-table-scroll"><table class="q4-matrix"><caption>B（9×9）</caption><tbody><tr><td class="q4-nonzero">8</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">-13</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">26</td></tr><tr><td class="q4-nonzero">15</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">6</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">5</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-nonzero">-3</td><td class="q4-zero">0</td><td class="q4-nonzero">4</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">2</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">4</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">-12</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-nonzero">2</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">4</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-nonzero">7</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td></tr><tr><td class="q4-nonzero">12</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">2</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-zero">0</td><td class="q4-nonzero">30</td></tr></tbody></table></div></div>
+<div class="q4-note"><strong>先统一课件约定：</strong>把左矩阵称为 A、右矩阵称为 B；行、列与三元组序号均从 <strong>1</strong> 开始，<code>data[0]</code> 未用。只记录非零元素，按“先行后列”排列。课件的行辅助向量包括 <code>num</code> 与 <code>cpot</code> 两行。</div>
+<h3>怎么做：先抄非零项，再数每行个数</h3>
+<ol><li>逐行从左到右扫描：每遇到一个非零值，写下 <code>(行号, 列号, 值)</code>。</li>
+<li>数每行的非零个数，得到 <code>num[i]</code>。全零行也必须保留对应的 <code>num[i]=0</code>。</li>
+<li>从 <code>cpot[1]=1</code> 开始，按 <code>cpot[i]=cpot[i−1]+num[i−1]</code> 累加，得到每行在三元组表中的起始位置。</li></ol>
+<p>例如 A 的第1行有 3 个非零元素，占第1～3号三元组，因此第2行从 <code>cpot[2]=1+3=4</code> 开始；第2行有2项，因此第3行从 <code>cpot[3]=4+2=6</code> 开始。</p>
+<div class="q4-grid"><article class="q4-result"><h3>A：6×6，共 8 个非零元素</h3>
+<div class="q4-table-scroll"><table><caption>矩阵 A 的三元组表</caption><thead><tr><th>序号 k</th><th>row</th><th>col</th><th>e</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td><td>15</td></tr><tr><td>2</td><td>1</td><td>4</td><td>22</td></tr><tr><td>3</td><td>1</td><td>6</td><td>-15</td></tr><tr><td>4</td><td>2</td><td>2</td><td>11</td></tr><tr><td>5</td><td>2</td><td>3</td><td>3</td></tr><tr><td>6</td><td>3</td><td>4</td><td>-6</td></tr><tr><td>7</td><td>5</td><td>1</td><td>91</td></tr><tr><td>8</td><td>6</td><td>3</td><td>28</td></tr></tbody></table></div><div class="q4-table-scroll"><table><caption>矩阵 A 的行辅助向量</caption><thead><tr><th>row</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><th>num</th><td>3</td><td>2</td><td>1</td><td>0</td><td>1</td><td>1</td></tr><tr><th>cpot</th><td>1</td><td>4</td><td>6</td><td>7</td><td>7</td><td>8</td></tr></tbody></table></div><p><strong>元信息：</strong><code>mu=6, nu=6, tu=8</code>。元信息不计入非零元素三元组。</p></article><article class="q4-result"><h3>B：9×9，共 17 个非零元素</h3>
+<div class="q4-table-scroll"><table><caption>矩阵 B 的三元组表</caption><thead><tr><th>序号 k</th><th>row</th><th>col</th><th>e</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td><td>8</td></tr><tr><td>2</td><td>1</td><td>5</td><td>-13</td></tr><tr><td>3</td><td>1</td><td>9</td><td>26</td></tr><tr><td>4</td><td>2</td><td>1</td><td>15</td></tr><tr><td>5</td><td>2</td><td>4</td><td>6</td></tr><tr><td>6</td><td>2</td><td>8</td><td>5</td></tr><tr><td>7</td><td>3</td><td>2</td><td>-3</td></tr><tr><td>8</td><td>3</td><td>4</td><td>4</td></tr><tr><td>9</td><td>4</td><td>4</td><td>2</td></tr><tr><td>10</td><td>4</td><td>8</td><td>4</td></tr><tr><td>11</td><td>5</td><td>3</td><td>-12</td></tr><tr><td>12</td><td>6</td><td>2</td><td>2</td></tr><tr><td>13</td><td>7</td><td>4</td><td>4</td></tr><tr><td>14</td><td>8</td><td>1</td><td>7</td></tr><tr><td>15</td><td>9</td><td>1</td><td>12</td></tr><tr><td>16</td><td>9</td><td>4</td><td>2</td></tr><tr><td>17</td><td>9</td><td>9</td><td>30</td></tr></tbody></table></div><div class="q4-table-scroll"><table><caption>矩阵 B 的行辅助向量</caption><thead><tr><th>row</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead><tbody><tr><th>num</th><td>3</td><td>3</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>3</td></tr><tr><th>cpot</th><td>1</td><td>4</td><td>7</td><td>9</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr></tbody></table></div><p><strong>元信息：</strong><code>mu=9, nu=9, tu=17</code>。元信息不计入非零元素三元组。</p></article></div>
+<div class="q4-note q4-warning"><strong>本题最容易错的地方：</strong>A 的第4行是空行，<code>num[4]=0</code>，但 <code>cpot[4]=7</code>，<strong>不是0</strong>。于是 <code>cpot[5]=7+0=7</code>。两个起始边界相同，恰好说明中间这一行没有任何三元组。</div>
+<figure class="diagram-scroll"><img class="q4-figure" src="/study-site/assets/data-structures-homework3/q4/q4-row-vector.svg" alt="矩阵A的每行非零元素个数与三元组序号对应：第1行1至3，第2行4至5，第3行6，第4行空，第5行7，第6行8；第4和第5行的起始位置均为7。"><figcaption>同一个三元组表，加上 num 和 cpot，就能快速定位某一行。</figcaption></figure>
+<h3>用回代检查，不靠“看起来像对”</h3>
+<ul><li><code>sum(num_A)=8</code>、<code>sum(num_B)=17</code>，都等于各自 <code>tu</code>。</li>
+<li>第 <code>i</code> 行恰好使用 <code>data[cpot[i]]</code> 起的 <code>num[i]</code> 项；若个数为0，就不读取任何项。</li>
+<li>程序已分别从完整三元组与行辅助向量重建两矩阵，逐元素比较通过。</li></ul>
+<details><summary>展开可直接整理提交的答案</summary><pre>第4题（简答题，2分）
+原题：采用三元组和带行辅助向量形式，表示下列稀疏矩阵：
+
+【约定】将截图左矩阵记为A，右矩阵记为B。采用课件约定：行号、列号和三元组序号均从1开始，data[0]未用。三元组为(row,col,e)，只存非零元素，并按行优先、同一行按列递增排列；矩阵的行数、列数和非零元素总数单独记为mu、nu、tu。
+
+【行辅助向量】num[i]为第i行非零元素个数；cpot[1]=1，cpot[i]=cpot[i-1]+num[i-1]。第i行对应三元组的范围为cpot[i]至cpot[i]+num[i]-1；num[i]=0时，该范围为空。行辅助向量是对同一三元组表增加索引，不是另一套非零元素。
+
+矩阵A：mu=6，nu=6，tu=8。
+三元组（row, col, e），按行优先排列：
+ 1  (1, 1, 15)
+ 2  (1, 4, 22)
+ 3  (1, 6, -15)
+ 4  (2, 2, 11)
+ 5  (2, 3, 3)
+ 6  (3, 4, -6)
+ 7  (5, 1, 91)
+ 8  (6, 3, 28)
+row  = (1, 2, 3, 4, 5, 6)
+num  = (3, 2, 1, 0, 1, 1)
+cpot = (1, 4, 6, 7, 7, 8)
+
+矩阵B：mu=9，nu=9，tu=17。
+三元组（row, col, e），按行优先排列：
+ 1  (1, 1, 8)
+ 2  (1, 5, -13)
+ 3  (1, 9, 26)
+ 4  (2, 1, 15)
+ 5  (2, 4, 6)
+ 6  (2, 8, 5)
+ 7  (3, 2, -3)
+ 8  (3, 4, 4)
+ 9  (4, 4, 2)
+10  (4, 8, 4)
+11  (5, 3, -12)
+12  (6, 2, 2)
+13  (7, 4, 4)
+14  (8, 1, 7)
+15  (9, 1, 12)
+16  (9, 4, 2)
+17  (9, 9, 30)
+row  = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+num  = (3, 3, 2, 2, 1, 1, 1, 1, 3)
+cpot = (1, 4, 7, 9, 11, 12, 13, 14, 15)
+
+【空行说明】A第4行全为0，所以num[4]=0；按递推公式，cpot[4]=7、cpot[5]=7。cpot[4]记录位置边界，不表示第4行有非零元素，不能写成0或空指针。
+
+【快速检查】A的num之和为8，B的num之和为17，与tu一致。A最后一行始于第8个三元组，含1项；B最后一行始于第15个三元组，含3项。两张三元组表均已逐元素还原并与截图转录矩阵比较，全部一致。
+
+依据：《第四章数组(1).pdf》物理第4页，“三元组顺序表定义”及“带行辅助向量的三元组”。原题矩阵已直接查看截图核对。
+</pre></details>
+<p class="q4-source">课程依据：《第四章数组(1).pdf》物理第4页“三元组顺序表定义”“带行辅助向量的三元组”。题图与该页均已直接查看核验。</p>
+<p class="source-note"><a href="/study-site/data-structures-ch4.html#p04">原课件 PDF第4页：三元组、num与cpot</a></p></section><footer>本页是作业答案暂存，不代表已提交到课程平台。<br>原题按用户给出的题干与矩阵图整理；公式和存储约定按对应原课件核对。</footer></main><script src="/study-site/data-structures-homework.js?v=20261102"></script></body></html>

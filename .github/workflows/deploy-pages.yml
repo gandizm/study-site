@@ -44,6 +44,8 @@ jobs:
           node tests/dsp-progress-preservation.test.cjs
       - name: Validate closed-surface integral SVGs
         run: python3 tests/em-closed-integrals.test.py
+      - name: Validate data structures courseware and homework
+        run: python3 tests/data-structures-homework3.test.py
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
@@ -61,3 +63,4 @@ jobs:
       - name: Deploy the checked-out commit
         id: deployment
         uses: actions/deploy-pages@v4
+
