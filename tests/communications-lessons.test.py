@@ -68,6 +68,10 @@ class Publication(unittest.TestCase):
         js=(SITE/'communications-redraw.js').read_text()
         self.assertNotRegex(js,r'\b(?:localStorage|sessionStorage|indexedDB|fetch|XMLHttpRequest)\b')
         self.assertNotIn('course-reading-',js)
+    def test_viewbox_svg_readable_size(self):
+        js=(SITE/'communications-redraw.js').read_text()
+        self.assertEqual(js.count('figureWidth = Math.max(1000, figureImage.naturalWidth || 0);'),2)
+        for page in [self.course,self.homework]:self.assertIn('communications-redraw.js?v=20261110b',page)
     def test_leading_zero_codes(self):
         for code in ['11100011','01001110000','00110000','00001011110','01010011','00100111000']:
             self.assertIn(code,self.homework)

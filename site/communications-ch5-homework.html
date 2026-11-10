@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="通信原理第5至7章：从零梳理脉络、逐个解释概念、代表题、第二遍推导与第五章作业带做。"><title>第五章八题 · 边抄边学</title><link rel="stylesheet" href="communications-redraw.css?v=20261110"><script defer src="communications-redraw.js?v=20261110"></script></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="通信原理第5至7章：从零梳理脉络、逐个解释概念、代表题、第二遍推导与第五章作业带做。"><title>第五章八题 · 边抄边学</title><link rel="stylesheet" href="communications-redraw.css?v=20261110"><script defer src="communications-redraw.js?v=20261110b"></script></head>
 <body class="comm-page"><a class="skip" href="#lesson">跳到学习内容</a>
 <header class="comm-header"><a class="comm-brand" href="communications.html">通信原理<small>5—7章 · 两遍辅导</small></a><nav aria-label="课程导航"><a href="communications.html">通原目录</a><a href="communications-ch5-homework.html">第五章作业</a><a href="courses.html">全部课程</a></nav></header>
 <main class="comm-main"><section class="comm-intro"><p class="eyebrow">一条主线 · 先必学，再深挖</p><h1>第五章八题 · 边抄边学</h1><p class="lede">每题先看任务和起手式，再抄分步解答，最后用检查把答案倒着验证。题目已按教材原页核对。</p><p class="route-note">5.9.1、3、9、13、14、15、20、25。误差统一采用“输入−重建”；第14题与第15题的段内码规则不同。</p></section>
@@ -153,7 +153,10 @@ j=\left\lfloor\frac{635-512}{32}\right\rfloor
 <li>段内小格从0开始编号，</li>
 </ol>
 <p role="region" aria-label="公式，可横向滚动" tabindex="0"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">⌊</mo><mfrac><mrow><mn>95</mn><mo>−</mo><mn>64</mn></mrow><mn>4</mn></mfrac><mo stretchy="true" form="postfix">⌋</mo></mrow><mo>=</mo><mn>7</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">j=\left\lfloor\frac{95-64}{4}\right\rfloor=7.</annotation></semantics></math></p>
-<p>因而该样值幅度位于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>92</mn><mo>,</mo><mn>96</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">[92,96)</annotation></semantics></math>。自然二进制编号为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0111</mn><annotation encoding="application/x-tex">0111</annotation></semantics></math>；查本课的折叠二进制码表，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0111</mn><annotation encoding="application/x-tex">0111</annotation></semantics></math> 对应 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0000</mn><annotation encoding="application/x-tex">0000</annotation></semantics></math>。 4. 编码器输出：</p>
+<p>因而该样值幅度位于 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>92</mn><mo>,</mo><mn>96</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">[92,96)</annotation></semantics></math>。自然二进制编号为 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0111</mn><annotation encoding="application/x-tex">0111</annotation></semantics></math>；查本课的折叠二进制码表，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0111</mn><annotation encoding="application/x-tex">0111</annotation></semantics></math> 对应 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0000</mn><annotation encoding="application/x-tex">0000</annotation></semantics></math>。</p>
+<ol start="4" type="1">
+<li>编码器输出：</li>
+</ol>
 <p role="region" aria-label="公式，可横向滚动" tabindex="0"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><menclose notation="box"><mrow><mn>0</mn><mo>∣</mo><mn>011</mn><mo>∣</mo><mn>0000</mn><mo>=</mo><mn>00110000</mn></mrow></menclose><mi>.</mi></mrow><annotation encoding="application/x-tex">\boxed{0\mid011\mid0000=00110000}.</annotation></semantics></math></p>
 <ol start="5" type="1">
 <li>译码采用小格中点，先恢复幅度再恢复负号：</li>
@@ -177,7 +180,10 @@ j=\left\lfloor\frac{635-512}{32}\right\rfloor
 <li>拆开码组：</li>
 </ol>
 <p role="region" aria-label="公式，可横向滚动" tabindex="0"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>01010011</mn><mo>=</mo><mn>0</mn><mo>∣</mo><mn>101</mn><mo>∣</mo><mn>0011</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">01010011=0\mid101\mid0011.</annotation></semantics></math></p>
-<p>极性位0表示负；段落码101表示第6段，段起点为256，段内步长为16；自然段内码0011对应编号 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">j=3</annotation></semantics></math>。 2. 译码输出为：</p>
+<p>极性位0表示负；段落码101表示第6段，段起点为256，段内步长为16；自然段内码0011对应编号 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">j=3</annotation></semantics></math>。</p>
+<ol start="2" type="1">
+<li>译码输出为：</li>
+</ol>
 <p role="region" aria-label="公式，可横向滚动" tabindex="0"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">̂</mo></mover><mo>=</mo><mi>−</mi><mrow><mo stretchy="true" form="prefix">[</mo><mn>256</mn><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>3</mn><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>16</mn><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><menclose notation="box"><mrow><mi>−</mi><mn>312</mn></mrow></menclose><mi>.</mi></mrow><annotation encoding="application/x-tex">\hat x=-\left[256+\left(3+\frac12\right)16\right]=\boxed{-312}.</annotation></semantics></math></p>
 <ol start="3" type="1">
 <li>不含极性的11位码表示幅度312：</li>

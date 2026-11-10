@@ -205,7 +205,7 @@ def page(units,homework=False):
     extra_control='<button type="button" id="show-all">展开全部题目</button>' if homework else ''
     body='\n'.join(serialize(unit) for unit in units)
     return f'''<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="通信原理第5至7章：从零梳理脉络、逐个解释概念、代表题、第二遍推导与第五章作业带做。"><title>{title}</title><link rel="stylesheet" href="communications-redraw.css?v=20261110"><script defer src="communications-redraw.js?v=20261110"></script></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="通信原理第5至7章：从零梳理脉络、逐个解释概念、代表题、第二遍推导与第五章作业带做。"><title>{title}</title><link rel="stylesheet" href="communications-redraw.css?v=20261110"><script defer src="communications-redraw.js?v=20261110b"></script></head>
 <body class="comm-page"><a class="skip" href="#lesson">跳到学习内容</a>
 <header class="comm-header"><a class="comm-brand" href="communications.html">通信原理<small>5—7章 · 两遍辅导</small></a><nav aria-label="课程导航"><a href="communications.html">通原目录</a><a href="communications-ch5-homework.html">第五章作业</a><a href="courses.html">全部课程</a></nav></header>
 <main class="comm-main"><section class="comm-intro"><p class="eyebrow">一条主线 · 先必学，再深挖</p><h1>{title}</h1><p class="lede">{lede}</p><p class="route-note">{route_note}</p></section>
