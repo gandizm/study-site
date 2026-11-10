@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-11-10",
-  "teachingOrder": "概念重排，第一遍必学，第二遍推导",
+  "teachingOrder": "零基础起步→读图与符号→小步数值例→自行检查→课内公式；第二遍补推导",
   "chapters": [
     {
       "chapter": 5,

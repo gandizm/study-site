@@ -72,6 +72,24 @@ class Publication(unittest.TestCase):
         js=(SITE/'communications-redraw.js').read_text()
         self.assertEqual(js.count('figureWidth = Math.max(1000, figureImage.naturalWidth || 0);'),2)
         for page in [self.course,self.homework]:self.assertIn('communications-redraw.js?v=20261110b',page)
+    def test_novice_foundations_are_visible(self):
+        def unit(raw, uid):
+            match=re.search(r'<article id="'+re.escape(uid)+r'".*?</article>',raw,re.S)
+            self.assertIsNotNone(match)
+            return match.group(0)
+        for i in range(12):
+            block=unit(self.course,f'ch5-{i:02d}')
+            self.assertIn('class="answer-check"',block)
+            self.assertNotRegex(block,r'<details[^>]*class="answer-check"[^>]*\bopen(?:=|>)')
+            first=re.search(r'<section class="lesson-block">.*?</section>',block,re.S).group(0)
+            self.assertIn('零基础' if i<11 else '毕业小测',first)
+        self.assertIn('第一遍可查',unit(self.course,'ch5-00'))
+        self.assertGreaterEqual(self.homework.count('class="answer-check"'),24)
+        for q in [1,3,9,13,14,15,20,25]:
+            self.assertIn('class="answer-check"',unit(self.homework,'q'+str(q)))
+        for figure in ['novice-signal-samples.svg','novice-spectrum-steps.svg','novice-sampling-types.svg']:
+            self.assertIn(figure,self.course)
+
     def test_leading_zero_codes(self):
         for code in ['11100011','01001110000','00110000','00001011110','01010011','00100111000']:
             self.assertIn(code,self.homework)

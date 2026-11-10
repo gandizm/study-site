@@ -180,12 +180,18 @@ def make_units(text,chapter,homework=False):
         'ch7-10':('qpsk-constellation.svg','QPSK星座：两条正交方向各承载一个比特')
     }
     for unit in units:
-        if unit.get('id') in chapter_figures:unit.insert(2,figure(*chapter_figures[unit.get('id')]))
+        if unit.get('id') in chapter_figures:
+            # Let first-time concepts precede the more complete reference figure.
+            deep=next((el for el in unit if el.get('class')=='deep-block'),None)
+            pos=unit.index(deep) if deep is not None else len(unit)
+            unit.insert(pos,figure(*chapter_figures[unit.get('id')]))
     # Specific original numerical illustrations supplement the reviewed prose.
     if homework:
         extras={'q9':('quantization-midpoint.svg','0～20 V分40格：量程边界与重建电平分开'), 'q14':('alaw-cell.svg','输入−95：幅度小格92～96，中点94'), 'q25':('tdm-slots.svg','24路轮流占用时隙，脉宽为半个时隙')}
         for unit in units:
-            if unit.get('id') in extras:unit.insert(2,figure(*extras[unit.get('id')]))
+            if unit.get('id') in extras:
+                first=next((el for el in unit if el.get('class')=='lesson-block'),None)
+                unit.insert(unit.index(first)+1 if first is not None else len(unit),figure(*extras[unit.get('id')]))
     return units
 
 def serialize(el):return html.tostring(el,encoding='unicode',method='html')
@@ -200,7 +206,7 @@ def page(units,homework=False):
         links=''.join(f'<a href="#{u.get('id')}">{esc.escape(u.get("data-short"))}</a>' for u in units if u.get('data-chapter')==ch)
         unit_nav+=f'<nav class="unit-nav" data-chapter="{ch}" aria-label="{esc.escape(CHAPTERS[ch][0])}小节">{links}</nav>'
     title='第五章八题 · 边抄边学' if homework else '通原5—7章 · 先理顺，再算透'
-    lede='每题先看任务和起手式，再抄分步解答，最后用检查把答案倒着验证。题目已按教材原页核对。' if homework else '先用一条通信链路串起三章。一次只读一个知识单元，概念和代表题留在第一遍，详细推导放进第二遍。'
+    lede='每题先补需要的概念和符号，再跟着数字一步步算，最后抄解答并反查。必要基础在第一遍直接可见，题目已按教材原页核对。' if homework else '按完全没学过来读：先看图中的量，再认符号和单位，亲手算一小步，最后才归纳公式。一次只读一个单元，不以看完页面代替学会。'
     route_note='5.9.1、3、9、13、14、15、20、25。误差统一采用“输入−重建”；第14题与第15题的段内码规则不同。' if homework else '先进入“三章主线”，再按5 → 6 → 7学习。第五章作业可以同步做，不必等三章全部学完。'
     extra_control='<button type="button" id="show-all">展开全部题目</button>' if homework else ''
     body='\n'.join(serialize(unit) for unit in units)
@@ -209,8 +215,9 @@ def page(units,homework=False):
 <body class="comm-page"><a class="skip" href="#lesson">跳到学习内容</a>
 <header class="comm-header"><a class="comm-brand" href="communications.html">通信原理<small>5—7章 · 两遍辅导</small></a><nav aria-label="课程导航"><a href="communications.html">通原目录</a><a href="communications-ch5-homework.html">第五章作业</a><a href="courses.html">全部课程</a></nav></header>
 <main class="comm-main"><section class="comm-intro"><p class="eyebrow">一条主线 · 先必学，再深挖</p><h1>{title}</h1><p class="lede">{lede}</p><p class="route-note">{route_note}</p></section>
+<p class="start-note"><a href="communications-course-redraw.html#ch5-00">第一次学？从“一条电压曲线”开始 →</a></p>
 <nav class="chapter-nav" aria-label="选择章节">{chapter_nav}</nav>{unit_nav}
-<div class="workbar"><div class="pass-switch" role="group" aria-label="选择学习遍数"><button type="button" data-pass="first" aria-pressed="true">第一遍 · 必学速通</button><button type="button" data-pass="deep" aria-pressed="false">第二遍 · 展开深挖</button></div><button id="open-contents" type="button" aria-haspopup="dialog">本节目录 ☷</button></div><p class="mode-hint" id="mode-hint">先读本节必学和代表题；第二遍内容保持折叠。</p><p class="unit-lead" id="current-label" aria-live="polite"></p>{extra_control}
+<div class="workbar"><div class="pass-switch" role="group" aria-label="选择学习遍数"><button type="button" data-pass="first" aria-pressed="true">第一遍 · 从零学</button><button type="button" data-pass="deep" aria-pressed="false">第二遍 · 展开深挖</button></div><button id="open-contents" type="button" aria-haspopup="dialog">本节目录 ☷</button></div><p class="mode-hint" id="mode-hint">从本节起步逐段读，先做小检查再看答案；第二遍可按需展开。</p><p class="unit-lead" id="current-label" aria-live="polite"></p>{extra_control}
 <div id="lesson">{body}</div><nav class="bottom-nav" aria-label="继续学习"><a id="previous-unit" href="#{units[0].get('id')}">上一节</a><a href="#">回到路线起点 ↑</a><a id="next-unit" href="#{units[-1].get('id')}">下一节</a></nav>
 <aside class="record-note"><strong>原有伴读与记录保留。</strong>本页不修改原课件的完成标记、计时或本机学习记录。原页号与教材页号分开标注；新增讲解是按概念重排，不要求再通读旧版一遍。公式为原生MathML，图为同源SVG，无需外部数学库。</aside></main>
 <footer class="comm-footer">原课件：通信原理A 第5章141页、第6章116页、第7章125页。作业：赵恒凯等《现代通信原理（第2版）》5.9节。<a href="communications-redraw/source-map.json">来源与范围</a></footer>
@@ -229,6 +236,6 @@ for name in ['homework-first.md','homework-last.md']:
     file=INPUT/name
     if file.exists():homework+=make_units(file.read_text(),'homework',True)
 if homework:(SITE/'communications-ch5-homework.html').write_text(page(homework,True),encoding='utf-8')
-metadata={'version':1,'updated':'2026-11-10','teachingOrder':'概念重排，第一遍必学，第二遍推导','chapters':[{'chapter':n,'source':f'通信原理A_Chapt{n}.ppt','physicalPages':pages,'published':(INPUT/f'chapter{n}.md').exists()} for n,pages in [(5,141),(6,116),(7,125)]],'homework':{'textbook':'赵恒凯等《现代通信原理（第2版）》','ISBN':'978-7-302-54559-0','section':'5.9','questions':[1,3,9,13,14,15,20,25],'printedPages':[144,145,146,147],'pdfPages':[164,165,166,167],'scansPublished':False},'courseUnits':[{'id':u.get('id'),'chapter':u.get('data-chapter'),'title':u.xpath('.//h2')[0].text_content()} for u in course],'questionUnits':[u.get('id') for u in homework]}
+metadata={'version':1,'updated':'2026-11-10','teachingOrder':'零基础起步→读图与符号→小步数值例→自行检查→课内公式；第二遍补推导','chapters':[{'chapter':n,'source':f'通信原理A_Chapt{n}.ppt','physicalPages':pages,'published':(INPUT/f'chapter{n}.md').exists()} for n,pages in [(5,141),(6,116),(7,125)]],'homework':{'textbook':'赵恒凯等《现代通信原理（第2版）》','ISBN':'978-7-302-54559-0','section':'5.9','questions':[1,3,9,13,14,15,20,25],'printedPages':[144,145,146,147],'pdfPages':[164,165,166,167],'scansPublished':False},'courseUnits':[{'id':u.get('id'),'chapter':u.get('data-chapter'),'title':u.xpath('.//h2')[0].text_content()} for u in course],'questionUnits':[u.get('id') for u in homework]}
 (SITE/'communications-redraw/source-map.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({'courseUnits':len(course),'homeworkQuestions':len(homework),'chapters':[n for n in [5,6,7] if (INPUT/f'chapter{n}.md').exists()]},ensure_ascii=False))
