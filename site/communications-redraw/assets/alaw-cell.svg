@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc"><title id="title">A律第4段：先找小格，再用中点代表整格</title><desc id="desc">幅度95落在第4段的第8个小格，区间92至96，中点94。负输入恢复负号后为负94，折叠段内码只改变标签，不改变量化区间。</desc><rect width="1000" height="360" fill="#fffefa"/><style>text{font-family:system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#183a32}.title{font-size:27px;font-weight:750}.label{font-size:19px}.small{font-size:16px;fill:#61756d}.axis{stroke:#90a299;stroke-width:1.5}.grid{stroke:#dce5dd;stroke-width:1;stroke-dasharray:5 5}</style>
+<text class="title" x="35" y="44">A律第4段：先找小格，再用中点代表整格</text>
+<text class="label" x="35" y="92">输入 −95：先处理幅度95。第4段起点64，步长4，编号 j = 7。</text>
+<line x1="100" y1="210" x2="900" y2="210" stroke="#90a299" stroke-width="1.5"/>
+<line x1="150" y1="185" x2="150" y2="240" stroke="#90a299" stroke-width="1.5"/>
+<text class="label" x="150" y="270" text-anchor="middle">88</text>
+<line x1="370" y1="185" x2="370" y2="240" stroke="#90a299" stroke-width="1.5"/>
+<text class="label" x="370" y="270" text-anchor="middle">92</text>
+<line x1="590" y1="185" x2="590" y2="240" stroke="#90a299" stroke-width="1.5"/>
+<text class="label" x="590" y="270" text-anchor="middle">96</text>
+<line x1="810" y1="185" x2="810" y2="240" stroke="#90a299" stroke-width="1.5"/>
+<text class="label" x="810" y="270" text-anchor="middle">100</text>
+<rect x="370" y="185" width="220" height="55" rx="5" fill="#d9e9d6" opacity=".8"/>
+<circle cx="480" cy="210" r="8" fill="#22765d"/><circle cx="535" cy="210" r="7" fill="#b57524"/>
+<text class="small" x="455" y="150" style="fill:#22765d" text-anchor="end">重建幅度94</text>
+<line x1="470" y1="155" x2="480" y2="194" stroke="#22765d" stroke-width="1.5"/>
+<text class="small" x="555" y="150" style="fill:#b57524">输入幅度95</text>
+<line x1="545" y1="155" x2="535" y2="194" stroke="#b57524" stroke-width="1.5"/>
+<text class="small" x="35" y="325">自然编号7 → 自然段内码0111 → 本题折叠码0000；恢复负号后输出−94。</text>
+</svg>

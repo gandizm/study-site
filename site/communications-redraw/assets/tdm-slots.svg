@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" role="img" aria-labelledby="title desc"><title id="title">24路PAM：一帧容纳24个时隙，每个脉冲占半个时隙</title><desc id="desc">每路按8000次每秒抽样，一帧125微秒，24路复用码元率192千波特，每时隙5.208微秒，矩形脉冲宽度2.604微秒。</desc><rect width="1000" height="450" fill="#fffefa"/><style>text{font-family:system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#183a32}.title{font-size:27px;font-weight:750}.label{font-size:19px}.small{font-size:16px;fill:#61756d}.axis{stroke:#90a299;stroke-width:1.5}.grid{stroke:#dce5dd;stroke-width:1;stroke-dasharray:5 5}</style>
+<text class="title" x="35" y="44">24路PAM：一帧容纳24个时隙，每个脉冲占半个时隙</text>
+<text class="label" x="35" y="92">每路 fₛ = 8 kHz → 每帧125 μs → 24路合成 Rₛ = 192 kBaud</text>
+<rect x="60" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<text class="small" x="78" y="176" text-anchor="middle">1</text>
+<rect x="96" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<text class="small" x="114" y="176" text-anchor="middle">2</text>
+<rect x="132" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<text class="small" x="150" y="176" text-anchor="middle">3</text>
+<rect x="168" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="204" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="240" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="276" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="312" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="348" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="384" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="420" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="456" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="492" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="528" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="564" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="600" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="636" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="672" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="708" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="744" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<rect x="780" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<rect x="816" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<text class="small" x="834" y="176" text-anchor="middle">22</text>
+<rect x="852" y="145" width="36" height="50" fill="#e3eddc" stroke="#a2b5a6"/>
+<text class="small" x="870" y="176" text-anchor="middle">23</text>
+<rect x="888" y="145" width="36" height="50" fill="#eff3e8" stroke="#a2b5a6"/>
+<text class="small" x="906" y="176" text-anchor="middle">24</text>
+<text class="small" x="488" y="176" text-anchor="middle">…</text>
+<text class="small" x="60" y="225">一帧：每路轮到一次</text>
+<line x1="220" y1="350" x2="820" y2="350" stroke="#90a299" stroke-width="1.5"/>
+<polyline points="250,350 250,275 475,275 475,350 700,350" fill="none" stroke="#22765d" stroke-width="4"/>
+<line x1="250" y1="258" x2="250" y2="378" stroke="#a2b5a6" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="700" y1="258" x2="700" y2="378" stroke="#a2b5a6" stroke-width="1" stroke-dasharray="4 4"/>
+<text class="small" x="280" y="257" style="fill:#22765d">脉宽 τ = 2.604 μs</text>
+<text class="small" x="310" y="410">一个时隙 T = 5.208 μs；占空比 τ/T = 0.5</text>
+</svg>

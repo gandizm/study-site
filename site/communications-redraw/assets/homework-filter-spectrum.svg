@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" role="img" aria-labelledby="title desc"><title id="title">5.9.3：先滤波，再抽样，恢复时还要把衰减补回来</title><desc id="desc">输入矩形谱在正负ω1内为1；H1是正负2ω1之间的三角形；滤波后频谱仍只到正负ω1，但边缘幅度降到1/2。</desc><rect width="1000" height="450" fill="#fffefa"/><style>text{font-family:system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#183a32}.title{font-size:27px;font-weight:750}.label{font-size:19px}.small{font-size:16px;fill:#61756d}.axis{stroke:#90a299;stroke-width:1.5}.grid{stroke:#dce5dd;stroke-width:1;stroke-dasharray:5 5}</style>
+<text class="title" x="35" y="44">5.9.3：先滤波，再抽样，恢复时还要把衰减补回来</text>
+<text class="label" x="185" y="115" text-anchor="middle">M(ω)</text>
+<line x1="55" y1="285" x2="315" y2="285" stroke="#90a299" stroke-width="1.5"/>
+<line x1="185" y1="150" x2="185" y2="305" stroke="#90a299" stroke-width="1.5"/>
+<polyline fill="none" stroke="#22765d" stroke-width="3" points="65.00,285.00 125.00,285.00 125.00,175.00 245.00,175.00 245.00,285.00 305.00,285.00"/>
+<text class="small" x="125" y="315" text-anchor="middle">−ω₁</text>
+<text class="small" x="245" y="315" text-anchor="middle">ω₁</text>
+<text class="label" x="505" y="115" text-anchor="middle">H₁(ω)</text>
+<line x1="375" y1="285" x2="635" y2="285" stroke="#90a299" stroke-width="1.5"/>
+<line x1="505" y1="150" x2="505" y2="305" stroke="#90a299" stroke-width="1.5"/>
+<polyline fill="none" stroke="#4666a5" stroke-width="3" points="385.00,285.00 505.00,175.00 625.00,285.00"/>
+<text class="small" x="445" y="315" text-anchor="middle">−ω₁</text>
+<text class="small" x="565" y="315" text-anchor="middle">ω₁</text>
+<text class="small" x="385" y="343" text-anchor="middle">−2ω₁</text>
+<text class="small" x="625" y="343" text-anchor="middle">2ω₁</text>
+<text class="label" x="825" y="115" text-anchor="middle">M′(ω)=M(ω)H₁(ω)</text>
+<line x1="695" y1="285" x2="955" y2="285" stroke="#90a299" stroke-width="1.5"/>
+<line x1="825" y1="150" x2="825" y2="305" stroke="#90a299" stroke-width="1.5"/>
+<polyline fill="none" stroke="#b57524" stroke-width="3" points="705.00,285.00 765.00,285.00 765.00,230.00 825.00,175.00 885.00,230.00 885.00,285.00 945.00,285.00"/>
+<text class="small" x="765" y="315" text-anchor="middle">−ω₁</text>
+<text class="small" x="885" y="315" text-anchor="middle">ω₁</text>
+<text class="small" x="35" y="390">没有产生新频率：m′(t) 的最高频率仍为 f₁，所以理想最低抽样率仍按 2f₁ 判断。</text>
+<text class="small" x="35" y="423">但恢复原始 m(t) 时，通带中 H₂(ω) 需要同时补偿抽样尺度与 H₁(ω) 的衰减。</text>
+</svg>

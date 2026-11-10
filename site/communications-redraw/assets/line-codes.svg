@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" role="img" aria-labelledby="title desc"><title id="title">同一串 1 0 1 1：比特不变，线路码型可以变</title><desc id="desc">单极NRZ将1映射到正电平、0到0；双极NRZ将1映射到正电平、0到负电平；AMI的1交替极性，0为0。</desc><rect width="1000" height="550" fill="#fffefa"/><style>text{font-family:system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#183a32}.title{font-size:27px;font-weight:750}.label{font-size:19px}.small{font-size:16px;fill:#61756d}.axis{stroke:#90a299;stroke-width:1.5}.grid{stroke:#dce5dd;stroke-width:1;stroke-dasharray:5 5}</style>
+<text class="title" x="35" y="44">同一串 1 0 1 1：比特不变，线路码型可以变</text>
+<text class="title" x="280" y="95" text-anchor="middle">1</text>
+<text class="title" x="435" y="95" text-anchor="middle">0</text>
+<text class="title" x="590" y="95" text-anchor="middle">1</text>
+<text class="title" x="745" y="95" text-anchor="middle">1</text>
+<text class="label" x="30" y="190">单极 NRZ</text>
+<line x1="200" y1="190" x2="850" y2="190" stroke="#90a299" stroke-width="1.5"/>
+<line x1="202" y1="136" x2="202" y2="244" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="357" y1="136" x2="357" y2="244" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="512" y1="136" x2="512" y2="244" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="667" y1="136" x2="667" y2="244" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="822" y1="136" x2="822" y2="244" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<polyline fill="none" stroke="#22765d" stroke-width="4" points="202.00,150.00 357.00,150.00 357.00,190.00 512.00,190.00 512.00,150.00 667.00,150.00 667.00,150.00 822.00,150.00"/>
+<text class="small" x="875" y="190">0</text>
+<text class="small" x="875" y="154">+A</text>
+<text class="small" x="875" y="230">−A</text>
+<text class="label" x="30" y="335">双极 NRZ</text>
+<line x1="200" y1="335" x2="850" y2="335" stroke="#90a299" stroke-width="1.5"/>
+<line x1="202" y1="281" x2="202" y2="389" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="357" y1="281" x2="357" y2="389" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="512" y1="281" x2="512" y2="389" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="667" y1="281" x2="667" y2="389" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="822" y1="281" x2="822" y2="389" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<polyline fill="none" stroke="#4666a5" stroke-width="4" points="202.00,295.00 357.00,295.00 357.00,375.00 512.00,375.00 512.00,295.00 667.00,295.00 667.00,295.00 822.00,295.00"/>
+<text class="small" x="875" y="335">0</text>
+<text class="small" x="875" y="299">+A</text>
+<text class="small" x="875" y="375">−A</text>
+<text class="label" x="30" y="480">AMI</text>
+<line x1="200" y1="480" x2="850" y2="480" stroke="#90a299" stroke-width="1.5"/>
+<line x1="202" y1="426" x2="202" y2="534" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="357" y1="426" x2="357" y2="534" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="512" y1="426" x2="512" y2="534" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="667" y1="426" x2="667" y2="534" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="822" y1="426" x2="822" y2="534" stroke="#dce5dd" stroke-width="1" stroke-dasharray="4 4"/>
+<polyline fill="none" stroke="#b57524" stroke-width="4" points="202.00,440.00 357.00,440.00 357.00,480.00 512.00,480.00 512.00,520.00 667.00,520.00 667.00,440.00 822.00,440.00"/>
+<text class="small" x="875" y="480">0</text>
+<text class="small" x="875" y="444">+A</text>
+<text class="small" x="875" y="520">−A</text>
+</svg>

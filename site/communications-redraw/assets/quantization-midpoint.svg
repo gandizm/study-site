@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc"><title id="title">均匀量化：样值落在区间内，输出取重建电平</title><desc id="desc">0到20伏分成40个区间，每区间0.5伏。中点重建的最低输出0.25伏，最高输出19.75伏。</desc><rect width="1000" height="360" fill="#fffefa"/><style>text{font-family:system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#183a32}.title{font-size:27px;font-weight:750}.label{font-size:19px}.small{font-size:16px;fill:#61756d}.axis{stroke:#90a299;stroke-width:1.5}.grid{stroke:#dce5dd;stroke-width:1;stroke-dasharray:5 5}</style>
+<text class="title" x="35" y="44">均匀量化：样值落在区间内，输出取重建电平</text>
+<text class="label" x="35" y="90">本图：范围 0～20 V，40个区间，Δ = 0.5 V；采用中点重建</text>
+<line x1="85" y1="205" x2="915" y2="205" stroke="#90a299" stroke-width="1.5"/>
+<line x1="90" y1="180" x2="90" y2="230" stroke="#90a299" stroke-width="1.5"/>
+<text class="small" x="90" y="260" text-anchor="middle">0 V</text>
+<line x1="240" y1="180" x2="240" y2="230" stroke="#90a299" stroke-width="1.5"/>
+<text class="small" x="240" y="260" text-anchor="middle">0.5 V</text>
+<line x1="390" y1="180" x2="390" y2="230" stroke="#90a299" stroke-width="1.5"/>
+<text class="small" x="390" y="260" text-anchor="middle">1.0 V</text>
+<line x1="610" y1="180" x2="610" y2="230" stroke="#90a299" stroke-width="1.5"/>
+<text class="small" x="610" y="260" text-anchor="middle">19.0 V</text>
+<line x1="760" y1="180" x2="760" y2="230" stroke="#90a299" stroke-width="1.5"/>
+<text class="small" x="760" y="260" text-anchor="middle">19.5 V</text>
+<line x1="910" y1="180" x2="910" y2="230" stroke="#90a299" stroke-width="1.5"/>
+<text class="small" x="910" y="260" text-anchor="middle">20.0 V</text>
+<circle cx="165" cy="205" r="7" fill="#22765d"/>
+<text class="small" x="165" y="158" style="fill:#22765d" text-anchor="middle">0.25 V</text>
+<circle cx="315" cy="205" r="7" fill="#22765d"/>
+<text class="small" x="315" y="158" style="fill:#22765d" text-anchor="middle">0.75 V</text>
+<circle cx="685" cy="205" r="7" fill="#22765d"/>
+<text class="small" x="685" y="158" style="fill:#22765d" text-anchor="middle">19.25 V</text>
+<circle cx="835" cy="205" r="7" fill="#22765d"/>
+<text class="small" x="835" y="158" style="fill:#22765d" text-anchor="middle">19.75 V</text>
+<text class="title" x="485" y="213">…</text>
+<text class="small" x="35" y="318">边界 ≠ 输出电平。输入到20 V，并不意味着重建值也等于20 V。</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc"><title id="title">QPSK：一个码元用两个正交方向承载两个比特</title><desc id="desc">四个相位相差90度的等能量点构成QPSK星座，每码元承载两比特。本图的标签约定与本章正文一致。</desc><rect width="1000" height="520" fill="#fffefa"/><style>text{font-family:system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#183a32}.title{font-size:27px;font-weight:750}.label{font-size:19px}.small{font-size:16px;fill:#61756d}.axis{stroke:#90a299;stroke-width:1.5}.grid{stroke:#dce5dd;stroke-width:1;stroke-dasharray:5 5}</style>
+<text class="title" x="35" y="44">QPSK：一个码元用两个正交方向承载两个比特</text>
+<line x1="225" y1="285" x2="775" y2="285" stroke="#90a299" stroke-width="1.5"/>
+<line x1="500" y1="465" x2="500" y2="85" stroke="#90a299" stroke-width="1.5"/>
+<circle cx="500" cy="285" r="160" fill="none" stroke="#d4dfd5" stroke-dasharray="5 5"/>
+<line x1="500" y1="285" x2="613.1370849898476" y2="171.8629150101524" stroke="#9bb5a4" stroke-width="2"/>
+<circle cx="613.1370849898476" cy="171.8629150101524" r="9" fill="#22765d"/>
+<text class="label" x="633.1370849898476" y="153.8629150101524" text-anchor="start">45° / 00</text>
+<line x1="500" y1="285" x2="386.8629150101524" y2="171.8629150101524" stroke="#9bb5a4" stroke-width="2"/>
+<circle cx="386.8629150101524" cy="171.8629150101524" r="9" fill="#22765d"/>
+<text class="label" x="366.8629150101524" y="153.8629150101524" text-anchor="end">135° / 10</text>
+<line x1="500" y1="285" x2="386.8629150101524" y2="398.1370849898476" stroke="#9bb5a4" stroke-width="2"/>
+<circle cx="386.8629150101524" cy="398.1370849898476" r="9" fill="#22765d"/>
+<text class="label" x="366.8629150101524" y="380.1370849898476" text-anchor="end">225° / 11</text>
+<line x1="500" y1="285" x2="613.1370849898476" y2="398.1370849898476" stroke="#9bb5a4" stroke-width="2"/>
+<circle cx="613.1370849898476" cy="398.1370849898476" r="9" fill="#22765d"/>
+<text class="label" x="633.1370849898476" y="380.1370849898476" text-anchor="start">315° / 01</text>
+<text class="label" x="795" y="293">I</text>
+<text class="label" x="490" y="77">Q</text>
+<text class="small" x="35" y="90">示意：四点等能量，符号率 Rₛ = R_b / 2</text>
+<text class="small" x="35" y="490">本章约定：I=1−2u，Q=1−2v。相邻点仅一位不同；每码元2 bit，Eₛ=2E_b。</text>
+</svg>

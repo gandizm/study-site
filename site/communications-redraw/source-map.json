@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "updated": "2026-11-10",
+  "teachingOrder": "概念重排，第一遍必学，第二遍推导",
+  "chapters": [
+    {
+      "chapter": 5,
+      "source": "通信原理A_Chapt5.ppt",
+      "physicalPages": 141,
+      "published": true
+    },
+    {
+      "chapter": 6,
+      "source": "通信原理A_Chapt6.ppt",
+      "physicalPages": 116,
+      "published": true
+    },
+    {
+      "chapter": 7,
+      "source": "通信原理A_Chapt7.ppt",
+      "physicalPages": 125,
+      "published": true
+    }
+  ],
+  "homework": {
+    "textbook": "赵恒凯等《现代通信原理（第2版）》",
+    "ISBN": "978-7-302-54559-0",
+    "section": "5.9",
+    "questions": [
+      1,
+      3,
+      9,
+      13,
+      14,
+      15,
+      20,
+      25
+    ],
+    "printedPages": [
+      144,
+      145,
+      146,
+      147
+    ],
+    "pdfPages": [
+      164,
+      165,
+      166,
+      167
+    ],
+    "scansPublished": false
+  },
+  "courseUnits": [
+    {
+      "id": "intro-00",
+      "chapter": "intro",
+      "title": "三章只围绕一个问题：怎样把信息可靠地送到另一端"
+    },
+    {
+      "id": "intro-01",
+      "chapter": "intro",
+      "title": "先避开三个最容易串起来的概念"
+    },
+    {
+      "id": "intro-02",
+      "chapter": "intro",
+      "title": "做题前只分清这四个量"
+    },
+    {
+      "id": "intro-03",
+      "chapter": "intro",
+      "title": "八道作业就是第一轮学习路线"
+    },
+    {
+      "id": "ch5-00",
+      "chapter": "ch5",
+      "title": "5-0 先看全局：这章的三步分别改变什么？"
+    },
+    {
+      "id": "ch5-01",
+      "chapter": "ch5",
+      "title": "5-1 抽样：为什么有限频带能用一串数描述？"
+    },
+    {
+      "id": "ch5-02",
+      "chapter": "ch5",
+      "title": "5-2 带通与实际抽样：只知道“带宽”还不够"
+    },
+    {
+      "id": "ch5-03",
+      "chapter": "ch5",
+      "title": "5-3 量化：用有限电平换来可编码的幅度"
+    },
+    {
+      "id": "ch5-04",
+      "chapter": "ch5",
+      "title": "5-4 非均匀量化：把更多刻度留给小信号"
+    },
+    {
+      "id": "ch5-05",
+      "chapter": "ch5",
+      "title": "5-5 PCM：把A律码字算出来，再译回去"
+    },
+    {
+      "id": "ch5-06",
+      "chapter": "ch5",
+      "title": "5-6 PCM噪声：多加位数为什么不是万能的？"
+    },
+    {
+      "id": "ch5-07",
+      "chapter": "ch5",
+      "title": "5-7 DPCM：不重复报当前位置，而报预测差多少"
+    },
+    {
+      "id": "ch5-08",
+      "chapter": "ch5",
+      "title": "5-8 增量调制：每次只能上一阶或下一阶"
+    },
+    {
+      "id": "ch5-09",
+      "chapter": "ch5",
+      "title": "5-9 TDM：每路还是原来的采样率，总线路却快了"
+    },
+    {
+      "id": "ch5-10",
+      "chapter": "ch5",
+      "title": "5-10 PDH与SDH：多路信号怎样逐层装进大通道？"
+    },
+    {
+      "id": "ch5-11",
+      "chapter": "ch5",
+      "title": "5-11 学完以后：拿到题先问哪个问题？"
+    },
+    {
+      "id": "ch6-00",
+      "chapter": "ch6",
+      "title": "6.0 全章地图：数字信息怎样变成可接收的波形"
+    },
+    {
+      "id": "ch6-01",
+      "chapter": "ch6",
+      "title": "6.1 码型：同一串比特，为什么要换不同的电压表示"
+    },
+    {
+      "id": "ch6-02",
+      "chapter": "ch6",
+      "title": "6.2 频谱：脉冲有多窄、是否有直流、能否直接提取节拍"
+    },
+    {
+      "id": "ch6-03",
+      "chapter": "ch6",
+      "title": "6.3 码间干扰与奈奎斯特第一准则"
+    },
+    {
+      "id": "ch6-04",
+      "chapter": "ch6",
+      "title": "6.4 余弦滚降：用一些带宽换更容易实现的脉冲"
+    },
+    {
+      "id": "ch6-05",
+      "chapter": "ch6",
+      "title": "6.5 部分响应：允许一种事先知道的码间关系"
+    },
+    {
+      "id": "ch6-06",
+      "chapter": "ch6",
+      "title": "6.6 噪声与判决：误码就是抽样值跨过了门限"
+    },
+    {
+      "id": "ch6-07",
+      "chapter": "ch6",
+      "title": "6.7 眼图：把许多个码元叠起来，检查在哪里最容易判"
+    },
+    {
+      "id": "ch6-08",
+      "chapter": "ch6",
+      "title": "6.8 均衡与扰码：分别修正信道和数据排列"
+    },
+    {
+      "id": "ch6-09",
+      "chapter": "ch6",
+      "title": "6.9 学完后用这张检查单判断自己会不会"
+    },
+    {
+      "id": "ch7-00",
+      "chapter": "ch7",
+      "title": "7-0｜整章地图：为什么第六章学完，还要第七章？"
+    },
+    {
+      "id": "ch7-01",
+      "chapter": "ch7",
+      "title": "7-1｜2ASK：有一段正弦波，还是没有？"
+    },
+    {
+      "id": "ch7-02",
+      "chapter": "ch7",
+      "title": "7-2｜2FSK：比较哪一个频率更像收到的信号"
+    },
+    {
+      "id": "ch7-03",
+      "chapter": "ch7",
+      "title": "7-3｜2PSK：正着的载波和反着的载波"
+    },
+    {
+      "id": "ch7-04",
+      "chapter": "ch7",
+      "title": "7-4｜2DPSK：不认绝对朝向，只认前后变化"
+    },
+    {
+      "id": "ch7-05",
+      "chapter": "ch7",
+      "title": "7-5｜带宽：搬移频谱以后，究竟占多宽？"
+    },
+    {
+      "id": "ch7-06",
+      "chapter": "ch7",
+      "title": "7-6｜误码率的核心：噪声把抽样值推过了哪条线？"
+    },
+    {
+      "id": "ch7-07",
+      "chapter": "ch7",
+      "title": "7-7｜FSK抗噪：为什么一定要数清楚“哪一个带宽”？"
+    },
+    {
+      "id": "ch7-08",
+      "chapter": "ch7",
+      "title": "7-8｜PSK与DPSK抗噪：可靠性要付出什么代价？"
+    },
+    {
+      "id": "ch7-09",
+      "chapter": "ch7",
+      "title": "7-9｜多进制：一个码元多装几比特，代价是什么？"
+    },
+    {
+      "id": "ch7-10",
+      "chapter": "ch7",
+      "title": "7-10｜QPSK：用两条正交方向，同时承载两个比特"
+    },
+    {
+      "id": "ch7-11",
+      "chapter": "ch7",
+      "title": "7-11｜收束：看到题目，先走哪四步？"
+    }
+  ],
+  "questionUnits": [
+    "q1",
+    "q3",
+    "q9",
+    "q13",
+    "q14",
+    "q15",
+    "q20",
+    "q25"
+  ]
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" role="img" aria-labelledby="title desc"><title id="title">三章只做三件事：取数 → 传数 → 搬上载波</title><desc id="desc">第5章将连续消息变成比特；第6章把比特变成可判决的基带波形；第7章将数字波形调制到载波传输。</desc><rect width="1000" height="420" fill="#fffefa"/><style>text{font-family:system-ui,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#183a32}.title{font-size:27px;font-weight:750}.label{font-size:19px}.small{font-size:16px;fill:#61756d}.axis{stroke:#90a299;stroke-width:1.5}.grid{stroke:#dce5dd;stroke-width:1;stroke-dasharray:5 5}</style>
+<text class="title" x="35" y="44">三章只做三件事：取数 → 传数 → 搬上载波</text>
+<rect x="35" y="95" width="280" height="185" rx="18" fill="#f1f5ed" stroke="#d6e1d7"/>
+<text class="title" x="57" y="132" style="fill:#22765d">05</text>
+<text class="label" x="57" y="185">模拟 → 数字</text>
+<text class="small" x="57" y="230">抽样 · 量化 · 编码</text>
+<rect x="360" y="95" width="280" height="185" rx="18" fill="#f1f5ed" stroke="#d6e1d7"/>
+<text class="title" x="382" y="132" style="fill:#4666a5">06</text>
+<text class="label" x="382" y="185">比特 → 基带波形</text>
+<text class="small" x="382" y="230">码型 · 成形 · 判决</text>
+<rect x="685" y="95" width="280" height="185" rx="18" fill="#f1f5ed" stroke="#d6e1d7"/>
+<text class="title" x="707" y="132" style="fill:#b57524">07</text>
+<text class="label" x="707" y="185">基带 → 载波</text>
+<text class="small" x="707" y="230">ASK · FSK · PSK</text>
+<text class="title" x="320" y="192">→</text>
+<text class="title" x="645" y="192">→</text>
+<text class="label" x="35" y="330">同一条消息：话音波形 → 一串 0/1 → 可在线路上传输的电压 → 适合信道的带通信号</text>
+<text class="small" x="35" y="376">反向接收：解调 → 抽样判决 → PCM译码 → 重建模拟波形</text>
+</svg>
