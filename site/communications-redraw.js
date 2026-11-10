@@ -87,14 +87,14 @@
   function fitFigure() {setZoom(Math.min(1, ($('#figure-canvas').clientWidth - 28) / figureWidth));}
   function openFigure(img, opener) {
     figureOpener = opener;
-    figureImage.onload = () => {figureWidth = figureImage.naturalWidth || 1000; fitFigure();};
+    figureImage.onload = () => {figureWidth = Math.max(1000, figureImage.naturalWidth || 0); fitFigure();};
     figureImage.src = img.src;
     figureImage.alt = img.alt;
     $('#figure-title').textContent = img.alt || '清晰大图';
     $('#figure-caption').textContent = img.closest('figure')?.querySelector('figcaption')?.textContent || '';
     $('#open-figure-file').href = img.src;
     if (!figureDialog.open) figureDialog.showModal();
-    if (figureImage.complete) {figureWidth = figureImage.naturalWidth || 1000; fitFigure();}
+    if (figureImage.complete) {figureWidth = Math.max(1000, figureImage.naturalWidth || 0); fitFigure();}
     $('#figure-canvas').scrollTop = 0;
     $('#figure-canvas').scrollLeft = 0;
   }
