@@ -71,7 +71,8 @@ class Publication(unittest.TestCase):
     def test_viewbox_svg_readable_size(self):
         js=(SITE/'communications-redraw.js').read_text()
         self.assertEqual(js.count('figureWidth = Math.max(1000, figureImage.naturalWidth || 0);'),2)
-        for page in [self.course,self.homework]:self.assertIn('communications-redraw.js?v=20261110b',page)
+        self.assertIn('communications-redraw.js?v=20261110b',self.course)
+        self.assertIn('communications-redraw.js?v=20261111-homework',self.homework)
     def test_novice_foundations_are_visible(self):
         def unit(raw, uid):
             match=re.search(r'<article id="'+re.escape(uid)+r'".*?</article>',raw,re.S)
@@ -84,8 +85,8 @@ class Publication(unittest.TestCase):
             first=re.search(r'<section class="lesson-block">.*?</section>',block,re.S).group(0)
             self.assertIn('零基础' if i<11 else '毕业小测',first)
         self.assertIn('第一遍可查',unit(self.course,'ch5-00'))
-        self.assertGreaterEqual(self.homework.count('class="answer-check"'),24)
-        for q in [1,3,9,13,14,15,20,25]:
+        self.assertGreaterEqual(self.homework.count('class="answer-check"'),15)
+        for q in [1,3,9,15,20]:
             self.assertIn('class="answer-check"',unit(self.homework,'q'+str(q)))
         for figure in ['novice-signal-samples.svg','novice-spectrum-steps.svg','novice-sampling-types.svg']:
             self.assertIn(figure,self.course)
@@ -99,6 +100,23 @@ class Publication(unittest.TestCase):
             self.assertIn('零基础', first)
         for name in ['pulse-convolution','noise-decision','eye-diagram','carrier-coherent','qpsk-iq']:
             self.assertIn('novice-'+name+'.svg', self.course)
+
+    def test_reviewed_homework_answer_first(self):
+        for q in [13,14,25]:
+            block = re.search(r'<article id="q'+str(q)+r'".*?</article>', self.homework, re.S).group(0)
+            self.assertIn('data-answer-first="true"',block)
+            self.assertEqual(block.count('class="copy-answer"'),1)
+            self.assertEqual(block.count('data-copy-answer'),1)
+            self.assertLess(block.index('>原题</h3>'),block.index('>可抄解答</h3>'))
+            self.assertLess(block.index('class="copy-answer"'),block.index('<details class="deep-block">'))
+            self.assertIn('学习解释</summary>',block)
+            self.assertNotIn('class="answer-check"',block)
+            self.assertIn('来源与口径',block)
+            self.assertNotRegex(block,r'<details[^>]*\bopen(?:=|>)')
+        q25=re.search(r'<article id="q25".*?</article>',self.homework,re.S).group(0)
+        self.assertIn('原题明确同时要求两种带宽',q25)
+        self.assertIn('第一零点带宽为384 kHz，理论最小信道带宽为96 kHz',q25)
+        self.assertNotIn('为什么有两个不同的带宽答案',q25)
 
     def test_leading_zero_codes(self):
         for code in ['11100011','01001110000','00110000','00001011110','01010011','00100111000']:

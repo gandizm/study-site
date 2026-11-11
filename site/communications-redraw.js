@@ -14,9 +14,14 @@
   let figureScale = 1;
 
   function applyPass() {
+    const answerFirst = current.dataset.answerFirst === 'true';
+    $('[data-pass=first]').textContent = answerFirst ? '作业解答' : '第一遍 · 从零学';
+    $('[data-pass=deep]').textContent = answerFirst ? '展开学习解释' : '第二遍 · 展开深挖';
     $$('[data-pass]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.pass === pass)));
     $$('.deep-block', current).forEach(details => { details.open = pass === 'deep'; });
-    $('#mode-hint').textContent = pass === 'first'
+    $('#mode-hint').textContent = answerFirst
+      ? (pass === 'first' ? '先看原题与正式解答；不熟悉的概念和定义，可展开下面的学习解释。' : '学习解释已展开；书面解答与补充讲解分别显示。')
+      : pass === 'first'
       ? '先读本节必学和代表题；第二遍内容保持折叠，需要时单独打开。'
       : '本节第二遍已展开。随时切回第一遍，不需要把整章一次读完。';
   }

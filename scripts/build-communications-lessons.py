@@ -78,7 +78,7 @@ def copy_toolbar():
     return div
 
 def classify_block(title):
-    if any(word in title for word in ['第二遍','深挖','选读','推导细节','按需展开']):return 'deep'
+    if any(word in title for word in ['第二遍','深挖','选读','推导细节','按需展开','学习解释']):return 'deep'
     return 'normal'
 
 def sections(text):
@@ -106,7 +106,7 @@ def wrap_blocks(items, homework=False):
         deep=classify_block(title)=='deep'
         wrap=node('details' if deep else 'section');wrap.set('class','deep-block' if deep else 'lesson-block')
         if deep:
-            summary=node('summary');label=node('span','扩展 · 第二遍');label.set('class','deep-label');summary.append(label);label.tail=title;wrap.append(summary)
+            summary=node('summary');label=node('span','按需阅读' if '学习解释' in title else '扩展 · 第二遍');label.set('class','deep-label');summary.append(label);label.tail=title;wrap.append(summary)
         else:
             title_el=node('h3', '可抄解答 · 分步完成' if homework and '分步解答' in title else title);title_el.set('class','block-title');wrap.append(title_el)
         content=node('div');content.set('class','block-body')
@@ -164,6 +164,8 @@ def make_units(text,chapter,homework=False):
             if len(short)>25:short=short[:24]+'…'
         unit=node('article',id=uid,data_chapter=chapter,data_chapter_title=CHAPTERS[chapter][0],data_short=short)
         unit.set('class','comm-unit');unit.set('aria-labelledby',uid+'-title')
+        if homework and any(el.tag=='h3' and '学习解释' in el.text_content() for el in items):
+            unit.set('data-answer-first','true')
         header=node('header');header.set('class','unit-heading');label=node('p',CHAPTERS[chapter][0]);label.set('class','unit-index');header.append(label);header.append(node('h2',title,id=uid+'-title'));unit.append(header)
         for block in wrap_blocks(items,homework):unit.append(block)
         units.append(unit)
@@ -204,8 +206,13 @@ def make_units(text,chapter,homework=False):
         extras={'q9':('quantization-midpoint.svg','0～20 V分40格：量程边界与重建电平分开'), 'q14':('alaw-cell.svg','输入−95：幅度小格92～96，中点94'), 'q25':('tdm-slots.svg','24路轮流占用时隙，脉宽为半个时隙')}
         for unit in units:
             if unit.get('id') in extras:
-                first=next((el for el in unit if el.get('class')=='lesson-block'),None)
-                unit.insert(unit.index(first)+1 if first is not None else len(unit),figure(*extras[unit.get('id')]))
+                if unit.get('data-answer-first')=='true':
+                    explanation=next((el for el in unit if el.get('class')=='deep-block' and '学习解释' in el.xpath('./summary')[0].text_content()),None)
+                    if explanation is not None:
+                        explanation.xpath('./div[@class="block-body"]')[0].insert(0,figure(*extras[unit.get('id')]))
+                else:
+                    first=next((el for el in unit if el.get('class')=='lesson-block'),None)
+                    unit.insert(unit.index(first)+1 if first is not None else len(unit),figure(*extras[unit.get('id')]))
     return units
 
 def serialize(el):return html.tostring(el,encoding='unicode',method='html')
@@ -220,12 +227,13 @@ def page(units,homework=False):
         links=''.join(f'<a href="#{u.get('id')}">{esc.escape(u.get("data-short"))}</a>' for u in units if u.get('data-chapter')==ch)
         unit_nav+=f'<nav class="unit-nav" data-chapter="{ch}" aria-label="{esc.escape(CHAPTERS[ch][0])}小节">{links}</nav>'
     title='第五章八题 · 边抄边学' if homework else '通原5—7章 · 先理顺，再算透'
-    lede='每题先补需要的概念和符号，再跟着数字一步步算，最后抄解答并反查。必要基础在第一遍直接可见，题目已按教材原页核对。' if homework else '按完全没学过来读：先看图中的量，再认符号和单位，亲手算一小步，最后才归纳公式。一次只读一个单元，不以看完页面代替学会。'
+    lede='第13、14、25题已按教材与PPT重新核对：先看原题和完整书面解答，学习解释可按需展开。其余五题保留从零讲解与分步解答。' if homework else '按完全没学过来读：先看图中的量，再认符号和单位，亲手算一小步，最后才归纳公式。一次只读一个单元，不以看完页面代替学会。'
     route_note='5.9.1、3、9、13、14、15、20、25。误差统一采用“输入−重建”；第14题与第15题的段内码规则不同。' if homework else '先进入“三章主线”，再按5 → 6 → 7学习。第五章作业可以同步做，不必等三章全部学完。'
     extra_control='<button type="button" id="show-all">展开全部题目</button>' if homework else ''
     body='\n'.join(serialize(unit) for unit in units)
+    script_version='20261111-homework' if homework else '20261110b'
     return f'''<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="通信原理第5至7章：从零梳理脉络、逐个解释概念、代表题、第二遍推导与第五章作业带做。"><title>{title}</title><link rel="stylesheet" href="communications-redraw.css?v=20261110"><script defer src="communications-redraw.js?v=20261110b"></script></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="通信原理第5至7章：从零梳理脉络、逐个解释概念、代表题、第二遍推导与第五章作业带做。"><title>{title}</title><link rel="stylesheet" href="communications-redraw.css?v=20261110"><script defer src="communications-redraw.js?v={script_version}"></script></head>
 <body class="comm-page"><a class="skip" href="#lesson">跳到学习内容</a>
 <header class="comm-header"><a class="comm-brand" href="communications.html">通信原理<small>5—7章 · 两遍辅导</small></a><nav aria-label="课程导航"><a href="communications.html">通原目录</a><a href="communications-ch5-homework.html">第五章作业</a><a href="courses.html">全部课程</a></nav></header>
 <main class="comm-main"><section class="comm-intro"><p class="eyebrow">一条主线 · 先必学，再深挖</p><h1>{title}</h1><p class="lede">{lede}</p><p class="route-note">{route_note}</p></section>
