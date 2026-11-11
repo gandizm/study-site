@@ -90,6 +90,16 @@ class Publication(unittest.TestCase):
         for figure in ['novice-signal-samples.svg','novice-spectrum-steps.svg','novice-sampling-types.svg']:
             self.assertIn(figure,self.course)
 
+    def test_ch67_foundations_preserve_existing_units(self):
+        ids = ['ch6-00','ch6-02','ch6-03','ch6-06','ch6-07',
+               'ch7-00','ch7-01','ch7-03','ch7-04','ch7-10']
+        for uid in ids:
+            block = re.search(r'<article id="'+uid+r'".*?</article>', self.course, re.S).group(0)
+            first = re.search(r'<section class="lesson-block">.*?</section>', block, re.S).group(0)
+            self.assertIn('零基础', first)
+        for name in ['pulse-convolution','noise-decision','eye-diagram','carrier-coherent','qpsk-iq']:
+            self.assertIn('novice-'+name+'.svg', self.course)
+
     def test_leading_zero_codes(self):
         for code in ['11100011','01001110000','00110000','00001011110','01010011','00100111000']:
             self.assertIn(code,self.homework)

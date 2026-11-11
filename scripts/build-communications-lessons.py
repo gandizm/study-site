@@ -185,6 +185,20 @@ def make_units(text,chapter,homework=False):
             deep=next((el for el in unit if el.get('class')=='deep-block'),None)
             pos=unit.index(deep) if deep is not None else len(unit)
             unit.insert(pos,figure(*chapter_figures[unit.get('id')]))
+    # First-pass foundations for chapters 6 and 7 precede inherited detailed lessons.
+    novice_figures = {
+        'ch6-00':('novice-pulse-convolution.svg','脉冲、移位与短记忆卷积示例'),
+        'ch6-06':('novice-noise-decision.svg','噪声把抽样值推过门限的过程'),
+        'ch6-07':('novice-eye-diagram.svg','由升余弦总响应叠加的眼图及加入扰动的示意'),
+        'ch7-00':('novice-carrier-coherent.svg','相位、相干乘法与整段平均'),
+        'ch7-10':('novice-qpsk-iq.svg','QPSK比特对、星座坐标与合成载波'),
+    }
+    for unit in units:
+        if unit.get('id') in novice_figures:
+            filename, alt = novice_figures[unit.get('id')]
+            first = next((el for el in unit if el.get('class') == 'lesson-block'), None)
+            unit.insert(unit.index(first)+1 if first is not None else len(unit),
+                        figure(filename, alt, alt+'。图中数值用于解释概念，不是实际链路测量。'))
     # Specific original numerical illustrations supplement the reviewed prose.
     if homework:
         extras={'q9':('quantization-midpoint.svg','0～20 V分40格：量程边界与重建电平分开'), 'q14':('alaw-cell.svg','输入−95：幅度小格92～96，中点94'), 'q25':('tdm-slots.svg','24路轮流占用时隙，脉宽为半个时隙')}
