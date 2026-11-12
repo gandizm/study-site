@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "homepage_policy": "Only the newest published assignment appears on the homepage; corrections do not make an old assignment new.",
+  "subjects": [
+    {"id":"network","name":"计算机网络","url":"network.html","label":"COMPUTER NETWORKS","description":"网络基础、排队论、物理层、链路层、网络层与无线应用。","scope":"作业归档 · 课件伴读 · 知识图谱"},
+    {"id":"communications","name":"通信原理","url":"communications.html","label":"COMMUNICATION PRINCIPLES","description":"从时域与频域基础，到模拟调制、数字化与数字传输。","scope":"作业带做 · 第5—7章辅导 · 原页伴读"},
+    {"id":"dsp","name":"数字信号处理","url":"dsp.html","label":"DIGITAL SIGNAL PROCESSING","description":"离散信号、傅里叶分析与数字滤波，按两遍路线学习。","scope":"重绘辅导 · 教材对照 · 原PPT与旧进度"},
+    {"id":"em","name":"电磁场与电磁波","url":"ppt.html","label":"ELECTROMAGNETICS","description":"矢量分析、场的基本方程、静电边值与电磁波。","scope":"作业多解 · 330页伴读 · 章节复习"},
+    {"id":"data-structures","name":"数据结构","url":"data-structures.html","label":"DATA STRUCTURES","description":"线性表、栈与队列、数组、树、图、查找和排序。","scope":"作业图解 · 独立答案 · 8章原课件"}
+  ],
+  "assignments": [
+    {"subject":"communications","title":"第五章 · 模拟信号数字化八题","url":"communications-ch5-homework.html","published_on":"2026-11-10","updated_on":"2026-11-12","description":"5.9.1、3、9、13、14、15、20、25。原题、可抄解答与按需展开的学习解释。","action":"打开第五章作业"},
+    {"subject":"communications","title":"第四章 · 模拟调制五题","url":"communications-homework.html","published_on":"2026-10-21","description":"4.8.2、7、8、28、30。保留原网页带做与完整PDF备份。","action":"打开第四章作业","links":[{"label":"完整PDF备份","url":"courses/communications-ch4/homework/通信原理_Ch4_五题完整册_按PPT边抄边学.pdf"}]},
+    {"subject":"network","title":"第三章 · PPP作业（1）","url":"network-ppp-homework.html","published_on":"2026-11-08","description":"六题与从零辅导：字节转义、比特填充、曼彻斯特编码、停止等待、连续ARQ和滑动窗口。","action":"打开PPP作业","links":[{"label":"纯文本答案","url":"network-ppp-answers.txt"}]},
+    {"subject":"network","title":"第二章 · 物理层八题","url":"network-physical-homework.html","published_on":"2026-10-28","description":"从题目与短答回到原PPT，保留逐步详解与波形图。","action":"打开物理层作业"},
+    {"subject":"network","title":"第一章 · 时延分析五题","url":"network-homework.html","published_on":"2026-10-21","description":"排队论、分组交换与网络时延，题目条件和模型边界分别说明。","action":"打开第一章作业"},
+    {"subject":"em","title":"第二章 · 电磁场四题多解","url":"em-ch2-homework.html","published_on":"2026-10-28","description":"2.2-2、2.3-2、2.3-3、2.4-3：电容器、连续性方程、平面波与同轴线边界。","action":"打开四题多解"},
+    {"subject":"data-structures","title":"作业3 · 栈、队列与数组","url":"data-structures-homework3.html","published_on":"2026-11-02","description":"循环队列、双栈运算、数组寻址与稀疏矩阵，四题逐步图解。答案未提交到课程平台。","action":"打开作业3","links":[{"label":"独立答案 / 打印","url":"data-structures-homework3-answers.html"},{"label":"纯文本答案","url":"data-structures-homework3-answers.txt"}]}
+  ]
+}

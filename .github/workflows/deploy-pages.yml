@@ -25,6 +25,8 @@ jobs:
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
+      - name: Build shared subject navigation and latest homework entry
+        run: python3 scripts/build-study-navigation.py
       - name: Verify public static entry points
         shell: bash
         run: |
@@ -35,6 +37,8 @@ jobs:
           test -z "$(find site -type l -print -quit)"
       - name: Validate graph page links and assets
         run: python3 scripts/validate-knowledge-maps.py
+      - name: Validate subject navigation and latest homework policy
+        run: python3 tests/study-navigation.test.py
       - name: Validate DSP redraw coverage and mathematical examples
         run: |
           python3 scripts/validate-dsp-redraw.py
