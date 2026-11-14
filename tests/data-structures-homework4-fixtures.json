@@ -1,0 +1,123 @@
+{
+  "assignment": "data-structures-homework4",
+  "complete": {
+    "n": 1001,
+    "n0": 501,
+    "n1": 0,
+    "n2": 500
+  },
+  "traversal": {
+    "root": "A",
+    "children": {
+      "A": [
+        "B",
+        "F"
+      ],
+      "B": [
+        null,
+        "C"
+      ],
+      "C": [
+        "D",
+        "E"
+      ],
+      "D": [
+        null,
+        null
+      ],
+      "E": [
+        null,
+        null
+      ],
+      "F": [
+        null,
+        "G"
+      ],
+      "G": [
+        "H",
+        null
+      ],
+      "H": [
+        null,
+        null
+      ]
+    },
+    "inorder": "BDCEAFHG",
+    "postorder": "DECBHGFA",
+    "preorder": "ABCDEFGH"
+  },
+  "huffman": {
+    "root": "r",
+    "children": {
+      "r": [
+        "17",
+        "24"
+      ],
+      "24": [
+        "9",
+        "15"
+      ],
+      "9": [
+        "4s",
+        "5"
+      ],
+      "15": [
+        "7",
+        "8"
+      ],
+      "4s": [
+        "2a",
+        "2b"
+      ],
+      "7": [
+        "3",
+        "4"
+      ]
+    },
+    "weights": {
+      "r": 41,
+      "24": 24,
+      "9": 9,
+      "15": 15,
+      "4s": 4,
+      "7": 7,
+      "17": 17,
+      "5": 5,
+      "8": 8,
+      "2a": 2,
+      "2b": 2,
+      "3": 3,
+      "4": 4
+    },
+    "original_leaves": [
+      "8",
+      "2a",
+      "5",
+      "3",
+      "2b",
+      "17",
+      "4"
+    ],
+    "merge_sums": [
+      4,
+      7,
+      9,
+      15,
+      24,
+      41
+    ],
+    "wpl": 100
+  },
+  "source": {
+    "file": "第五章树和二叉树（不含线索树）(2).pdf",
+    "sha256": "f793d81fbc2e70eae16a5c4063d9a116e24f19f31468d0ab74179cbbc1f584d6",
+    "pdf_pages": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9
+    ]
+  }
+}

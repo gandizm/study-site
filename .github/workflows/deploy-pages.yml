@@ -52,6 +52,10 @@ jobs:
         run: python3 tests/em-closed-integrals.test.py
       - name: Validate data structures courseware and homework
         run: python3 tests/data-structures-homework3.test.py
+      - name: Validate data structures tree homework
+        run: |
+          python3 tests/data-structures-homework4.test.py
+          node tests/data-structures-homework4-ui.test.cjs
       - name: Validate communications two-pass lessons and homework
         run: python3 tests/communications-lessons.test.py
       - uses: actions/upload-pages-artifact@v4

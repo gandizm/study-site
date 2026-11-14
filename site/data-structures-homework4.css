@@ -1,0 +1,83 @@
+/* Homework 4 only. Existing course styles and progress remain untouched. */
+.hw4-lesson,.hw4-answers{background:#f6f5ed;color:#183e43;font-size:16px;line-height:1.85}
+.hw4-lesson main,.hw4-answers main{max-width:1080px;padding:32px 32px 64px;margin:auto}
+.hw4-local-links{display:flex;flex-wrap:wrap;gap:10px 25px;margin:0 0 28px;font-size:14px}
+.hw4-hero{max-width:900px;padding:20px 0 28px}
+.hw4-hero h1{font-size:clamp(32px,4.5vw,53px);line-height:1.2;letter-spacing:-.04em;margin:14px 0 22px}
+.hw4-hero .lede{max-width:750px;font-size:18px;color:#526762}
+.save-notice{font-size:13px;color:#526762;margin-bottom:0}
+.hw4-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 28px}
+.hw4-route a{display:flex;flex-direction:column;gap:6px;border:1px solid #bdcfc2;background:#fffef9;border-radius:10px;padding:18px;text-decoration:none;color:#183e43;transition:background .15s}
+.hw4-route a:hover{background:#eaf2e7}
+.hw4-route span{font-size:12px;letter-spacing:.04em;color:#53716b}
+.hw4-route strong{font-size:25px;line-height:1.5}
+.hw4-route small{font-size:13px;color:#526762}
+.reading-tip{border-left:3px solid #a7b99d;padding:15px 20px;background:#edf1e6;font-size:14px}
+.hw4-lesson .homework-question,.hw4-answers .homework-question{background:#fffef9;border:1px solid #cdd8cb;border-radius:14px;padding:30px;margin:36px 0;scroll-margin-top:18px}
+.hw4-lesson h2{font-size:30px;line-height:1.4;margin:6px 0 24px}
+.hw4-lesson h3,.hw4-answers h3{font-size:21px;line-height:1.45;margin:30px 0 14px}
+.hw4-lesson h4{font-size:17px;margin:0 0 12px}
+.hw4-lesson .original-question h3{font-size:14px;margin:0 0 4px;color:#53716b}
+.hw4-lesson .original-question p{margin:0}
+.hw4-lesson .original-question{border-radius:0 8px 8px 0}
+.answer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:#eaf2e7;border:1px solid #b7cfba;border-radius:9px;padding:22px 12px;margin:24px 0;gap:12px}
+.answer-grid>div{display:flex;align-items:center;flex-direction:column;border-right:1px solid #b7cfba}
+.answer-grid>div:last-child{border:0}
+.answer-grid span{font-size:14px}
+.answer-grid strong{font-size:40px;font-weight:650;line-height:1.4}
+.math{font-variant-numeric:tabular-nums;white-space:normal}
+.hw4-lesson .formula,.hw4-answers .formula{font-size:17px;line-height:1.95;font-variant-numeric:tabular-nums;border:1px solid #dde5d7;white-space:normal;overflow-wrap:anywhere;padding:16px 18px}
+.reasoning{padding-left:25px}
+.reasoning li{margin:16px 0;padding-left:4px}
+.hw4-lesson .tree-figure,.hw4-answers .tree-figure{background:#fffef9;border:1px solid #d6dfd1;border-radius:9px;padding:18px;margin:24px 0;max-width:100%;box-sizing:border-box}
+.figure-scroll{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;padding:4px 0 10px}
+.figure-scroll svg{display:block;width:100%;min-width:580px;max-width:none;height:auto;margin:auto}
+.figure-scroll svg[data-tree="huffman"]{min-width:650px}
+.figure-scroll:focus-visible{outline:3px solid #c8a24b;outline-offset:4px}
+.hw4-lesson figcaption,.hw4-answers figcaption{margin-top:10px;font-size:13px;line-height:1.65}
+.hw4-lesson details{margin:20px 0;padding:14px 18px;background:#f9faf4}
+.hw4-lesson summary{line-height:1.65;padding:2px 0}
+.checkpoint{background:#eef4ea;border-left:3px solid #618167;padding:16px 18px;margin:24px 0;font-size:15px}
+.checkpoint ul{margin-bottom:0;padding-left:22px}
+.copy-answer{background:#f8f6ed;border:1px solid #d8d2bd;border-radius:9px;margin:28px 0 20px;overflow:hidden}
+.copy-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:12px 17px;border-bottom:1px solid #ddd8c7}
+.copy-heading button{font-size:13px;background:#fffef9}
+.copy-answer pre{background:transparent;margin:0;border:0;border-radius:0;padding:16px 18px;white-space:pre-wrap;font:14px/1.9 ui-monospace,"SFMono-Regular",Consolas,monospace;overflow-wrap:normal;word-break:normal;overflow-x:auto}
+.hw4-lesson code{font-variant-numeric:tabular-nums;background:#eaf0e7;padding:2px 5px;border-radius:4px;color:#204c42;overflow-wrap:anywhere}
+.hw4-lesson .label{color:#4c6c5e;font-size:13px}
+.big-sequence{font-size:clamp(21px,3.6vw,32px);font-weight:650;letter-spacing:.02em;margin:8px 0;line-height:1.5;overflow-wrap:anywhere}
+.big-result{font-size:32px;font-weight:650;margin:8px 0}
+.answer-box p:last-child{margin-bottom:0}
+.two-rules{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.two-rules>div{border:1px solid #ccd9cc;border-radius:8px;padding:18px;background:#f3f6ee}
+.two-rules span,.two-rules strong{display:block}
+.two-rules span{font-size:14px;color:#557364;margin-bottom:8px}
+.two-rules strong{font-size:17px;line-height:1.6}
+.split-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0;font-family:ui-monospace,monospace}
+.split-line>span,.split-line>strong{padding:8px 14px;border-radius:6px;border:1px solid #d4ddcf;white-space:nowrap}
+.split-line strong{background:#f4d88b;border-color:#dbc477}
+.split-line .left-sub{background:#dbeade}.split-line .right-sub{background:#e6e4f2}
+.split-line small{display:block;flex-basis:100%;font:13px/1.6 system-ui,sans-serif;color:#557364}
+.hw4-lesson table,.hw4-answers table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}
+.hw4-lesson caption{caption-side:top;text-align:left;font-size:13px;color:#526762;margin-bottom:8px}
+.hw4-lesson th,.hw4-lesson td{border-bottom:1px solid #d9e2d5;padding:11px 13px;line-height:1.7}
+.hw4-lesson th{background:#edf2e8;color:#254e43}
+.hw4-lesson tfoot td{background:#edf2e8}
+.hw4-lesson .table-scroll{border:1px solid #dde4d7;border-radius:7px;margin:18px 0;padding:0;overflow-x:auto}
+.hw4-lesson .table-scroll table{min-width:660px}
+.walkthrough{border:1px solid #b7cfba;border-radius:9px;background:#f0f5eb;padding:20px;margin:24px 0}
+.player-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.player-controls label{font-size:14px}.player-controls button,.player-controls select{font-size:14px;min-height:44px}
+#traversal-status{font-size:15px;min-height:28px;margin:16px 0 12px}
+.sequence-chips{display:flex;flex-wrap:wrap;gap:7px;min-height:43px}
+.sequence-chips span{display:grid;place-items:center;border:1px solid #b4c9b7;background:#f9fbf6;border-radius:6px;width:36px;height:36px;font:600 20px/1 system-ui,sans-serif}
+.sequence-chips span[aria-current="step"]{background:#f1c96b;border-color:#825e19;color:#3a2a0b}
+.hw4-lesson .source-note{margin-top:22px;font-size:13px}
+.js-only{display:none!important}.hw4-enhanced .js-only{display:block!important}.hw4-enhanced button.js-only{display:inline-flex!important}
+.copy-status{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:100;background:#183e43;color:white;padding:12px 18px;border-radius:8px;box-shadow:0 4px 20px #183e4330;max-width:calc(100vw - 36px);box-sizing:border-box;font-size:14px;line-height:1.5}
+.copy-status[hidden]{display:none}
+.hw4-lesson button,.hw4-answers button{cursor:pointer}.hw4-lesson button:disabled{cursor:default}
+.hw4-answers .tree-figure{max-width:790px;margin-left:auto;margin-right:auto}
+@media(max-width:700px){.hw4-lesson main,.hw4-answers main{padding:22px 15px 44px}.hw4-hero{padding:4px 0 20px}.hw4-hero .lede{font-size:16px}.hw4-route{grid-template-columns:1fr;gap:10px}.hw4-route a{padding:15px 17px;gap:3px}.hw4-route strong{font-size:23px}.hw4-lesson .homework-question,.hw4-answers .homework-question{padding:20px 15px;margin:26px 0;border-radius:10px}.hw4-lesson h2{font-size:25px}.hw4-lesson h3{font-size:20px;margin-top:26px}.hw4-lesson .original-question,.hw4-lesson .answer-box{padding:15px}.answer-grid{padding:16px 6px;gap:5px}.answer-grid span{font-size:12px}.answer-grid strong{font-size:32px}.two-rules{grid-template-columns:1fr}.hw4-lesson .tree-figure,.hw4-answers .tree-figure{padding:11px}.hw4-lesson .formula,.hw4-answers .formula{padding:13px;font-size:16px}.copy-answer pre{font-size:13px;padding:13px}.walkthrough{padding:15px}.player-controls{gap:7px}.player-controls label{flex-basis:100%}.reading-tip{padding:14px 16px}.split-line>span,.split-line>strong{padding:6px 9px}.hw4-local-links{gap:8px 15px;font-size:13px}.hw4-lesson details{padding:12px 14px}.hw4-lesson .table-scroll table{font-size:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hw4-route a{transition:none}}
+@media print{@page{size:A4;margin:15mm}.hw4-lesson,.hw4-answers{background:white;color:#111;font-size:10.5pt;line-height:1.65}.hw4-lesson main,.hw4-answers main{max-width:none;padding:0}.hw4-local-links,.hw4-route,.reading-tip,.walkthrough,.copy-heading button,.no-print,.js-only,.copy-status,.study-global-nav,footer,.source-note,.save-notice,.actions,.hw4-enhanced .js-only,.hw4-enhanced button.js-only{display:none!important}.hw4-lesson .homework-question,.hw4-answers .homework-question{border:0;border-radius:0;padding:0;margin:20px 0}.hw4-answers h1{font-size:20pt}.hw4-answers h2{font-size:15pt!important;margin:8px 0}.hw4-answers p{margin:7px 0}.hw4-answers .identity-line{font-size:9pt}.hw4-answers ol{padding-left:22px}.hw4-answers .tree-figure{padding:5px;max-width:580px;margin:10px auto}.hw4-answers #q2 .tree-figure{max-width:510px}.hw4-answers #q3{break-before:page}.figure-scroll{overflow:visible;padding:0}.figure-scroll svg,.figure-scroll svg[data-tree="huffman"]{min-width:0;width:100%;height:auto}.hw4-answers figcaption a{display:none}.hw4-answers figcaption{font-size:8.5pt}.hw4-answers .formula{background:white;font-size:10.5pt;line-height:1.7;padding:8px 12px}.tree-figure,table{break-inside:avoid}.copy-answer pre{white-space:pre-wrap;overflow-wrap:anywhere}.hw4-lesson .table-scroll table{min-width:0}.hw4-lesson .table-scroll{overflow:visible}.copy-answer{break-inside:avoid}}
