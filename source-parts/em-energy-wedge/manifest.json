@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "encoding": "zlib+base64",
+  "files": [
+    {
+      "target": "site/em-energy-wedge-homework.html",
+      "bytes": 1997066,
+      "sha256": "cf0aa15198f7251fa4c36378baafd6041044a2840a6362f9de298280c93c97f2",
+      "chunks": [
+        {
+          "file": "em-energy-wedge-homework.html.001.b64",
+          "bytes": 65536,
+          "sha256": "b30c9bad92773a8f9f00344fc72267e7b67846b2ed57540c50ebff7241cbada2"
+        },
+        {
+          "file": "em-energy-wedge-homework.html.002.b64",
+          "bytes": 65536,
+          "sha256": "d2383035285a25c4320126141ebc96b6c682910f78cb7b42f01171cc2cc2e726"
+        },
+        {
+          "file": "em-energy-wedge-homework.html.003.b64",
+          "bytes": 65536,
+          "sha256": "0bf3296dd136ab85ffbe89c122fcf710f7f88c90f155304146f1da6718ac6c77"
+        },
+        {
+          "file": "em-energy-wedge-homework.html.004.b64",
+          "bytes": 65536,
+          "sha256": "dfeb096951e208494a752e43d1194c353099dc1ea33cd8fb74b6bd108d818a09"
+        },
+        {
+          "file": "em-energy-wedge-homework.html.005.b64",
+          "bytes": 60496,
+          "sha256": "6cb3eb3f7a8437726d11c82e05ad4ab42d023ba5151e36e33ea1b4fa14f4b437"
+        }
+      ]
+    },
+    {
+      "target": "site/assets/em-energy-wedge/original-2-5-1.png",
+      "bytes": 137988,
+      "sha256": "937dbbe6bb4c1ee894b0b04a371d47f883701910dcd691051bac50354921fe88",
+      "chunks": [
+        {
+          "file": "original-2-5-1.png.001.b64",
+          "bytes": 65536,
+          "sha256": "abe6ec02722e38f95db978c533aab1f9872eaa9b2f0bb4299fc040550324d856"
+        },
+        {
+          "file": "original-2-5-1.png.002.b64",
+          "bytes": 65536,
+          "sha256": "b705ae0073c9272621c4bd6dd6fd31bbdb8e9e6599b9168b4a2efc56e0aea554"
+        },
+        {
+          "file": "original-2-5-1.png.003.b64",
+          "bytes": 44932,
+          "sha256": "ada3ef62a81cab9689161a4fa87573f515fb87a3b065ade03f45bd5a1ff7db4f"
+        }
+      ]
+    },
+    {
+      "target": "site/assets/em-energy-wedge/original-3-6-3.png",
+      "bytes": 155413,
+      "sha256": "de86be19cf16b046ba9edddf1512f13cb85a2acfa9f1bc27effd788b0216611a",
+      "chunks": [
+        {
+          "file": "original-3-6-3.png.001.b64",
+          "bytes": 65536,
+          "sha256": "e705a7db3ed3208ef466bfdb4d0a57e18de6940782085a7f1e0063e6aee7d065"
+        },
+        {
+          "file": "original-3-6-3.png.002.b64",
+          "bytes": 65536,
+          "sha256": "6a1dc4eb3e73a163d096bebd7f9ef5702031c79bddb5bf32d7e900b711a7c64b"
+        },
+        {
+          "file": "original-3-6-3.png.003.b64",
+          "bytes": 65536,
+          "sha256": "a4220765f292f0c6f195eaed65f577190101b494f638f3ba06ca51561118075c"
+        },
+        {
+          "file": "original-3-6-3.png.004.b64",
+          "bytes": 8460,
+          "sha256": "cbe03e68c72c93b128427947dc23f4742098ca497cabe7d4a6bd512090348a0e"
+        }
+      ]
+    },
+    {
+      "target": "site/assets/em-energy-wedge/figure-3-6-3b.png",
+      "bytes": 276067,
+      "sha256": "ccca738345fc20415e4599677e332862ab6668daebd2da3edf4764fd97044daf",
+      "chunks": [
+        {
+          "file": "figure-3-6-3b.png.001.b64",
+          "bytes": 65536,
+          "sha256": "02ed71f040abf261d0eabb091d3a371538a275599012d383e9888daa2c563c15"
+        },
+        {
+          "file": "figure-3-6-3b.png.002.b64",
+          "bytes": 65536,
+          "sha256": "5f06312034ca148b4f0b3c8f2cc305402223f35279bd9473295b6f9fc890141b"
+        },
+        {
+          "file": "figure-3-6-3b.png.003.b64",
+          "bytes": 65536,
+          "sha256": "0bdc3a2e30e968b91beea008193c6d29bb6c5abdfe757b5167bd7a952d1db09d"
+        },
+        {
+          "file": "figure-3-6-3b.png.004.b64",
+          "bytes": 65536,
+          "sha256": "a95cc554c549260275caafce9a1043e5ba93e8f1472726a3a570cd92a47dc8fc"
+        },
+        {
+          "file": "figure-3-6-3b.png.005.b64",
+          "bytes": 65536,
+          "sha256": "2454f13ba0502efb9bfeb330f74d14b6511a643ee04f12d29520787647d19f57"
+        },
+        {
+          "file": "figure-3-6-3b.png.006.b64",
+          "bytes": 36728,
+          "sha256": "d9d22da472fbea55cf537fc0892ab32be38d98d3e2435ff9f8aa14d5f9463c8f"
+        }
+      ]
+    }
+  ]
+}

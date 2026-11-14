@@ -6,6 +6,10 @@ on:
     branches: [main]
     paths:
       - 'site/**'
+      - 'source-parts/em-energy-wedge/**'
+      - 'scripts/assemble-em-energy-wedge.py'
+      - 'tests/em-energy-wedge*.py'
+      - 'tests/em-energy-wedge*.cjs'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
@@ -25,6 +29,10 @@ jobs:
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
+      - name: Restore reviewed electromagnetic assets from small source objects
+        run: |
+          python3 tests/em-energy-wedge-parts.test.py
+          python3 scripts/assemble-em-energy-wedge.py
       - name: Build shared subject navigation and latest homework entry
         run: python3 scripts/build-study-navigation.py
       - name: Verify public static entry points
@@ -56,6 +64,10 @@ jobs:
         run: |
           python3 tests/data-structures-homework4.test.py
           node tests/data-structures-homework4-ui.test.cjs
+      - name: Validate electromagnetic energy and wedge homework
+        run: |
+          python3 tests/em-energy-wedge.test.py
+          node tests/em-energy-wedge-ui.test.cjs
       - name: Validate communications two-pass lessons and homework
         run: python3 tests/communications-lessons.test.py
       - uses: actions/upload-pages-artifact@v4
