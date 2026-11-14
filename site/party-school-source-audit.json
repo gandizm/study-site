@@ -1,0 +1,18 @@
+{
+  "source": "党校题库更新-二十大（复习以此版本为准）.docx",
+  "count": 135,
+  "range": "1–135",
+  "number_sequence_exact": true,
+  "all_have_three_options": true,
+  "comparison_issues": [],
+  "original_answers_provided": false,
+  "verified_answer_count": 133,
+  "ungraded_questions": [
+    20,
+    27
+  ],
+  "answer_key_origin": "题库未附答案；参考答案另据2022年党章及逐题列出的官方材料核对。",
+  "question_payload_sha256": "e5edae8990c0e7f9146dfd0db5ba3be192637747e748f5b65ef8e2a7763e3085",
+  "storage_key": "party-school-quiz-135-v1",
+  "source_payload_preserved": true
+}

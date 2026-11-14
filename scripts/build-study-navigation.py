@@ -24,6 +24,7 @@ def link(path):
 
 def subject_for(path):
     name = path.name
+    if name.startswith('party-school'): return 'party-school'
     if name.startswith('network'): return 'network'
     if name.startswith('communications'): return 'communications'
     if name.startswith('data-structures'): return 'data-structures'
@@ -141,4 +142,4 @@ if __name__ == '__main__':
     for path in sorted(SITE.rglob('*.html')):
         if not is_preview(path.relative_to(SITE)):
             install(path); count += 1
-    print(f'Rendered two homepages, five subject homework sections and {count} subject-only navigation bars.')
+    print(f'Rendered two homepages, {len(SUBJECTS)} subject homework sections and {count} subject-only navigation bars.')

@@ -6,7 +6,8 @@
     {"id":"communications","name":"通信原理","url":"communications.html","label":"COMMUNICATION PRINCIPLES","description":"从时域与频域基础，到模拟调制、数字化与数字传输。","scope":"作业带做 · 第5—7章辅导 · 原页伴读"},
     {"id":"dsp","name":"数字信号处理","url":"dsp.html","label":"DIGITAL SIGNAL PROCESSING","description":"离散信号、傅里叶分析与数字滤波，按两遍路线学习。","scope":"重绘辅导 · 教材对照 · 原PPT与旧进度"},
     {"id":"em","name":"电磁场与电磁波","url":"ppt.html","label":"ELECTROMAGNETICS","description":"矢量分析、场的基本方程、静电边值与电磁波。","scope":"作业多解 · 330页伴读 · 章节复习"},
-    {"id":"data-structures","name":"数据结构","url":"data-structures.html","label":"DATA STRUCTURES","description":"线性表、栈与队列、数组、树、图、查找和排序。","scope":"作业图解 · 独立答案 · 8章原课件"}
+    {"id":"data-structures","name":"数据结构","url":"data-structures.html","label":"DATA STRUCTURES","description":"线性表、栈与队列、数组、树、图、查找和排序。","scope":"作业图解 · 独立答案 · 8章原课件"},
+    {"id":"party-school","name":"党校学习","url":"party-school.html","label":"PARTY SCHOOL","description":"党校题库第1—135题，按二十大版党章核对，逐题巩固。","scope":"随机刷题 · 错题复习 · 本机进度"}
   ],
   "assignments": [
     {"subject":"communications","title":"第五章 · 模拟信号数字化八题","url":"communications-ch5-homework.html","published_on":"2026-11-10","updated_on":"2026-11-12","description":"5.9.1、3、9、13、14、15、20、25。原题、可抄解答与按需展开的学习解释。","action":"打开第五章作业"},

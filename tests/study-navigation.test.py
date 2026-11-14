@@ -72,4 +72,4 @@ for name,count in [('ppt.html',7),('dsp.html',2),('communications.html',1),('net
     else:assert text.count('data-course-progress')==count
 assert 'id="openLearningPath"' in (SITE/'dsp-21-ppt.html').read_text()
 assert 'id="openLearningPath"' in (SITE/'dsp-22-ppt.html').read_text()
-print(f'PASS: {len(official)} pages, five subject hubs, seven homework batches, latest-only homepages, all local href/src targets, reader controls and progress bindings.')
+print(f'PASS: {len(official)} pages, {len(subjects)} subject hubs, {len(assignments)} homework batches, latest-only homepages, all local href/src targets, reader controls and progress bindings.')
