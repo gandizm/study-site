@@ -3,6 +3,7 @@
 // Rebuild with NODE_PATH pointing to mathjax-full@3.2.2 and marked@16.4.2.
 // All formulas are static vector output. No third-party runtime is loaded by the page.
 const fs=require('node:fs'),path=require('node:path');
+const notation=require('./em-textbook-notation.cjs');
 const {marked}=require('marked');
 const {mathjax}=require('mathjax-full/js/mathjax.js');
 const {TeX}=require('mathjax-full/js/input/tex.js');
@@ -26,13 +27,13 @@ async function render(md){
   md=md.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
   const formulas=[];
   md=md.replace(/\\\[([\s\S]*?)\\\]|\$\$([\s\S]*?)\$\$|\\\(([\s\S]*?)\\\)|(?<!\\)\$([^$\n]+?)(?<!\\)\$/g,(all,a,b,c,d)=>{
-    const display=a!==undefined||b!==undefined,source=(a??b??c??d).trim(),id=formulas.length;
+    const display=a!==undefined||b!==undefined,source=notation.normalizeTex((a??b??c??d).trim()),id=formulas.length;
     formulas.push({source,display});return `EMMATHPLACEHOLDER${id}END`;
   });
   let html=marked.parse(md,{gfm:true,breaks:false});
   for(let i=0;i<formulas.length;i++){
     const {source,display}=formulas[i];
-    const node=doc.convert(source,{display});
+    const node=doc.convert(notation.definitions+source,{display});
     let output=adaptor.outerHTML(node).replace('<svg ','<svg aria-hidden="true" ');
     if(/data-mml-node="merror"|<text\b/.test(output))throw Error('Formula did not render fully: '+source);
     const tag=display?'div':'span';
@@ -56,3 +57,4 @@ const questions=[{id:'q251',title:'2.5-1 · 电场、磁场与能量流向',md:'
   fs.writeFileSync(path.join(root,'site/em-energy-wedge-homework.html'),html);
   console.log(`Built 2 questions with ${count} static SVG formulas.`);
 })().catch(e=>{console.error(e);process.exitCode=1;});
+

@@ -67,6 +67,7 @@ jobs:
       - name: Validate electromagnetic energy and wedge homework
         run: |
           python3 tests/em-energy-wedge.test.py
+          python3 tests/em-energy-wedge-notation.test.py
           node tests/em-energy-wedge-ui.test.cjs
       - name: Validate communications two-pass lessons and homework
         run: python3 tests/communications-lessons.test.py
