@@ -1,18 +1,33 @@
 {
   "source": "党校题库更新-二十大（复习以此版本为准）.docx",
-  "count": 135,
-  "range": "1–135",
+  "count": 306,
+  "range": "1–306",
   "number_sequence_exact": true,
   "all_have_three_options": true,
-  "comparison_issues": [],
   "original_answers_provided": false,
-  "verified_answer_count": 133,
+  "verified_answer_count": 298,
+  "legacy_verified_answer_count": 133,
+  "new_verified_answer_count": 165,
+  "verification_date": "2026-11-17",
+  "legacy_verification_date": "2026-11-14",
   "ungraded_questions": [
     20,
-    27
+    27,
+    142,
+    167,
+    266,
+    297,
+    301,
+    306
   ],
-  "answer_key_origin": "题库未附答案；参考答案另据2022年党章及逐题列出的官方材料核对。",
-  "question_payload_sha256": "e5edae8990c0e7f9146dfd0db5ba3be192637747e748f5b65ef8e2a7763e3085",
+  "answer_key_origin": "原题库未附答案。原1–135题中的133题沿用既有核验记录，全部题目对象、来源与疑点状态原样保留；新增136–306题此次逐题对照官方依据，仅在可确定时判分。未核实或原文有歧义的题目不计分。",
+  "question_payload_sha256": "14076951877288deb31bb2a208302cd9ac65c67d33bb4de29074f19a1953c289",
+  "source_payload_preserved": true,
+  "original_1_135_preserved": true,
+  "excluded_sections": [
+    "多项选择题"
+  ],
   "storage_key": "party-school-quiz-135-v1",
-  "source_payload_preserved": true
+  "legacy_backup_key": "party-school-quiz-135-v1-before-306",
+  "migration": "有效旧135题记录先逐字备份；保留原顺序、当前进度及全部历史，在本轮末尾随机追加136–306题。损坏记录或备份失败时不覆盖原记录。"
 }
