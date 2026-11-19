@@ -48,7 +48,9 @@ jobs:
       - name: Validate subject navigation and latest homework policy
         run: python3 tests/study-navigation.test.py
       - name: Validate party-school quiz and local progress isolation
-        run: node tests/party-school-quiz.test.cjs
+        run: |
+          node tests/party-school-quiz.test.cjs
+          node tests/party-school-modes.test.cjs
       - name: Validate DSP redraw coverage and mathematical examples
         run: |
           python3 scripts/validate-dsp-redraw.py
@@ -88,5 +90,6 @@ jobs:
       - name: Deploy the checked-out commit
         id: deployment
         uses: actions/deploy-pages@v4
+
 
 

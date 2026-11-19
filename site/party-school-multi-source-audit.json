@@ -1,0 +1,3552 @@
+{
+  "bankVersion": "party-modes-20261119-v1",
+  "source": "党校题库更新-二十大（复习以此版本为准）",
+  "originalAnswerKeyProvided": false,
+  "singleCount": 306,
+  "multiCount": 78,
+  "singleGraded": 304,
+  "multiGraded": 75,
+  "pendingKeys": [
+    "s20",
+    "s142",
+    "m41",
+    "m57",
+    "m65"
+  ],
+  "legacyProgress": "Unchanged v2 single-only local key and endpoints. V3 mixed/multi are isolated.",
+  "questions": [
+    {
+      "number": 1,
+      "type": "multi",
+      "question": "中国共产党是( )，同时是()。",
+      "options": [
+        "A.中国工人阶级的先锋队",
+        "B.中国无产阶级的先锋队",
+        "C.中国人民和中华民族的先锋队",
+        "D.中国农民阶级的先锋队"
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "对照党章对党的性质的两层表述。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲第1自然段：党的性质",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲第1自然段：党的性质"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 1,
+        "page": null,
+        "paragraphStart": 1231,
+        "paragraphEnd": 1235,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲第1自然段：党的性质",
+        "retrievedLine": 45,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 2,
+      "type": "multi",
+      "question": "十八大以来，以习近平同志为主要代表的中国共产党人，坚持把马克思主义基本原理同( )相结合、同()相结合，科学回答了新时代坚持和发展什么样的中国特色社会主义、怎样坚持和发展中国特色社会主义等重大时代课题，创立了习近平新时代中国特色社会主义思想。",
+      "options": [
+        "A.中国具体实际",
+        "B.党情国情世情",
+        "C.中华优秀传统文化",
+        "D.世界百年未有之大变局"
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "两个结合，分别对应国情与传统文化。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：习近平新时代中国特色社会主义思想段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：习近平新时代中国特色社会主义思想段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 2,
+        "page": null,
+        "paragraphStart": 1236,
+        "paragraphEnd": 1240,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：习近平新时代中国特色社会主义思想段",
+        "retrievedLine": 54,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 3,
+      "type": "multi",
+      "question": "习近平新时代中国特色社会主义思想是()，是中华文化和中国精神的时代精华。",
+      "options": [
+        "A.新时代中国马克思主义",
+        "B.当代中国马克思主义",
+        "C.二十一世纪马克思主义",
+        "D.马克思主义活的灵魂"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "注意区分“当代”与“新时代”。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：习近平新时代中国特色社会主义思想段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：习近平新时代中国特色社会主义思想段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 3,
+        "page": null,
+        "paragraphStart": 1241,
+        "paragraphEnd": 1245,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：习近平新时代中国特色社会主义思想段",
+        "retrievedLine": 54,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 4,
+      "type": "multi",
+      "question": "“两个确立”反映了全党全军全国各族人民共同心愿，对新时代党和国家事业发展、对推进中华民族伟大复兴历史进程具有决定性意义。“两个确立”是指( )。",
+      "options": [
+        "A.确立党在社会主义初级阶段的基本路线",
+        "B.确立“一个中心、两个基本点”",
+        "C.确立习近平同志党中央的核心、全党的核心地位",
+        "D.确立习近平新时代中国特色社会主义思想的指导地位"
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "“两个确立”不是基本路线的别称。",
+      "sources": [
+        {
+          "title": "2022年党章修正案决议倒数第2段：两个确立",
+          "url": "https://www.12371.cn/2022/10/22/ARTI1666435732856157.shtml",
+          "locator": "2022年党章修正案决议倒数第2段：两个确立"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 4,
+        "page": null,
+        "paragraphStart": 1246,
+        "paragraphEnd": 1250,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "2022年党章修正案决议倒数第2段：两个确立",
+        "retrievedLine": 102,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 5,
+      "type": "multi",
+      "question": "做到“两个维护”，是确保全党步调一致向前进的需要。“两个维护”是指( )。",
+      "options": [
+        "A.坚决维护习近平同志党中央的核心、全党的核心地位",
+        "B.坚决维护马克思主义的权威",
+        "C.坚决维护习近平中国特色社会主义思想的指导地住",
+        "D.坚决维护党中央权威和集中统一领导"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "“两个维护”与“两个确立”须区分。",
+      "sources": [
+        {
+          "title": "《中共中央关于加强党的政治建设的意见》一、总体要求及三（四）两个维护",
+          "url": "https://www.cac.gov.cn/2019-02/27/c_1124172264.htm",
+          "locator": "《中共中央关于加强党的政治建设的意见》一、总体要求及三（四）两个维护"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 5,
+        "page": null,
+        "paragraphStart": 1251,
+        "paragraphEnd": 1255,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "《中共中央关于加强党的政治建设的意见》一、总体要求及三（四）两个维护",
+        "retrievedLine": 54,
+        "notes": [
+          "原题干扰项含漏字/错字；原始文本未改写。"
+        ],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      },
+      "note": "原题干扰项写作“习近平中国特色社会主义思想的指导地住”，含漏字和错字，已按原件保留；不影响本题两个正确选项的核定。"
+    },
+    {
+      "number": 6,
+      "type": "multi",
+      "question": "改革开放以来我们取得一切成绩和进步的根本原因,归结起来就是:( )。",
+      "options": [
+        "A.开辟了中国特色社会主义道路",
+        "B.形成了中国特色社会主义理论体系",
+        "C.确立了中国特色社会主义制度",
+        "D.发展了中国特色社会主义文化"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均在这一完整概括内。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：改革开放以来取得成绩和进步的根本原因段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：改革开放以来取得成绩和进步的根本原因段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 6,
+        "page": null,
+        "paragraphStart": 1256,
+        "paragraphEnd": 1260,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：改革开放以来取得成绩和进步的根本原因段",
+        "retrievedLine": 55,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 7,
+      "type": "multi",
+      "question": "方向决定道路，道路决定命运。党章规定，全党同志要坚定道路自信、( )。",
+      "options": [
+        "A.理论自信",
+        "B.思想自信",
+        "C.制度自信",
+        "D.文化自信"
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "“思想自信”不在该固定列举内。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：改革开放以来取得成绩和进步的根本原因段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：改革开放以来取得成绩和进步的根本原因段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 7,
+        "page": null,
+        "paragraphStart": 1261,
+        "paragraphEnd": 1265,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：改革开放以来取得成绩和进步的根本原因段",
+        "retrievedLine": 55,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 8,
+      "type": "multi",
+      "question": "党要实现的三大历史任务是()",
+      "options": [
+        "A.推进现代化建设",
+        "B.完成祖国统一",
+        "C.维护世界和平与促进共同发展",
+        "D.全面建设小康社会"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "不要把旧阶段目标混入三大任务。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：改革开放以来取得成绩和进步的根本原因段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：改革开放以来取得成绩和进步的根本原因段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 8,
+        "page": null,
+        "paragraphStart": 1266,
+        "paragraphEnd": 1270,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：改革开放以来取得成绩和进步的根本原因段",
+        "retrievedLine": 55,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 9,
+      "type": "multi",
+      "question": "中国共产党经过长期实践，积累了()( )、坚持理论创新、坚持独立自主、坚持中国道路、坚持胸怀天下、坚持开拓创新、()、坚持统一战线、坚持自我革命的宝贵历史经验，这是党和人民共同创造的精神财富，必须倍加珍惜、长期坚持，并在实践中不断丰富和发展。",
+      "options": [
+        "A.坚持党的领导",
+        "B.坚持人民至上",
+        "C.坚持人民民主",
+        "D.坚持敢于斗争"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "“人民民主”不是此处所缺历史经验。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：百年奋斗宝贵历史经验段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：百年奋斗宝贵历史经验段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 9,
+        "page": null,
+        "paragraphStart": 1271,
+        "paragraphEnd": 1275,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：百年奋斗宝贵历史经验段",
+        "retrievedLine": 56,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 10,
+      "type": "multi",
+      "question": "贯彻创新、()、共享的新发展理念。",
+      "options": [
+        "A.协调",
+        "B.绿色",
+        "C.包容",
+        "D.开放"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "“包容”不是五大发展理念之一。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义初级阶段段·新发展理念",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义初级阶段段·新发展理念"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 10,
+        "page": null,
+        "paragraphStart": 1276,
+        "paragraphEnd": 1280,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义初级阶段段·新发展理念",
+        "retrievedLine": 57,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 11,
+      "type": "multi",
+      "question": "根据二十大党章要求，必须坚持以人民为中心的发展思想，把握新发展阶段，贯彻新发展理念,()",
+      "options": [
+        "A.打造新发展动能",
+        "B.把握新发展趋势",
+        "C.构建新发展格局",
+        "D.推动高质量发展"
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "本题核对发展格局与发展质量。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义初级阶段段·发展思想、格局和质量",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义初级阶段段·发展思想、格局和质量"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 11,
+        "page": null,
+        "paragraphStart": 1281,
+        "paragraphEnd": 1285,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义初级阶段段·发展思想、格局和质量",
+        "retrievedLine": 57,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 12,
+      "type": "multi",
+      "question": "要尊重劳动、尊重知识、尊重人才、尊重创造，做到( )。",
+      "options": [
+        "A.发展目标由人民确定",
+        "B.发展为了人民",
+        "C.发展依靠人民",
+        "D.发展成果由人民共享"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "不要把“目标由谁确定”混入三项表述。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义初级阶段段·发展与人民",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义初级阶段段·发展与人民"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 12,
+        "page": null,
+        "paragraphStart": 1286,
+        "paragraphEnd": 1290,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义初级阶段段·发展与人民",
+        "retrievedLine": 57,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 13,
+      "type": "multi",
+      "question": "要协调推进“四个全面”战略布局。“四个全面”即( )。",
+      "options": [
+        "A.全面建设社会主义现代化国家",
+        "B.全面深化改革",
+        "C.全面依法治国",
+        "D.全面从严治党"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "注意这里采用二十大党章的版本。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义初级阶段段·四个全面",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义初级阶段段·四个全面"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 13,
+        "page": null,
+        "paragraphStart": 1291,
+        "paragraphEnd": 1295,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义初级阶段段·四个全面",
+        "retrievedLine": 57,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 14,
+      "type": "multi",
+      "question": "二十大党章指出，要促进国民经济更高质量、()发展。",
+      "options": [
+        "A.更有效率",
+        "B.更加公平",
+        "C.更可持续",
+        "D.更为安全"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均属于此处列举的质量要求。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：以经济建设为中心段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：以经济建设为中心段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 14,
+        "page": null,
+        "paragraphStart": 1296,
+        "paragraphEnd": 1300,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：以经济建设为中心段",
+        "retrievedLine": 60,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 15,
+      "type": "multi",
+      "question": "全面深化改革总目标包括()。",
+      "options": [
+        "A.建立更加科学的国家治理模式和治理体系",
+        "B.完善和发展中国特色社会主义制度",
+        "C.推进国家治理体系和治理能力现代化",
+        "D.继续坚持完善中国特色社会主义道路、制度和理论"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "制度完善与治理现代化构成两方面。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：改革开放段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：改革开放段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 15,
+        "page": null,
+        "paragraphStart": 1301,
+        "paragraphEnd": 1305,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：改革开放段",
+        "retrievedLine": 63,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 16,
+      "type": "multi",
+      "question": "改革开放应当大胆探索，勇于开拓，提高改革决策的科学性，更加注重改革的()，在实践中开创新路。",
+      "options": [
+        "A.系统性",
+        "B.整体性",
+        "C.科学性",
+        "D.协同性"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "题干已有“科学性”，空格问另三项。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：改革开放段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：改革开放段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 16,
+        "page": null,
+        "paragraphStart": 1306,
+        "paragraphEnd": 1310,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：改革开放段",
+        "retrievedLine": 63,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 17,
+      "type": "multi",
+      "question": "统筹城乡发展、区域发展、()，调整经济结构转变经济发展方式，推进供给侧结构性改革。",
+      "options": [
+        "A.产业平衡发展",
+        "B.经济社会发展",
+        "C.人与自然和谐发展",
+        "D.国内发展和对外开放"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "按总纲列举的统筹发展内容判断。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义市场经济段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义市场经济段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 17,
+        "page": null,
+        "paragraphStart": 1311,
+        "paragraphEnd": 1315,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义市场经济段",
+        "retrievedLine": 65,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 18,
+      "type": "multi",
+      "question": "下列哪些选项构成了中国政治制度的核心内容和基本框架，是社会主义民主政治的集中体现:()。",
+      "options": [
+        "A.人民代表大会制度",
+        "B.中国共产党领导的多党合作和政治协商制度",
+        "C.民族区域自治制度",
+        "D.基层群众自治制度"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四种制度均在该框架内。",
+      "sources": [
+        {
+          "title": "《新中国70年政治制度的形成、完善与发展》首段；党章总纲·民主政治段",
+          "url": "https://www.xinhuanet.com/politics/2019-08/21/c_1124901749.htm",
+          "locator": "《新中国70年政治制度的形成、完善与发展》首段；党章总纲·民主政治段"
+        },
+        {
+          "title": "《中国共产党章程》（2022年）·总纲·社会主义民主政治 · 总纲：社会主义民主政治段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义民主政治段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 18,
+        "page": null,
+        "paragraphStart": 1316,
+        "paragraphEnd": 1320,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "《新中国70年政治制度的形成、完善与发展》首段；党章总纲·民主政治段",
+        "retrievedLine": 29,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 19,
+      "type": "multi",
+      "question": "广开言路，建立健全民主选举、()、民主管理民主监督的制度和程序。",
+      "options": [
+        "A.民主集中",
+        "B.民主协商",
+        "C.民主决策",
+        "D.民主议事"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "区分民主协商、决策与其他相近词。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义民主政治段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义民主政治段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 19,
+        "page": null,
+        "paragraphStart": 1321,
+        "paragraphEnd": 1325,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义民主政治段",
+        "retrievedLine": 66,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 20,
+      "type": "multi",
+      "question": "大力发展教育、科学、文化事业，推动中华优秀传统文化()，继承革命文化，发展社会主义先进文化，提高国家文化软实力。",
+      "options": [
+        "A.持续性发展",
+        "B.创造性转化",
+        "C.创新性发展",
+        "D.稳定性转化"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "注意区分“转化”与“发展”的搭配。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义先进文化段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义先进文化段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 20,
+        "page": null,
+        "paragraphStart": 1326,
+        "paragraphEnd": 1330,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义先进文化段",
+        "retrievedLine": 67,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 21,
+      "type": "multi",
+      "question": "坚持总体国家安全观，统筹发展和安全，坚决维护国家( )。",
+      "options": [
+        "A.主权",
+        "B.稳定",
+        "C.安全",
+        "D.发展利益"
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "“稳定”不在这处三项固定列举内。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义和谐社会段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义和谐社会段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 21,
+        "page": null,
+        "paragraphStart": 1331,
+        "paragraphEnd": 1335,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义和谐社会段",
+        "retrievedLine": 68,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 22,
+      "type": "multi",
+      "question": "贯彻习近平强军思想，加强人民解放军的建设，坚持政治建军、改革强军、科技强军、人才强军、依法治军，建设一支()的人民军队，把人民军队建设成为世界一流军队。",
+      "options": [
+        "A.听党指挥",
+        "B.能打胜仗",
+        "C.作风优良",
+        "D.品德合格"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "按该段对人民军队的三项要求判断。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：人民解放军和其他人民武装力量段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：人民解放军和其他人民武装力量段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 22,
+        "page": null,
+        "paragraphStart": 1336,
+        "paragraphEnd": 1340,
+        "numberDelimiter": ",",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：人民解放军和其他人民武装力量段",
+        "retrievedLine": 71,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 23,
+      "type": "multi",
+      "question": "中国共产党坚持对人民解放军和其他人民武装力量的绝对领导，切实保证人民解放军有效履行新时代军队使命任务，充分发挥人民解放军在()( )和( )中的作用。",
+      "options": [
+        "A.巩固国防",
+        "B.保卫祖国",
+        "C.维护人民利益",
+        "D.参加社会主义现代化建设"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "本题问作用的三处列举，非一般作用。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：人民解放军和其他人民武装力量段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：人民解放军和其他人民武装力量段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 23,
+        "page": null,
+        "paragraphStart": 1341,
+        "paragraphEnd": 1345,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：人民解放军和其他人民武装力量段",
+        "retrievedLine": 71,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 24,
+      "type": "multi",
+      "question": "中国共产党维护和发展()的社会主义民族关系，积极培养、选拔少数民族干部，帮助少数民族和民族地区发展经济、文化和社会事业，铸牢中华民族共同体意识，实现各民族共同团结奋斗、共同繁荣发展。",
+      "options": [
+        "A.平等",
+        "B.团结",
+        "C.互助",
+        "D.和谐"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项共同构成民族关系的表述。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：社会主义民族关系段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：社会主义民族关系段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 24,
+        "page": null,
+        "paragraphStart": 1346,
+        "paragraphEnd": 1350,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：社会主义民族关系段",
+        "retrievedLine": 72,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 25,
+      "type": "multi",
+      "question": "中国共产党在国际事务中，弘扬和平、发展、公平、()、自由的全人类共同价值。",
+      "options": [
+        "A.正义",
+        "B.公正",
+        "C.友善",
+        "D.民主"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "按六项全人类共同价值补齐空缺。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：独立自主的和平外交政策段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：独立自主的和平外交政策段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 25,
+        "page": null,
+        "paragraphStart": 1351,
+        "paragraphEnd": 1355,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：独立自主的和平外交政策段",
+        "retrievedLine": 75,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 26,
+      "type": "multi",
+      "question": "下列选项中,( )属于和平共处五项原则的内容。",
+      "options": [
+        "A.互相尊重主权和领土完整",
+        "B.互不侵犯",
+        "C.互不干涉内政",
+        "D.互惠互利"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "“互惠互利”不能替代“平等互利”。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：独立自主的和平外交政策段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：独立自主的和平外交政策段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 26,
+        "page": null,
+        "paragraphStart": 1356,
+        "paragraphEnd": 1360,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：独立自主的和平外交政策段",
+        "retrievedLine": 75,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 27,
+      "type": "multi",
+      "question": "二十大党章指出，弘扬( )的伟大建党精神。",
+      "options": [
+        "A.坚持真理、坚守理想",
+        "B.践行初心、担当使命",
+        "C.不怕牺牲、英勇斗争",
+        "D.对党忠诚、不负人民"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四组表述均属于伟大建党精神。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：党的建设总体要求段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：党的建设总体要求段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 27,
+        "page": null,
+        "paragraphStart": 1361,
+        "paragraphEnd": 1365,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：党的建设总体要求段",
+        "retrievedLine": 76,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 28,
+      "type": "multi",
+      "question": "以党的政治建设为统领，全面推进党的政治建设、()，把制度建设贯穿其中，深人推进反腐败斗争，全面提高党的建设科学化水平。",
+      "options": [
+        "A.思想建设",
+        "B.组织建设",
+        "C.作风建设",
+        "D.纪律建设"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "政治建设已在题干，其余四项在选项中。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：党的建设总体要求段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：党的建设总体要求段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 28,
+        "page": null,
+        "paragraphStart": 1366,
+        "paragraphEnd": 1370,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：党的建设总体要求段",
+        "retrievedLine": 76,
+        "notes": [
+          "题干“深人”疑似错字；原始文本未改写。"
+        ],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      },
+      "note": "原题干“深人”疑为“深入”的录入错误，原文保留；四个选项及参考答案不受影响。"
+    },
+    {
+      "number": 29,
+      "type": "multi",
+      "question": "党章总纲部分党的建设总体要求中提出了不断增强“四自能力”的要求。“四自能力”是指()能力。",
+      "options": [
+        "A.自我净化",
+        "B.自我完善",
+        "C.自我革新",
+        "D.自我提高"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均属于“四自能力”。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：党的建设总体要求段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：党的建设总体要求段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 29,
+        "page": null,
+        "paragraphStart": 1371,
+        "paragraphEnd": 1375,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：党的建设总体要求段",
+        "retrievedLine": 76,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 30,
+      "type": "multi",
+      "question": "建设()的马克思主义执政党。",
+      "options": [
+        "A.先进型",
+        "B.学习型",
+        "C.服务型",
+        "D.创新型"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "按党章的三种类型判断。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：党的建设总体要求段",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：党的建设总体要求段"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 30,
+        "page": null,
+        "paragraphStart": 1376,
+        "paragraphEnd": 1380,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：党的建设总体要求段",
+        "retrievedLine": 76,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 31,
+      "type": "multi",
+      "question": "党的建设必须坚决实现的基本要求有：坚持党的基本路线；坚持解放思想，实事求是，与时俱进，求真务实；( )。",
+      "options": [
+        "A.坚持新时代党的组织路线",
+        "B.坚持全心全意为人民服务",
+        "C.坚持民主集中制",
+        "D.坚持从严管党治党"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "题干给出两项，选项补足其余四项。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：党的建设六项基本要求",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：党的建设六项基本要求"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 31,
+        "page": null,
+        "paragraphStart": 1381,
+        "paragraphEnd": 1385,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：党的建设六项基本要求",
+        "retrievedLine": 76,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 32,
+      "type": "multi",
+      "question": "必须提高()，增强贯彻落实党的理论和路线方针政策的自觉性和坚定性。",
+      "options": [
+        "A.政治判断力",
+        "B.政治决断力",
+        "C.政治领悟力",
+        "D.政治执行力"
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "不要把“决断力”混入“三力”。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：基本要求第一项·党的基本路线",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：基本要求第一项·党的基本路线"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 32,
+        "page": null,
+        "paragraphStart": 1386,
+        "paragraphEnd": 1390,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：基本要求第一项·党的基本路线",
+        "retrievedLine": 77,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 33,
+      "type": "multi",
+      "question": "以下属于新时代党的组织路线内容的是()",
+      "options": [
+        "A.全面贯彻习近平新时代中国特色社会主义思想",
+        "B.以组织体系建设为重点",
+        "C.着力培养忠诚干净担当的高素质干部",
+        "D.在实践中检验真理和发展真理"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "“检验真理”属于思想路线，不是此处组织路线。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：基本要求第三项·新时代党的组织路线",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：基本要求第三项·新时代党的组织路线"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 33,
+        "page": null,
+        "paragraphStart": 1391,
+        "paragraphEnd": 1395,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：基本要求第三项·新时代党的组织路线",
+        "retrievedLine": 80,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 34,
+      "type": "multi",
+      "question": "新时代党的组织路线要求，坚持( )、任人唯贤。",
+      "options": [
+        "A.德才兼备",
+        "B.以德为先",
+        "C.能上能下",
+        "D.实绩突出"
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "status": "verified",
+      "explanation": "核对选拔人才的两项原则。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：基本要求第三项·新时代党的组织路线",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：基本要求第三项·新时代党的组织路线"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 34,
+        "page": null,
+        "paragraphStart": 1396,
+        "paragraphEnd": 1400,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：基本要求第三项·新时代党的组织路线",
+        "retrievedLine": 80,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 35,
+      "type": "multi",
+      "question": "坚持新时代党的组织路线，全党必须增强党组织的( )和( )，培养选拔党和人民需要的好干部，培养和造就大批堪当时代重任的社会主义事业接班人，聚天下英才而用之，从组织上保证党的基本理论、基本路线、基本方略的贯彻落实。",
+      "options": [
+        "A.宣传功能",
+        "B.政治功能",
+        "C.组织功能",
+        "D.管理功能"
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "本题问党组织的两项功能。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：基本要求第三项·新时代党的组织路线",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：基本要求第三项·新时代党的组织路线"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 35,
+        "page": null,
+        "paragraphStart": 1401,
+        "paragraphEnd": 1405,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：基本要求第三项·新时代党的组织路线",
+        "retrievedLine": 80,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 36,
+      "type": "multi",
+      "question": "必须实行正确的集中，牢固树立()。",
+      "options": [
+        "A.政治意识",
+        "B.大局意识",
+        "C.核心意识",
+        "D.看齐意识"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均属于“四个意识”。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：基本要求第五项·民主集中制",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：基本要求第五项·民主集中制"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 36,
+        "page": null,
+        "paragraphStart": 1406,
+        "paragraphEnd": 1410,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：基本要求第五项·民主集中制",
+        "retrievedLine": 83,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 37,
+      "type": "multi",
+      "question": "加强和规范党内政治生活，增强党内政治生活的政治性、()。",
+      "options": [
+        "A.统一性",
+        "B.时代性",
+        "C.原则性",
+        "D.战斗性"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "政治性已在题干，另有三项。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：基本要求第五项·民主集中制",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：基本要求第五项·民主集中制"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 37,
+        "page": null,
+        "paragraphStart": 1411,
+        "paragraphEnd": 1415,
+        "numberDelimiter": "、",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：基本要求第五项·民主集中制",
+        "retrievedLine": 83,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 38,
+      "type": "multi",
+      "question": "新形势下，党面临的“四大考验”是长期的、复杂的、严峻的,“四大考验”是指:执政考验、()。",
+      "options": [
+        "A.改革开放考验",
+        "B.市场经济考验",
+        "C.外部环境考验",
+        "D.科技创新考验"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "科技创新不是此处“四大考验”的一项。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：基本要求第六项·从严管党治党",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：基本要求第六项·从严管党治党"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 38,
+        "page": null,
+        "paragraphStart": 1416,
+        "paragraphEnd": 1420,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：基本要求第六项·从严管党治党",
+        "retrievedLine": 84,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 39,
+      "type": "multi",
+      "question": "新形势下，精神懈怠危险、()更加尖锐地摆在全党面前。",
+      "options": [
+        "A.能力不足危险",
+        "B.脱离群众危险",
+        "C.资源枯竭危险",
+        "D.消极腐败危险"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "资源枯竭不是此处“四种危险”的一项。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲：基本要求第六项·从严管党治党",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲：基本要求第六项·从严管党治党"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 39,
+        "page": null,
+        "paragraphStart": 1421,
+        "paragraphEnd": 1425,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲：基本要求第六项·从严管党治党",
+        "retrievedLine": 84,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 40,
+      "type": "multi",
+      "question": "党必须加强对工会、共产主义青年团、妇女联合会等群团组织的领导，使它们保持和增强()。",
+      "options": [
+        "A.政治性",
+        "B.先进性",
+        "C.群众性",
+        "D.服务性"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "服务性不在这处“三性”的固定列举内。",
+      "sources": [
+        {
+          "title": "《中国共产党章程》（2022年）·总纲最后一段·对群团组织的领导",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "总纲最后一段·对群团组织的领导"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 40,
+        "page": null,
+        "paragraphStart": 1426,
+        "paragraphEnd": 1430,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "verified-reference-answer",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "checkedAt": "2026-11-19",
+        "sourceLocator": "总纲最后一段·对群团组织的领导",
+        "retrievedLine": 85,
+        "notes": [],
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 41,
+      "type": "multi",
+      "question": "下列选项中，属于党员义务的是()。",
+      "options": [
+        "A.学习党的基本知识和党的历史",
+        "B.坚持党和人民的利益高于一切",
+        "C.维护党的团结和统一",
+        "D.密切联系群众人四"
+      ],
+      "answer": null,
+      "status": "pending",
+      "explanation": "原选项“密切联系群众人四”末尾多出“人四”，保留原文，不计分。若删除这两个字，四项均属党员义务。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三条（一）（三）（五）（七）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三条（一）（三）（五）（七）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 41,
+        "page": null,
+        "paragraphStart": 1431,
+        "paragraphEnd": 1435,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "unscored-source-issue",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [
+          "原DOCX D项含“人四”，未经授权不默改原选项。"
+        ],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 42,
+      "type": "multi",
+      "question": "下列选项中，属于党员权利的是()。",
+      "options": [
+        "A.弘扬中华民族传统美德",
+        "B.勇于揭露和纠正违反党的原则的言行",
+        "C.参加党的有关会议，阅读党的有关文件，接受党的教育和培训",
+        "D.行使表决权、选举权，有被选举权"
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "参会阅文培训、表决选举被选举属于权利；弘扬传统美德、揭露纠正违反原则的言行列于党员义务。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三条（六）（八）；第四条（一）（五）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三条（六）（八）；第四条（一）（五）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 42,
+        "page": null,
+        "paragraphStart": 1436,
+        "paragraphEnd": 1440,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 43,
+      "type": "multi",
+      "question": "下列关于预备党员转为正式党员的说法，符合党章规定的有( )。",
+      "options": [
+        "A.认真履行党员义务，具备党员条件的，应当按期转为正式党员",
+        "B.需要继续考察和教育的，可以延长预备期，但不能超过一年",
+        "C.不行使党员权利，不及时向党支部汇报情况的，应当取消预备党员资格",
+        "D.不履行党员义务，不具备党员条件的，应当取消预备党员资格"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "按期转正、延长预备期、取消预备党员资格分别有规定条件；“不行使党员权利、不及时汇报”不是该条规定的取消资格条件。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第七条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第七条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 43,
+        "page": null,
+        "paragraphStart": 1441,
+        "paragraphEnd": 1445,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 44,
+      "type": "multi",
+      "question": "党的上下级组织之间要()。",
+      "options": [
+        "A.互通人员",
+        "B.互通情报",
+        "C.互相支持",
+        "D.互相监督"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "该条要求互通情报、互相支持、互相监督，没有“互通人员”。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第十条（四）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第十条（四）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 44,
+        "page": null,
+        "paragraphStart": 1446,
+        "paragraphEnd": 1450,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 45,
+      "type": "multi",
+      "question": "凡属重大问题都要按照()的原则，由党的委员会集体讨论，作出决定。",
+      "options": [
+        "A.集体领导",
+        "B.民主集中",
+        "C.个别酝酿",
+        "D.会议决定"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项共同组成重大问题集体决策的原则。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第十条（五）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第十条（五）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 45,
+        "page": null,
+        "paragraphStart": 1451,
+        "paragraphEnd": 1455,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 46,
+      "type": "multi",
+      "question": "在党的各级代表大会的代表和委员会的产生过程中，选举人享有以下权利:( )。",
+      "options": [
+        "A.了解候选人情况",
+        "B.要求改变候选人",
+        "C.要求延期选举",
+        "D.不选任何一个候选人和另选他人"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "选举人可了解或要求改变候选人，也可不选候选人、另选他人；该条不含要求延期选举。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第十一条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第十一条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 46,
+        "page": null,
+        "paragraphStart": 1456,
+        "paragraphEnd": 1460,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 47,
+      "type": "multi",
+      "question": "下列说法中，符合党章规定的有()。",
+      "options": [
+        "A.党的下级组织必须坚决执行上级组织的决定",
+        "B.下级组织如果认为上级组织的决定不符合本地区、本部门的实际情况，可以拒不执行",
+        "C.下级组织如果认为上级组织的决定不符合本地区、本部门的实际情况，可以请求改变",
+        "D.如果上级组织坚持原决定，下级组织必须执行，并不得公开发表不同意见，但有权向再上一级组织报告"
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "可以请求改变，但不能据此拒不执行。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第十六条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第十六条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 47,
+        "page": null,
+        "paragraphStart": 1461,
+        "paragraphEnd": 1465,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 48,
+      "type": "multi",
+      "question": "下列选项中，属于党的全国代表大会的职权的有( )",
+      "options": [
+        "A.听取和审查中央委员会的报告",
+        "B.讨论并决定党的重大问题",
+        "C.修改党的章程",
+        "D.选举中央委员会"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均列于全国代表大会职权。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第二十条（一）（三）（四）（五）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第二十条（一）（三）（四）（五）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 48,
+        "page": null,
+        "paragraphStart": 1466,
+        "paragraphEnd": 1470,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 49,
+      "type": "multi",
+      "question": "以下由党的全国代表大会选举产生的是()。",
+      "options": [
+        "A.中央政治局",
+        "B.中央书记处",
+        "C.中央委员会",
+        "D.中央纪律检查委员会"
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "全国代表大会选举中央委员会、中央纪律检查委员会；政治局和书记处产生方式另有规定。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第二十条（五）（六）；第二十三条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第二十条（五）（六）；第二十三条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 49,
+        "page": null,
+        "paragraphStart": 1471,
+        "paragraphEnd": 1475,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 50,
+      "type": "multi",
+      "question": "党的中央委员会全体会议选举()。",
+      "options": [
+        "A.中央政治局",
+        "B.中央政治局常务委员会",
+        "C.中央委员会总书记",
+        "D.中央纪律检查委员会书记"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "中央政治局及其常委会、中央委员会总书记由中央委员会全会选举；中央纪委书记由中央纪委全会选举。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第二十三条；第四十五条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第二十三条；第四十五条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 50,
+        "page": null,
+        "paragraphStart": 1476,
+        "paragraphEnd": 1480,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 51,
+      "type": "multi",
+      "question": "党的地方各级代表大会的职权有( )。",
+      "options": [
+        "A.听取和审查同级委员会的报告",
+        "B.审查同级纪律检查委员会的报告",
+        "C.讨论本地区范围内的重大问题并作出决议",
+        "D.选举同级党的委员会，选举同级党的纪律检查委员会"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均列于地方各级代表大会职权。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第二十六条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第二十六条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 51,
+        "page": null,
+        "paragraphStart": 1481,
+        "paragraphEnd": 1485,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 52,
+      "type": "multi",
+      "question": "党的地方各级委员会全体会议，选举()和( )、()，并报上级党的委员会批准。",
+      "options": [
+        "A.常务委员会",
+        "B.书记",
+        "C.副书记",
+        "D.纪律检查委员会书记"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "该条列举常务委员会、书记、副书记，不含纪律检查委员会书记。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第二十八条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第二十八条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 52,
+        "page": null,
+        "paragraphStart": 1486,
+        "paragraphEnd": 1490,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 53,
+      "type": "multi",
+      "question": "企业、农村、机关、()、社会组织、人民解放军连队和其他基层单位，凡是有正式党员3人以上的，都应当成立党的基层组织。",
+      "options": [
+        "A.学校",
+        "B.医院",
+        "C.科研院所",
+        "D.街道社区"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四类单位均在该条的基层单位列举中。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 53,
+        "page": null,
+        "paragraphStart": 1491,
+        "paragraphEnd": 1495,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 54,
+      "type": "multi",
+      "question": "党的基层组织，根据工作需要和党员人数，经上级党组织批准，分别设立党的( )。",
+      "options": [
+        "A.基层委员会",
+        "B.总支部委员会",
+        "C.党小组",
+        "D.支部委员会"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "该条列举三类委员会，不包括党小组。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 54,
+        "page": null,
+        "paragraphStart": 1496,
+        "paragraphEnd": 1500,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 55,
+      "type": "multi",
+      "question": "以下属于党的基层组织基本任务的是()。",
+      "options": [
+        "A.选举上级党的委员会",
+        "B.推进党史学习教育常态化制度化",
+        "C.对党员进行教育、管理、监督和服务，提高党员素质，坚定理想信念，增强党性",
+        "D.监督党员干部和其他任何工作人员严格遵守国家法律法规"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "党史学习教育、党员教育管理监督服务、监督守法均属基本任务；“选举上级党的委员会”不在本条列举中。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十二条（二）（三）（七）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十二条（二）（三）（七）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 55,
+        "page": null,
+        "paragraphStart": 1501,
+        "paragraphEnd": 1505,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 56,
+      "type": "multi",
+      "question": "国有企业党委(党组)加强党组织的自身建设，领导（ )和工会、共青团、妇女组织等群团组织。",
+      "options": [
+        "A.思想政治工作",
+        "B.意识形态工作",
+        "C.精神文明建设",
+        "D.统一战线工作"
+      ],
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "按本题所引党章原句填空，应填思想政治工作、精神文明建设、统一战线工作；“意识形态工作”不在该句列举中。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十三条（国有企业段）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十三条（国有企业段）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 56,
+        "page": null,
+        "paragraphStart": 1506,
+        "paragraphEnd": 1510,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 57,
+      "type": "multi",
+      "question": "非公有制经济组织中党的基层组织,()。",
+      "options": [
+        "A.贯彻党的方针政策",
+        "B.引导和监督企业遵守国家的法律法规",
+        "C.团结凝聚职工群众，维护各方的合法权益，促进企业健康发展",
+        "D.发挥政治核心作用"
+      ],
+      "answer": null,
+      "status": "pending",
+      "explanation": "题干未限定逐字补全党章。“发挥政治核心作用”之外的三项见党章；相关中央文件又明确非公有制企业党组织在职工群众中发挥政治核心作用，该选项的范围存在歧义。本题保留原文，暂不计分。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十三条（非公有制经济组织段）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十三条（非公有制经济组织段）"
+        },
+        {
+          "title": "关于加强和改进非公有制企业党的建设工作的意见（试行） · 第一部分第1点：地位作用",
+          "url": "https://fuwu.12371.cn/2013/01/07/ARTI1357528247407449.shtml",
+          "locator": "第一部分第1点：地位作用"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 57,
+        "page": null,
+        "paragraphStart": 1511,
+        "paragraphEnd": 1515,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "unscored-scope-ambiguity",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [
+          "按2022党章该段字面抽取可得ABC，但D可由其他官方文件支持，原题无标准答案且未限定引用范围，因此不强制判分。"
+        ],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 58,
+      "type": "multi",
+      "question": "社会组织中党的基层组织,()。",
+      "options": [
+        "A.宣传和执行党的路线、方针、政策",
+        "B.领导工会、共青团等群团组织",
+        "C.教育管理党员",
+        "D.引领服务群众，推动事业发展"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均对应社会组织基层党组织的规定。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十三条（社会组织段）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十三条（社会组织段）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 58,
+        "page": null,
+        "paragraphStart": 1516,
+        "paragraphEnd": 1520,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 59,
+      "type": "multi",
+      "question": "各级党和国家机关中党的基层组织,()。",
+      "options": [
+        "A.协助行政负责人完成任务，改进工作",
+        "B.领导本单位的业务工作",
+        "C.对包括行政负责人在内的每个党员进行教育、管理、监督",
+        "D.对本单位重大问题进行讨论和作出决定"
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "该段要求协助行政负责人，并教育管理监督所有党员，明确不领导本单位业务工作。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十三条（党和国家机关段）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十三条（党和国家机关段）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 59,
+        "page": null,
+        "paragraphStart": 1521,
+        "paragraphEnd": 1525,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 60,
+      "type": "multi",
+      "question": "党支部是党的基础组织，担负直接教育党员、管理党员、监督党员和()的职责。",
+      "options": [
+        "A.组织群众",
+        "B.宣传群众",
+        "C.凝聚群众",
+        "D.服务群众"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均属于党支部联系群众的职责。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十四条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十四条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 60,
+        "page": null,
+        "paragraphStart": 1526,
+        "paragraphEnd": 1530,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 61,
+      "type": "multi",
+      "question": "党的干部是党的事业的骨干，是人民的公仆，要做到( )。",
+      "options": [
+        "A.忠诚",
+        "B.干净",
+        "C.担当",
+        "D.完美"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "干部要求是忠诚、干净、担当，不是“完美”。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十五条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十五条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 61,
+        "page": null,
+        "paragraphStart": 1531,
+        "paragraphEnd": 1535,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 62,
+      "type": "multi",
+      "question": "中国共产党按照德才兼备、以德为先的原则选拔干部，坚持五湖四海、任人唯贤，坚持事业为上、公道正派，反对任人唯亲，努力实现干部队伍的()。",
+      "options": [
+        "A.革命化",
+        "B.年轻化",
+        "C.知识化",
+        "D.专业化"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项组成干部队伍建设的“四化”要求。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十五条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十五条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 62,
+        "page": null,
+        "paragraphStart": 1536,
+        "paragraphEnd": 1540,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 63,
+      "type": "multi",
+      "question": "关于党的各级领导干部必须具备的基本条件，下列说法中正确的是( )。",
+      "options": [
+        "A.带头贯彻落实习近平新时代中国特色社会主义思想",
+        "B.具有共产主义远大理想和中国特色社会主义坚定信念",
+        "C.有强烈的革命事业心和政治责任感",
+        "D.坚持和维护党的民主集中制"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项分别对应该条列明的干部基本条件。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第三十六条（一）（二）（四）（六）",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第三十六条（一）（二）（四）（六）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 63,
+        "page": null,
+        "paragraphStart": 1541,
+        "paragraphEnd": 1545,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 64,
+      "type": "multi",
+      "question": "党的纪律主要包括()、工作纪律、生活纪律。",
+      "options": [
+        "A.政治纪律",
+        "B.组织纪律",
+        "C.廉洁纪律",
+        "D.群众纪律"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项加上题干已有的两项，构成六类纪律。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 64,
+        "page": null,
+        "paragraphStart": 1546,
+        "paragraphEnd": 1550,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 65,
+      "type": "multi",
+      "question": "坚持惩前毖后、治病救人，执纪必严、违纪必究，抓早抓小、防微杜渐，按照错误性质和情节轻重，给以批评教育、( )直至纪律处分。",
+      "options": [
+        "A.通报批评",
+        "B.责令检查",
+        "C.谈心谈话",
+        "D.诚勉"
+      ],
+      "answer": null,
+      "status": "pending",
+      "explanation": "原选项“诚勉”与官方用语“诫勉”不符，保留原文，不计分。官方该句列举的是责令检查、诫勉。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 65,
+        "page": null,
+        "paragraphStart": 1551,
+        "paragraphEnd": 1555,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "unscored-source-issue",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [
+          "原DOCX D项“诚勉”与党章“诫勉”不符，不能把订正后的参考答案冒充原题标准答案。"
+        ],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 66,
+      "type": "multi",
+      "question": "党的纪律处分有警告、()、开除党籍。",
+      "options": [
+        "A.严重警告",
+        "B.撤销党内职务",
+        "C.撤销行政职务",
+        "D.留党察看"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "该条列明严重警告、撤销党内职务、留党察看；撤销行政职务不属于该条列举的党纪处分。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十一条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十一条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 66,
+        "page": null,
+        "paragraphStart": 1556,
+        "paragraphEnd": 1560,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 67,
+      "type": "multi",
+      "question": "党员在留党察看期间没有()。",
+      "options": [
+        "A.表决权",
+        "B.接受党的教育和培训的权利",
+        "C.对党的工作提出建议和倡议的权利",
+        "D.选举权和被选举权"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "留党察看期间没有表决权、选举权、被选举权，其余所列权利未被该条暂停。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十一条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十一条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 67,
+        "page": null,
+        "paragraphStart": 1561,
+        "paragraphEnd": 1565,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 68,
+      "type": "multi",
+      "question": "党的地方各级纪律检查委员会和基层纪律检查委员会在( )和()双重领导下进行工作。",
+      "options": [
+        "A.同级党的委员会",
+        "B.上级纪律检查委员会",
+        "C.上级党的委员会",
+        "D.党的地方各级代表大会"
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "status": "verified",
+      "explanation": "双重领导来自同级党委和上级纪委。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十五条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十五条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 68,
+        "page": null,
+        "paragraphStart": 1566,
+        "paragraphEnd": 1570,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 69,
+      "type": "multi",
+      "question": "党的中央纪律检查委员会全体会议，选举()和( )、()，并报党的中央委员会批准。",
+      "options": [
+        "A.常务委员会",
+        "B.书记",
+        "C.秘书长",
+        "D.副书记"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "中央纪委全会选举常务委员会、书记、副书记，报中央委员会批准。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十五条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十五条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 69,
+        "page": null,
+        "paragraphStart": 1571,
+        "paragraphEnd": 1575,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 70,
+      "type": "multi",
+      "question": "下列说法正确的是( )。",
+      "options": [
+        "A.党的地方各级纪律检查委员会和基层纪律检查委员会如果对同级党的委员会处理案件的决定有不同意见，可以请求上一级纪律检查委员会予以复查",
+        "B.党的各级纪律检查委员会每届任期和同级党的委员会相同",
+        "C.各级纪律检查委员会要把处理特别重要或复杂的案件中的问题和处理的结果，向同级党的委员会报告",
+        "D.在特殊情况下，只有市级和市级以上各级党的委员会和纪律检查委员会有权直接决定给党员以纪律处分"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "关于请求复查、纪委任期、向同级党委报告的三项表述符合党章。处分权限项把“县级和县级以上”错写为“市级和市级以上”；向同级报告不排除另须向上级纪委报告。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十二条；第四十五条；第四十六条；第四十七条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十二条；第四十五条；第四十六条；第四十七条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 70,
+        "page": null,
+        "paragraphStart": 1576,
+        "paragraphEnd": 1580,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 71,
+      "type": "multi",
+      "question": "二十大党章进一步明确派驻纪律检查组的范围，增写按照规定向有关()派驻党的纪律检查组的内容。",
+      "options": [
+        "A.国有企业",
+        "B.民营企业",
+        "C.社会组织",
+        "D.事业单位"
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "新增范围是国有企业和事业单位。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十五条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十五条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 71,
+        "page": null,
+        "paragraphStart": 1581,
+        "paragraphEnd": 1585,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 72,
+      "type": "multi",
+      "question": "党的各级纪律检查委员会的主要任务是()。",
+      "options": [
+        "A.维护党的章程和其他党内法规",
+        "B.检查党的路线、方针、政策和决议的执行情况",
+        "C.协助党的委员会推进全面从严治党、加强党风建设和组织协调反腐败工作",
+        "D.推动完善党和国家监督体系"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均是纪委主要任务。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十六条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十六条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 72,
+        "page": null,
+        "paragraphStart": 1586,
+        "paragraphEnd": 1590,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 73,
+      "type": "multi",
+      "question": "党的各级纪律检查委员会是党内监督专责机关。其职责是( )。",
+      "options": [
+        "A.检察",
+        "B.监督",
+        "C.执纪",
+        "D.问责"
+      ],
+      "answer": [
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "纪委的三项职责是监督、执纪、问责，不是检察。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十六条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十六条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 73,
+        "page": null,
+        "paragraphStart": 1591,
+        "paragraphEnd": 1595,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 74,
+      "type": "multi",
+      "question": "下列选项中属于党组的任务的有()。",
+      "options": [
+        "A.贯彻执行党的路线、方针、政策",
+        "B.加强对本单位党的建设的领导，履行全面从严治党责任",
+        "C.讨论和决定本单位的重大问题",
+        "D.讨论和决定基层党组织设置调整和发展党员、处分党员等重要事项"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均在党组任务的列举中。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十八条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十八条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 74,
+        "page": null,
+        "paragraphStart": 1596,
+        "paragraphEnd": 1600,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 75,
+      "type": "multi",
+      "question": "下列关于党组的说法正确的有()。",
+      "options": [
+        "A.党组的成员，由批准成立党组的党组织决定",
+        "B.党组设书记，必要时还可以设副书记",
+        "C.党组只能设书记，不能设副书记",
+        "D.党组必须服从批准它成立的党组织领导"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "党组成员由批准成立它的党组织决定，并服从其领导；必要时可以设副书记，所以“只能设书记”不符规定。",
+      "sources": [
+        {
+          "title": "中国共产党章程（2022年通过） · 第四十九条",
+          "url": "https://www.12371.cn/special/zggcdzc/zggcdzcqw/",
+          "locator": "第四十九条"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 75,
+        "page": null,
+        "paragraphStart": 1601,
+        "paragraphEnd": 1605,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 76,
+      "type": "multi",
+      "question": "中国共产党第二十次全国代表大会的主题是:高举今国特色社会主义伟大旗帜,()，为全面建设社会主人代化国家、全面推进中华民族伟大复兴面团结奋斗。",
+      "options": [
+        "A.全面贯彻习近平新时代中国特色社会主义思想",
+        "B.弘扬伟大建党精神",
+        "C.自信自强、守正创新",
+        "D.踔厉奋发、勇毅前行"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "status": "verified",
+      "explanation": "四项均对应大会主题。原题干有“今国”“社会主人代化”“面团结”等错字，但不改变本题选项集合；保留原文并提示勘误。",
+      "sources": [
+        {
+          "title": "党的二十大报告 · 导语：大会主题",
+          "url": "https://cpc.people.com.cn/GB/64162/448633/index.html",
+          "locator": "导语：大会主题"
+        },
+        {
+          "title": "二十大报告关键词｜大会的主题 · 大会主题的具体含义（人民日报评论员文章）",
+          "url": "https://www.12371.cn/2022/10/17/ARTI1665990586274496.shtml",
+          "locator": "大会主题的具体含义（人民日报评论员文章）"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 76,
+        "page": null,
+        "paragraphStart": 1606,
+        "paragraphEnd": 1610,
+        "numberDelimiter": ",",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified-with-stem-errata",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [
+          "原题干错字保留；四个选项可由官方主题材料确定，不作选项订正。"
+        ],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 77,
+      "type": "multi",
+      "question": "党的二十大报告指出，全党同志()，坚定历史自信，增强历史主动，谱写新时代中国特色社会主义更加绚丽的华章。",
+      "options": [
+        "A.务必不忘初心、牢记使命",
+        "B.务必谦虚谨慎、艰苦奋斗",
+        "C.务必敢于斗争、善于斗争",
+        "D.务必信念坚定、为民服务"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "报告提出不忘初心牢记使命、谦虚谨慎艰苦奋斗、敢于斗争善于斗争三个“务必”；“信念坚定、为民服务”不在该列举中。",
+      "sources": [
+        {
+          "title": "党的二十大报告 · 导语：“三个务必”",
+          "url": "https://cpc.people.com.cn/GB/64162/448633/index.html",
+          "locator": "导语：“三个务必”"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 77,
+        "page": null,
+        "paragraphStart": 1611,
+        "paragraphEnd": 1615,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    },
+    {
+      "number": 78,
+      "type": "multi",
+      "question": "党的十八大以来，我们经历了对党和人民事业具有重大现实意义和深远历史意义的三件大事:一是( )，二是()，三是()。",
+      "options": [
+        "A.迎来中国共产党成立100周年",
+        "B.中国特色社会主义进入新时代",
+        "C.完成脱贫攻坚、全面建成小康社会的历史任务，实现第一个百年奋斗目标",
+        "D.建成社会主义现代化强国"
+      ],
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "status": "verified",
+      "explanation": "建成社会主义现代化强国属于后续奋斗目标，不是该段列举的已完成大事；其余三项与报告对应。",
+      "sources": [
+        {
+          "title": "党的二十大报告 · 第一部分：新时代十年的三件大事",
+          "url": "https://cpc.people.com.cn/GB/64162/448633/index.html",
+          "locator": "第一部分：新时代十年的三件大事"
+        }
+      ],
+      "source": {
+        "file": "党校题库更新-二十大（复习以此版本为准）.docx",
+        "title": "党校题库更新-二十大（复习以此版本为准）",
+        "section": "多项选择题",
+        "item": 78,
+        "page": null,
+        "paragraphStart": 1616,
+        "paragraphEnd": 1620,
+        "numberDelimiter": ".",
+        "rawAnswer": null
+      },
+      "verification": {
+        "status": "official-source-verified",
+        "answerOrigin": "official-reference-inference-not-source-key",
+        "notes": [],
+        "checkedAt": "2026-11-19",
+        "originalTextPreserved": true,
+        "independentCrossCheck": true
+      }
+    }
+  ]
+}
