@@ -8,17 +8,19 @@ const html = fs.readFileSync(path.join(__dirname, '../site/party-school-quiz.htm
 const payload = html.match(/<script id="question-data" type="application\/json">([\s\S]*?)<\/script>/)[1];
 const data = JSON.parse(payload);
 const code = html.match(/<script>\n([\s\S]*?)<\/script>/)[1];
+const evidenceRaw=html.match(/<script id="question-evidence" type="application\/json">([\s\S]*?)<\/script>/)[1];
+const evidence=JSON.parse(evidenceRaw);
 const audit = JSON.parse(fs.readFileSync(path.join(__dirname, '../site/party-school-source-audit.json'), 'utf8'));
 const KEY = 'party-school-quiz-135-v1';
 const BACKUP = 'party-school-quiz-135-v1-before-306';
 const digest = value => crypto.createHash('sha256').update(value).digest('hex');
 const original135Digest = '7a35a1b0ebfecc526e7cd393b6efbdcf5c3e7a7323bc5ee7e58e73e56a2904f5';
 
-function boot({store = {}, bank = data, preview = false, failRead = false, failWrite = () => false} = {}) {
+function boot({store = {}, bank = data, withEvidence = bank===data, preview = false, failRead = false, failWrite = () => false} = {}) {
   const elements = new Map(), reads = [], writes = [];
   const el = selector => {
     if (!elements.has(selector)) elements.set(selector, {
-      textContent: selector === '#question-data' ? JSON.stringify(bank) : '',
+      textContent: selector === '#question-data' ? JSON.stringify(bank) : selector === '#question-evidence' && withEvidence ? evidenceRaw : '',
       innerHTML: '', hidden: true, style: {},
       addEventListener() {}, focus() {}, classList: {toggle() {}},
       setAttribute() {}, toggleAttribute() {}
@@ -67,12 +69,24 @@ for (const q of data.questions) {
   } else assert.equal(q.answer, null);
 }
 assert.equal(audit.count, 306);
-assert.equal(audit.verified_answer_count, data.questions.filter(q => q.status === 'verified').length);
-assert.equal(audit.verified_answer_count, 298);
-assert.equal(audit.legacy_verified_answer_count, 133);
-assert.equal(audit.new_verified_answer_count, 165);
-assert.deepEqual(audit.ungraded_questions, [20, 27, 142, 167, 266, 297, 301, 306]);
-assert.deepEqual(audit.ungraded_questions, data.questions.filter(q => q.status !== 'verified').map(q => q.number));
+const imported=audit.imported_0165696;
+assert.equal(imported.verified_answer_count, data.questions.filter(q => q.status === 'verified').length);
+assert.equal(imported.verified_answer_count, 298); assert.equal(imported.legacy_verified_answer_count, 133);
+assert.equal(imported.new_verified_answer_count, 165);
+assert.deepEqual(imported.ungraded_questions, [20, 27, 142, 167, 266, 297, 301, 306]);
+assert.deepEqual(imported.ungraded_questions, data.questions.filter(q => q.status !== 'verified').map(q => q.number));
+assert.equal(audit.verified_answer_count, 304); assert.equal(audit.legacy_verified_answer_count,134);
+assert.equal(audit.new_verified_answer_count,170); assert.deepEqual(audit.ungraded_questions,[20,142]);
+assert.equal(audit.question_evidence_sha256, digest(evidenceRaw)); assert.equal(evidence.questions.length,306);
+assert.deepEqual(evidence.questions.map(e=>e.id),data.questions.map(q=>q.number));
+assert.equal(evidence.questions.filter(e=>e.graded).length,304);
+assert.deepEqual(evidence.questions.filter(e=>!e.graded).map(e=>e.id),[20,142]);
+assert(evidence.documents.every(d=>d.title && new URL(d.url).protocol==='https:'));
+for(const e of evidence.questions){
+  assert(e.location && e.basis && e.links.length && ['A','B','C'].includes(e.answer));
+  assert(e.links.every(([i,a])=>evidence.documents[i] && typeof a==='string'));
+  const old=data.questions[e.id-1]; if(old.answer) assert.equal(e.answer,old.answer);
+}
 assert.equal(audit.question_payload_sha256, digest(payload)); assert.equal(audit.original_answers_provided, false);
 assert(html.includes("KEY='party-school-quiz-135-v1'")); assert(html.includes('study-global-nav'));
 assert(html.includes('/study-site/party-school.html'));
@@ -109,11 +123,11 @@ next(); assert.equal(state.review.index, 1); assert(validSavedState(state));
 }
 console.log('PASS: random round without repeats, answer lock, next gate, completion/restart, old/new wrong-answer mastery');
 
-for (const q of data.questions.filter(q => q.status !== 'verified')) for (const choice of ['A', 'B', 'C']) {
+for (const q of data.questions.filter(q => audit.ungraded_questions.includes(q.number))) for (const choice of ['A', 'B', 'C']) {
   const test = boot();
   test.run(`
 state.practice.order = [${q.number}, ...BANK.filter(q => q.number !== ${q.number}).map(q => q.number)]; render();
-assert(document.querySelector('#main-content').innerHTML.includes('答案待核验')); answer('${choice}');
+assert(document.querySelector('#main-content').innerHTML.includes('不计分')); answer('${choice}');
 assert.equal(state.total.pending, 1); assert.equal(state.total.correct + state.total.wrong, 0);
 assert.equal(state.wrong.length, 0); assert.equal(sessionStats(state.practice).accuracy, null);
 assert.equal(state.history[${q.number}].lastResult, 'pending');
@@ -193,3 +207,55 @@ assert(cannotWrite.el('#toast').textContent.includes('无法保存')); assert(!c
 const exact = app.store[KEY], restored = boot({store: {[KEY]: exact}});
 assert.equal(restored.run('storageBlocked'), false); assert.equal(restored.store[KEY], exact);
 console.log('PASS: explicit reset works, failed reset never claims success, current records restore exactly');
+
+// Exercise the visible UI at all 306 positions both before and after a choice. Each official
+// source must be usable even before answering; the note must not disclose the key by default.
+const completeEvidence=boot();
+completeEvidence.run(`
+state.practice.order=BANK.map(q=>q.number); render();
+for(const q of BANK) {
+  const e=evidenceById.get(q.number), before=document.querySelector('#main-content').innerHTML;
+  assert(before.includes('data-quiz-evidence="'+q.number+'"'));
+  assert(before.includes('查阅出处')); assert(!before.includes('class="evidence-answer"'));
+  e.links.forEach(([i,anchor])=>{
+    const d=EVIDENCE.documents[i],url=d.url+(anchor?'#:~:text='+encodeURIComponent(anchor):'');
+    assert(before.includes('href="'+esc(url)+'"'));
+  });
+  answer(e.answer);
+  const after=document.querySelector('#main-content').innerHTML;
+  assert(after.includes('class="evidence-answer"'));
+  assert(after.includes(esc(e.basis))); assert(after.includes(esc(e.location)));
+  assert(after.includes('data-quiz-evidence="'+q.number+'" open'));
+  assert(savedResultFor(q,e.answer,state.practice.answers[q.number].gradeVersion)===state.practice.answers[q.number].result);
+  next();
+}
+assert.equal(state.total.correct,304); assert.equal(state.total.pending,2); assert.equal(state.total.wrong,0);
+assert(validSavedState(state));
+`);
+assert.deepEqual(boot({store:completeEvidence.store}).json('state'),completeEvidence.json('state'));
+console.log('PASS: 306 citation cards + expanded explanations, real links, no pre-answer spoilers, 304 graded/2 non-scoring, reload');
+
+const promoteIds=[27,167,266,297,301,306];
+const setFirst=(test,id)=>test.run('state.practice.order = ['+id+',...BANK.filter(q=>q.number!=='+id+').map(q=>q.number)];render();');
+for(const id of promoteIds) {
+  const older=boot({withEvidence:false});setFirst(older,id);older.run("answer('A')");
+  const prev=older.json('state'), refreshed=boot({store:older.store});
+  assert.deepEqual(refreshed.json('state'),prev);
+  assert(refreshed.el('#main-content').innerHTML.includes('当时未计分'));
+  refreshed.run("answer('C')");assert.deepEqual(refreshed.json('state'),prev);
+  refreshed.run('startNew()');setFirst(refreshed,id);
+  refreshed.run(`const q=BY_ID.get(${id}); answer(q.answer==='A'?'B':'A');assert(state.wrong.includes(q.number));
+    assert.equal(state.practice.answers[q.number].gradeVersion,2);
+    assert.equal(state.history[q.number].gradeVersion,2); assert.equal(state.history[q.number].pending,1);
+    switchView('review');answer(q.answer);assert(!state.wrong.includes(q.number));assert(validSavedState(state));`);
+  const roundtrip=boot({store:refreshed.store});assert.deepEqual(roundtrip.json('state'),refreshed.json('state'));
+  const tampered=roundtrip.json('state');tampered.history[id].gradeVersion=99;
+  const raw=JSON.stringify(tampered), protectedState=boot({store:{[KEY]:raw}});
+  assert.equal(protectedState.run('storageBlocked'),true);assert.equal(protectedState.store[KEY],raw);
+}
+const old135pending=boot({bank:legacyBank,withEvidence:false});setFirst(old135pending,27);old135pending.run("answer('B')");
+const raw135=old135pending.store[KEY],migr135=boot({store:old135pending.store});
+assert.equal(migr135.store[BACKUP],raw135); assert.equal(migr135.run('storageBlocked'),false);
+assert.equal(migr135.run('state.practice.order[0]'),27); assert.equal(migr135.run('state.total.pending'),1);
+assert(migr135.el('#main-content').innerHTML.includes('当时未计分'));
+console.log('PASS: all six v1/v2 mixed histories, 135 pending migration, older scores retained, mastery, strict version checks');

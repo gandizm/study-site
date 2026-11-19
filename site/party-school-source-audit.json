@@ -5,22 +5,16 @@
   "number_sequence_exact": true,
   "all_have_three_options": true,
   "original_answers_provided": false,
-  "verified_answer_count": 298,
-  "legacy_verified_answer_count": 133,
-  "new_verified_answer_count": 165,
-  "verification_date": "2026-11-17",
+  "verified_answer_count": 304,
+  "legacy_verified_answer_count": 134,
+  "new_verified_answer_count": 170,
+  "verification_date": "2026-11-19",
   "legacy_verification_date": "2026-11-14",
   "ungraded_questions": [
     20,
-    27,
-    142,
-    167,
-    266,
-    297,
-    301,
-    306
+    142
   ],
-  "answer_key_origin": "原题库未附答案。原1–135题中的133题沿用既有核验记录，全部题目对象、来源与疑点状态原样保留；新增136–306题此次逐题对照官方依据，仅在可确定时判分。未核实或原文有歧义的题目不计分。",
+  "answer_key_origin": "306题逐题对照所列官方文献；298个原有计分答案与本次复核均一致。六题仅题干错字、选项唯一，今后作答可计分；两题原选项本身多字，显示勘误后参考但不计分。原题没有附标准答案。不追溯改变既有成绩。",
   "question_payload_sha256": "14076951877288deb31bb2a208302cd9ac65c67d33bb4de29074f19a1953c289",
   "source_payload_preserved": true,
   "original_1_135_preserved": true,
@@ -29,5 +23,34 @@
   ],
   "storage_key": "party-school-quiz-135-v1",
   "legacy_backup_key": "party-school-quiz-135-v1-before-306",
-  "migration": "有效旧135题记录先逐字备份；保留原顺序、当前进度及全部历史，在本轮末尾随机追加136–306题。损坏记录或备份失败时不覆盖原记录。"
+  "migration": "有效旧135题记录先逐字备份；保留原顺序、当前进度及全部历史，在本轮末尾随机追加136–306题。损坏记录或备份失败时不覆盖原记录。",
+  "imported_0165696": {
+    "verification_date": "2026-11-17",
+    "verified_answer_count": 298,
+    "new_verified_answer_count": 165,
+    "legacy_verified_answer_count": 133,
+    "ungraded_questions": [
+      20,
+      27,
+      142,
+      167,
+      266,
+      297,
+      301,
+      306
+    ],
+    "answer_key_origin": "原题库未附答案。原1–135题中的133题沿用既有核验记录，全部题目对象、来源与疑点状态原样保留；新增136–306题此次逐题对照官方依据，仅在可确定时判分。未核实或原文有歧义的题目不计分。"
+  },
+  "promoted_after_stem_errata": {
+    "27": "B",
+    "167": "B",
+    "266": "B",
+    "297": "B",
+    "301": "C",
+    "306": "C"
+  },
+  "question_evidence_sha256": "96af865f4468c1892d326cd112e9d994626bde524f3e605b4975f1c2b7163eae",
+  "evidence_document_count": 40,
+  "evidence_question_count": 306,
+  "scoring_version": 2
 }
