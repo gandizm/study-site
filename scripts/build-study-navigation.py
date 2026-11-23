@@ -59,8 +59,12 @@ def assignment_card(a, *, latest=False):
             f'<{title_tag}>{escape(a["title"])}</{title_tag}><p>{escape(a["description"])}</p>'
             f'{meta if latest else ""}</div><div class="actions"><a class="primary" href="{link(a["url"])}">{escape(a["action"])}</a>{extra}</div></article>')
 
+def publication_key(a):
+    # Corrections never become new assignments; a timestamp only resolves first-publication ties.
+    return (a['published_on'], a.get('published_at', a['published_on']), a['url'])
+
 def homework(subject):
-    items = sorted((a for a in CATALOG['assignments'] if a['subject'] == subject), key=lambda a: a['published_on'], reverse=True)
+    items = sorted((a for a in CATALOG['assignments'] if a['subject'] == subject), key=publication_key, reverse=True)
     out = '<section class="study-section" id="homework"><div class="study-section-heading"><h2>作业</h2><p>按作业批次排列，旧题保留在本科目</p></div>'
     if not items:
         out += '<p class="study-empty">目前没有独立的指定作业页。辅导中的代表例题与自测仍在对应章节，不把它们算成新作业。</p>'
@@ -72,7 +76,7 @@ def homework(subject):
     return HW_START + '\n' + out + '</section>\n' + HW_END
 
 def home():
-    latest = max(CATALOG['assignments'], key=lambda a: (a['published_on'], a['url']))
+    latest = max(CATALOG['assignments'], key=publication_key)
     cards = []
     for i, s in enumerate(SUBJECTS, 1):
         cards.append(f'<section class="study-item" id="{s["id"]}-entry"><span class="study-number">{i:02d} / {s["label"]}</span>'

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "encoding": "zlib+base64",
+  "files": [
+    {
+      "target": "site/em-week1011-homework.html",
+      "bytes": 2905570,
+      "sha256": "e4bcaab94dbc0a97e42a2b3eb4dd7b7a0a177c927fd16cee126cb8239e5c4017",
+      "chunks": [
+        {
+          "file": "em-week1011-homework.html.001.b64",
+          "bytes": 65536,
+          "sha256": "a418a878ceebd8ea3ebaf3ac28a62a68ab25bdd5929b3022f1c66841fe51ead2"
+        },
+        {
+          "file": "em-week1011-homework.html.002.b64",
+          "bytes": 65536,
+          "sha256": "1a3344097e938bb9ad0a1410baa3aa3756dc280782f6b5c3fd252651ab28a38c"
+        },
+        {
+          "file": "em-week1011-homework.html.003.b64",
+          "bytes": 65536,
+          "sha256": "5d7589c4d89f9f0285b5f20f9307c7e421a547cfd49a3c2be1306dea9fae555c"
+        },
+        {
+          "file": "em-week1011-homework.html.004.b64",
+          "bytes": 65536,
+          "sha256": "524fb9c5eecf8f24978aa98d06d7b34564049dd5b57740583a0f620cdc330af5"
+        },
+        {
+          "file": "em-week1011-homework.html.005.b64",
+          "bytes": 65536,
+          "sha256": "b825a6866827a46727ab1c091e75bc922f7240e5d8c5ac0d13573172ed731540"
+        },
+        {
+          "file": "em-week1011-homework.html.006.b64",
+          "bytes": 65536,
+          "sha256": "aba5359d80e627eb1825d972ff3dbb62c2ed68c4532bdbb02dfccf32699c706b"
+        },
+        {
+          "file": "em-week1011-homework.html.007.b64",
+          "bytes": 23112,
+          "sha256": "dfbaba9abe10a2d7353ee4bdcff9ff885a9792c08c1afc8bfe01a099fcaa5dbb"
+        }
+      ]
+    },
+    {
+      "target": "site/em-week1011-answers.html",
+      "bytes": 1054904,
+      "sha256": "feb89f01cb04a513ea696093d8e8f91c88b27b94f3067c8b910c14057f55665f",
+      "chunks": [
+        {
+          "file": "em-week1011-answers.html.001.b64",
+          "bytes": 65536,
+          "sha256": "8a9a3b91f1863aeadf4a474790ed108849a1f492cf92e963ae170ef6d5367bd3"
+        },
+        {
+          "file": "em-week1011-answers.html.002.b64",
+          "bytes": 65536,
+          "sha256": "befb335b121f924fb9122f7fbdcc6d0301fac682d3bc8083c72d3eb6fc81ba70"
+        },
+        {
+          "file": "em-week1011-answers.html.003.b64",
+          "bytes": 17472,
+          "sha256": "eca241bcae5906c13ebe17d66d7afa76a6b83c6d4e51349a702adc7a6827fac9"
+        }
+      ]
+    }
+  ]
+}

@@ -42,7 +42,7 @@ for p,a in official.items():
         assert target.exists(),f'Missing target {ref} from {p}'
 
 assert (SITE/'index.html').read_bytes()==(SITE/'courses.html').read_bytes()
-latest=max(assignments,key=lambda a:(a['published_on'],a['url']))
+latest=max(assignments,key=nav.publication_key)
 for name in ['index.html','courses.html']:
     text=(SITE/name).read_text(); a=pages[SITE/name]
     hw=[x for x in assignments if '/study-site/'+x['url'] in a.refs]
