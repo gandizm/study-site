@@ -53,6 +53,20 @@
   ],
   "assignments": [
     {
+      "subject": "network",
+      "title": "第三章 · 数据链路层作业（2）：ALOHA 协议",
+      "url": "network-aloha-homework.html",
+      "published_on": "2026-11-23",
+      "description": "七题可抄解答与原课件：终端数、空闲概率、负载与吞吐率、重传、双上行卫星缓存及系统效率。",
+      "action": "打开 ALOHA 七题",
+      "links": [
+        {
+          "label": "纯文本答案",
+          "url": "network-aloha-answers.txt"
+        }
+      ]
+    },
+    {
       "subject": "communications",
       "title": "第五章 · 模拟信号数字化八题",
       "url": "communications-ch5-homework.html",

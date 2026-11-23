@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第三章 数据链路层作业（2）· ALOHA 协议 | 计算机网络</title><meta name="description" content="七道 ALOHA 作业的题干、可复制的解答和课件出处。分清随机时刻空闲与冲突窗口，用缓存算清卫星两条上行的有效吞吐。">
+<link rel="stylesheet" href="/study-site/course-hub.css"><link rel="stylesheet" href="network-aloha-homework.css">
+<link rel="stylesheet" href="/study-site/study-navigation.css?v=20261112">
+</head><body>
+<!-- study-nav:start -->
+<nav class="study-global-nav" aria-label="全站科目导航"><a class="study-home" href="/study-site/courses.html">学习首页</a><details class="study-subject-menu" open><summary>科目 · 计算机网络</summary><div class="study-subject-links"><a href="/study-site/network.html" aria-current="true">计算机网络</a><a href="/study-site/communications.html">通信原理</a><a href="/study-site/dsp.html">数字信号处理</a><a href="/study-site/ppt.html">电磁场与电磁波</a><a href="/study-site/data-structures.html">数据结构</a><a href="/study-site/party-school.html">党校学习</a></div></details></nav>
+<!-- study-nav:end -->
+<main class="aloha" id="top">
+<header class="ah-hero"><p class="ah-kicker">计算机网络 · 第三章 数据链路层作业（2）</p><h1>ALOHA 协议</h1><p class="ah-intro">七道题，都从同一个问题开始：你数的是<strong>发送尝试</strong>、<strong>成功的帧</strong>，还是<strong>空闲的时隙</strong>？每题先给可抄解答，再按需展开容易算错的地方。</p>
+<div class="ah-tools"><a href="network-aloha-answers.txt">七题纯文本</a><button hidden type="button" data-copy-id="all">复制全部答案</button><button hidden type="button" id="print-answers">打印答案</button><a href="network.html#homework">计网作业目录</a></div><span id="copy-status" class="ah-status" role="status"></span></header>
+<div class="ah-layout"><aside class="ah-menu"><h2>按题跳转</h2><nav aria-label="七题题目"><a href="#q1"><span class="ah-id">01</span>终端数</a><a href="#q2"><span class="ah-id">02</span>空闲概率</a><a href="#q3"><span class="ah-id">03</span>时隙负载</a><a href="#q4"><span class="ah-id">04</span>重传次数</a><a href="#q5"><span class="ah-id">05</span>判定过载</a><a href="#q6"><span class="ah-id">06</span>反推吞吐率</a><a href="#q7"><span class="ah-id">07</span>卫星与缓存</a></nav></aside>
+<div class="ah-content">
+<section class="ah-key" aria-labelledby="symbols"><h2 id="symbols">先认清三个量</h2><p><strong>T₀</strong>：发完一帧的时间；在这里，时隙 ALOHA 的一隙就是一个 T₀。<strong>G</strong>：一个帧时内的平均发送尝试数，含重发。<strong>S</strong>：一个帧时内成功的平均帧数，即归一化吞吐率。</p><p>大量用户、泊松尝试模型下：纯 ALOHA 有 S = G e<sup>−2G</sup>；时隙 ALOHA 有 S = G e<sup>−G</sup>。</p></section>
+<article class="ah-question" id="q1" aria-labelledby="h1">
+<p class="ah-meta">第 1 题 · 10 分</p><h2 id="h1">两种协议最多各接多少个终端？</h2>
+<p class="ah-stem"><strong>题目：</strong>若干个终端用纯 ALOHA 随机接入协议与远端主机通信。信道速率为 2000 b/s。每个终端平均每 2 分钟发送一个帧，帧长为 200 bit。问终端数目最多允许为多少？若采用时隙 ALOHA 协议，其结果又如何？</p>
+<p class="ah-result">纯 ALOHA 最多 220 个；时隙 ALOHA 最多 441 个。</p><div class="ah-answer"><p class="ah-step" data-copy="帧时 T₀ = 200/2000 = 0.1 s，信道每秒最多承载 10 个帧时。每个终端的平均新帧率为 1/120 帧/s。">帧时 T₀ = 200/2000 = 0.1 s，信道每秒最多承载 10 个帧时。每个终端的平均新帧率为 1/120 帧/s。</p>
+<p class="ah-step" data-copy="纯 ALOHA 的最大归一化吞吐率为 1/(2e)，可支持的终端数为 ⌊10 × 120/(2e)⌋ = ⌊220.7277⌋ = 220。">纯 ALOHA 的最大归一化吞吐率为 1/(2e)，可支持的终端数为 ⌊10 × 120/(2e)⌋ = ⌊220.7277⌋ = 220。</p>
+<p class="ah-step" data-copy="时隙 ALOHA 的最大归一化吞吐率为 1/e，可支持的终端数为 ⌊10 × 120/e⌋ = ⌊441.4553⌋ = 441。">时隙 ALOHA 的最大归一化吞吐率为 1/e，可支持的终端数为 ⌊10 × 120/e⌋ = ⌊441.4553⌋ = 441。</p></div>
+
+<details class="ah-why"><summary>为什么用最大吞吐率，而不是最大负载？</summary><p>每个终端产生的新帧都要成功交付，所以要比较的是网络每秒能成功传多少帧，而不是它能尝试多少次。纯 ALOHA 的 S = G e⁻²ᴳ 在 G = 1/2 达峰；时隙 ALOHA 的 S = G e⁻ᴳ 在 G = 1 达峰。终端数必须向下取整。增设一个终端会超过理论最大成功帧率。</p></details>
+<div class="ah-foot"><div class="ah-ppt"><span>课件：</span><a href="network-ch3-ppt.html#p60">P60 纯 ALOHA 峰值</a> <a href="network-ch3-ppt.html#p61">P61 课件的终端数例题</a> <a href="network-ch3-ppt.html#p65">P65 时隙 ALOHA 峰值</a></div><button hidden type="button" data-copy-id="q1" aria-label="复制第 1 题答案">复制本题</button></div><span class="ah-status" role="status"></span>
+</article>
+<article class="ah-question" id="q2" aria-labelledby="h2">
+<p class="ah-meta">第 2 题 · 5 分</p><h2 id="h2">信道为空闲，看一个帧时还是两个？</h2>
+<p class="ah-stem"><strong>题目：</strong>在纯 ALOHA 协议中，若系统工作在 G = 0.5 的状态，求信道为空闲的概率。</p>
+<p class="ah-result">随机时刻信道空闲的概率约为 60.65%。</p><div class="ah-answer"><p class="ah-step" data-copy="按随机抽取一个时刻 t 来理解“信道为空闲”。每帧持续 T₀；要使 t 时刻没有帧在传，只需要此前一个帧时内没有帧开始发送。">按随机抽取一个时刻 t 来理解“信道为空闲”。每帧持续 T₀；要使 t 时刻没有帧在传，只需要此前一个帧时内没有帧开始发送。</p>
+<p class="ah-step" data-copy="这段时间内的起发数服从均值为 G 的泊松分布，所以 P(空闲) = P(0) = e^(−G) = e^(−0.5) ≈ 0.6065。">这段时间内的起发数服从均值为 G 的泊松分布，所以 P(空闲) = P(0) = e<sup>−G</sup> = e<sup>−0.5</sup> ≈ 0.6065。</p></div>
+
+<details class="ah-why"><summary>那 P₀ × P₀ 算的是什么？</summary><p>如果改问“从 t 到 t + T₀ 的整段时间始终无信号”，不仅此前一个帧时不得有旧帧跨入，接下来一个帧时也不得有新帧起发。两段合长 2T₀，概率才是 e⁻²ᴳ = e⁻¹ ≈ 36.79%。纯 ALOHA 中指定一帧不碰撞也要排除前后共 2T₀ 内的其他起发；数值虽相同，‘一帧不碰撞’和‘整段无人传’不是同一事件。课件给出泊松计数和冲突窗口，题干没有另行指定整段连续空闲。</p><div class="ah-contrast"><div><b>看 t 这一刻</b>检查前一个帧时：<br>(t − T₀, t] 无起发。</div><div><b>看接下来一整帧时</b>还要检查后一帧时：<br>(t, t + T₀] 也无起发。</div></div></details>
+<div class="ah-foot"><div class="ah-ppt"><span>课件：</span><a href="network-ch3-ppt.html#p58">P58 一帧时内的泊松计数</a> <a href="network-ch3-ppt.html#p59">P59 指定帧的 2T₀ 冲突窗口</a></div><button hidden type="button" data-copy-id="q2" aria-label="复制第 2 题答案">复制本题</button></div><span class="ah-status" role="status"></span>
+</article>
+<article class="ah-question" id="q3" aria-labelledby="h3">
+<p class="ah-meta">第 3 题 · 5 分</p><h2 id="h3">把每小时的发送次数换成每时隙的负载</h2>
+<p class="ah-stem"><strong>题目：</strong>15000 个终端争用一条公用的时隙 ALOHA 信道。平均每个终端每小时发送帧 18 次。时隙长度为 125 ms。试求网络负载量 G。</p>
+<p class="ah-result">G = 9.375 次发送尝试/时隙。</p><div class="ah-answer"><p class="ah-step" data-copy="全网平均发送率为 15000 × 18/3600 = 75 次/s。一个时隙为 125 ms = 0.125 s。">全网平均发送率为 15000 × 18/3600 = 75 次/s。一个时隙为 125 ms = 0.125 s。</p>
+<p class="ah-step" data-copy="所以 G = 75 × 0.125 = 9.375 次/时隙。">所以 G = 75 × 0.125 = 9.375 次/时隙。</p></div>
+
+<details class="ah-why"><summary>G 大于 1，为什么不矛盾？</summary><p>G 数的是所有终端在同一时隙里尝试的次数，不是成功传出的帧数，也不是概率。多个终端可以同时尝试，但在简单时隙 ALOHA 模型下，一个时隙最多只成功一帧。</p></details>
+<div class="ah-foot"><div class="ah-ppt"><span>课件：</span><a href="network-ch3-ppt.html#p58">P58 G 的定义</a> <a href="network-ch3-ppt.html#p64">P64 按时隙统计成功帧</a></div><button hidden type="button" data-copy-id="q3" aria-label="复制第 3 题答案">复制本题</button></div><span class="ah-status" role="status"></span>
+</article>
+<article class="ah-question" id="q4" aria-labelledby="h4">
+<p class="ah-meta">第 4 题 · 15 分</p><h2 id="h4">一帧首次成功、碰撞 k 次与平均发送次数</h2>
+<p class="ah-stem"><strong>题目：</strong>时隙 ALOHA 的时隙为 40 ms。大量用户同时工作，使网络每秒平均发送 60 个帧（包括重传的）。(1) 第一次发送即成功的概率是多少？(2) 正好冲突 k 次然后才发送成功的概率是多少？(3) 每个帧平均要发送多少次？</p>
+<p class="ah-result">首次成功约 9.07%；平均一帧共发 11.02 次。</p><div class="ah-answer"><p class="ah-step" data-copy="G = 60 × 0.040 = 2.4。对已经尝试发送的指定帧，只要同一时隙内没有其他帧尝试就成功，故 p = e^(−2.4) ≈ 0.090718，即 9.07%。">G = 60 × 0.040 = 2.4。对已经尝试发送的指定帧，只要同一时隙内没有其他帧尝试就成功，故 p = e<sup>−2.4</sup> ≈ 0.090718，即 9.07%。</p>
+<p class="ah-step" data-copy="各次尝试独立且负载不变时，恰好先冲突 k 次、再成功的概率为 (1 − p)^k p = (1 − e^(−2.4))^k e^(−2.4)，k = 0, 1, 2, …。">各次尝试独立且负载不变时，恰好先冲突 k 次、再成功的概率为 (1 − p)<sup>k</sup> p = (1 − e<sup>−2.4</sup>)<sup>k</sup> e<sup>−2.4</sup>，k = 0, 1, 2, …。</p>
+<p class="ah-step" data-copy="含首次发送的总次数服从几何分布，均值为 1/p = e^2.4 ≈ 11.02 次。若只计重发才减去 1，约 10.02 次。">含首次发送的总次数服从几何分布，均值为 1/p = e<sup>2.4</sup> ≈ 11.02 次。若只计重发才减去 1，约 10.02 次。</p></div>
+
+<details class="ah-why"><summary>为什么这里不乘 G？</summary><p>题目已经指定这一帧在发，余下的唯一条件是没有竞争者，所以用 e⁻ᴳ。若先选一个任意时隙，再问它是否恰有一帧成功，才用 S = G e⁻ᴳ。检查第 (2) 问：令 k = 0，结果正好回到第 (1) 问。</p></details>
+<div class="ah-foot"><div class="ah-ppt"><span>课件：</span><a href="network-ch3-ppt.html#p64">P64 每时隙的吞吐率</a> <a href="network-ch3-ppt.html#p65">P65 吞吐曲线</a></div><button hidden type="button" data-copy-id="q4" aria-label="复制第 4 题答案">复制本题</button></div><span class="ah-status" role="status"></span>
+</article>
+<article class="ah-question" id="q5" aria-labelledby="h5">
+<p class="ah-meta">第 5 题 · 10 分</p><h2 id="h5">10% 的时隙空着，系统过载了吗？</h2>
+<p class="ah-stem"><strong>题目：</strong>若时隙 ALOHA 系统有 10% 的时隙是空闲的，问网络负载 G 和吞吐率 S 各等于多少？现在系统过载否？</p>
+<p class="ah-result">G ≈ 2.3026，S ≈ 0.2303 帧/时隙；已处于过载区。</p><div class="ah-answer"><p class="ah-step" data-copy="空闲表示该时隙零次尝试，所以 P₀ = e^(−G) = 0.10，G = −ln(0.10) ≈ 2.3026 次/时隙。">空闲表示该时隙零次尝试，所以 P₀ = e<sup>−G</sup> = 0.10，G = −ln(0.10) ≈ 2.3026 次/时隙。</p>
+<p class="ah-step" data-copy="一个时隙内恰好一次尝试才成功，S = G e^(−G) = G × 0.10 ≈ 0.2303 帧/时隙（23.03%）。">一个时隙内恰好一次尝试才成功，S = G e<sup>−G</sup> = G × 0.10 ≈ 0.2303 帧/时隙（23.03%）。</p>
+<p class="ah-step" data-copy="时隙 ALOHA 的吞吐率在 G = 1 达到峰值；本题 G &gt; 1，处于过载区，继续增加发送尝试反而降低吞吐率。">时隙 ALOHA 的吞吐率在 G = 1 达到峰值；本题 G &gt; 1，处于过载区，继续增加发送尝试反而降低吞吐率。</p></div>
+
+<details class="ah-why"><summary>其余 90% 为什么不是吞吐率？</summary><p>90% 是有人发送的时隙，不代表都发成功。按每 100 个时隙的长期平均数看，约 10 个空闲、23 个只来一帧而成功、67 个有多帧同时尝试而碰撞。这里的过载指位于吞吐曲线峰值右侧。</p><div class="ah-slot"><div class="ah-bar" aria-hidden="true"><i style="width:10%"></i><i style="width:23.03%"></i><i style="width:66.97%"></i></div><p class="ah-legend">空闲 10%　成功 23.03%　碰撞 66.97%</p></div></details>
+<div class="ah-foot"><div class="ah-ppt"><span>课件：</span><a href="network-ch3-ppt.html#p64">P64 空闲、成功与碰撞时隙</a> <a href="network-ch3-ppt.html#p65">P65 G = 1 的峰值</a></div><button hidden type="button" data-copy-id="q5" aria-label="复制第 5 题答案">复制本题</button></div><span class="ah-status" role="status"></span>
+</article>
+<article class="ah-question" id="q6" aria-labelledby="h6">
+<p class="ah-meta">第 6 题 · 10 分</p><h2 id="h6">70% 的时隙空着，吞吐率是多少？</h2>
+<p class="ah-stem"><strong>题目：</strong>一站数很大的时隙 ALOHA 系统在工作时，其空闲时隙占 70%。试求吞吐率 S 和信道载荷 G。</p>
+<p class="ah-result">S ≈ 0.2497 帧/时隙，G ≈ 0.3567 次/时隙。</p><div class="ah-answer"><p class="ah-step" data-copy="大量站点下按泊松模型，P₀ = e^(−G) = 0.70，所以 G = −ln(0.70) ≈ 0.3567。">大量站点下按泊松模型，P₀ = e<sup>−G</sup> = 0.70，所以 G = −ln(0.70) ≈ 0.3567。</p>
+<p class="ah-step" data-copy="S = G e^(−G) = (−ln 0.70) × 0.70 ≈ 0.2497 帧/时隙，即约 24.97% 的时隙成功。">S = G e<sup>−G</sup> = (−ln 0.70) × 0.70 ≈ 0.2497 帧/时隙，即约 24.97% 的时隙成功。</p></div>
+
+<details class="ah-why"><summary>为什么第 6 题比第 5 题空得多，反而成功更多？</summary><p>在本题约 30% 的时隙里有人发，其中约 24.97%（按所有时隙计）成功，约 5.03% 发生碰撞。第 5 题的发送尝试更密集，却把大部分非空闲时隙浪费在碰撞上。</p><div class="ah-slot"><div class="ah-bar" aria-hidden="true"><i style="width:70%"></i><i style="width:24.97%"></i><i style="width:5.03%"></i></div><p class="ah-legend">空闲 70%　成功 24.97%　碰撞 5.03%</p></div></details>
+<div class="ah-foot"><div class="ah-ppt"><span>课件：</span><a href="network-ch3-ppt.html#p65">P65 S 随 G 先升后降</a> <a href="network-ch3-ppt.html#p68">P68 大量站点与泊松近似</a></div><button hidden type="button" data-copy-id="q6" aria-label="复制第 6 题答案">复制本题</button></div><span class="ah-status" role="status"></span>
+</article>
+<article class="ah-question" id="q7" aria-labelledby="h7">
+<p class="ah-meta">第 7 题 · 45 分</p><h2 id="h7">两条上行遇上一条下行，缓存改变了什么？</h2>
+<p class="ah-stem"><strong>题目：</strong>一颗卫星使用 2 条上行链路和 1 条下行链路的时隙 ALOHA，2 条上行链路分别连接了 1000 个用户和 800 个用户，每个用户平均每小时发送 36 个请求（包括新帧和重发帧），时隙长 100 毫秒，卫星有存贮能力，且存储容量足够大。问：a. 下行信道的利用率为多少？b. 系统的效率是多少？</p>
+<p class="ah-result">a. 下行利用率 72.73%；b. 系统效率 24.24%。</p><div class="ah-answer"><p class="ah-step" data-copy="每个用户每时隙尝试 36 × 0.1/3600 = 0.001 次，已经包括重传。两条上行的负载分别为 G₁ = 1000 × 0.001 = 1、G₂ = 800 × 0.001 = 0.8。">每个用户每时隙尝试 36 × 0.1/3600 = 0.001 次，已经包括重传。两条上行的负载分别为 G₁ = 1000 × 0.001 = 1、G₂ = 800 × 0.001 = 0.8。</p>
+<p class="ah-step" data-copy="分别计算上行成功概率：p₁ = G₁ e^(−G₁) = e^(−1) ≈ 0.367879；p₂ = G₂ e^(−G₂) = 0.8 e^(−0.8) ≈ 0.359463。">分别计算上行成功概率：p₁ = G₁ e<sup>−G₁</sup> = e<sup>−1</sup> ≈ 0.367879；p₂ = G₂ e<sup>−G₂</sup> = 0.8 e<sup>−0.8</sup> ≈ 0.359463。</p>
+<p class="ah-step" data-copy="两上行独立，恰有一条成功的概率为 P₁ = p₁(1 − p₂) + (1 − p₁)p₂ ≈ 0.462864；两条都成功的概率为 P₂ = p₁p₂ ≈ 0.132239。缓存足够，双成功要计两帧。平均每隙进入下行队列 P₁ + 2P₂ = p₁ + p₂ ≈ 0.727343 帧。">两上行独立，恰有一条成功的概率为 P₁ = p₁(1 − p₂) + (1 − p₁)p₂ ≈ 0.462864；两条都成功的概率为 P₂ = p₁p₂ ≈ 0.132239。缓存足够，双成功要计两帧。平均每隙进入下行队列 P₁ + 2P₂ = p₁ + p₂ ≈ 0.727343 帧。</p>
+<p class="ah-step" data-copy="a. 下行每隙可发一帧，平均到达率小于服务能力。长期下行利用率 U ≈ 0.727343/1 = 72.73%。">a. 下行每隙可发一帧，平均到达率小于服务能力。长期下行利用率 U ≈ 0.727343/1 = 72.73%。</p>
+<p class="ah-step" data-copy="b. 按课件，三条等速信道每条容量为 B，合计 3B；有效吞吐量是最终送达的 UB，同一帧不重复计数。故 η = UB/(3B) = U/3 ≈ 24.24%。">b. 按课件，三条等速信道每条容量为 B，合计 3B；有效吞吐量是最终送达的 UB，同一帧不重复计数。故 η = UB/(3B) = U/3 ≈ 24.24%。</p></div>
+<div class="ah-table"><table><caption>按课件的方法，把同一隙收到的帧数列出来</caption><thead><tr><th scope="col">上行结果</th><th scope="col">概率</th><th scope="col">进入队列</th></tr></thead><tbody><tr><th scope="row">均不成功</th><td>0.404896</td><td>0 帧</td></tr><tr><th scope="row">仅一条成功</th><td>0.462864</td><td>1 帧</td></tr><tr><th scope="row">两条都成功</th><td>0.132239</td><td><strong>2 帧</strong></td></tr></tbody></table></div>
+<details class="ah-why"><summary>两条都成功，到底加一帧还是两帧？</summary><p>“同一隙至多下发一帧”和“同一隙可以收到两帧”不矛盾。若两路都收到，卫星先转发一帧，另一帧留给后面的时隙。因此双成功的权重是 2，而不是说同一隙下发两帧。若本题改成无缓存，第 2 帧才会被丢弃，下行利用率就只剩 P₁ + P₂ ≈ 59.51%。课件第 72 页是同结构例题，用户数和请求率与本题不相同。</p></details>
+<div class="ah-foot"><div class="ah-ppt"><span>课件：</span><a href="network-ch3-ppt.html#p70">P70 两上行、一下行</a> <a href="network-ch3-ppt.html#p71">P71 无缓存与有缓存</a> <a href="network-ch3-ppt.html#p72">P72 例题与存储变式（不同数据）</a></div><button hidden type="button" data-copy-id="q7" aria-label="复制第 7 题答案">复制本题</button></div><span class="ah-status" role="status"></span>
+</article>
+<footer class="ah-source"><strong>课件与页码</strong><p>链接指向《CH3_数据链路层-0330》整章课件的 PDF 页序。纯 ALOHA 见 P58–61，时隙 ALOHA 见 P62–68，卫星部分见 P69–72。分节课件《使用广播信道的数据链路层》P24–25 区分指定帧成功率和吞吐率，P32 给出足够缓存时的计数方法。课件例题用于核对方法，代入的是本次作业的数据。</p><a href="#top">回到页首</a> · <a href="network.html#homework">返回计网作业目录</a></footer>
+</div></div></main><script src="network-aloha-homework.js"></script><script src="/study-site/phase2-preview.js"></script><script src="/study-site/study-navigation.js?v=20261112"></script>
+</body></html>
