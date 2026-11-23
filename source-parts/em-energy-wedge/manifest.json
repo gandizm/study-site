@@ -4,33 +4,33 @@
   "files": [
     {
       "target": "site/em-energy-wedge-homework.html",
-      "bytes": 2049962,
-      "sha256": "73caf12da3e16e02fcec64b8196edc16d647792b23df43a9c4af020f2cc99bf4",
+      "bytes": 2082935,
+      "sha256": "8ca22de2fef4d712e04ddbe1c2c66b48bd329cd4933a6b44720b1d0af84bee5a",
       "chunks": [
         {
           "file": "em-energy-wedge-homework.html.001.b64",
           "bytes": 65536,
-          "sha256": "0ae499631f3c252398cb8c7b262061011238a8eb233ebe9629052625eb391100"
+          "sha256": "e04fd8fcf85a16bb563763ca419e4c408d2d6acadc6c56066942799986c38575"
         },
         {
           "file": "em-energy-wedge-homework.html.002.b64",
           "bytes": 65536,
-          "sha256": "e967013d9b444ec331d3bab1b1adfaee4a6213890398d69bdc39af6e40458be8"
+          "sha256": "eb20dfc997517b3c3d03f6146a1afc448c4f8f84cf5f39ee0074eba0ec469b3b"
         },
         {
           "file": "em-energy-wedge-homework.html.003.b64",
           "bytes": 65536,
-          "sha256": "cd2f3fa1aebeec98688e21621cb5848d1203d24be25a512cc218415647121cc0"
+          "sha256": "826e03e1d9ca089acba19dac86f37903dc9d1f12795001456513bab88113d741"
         },
         {
           "file": "em-energy-wedge-homework.html.004.b64",
           "bytes": 65536,
-          "sha256": "fca0551b3e8abb1caec978f116994e5fa827fb2a33782b23c0af533e5ad77985"
+          "sha256": "f381d32f444525aab8d1eb8ef4d59a8c3517df86458c318c509ea14c27b4c1b0"
         },
         {
           "file": "em-energy-wedge-homework.html.005.b64",
-          "bytes": 62344,
-          "sha256": "bb0b9b7134928230bd2d662c7390132543f428335968c43f9ca79f5a0a601061"
+          "bytes": 65372,
+          "sha256": "c32ad82661d7ccb1b2fe7759f32f5348dd65aa9201440e0268bc997b54b4fd49"
         }
       ]
     },
