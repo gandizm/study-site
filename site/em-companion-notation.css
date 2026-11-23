@@ -1,0 +1,4 @@
+/* Static typesetting: only lecturer-companion formula SVGs use these classes. */
+svg.em-companion-formula{max-width:none;overflow:visible;color:inherit}
+svg.em-companion-formula.inline{display:block}
+svg.em-companion-formula:not(.inline){font-size:1.1em;vertical-align:middle}

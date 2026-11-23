@@ -9,6 +9,7 @@ from pathlib import Path
 from html import escape
 from urllib.parse import urlsplit
 import json, re
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / 'site'
@@ -128,6 +129,10 @@ def install(path):
     path.write_text(text)
 
 if __name__ == '__main__':
+    # Install reviewed, same-origin formula glyphs only into the 7 EM chapter
+    # readers and their excerpts, before the usual navigation-only pass.
+    subprocess.run(['node', str(ROOT / 'scripts/compose-em-companion-notation.cjs')], check=True)
+    subprocess.run(['python3', str(ROOT / 'tests/em-companion-notation.test.py')], check=True)
     homepage = home()
     for name in ['index.html', 'courses.html']:
         (SITE / name).write_text(homepage)

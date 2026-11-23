@@ -33,7 +33,7 @@ async function render(md){
   let html=marked.parse(md,{gfm:true,breaks:false});
   for(let i=0;i<formulas.length;i++){
     const {source,display}=formulas[i];
-    const node=doc.convert(notation.definitions+source,{display});
+    const node=doc.convert(notation.definitions+notation.typesetTex(source),{display});
     let output=adaptor.outerHTML(node).replace('<svg ','<svg aria-hidden="true" ');
     if(/data-mml-node="merror"|<text\b/.test(output))throw Error('Formula did not render fully: '+source);
     const tag=display?'div':'span';

@@ -1,0 +1,32 @@
+{
+  "format": 1,
+  "revision": "1156b916ec3fa45d0d5faed6efa4c489fb76988c180ac87c14c00c0f69b6463b",
+  "sha256": "b019d414d0ea33b01cfe9f1fa4344e2b6b024fcacc0fd9b24a58e5971799a22c",
+  "parts": [
+    {
+      "file": "svg.001.b64",
+      "bytes": 49152,
+      "sha256": "2ec5c91106db816a13ab1d6b9fc312e53cd801d5b404c0f33105ba1f3fc864b6"
+    },
+    {
+      "file": "svg.002.b64",
+      "bytes": 49152,
+      "sha256": "ebf62c8fa59b946592a274486e4f08a3863635aec935467201682f3ca626673d"
+    },
+    {
+      "file": "svg.003.b64",
+      "bytes": 49152,
+      "sha256": "3785e5a843b87211e69f32dfcf36620c1aa925eb8b4a1b5f2e69780bfde966b7"
+    },
+    {
+      "file": "svg.004.b64",
+      "bytes": 49152,
+      "sha256": "05ba5c2b162709d96808166b670b8eb5da121a3a725ce7779694c637a14cbb86"
+    },
+    {
+      "file": "svg.005.b64",
+      "bytes": 27630,
+      "sha256": "0930fc12d7ddae710f8a78a008c3d3215789c7753e48eda2f605458b9e18cc8c"
+    }
+  ]
+}
