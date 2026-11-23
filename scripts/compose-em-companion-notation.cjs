@@ -103,16 +103,16 @@ function apply(){
       n++;
       const accessible=norm.replace(/\\emvec\{/g,'\\bar{').replace(/\\emunit\{/g,'\\hat{').replace(/\\emdiff\{/g,'\\overline{\\mathrm d ');
       const beforeTag=wrapper?wrapper.replace(/vertical-align:\s*-?[\d.]+em/g,'vertical-align:'+(-depth)+'em'):''; 
-      return beforeTag+'<svg class="formula '+(inline?'inline ':'')+'em-companion-formula" role="img" aria-label="'+esc(accessible)+'" data-tex="'+esc(norm)+'" '+(inline?'data-math-style="text" data-math-depth="'+depth+'" ':'')+'width="'+number(w/1000)+'em" height="'+number(h/1000)+'em" viewBox="'+item.box.join(' ')+'" style="width:'+number(w/1000)+'em;height:'+number(h/1000)+'em;'+(inline?'--math-depth:'+depth+'em;display:block':'')+'"><use href="#'+uid+'"></use></svg>';
+      return beforeTag+'<svg class="formula '+(inline?'inline ':'')+'em-companion-formula" role="img" aria-label="'+esc(accessible)+'" data-tex="'+esc(norm)+'" '+(inline?'data-math-style="text" data-math-depth="'+depth+'" ':'')+'width="'+number(w/1000)+'em" height="'+number(h/1000)+'em" viewBox="0 0 '+w+' '+h+'" style="width:'+number(w/1000)+'em;height:'+number(h/1000)+'em;'+(inline?'--math-depth:'+depth+'em;display:block':'')+'"><use href="#'+uid+'"></use></svg>';
     });
     if(n!==before)throw Error('Incomplete conversion on '+name+': '+n+'/'+before);
     if(!n)continue;
     const symbols='<svg class="em-companion-defs" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;overflow:hidden" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>'+[...used].map(k=>defs[k]).join('')+[...instances.values()].join('')+'</defs></svg>';
     src=src.replace(/(<body\b[^>]*>)/,'$1'+symbols)
-      .replace('</head>','<link rel="stylesheet" href="/study-site/em-companion-notation.css?v=1">\n</head>');
+      .replace('</head>','<link rel="stylesheet" href="/study-site/em-companion-notation.css?v=2">\n</head>');
     if(name==='ppt2.html'||name==='em-math-preview-2.html'){
       src=src.replaceAll('这里用粗体下标','这里用下标')
-        .replaceAll('P49的粗体','P49 中上方带短横的').replaceAll('是外向面积元；粗体','是外向面积元；上方带短横的')
+        .replaceAll('P49的粗体','P49 中上方带短横的').replaceAll('是外向面积元；粗体','是外向面积元；上方带短横的').replaceAll('原页用不加粗的','原页用不带短横的')
         .replaceAll('这里无粗体的','这里不带短横的');
     }
     fs.writeFileSync(path.join(root,'site',name),src);

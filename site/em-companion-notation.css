@@ -2,3 +2,5 @@
 svg.em-companion-formula{max-width:none;overflow:visible;color:inherit}
 svg.em-companion-formula.inline{display:block}
 svg.em-companion-formula:not(.inline){font-size:1.1em;vertical-align:middle}
+/* The hidden glyph sheet has no layout or interactive area. */
+svg.em-companion-defs{pointer-events:none}

@@ -25,10 +25,16 @@ for prefix,counts in (('ppt',expected),('em-math-preview-',previews)):
         sheet=ET.fromstring(sheet[0]);glyphs={e.get('id') for e in sheet.iter() if e.tag.endswith('path')}
         symbols={e.get('id'):e for e in sheet.iter() if e.tag.endswith('symbol')}
         refs=set()
-        for label,tex,ref in (m.groups() for m in found):
+        for occurrence in found:
+            label,tex,ref=occurrence.groups()
             tex=unescape(tex);label=unescape(label)
             assert ref in symbols and tex.replace(r'\emvec{',r'\bar{').replace(r'\emunit{',r'\hat{').replace(r'\emdiff{',r'\overline{\mathrm d ')==label
             node=symbols[ref]
+            # A symbol already maps its negative math baseline into a viewport.
+            # Reapplying its negative y to the outer SVG puts its ink below the
+            # visible instance (sometimes all glyphs disappear in browsers).
+            outer=re.search(r'viewBox="([^"]+)"',occurrence[0])[1].split()
+            assert outer[:2]==['0','0'] and outer[2:]==node.get('viewBox').split()[2:], (tex,outer)
             if ref in refs:continue
             refs.add(ref)
             leaves=list(node.iter())
@@ -62,7 +68,7 @@ for prefix,counts in (('ppt',expected),('em-math-preview-',previews)):
             assert len(re.findall(r'<article\b[^>]*\bdata-page=',html))=={0:20,1:42,2:57,3:24,5:78,6:74,7:35}[chapter]
             if chapter==2:
                 assert r'\emvec{S}=\emvec{E}\times\emvec{H}' in html
-                for old_note in ('这里用粗体下标','P49的粗体','是外向面积元；粗体','这里无粗体的'): assert old_note not in html
+                for old_note in ('这里用粗体下标','P49的粗体','是外向面积元；粗体','这里无粗体的','原页用不加粗的'): assert old_note not in html
             if chapter==5:
                 assert r'\dot{\emvec{E}}' in html and r'\bar w' in html
 assert width_witnesses=={'A','E','r'},width_witnesses
